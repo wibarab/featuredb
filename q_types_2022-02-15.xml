@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../xsl/tei_2_html__simple_text.xsl"?>
+<?xslt inPathSegment="\texts\" outPathSegment="\html\"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Treatment of qa</title>
+            <author>Reichmuth, Stefan</author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>{publisher}</publisher>
+            <date when="0001-01-01"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <ptr target="{ptrtarget}"/>               
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change who="#ds" when="2022-02-16">reworked exapmle</change>
+      </revisionDesc>
+   </teiHeader>
+
+   <text>
+      <body>
+         <div type="fsLibrary">
+            <!-- Here the types of the feature value types are listed and can be broken down into
+                 its formal components -->
+            <fvLib n="q featureValues" xml:id="q_values">
+               <fs xml:id="q_g"></fs>
+               <fs xml:id="q_q"></fs>
+               <fs xml:id="q_g_affricated"></fs>
+               <fs xml:id="q_hamza"></fs>
+            </fvLib>
+         </div>
+     
+         <div type="description">
+           <p><!-- Verbose discussion of the feature --></p>
+         </div>
+
+         <div type="featureInstantiations">
+            <fs type="featureInstantiation" source="#younes2014">
+               <f name="diaelct" fVal="dialects:Basra"/>
+               <f name="featureValue" fVal="#q_g"/>
+               <f name="example">
+                  <fs>
+                     <f name="wordform">ḅgaṛa</f>
+                     <f name="trans">cow</f>
+                     <f name="msd" fVal="#n_sg_f"/>
+                  </fs>
+               </f>
+            </fs>
+
+            <fs type="featureInstantiation" source="#younes2014">
+               <f name="featureValue" fVal="#q_g"/>
+               <f name="dialect" fVal="#abu_ciid">/</f>
+               <f name="example">
+                  <fs>
+                     <f name="wordform"><string xml:lang="ar">nǝlga</string></f>
+                     <f name="trans"><string xml:lang="en">we find</string></f>
+                     <f name="msd" fVal="#v_pres_pl_p1"/>
+                  </fs>
+               </f>
+               <f name="pageNumber"><string>IV</string></f>
+            </fs>
+
+            <fs type="featureInstantiation" source="#younes2014">
+               <f name="featureValue" fVal="#q_g"/>
+               <f name="dialect" fVal="#abu_ciid"/>
+               <f name="example" fVal="#s_2929"/>
+               
+               
+               <!-- translation + msd > example ?  -->
+               <f name="trans"><string xml:lang="en">we find</string></f>
+               <f name="msd" fVal="#v_pres_pl_p1"/>
+               
+               <f name="pageNumber"><string>IV</string></f>
+               
+            </fs>
+
+            <fs type="featureInstantiation" source="#behnstedt2001">
+               <f name="featureValue" fVal="#q_g"></f>
+               <f name="dialect" fVal="#abu_cali"></f>
+               
+               <f name="pageNumber"><string>IV</string></f>
+            </fs>
+         </div>
+
+         <div type="examples">
+            <cit type="example" xml:id="ex_2929">
+               <quote>
+                  <s xml:id="s_2929_1">ana nǝl<seg ana="#q_g">g</seg>ah fi s-su<seg ana="#q_q">q</seg>.</s>
+               </quote>
+               <cit type="translation">
+                  <quote></quote>
+               </cit>
+            </cit>
+         </div>
+      </body>
+      <back>
+         
+      </back>
+   </text>
+</TEI>
