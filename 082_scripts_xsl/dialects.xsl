@@ -20,6 +20,10 @@
         <xsl:apply-templates select="$pass1" mode="pass2"/>
     </xsl:template>
     
+    
+    <xsl:template match="tei:sourceDesc/tei:p">
+        <xsl:copy>See https://gitlab.com/acdh-oeaw/shawibarab/wibarab-featuredb/-/blob/main/102_derived_TEI/102_01_dialectList/README.md</xsl:copy>
+    </xsl:template>
     <xsl:template match="tei:titleStmt">
         <xsl:copy>
             <xsl:copy-of select="@*"/>
