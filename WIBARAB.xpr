@@ -10,6 +10,26 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>082_scripts_xsl/sources.xsl</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>sources</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>082_scripts_xsl/dialects.xsl</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -68,26 +88,6 @@
                                     </list>
                                 </field>
                             </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>dialectsList.xq</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>produce dialectsList</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XQUERY</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
                         </scenarioAssociation-array>
                     </entry>
                     <entry>
@@ -119,7 +119,7 @@
                                     <String>${pdu}/082_scripts_xsl/dialects.xsl</String>
                                 </field>
                                 <field name="inputXMLURL">
-                                    <String>${pdu}/102_derived_TEI/102_01_dialectList/01_List_of_dialects.xml</String>
+                                    <String>${pdu}/001_src/001_01_dialectList/01_List_of_dialects.xml</String>
                                 </field>
                                 <field name="defaultScenario">
                                     <Boolean>false</Boolean>
@@ -137,7 +137,7 @@
                                     <Boolean>false</Boolean>
                                 </field>
                                 <field name="outputResource">
-                                    <String>${pdu}/102_derived_TEI/102_01_dialectList/dialects.xml</String>
+                                    <String>${pdu}/102_derived_tei/vicav_dialects.xml</String>
                                 </field>
                                 <field name="openOtherLocationInBrowser">
                                     <Boolean>false</Boolean>
@@ -164,7 +164,32 @@
                                     <Boolean>true</Boolean>
                                 </field>
                                 <field name="xsltParams">
-                                    <list/>
+                                    <list>
+                                        <transformationParameter>
+                                            <field name="paramDescription">
+                                                <paramDescriptor>
+                                                    <field name="localName">
+                                                        <String>pdu</String>
+                                                    </field>
+                                                    <field name="prefix">
+                                                        <null/>
+                                                    </field>
+                                                    <field name="namespace">
+                                                        <null/>
+                                                    </field>
+                                                </paramDescriptor>
+                                            </field>
+                                            <field name="value">
+                                                <String>${pdu}</String>
+                                            </field>
+                                            <field name="hasXPathValue">
+                                                <Boolean>false</Boolean>
+                                            </field>
+                                            <field name="isStatic">
+                                                <Boolean>false</Boolean>
+                                            </field>
+                                        </transformationParameter>
+                                    </list>
                                 </field>
                                 <field name="cascadingStylesheets">
                                     <String-array/>
@@ -181,7 +206,7 @@
                                     <null/>
                                 </field>
                                 <field name="name">
-                                    <String>produce dialectsList</String>
+                                    <String>sources</String>
                                 </field>
                                 <field name="baseURL">
                                     <String></String>
@@ -199,10 +224,10 @@
                                     <String></String>
                                 </field>
                                 <field name="inputXSLURL">
-                                    <String>${pdu}/dialectsList.xq</String>
+                                    <String>${pdu}/082_scripts_xsl/sources.xsl</String>
                                 </field>
                                 <field name="inputXMLURL">
-                                    <String>dialects.xml</String>
+                                    <String>${pdu}/001_src/001_01_dialectList/01_List_of_dialects.xml</String>
                                 </field>
                                 <field name="defaultScenario">
                                     <Boolean>false</Boolean>
@@ -211,7 +236,7 @@
                                     <Boolean>false</Boolean>
                                 </field>
                                 <field name="type">
-                                    <String>XQUERY</String>
+                                    <String>XSL</String>
                                 </field>
                                 <field name="saveAs">
                                     <Boolean>true</Boolean>
@@ -220,7 +245,7 @@
                                     <Boolean>false</Boolean>
                                 </field>
                                 <field name="outputResource">
-                                    <String>${pdu}/dialects.xml</String>
+                                    <String>${pdu}/102_derived_tei/wibarab_sources.xml</String>
                                 </field>
                                 <field name="openOtherLocationInBrowser">
                                     <Boolean>false</Boolean>
@@ -247,13 +272,38 @@
                                     <Boolean>true</Boolean>
                                 </field>
                                 <field name="xsltParams">
-                                    <list/>
+                                    <list>
+                                        <transformationParameter>
+                                            <field name="paramDescription">
+                                                <paramDescriptor>
+                                                    <field name="localName">
+                                                        <String>pdu</String>
+                                                    </field>
+                                                    <field name="prefix">
+                                                        <null/>
+                                                    </field>
+                                                    <field name="namespace">
+                                                        <null/>
+                                                    </field>
+                                                </paramDescriptor>
+                                            </field>
+                                            <field name="value">
+                                                <String>${pdu}</String>
+                                            </field>
+                                            <field name="hasXPathValue">
+                                                <Boolean>false</Boolean>
+                                            </field>
+                                            <field name="isStatic">
+                                                <Boolean>false</Boolean>
+                                            </field>
+                                        </transformationParameter>
+                                    </list>
                                 </field>
                                 <field name="cascadingStylesheets">
                                     <String-array/>
                                 </field>
                                 <field name="xslTransformer">
-                                    <String>Saxon-PE XQuery</String>
+                                    <String>Saxon-PE</String>
                                 </field>
                                 <field name="extensionURLs">
                                     <String-array/>

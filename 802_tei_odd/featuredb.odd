@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>WIBARAB FeatureDB TEI Customization</title>
+            <author>Charly Mörth</author>
+            <author>Daniel Schoper</author>
+            <author>Ana Iriarte Diez</author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
+            <date>2022</date>
+            <availability>
+               <licence>CC BY 4.0</licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This is a born digital document.</p>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change>Set up document outline; first draft of Part 1 (functional requirements).</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <head>WIBARAB Feature DB: Functional requirements and Data Specification </head>
+         <div>
+            <head>Part I: Functional Requirements of <name>WIBARAB Feature DB</name></head>
+            <p>This purpose of this TEI customization is to formalize the data structures needed to
+               implement the WIBARAB Feature DB application. Thus, we start with a brief
+               introduction into the most important functionalities which the application is
+               expected to provide.</p>
+            <p>
+               <list type="ordered">
+                  <item><hi rend="bold">Linguistic features and vernaculars as main entities:</hi>
+                     From an user's point of view, the main entities of concern are select
+                     linguistic features and how they are realized in the vernaculars in question.
+                     Thus, theoretically, there will be one <soCalled>record</soCalled> in the
+                     database for each combination of feature × vernacular. The user will be able to
+                     look at the data from both perspectives: List and </item>
+                  <item>Comparison </item>
+               </list>
+            </p>
+         </div>
+         <div>
+            <head>Part II: Data Model</head>
+         </div>
+         <div>
+            <head>Part III: Formal Specification</head>
+            <schemaSpec ident="featuredb">
+               <moduleRef key="core"/>
+               <moduleRef key="TEI"/>
+               <moduleRef key="header"/>
+               <moduleRef key="fs"/>
+               <moduleRef key="analysis"/>
+            </schemaSpec>
+         </div>
+      </body>
+   </text>
+</TEI>
