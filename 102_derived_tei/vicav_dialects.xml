@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -23,31 +23,19 @@
       </fileDesc>
       <encodingDesc>
          <listPrefixDef>
-            <prefixDef ident="dmp"
-                       matchPattern="^(.+)$"
-                       replacementPattern="wibarab-dmp.xml#$1"/>
-            <prefixDef ident="zotid"
-                       matchPattern="^(.+)$"
-                       replacementPattern="vicav_biblio_tei_zotero.xml#$1"/>
-            <prefixDef ident="dia"
-                       matchPattern="^(.+)$"
-                       replacementPattern="vicav_dialects.xml#$1"/>
-            <prefixDef ident="geo"
-                       matchPattern="^(.+)$"
-                       replacementPattern="vicav_geodata.xml#$1"/>
+            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="wibarab-dmp.xml#$1"/>
+            <prefixDef ident="zotid" matchPattern="^(.+)$" replacementPattern="vicav_biblio_tei_zotero.xml#$1"/>
+            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="vicav_dialects.xml#$1"/>
+            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="vicav_geodata.xml#$1"/>
          </listPrefixDef>
       </encodingDesc>
    </teiHeader>
+
    <text>
       <body>
          <head>WIBARAB list of dialects</head>
          <p>This is a list of all dialects investigated in the WIBARAB project.</p>
          <fvLib xml:id="dialects">
-            <fs type="dialect" xml:id="LEBABI">
-               <f name="dialectName">
-                  <string>Abu ʿĪd (Bekaa Valley)</string>
-               </f>
-            </fs>
             <fs type="dialect" xml:id="LBN-ABI">
                <f name="dialectName">
                   <string>Abu ʿĪd (Bekaa Valley)</string>
@@ -659,6 +647,21 @@
                </f>
                <f name="personInCharge" fVal="dmp:AT"/>
             </fs>
+
+<fs type="dialect" xml:id="PSE-RAS">
+               <f name="dialectName">
+                  <string>Rashayda of Palestine </string>
+               </f>
+               <f name="place" fVal="geo:palestine"/>
+               <f name="typeOfCommunity">
+                  <symbol value="tribe"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:AT"/>
+            </fs>
+
+
+
+
             <fs type="dialect" xml:id="SYR-RGG">
                <f name="dialectName">
                   <string>Rogga</string>
