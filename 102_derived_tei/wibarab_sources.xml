@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -29,16 +29,18 @@
             <prefixDef ident="zotid" matchPattern="^(.+)$" replacementPattern="vicav_biblio_tei_zotero.xml#$1"/>
             <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="vicav_dialects.xml#$1"/>
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="vicav_geodata.xml#$1"/>
+            <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="wibarab_sources.xml#$1"/>
          </listPrefixDef>
       </encodingDesc>
    </teiHeader>
+
    <text>
       <body>
          <head>WIBARAB list of sources</head>
          <p>This is a list of campaigns and communication used in the WIBARAB feature db. Printed sources are listed in the <ref target="vicav_biblio_tei_zotero.xml">VICAV Bibliography</ref>.</p>
-          
+
          <listEvent xml:id="campaigns_communication">
-            <event type="campaign" from-iso="2022-03-01" to-iso="2022-04-09">
+            <event type="campaign" from-iso="2022-03-01" to-iso="2022-04-09" xml:id="veronikaCairo2022">
                <head>Name of the Campaign or Personal communication</head>
                <desc>
                   <listPerson type="participants">
@@ -51,7 +53,6 @@
                </desc>
                <note></note>
             </event>
-
          </listEvent>
       </body>
    </text>
