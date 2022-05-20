@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class ID="FeatureTypes">
+    <name>Feature Value</name>
+    <definition>
+        <p>The abstract notion of how a <className>feature</className> can be realised.</p>
+    </definition>
+    <note>This is what WALS calls "feature values".</note>
+    <TODO who="AD" when="2022-05-17" status="new">add examples</TODO>
+    <properties>
+        <property ID="featureValue.ID">
+            <arity>1</arity>
+            <name>Identifier</name>
+            <datatypeName target="identifier"/>
+        </property>
+        <property ID="featureValue.name">
+            <arity>1</arity>
+            <name>Name</name>
+            <datatypeName target="shortText"/>
+            <note>a short label representing the feature value</note>
+        </property>
+        <property ID="featureValue.description">
+            <arity>0-1</arity>
+            <name>Description</name>
+            <datatypeName target="teiContent"/>
+            <note>A description/discussion of the feature value in question.</note>
+        </property>
+    </properties>
+</class>

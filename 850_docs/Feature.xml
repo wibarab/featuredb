@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class ID="Feature">
+    <name>Feature</name>
+    <definition>
+        <p>A linguistic phenomenon of freely definable dimension / size. Following <ref uri="https://wals.info/feature">WALS’ definition</ref>: "A feature is a structural property of language that describes one aspect of cross-linguistic diversity." Each feature can be realised in a finite number of ways, each of which is called a <className>Feature Value</className>.</p>
+    </definition>
+    <properties>
+        <property ID="feature.name">
+            <arity>1</arity>
+            <name>Name</name>
+            <datatypeName target="shortText"/>
+        </property>
+        <property ID="feature.discussion">
+            <arity>1</arity>
+            <name></name>
+            <datatypeName target="teiContent"/>
+            
+        </property>
+    </properties>
+    <relations>
+        <relation ID="FeatureHasPossibleRealisations">
+            <sourceClass target="Feature">
+                <arity>1</arity>
+            </sourceClass>
+            <targetClass target="FeatureTypes">
+                <arity>1-n</arity>
+            </targetClass>
+            <name>has possible realisations</name>
+            <reverseName>is possible realisation of</reverseName>
+        </relation>
+    </relations>
+</class>

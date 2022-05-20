@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class ID="FeatureRealisation">
+    <name>Feature Realisation</name>
+    <definition>
+        <p>Represents the assertion found in some <className>Source</className> that a  <relName target="DialectExhibitsFeatureRealisation"/> in a specific way (expressed by <relName target="featureRealisationIsOfType"/>).</p>
+    </definition>
+    <note>
+        <p>Any constraints </p>
+    </note>
+    
+    <properties>
+        <property ID="featureRealisation.note">
+            <arity>0-n</arity>
+            <name>Note</name>
+            <datatypeName target="longText"/>
+        </property>
+        
+    </properties>
+    <relations>
+        
+        <relation ID="featureRealisationRepresentsAnInstanceOfFeature" type="implicit">
+            <sourceClass target="FeatureRealisation">
+                <arity>1</arity>
+            </sourceClass>
+            <targetClass target="Feature">
+                <arity>1</arity>
+            </targetClass>
+            <name>is an instance of</name>
+            <reverseName>has instances</reverseName>
+        </relation>
+        <relation ID="featureRealisationIsOfType">
+            <sourceClass target="FeatureRealisation">
+                <arity>1</arity>
+            </sourceClass>
+            <targetClass target="FeatureTypes">
+                <arity>1-n</arity>
+            </targetClass>
+            <name>is of type</name>
+            <reverseName>has instances</reverseName>
+        </relation>
+        
+        <relation ID="featureRealisationHasConstraint">
+            <sourceClass target="FeatureRealisation">
+                <arity>1</arity>
+            </sourceClass>
+            <targetClass target="Constraint">
+                <arity>0-n</arity>
+            </targetClass>
+            <name>has constraint</name>
+            <reverseName>is constraining</reverseName>
+        </relation>
+        
+        
+    </relations>
+</class>
+

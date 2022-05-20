@@ -1,0 +1,18 @@
+# This specific template is located at:
+# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Pages/HTML.gitlab-ci.yml
+
+# Full project: https://gitlab.com/pages/plain-html
+pages:
+  stage: deploy
+  script:
+    - mkdir .public
+    - cp ./index.html .public
+    - cp ./index.docx .public
+    - cp ./model.xml .public
+    - rm -rf public
+    - mv .public public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
