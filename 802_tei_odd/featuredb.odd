@@ -52,13 +52,90 @@
          </div>
          <div>
             <head>Part III: Formal Specification</head>
-            <schemaSpec ident="featuredb">
-               <moduleRef key="core"/>
-               <moduleRef key="TEI"/>
-               <moduleRef key="header"/>
-               <moduleRef key="fs"/>
-               <moduleRef key="analysis"/>
+            <schemaSpec ident="featuredb" prefix="tei_" start="TEI" xml:lang="en" defaultExceptions="https://id.acdh.oeaw.ac.at/langDesc http://www.tei-c.org/ns/1.0 teix:egXML">
+               <moduleRef key="core" exclude="addrLine address author bibl cit date editor email foreign gap head imprint item label list listBibl measure measureGrp mentioned monogr note num p pb postBox postCode ptr pubPlace publisher quote ref resp respStmt rs series street term title unclear unit"/>
+               <moduleRef key="tei"/>
+               <moduleRef key="header" include="abstract appInfo application availibility catDesc catRef category change classCode classDescl correspAction correspContext correspDesc creation distributor edition editionStmt encodingDesc extent fileDesc funder geoDecl hyphenation idno keywords langUsage language licence listChange listPrefixDef namespace normalization notesStmt prefixDef principal profileDesc projectDesc publicationStmt punctuation quotation ref revisionDesc samplingDecl seriesStmt sourceDesc sponsor stdVals taxonomy teiHeader textClass titleStmt unitDecl unitDef"/>
+               <moduleRef key="corpus"/>
+               <moduleRef key="textstructure"/>
+               <moduleRef key="namesdates" include="affiliation age birth bloc death district education event faith forename genName geo geogFeat geogName langKnowledge langKnown listEvent listOrg listPerson listPlace location nationality occupation org orgName persName person personGrp place placeName population region residence settlement socecStatus state surname trait"/>
+               <!--<moduleRef key="fs"/>
+               <moduleRef key="analysis"/>-->
+               
+               <elementSpec ident="listFeatureValues" mode="add" ns="https://id.acdh.oeaw.ac.at/langDesc">
+                  <gloss>Feature Value List</gloss>
+                  <desc>lists possible values a feature can be realised</desc>
+                  <classes>
+                     <memberOf key="model.divTop"/>
+                  </classes>
+                  <content>                     
+                     <elementRef key="featureValue" minOccurs="2" maxOccurs="unbounded"/>
+                  </content>
+                  <attList>
+                     <attRef class="att.global" name="xml:id"/>
+                  </attList>
+               </elementSpec>
+               
+               <elementSpec ident="featureValue" mode="add" ns="https://id.acdh.oeaw.ac.at/langDesc">
+                  <gloss>feature value</gloss>
+                  <desc>describes one feature value</desc>
+                  <content>
+                     <sequence>
+                        <elementRef key="name" minOccurs="1"/>
+                        <elementRef key="p" minOccurs="1" maxOccurs="unbounded"/>
+                        <alternate>
+                           <elementRef key="note" minOccurs="0" maxOccurs="unbounded"/>
+                           <elementRef key="cit" minOccurs="0" maxOccurs="unbounded"/>
+                           <elementRef key="fs" minOccurs="0" maxOccurs="1"/>
+                        </alternate>
+                     </sequence>
+                  </content>
+                  <attList>
+                     <attRef class="att.global" name="xml:id"/>
+                  </attList>
+               </elementSpec>
+               
+               <elementSpec ident="featureValueObservation" mode="add" ns="https://id.acdh.oeaw.ac.at/langDesc">
+                  <gloss>feature value observation</gloss>
+                  <desc>contains data gathered by a source when observing a given feature</desc>
+                  <classes>
+                     <memberOf key="model.divLike"/>
+                     <memberOf key="att.global" exclude="att.global.linking att.global.analytic att.global.facs att.global.rendition"/>
+                  </classes>
+                  <content>
+                     <sequence>
+                        <elementRef key="biblScope" minOccurs="0" maxOccurs="unbounded"/>
+                        <elementRef key="settingDesc" maxOccurs="1" minOccurs="0"/>
+                        <elementRef key="particDesc" maxOccurs="1" minOccurs="0"/>
+                        <elementRef key="usg" minOccurs="0" maxOccurs="unbounded"/>
+                        <elementRef key="cit" minOccurs="0" maxOccurs="unbounded"/>
+                        <elementRef key="note"/>
+                     </sequence>
+                  </content>
+                  <attList>
+                     <attDef ident="fVRef" mode="add" usage="req">
+                        <gloss>feature value reference</gloss>
+                        <desc>points to one item in a <gi>listFeatureValues</gi>.</desc>
+                        <datatype>
+                           <dataRef key="teidata.pointer"/>
+                        </datatype>
+                     </attDef>
+                  </attList>
+               </elementSpec>
             </schemaSpec>
+         </div>
+         
+         <div>
+            <head>Module for Language Description</head>
+            
+               <specGrp xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
+                  xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  xmlns:sch="http://purl.oclc.org/dsdl/schematron" xml:id="langDesc">
+                  <moduleSpec ident="langDesc">
+                     <desc>Language Description</desc>
+                  </moduleSpec>
+                  
+               </specGrp>
          </div>
       </body>
    </text>
