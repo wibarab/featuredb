@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model xmlns:xi="http://www.w3.org/2001/XInclude">
+    <meta>
+        <title>WIBARAB Feature Database Model</title>
+        <contributor role="author">
+            <person ID="DS">
+                <name>Daniel Schopper</name>
+                <contact>daniel.schopper@oeaw.ac.at</contact>
+            </person>
+        </contributor>
+        <contributor role="contributor">
+            <person ID="CM">
+                <name>Charly Mörth</name>
+                <contact>karlheinz.moerth@oeaw.ac.at</contact>
+            </person>
+        </contributor>
+        <contributor role="contributor">
+            <person ID="AD">
+                <name>Ana Diaz</name>
+            </person>
+        </contributor>
+        <version>0.1</version>
+        <changelog>
+            <change status="draft" when="2022-04-14" who="DS">set up document, ingegrating information collected so far</change>
+            <change status="commenting" when="2022-05-17" who="DS">finishing version 0.1 for commenting during WIBARAB Workshop w/ Laurent Romary on 2022/05/20.</change>
+        </changelog>
+        <audience>INTERNAL (EXTERNAL eventually)</audience>
+    </meta>
+    <description>
+        <p>This document describes the abstract model of the WIBARAB Feature Database.</p>
+        <p>The WIBARAB Database of Lingustic Features systematically collects linguistic features found in Arabic varieties and categorizes how they are realised in the varieties in question. The database draws its content from published resources gathered in the <ref uri="https://www.zotero.org/groups/2165756/vicav">VICAV library</ref> (e.g. language atlases or grammar books) as well as material collected during fieldwork in the WIBARAB project, structuring and contextualising it.</p>
+        <p>The main entities in the database are so-called <className target="FeatureValueObservation">Feature Realisations</className>: For each feature and each variety, evidence is collected from the above-mentioned sources how a given feature is realised. Since the aim of the database is to facilitate cross-variety comparison, the single realisations are grouped into categories of distinct FEATURE VALUES so relations between dialects can be interpolated by juxtaposing their (dis)agreeing treatment of such features.</p>
+        <p>The resulting database will offer the following basic functionality to the users:</p>
+        <list> 
+            <item>Plot groups of FEATURE REALISATIONS on a map, indicating their FEATURE VALUE by different symbols and/or colours. The locations of the points are determined by a fictive geolocation representing the variety.</item> 
+            <item>The user should be able to filter the map points by the temporal dimension of the source data (more specifically, the period in which the data of the underlying publication has been collected). </item>
+            <item>... ?</item>
+        </list>
+    </description>
+    <classes>
+       <xi:include href="Feature.xml"/>
+       <xi:include href="FeatureTypes.xml"/>
+       <xi:include href="FeatureValueObservation.xml"/>
+       <xi:include href="Dialect.xml"/>
+ 
+        <class ID="Source" type="abstract">
+            <name>Source</name>
+            <definition>Any Source</definition>
+            <properties>
+                <property ID="source.collectionDate">
+                    <arity>1</arity>
+                    <name>period of collection</name>
+                    <datatypeName target="period"/>
+                    <note>the date when the underlying information of this source was collected. In case of publication which do not make this information transparent, the decade before the year of publication is assumed as a default value.</note>
+                </property>
+            </properties>
+            <relations>
+                <relation ID="sourceProvidesInformationOn">
+                    <sourceClass target="Source">
+                        <arity>1</arity>
+                    </sourceClass>
+                    <targetClass target="Dialect">
+                        <arity>1-n</arity>
+                    </targetClass>
+                    <name>provides information on</name>
+                    <reverseName>is described in</reverseName>
+                </relation>
+            </relations>
+        </class>
+        <class ID="BibliographicItem" parent="Source">
+            <name>Bibligraphic Item</name>
+            <definition>A bibliographic item (held in the VICAV Zotero Group Library) which is the source of some data in the database.</definition>
+            <note>We don't want to list all fields of a full-blown bibliographic record here …</note>
+            <properties>
+                <property ID="bibliographicItem.ID">
+                    <arity>1</arity>
+                    <name>ID</name>
+                    <datatypeName target="identifier"/>
+                </property>
+            </properties>
+        </class>
+        <class ID="Campaign" parent="Source">
+            <name>Campaign</name>
+            <definition>A field campaign during WIBARAB collecting evidence on feature realisations.</definition>
+            <relations>
+                <relation ID="sourceHasBeenCollectedByPerson">
+                    <sourceClass target="Campaign PersonalCommunication">
+                        <arity>1</arity>
+                    </sourceClass>
+                    <targetClass target="Person">
+                        <arity>1-n</arity>
+                    </targetClass>
+                    <name>collected by</name>
+                    <reverseName>collected</reverseName>
+                </relation>
+            </relations>
+        </class>
+        <class ID="PersonalCommunication" parent="Source">
+            <name>Personal Communication</name>
+            <definition>Some type of personal communication (e-mail exchange, ...) which is treated as evidence for a feature realisation assertion.</definition>
+        </class>
+        <class ID="Place">
+            <name>Place</name>
+            <definition>A place of any type/extent from the <ref uri="https://github.com/acdh-oeaw/vicav-content/blob/b0feba5e3a3799aaecbf259c0b6da47bc9b8d674/vicav_biblio/vicav_geodata.xml">VICAV place list</ref>.</definition>
+            <properties>
+                <property ID="place.geonameID">
+                    <arity>0-1</arity>
+                    <name>Geonames ID</name>
+                    <datatypeName target="identifier"/>
+                </property>
+            </properties>
+        </class>
+        <class ID="Person">
+            <name>Person</name>
+            <definition>Any person in the database, including project members or informants.</definition>
+            <relations>
+                <relation ID="personIsInformantOfSource">
+                    <sourceClass target="Person">
+                        <arity>1-n</arity>
+                    </sourceClass>
+                    <targetClass target="Campaign PersonalCommunication">
+                        <arity>1-n</arity>
+                    </targetClass>
+                    <name>is informant in</name>
+                    <reverseName>has informants</reverseName>
+                </relation>
+            </relations>
+        </class>
+        
+        <class ID="Group">
+            <name>Speaker Group</name>
+            <definition>A group of speakers, defined by some common property.</definition>
+            <properties>
+                <property ID="group.type">
+                    <arity>1-n</arity>
+                    <name>Group Type</name>
+                    <datatypeName target="vocabTerm" vocabRef="vocabs.groupTypes"/>
+                </property>
+            </properties>
+        </class>
+       
+        <xi:include href="classes/Constraint.xml"/>
+        
+        <class ID="FullText" type="abstract">
+            <name>Full Text</name>
+            <definition>Any kind of (annotated) text.</definition>
+            <properties>
+                <property ID="fulltext.quotation">
+                    <arity>1</arity>
+                    <name>Quotation</name>
+                    <datatypeName target="teiContent"/>
+                    <mapping targetLanguage="teip5">
+                        <path>tei:cit/tei:quote</path>
+                    </mapping>
+                </property>
+            </properties>
+        </class>
+        
+        <class ID="OriginalSource" parent="FullText">
+            <name>Original Source</name>
+            <definition>A quotation taken from the bibliographic record (not an example of the feature in question)</definition>
+            <relations>
+                <relation ID="originalSourceTakenFrom">
+                    <sourceClass target="OriginalSource">
+                        <arity>1-n</arity>
+                    </sourceClass>
+                    <targetClass target="BibliographicItem">
+                        <arity>1</arity>
+                    </targetClass>
+                    <name>is taken from</name>
+                    <reverseName>is quoted in</reverseName>
+                    <mapping targetLanguage="teip5">
+                        <path>tei:cit[@type = "originalSource"]/tei:bibl</path>
+                    </mapping>
+                </relation>
+            </relations>
+            <mapping targetLanguage="teip5">
+                <path>tei:cit[@type = "originalSource"]</path>
+            </mapping>
+        </class>
+        
+        <class ID="Example" parent="FullText">
+            <name>Example</name>
+            <definition>An (annotated) example for the <className target="FeatureValue">Feature Value</className> in question.</definition>
+            <relations>
+                <relation ID="exampleTakenFrom">
+                    <sourceClass target="OriginalSource">
+                        <arity>1-n</arity>
+                    </sourceClass>
+                    <targetClass target="Source">
+                        <arity>1</arity>
+                    </targetClass>
+                    <name>is taken from</name>
+                    <reverseName>is quoted in</reverseName>
+                    <mapping targetLanguage="teip5">
+                        <path>tei:cit[@type = "originalSource"]/tei:bibl</path>
+                    </mapping>
+                </relation>
+            </relations>
+            <mapping targetLanguage="teip5">
+                <path>tei:cit[@type = "originalSource"]</path>
+            </mapping>
+        </class>
+    </classes>
+    <relations>
+        
+        <relation ID="featureValueObservationHasSource">
+            <sourceClass target="FeatureValueObservation">
+                <arity>1-n</arity>
+            </sourceClass>
+            <targetClass target="Source">
+                <arity>1</arity>
+            </targetClass>
+            <name>asserted by</name>
+            <reverseName>asserts</reverseName>
+        </relation>
+    </relations>
+    <vocabularies>
+        <vocab ID="vocabs.gender">
+            <name>gender constraint values</name>
+            <values>
+                <list>
+                    <item>dominant feminine usage</item>
+                    <item>dominant masculine usage</item>
+                </list>
+            </values>
+            <note>
+                <p>defines a set of values describing realisation constraints for the gender dimension</p>
+                <p>(DS: this seems a somewhat problematic dichotomy)</p>
+            </note>
+        </vocab>
+        <vocab ID="vocabs.academicLevels">
+            <name>academic level constraint values</name>
+            <note>TODO define!</note>
+        </vocab>
+        <vocab ID="vocabs.ageGroups">
+            <name>age group constraint values</name>
+            <values>
+                <list>
+                    <item>children</item>
+                    <item>adolescents</item>
+                    <item>young adults</item>
+                    <item>adults</item>
+                    <item>middle aged</item>
+                    <item>elders</item>
+                    <item>very old</item>
+                </list>
+            </values>
+            <note>
+                <p>defines a set of values describing realisation constraints for the speaker age dimension</p>
+                <p>(DS: this is a placeholder list and should be replaced by something more sensible)</p>
+            </note>
+        </vocab>
+        <vocab ID="vocabs.communityTypes">
+            <name>community types</name>
+            <values>
+                <list>
+                    <item>tribe</item>
+                </list>
+            </values>
+            <TODO who="DS" when="2022-05-22" status="new">add other community types</TODO>
+        </vocab>
+        
+        <vocab ID="vocabs.constraintTypes">
+            <name>Constraint Types</name>
+            <values>
+                <list>
+                    <item>Gender</item>
+                    <item>Lexical</item>
+                    <item>Period</item>
+                    <item>Age Group</item>
+                    <item>Academic</item>
+                </list>
+            </values>
+        </vocab>
+        <vocab ID="vocabs.groupTypes">
+            <name>Group Types Vocabulary</name>
+            <values>
+                <list>
+                    <item>Tribe</item>
+                </list>
+            </values>
+        </vocab>
+    </vocabularies>
+    <datatypes>
+        <datatype ID="period">
+            <name>period</name>
+            <note>some range of dates (e.g. decades)</note>
+        </datatype>
+        <datatype ID="shortText">
+            <name>short text</name>
+            <note>a short text (less or equal to 256 characters long)</note>
+        </datatype>
+        <datatype ID="longText">
+            <name>long text</name>
+            <note>a long text (more than 256 characters long</note>
+        </datatype>
+        <datatype ID="teiContent">
+            <name>TEI Markup</name>
+            <note>XML fragment conforming to the <ref uri="https://tei-c.org/guidelines/">TEI Guidelines</ref>, potentially including mixed content</note>
+        </datatype>
+        <datatype ID="vocabTerm">
+            <name>Vocabulary Term</name>
+            <note>a term from a controlled vocabulary</note>
+        </datatype>
+        <datatype ID="identifier">
+            <name>Identifier</name>
+            <note>a identifier unique in the scope of the project</note>
+        </datatype>
+    </datatypes>
+    <references>
+        <reference ID="teip5">
+            <name>Guidelines of the Text Encoding Initiative. Version P5</name>
+            <citation key="TEI Guidelines">TEI Guidelines Version 4.4.0. Last updated on 19th April 2022, revision ff9cc28b0. https://www.tei-c.org/release/doc/tei-p5-doc/en/html/</citation>
+        </reference>
+    </references>
+</model>

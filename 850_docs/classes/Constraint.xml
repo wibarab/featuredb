@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class ID="Constraint">
+    <name>Feature Realisation Constraint</name>
+    <definition>Documents specific circumstances observed by a <className target="FeatureValueObservation"/> which need to be met for a <className>feature value</className> to occur.</definition>
+    <TODO who="DS" when="2022-05-27" status="new">check/rephrase ? definiition</TODO>
+    <CHECKME who="DS" when="2022-05-17" status="new">Most (all?) kinds of social-linguistic constraints could also be modelled as <className target="Group">speaker groups</className> with the broadest group being all speakers of a dialect, indiacting "No constraint".</CHECKME>
+    <properties>
+        <property ID="constraint.type">
+            <arity>1-n</arity>
+            <name>Constraint Type</name>
+            <datatypeName target="vocabTerm" vocabRef="vocabs.constraintTypes"/>
+        </property>
+        
+        <property ID="featureValueObservation.genderConstraint">
+            <arity>0-n</arity>
+            <name>gender constraint</name>
+            <datatypeName target="vocabTerm" vocabRef="vocabs.gender"/>
+        </property>
+        <property ID="featureValueObservation.ageGroupConstraint">
+            <arity>0-n</arity>
+            <name>age group</name>
+            <datatypeName target="vocabTerm" vocabRef="vocabs.ageGroups"/>
+        </property>
+        <property ID="featureValueObservation.academicLevelConstraint">
+            <arity>0-n</arity>
+            <name>academic level</name>
+            <datatypeName target="vocabTerm" vocabRef="vocabs.academicLevels"/>
+            <note><p>indicates that the feature realisation is salient in a group of speakers with a common level of education</p></note>
+        </property>
+        <property ID="featureValueObservation.occupationalGroupConstraint">
+            <arity>0-1</arity>
+            <name>occupational group</name>
+            <datatypeName target="shortText"/>
+            <note>
+                <p>indicates that the feature realisation is salient in a group of speakers with a common professional background</p>
+                <CHECKME when="2022-05-02" status="new" who="DS">CHECKME: Given that it might be difficulat to come up with a closed vocabulary of occupational groups, this is defined as a short text.</CHECKME>
+            </note>
+        </property>
+        <property ID="featureValueObservation.lexicalDomainConstraint">
+            <arity>0-1</arity>
+            <name>lexical domain</name>
+            <datatypeName target="shortText"/>
+            <note>
+                <p>indicates that the feature realisation is salient in a group of speakers with a common professional background</p>
+                <CHECKME who="DS" when="2022-05-02" status="new">Given that it might be difficult to come up with a closed vocabulary of occupational groups, this is defined as a short text.</CHECKME>
+            </note>
+        </property>
+    </properties>
+</class>

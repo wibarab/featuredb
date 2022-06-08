@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class ID="FeatureValueObservation">
+    <name>Feature Value Observation</name>
+    <definition>
+        <p>Represents the observation of a given <className>Feature Value</className> at a given <className>Place</className> (via <relName target="featureValueObservationTookPlaceAt"/>) documented a <className>Source</className>, that .</p>
+    </definition>
+    <note>
+        <p>Any constraints </p>
+    </note>
+    
+    <properties>
+        <property ID="featureValueObservation.note">
+            <arity>0-n</arity>
+            <name>Note</name>
+            <datatypeName target="longText"/>
+        </property>
+    </properties>
+    <relations>
+        <relation ID="featureValueObservationObservedFeature" type="implicit">
+            <sourceClass target="FeatureValueObservation">
+                <arity>1</arity>
+            </sourceClass>
+            <targetClass target="Feature">
+                <arity>1</arity>
+            </targetClass>
+            <name>observes occurence of</name>
+            <reverseName>has occurences</reverseName>
+        </relation>
+        <relation ID="featureValueObservationObservedFeatureValue">
+            <sourceClass target="FeatureValueObservation">
+                <arity>1</arity>
+            </sourceClass>
+            <targetClass target="FeatureValue">
+                <arity>1-n</arity>
+            </targetClass>
+            <name>documents realisation of type</name>
+            <reverseName>has documented occurences</reverseName>
+        </relation>
+        
+        <relation ID="featureValueObservationDocumentsConstraint">
+            <sourceClass target="FeatureValueObservation">
+                <arity>1</arity>
+            </sourceClass>
+            <targetClass target="Constraint">
+                <arity>0-n</arity>
+            </targetClass>
+            <name>documents</name>
+            <reverseName>is documented in</reverseName>
+        </relation>
+        
+        <relation ID="featureValueObservationDocumentedIn">
+            <sourceClass target="FeatureValueObservation">
+                <arity>1-n</arity>
+            </sourceClass>
+            <targetClass target="Source">
+                <arity>1</arity>
+            </targetClass>
+            <name>documented in</name>
+            <reverseName>documents</reverseName>
+        </relation>
+        
+        <relation ID="featureValueObservationTookPlaceAt">
+            <sourceClass target="FeatureValueObservation">
+                <arity>1</arity>
+            </sourceClass>
+            <targetClass target="Place">
+                <arity>1</arity>
+            </targetClass>
+            <name>took place at</name>
+            <reverseName>saw</reverseName>
+        </relation>
+    </relations>
+</class>
+

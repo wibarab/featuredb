@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class ID="Dialect">
+    <name>Dialect Description</name>
+    <definition>
+        <p>The description of a language variety with common salient linguistic <className target="FeatureValue">feature values</className> spoken by a given group.</p>
+    </definition>
+    <CHECKME who="DS" when="2022-05-17" status="new">is this accurate or should it be renamed to "variety", "vernacular" … ?</CHECKME>
+    <properties>
+        <property ID="dialect.ID">
+            <arity>1</arity>
+            <name>ID</name>
+            <datatypeName target="identifier"/>
+            <note>Dialect identifiers are made up of a three-letter country code + hyphen + three-letter settlement code</note>
+        </property>
+        <property ID="dialect.name">
+            <arity>1</arity>
+            <name>Name</name>
+            <datatypeName target="shortText"/>
+        </property>
+        <property ID="dialect.typeOfCommunity">
+            <arity>0-n</arity>
+            <name>type of community</name>
+            <datatypeName target="vocabTerm" vocabRef="vocabs.communityTypes"/>
+            <CHECKME who="DS" when="2022-05-17" status="new">I'm not sure </CHECKME>
+        </property>
+    </properties>
+    <relations>
+        
+        <relation ID="dialectIsSpokenAtLocation">
+            <sourceClass target="Dialect">
+                <arity>1-n</arity>
+            </sourceClass>
+            <targetClass target="Place">
+                <arity>1-n</arity>
+            </targetClass>
+            <name>is spoken at</name>
+            <reverseName>is place where is spoken</reverseName>
+            <note>Documents where a dialect is typically spoken in a place.</note>
+            <CHECKME who="DS" when="2022-05-17" status="new">check if n-to-n relation is ok</CHECKME>
+        </relation>
+        
+        <relation ID="personIsEditorOfDialectDescription">
+            <sourceClass target="Person">
+                <arity>1</arity>
+            </sourceClass>
+            <targetClass target="Dialect">
+                <arity>1-n</arity>
+            </targetClass>
+            <name>is editor of</name>
+            <reverseName>has editor in charge</reverseName>
+            <note>internal procedural information who is the main person in charge of a dialect</note>
+        </relation>
+        
+        <relation ID="dialectExhibitsFeatureValue">
+            <sourceClass target="Dialect">
+                <arity>1</arity>
+            </sourceClass>
+            <targetClass target="FeatureValueObservation">
+                <arity>1-n</arity>
+            </targetClass>
+            <name>exhibits</name>
+            <reverseName>is exhibited in</reverseName>
+        </relation>
+    </relations>
+    <mapping targetLanguage="teip5">
+        <code language="xml">
+            <fs type="dialect" xml:id="ISR-SBE">
+                <f name="dialectName">
+                    <string>Ṣbēḥ</string>
+                </f>
+                <f name="place" fVal="geo:galilee"/>
+                <f name="typeOfCommunity">
+                    <symbol value="tribe"/>
+                </f>
+                <f name="personInCharge" fVal="dmp:AD"/>
+            </fs>
+        </code>
+    </mapping>
+</class>
