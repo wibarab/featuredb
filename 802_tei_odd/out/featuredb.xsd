@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:langdesc="https://id.acdh.oeaw.ac.at/langDesc"
+           xmlns:dcr="http://www.isocat.org/ns/dcr"
+           xmlns:langdesc="https://wibarab.acdh.oeaw.ac.at/langDesc"
            xmlns:tei="http://www.tei-c.org/ns/1.0"
            elementFormDefault="qualified"
            targetNamespace="http://www.tei-c.org/ns/1.0">
+   <xs:import namespace="http://www.isocat.org/ns/dcr" schemaLocation="dcr.tmp"/>
    <xs:import namespace="http://www.w3.org/XML/1998/namespace"
               schemaLocation="xml.tmp"/>
-   <xs:import namespace="https://id.acdh.oeaw.ac.at/langDesc"
+   <xs:import namespace="https://wibarab.acdh.oeaw.ac.at/langDesc"
               schemaLocation="langdesc.tmp"/>
    <!--
-    Schema generated from ODD source 2022-06-08T12:37:07Z. .
+    Schema generated from ODD source 2022-06-12T15:15:54Z. .
     TEI Edition: Version 4.3.0. Last updated on
             31st August 2021, revision b4f72b1ff
     TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.3.0/
@@ -470,6 +472,16 @@ Sample values include: 1] all; 2] most; 3] range</xs:documentation>
          </xs:simpleType>
       </xs:attribute>
    </xs:attributeGroup>
+   <xs:attributeGroup name="tei_att.datcat.attributes">
+      <xs:attributeGroup ref="tei:tei_att.datcat.attribute.datcat"/>
+      <xs:attributeGroup ref="tei:tei_att.datcat.attribute.valueDatcat"/>
+   </xs:attributeGroup>
+   <xs:attributeGroup name="tei_att.datcat.attribute.datcat">
+      <xs:attribute ref="dcr:datcat"/>
+   </xs:attributeGroup>
+   <xs:attributeGroup name="tei_att.datcat.attribute.valueDatcat">
+      <xs:attribute ref="dcr:valueDatcat"/>
+   </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.declarable.attributes">
       <xs:attributeGroup ref="tei:tei_att.declarable.attribute.default"/>
    </xs:attributeGroup>
@@ -833,6 +845,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</xs:documentat
    </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.global.attributes">
       <xs:attributeGroup ref="tei:tei_att.global.rendition.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.global.analytic.attributes"/>
       <xs:attributeGroup ref="tei:tei_att.global.responsibility.attributes"/>
       <xs:attributeGroup ref="tei:tei_att.global.source.attributes"/>
       <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlid"/>
@@ -1938,13 +1951,7 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
          <xs:element maxOccurs="unbounded" ref="tei:geo"/>
       </xs:sequence>
    </xs:group>
-   <xs:group name="tei_model.graphicLike">
-      <xs:choice>
-         <xs:element ref="tei:media"/>
-         <xs:element ref="tei:graphic"/>
-         <xs:element ref="tei:binaryObject"/>
-      </xs:choice>
-   </xs:group>
+   <xs:element name="tei_model.graphicLike" abstract="true"/>
    <xs:group name="tei_model.offsetLike">
       <xs:sequence>
          <xs:element ref="tei:geogFeat"/>
@@ -2364,6 +2371,28 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
          <xs:element maxOccurs="unbounded" ref="tei:stage"/>
       </xs:sequence>
    </xs:group>
+   <xs:element name="tei_model.entryPart" abstract="true">
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="tei:tei_macro.paraContent">
+               <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+               <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
+               <xs:attributeGroup ref="tei:tei_att.lexicographic.attributes"/>
+               <xs:attribute name="type">
+                  <xs:annotation>
+                     <xs:documentation>classifies the usage information using any convenient typology.
+Sample values include: 1] geo (geographic); 2] time; 3] dom (domain); 4] register (register); 5] style; 6] plev (preference level); 7] lang (language); 8] gram (grammatical); 9] syn (synonym); 10] hyper (hypernym); 11] colloc (collocation); 12] comp (complement); 13] obj (object); 14] subj (subject); 15] verb; 16] hint</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:token">
+                        <xs:pattern value="[^\p{C}\p{Z}]+"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:attribute>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
+   </xs:element>
    <xs:group name="tei_model.eventLike">
       <xs:choice>
          <xs:element ref="tei:event"/>
@@ -2377,6 +2406,7 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
          <xs:group ref="tei:tei_model.pLike"/>
          <xs:element ref="tei:lg"/>
          <xs:element ref="tei:sp"/>
+         <xs:element ref="langdesc:featureValueObservation"/>
       </xs:choice>
    </xs:group>
    <xs:group name="tei_model.persStateLike">
@@ -2590,28 +2620,24 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
       <xs:choice>
          <xs:group ref="tei:tei_model.quoteLike"/>
          <xs:element ref="tei:said"/>
-         <xs:element ref="tei:floatingText"/>
       </xs:choice>
    </xs:group>
    <xs:group name="tei_model.attributable_alternation">
       <xs:choice>
          <xs:group ref="tei:tei_model.quoteLike_alternation"/>
          <xs:element ref="tei:said"/>
-         <xs:element ref="tei:floatingText"/>
       </xs:choice>
    </xs:group>
    <xs:group name="tei_model.attributable_sequence">
       <xs:sequence>
          <xs:group ref="tei:tei_model.quoteLike_sequence"/>
          <xs:element ref="tei:said"/>
-         <xs:element ref="tei:floatingText"/>
       </xs:sequence>
    </xs:group>
    <xs:group name="tei_model.attributable_sequenceOptional">
       <xs:sequence>
          <xs:group minOccurs="0" ref="tei:tei_model.quoteLike_sequenceOptional"/>
          <xs:element minOccurs="0" ref="tei:said"/>
-         <xs:element minOccurs="0" ref="tei:floatingText"/>
       </xs:sequence>
    </xs:group>
    <xs:group name="tei_model.attributable_sequenceOptionalRepeatable">
@@ -2620,14 +2646,12 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
                    maxOccurs="unbounded"
                    ref="tei:tei_model.quoteLike_sequenceOptionalRepeatable"/>
          <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:said"/>
-         <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:floatingText"/>
       </xs:sequence>
    </xs:group>
    <xs:group name="tei_model.attributable_sequenceRepeatable">
       <xs:sequence>
          <xs:group maxOccurs="unbounded" ref="tei:tei_model.quoteLike_sequenceRepeatable"/>
          <xs:element maxOccurs="unbounded" ref="tei:said"/>
-         <xs:element maxOccurs="unbounded" ref="tei:floatingText"/>
       </xs:sequence>
    </xs:group>
    <xs:group name="tei_model.respLike">
@@ -2642,68 +2666,30 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
       </xs:choice>
    </xs:group>
    <xs:group name="tei_model.divWrapper">
-      <xs:choice>
+      <xs:sequence>
          <xs:element ref="tei:meeting"/>
-         <xs:element ref="tei:byline"/>
-         <xs:element ref="tei:dateline"/>
-         <xs:element ref="tei:argument"/>
-         <xs:element ref="tei:epigraph"/>
-         <xs:element ref="tei:salute"/>
-         <xs:element ref="tei:docAuthor"/>
-         <xs:element ref="tei:docDate"/>
-      </xs:choice>
+      </xs:sequence>
    </xs:group>
    <xs:group name="tei_model.divTopPart">
-      <xs:choice>
+      <xs:sequence>
          <xs:group ref="tei:tei_model.headLike"/>
-         <xs:element ref="tei:opener"/>
-         <xs:element ref="tei:signed"/>
-      </xs:choice>
+      </xs:sequence>
    </xs:group>
    <xs:group name="tei_model.divTop">
       <xs:choice>
          <xs:group ref="tei:tei_model.divWrapper"/>
          <xs:group ref="tei:tei_model.divTopPart"/>
-         <xs:element ref="langdesc:listFeatureValues"/>
       </xs:choice>
    </xs:group>
    <xs:group name="tei_model.pLike.front">
-      <xs:choice>
+      <xs:sequence>
          <xs:element ref="tei:head"/>
-         <xs:element ref="tei:byline"/>
-         <xs:element ref="tei:dateline"/>
-         <xs:element ref="tei:argument"/>
-         <xs:element ref="tei:epigraph"/>
-         <xs:element ref="tei:docTitle"/>
-         <xs:element ref="tei:titlePart"/>
-         <xs:element ref="tei:docAuthor"/>
-         <xs:element ref="tei:docEdition"/>
-         <xs:element ref="tei:docImprint"/>
-         <xs:element ref="tei:docDate"/>
-      </xs:choice>
+      </xs:sequence>
    </xs:group>
-   <xs:element name="tei_model.divBottomPart" abstract="true"/>
    <xs:group name="tei_model.divBottom">
-      <xs:choice>
+      <xs:sequence>
          <xs:group ref="tei:tei_model.divWrapper"/>
-         <xs:element ref="tei:tei_model.divBottomPart"/>
-      </xs:choice>
-   </xs:group>
-   <xs:group name="tei_model.titlepagePart">
-      <xs:choice>
-         <xs:element ref="tei:graphic"/>
-         <xs:element ref="tei:binaryObject"/>
-         <xs:element ref="tei:byline"/>
-         <xs:element ref="tei:argument"/>
-         <xs:element ref="tei:epigraph"/>
-         <xs:element ref="tei:docTitle"/>
-         <xs:element ref="tei:titlePart"/>
-         <xs:element ref="tei:docAuthor"/>
-         <xs:element ref="tei:imprimatur"/>
-         <xs:element ref="tei:docEdition"/>
-         <xs:element ref="tei:docImprint"/>
-         <xs:element ref="tei:docDate"/>
-      </xs:choice>
+      </xs:sequence>
    </xs:group>
    <xs:group name="tei_model.choicePart">
       <xs:choice>
@@ -2868,7 +2854,6 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
       <xs:choice>
          <xs:element ref="tei:listBibl"/>
          <xs:element ref="tei:divGen"/>
-         <xs:element ref="tei:titlePage"/>
       </xs:choice>
    </xs:group>
    <xs:group name="tei_model.addrPart">
@@ -2907,7 +2892,7 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
    <xs:group name="tei_model.phrase">
       <xs:choice>
          <xs:group ref="tei:tei_model.highlighted"/>
-         <xs:group ref="tei:tei_model.graphicLike"/>
+         <xs:element ref="tei:tei_model.graphicLike"/>
          <xs:group ref="tei:tei_model.pPart.edit"/>
          <xs:element ref="tei:tei_model.ptrLike"/>
          <xs:group ref="tei:tei_model.pPart.data"/>
@@ -2923,7 +2908,49 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
          <xs:group ref="tei:tei_model.pPart.data"/>
       </xs:choice>
    </xs:group>
-   <xs:element name="tei_model.divLike" abstract="true"/>
+   <xs:element name="tei_model.divLike" abstract="true">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+               <xs:group ref="tei:tei_model.divTop"/>
+               <xs:group ref="tei:tei_model.global"/>
+            </xs:choice>
+            <xs:sequence minOccurs="0">
+               <xs:choice>
+                  <xs:sequence maxOccurs="unbounded">
+                     <xs:choice>
+                        <xs:element ref="tei:tei_model.divLike"/>
+                        <xs:element ref="tei:tei_model.divGenLike"/>
+                     </xs:choice>
+                     <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
+                  </xs:sequence>
+                  <xs:sequence>
+                     <xs:sequence maxOccurs="unbounded">
+                        <xs:group ref="tei:tei_model.common"/>
+                        <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
+                     </xs:sequence>
+                     <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                        <xs:choice>
+                           <xs:element ref="tei:tei_model.divLike"/>
+                           <xs:element ref="tei:tei_model.divGenLike"/>
+                        </xs:choice>
+                        <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
+                     </xs:sequence>
+                  </xs:sequence>
+               </xs:choice>
+               <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                  <xs:group ref="tei:tei_model.divBottom"/>
+                  <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
+               </xs:sequence>
+            </xs:sequence>
+         </xs:sequence>
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+         <xs:attributeGroup ref="tei:tei_att.divLike.attributes"/>
+         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+         <xs:attributeGroup ref="tei:tei_att.declaring.attributes"/>
+         <xs:attributeGroup ref="tei:tei_att.written.attributes"/>
+      </xs:complexType>
+   </xs:element>
    <xs:element name="tei_model.divGenLike" abstract="true">
       <xs:complexType>
          <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.headLike"/>
@@ -2940,282 +2967,6 @@ Sample values include: 1] index; 2] toc; 3] figlist; 4] tablist</xs:documentatio
                </xs:restriction>
             </xs:simpleType>
          </xs:attribute>
-      </xs:complexType>
-   </xs:element>
-   <xs:element name="tei_model.div1Like" abstract="true">
-      <xs:complexType>
-         <xs:sequence>
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:group ref="tei:tei_model.divTop"/>
-               <xs:group ref="tei:tei_model.global"/>
-            </xs:choice>
-            <xs:sequence minOccurs="0">
-               <xs:choice>
-                  <xs:sequence maxOccurs="unbounded">
-                     <xs:choice>
-                        <xs:element ref="tei:tei_model.div2Like"/>
-                        <xs:element ref="tei:tei_model.divGenLike"/>
-                     </xs:choice>
-                     <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-                  </xs:sequence>
-                  <xs:sequence>
-                     <xs:sequence maxOccurs="unbounded">
-                        <xs:group ref="tei:tei_model.common"/>
-                        <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-                     </xs:sequence>
-                     <xs:sequence minOccurs="0" maxOccurs="unbounded">
-                        <xs:choice>
-                           <xs:element ref="tei:tei_model.div2Like"/>
-                           <xs:element ref="tei:tei_model.divGenLike"/>
-                        </xs:choice>
-                        <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-                     </xs:sequence>
-                  </xs:sequence>
-               </xs:choice>
-               <xs:sequence minOccurs="0" maxOccurs="unbounded">
-                  <xs:group ref="tei:tei_model.divBottom"/>
-                  <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-               </xs:sequence>
-            </xs:sequence>
-         </xs:sequence>
-         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.divLike.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.declaring.attributes"/>
-      </xs:complexType>
-   </xs:element>
-   <xs:element name="tei_model.div2Like" abstract="true">
-      <xs:complexType>
-         <xs:sequence>
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:group ref="tei:tei_model.divTop"/>
-               <xs:group ref="tei:tei_model.global"/>
-            </xs:choice>
-            <xs:sequence minOccurs="0">
-               <xs:choice>
-                  <xs:sequence maxOccurs="unbounded">
-                     <xs:choice>
-                        <xs:element ref="tei:tei_model.div3Like"/>
-                        <xs:element ref="tei:tei_model.divGenLike"/>
-                     </xs:choice>
-                     <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-                  </xs:sequence>
-                  <xs:sequence>
-                     <xs:sequence maxOccurs="unbounded">
-                        <xs:group ref="tei:tei_model.common"/>
-                        <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-                     </xs:sequence>
-                     <xs:sequence minOccurs="0" maxOccurs="unbounded">
-                        <xs:choice>
-                           <xs:element ref="tei:tei_model.div3Like"/>
-                           <xs:element ref="tei:tei_model.divGenLike"/>
-                        </xs:choice>
-                        <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-                     </xs:sequence>
-                  </xs:sequence>
-               </xs:choice>
-               <xs:sequence minOccurs="0" maxOccurs="unbounded">
-                  <xs:group ref="tei:tei_model.divBottom"/>
-                  <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-               </xs:sequence>
-            </xs:sequence>
-         </xs:sequence>
-         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.divLike.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.declaring.attributes"/>
-      </xs:complexType>
-   </xs:element>
-   <xs:element name="tei_model.div3Like" abstract="true">
-      <xs:complexType>
-         <xs:sequence>
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:group ref="tei:tei_model.divTop"/>
-               <xs:group ref="tei:tei_model.global"/>
-            </xs:choice>
-            <xs:sequence minOccurs="0">
-               <xs:choice>
-                  <xs:sequence maxOccurs="unbounded">
-                     <xs:choice>
-                        <xs:element ref="tei:tei_model.div4Like"/>
-                        <xs:element ref="tei:tei_model.divGenLike"/>
-                     </xs:choice>
-                     <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-                  </xs:sequence>
-                  <xs:sequence>
-                     <xs:sequence maxOccurs="unbounded">
-                        <xs:group ref="tei:tei_model.common"/>
-                        <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-                     </xs:sequence>
-                     <xs:sequence minOccurs="0" maxOccurs="unbounded">
-                        <xs:choice>
-                           <xs:element ref="tei:tei_model.div4Like"/>
-                           <xs:element ref="tei:tei_model.divGenLike"/>
-                        </xs:choice>
-                        <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-                     </xs:sequence>
-                  </xs:sequence>
-               </xs:choice>
-               <xs:sequence minOccurs="0" maxOccurs="unbounded">
-                  <xs:group ref="tei:tei_model.divBottom"/>
-                  <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-               </xs:sequence>
-            </xs:sequence>
-         </xs:sequence>
-         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.divLike.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.declaring.attributes"/>
-      </xs:complexType>
-   </xs:element>
-   <xs:element name="tei_model.div4Like" abstract="true">
-      <xs:complexType>
-         <xs:sequence>
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:group ref="tei:tei_model.divTop"/>
-               <xs:group ref="tei:tei_model.global"/>
-            </xs:choice>
-            <xs:sequence minOccurs="0">
-               <xs:choice>
-                  <xs:sequence maxOccurs="unbounded">
-                     <xs:choice>
-                        <xs:element ref="tei:tei_model.div5Like"/>
-                        <xs:element ref="tei:tei_model.divGenLike"/>
-                     </xs:choice>
-                     <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-                  </xs:sequence>
-                  <xs:sequence>
-                     <xs:sequence maxOccurs="unbounded">
-                        <xs:group ref="tei:tei_model.common"/>
-                        <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-                     </xs:sequence>
-                     <xs:sequence minOccurs="0" maxOccurs="unbounded">
-                        <xs:choice>
-                           <xs:element ref="tei:tei_model.div5Like"/>
-                           <xs:element ref="tei:tei_model.divGenLike"/>
-                        </xs:choice>
-                        <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-                     </xs:sequence>
-                  </xs:sequence>
-               </xs:choice>
-               <xs:sequence minOccurs="0" maxOccurs="unbounded">
-                  <xs:group ref="tei:tei_model.divBottom"/>
-                  <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-               </xs:sequence>
-            </xs:sequence>
-         </xs:sequence>
-         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.divLike.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.declaring.attributes"/>
-      </xs:complexType>
-   </xs:element>
-   <xs:element name="tei_model.div5Like" abstract="true">
-      <xs:complexType>
-         <xs:sequence>
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:group ref="tei:tei_model.divTop"/>
-               <xs:group ref="tei:tei_model.global"/>
-            </xs:choice>
-            <xs:sequence minOccurs="0">
-               <xs:choice>
-                  <xs:sequence maxOccurs="unbounded">
-                     <xs:choice>
-                        <xs:element ref="tei:tei_model.div6Like"/>
-                        <xs:element ref="tei:tei_model.divGenLike"/>
-                     </xs:choice>
-                     <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-                  </xs:sequence>
-                  <xs:sequence>
-                     <xs:sequence maxOccurs="unbounded">
-                        <xs:group ref="tei:tei_model.common"/>
-                        <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-                     </xs:sequence>
-                     <xs:sequence minOccurs="0" maxOccurs="unbounded">
-                        <xs:choice>
-                           <xs:element ref="tei:tei_model.div6Like"/>
-                           <xs:element ref="tei:tei_model.divGenLike"/>
-                        </xs:choice>
-                        <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-                     </xs:sequence>
-                  </xs:sequence>
-               </xs:choice>
-               <xs:sequence minOccurs="0" maxOccurs="unbounded">
-                  <xs:group ref="tei:tei_model.divBottom"/>
-                  <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-               </xs:sequence>
-            </xs:sequence>
-         </xs:sequence>
-         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.divLike.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.declaring.attributes"/>
-      </xs:complexType>
-   </xs:element>
-   <xs:element name="tei_model.div6Like" abstract="true">
-      <xs:complexType>
-         <xs:sequence>
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:group ref="tei:tei_model.divTop"/>
-               <xs:group ref="tei:tei_model.global"/>
-            </xs:choice>
-            <xs:sequence minOccurs="0">
-               <xs:choice>
-                  <xs:sequence maxOccurs="unbounded">
-                     <xs:choice>
-                        <xs:element ref="tei:tei_model.div7Like"/>
-                        <xs:element ref="tei:tei_model.divGenLike"/>
-                     </xs:choice>
-                     <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-                  </xs:sequence>
-                  <xs:sequence>
-                     <xs:sequence maxOccurs="unbounded">
-                        <xs:group ref="tei:tei_model.common"/>
-                        <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-                     </xs:sequence>
-                     <xs:sequence minOccurs="0" maxOccurs="unbounded">
-                        <xs:choice>
-                           <xs:element ref="tei:tei_model.div7Like"/>
-                           <xs:element ref="tei:tei_model.divGenLike"/>
-                        </xs:choice>
-                        <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-                     </xs:sequence>
-                  </xs:sequence>
-               </xs:choice>
-               <xs:sequence minOccurs="0" maxOccurs="unbounded">
-                  <xs:group ref="tei:tei_model.divBottom"/>
-                  <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-               </xs:sequence>
-            </xs:sequence>
-         </xs:sequence>
-         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.divLike.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.declaring.attributes"/>
-      </xs:complexType>
-   </xs:element>
-   <xs:element name="tei_model.div7Like" abstract="true">
-      <xs:complexType>
-         <xs:sequence>
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:group ref="tei:tei_model.divTop"/>
-               <xs:group ref="tei:tei_model.global"/>
-            </xs:choice>
-            <xs:sequence minOccurs="0">
-               <xs:sequence maxOccurs="unbounded">
-                  <xs:group ref="tei:tei_model.common"/>
-                  <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-               </xs:sequence>
-               <xs:sequence minOccurs="0" maxOccurs="unbounded">
-                  <xs:group ref="tei:tei_model.divBottom"/>
-                  <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-               </xs:sequence>
-            </xs:sequence>
-         </xs:sequence>
-         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.divLike.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.declaring.attributes"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="tei_model.applicationLike" abstract="true">
@@ -3309,10 +3060,7 @@ Sample values include: 1] index; 2] toc; 3] figlist; 4] tablist</xs:documentatio
                <xs:element ref="tei:front"/>
                <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
             </xs:sequence>
-            <xs:choice>
-               <xs:element ref="tei:body"/>
-               <xs:element ref="tei:group"/>
-            </xs:choice>
+            <xs:element ref="tei:body"/>
             <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
             <xs:sequence minOccurs="0">
                <xs:element ref="tei:back"/>
@@ -3801,8 +3549,9 @@ Suggested values include: 1] spoken (spoken); 2] thought (thought); 3] written (
       <xs:complexType>
          <xs:choice maxOccurs="unbounded">
             <xs:group ref="tei:tei_model.biblLike"/>
+            <xs:element ref="tei:tei_model.entryPart"/>
             <xs:group ref="tei:tei_model.global"/>
-            <xs:group ref="tei:tei_model.graphicLike"/>
+            <xs:element ref="tei:tei_model.graphicLike"/>
             <xs:element ref="tei:tei_model.ptrLike"/>
             <xs:group ref="tei:tei_model.attributable"/>
             <xs:element ref="tei:q"/>
@@ -4641,58 +4390,16 @@ Sample values include: 1] suspension (suspension); 2] contraction (contraction);
          <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
          <xs:attribute name="type">
             <xs:annotation>
-               <xs:documentation>(type) describes the nature of the items in the list.
-Suggested values include: 1] gloss (gloss); 2] index (index); 3] instructions (instructions); 4] litany (litany); 5] syllogism (syllogism)</xs:documentation>
+               <xs:documentation/>
             </xs:annotation>
             <xs:simpleType>
-               <xs:union>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:enumeration value="gloss"/>
-                     </xs:restriction>
-                  </xs:simpleType>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:enumeration value="index">
-                           <xs:annotation>
-                              <xs:documentation>(index) each list item is an entry in an index such as the alphabetical topical index at the back of a print volume.</xs:documentation>
-                           </xs:annotation>
-                        </xs:enumeration>
-                     </xs:restriction>
-                  </xs:simpleType>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:enumeration value="instructions">
-                           <xs:annotation>
-                              <xs:documentation>(instructions) each list item is a step in a sequence of instructions, as in a recipe.</xs:documentation>
-                           </xs:annotation>
-                        </xs:enumeration>
-                     </xs:restriction>
-                  </xs:simpleType>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:enumeration value="litany">
-                           <xs:annotation>
-                              <xs:documentation>(litany) each list item is one of a sequence of petitions, supplications or invocations, typically in a religious ritual.</xs:documentation>
-                           </xs:annotation>
-                        </xs:enumeration>
-                     </xs:restriction>
-                  </xs:simpleType>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:enumeration value="syllogism">
-                           <xs:annotation>
-                              <xs:documentation>(syllogism) each list item is part of an argument consisting of two or more propositions and a final conclusion derived from them.</xs:documentation>
-                           </xs:annotation>
-                        </xs:enumeration>
-                     </xs:restriction>
-                  </xs:simpleType>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                     </xs:restriction>
-                  </xs:simpleType>
-               </xs:union>
+               <xs:restriction base="xs:token">
+                  <xs:enumeration value="featureValues">
+                     <xs:annotation>
+                        <xs:documentation>Feature Values</xs:documentation>
+                     </xs:annotation>
+                  </xs:enumeration>
+               </xs:restriction>
             </xs:simpleType>
          </xs:attribute>
       </xs:complexType>
@@ -4704,8 +4411,19 @@ Suggested values include: 1] gloss (gloss); 2] index (index); 3] instructions (i
       <xs:complexType>
          <xs:complexContent>
             <xs:extension base="tei:tei_macro.specialPara">
-               <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+               <xs:attributeGroup ref="tei:tei_att.global.attribute.n"/>
+               <xs:attributeGroup ref="tei:tei_att.global.attribute.xmllang"/>
+               <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlbase"/>
+               <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlspace"/>
+               <xs:attributeGroup ref="tei:tei_att.global.rendition.attribute.rend"/>
+               <xs:attributeGroup ref="tei:tei_att.global.rendition.attribute.style"/>
+               <xs:attributeGroup ref="tei:tei_att.global.rendition.attribute.rendition"/>
+               <xs:attributeGroup ref="tei:tei_att.global.analytic.attribute.ana"/>
+               <xs:attributeGroup ref="tei:tei_att.global.responsibility.attribute.cert"/>
+               <xs:attributeGroup ref="tei:tei_att.global.responsibility.attribute.resp"/>
+               <xs:attributeGroup ref="tei:tei_att.global.source.attribute.source"/>
                <xs:attributeGroup ref="tei:tei_att.sortable.attributes"/>
+               <xs:attribute ref="xml:id" use="required"/>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -4809,7 +4527,7 @@ Suggested values include: 1] gloss (gloss); 2] index (index); 3] instructions (i
          <xs:documentation>(index entry) marks a location to be indexed for whatever purpose. [3.9.2. Index Entries]</xs:documentation>
       </xs:annotation>
    </xs:element>
-   <xs:element name="media">
+   <xs:element name="media" substitutionGroup="tei:tei_model.graphicLike">
       <xs:annotation>
          <xs:documentation>indicates the location of any form of external media such as an audio or video clip etc. [3.10. Graphics and Other Non-textual Components]</xs:documentation>
       </xs:annotation>
@@ -4844,7 +4562,7 @@ Suggested values include: 1] gloss (gloss); 2] index (index); 3] instructions (i
          </xs:attribute>
       </xs:complexType>
    </xs:element>
-   <xs:element name="graphic">
+   <xs:element name="graphic" substitutionGroup="tei:tei_model.graphicLike">
       <xs:annotation>
          <xs:documentation>(graphic) indicates the location of a graphic or illustration, either forming part of a text, or providing an image of it. [3.10. Graphics and Other Non-textual Components 11.1. Digital Facsimiles]</xs:documentation>
       </xs:annotation>
@@ -4856,7 +4574,7 @@ Suggested values include: 1] gloss (gloss); 2] index (index); 3] instructions (i
          <xs:attributeGroup ref="tei:tei_att.declaring.attributes"/>
       </xs:complexType>
    </xs:element>
-   <xs:element name="binaryObject">
+   <xs:element name="binaryObject" substitutionGroup="tei:tei_model.graphicLike">
       <xs:annotation>
          <xs:documentation>provides encoded binary data representing an inline graphic, audio, video or other object. [3.10. Graphics and Other Non-textual Components]</xs:documentation>
       </xs:annotation>
@@ -5627,6 +5345,59 @@ Suggested values include: 1] setting; 2] entrance; 3] exit; 4] business; 5] nove
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
+   </xs:element>
+   <xs:attributeGroup name="tei_att.lexicographic.attributes">
+      <xs:attributeGroup ref="tei:tei_att.datcat.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.lexicographic.normalized.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.lexicographic.attribute.expand"/>
+      <xs:attributeGroup ref="tei:tei_att.lexicographic.attribute.split"/>
+      <xs:attributeGroup ref="tei:tei_att.lexicographic.attribute.value"/>
+      <xs:attributeGroup ref="tei:tei_att.lexicographic.attribute.location"/>
+      <xs:attributeGroup ref="tei:tei_att.lexicographic.attribute.mergedIn"/>
+      <xs:attributeGroup ref="tei:tei_att.lexicographic.attribute.opt"/>
+   </xs:attributeGroup>
+   <xs:attributeGroup name="tei_att.lexicographic.attribute.expand">
+      <xs:attribute name="expand" type="xs:string">
+         <xs:annotation>
+            <xs:documentation>(expand) gives an expanded form of information presented more concisely in the dictionary</xs:documentation>
+         </xs:annotation>
+      </xs:attribute>
+   </xs:attributeGroup>
+   <xs:attributeGroup name="tei_att.lexicographic.attribute.split">
+      <xs:attribute name="split" type="xs:string">
+         <xs:annotation>
+            <xs:documentation>(split) gives the list of split values for a merged form</xs:documentation>
+         </xs:annotation>
+      </xs:attribute>
+   </xs:attributeGroup>
+   <xs:attributeGroup name="tei_att.lexicographic.attribute.value">
+      <xs:attribute name="value" type="xs:string">
+         <xs:annotation>
+            <xs:documentation>(value) gives a value which lacks any realization in the printed source text.</xs:documentation>
+         </xs:annotation>
+      </xs:attribute>
+   </xs:attributeGroup>
+   <xs:attributeGroup name="tei_att.lexicographic.attribute.location">
+      <xs:attribute name="location" type="xs:anyURI"/>
+   </xs:attributeGroup>
+   <xs:attributeGroup name="tei_att.lexicographic.attribute.mergedIn">
+      <xs:attribute name="mergedIn" type="xs:anyURI">
+         <xs:annotation>
+            <xs:documentation>(merged into) gives a reference to another element, where the original appears as a merged form.</xs:documentation>
+         </xs:annotation>
+      </xs:attribute>
+   </xs:attributeGroup>
+   <xs:attributeGroup name="tei_att.lexicographic.attribute.opt">
+      <xs:attribute name="opt" default="false" type="xs:boolean">
+         <xs:annotation>
+            <xs:documentation>(optional) indicates whether the element is optional or not</xs:documentation>
+         </xs:annotation>
+      </xs:attribute>
+   </xs:attributeGroup>
+   <xs:element name="usg" substitutionGroup="tei:tei_model.entryPart">
+      <xs:annotation>
+         <xs:documentation>(usage) contains usage information in a dictionary entry. [9.3.5.2. Usage Information and Other Labels]</xs:documentation>
+      </xs:annotation>
    </xs:element>
    <xs:attributeGroup name="tei_att.patternReplacement.attributes">
       <xs:attributeGroup ref="tei:tei_att.patternReplacement.attribute.matchPattern"/>
@@ -6979,34 +6750,18 @@ Suggested values include: 1] persuade; 2] express; 3] inform; 4] entertain</xs:d
                      <xs:element ref="tei:tei_model.divGenLike"/>
                   </xs:choice>
                </xs:sequence>
-               <xs:sequence maxOccurs="unbounded">
-                  <xs:element ref="tei:tei_model.div1Like"/>
-                  <xs:choice minOccurs="0" maxOccurs="unbounded">
-                     <xs:group ref="tei:tei_model.global"/>
-                     <xs:element ref="tei:tei_model.divGenLike"/>
-                  </xs:choice>
-               </xs:sequence>
                <xs:sequence>
                   <xs:sequence maxOccurs="unbounded">
                      <xs:group ref="tei:tei_model.common"/>
                      <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
                   </xs:sequence>
-                  <xs:choice minOccurs="0">
-                     <xs:sequence maxOccurs="unbounded">
-                        <xs:element ref="tei:tei_model.divLike"/>
-                        <xs:choice minOccurs="0" maxOccurs="unbounded">
-                           <xs:group ref="tei:tei_model.global"/>
-                           <xs:element ref="tei:tei_model.divGenLike"/>
-                        </xs:choice>
-                     </xs:sequence>
-                     <xs:sequence maxOccurs="unbounded">
-                        <xs:element ref="tei:tei_model.div1Like"/>
-                        <xs:choice minOccurs="0" maxOccurs="unbounded">
-                           <xs:group ref="tei:tei_model.global"/>
-                           <xs:element ref="tei:tei_model.divGenLike"/>
-                        </xs:choice>
-                     </xs:sequence>
-                  </xs:choice>
+                  <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                     <xs:element ref="tei:tei_model.divLike"/>
+                     <xs:choice minOccurs="0" maxOccurs="unbounded">
+                        <xs:group ref="tei:tei_model.global"/>
+                        <xs:element ref="tei:tei_model.divGenLike"/>
+                     </xs:choice>
+                  </xs:sequence>
                </xs:sequence>
             </xs:choice>
             <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -7018,487 +6773,10 @@ Suggested values include: 1] persuade; 2] express; 3] inform; 4] entertain</xs:d
          <xs:attributeGroup ref="tei:tei_att.declaring.attributes"/>
       </xs:complexType>
    </xs:element>
-   <xs:element name="group">
-      <xs:annotation>
-         <xs:documentation>(group) contains the body of a composite text, grouping together a sequence of distinct texts (or groups of such texts) which are regarded as a unit for some purpose, for example the collected works of an author, a sequence of prose essays, etc. [4. Default Text Structure 4.3.1. Grouped Texts 15.1. Varieties of Composite Text]</xs:documentation>
-      </xs:annotation>
-      <xs:complexType>
-         <xs:sequence>
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:group ref="tei:tei_model.divTop"/>
-               <xs:group ref="tei:tei_model.global"/>
-            </xs:choice>
-            <xs:sequence>
-               <xs:choice>
-                  <xs:element ref="tei:text"/>
-                  <xs:element ref="tei:group"/>
-               </xs:choice>
-               <xs:choice minOccurs="0" maxOccurs="unbounded">
-                  <xs:element ref="tei:text"/>
-                  <xs:element ref="tei:group"/>
-                  <xs:group ref="tei:tei_model.global"/>
-               </xs:choice>
-            </xs:sequence>
-            <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.divBottom"/>
-         </xs:sequence>
-         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.declaring.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
-      </xs:complexType>
-   </xs:element>
-   <xs:element name="floatingText">
-      <xs:annotation>
-         <xs:documentation>(floating text) contains a single text of any kind, whether unitary or composite, which interrupts the text containing it at any point and after which the surrounding text resumes. [4.3.2. Floating Texts]</xs:documentation>
-      </xs:annotation>
-      <xs:complexType>
-         <xs:sequence>
-            <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-            <xs:sequence minOccurs="0">
-               <xs:element ref="tei:front"/>
-               <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-            </xs:sequence>
-            <xs:choice>
-               <xs:element ref="tei:body"/>
-               <xs:element ref="tei:group"/>
-            </xs:choice>
-            <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-            <xs:sequence minOccurs="0">
-               <xs:element ref="tei:back"/>
-               <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-            </xs:sequence>
-         </xs:sequence>
-         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.declaring.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
-      </xs:complexType>
-   </xs:element>
    <xs:element name="div" substitutionGroup="tei:tei_model.divLike">
       <xs:annotation>
          <xs:documentation>(text division) contains a subdivision of the front, body, or back of a text. [4.1. Divisions of the Body]</xs:documentation>
       </xs:annotation>
-      <xs:complexType>
-         <xs:sequence>
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:group ref="tei:tei_model.divTop"/>
-               <xs:group ref="tei:tei_model.global"/>
-            </xs:choice>
-            <xs:sequence minOccurs="0">
-               <xs:choice>
-                  <xs:sequence maxOccurs="unbounded">
-                     <xs:choice>
-                        <xs:element ref="tei:tei_model.divLike"/>
-                        <xs:element ref="tei:tei_model.divGenLike"/>
-                     </xs:choice>
-                     <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-                  </xs:sequence>
-                  <xs:sequence>
-                     <xs:sequence maxOccurs="unbounded">
-                        <xs:group ref="tei:tei_model.common"/>
-                        <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-                     </xs:sequence>
-                     <xs:sequence minOccurs="0" maxOccurs="unbounded">
-                        <xs:choice>
-                           <xs:element ref="tei:tei_model.divLike"/>
-                           <xs:element ref="tei:tei_model.divGenLike"/>
-                        </xs:choice>
-                        <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-                     </xs:sequence>
-                  </xs:sequence>
-               </xs:choice>
-               <xs:sequence minOccurs="0" maxOccurs="unbounded">
-                  <xs:group ref="tei:tei_model.divBottom"/>
-                  <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-               </xs:sequence>
-            </xs:sequence>
-         </xs:sequence>
-         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.divLike.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.declaring.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.written.attributes"/>
-      </xs:complexType>
-   </xs:element>
-   <xs:element name="div1" substitutionGroup="tei:tei_model.div1Like">
-      <xs:annotation>
-         <xs:documentation>(level-1 text division) contains a first-level subdivision of the front, body, or back of a text. [4.1.2. Numbered Divisions]</xs:documentation>
-      </xs:annotation>
-   </xs:element>
-   <xs:element name="div2" substitutionGroup="tei:tei_model.div2Like">
-      <xs:annotation>
-         <xs:documentation>(level-2 text division) contains a second-level subdivision of the front, body, or back of a text. [4.1.2. Numbered Divisions]</xs:documentation>
-      </xs:annotation>
-   </xs:element>
-   <xs:element name="div3" substitutionGroup="tei:tei_model.div3Like">
-      <xs:annotation>
-         <xs:documentation>(level-3 text division) contains a third-level subdivision of the front, body, or back of a text. [4.1.2. Numbered Divisions]</xs:documentation>
-      </xs:annotation>
-   </xs:element>
-   <xs:element name="div4" substitutionGroup="tei:tei_model.div4Like">
-      <xs:annotation>
-         <xs:documentation>(level-4 text division) contains a fourth-level subdivision of the front, body, or back of a text. [4.1.2. Numbered Divisions]</xs:documentation>
-      </xs:annotation>
-   </xs:element>
-   <xs:element name="div5" substitutionGroup="tei:tei_model.div5Like">
-      <xs:annotation>
-         <xs:documentation>(level-5 text division) contains a fifth-level subdivision of the front, body, or back of a text. [4.1.2. Numbered Divisions]</xs:documentation>
-      </xs:annotation>
-   </xs:element>
-   <xs:element name="div6" substitutionGroup="tei:tei_model.div6Like">
-      <xs:annotation>
-         <xs:documentation>(level-6 text division) contains a sixth-level subdivision of the front, body, or back of a text. [4.1.2. Numbered Divisions]</xs:documentation>
-      </xs:annotation>
-   </xs:element>
-   <xs:element name="div7" substitutionGroup="tei:tei_model.div7Like">
-      <xs:annotation>
-         <xs:documentation>(level-7 text division) contains the smallest possible subdivision of the front, body or back of a text, larger than a paragraph. [4.1.2. Numbered Divisions]</xs:documentation>
-      </xs:annotation>
-   </xs:element>
-   <xs:element name="trailer" substitutionGroup="tei:tei_model.divBottomPart">
-      <xs:annotation>
-         <xs:documentation>contains a closing title or footer appearing at the end of a division of a text. [4.2.4. Content of Textual Divisions 4.2. Elements Common to All Divisions]</xs:documentation>
-      </xs:annotation>
-      <xs:complexType mixed="true">
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element ref="tei:lg"/>
-            <xs:group ref="tei:tei_model.phrase"/>
-            <xs:group ref="tei:tei_model.inter"/>
-            <xs:group ref="tei:tei_model.lLike"/>
-            <xs:group ref="tei:tei_model.global"/>
-         </xs:choice>
-         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.placement.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.written.attributes"/>
-      </xs:complexType>
-   </xs:element>
-   <xs:element name="byline">
-      <xs:annotation>
-         <xs:documentation>(byline) contains the primary statement of responsibility given for a work on its title page or at the head or end of the work. [4.2.2. Openers and Closers 4.5. Front Matter]</xs:documentation>
-      </xs:annotation>
-      <xs:complexType mixed="true">
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:group ref="tei:tei_model.phrase"/>
-            <xs:element ref="tei:docAuthor"/>
-            <xs:group ref="tei:tei_model.global"/>
-         </xs:choice>
-         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-      </xs:complexType>
-   </xs:element>
-   <xs:element name="dateline">
-      <xs:annotation>
-         <xs:documentation>(dateline) contains a brief description of the place, date, time, etc. of production of a letter, newspaper story, or other work, prefixed or suffixed to it as a kind of heading or trailer. [4.2.2. Openers and Closers]</xs:documentation>
-      </xs:annotation>
-      <xs:complexType mixed="true">
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:group ref="tei:tei_model.phrase"/>
-            <xs:group ref="tei:tei_model.global"/>
-            <xs:element ref="tei:docDate"/>
-         </xs:choice>
-         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-      </xs:complexType>
-   </xs:element>
-   <xs:element name="argument">
-      <xs:annotation>
-         <xs:documentation>(argument) contains a formal list or prose description of the topics addressed by a subdivision of a text. [4.2. Elements Common to All Divisions 4.6. Title Pages]</xs:documentation>
-      </xs:annotation>
-      <xs:complexType>
-         <xs:sequence>
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:group ref="tei:tei_model.global"/>
-               <xs:group ref="tei:tei_model.headLike"/>
-            </xs:choice>
-            <xs:sequence maxOccurs="unbounded">
-               <xs:group ref="tei:tei_model.common"/>
-               <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-            </xs:sequence>
-         </xs:sequence>
-         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-      </xs:complexType>
-   </xs:element>
-   <xs:element name="epigraph">
-      <xs:annotation>
-         <xs:documentation>(epigraph) contains a quotation, anonymous or attributed, appearing at the start or end of a section or on a title page. [4.2.3. Arguments, Epigraphs, and Postscripts 4.2. Elements Common to All Divisions 4.6. Title Pages]</xs:documentation>
-      </xs:annotation>
-      <xs:complexType>
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:group ref="tei:tei_model.common"/>
-            <xs:group ref="tei:tei_model.global"/>
-         </xs:choice>
-         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-      </xs:complexType>
-   </xs:element>
-   <xs:element name="opener">
-      <xs:annotation>
-         <xs:documentation>(opener) groups together dateline, byline, salutation, and similar phrases appearing as a preliminary group at the start of a division, especially of a letter. [4.2. Elements Common to All Divisions]</xs:documentation>
-      </xs:annotation>
-      <xs:complexType mixed="true">
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:group ref="tei:tei_model.phrase"/>
-            <xs:element ref="tei:argument"/>
-            <xs:element ref="tei:byline"/>
-            <xs:element ref="tei:dateline"/>
-            <xs:element ref="tei:epigraph"/>
-            <xs:element ref="tei:salute"/>
-            <xs:element ref="tei:signed"/>
-            <xs:group ref="tei:tei_model.global"/>
-         </xs:choice>
-         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.written.attributes"/>
-      </xs:complexType>
-   </xs:element>
-   <xs:element name="closer" substitutionGroup="tei:tei_model.divBottomPart">
-      <xs:annotation>
-         <xs:documentation>(closer) groups together salutations, datelines, and similar phrases appearing as a final group at the end of a division, especially of a letter. [4.2.2. Openers and Closers 4.2. Elements Common to All Divisions]</xs:documentation>
-      </xs:annotation>
-      <xs:complexType mixed="true">
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element ref="tei:signed"/>
-            <xs:element ref="tei:dateline"/>
-            <xs:element ref="tei:salute"/>
-            <xs:group ref="tei:tei_model.phrase"/>
-            <xs:group ref="tei:tei_model.global"/>
-         </xs:choice>
-         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.written.attributes"/>
-      </xs:complexType>
-   </xs:element>
-   <xs:element name="salute">
-      <xs:annotation>
-         <xs:documentation>(salutation) contains a salutation or greeting prefixed to a foreword, dedicatory epistle, or other division of a text, or the salutation in the closing of a letter, preface, etc. [4.2.2. Openers and Closers]</xs:documentation>
-      </xs:annotation>
-      <xs:complexType>
-         <xs:complexContent>
-            <xs:extension base="tei:tei_macro.paraContent">
-               <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.written.attributes"/>
-            </xs:extension>
-         </xs:complexContent>
-      </xs:complexType>
-   </xs:element>
-   <xs:element name="signed" substitutionGroup="tei:tei_model.divBottomPart">
-      <xs:annotation>
-         <xs:documentation>(signature) contains the closing salutation, etc., appended to a foreword, dedicatory epistle, or other division of a text. [4.2.2. Openers and Closers]</xs:documentation>
-      </xs:annotation>
-      <xs:complexType>
-         <xs:complexContent>
-            <xs:extension base="tei:tei_macro.paraContent">
-               <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.written.attributes"/>
-            </xs:extension>
-         </xs:complexContent>
-      </xs:complexType>
-   </xs:element>
-   <xs:element name="postscript" substitutionGroup="tei:tei_model.divBottomPart">
-      <xs:annotation>
-         <xs:documentation>contains a postscript, e.g. to a letter. [4.2. Elements Common to All Divisions]</xs:documentation>
-      </xs:annotation>
-      <xs:complexType>
-         <xs:sequence>
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:group ref="tei:tei_model.global"/>
-               <xs:group ref="tei:tei_model.divTopPart"/>
-            </xs:choice>
-            <xs:group ref="tei:tei_model.common"/>
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:group ref="tei:tei_model.global"/>
-               <xs:group ref="tei:tei_model.common"/>
-            </xs:choice>
-            <xs:sequence minOccurs="0" maxOccurs="unbounded">
-               <xs:element ref="tei:tei_model.divBottomPart"/>
-               <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-            </xs:sequence>
-         </xs:sequence>
-         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.written.attributes"/>
-      </xs:complexType>
-   </xs:element>
-   <xs:element name="titlePage">
-      <xs:annotation>
-         <xs:documentation>(title page) contains the title page of a text, appearing within the front or back matter. [4.6. Title Pages]</xs:documentation>
-      </xs:annotation>
-      <xs:complexType>
-         <xs:sequence>
-            <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-            <xs:group ref="tei:tei_model.titlepagePart"/>
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:group ref="tei:tei_model.titlepagePart"/>
-               <xs:group ref="tei:tei_model.global"/>
-            </xs:choice>
-         </xs:sequence>
-         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-         <xs:attribute name="type">
-            <xs:annotation>
-               <xs:documentation>classifies the title page according to any convenient typology.</xs:documentation>
-            </xs:annotation>
-            <xs:simpleType>
-               <xs:restriction base="xs:token">
-                  <xs:pattern value="[^\p{C}\p{Z}]+"/>
-               </xs:restriction>
-            </xs:simpleType>
-         </xs:attribute>
-      </xs:complexType>
-   </xs:element>
-   <xs:element name="docTitle">
-      <xs:annotation>
-         <xs:documentation>(document title) contains the title of a document, including all its constituents, as given on a title page. [4.6. Title Pages]</xs:documentation>
-      </xs:annotation>
-      <xs:complexType>
-         <xs:sequence>
-            <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-            <xs:sequence maxOccurs="unbounded">
-               <xs:element ref="tei:titlePart"/>
-               <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.global"/>
-            </xs:sequence>
-         </xs:sequence>
-         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.canonical.attributes"/>
-      </xs:complexType>
-   </xs:element>
-   <xs:element name="titlePart">
-      <xs:annotation>
-         <xs:documentation>(title part) contains a subsection or division of the title of a work, as indicated on a title page. [4.6. Title Pages]</xs:documentation>
-      </xs:annotation>
-      <xs:complexType>
-         <xs:complexContent>
-            <xs:extension base="tei:tei_macro.paraContent">
-               <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-               <xs:attribute name="type" default="main">
-                  <xs:annotation>
-                     <xs:documentation>(type) specifies the role of this subdivision of the title.
-Suggested values include: 1] main (main); 2] sub (subordinate); 3] alt (alternate); 4] short (short); 5] desc (descriptive)</xs:documentation>
-                  </xs:annotation>
-                  <xs:simpleType>
-                     <xs:union>
-                        <xs:simpleType>
-                           <xs:restriction base="xs:token">
-                              <xs:enumeration value="main">
-                                 <xs:annotation>
-                                    <xs:documentation>(main) main title of the work</xs:documentation>
-                                 </xs:annotation>
-                              </xs:enumeration>
-                           </xs:restriction>
-                        </xs:simpleType>
-                        <xs:simpleType>
-                           <xs:restriction base="xs:token">
-                              <xs:enumeration value="sub">
-                                 <xs:annotation>
-                                    <xs:documentation>(subordinate) subtitle of the work</xs:documentation>
-                                 </xs:annotation>
-                              </xs:enumeration>
-                           </xs:restriction>
-                        </xs:simpleType>
-                        <xs:simpleType>
-                           <xs:restriction base="xs:token">
-                              <xs:enumeration value="alt">
-                                 <xs:annotation>
-                                    <xs:documentation>(alternate) alternative title of the work</xs:documentation>
-                                 </xs:annotation>
-                              </xs:enumeration>
-                           </xs:restriction>
-                        </xs:simpleType>
-                        <xs:simpleType>
-                           <xs:restriction base="xs:token">
-                              <xs:enumeration value="short">
-                                 <xs:annotation>
-                                    <xs:documentation>(short) abbreviated form of title</xs:documentation>
-                                 </xs:annotation>
-                              </xs:enumeration>
-                           </xs:restriction>
-                        </xs:simpleType>
-                        <xs:simpleType>
-                           <xs:restriction base="xs:token">
-                              <xs:enumeration value="desc">
-                                 <xs:annotation>
-                                    <xs:documentation>(descriptive) descriptive paraphrase of the work</xs:documentation>
-                                 </xs:annotation>
-                              </xs:enumeration>
-                           </xs:restriction>
-                        </xs:simpleType>
-                        <xs:simpleType>
-                           <xs:restriction base="xs:token">
-                              <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                           </xs:restriction>
-                        </xs:simpleType>
-                     </xs:union>
-                  </xs:simpleType>
-               </xs:attribute>
-            </xs:extension>
-         </xs:complexContent>
-      </xs:complexType>
-   </xs:element>
-   <xs:element name="docAuthor">
-      <xs:annotation>
-         <xs:documentation>(document author) contains the name of the author of the document, as given on the title page (often but not always contained in a byline). [4.6. Title Pages]</xs:documentation>
-      </xs:annotation>
-      <xs:complexType>
-         <xs:complexContent>
-            <xs:extension base="tei:tei_macro.phraseSeq">
-               <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.canonical.attributes"/>
-            </xs:extension>
-         </xs:complexContent>
-      </xs:complexType>
-   </xs:element>
-   <xs:element name="imprimatur">
-      <xs:annotation>
-         <xs:documentation>(imprimatur) contains a formal statement authorizing the publication of a work, sometimes required to appear on a title page or its verso. [4.6. Title Pages]</xs:documentation>
-      </xs:annotation>
-      <xs:complexType>
-         <xs:complexContent>
-            <xs:extension base="tei:tei_macro.paraContent">
-               <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-            </xs:extension>
-         </xs:complexContent>
-      </xs:complexType>
-   </xs:element>
-   <xs:element name="docEdition">
-      <xs:annotation>
-         <xs:documentation>(document edition) contains an edition statement as presented on a title page of a document. [4.6. Title Pages]</xs:documentation>
-      </xs:annotation>
-      <xs:complexType>
-         <xs:complexContent>
-            <xs:extension base="tei:tei_macro.paraContent">
-               <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-            </xs:extension>
-         </xs:complexContent>
-      </xs:complexType>
-   </xs:element>
-   <xs:element name="docImprint">
-      <xs:annotation>
-         <xs:documentation>(document imprint) contains the imprint statement (place and date of publication, publisher name), as given (usually) at the foot of a title page. [4.6. Title Pages]</xs:documentation>
-      </xs:annotation>
-      <xs:complexType mixed="true">
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:group ref="tei:tei_model.phrase"/>
-            <xs:element ref="tei:pubPlace"/>
-            <xs:element ref="tei:docDate"/>
-            <xs:element ref="tei:publisher"/>
-            <xs:group ref="tei:tei_model.global"/>
-         </xs:choice>
-         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-      </xs:complexType>
-   </xs:element>
-   <xs:element name="docDate">
-      <xs:annotation>
-         <xs:documentation>(document date) contains the date of a document, as given on a title page or in a dateline. [4.6. Title Pages]</xs:documentation>
-      </xs:annotation>
-      <xs:complexType>
-         <xs:complexContent>
-            <xs:extension base="tei:tei_macro.phraseSeq">
-               <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attribute name="when">
-                  <xs:annotation>
-                     <xs:documentation>(when) gives the value of the date in standard form, i.e. YYYY-MM-DD.</xs:documentation>
-                  </xs:annotation>
-                  <xs:simpleType>
-                     <xs:union memberTypes="xs:date xs:gYear xs:gMonth xs:gDay xs:gYearMonth xs:gMonthDay xs:time xs:dateTime"/>
-                  </xs:simpleType>
-               </xs:attribute>
-            </xs:extension>
-         </xs:complexContent>
-      </xs:complexType>
    </xs:element>
    <xs:element name="front">
       <xs:annotation>
@@ -7513,24 +6791,14 @@ Suggested values include: 1] main (main); 2] sub (subordinate); 3] alt (alternat
                <xs:group ref="tei:tei_model.global"/>
             </xs:choice>
             <xs:sequence minOccurs="0">
-               <xs:choice>
-                  <xs:sequence>
-                     <xs:element ref="tei:tei_model.div1Like"/>
-                     <xs:choice minOccurs="0" maxOccurs="unbounded">
-                        <xs:element ref="tei:tei_model.div1Like"/>
-                        <xs:group ref="tei:tei_model.frontPart"/>
-                        <xs:group ref="tei:tei_model.global"/>
-                     </xs:choice>
-                  </xs:sequence>
-                  <xs:sequence>
+               <xs:sequence>
+                  <xs:element ref="tei:tei_model.divLike"/>
+                  <xs:choice minOccurs="0" maxOccurs="unbounded">
                      <xs:element ref="tei:tei_model.divLike"/>
-                     <xs:choice minOccurs="0" maxOccurs="unbounded">
-                        <xs:element ref="tei:tei_model.divLike"/>
-                        <xs:group ref="tei:tei_model.frontPart"/>
-                        <xs:group ref="tei:tei_model.global"/>
-                     </xs:choice>
-                  </xs:sequence>
-               </xs:choice>
+                     <xs:group ref="tei:tei_model.frontPart"/>
+                     <xs:group ref="tei:tei_model.global"/>
+                  </xs:choice>
+               </xs:sequence>
                <xs:sequence minOccurs="0">
                   <xs:group ref="tei:tei_model.divBottom"/>
                   <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -7557,28 +6825,11 @@ Suggested values include: 1] main (main); 2] sub (subordinate); 3] alt (alternat
                <xs:group ref="tei:tei_model.listLike"/>
                <xs:group ref="tei:tei_model.global"/>
             </xs:choice>
-            <xs:choice minOccurs="0">
-               <xs:sequence>
-                  <xs:element ref="tei:tei_model.div1Like"/>
-                  <xs:choice minOccurs="0" maxOccurs="unbounded">
-                     <xs:group ref="tei:tei_model.frontPart"/>
-                     <xs:element ref="tei:tei_model.div1Like"/>
-                     <xs:group ref="tei:tei_model.global"/>
-                  </xs:choice>
-               </xs:sequence>
-               <xs:sequence>
-                  <xs:element ref="tei:tei_model.divLike"/>
-                  <xs:choice minOccurs="0" maxOccurs="unbounded">
-                     <xs:group ref="tei:tei_model.frontPart"/>
-                     <xs:element ref="tei:tei_model.divLike"/>
-                     <xs:group ref="tei:tei_model.global"/>
-                  </xs:choice>
-               </xs:sequence>
-            </xs:choice>
             <xs:sequence minOccurs="0">
-               <xs:element ref="tei:tei_model.divBottomPart"/>
+               <xs:element ref="tei:tei_model.divLike"/>
                <xs:choice minOccurs="0" maxOccurs="unbounded">
-                  <xs:element ref="tei:tei_model.divBottomPart"/>
+                  <xs:group ref="tei:tei_model.frontPart"/>
+                  <xs:element ref="tei:tei_model.divLike"/>
                   <xs:group ref="tei:tei_model.global"/>
                </xs:choice>
             </xs:sequence>
@@ -8805,4 +8056,37 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
          <xs:attributeGroup ref="tei:tei_att.dimensions.attributes"/>
       </xs:complexType>
    </xs:element>
+   <xs:attributeGroup name="tei_att.lexicographic.normalized.attributes">
+      <xs:attributeGroup ref="tei:tei_att.lexicographic.normalized.attribute.norm"/>
+      <xs:attributeGroup ref="tei:tei_att.lexicographic.normalized.attribute.orig"/>
+   </xs:attributeGroup>
+   <xs:attributeGroup name="tei_att.lexicographic.normalized.attribute.norm">
+      <xs:attribute name="norm" type="xs:string">
+         <xs:annotation>
+            <xs:documentation>(normalized) provides the normalized/standardized form of information present in the source text in a non-normalized form</xs:documentation>
+         </xs:annotation>
+      </xs:attribute>
+   </xs:attributeGroup>
+   <xs:attributeGroup name="tei_att.lexicographic.normalized.attribute.orig">
+      <xs:attribute name="orig" type="xs:string">
+         <xs:annotation>
+            <xs:documentation>(original) gives the original string or is the empty string when the element does not appear in the source text.</xs:documentation>
+         </xs:annotation>
+      </xs:attribute>
+   </xs:attributeGroup>
+   <xs:attributeGroup name="tei_att.global.analytic.attributes">
+      <xs:attributeGroup ref="tei:tei_att.global.analytic.attribute.ana"/>
+   </xs:attributeGroup>
+   <xs:attributeGroup name="tei_att.global.analytic.attribute.ana">
+      <xs:attribute name="ana">
+         <xs:simpleType>
+            <xs:restriction>
+               <xs:simpleType>
+                  <xs:list itemType="xs:anyURI"/>
+               </xs:simpleType>
+               <xs:minLength value="1"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
+   </xs:attributeGroup>
 </xs:schema>

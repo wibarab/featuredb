@@ -1,50 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="https://id.acdh.oeaw.ac.at/langDesc" xmlns:langdesc="https://id.acdh.oeaw.ac.at/langDesc" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:dcr="http://www.isocat.org/ns/dcr" xmlns:langdesc="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:tei="http://www.tei-c.org/ns/1.0">
+  <xs:import namespace="http://www.isocat.org/ns/dcr" schemaLocation="dcr.tmp"/>
   <xs:import namespace="http://www.tei-c.org/ns/1.0" schemaLocation="featuredb.xsd.tmp"/>
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.tmp"/>
-  <xs:element name="listFeatureValues">
+  <xs:element name="featureValueObservation">
     <xs:annotation>
-      <xs:documentation>(Feature Value List) lists possible values a feature can be realised</xs:documentation>
-    </xs:annotation>
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="langdesc:featureValue"/>
-        <xs:element ref="langdesc:featureValue"/>
-        <xs:element minOccurs="0" maxOccurs="unbounded" ref="langdesc:featureValue"/>
-      </xs:sequence>
-      <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlid"/>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="featureValue">
-    <xs:annotation>
-      <xs:documentation>(feature value) describes one feature value</xs:documentation>
-    </xs:annotation>
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="tei:name"/>
-        <xs:element maxOccurs="unbounded" ref="tei:p"/>
-        <xs:choice>
-          <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:note"/>
-          <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:cit"/>
-        </xs:choice>
-      </xs:sequence>
-      <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlid"/>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="featureValueObservation" substitutionGroup="tei:tei_model.divLike">
-    <xs:annotation>
-      <xs:documentation>(feature value observation) contains data gathered by a source when observing a given feature</xs:documentation>
+      <xs:documentation>(feature value observation) contains data gathered by a source about the realisation of a given feature</xs:documentation>
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:biblScope"/>
-        <xs:element minOccurs="0" ref="tei:settingDesc"/>
-        <xs:element minOccurs="0" ref="tei:particDesc"/>
-        <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:cit"/>
+        <xs:element ref="tei:placeName"/>
+        <xs:element ref="tei:date"/>
+        <xs:element maxOccurs="unbounded" ref="tei:personGrp"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:usg"/>
+        <xs:choice>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:cit"/>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:ptr"/>
+        </xs:choice>
         <xs:element ref="tei:note"/>
       </xs:sequence>
       <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-      <xs:attribute name="fVRef" use="required" type="xs:anyURI"/>
+      <xs:attribute name="fVal" type="xs:anyURI">
+        <xs:annotation>
+          <xs:documentation>(feature value) references any element which can be used to represent the value of a feature.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
     </xs:complexType>
   </xs:element>
 </xs:schema>

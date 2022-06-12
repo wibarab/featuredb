@@ -55,14 +55,19 @@
             <schemaSpec ident="featuredb" prefix="tei_" start="TEI" xml:lang="en" defaultExceptions="https://id.acdh.oeaw.ac.at/langDesc http://www.tei-c.org/ns/1.0 teix:egXML">
                <moduleRef key="core" exclude="addrLine address author bibl cit date editor email foreign gap head imprint item label list listBibl measure measureGrp mentioned monogr note num p pb postBox postCode ptr pubPlace publisher quote ref resp respStmt rs series street term title unclear unit"/>
                <moduleRef key="tei"/>
+               <moduleRef key="dictionaries" include="usg"/>
                <moduleRef key="header" include="abstract appInfo application availibility catDesc catRef category change classCode classDescl correspAction correspContext correspDesc creation distributor edition editionStmt encodingDesc extent fileDesc funder geoDecl hyphenation keywords langUsage language licence listChange listPrefixDef namespace normalization notesStmt prefixDef principal profileDesc projectDesc publicationStmt punctuation quotation ref revisionDesc samplingDecl seriesStmt sourceDesc sponsor stdVals taxonomy teiHeader textClass titleStmt unitDecl unitDef"/>
                <moduleRef key="corpus"/>
-               <moduleRef key="textstructure"/>
+               <moduleRef key="textstructure" include="TEI back body front div text"/>
                <moduleRef key="namesdates" include="affiliation age birth bloc death district education event faith forename genName geo geogFeat geogName langKnowledge langKnown listEvent listOrg listPerson listPlace location nationality occupation org orgName persName person personGrp place placeName population region residence settlement socecStatus state surname trait"/>
-               <!--<moduleRef key="fs"/>
-               <moduleRef key="analysis"/>-->
+<!--               <moduleRef key="fs"/>-->
+               <moduleRef key="analysis" include=""/>
                
-               <elementSpec ident="listFeatureValues" mode="add" ns="https://id.acdh.oeaw.ac.at/langDesc">
+               <!-- listFeatureValues and featureValue removed 
+                    for sake of simplicity DS 2022-05-08
+               -->
+               
+               <!--<elementSpec ident="listFeatureValues" mode="add" ns="https://id.acdh.oeaw.ac.at/langDesc">
                   <gloss>Feature Value List</gloss>
                   <desc>lists possible values a feature can be realised</desc>
                   <classes>
@@ -76,13 +81,9 @@
                   </attList>
                </elementSpec>
                
-               <elementSpec ident="personGrp" mode="change">
-                  <classes mode="change">
-                     <memberOf key="att.typed"/>
-                  </classes>
-               </elementSpec>
                
-               <elementSpec ident="featureValue" mode="add" ns="https://id.acdh.oeaw.ac.at/langDesc">
+               
+            <elementSpec ident="featureValue" mode="add" ns="https://id.acdh.oeaw.ac.at/langDesc">
                   <gloss>feature value</gloss>
                   <desc>describes one feature value</desc>
                   <content>
@@ -100,32 +101,100 @@
                      <attRef class="att.global" name="xml:id"/>
                   </attList>
                </elementSpec>
+
+
+               -->
                
-               <elementSpec ident="featureValueObservation" mode="add" ns="https://id.acdh.oeaw.ac.at/langDesc">
+               <elementSpec ident="list" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="replace" usage="rec">
+                        <valList type="closed">
+                           <valItem ident="featureValues">
+                              <desc>Feature Values</desc>
+                           </valItem>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               
+               <elementSpec ident="item" mode="change">
+                  <attList>
+                     <attDef ident="xml:id" mode="change" usage="req"/>
+                  </attList>
+               </elementSpec>
+               
+               <elementSpec ident="personGrp" mode="change">
+                  <!-- TODO Discuss with TEI-L why personGrp is not a member of att.typed -->
+                  <classes mode="change">
+                     <memberOf key="att.typed"/>
+                  </classes>
+               </elementSpec>
+               
+               
+               <elementSpec ident="featureValueObservation" mode="add" ns="https://wibarab.acdh.oeaw.ac.at/langDesc">
                   <gloss>feature value observation</gloss>
-                  <desc>contains data gathered by a source when observing a given feature</desc>
+                  <desc>contains data gathered by a source about the realisation of a given feature</desc>
                   <classes>
-                     <memberOf key="model.divLike"/>
+                     <memberOf key="model.divPart"/>
                      <memberOf key="att.global" exclude="att.global.linking att.global.analytic att.global.facs att.global.rendition"/>
+                     <memberOf key="att."></memberOf>
                   </classes>
                   <content>
                      <sequence>
                         <elementRef key="biblScope" minOccurs="0" maxOccurs="unbounded"/>
-                        <elementRef key="settingDesc" maxOccurs="1" minOccurs="0"/>
-                        <elementRef key="particDesc" maxOccurs="1" minOccurs="0"/>
+                        <elementRef key="placeName" maxOccurs="1" minOccurs="1"/>
+                        <elementRef key="date" maxOccurs="1" minOccurs="1"/>
+                        <!-- personGrp is defining a personGroup (wheres placeName references a place) – but there's no personGrpName element -->
+                        <elementRef key="personGrp" maxOccurs="unbounded" minOccurs="1"/>
+                        <!-- TODO "date", "placeName" and "personGrp" could be put into <usg> as well, however then the hierarchy becomes even more deeper nested -->
                         <elementRef key="usg" minOccurs="0" maxOccurs="unbounded"/>
-                        <elementRef key="cit" minOccurs="0" maxOccurs="unbounded"/>
+                        
+                        <alternate>
+                           <elementRef key="cit" minOccurs="0" maxOccurs="unbounded"/>
+                           <elementRef key="ptr" minOccurs="0" maxOccurs="unbounded"/>
+                        </alternate>
                         <elementRef key="note"/>
                      </sequence>
                   </content>
                   <attList>
-                     <attDef ident="fVRef" mode="add" usage="req">
+                     <!-- DS this is a hard copy of the original definition on <f> – not nice, 
+                          but I don't know a way of referencing a locally defined attribute.  -->
+                     <attDef ident="fVal" usage="opt">
+                        <gloss versionDate="2007-07-04" xml:lang="en">feature value</gloss>
+                        <gloss versionDate="2007-12-20" xml:lang="ko">자질 값</gloss>
+                        <gloss versionDate="2008-04-06" xml:lang="es">valor del rasgo</gloss>
+                        <gloss versionDate="2008-03-30" xml:lang="fr">valeur de traits</gloss>
+                        <gloss versionDate="2007-11-06" xml:lang="it">valore del tratto</gloss>
+                        <desc versionDate="2005-01-14" xml:lang="en">references any element which can be used to represent the
+                           value of a feature.</desc>
+                        <desc versionDate="2007-12-20" xml:lang="ko">자질의 값을 표시할 수 있는 요소를 참조한다.</desc>
+                        <desc versionDate="2007-05-02" xml:lang="zh-TW">參照任何可用來代表功能值的元素。</desc>
+                        <desc versionDate="2008-04-05" xml:lang="ja">素性値を表す要素を参照する．</desc>
+                        <desc versionDate="2007-06-12" xml:lang="fr">référence n'importe quel élément pouvant être
+                           utilisé pour représenter la valeur d'un trait.</desc>
+                        <desc versionDate="2007-05-04" xml:lang="es">indica cualquier elemento que puede ser usado para representar el valor de un rasgo.</desc>
+                        <desc versionDate="2007-01-21" xml:lang="it">indica un qualsiasi elemento che può essere usato come valore di un tratto.</desc>
+                        <datatype><dataRef key="teidata.pointer"/></datatype>
+                        <remarks versionDate="2005-01-14" xml:lang="en">
+                           <p>If this attribute is supplied as well as content, the value referenced is to be unified with  that contained.</p>
+                        </remarks>
+                        <remarks xml:lang="fr" versionDate="2007-06-12">
+                           <p>Si cet attribut est fourni en plus d'un contenu, la valeur référencée doit
+                              être unifiée avec ce contenu.</p>
+                        </remarks>
+                        <remarks xml:lang="ja" versionDate="2008-04-05">
+                           <p>
+                              当該属性の値は，参照された要素内容とされる．
+                           </p>
+                        </remarks>
+                     </attDef>
+                     <!--<attDef ident="fValRef" mode="add" usage="req">
                         <gloss>feature value reference</gloss>
-                        <desc>points to one item in a <gi>listFeatureValues</gi>.</desc>
+                        <desc>points to one <gi>item</gi> in a <tag>list type="featureValues"</tag>.</desc>
                         <datatype>
                            <dataRef key="teidata.pointer"/>
                         </datatype>
-                     </attDef>
+                     </attDef>-->
                   </attList>
                </elementSpec>
             </schemaSpec>
