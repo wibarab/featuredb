@@ -10,7 +10,13 @@
     <xs:simpleType>
       <xs:restriction>
         <xs:simpleType>
-          <xs:list itemType="xs:anyURI"/>
+          <xs:list>
+            <xs:simpleType>
+              <xs:restriction base="xs:anyURI">
+                <xs:pattern value="\S+"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:list>
         </xs:simpleType>
         <xs:minLength value="1"/>
       </xs:restriction>
@@ -23,7 +29,13 @@
     <xs:simpleType>
       <xs:restriction>
         <xs:simpleType>
-          <xs:list itemType="xs:anyURI"/>
+          <xs:list>
+            <xs:simpleType>
+              <xs:restriction base="xs:anyURI">
+                <xs:pattern value="\S+"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:list>
         </xs:simpleType>
         <xs:minLength value="1"/>
       </xs:restriction>

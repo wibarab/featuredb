@@ -9,23 +9,29 @@
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:biblScope"/>
-        <xs:element ref="tei:placeName"/>
+        <xs:element ref="tei:name"/>
+        <xs:element maxOccurs="unbounded" ref="tei:bibl"/>
+        <xs:choice>
+          <xs:element minOccurs="0" ref="tei:region"/>
+          <xs:element minOccurs="0" ref="tei:settlement"/>
+        </xs:choice>
         <xs:element ref="tei:date"/>
+        <xs:element minOccurs="0" ref="tei:lang"/>
         <xs:element maxOccurs="unbounded" ref="tei:personGrp"/>
-        <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:usg"/>
         <xs:choice>
           <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:cit"/>
           <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:ptr"/>
         </xs:choice>
-        <xs:element ref="tei:note"/>
+        <xs:element maxOccurs="unbounded" ref="tei:note"/>
       </xs:sequence>
-      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-      <xs:attribute name="fVal" type="xs:anyURI">
-        <xs:annotation>
-          <xs:documentation>(feature value) references any element which can be used to represent the value of a feature.</xs:documentation>
-        </xs:annotation>
-      </xs:attribute>
+      <xs:attributeGroup ref="tei:tei_att.global.attribute.xmllang"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlbase"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlspace"/>
+      <xs:attributeGroup ref="tei:tei_att.global.responsibility.attribute.cert"/>
+      <xs:attributeGroup ref="tei:tei_att.global.responsibility.attribute.resp"/>
+      <xs:attributeGroup ref="tei:tei_att.global.responsibility.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.docStatus.attributes"/>
+      <xs:attribute ref="xml:id" use="required"/>
     </xs:complexType>
   </xs:element>
 </xs:schema>

@@ -11,10 +11,10 @@
    <xs:import namespace="https://wibarab.acdh.oeaw.ac.at/langDesc"
               schemaLocation="langdesc.tmp"/>
    <!--
-    Schema generated from ODD source 2022-06-12T15:15:54Z. .
-    TEI Edition: Version 4.3.0. Last updated on
-            31st August 2021, revision b4f72b1ff
-    TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.3.0/
+    Schema generated from ODD source 2022-06-21T16:20:00Z. .
+    TEI Edition: Version 4.4.0. Last updated on
+            19th April 2022, revision ff9cc28b0
+    TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.4.0/
     
   -->
    <!-- CC BY 4.0 -->
@@ -73,7 +73,13 @@
          <xs:simpleType>
             <xs:restriction>
                <xs:simpleType>
-                  <xs:list itemType="xs:anyURI"/>
+                  <xs:list>
+                     <xs:simpleType>
+                        <xs:restriction base="xs:anyURI">
+                           <xs:pattern value="\S+"/>
+                        </xs:restriction>
+                     </xs:simpleType>
+                  </xs:list>
                </xs:simpleType>
                <xs:minLength value="1"/>
             </xs:restriction>
@@ -91,7 +97,13 @@
          <xs:simpleType>
             <xs:restriction>
                <xs:simpleType>
-                  <xs:list itemType="xs:anyURI"/>
+                  <xs:list>
+                     <xs:simpleType>
+                        <xs:restriction base="xs:anyURI">
+                           <xs:pattern value="\S+"/>
+                        </xs:restriction>
+                     </xs:simpleType>
+                  </xs:list>
                </xs:simpleType>
                <xs:minLength value="1"/>
             </xs:restriction>
@@ -110,7 +122,13 @@
          <xs:simpleType>
             <xs:restriction>
                <xs:simpleType>
-                  <xs:list itemType="xs:anyURI"/>
+                  <xs:list>
+                     <xs:simpleType>
+                        <xs:restriction base="xs:anyURI">
+                           <xs:pattern value="\S+"/>
+                        </xs:restriction>
+                     </xs:simpleType>
+                  </xs:list>
                </xs:simpleType>
                <xs:minLength value="1"/>
             </xs:restriction>
@@ -118,15 +136,7 @@
       </xs:attribute>
    </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.canonical.attributes">
-      <xs:attributeGroup ref="tei:tei_att.canonical.attribute.key"/>
       <xs:attributeGroup ref="tei:tei_att.canonical.attribute.ref"/>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.canonical.attribute.key">
-      <xs:attribute name="key" type="xs:string">
-         <xs:annotation>
-            <xs:documentation>provides an externally-defined means of identifying the entity (or entities) being named, using a coded value of some kind.</xs:documentation>
-         </xs:annotation>
-      </xs:attribute>
    </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.canonical.attribute.ref">
       <xs:attribute name="ref">
@@ -136,220 +146,15 @@
          <xs:simpleType>
             <xs:restriction>
                <xs:simpleType>
-                  <xs:list itemType="xs:anyURI"/>
+                  <xs:list>
+                     <xs:simpleType>
+                        <xs:restriction base="xs:anyURI">
+                           <xs:pattern value="\S+"/>
+                        </xs:restriction>
+                     </xs:simpleType>
+                  </xs:list>
                </xs:simpleType>
                <xs:minLength value="1"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.ranging.attributes">
-      <xs:attributeGroup ref="tei:tei_att.ranging.attribute.atLeast"/>
-      <xs:attributeGroup ref="tei:tei_att.ranging.attribute.atMost"/>
-      <xs:attributeGroup ref="tei:tei_att.ranging.attribute.min"/>
-      <xs:attributeGroup ref="tei:tei_att.ranging.attribute.max"/>
-      <xs:attributeGroup ref="tei:tei_att.ranging.attribute.confidence"/>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.ranging.attribute.atLeast">
-      <xs:attribute name="atLeast">
-         <xs:annotation>
-            <xs:documentation>gives a minimum estimated value for the approximate measurement.</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:union memberTypes="xs:double xs:decimal">
-               <xs:simpleType>
-                  <xs:restriction base="xs:token">
-                     <xs:pattern value="(\-?[\d]+/\-?[\d]+)"/>
-                  </xs:restriction>
-               </xs:simpleType>
-            </xs:union>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.ranging.attribute.atMost">
-      <xs:attribute name="atMost">
-         <xs:annotation>
-            <xs:documentation>gives a maximum estimated value for the approximate measurement.</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:union memberTypes="xs:double xs:decimal">
-               <xs:simpleType>
-                  <xs:restriction base="xs:token">
-                     <xs:pattern value="(\-?[\d]+/\-?[\d]+)"/>
-                  </xs:restriction>
-               </xs:simpleType>
-            </xs:union>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.ranging.attribute.min">
-      <xs:attribute name="min">
-         <xs:annotation>
-            <xs:documentation>where the measurement summarizes more than one observation or a range, supplies the minimum value observed.</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:union memberTypes="xs:double xs:decimal">
-               <xs:simpleType>
-                  <xs:restriction base="xs:token">
-                     <xs:pattern value="(\-?[\d]+/\-?[\d]+)"/>
-                  </xs:restriction>
-               </xs:simpleType>
-            </xs:union>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.ranging.attribute.max">
-      <xs:attribute name="max">
-         <xs:annotation>
-            <xs:documentation>where the measurement summarizes more than one observation or a range, supplies the maximum value observed.</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:union memberTypes="xs:double xs:decimal">
-               <xs:simpleType>
-                  <xs:restriction base="xs:token">
-                     <xs:pattern value="(\-?[\d]+/\-?[\d]+)"/>
-                  </xs:restriction>
-               </xs:simpleType>
-            </xs:union>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.ranging.attribute.confidence">
-      <xs:attribute name="confidence" type="xs:double"/>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.dimensions.attributes">
-      <xs:attributeGroup ref="tei:tei_att.ranging.attributes"/>
-      <xs:attributeGroup ref="tei:tei_att.dimensions.attribute.unit"/>
-      <xs:attributeGroup ref="tei:tei_att.dimensions.attribute.quantity"/>
-      <xs:attributeGroup ref="tei:tei_att.dimensions.attribute.extent"/>
-      <xs:attributeGroup ref="tei:tei_att.dimensions.attribute.precision"/>
-      <xs:attributeGroup ref="tei:tei_att.dimensions.attribute.scope"/>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.dimensions.attribute.unit">
-      <xs:attribute name="unit">
-         <xs:annotation>
-            <xs:documentation>names the unit used for the measurement
-Suggested values include: 1] cm (centimetres); 2] mm (millimetres); 3] in (inches); 4] line; 5] char (characters)</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:union>
-               <xs:simpleType>
-                  <xs:restriction base="xs:token">
-                     <xs:enumeration value="cm">
-                        <xs:annotation>
-                           <xs:documentation>(centimetres) </xs:documentation>
-                        </xs:annotation>
-                     </xs:enumeration>
-                  </xs:restriction>
-               </xs:simpleType>
-               <xs:simpleType>
-                  <xs:restriction base="xs:token">
-                     <xs:enumeration value="mm">
-                        <xs:annotation>
-                           <xs:documentation>(millimetres) </xs:documentation>
-                        </xs:annotation>
-                     </xs:enumeration>
-                  </xs:restriction>
-               </xs:simpleType>
-               <xs:simpleType>
-                  <xs:restriction base="xs:token">
-                     <xs:enumeration value="in">
-                        <xs:annotation>
-                           <xs:documentation>(inches) </xs:documentation>
-                        </xs:annotation>
-                     </xs:enumeration>
-                  </xs:restriction>
-               </xs:simpleType>
-               <xs:simpleType>
-                  <xs:restriction base="xs:token">
-                     <xs:enumeration value="line">
-                        <xs:annotation>
-                           <xs:documentation>lines of text</xs:documentation>
-                        </xs:annotation>
-                     </xs:enumeration>
-                  </xs:restriction>
-               </xs:simpleType>
-               <xs:simpleType>
-                  <xs:restriction base="xs:token">
-                     <xs:enumeration value="char">
-                        <xs:annotation>
-                           <xs:documentation>(characters) characters of text</xs:documentation>
-                        </xs:annotation>
-                     </xs:enumeration>
-                  </xs:restriction>
-               </xs:simpleType>
-               <xs:simpleType>
-                  <xs:restriction base="xs:token">
-                     <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                  </xs:restriction>
-               </xs:simpleType>
-            </xs:union>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.dimensions.attribute.quantity">
-      <xs:attribute name="quantity">
-         <xs:annotation>
-            <xs:documentation>specifies the length in the units specified</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:union memberTypes="xs:double xs:decimal">
-               <xs:simpleType>
-                  <xs:restriction base="xs:token">
-                     <xs:pattern value="(\-?[\d]+/\-?[\d]+)"/>
-                  </xs:restriction>
-               </xs:simpleType>
-            </xs:union>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.dimensions.attribute.extent">
-      <xs:attribute name="extent" type="xs:string">
-         <xs:annotation>
-            <xs:documentation>indicates the size of the object concerned using a project-specific vocabulary combining quantity and units in a single string of words.</xs:documentation>
-         </xs:annotation>
-      </xs:attribute>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.dimensions.attribute.precision">
-      <xs:attribute name="precision">
-         <xs:annotation>
-            <xs:documentation>characterizes the precision of the values specified by the other attributes.</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:restriction base="xs:token">
-               <xs:enumeration value="high">
-                  <xs:annotation>
-                     <xs:documentation/>
-                  </xs:annotation>
-               </xs:enumeration>
-               <xs:enumeration value="medium">
-                  <xs:annotation>
-                     <xs:documentation/>
-                  </xs:annotation>
-               </xs:enumeration>
-               <xs:enumeration value="low">
-                  <xs:annotation>
-                     <xs:documentation/>
-                  </xs:annotation>
-               </xs:enumeration>
-               <xs:enumeration value="unknown">
-                  <xs:annotation>
-                     <xs:documentation/>
-                  </xs:annotation>
-               </xs:enumeration>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.dimensions.attribute.scope">
-      <xs:attribute name="scope">
-         <xs:annotation>
-            <xs:documentation>where the measurement summarizes more than one observation, specifies the applicability of this measurement.
-Sample values include: 1] all; 2] most; 3] range</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:restriction base="xs:token">
-               <xs:pattern value="[^\p{C}\p{Z}]+"/>
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
@@ -358,7 +163,13 @@ Sample values include: 1] all; 2] most; 3] range</xs:documentation>
       <xs:attributeGroup ref="tei:tei_att.written.attribute.hand"/>
    </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.written.attribute.hand">
-      <xs:attribute name="hand" type="xs:anyURI"/>
+      <xs:attribute name="hand">
+         <xs:simpleType>
+            <xs:restriction base="xs:anyURI">
+               <xs:pattern value="\S+"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
    </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.breaking.attributes">
       <xs:attributeGroup ref="tei:tei_att.breaking.attribute.break"/>
@@ -385,8 +196,6 @@ Sample values include: 1] all; 2] most; 3] range</xs:documentation>
       <xs:attributeGroup ref="tei:tei_att.datable.w3c.attribute.when"/>
       <xs:attributeGroup ref="tei:tei_att.datable.w3c.attribute.notBefore"/>
       <xs:attributeGroup ref="tei:tei_att.datable.w3c.attribute.notAfter"/>
-      <xs:attributeGroup ref="tei:tei_att.datable.w3c.attribute.from"/>
-      <xs:attributeGroup ref="tei:tei_att.datable.w3c.attribute.to"/>
    </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.datable.w3c.attribute.when">
       <xs:attribute name="when">
@@ -418,30 +227,8 @@ Sample values include: 1] all; 2] most; 3] range</xs:documentation>
          </xs:simpleType>
       </xs:attribute>
    </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.datable.w3c.attribute.from">
-      <xs:attribute name="from">
-         <xs:annotation>
-            <xs:documentation>indicates the starting point of the period in standard form, e.g. yyyy-mm-dd.</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:union memberTypes="xs:date xs:gYear xs:gMonth xs:gDay xs:gYearMonth xs:gMonthDay xs:time xs:dateTime"/>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.datable.w3c.attribute.to">
-      <xs:attribute name="to">
-         <xs:annotation>
-            <xs:documentation>indicates the ending point of the period in standard form, e.g. yyyy-mm-dd.</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:union memberTypes="xs:date xs:gYear xs:gMonth xs:gDay xs:gYearMonth xs:gMonthDay xs:time xs:dateTime"/>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.datable.attributes">
       <xs:attributeGroup ref="tei:tei_att.datable.w3c.attributes"/>
-      <xs:attributeGroup ref="tei:tei_att.datable.iso.attributes"/>
-      <xs:attributeGroup ref="tei:tei_att.datable.custom.attributes"/>
       <xs:attributeGroup ref="tei:tei_att.datable.attribute.calendar"/>
       <xs:attributeGroup ref="tei:tei_att.datable.attribute.period"/>
    </xs:attributeGroup>
@@ -453,7 +240,13 @@ Sample values include: 1] all; 2] most; 3] range</xs:documentation>
          <xs:simpleType>
             <xs:restriction>
                <xs:simpleType>
-                  <xs:list itemType="xs:anyURI"/>
+                  <xs:list>
+                     <xs:simpleType>
+                        <xs:restriction base="xs:anyURI">
+                           <xs:pattern value="\S+"/>
+                        </xs:restriction>
+                     </xs:simpleType>
+                  </xs:list>
                </xs:simpleType>
                <xs:minLength value="1"/>
             </xs:restriction>
@@ -465,7 +258,13 @@ Sample values include: 1] all; 2] most; 3] range</xs:documentation>
          <xs:simpleType>
             <xs:restriction>
                <xs:simpleType>
-                  <xs:list itemType="xs:anyURI"/>
+                  <xs:list>
+                     <xs:simpleType>
+                        <xs:restriction base="xs:anyURI">
+                           <xs:pattern value="\S+"/>
+                        </xs:restriction>
+                     </xs:simpleType>
+                  </xs:list>
                </xs:simpleType>
                <xs:minLength value="1"/>
             </xs:restriction>
@@ -482,30 +281,6 @@ Sample values include: 1] all; 2] most; 3] range</xs:documentation>
    <xs:attributeGroup name="tei_att.datcat.attribute.valueDatcat">
       <xs:attribute ref="dcr:valueDatcat"/>
    </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.declarable.attributes">
-      <xs:attributeGroup ref="tei:tei_att.declarable.attribute.default"/>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.declarable.attribute.default">
-      <xs:attribute name="default" default="false">
-         <xs:annotation>
-            <xs:documentation>indicates whether or not this element is selected by default when its parent is selected.</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:restriction base="xs:token">
-               <xs:enumeration value="true">
-                  <xs:annotation>
-                     <xs:documentation>This element is selected if its parent is selected</xs:documentation>
-                  </xs:annotation>
-               </xs:enumeration>
-               <xs:enumeration value="false">
-                  <xs:annotation>
-                     <xs:documentation>This element can only be selected explicitly, unless it is the only one of its kind, in which case it is selected if its parent is selected.</xs:documentation>
-                  </xs:annotation>
-               </xs:enumeration>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.declaring.attributes">
       <xs:attributeGroup ref="tei:tei_att.declaring.attribute.decls"/>
    </xs:attributeGroup>
@@ -517,7 +292,13 @@ Sample values include: 1] all; 2] most; 3] range</xs:documentation>
          <xs:simpleType>
             <xs:restriction>
                <xs:simpleType>
-                  <xs:list itemType="xs:anyURI"/>
+                  <xs:list>
+                     <xs:simpleType>
+                        <xs:restriction base="xs:anyURI">
+                           <xs:pattern value="\S+"/>
+                        </xs:restriction>
+                     </xs:simpleType>
+                  </xs:list>
                </xs:simpleType>
                <xs:minLength value="1"/>
             </xs:restriction>
@@ -688,7 +469,13 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
          <xs:simpleType>
             <xs:restriction>
                <xs:simpleType>
-                  <xs:list itemType="xs:anyURI"/>
+                  <xs:list>
+                     <xs:simpleType>
+                        <xs:restriction base="xs:anyURI">
+                           <xs:pattern value="\S+"/>
+                        </xs:restriction>
+                     </xs:simpleType>
+                  </xs:list>
                </xs:simpleType>
                <xs:minLength value="1"/>
             </xs:restriction>
@@ -697,7 +484,6 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
    </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.editLike.attributes">
       <xs:attributeGroup ref="tei:tei_att.editLike.attribute.evidence"/>
-      <xs:attributeGroup ref="tei:tei_att.editLike.attribute.instant"/>
    </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.editLike.attribute.evidence">
       <xs:attribute name="evidence">
@@ -752,117 +538,17 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</xs:documentat
          </xs:simpleType>
       </xs:attribute>
    </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.editLike.attribute.instant">
-      <xs:attribute name="instant" default="false">
-         <xs:annotation>
-            <xs:documentation>indicates whether this is an instant revision or not.</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:union memberTypes="xs:boolean">
-               <xs:simpleType>
-                  <xs:restriction base="xs:token">
-                     <xs:enumeration value="unknown">
-                        <xs:annotation>
-                           <xs:documentation/>
-                        </xs:annotation>
-                     </xs:enumeration>
-                     <xs:enumeration value="inapplicable">
-                        <xs:annotation>
-                           <xs:documentation/>
-                        </xs:annotation>
-                     </xs:enumeration>
-                  </xs:restriction>
-               </xs:simpleType>
-            </xs:union>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.global.rendition.attributes">
-      <xs:attributeGroup ref="tei:tei_att.global.rendition.attribute.rend"/>
-      <xs:attributeGroup ref="tei:tei_att.global.rendition.attribute.style"/>
-      <xs:attributeGroup ref="tei:tei_att.global.rendition.attribute.rendition"/>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.global.rendition.attribute.rend">
-      <xs:attribute name="rend">
-         <xs:annotation>
-            <xs:documentation>(rendition) indicates how the element in question was rendered or presented in the source text.</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:restriction>
-               <xs:simpleType>
-                  <xs:list>
-                     <xs:simpleType>
-                        <xs:restriction base="xs:token">
-                           <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                        </xs:restriction>
-                     </xs:simpleType>
-                  </xs:list>
-               </xs:simpleType>
-               <xs:minLength value="1"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.global.rendition.attribute.style">
-      <xs:attribute name="style" type="xs:string">
-         <xs:annotation>
-            <xs:documentation>contains an expression in some formal style definition language which defines the rendering or presentation used for this element in the source text</xs:documentation>
-         </xs:annotation>
-      </xs:attribute>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.global.rendition.attribute.rendition">
-      <xs:attribute name="rendition">
-         <xs:annotation>
-            <xs:documentation>points to a description of the rendering or presentation used for this element in the source text.</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:restriction>
-               <xs:simpleType>
-                  <xs:list itemType="xs:anyURI"/>
-               </xs:simpleType>
-               <xs:minLength value="1"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.global.source.attributes">
-      <xs:attributeGroup ref="tei:tei_att.global.source.attribute.source"/>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.global.source.attribute.source">
-      <xs:attribute name="source">
-         <xs:annotation>
-            <xs:documentation>specifies the source from which some aspect of this element is drawn.</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:restriction>
-               <xs:simpleType>
-                  <xs:list itemType="xs:anyURI"/>
-               </xs:simpleType>
-               <xs:minLength value="1"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.global.attributes">
-      <xs:attributeGroup ref="tei:tei_att.global.rendition.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.global.linking.attributes"/>
       <xs:attributeGroup ref="tei:tei_att.global.analytic.attributes"/>
       <xs:attributeGroup ref="tei:tei_att.global.responsibility.attributes"/>
-      <xs:attributeGroup ref="tei:tei_att.global.source.attributes"/>
       <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlid"/>
-      <xs:attributeGroup ref="tei:tei_att.global.attribute.n"/>
       <xs:attributeGroup ref="tei:tei_att.global.attribute.xmllang"/>
       <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlbase"/>
       <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlspace"/>
    </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.global.attribute.xmlid">
       <xs:attribute ref="xml:id"/>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.global.attribute.n">
-      <xs:attribute name="n" type="xs:string">
-         <xs:annotation>
-            <xs:documentation>(number) gives a number (or other label) for an element, which is not necessarily unique within the document.</xs:documentation>
-         </xs:annotation>
-      </xs:attribute>
    </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.global.attribute.xmllang">
       <xs:attribute ref="xml:lang"/>
@@ -947,10 +633,15 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</xs:documentat
       <xs:attributeGroup ref="tei:tei_att.resourced.attribute.url"/>
    </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.resourced.attribute.url">
-      <xs:attribute name="url" use="required" type="xs:anyURI">
+      <xs:attribute name="url" use="required">
          <xs:annotation>
             <xs:documentation>(uniform resource locator) specifies the URL from which the media concerned may be obtained.</xs:documentation>
          </xs:annotation>
+         <xs:simpleType>
+            <xs:restriction base="xs:anyURI">
+               <xs:pattern value="\S+"/>
+            </xs:restriction>
+         </xs:simpleType>
       </xs:attribute>
    </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.measurement.attributes">
@@ -1148,7 +839,13 @@ Suggested values include: 1] m (metre); 2] kg (kilogram); 3] s (second); 4] Hz (
       </xs:attribute>
    </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.measurement.attribute.unitRef">
-      <xs:attribute name="unitRef" type="xs:anyURI"/>
+      <xs:attribute name="unitRef">
+         <xs:simpleType>
+            <xs:restriction base="xs:anyURI">
+               <xs:pattern value="\S+"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
    </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.measurement.attribute.quantity">
       <xs:attribute name="quantity">
@@ -1221,7 +918,13 @@ Suggested values include: 1] m (metre); 2] kg (kilogram); 3] s (second); 4] Hz (
          <xs:simpleType>
             <xs:restriction>
                <xs:simpleType>
-                  <xs:list itemType="xs:anyURI"/>
+                  <xs:list>
+                     <xs:simpleType>
+                        <xs:restriction base="xs:anyURI">
+                           <xs:pattern value="\S+"/>
+                        </xs:restriction>
+                     </xs:simpleType>
+                  </xs:list>
                </xs:simpleType>
                <xs:minLength value="1"/>
             </xs:restriction>
@@ -1380,34 +1083,6 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
          </xs:simpleType>
       </xs:attribute>
    </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.typed.attributes">
-      <xs:attributeGroup ref="tei:tei_att.typed.attribute.type"/>
-      <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.typed.attribute.type">
-      <xs:attribute name="type">
-         <xs:annotation>
-            <xs:documentation>characterizes the element in some sense, using any convenient classification scheme or typology.</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:restriction base="xs:token">
-               <xs:pattern value="[^\p{C}\p{Z}]+"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.typed.attribute.subtype">
-      <xs:attribute name="subtype">
-         <xs:annotation>
-            <xs:documentation>(subtype) provides a sub-categorization of the element, if needed</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:restriction base="xs:token">
-               <xs:pattern value="[^\p{C}\p{Z}]+"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.pointing.attributes">
       <xs:attributeGroup ref="tei:tei_att.pointing.attribute.targetLang"/>
       <xs:attributeGroup ref="tei:tei_att.pointing.attribute.target"/>
@@ -1438,7 +1113,13 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
          <xs:simpleType>
             <xs:restriction>
                <xs:simpleType>
-                  <xs:list itemType="xs:anyURI"/>
+                  <xs:list>
+                     <xs:simpleType>
+                        <xs:restriction base="xs:anyURI">
+                           <xs:pattern value="\S+"/>
+                        </xs:restriction>
+                     </xs:simpleType>
+                  </xs:list>
                </xs:simpleType>
                <xs:minLength value="1"/>
             </xs:restriction>
@@ -1467,21 +1148,6 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
                      <xs:documentation>no further evaluation of targets is carried out beyond that needed to find the element specified in the pointer's target.</xs:documentation>
                   </xs:annotation>
                </xs:enumeration>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.sortable.attributes">
-      <xs:attributeGroup ref="tei:tei_att.sortable.attribute.sortKey"/>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.sortable.attribute.sortKey">
-      <xs:attribute name="sortKey">
-         <xs:annotation>
-            <xs:documentation>supplies the sort key for this element in an index, list or group which contains it.</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:restriction base="xs:token">
-               <xs:pattern value="[^\p{C}\p{Z}]+"/>
             </xs:restriction>
          </xs:simpleType>
       </xs:attribute>
@@ -1519,7 +1185,13 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
          <xs:simpleType>
             <xs:restriction>
                <xs:simpleType>
-                  <xs:list itemType="xs:anyURI"/>
+                  <xs:list>
+                     <xs:simpleType>
+                        <xs:restriction base="xs:anyURI">
+                           <xs:pattern value="\S+"/>
+                        </xs:restriction>
+                     </xs:simpleType>
+                  </xs:list>
                </xs:simpleType>
                <xs:minLength value="1"/>
             </xs:restriction>
@@ -1530,10 +1202,15 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
       <xs:attributeGroup ref="tei:tei_att.spanning.attribute.spanTo"/>
    </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.spanning.attribute.spanTo">
-      <xs:attribute name="spanTo" type="xs:anyURI">
+      <xs:attribute name="spanTo">
          <xs:annotation>
             <xs:documentation>indicates the end of a span initiated by the element bearing this attribute.</xs:documentation>
          </xs:annotation>
+         <xs:simpleType>
+            <xs:restriction base="xs:anyURI">
+               <xs:pattern value="\S+"/>
+            </xs:restriction>
+         </xs:simpleType>
       </xs:attribute>
    </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.timed.attributes">
@@ -1541,17 +1218,27 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
       <xs:attributeGroup ref="tei:tei_att.timed.attribute.end"/>
    </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.timed.attribute.start">
-      <xs:attribute name="start" type="xs:anyURI">
+      <xs:attribute name="start">
          <xs:annotation>
             <xs:documentation>indicates the location within a temporal alignment at which this element begins.</xs:documentation>
          </xs:annotation>
+         <xs:simpleType>
+            <xs:restriction base="xs:anyURI">
+               <xs:pattern value="\S+"/>
+            </xs:restriction>
+         </xs:simpleType>
       </xs:attribute>
    </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.timed.attribute.end">
-      <xs:attribute name="end" type="xs:anyURI">
+      <xs:attribute name="end">
          <xs:annotation>
             <xs:documentation>indicates the location within a temporal alignment at which this element ends.</xs:documentation>
          </xs:annotation>
+         <xs:simpleType>
+            <xs:restriction base="xs:anyURI">
+               <xs:pattern value="\S+"/>
+            </xs:restriction>
+         </xs:simpleType>
       </xs:attribute>
    </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.transcriptional.attributes">
@@ -1792,7 +1479,6 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
          <xs:element ref="tei:soCalled"/>
          <xs:element ref="tei:gloss"/>
          <xs:element ref="tei:term"/>
-         <xs:element ref="tei:title"/>
       </xs:choice>
    </xs:group>
    <xs:group name="tei_model.emphLike_alternation">
@@ -1804,7 +1490,6 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
          <xs:element ref="tei:soCalled"/>
          <xs:element ref="tei:gloss"/>
          <xs:element ref="tei:term"/>
-         <xs:element ref="tei:title"/>
       </xs:choice>
    </xs:group>
    <xs:group name="tei_model.emphLike_sequence">
@@ -1816,7 +1501,6 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
          <xs:element ref="tei:soCalled"/>
          <xs:element ref="tei:gloss"/>
          <xs:element ref="tei:term"/>
-         <xs:element ref="tei:title"/>
       </xs:sequence>
    </xs:group>
    <xs:group name="tei_model.emphLike_sequenceOptional">
@@ -1828,7 +1512,6 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
          <xs:element minOccurs="0" ref="tei:soCalled"/>
          <xs:element minOccurs="0" ref="tei:gloss"/>
          <xs:element minOccurs="0" ref="tei:term"/>
-         <xs:element minOccurs="0" ref="tei:title"/>
       </xs:sequence>
    </xs:group>
    <xs:group name="tei_model.emphLike_sequenceOptionalRepeatable">
@@ -1840,7 +1523,6 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
          <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:soCalled"/>
          <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:gloss"/>
          <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:term"/>
-         <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:title"/>
       </xs:sequence>
    </xs:group>
    <xs:group name="tei_model.emphLike_sequenceRepeatable">
@@ -1852,7 +1534,6 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
          <xs:element maxOccurs="unbounded" ref="tei:soCalled"/>
          <xs:element maxOccurs="unbounded" ref="tei:gloss"/>
          <xs:element maxOccurs="unbounded" ref="tei:term"/>
-         <xs:element maxOccurs="unbounded" ref="tei:title"/>
       </xs:sequence>
    </xs:group>
    <xs:group name="tei_model.highlighted">
@@ -2371,28 +2052,6 @@ Suggested values include: 1] volume (volume); 2] issue; 3] page (page); 4] line;
          <xs:element maxOccurs="unbounded" ref="tei:stage"/>
       </xs:sequence>
    </xs:group>
-   <xs:element name="tei_model.entryPart" abstract="true">
-      <xs:complexType>
-         <xs:complexContent>
-            <xs:extension base="tei:tei_macro.paraContent">
-               <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-               <xs:attributeGroup ref="tei:tei_att.lexicographic.attributes"/>
-               <xs:attribute name="type">
-                  <xs:annotation>
-                     <xs:documentation>classifies the usage information using any convenient typology.
-Sample values include: 1] geo (geographic); 2] time; 3] dom (domain); 4] register (register); 5] style; 6] plev (preference level); 7] lang (language); 8] gram (grammatical); 9] syn (synonym); 10] hyper (hypernym); 11] colloc (collocation); 12] comp (complement); 13] obj (object); 14] subj (subject); 15] verb; 16] hint</xs:documentation>
-                  </xs:annotation>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                     </xs:restriction>
-                  </xs:simpleType>
-               </xs:attribute>
-            </xs:extension>
-         </xs:complexContent>
-      </xs:complexType>
-   </xs:element>
    <xs:group name="tei_model.eventLike">
       <xs:choice>
          <xs:element ref="tei:event"/>
@@ -2770,6 +2429,7 @@ Sample values include: 1] geo (geographic); 2] time; 3] dom (domain); 4] registe
          <xs:group ref="tei:tei_model.offsetLike"/>
          <xs:group ref="tei:tei_model.placeStateLike"/>
          <xs:element ref="tei:rs"/>
+         <xs:element ref="tei:lang"/>
          <xs:group ref="tei:tei_model.persNamePart"/>
       </xs:choice>
    </xs:group>
@@ -2779,6 +2439,7 @@ Sample values include: 1] geo (geographic); 2] time; 3] dom (domain); 4] registe
          <xs:group ref="tei:tei_model.offsetLike_alternation"/>
          <xs:group ref="tei:tei_model.placeStateLike_alternation"/>
          <xs:element ref="tei:rs"/>
+         <xs:element ref="tei:lang"/>
          <xs:group ref="tei:tei_model.persNamePart_alternation"/>
       </xs:choice>
    </xs:group>
@@ -2788,6 +2449,7 @@ Sample values include: 1] geo (geographic); 2] time; 3] dom (domain); 4] registe
          <xs:group ref="tei:tei_model.offsetLike_sequence"/>
          <xs:group ref="tei:tei_model.placeStateLike_sequence"/>
          <xs:element ref="tei:rs"/>
+         <xs:element ref="tei:lang"/>
          <xs:group ref="tei:tei_model.persNamePart_sequence"/>
       </xs:sequence>
    </xs:group>
@@ -2797,6 +2459,7 @@ Sample values include: 1] geo (geographic); 2] time; 3] dom (domain); 4] registe
          <xs:group minOccurs="0" ref="tei:tei_model.offsetLike_sequenceOptional"/>
          <xs:group minOccurs="0" ref="tei:tei_model.placeStateLike_sequenceOptional"/>
          <xs:element minOccurs="0" ref="tei:rs"/>
+         <xs:element minOccurs="0" ref="tei:lang"/>
          <xs:group minOccurs="0" ref="tei:tei_model.persNamePart_sequenceOptional"/>
       </xs:sequence>
    </xs:group>
@@ -2812,6 +2475,7 @@ Sample values include: 1] geo (geographic); 2] time; 3] dom (domain); 4] registe
                    maxOccurs="unbounded"
                    ref="tei:tei_model.placeStateLike_sequenceOptionalRepeatable"/>
          <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:rs"/>
+         <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:lang"/>
          <xs:group minOccurs="0"
                    maxOccurs="unbounded"
                    ref="tei:tei_model.persNamePart_sequenceOptionalRepeatable"/>
@@ -2825,6 +2489,7 @@ Sample values include: 1] geo (geographic); 2] time; 3] dom (domain); 4] registe
          <xs:group maxOccurs="unbounded"
                    ref="tei:tei_model.placeStateLike_sequenceRepeatable"/>
          <xs:element maxOccurs="unbounded" ref="tei:rs"/>
+         <xs:element maxOccurs="unbounded" ref="tei:lang"/>
          <xs:group maxOccurs="unbounded"
                    ref="tei:tei_model.persNamePart_sequenceRepeatable"/>
       </xs:sequence>
@@ -2835,19 +2500,6 @@ Sample values include: 1] geo (geographic); 2] time; 3] dom (domain); 4] registe
          <xs:element ref="tei:tei_model.milestoneLike"/>
          <xs:group ref="tei:tei_model.noteLike"/>
          <xs:element ref="tei:tei_model.global.edit"/>
-      </xs:choice>
-   </xs:group>
-   <xs:group name="tei_model.biblPart">
-      <xs:choice>
-         <xs:group ref="tei:tei_model.respLike"/>
-         <xs:group ref="tei:tei_model.imprintPart"/>
-         <xs:element ref="tei:series"/>
-         <xs:element ref="tei:citedRange"/>
-         <xs:element ref="tei:bibl"/>
-         <xs:element ref="tei:relatedItem"/>
-         <xs:element ref="tei:textLang"/>
-         <xs:element ref="tei:edition"/>
-         <xs:element ref="tei:extent"/>
       </xs:choice>
    </xs:group>
    <xs:group name="tei_model.frontPart">
@@ -2946,7 +2598,6 @@ Sample values include: 1] geo (geographic); 2] time; 3] dom (domain); 4] registe
          </xs:sequence>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.divLike.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.declaring.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.written.attributes"/>
       </xs:complexType>
@@ -2955,18 +2606,6 @@ Sample values include: 1] geo (geographic); 2] time; 3] dom (domain); 4] registe
       <xs:complexType>
          <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.headLike"/>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-         <xs:attribute name="type">
-            <xs:annotation>
-               <xs:documentation>specifies what type of generated text division (e.g. index, table of contents, etc.) is to appear.
-Sample values include: 1] index; 2] toc; 3] figlist; 4] tablist</xs:documentation>
-            </xs:annotation>
-            <xs:simpleType>
-               <xs:restriction base="xs:token">
-                  <xs:pattern value="[^\p{C}\p{Z}]+"/>
-               </xs:restriction>
-            </xs:simpleType>
-         </xs:attribute>
       </xs:complexType>
    </xs:element>
    <xs:element name="tei_model.applicationLike" abstract="true">
@@ -2979,7 +2618,6 @@ Sample values include: 1] index; 2] toc; 3] figlist; 4] tablist</xs:documentatio
             </xs:choice>
          </xs:sequence>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
          <xs:attribute name="ident" use="required" type="xs:Name">
             <xs:annotation>
@@ -3020,7 +2658,13 @@ Sample values include: 1] index; 2] toc; 3] figlist; 4] tablist</xs:documentatio
          <xs:simpleType>
             <xs:restriction>
                <xs:simpleType>
-                  <xs:list itemType="xs:anyURI"/>
+                  <xs:list>
+                     <xs:simpleType>
+                        <xs:restriction base="xs:anyURI">
+                           <xs:pattern value="\S+"/>
+                        </xs:restriction>
+                     </xs:simpleType>
+                  </xs:list>
                </xs:simpleType>
                <xs:minLength value="1"/>
             </xs:restriction>
@@ -3069,7 +2713,6 @@ Sample values include: 1] index; 2] toc; 3] figlist; 4] tablist</xs:documentatio
          </xs:sequence>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.declaring.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.written.attributes"/>
       </xs:complexType>
    </xs:element>
@@ -3136,9 +2779,7 @@ Sample values include: 1] index; 2] toc; 3] figlist; 4] tablist</xs:documentatio
             </xs:choice>
          </xs:sequence>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.sortable.attributes"/>
       </xs:complexType>
    </xs:element>
    <xs:attributeGroup name="tei_att.milestoneUnit.attributes">
@@ -3330,17 +2971,6 @@ Suggested values include: 1] page; 2] column; 3] line; 4] book; 5] poem; 6] cant
          <xs:complexContent>
             <xs:extension base="tei:tei_macro.phraseSeq">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-               <xs:attribute name="type">
-                  <xs:annotation>
-                     <xs:documentation>specifies the sublanguage or register to which the word or phrase is being assigned</xs:documentation>
-                  </xs:annotation>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                     </xs:restriction>
-                  </xs:simpleType>
-               </xs:attribute>
                <xs:attribute name="time" type="xs:string">
                   <xs:annotation>
                      <xs:documentation>specifies how the phrase is distinct diachronically</xs:documentation>
@@ -3427,7 +3057,6 @@ Suggested values include: 1] page; 2] column; 3] line; 4] book; 5] poem; 6] cant
          <xs:complexContent>
             <xs:extension base="tei:tei_macro.specialPara">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.notated.attributes"/>
             </xs:extension>
          </xs:complexContent>
@@ -3549,7 +3178,6 @@ Suggested values include: 1] spoken (spoken); 2] thought (thought); 3] written (
       <xs:complexType>
          <xs:choice maxOccurs="unbounded">
             <xs:group ref="tei:tei_model.biblLike"/>
-            <xs:element ref="tei:tei_model.entryPart"/>
             <xs:group ref="tei:tei_model.global"/>
             <xs:element ref="tei:tei_model.graphicLike"/>
             <xs:element ref="tei:tei_model.ptrLike"/>
@@ -3557,7 +3185,6 @@ Suggested values include: 1] spoken (spoken); 2] thought (thought); 3] written (
             <xs:element ref="tei:q"/>
          </xs:choice>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="mentioned">
@@ -3592,32 +3219,6 @@ Suggested values include: 1] spoken (spoken); 2] thought (thought); 3] written (
          <xs:complexContent>
             <xs:extension base="tei:tei_macro.limitedContent">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-               <xs:attribute name="type">
-                  <xs:annotation>
-                     <xs:documentation>characterizes the element in some sense, using any convenient classification scheme or typology.
-Suggested values include: 1] deprecationInfo (deprecation information)</xs:documentation>
-                  </xs:annotation>
-                  <xs:simpleType>
-                     <xs:union>
-                        <xs:simpleType>
-                           <xs:restriction base="xs:token">
-                              <xs:enumeration value="deprecationInfo">
-                                 <xs:annotation>
-                                    <xs:documentation>(deprecation
-          information) This element describes why or how its parent element is being deprecated, typically including recommendations for alternate encoding.</xs:documentation>
-                                 </xs:annotation>
-                              </xs:enumeration>
-                           </xs:restriction>
-                        </xs:simpleType>
-                        <xs:simpleType>
-                           <xs:restriction base="xs:token">
-                              <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                           </xs:restriction>
-                        </xs:simpleType>
-                     </xs:union>
-                  </xs:simpleType>
-               </xs:attribute>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -3631,7 +3232,6 @@ Suggested values include: 1] deprecationInfo (deprecation information)</xs:docum
             <xs:extension base="tei:tei_macro.phraseSeq">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.declaring.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.pointing.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.cReferencing.attributes"/>
             </xs:extension>
@@ -3648,9 +3248,7 @@ Suggested values include: 1] deprecationInfo (deprecation information)</xs:docum
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.declaring.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.pointing.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.canonical.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.sortable.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.cReferencing.attributes"/>
             </xs:extension>
          </xs:complexContent>
@@ -3666,7 +3264,6 @@ Suggested values include: 1] deprecationInfo (deprecation information)</xs:docum
             <xs:element maxOccurs="unbounded" ref="tei:rt"/>
          </xs:sequence>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="rb">
@@ -3677,7 +3274,6 @@ Suggested values include: 1] deprecationInfo (deprecation information)</xs:docum
          <xs:complexContent>
             <xs:extension base="tei:tei_macro.phraseSeq">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -3690,23 +3286,37 @@ Suggested values include: 1] deprecationInfo (deprecation information)</xs:docum
          <xs:complexContent>
             <xs:extension base="tei:tei_macro.phraseSeq">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.placement.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.transcriptional.attributes"/>
-               <xs:attribute name="target" type="xs:anyURI">
+               <xs:attribute name="target">
                   <xs:annotation>
                      <xs:documentation>supplies a pointer to the base being glossed by this ruby text.</xs:documentation>
                   </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:anyURI">
+                        <xs:pattern value="\S+"/>
+                     </xs:restriction>
+                  </xs:simpleType>
                </xs:attribute>
-               <xs:attribute name="from" type="xs:anyURI">
+               <xs:attribute name="from">
                   <xs:annotation>
                      <xs:documentation>points to the starting point of the span of text being glossed by this ruby text.</xs:documentation>
                   </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:anyURI">
+                        <xs:pattern value="\S+"/>
+                     </xs:restriction>
+                  </xs:simpleType>
                </xs:attribute>
-               <xs:attribute name="to" type="xs:anyURI">
+               <xs:attribute name="to">
                   <xs:annotation>
                      <xs:documentation>points to the ending point of the span of text being glossed.</xs:documentation>
                   </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:anyURI">
+                        <xs:pattern value="\S+"/>
+                     </xs:restriction>
+                  </xs:simpleType>
                </xs:attribute>
             </xs:extension>
          </xs:complexContent>
@@ -3733,7 +3343,6 @@ Suggested values include: 1] deprecationInfo (deprecation information)</xs:docum
             <xs:extension base="tei:tei_macro.paraContent">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -3760,7 +3369,6 @@ Normalization 12. Critical Apparatus]</xs:documentation>
             <xs:extension base="tei:tei_macro.paraContent">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -3787,7 +3395,6 @@ Normalization 12. Critical Apparatus]</xs:documentation>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.timed.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.dimensions.attributes"/>
          <xs:attribute name="reason">
             <xs:annotation>
                <xs:documentation>(reason) gives the reason for omission
@@ -3895,7 +3502,6 @@ Sample values include: 1] rubbing (rubbing); 2] mildew (mildew); 3] smoke (smoke
       <xs:complexType>
          <xs:group minOccurs="0" ref="tei:tei_model.descLike"/>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.dimensions.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.timed.attributes"/>
       </xs:complexType>
    </xs:element>
@@ -3909,8 +3515,6 @@ Sample values include: 1] rubbing (rubbing); 2] mildew (mildew); 3] smoke (smoke
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.transcriptional.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.placement.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.dimensions.attributes"/>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -3924,8 +3528,6 @@ Sample values include: 1] rubbing (rubbing); 2] mildew (mildew); 3] smoke (smoke
             <xs:extension base="tei:tei_macro.paraContent">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.transcriptional.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.dimensions.attributes"/>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -3939,7 +3541,6 @@ Sample values include: 1] rubbing (rubbing); 2] mildew (mildew); 3] smoke (smoke
             <xs:extension base="tei:tei_macro.paraContent">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.dimensions.attributes"/>
                <xs:attribute name="reason">
                   <xs:annotation>
                      <xs:documentation>indicates why the material is hard to transcribe.
@@ -4035,7 +3636,40 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</xs:documentation>
                <xs:attributeGroup ref="tei:tei_att.personal.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+               <xs:attribute name="type">
+                  <xs:annotation>
+                     <xs:documentation/>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:token">
+                        <xs:enumeration value="variety">
+                           <xs:annotation>
+                              <xs:documentation/>
+                           </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="tribe">
+                           <xs:annotation>
+                              <xs:documentation/>
+                           </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="person">
+                           <xs:annotation>
+                              <xs:documentation/>
+                           </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="feature">
+                           <xs:annotation>
+                              <xs:documentation/>
+                           </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="featureValue">
+                           <xs:annotation>
+                              <xs:documentation/>
+                           </xs:annotation>
+                        </xs:enumeration>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:attribute>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -4049,7 +3683,6 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</xs:documentation>
             <xs:extension base="tei:tei_macro.phraseSeq">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -4130,59 +3763,6 @@ Measures]</xs:documentation>
          <xs:complexContent>
             <xs:extension base="tei:tei_macro.phraseSeq">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-               <xs:attributeGroup ref="tei:tei_att.ranging.attributes"/>
-               <xs:attribute name="type">
-                  <xs:annotation>
-                     <xs:documentation>indicates the type of numeric value.
-Suggested values include: 1] cardinal; 2] ordinal; 3] fraction; 4] percentage</xs:documentation>
-                  </xs:annotation>
-                  <xs:simpleType>
-                     <xs:union>
-                        <xs:simpleType>
-                           <xs:restriction base="xs:token">
-                              <xs:enumeration value="cardinal">
-                                 <xs:annotation>
-                                    <xs:documentation>absolute number, e.g. 21, 21.5</xs:documentation>
-                                 </xs:annotation>
-                              </xs:enumeration>
-                           </xs:restriction>
-                        </xs:simpleType>
-                        <xs:simpleType>
-                           <xs:restriction base="xs:token">
-                              <xs:enumeration value="ordinal">
-                                 <xs:annotation>
-                                    <xs:documentation>ordinal number, e.g. 21st</xs:documentation>
-                                 </xs:annotation>
-                              </xs:enumeration>
-                           </xs:restriction>
-                        </xs:simpleType>
-                        <xs:simpleType>
-                           <xs:restriction base="xs:token">
-                              <xs:enumeration value="fraction">
-                                 <xs:annotation>
-                                    <xs:documentation>fraction, e.g. one half or three-quarters</xs:documentation>
-                                 </xs:annotation>
-                              </xs:enumeration>
-                           </xs:restriction>
-                        </xs:simpleType>
-                        <xs:simpleType>
-                           <xs:restriction base="xs:token">
-                              <xs:enumeration value="percentage">
-                                 <xs:annotation>
-                                    <xs:documentation>a percentage</xs:documentation>
-                                 </xs:annotation>
-                              </xs:enumeration>
-                           </xs:restriction>
-                        </xs:simpleType>
-                        <xs:simpleType>
-                           <xs:restriction base="xs:token">
-                              <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                           </xs:restriction>
-                        </xs:simpleType>
-                     </xs:union>
-                  </xs:simpleType>
-               </xs:attribute>
                <xs:attribute name="value">
                   <xs:annotation>
                      <xs:documentation>supplies the value of the number in standard form.</xs:documentation>
@@ -4210,18 +3790,7 @@ Measures]</xs:documentation>
          <xs:complexContent>
             <xs:extension base="tei:tei_macro.phraseSeq">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
                <xs:attributeGroup ref="tei:tei_att.measurement.attributes"/>
-               <xs:attribute name="type">
-                  <xs:annotation>
-                     <xs:documentation>specifies the type of measurement in any convenient typology.</xs:documentation>
-                  </xs:annotation>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                     </xs:restriction>
-                  </xs:simpleType>
-               </xs:attribute>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -4234,7 +3803,6 @@ Measures]</xs:documentation>
          <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.measureLike"/>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.measurement.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="unit">
@@ -4246,7 +3814,6 @@ Measures]</xs:documentation>
          <xs:complexContent>
             <xs:extension base="tei:tei_macro.phraseSeq">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.measurement.attributes"/>
             </xs:extension>
          </xs:complexContent>
@@ -4261,12 +3828,15 @@ Measures]</xs:documentation>
             <xs:group ref="tei:tei_model.phrase"/>
             <xs:group ref="tei:tei_model.global"/>
          </xs:choice>
-         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.canonical.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
+         <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlid"/>
+         <xs:attributeGroup ref="tei:tei_att.global.attribute.xmllang"/>
+         <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlbase"/>
+         <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlspace"/>
+         <xs:attributeGroup ref="tei:tei_att.global.responsibility.attribute.cert"/>
+         <xs:attributeGroup ref="tei:tei_att.datable.attribute.calendar"/>
+         <xs:attributeGroup ref="tei:tei_att.datable.w3c.attribute.notBefore"/>
+         <xs:attributeGroup ref="tei:tei_att.datable.w3c.attribute.notAfter"/>
          <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.dimensions.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="time">
@@ -4282,8 +3852,6 @@ Measures]</xs:documentation>
          <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.canonical.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.dimensions.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="abbr">
@@ -4294,18 +3862,6 @@ Measures]</xs:documentation>
          <xs:complexContent>
             <xs:extension base="tei:tei_macro.phraseSeq">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-               <xs:attribute name="type">
-                  <xs:annotation>
-                     <xs:documentation>(type) allows the encoder to classify the abbreviation according to some convenient typology.
-Sample values include: 1] suspension (suspension); 2] contraction (contraction); 3] brevigraph; 4] superscription (superscription); 5] acronym (acronym); 6] title (title); 7] organization (organization); 8] geographic (geographic)</xs:documentation>
-                  </xs:annotation>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                     </xs:restriction>
-                  </xs:simpleType>
-               </xs:attribute>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -4333,7 +3889,6 @@ Sample values include: 1] suspension (suspension); 2] contraction (contraction);
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.internetMedia.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.pointing.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="ref" substitutionGroup="tei:tei_model.ptrLike">
@@ -4348,7 +3903,6 @@ Sample values include: 1] suspension (suspension); 2] contraction (contraction);
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.internetMedia.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.pointing.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -4386,8 +3940,6 @@ Sample values include: 1] suspension (suspension); 2] contraction (contraction);
             </xs:sequence>
          </xs:sequence>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.sortable.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
          <xs:attribute name="type">
             <xs:annotation>
                <xs:documentation/>
@@ -4411,18 +3963,13 @@ Sample values include: 1] suspension (suspension); 2] contraction (contraction);
       <xs:complexType>
          <xs:complexContent>
             <xs:extension base="tei:tei_macro.specialPara">
-               <xs:attributeGroup ref="tei:tei_att.global.attribute.n"/>
                <xs:attributeGroup ref="tei:tei_att.global.attribute.xmllang"/>
                <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlbase"/>
                <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlspace"/>
-               <xs:attributeGroup ref="tei:tei_att.global.rendition.attribute.rend"/>
-               <xs:attributeGroup ref="tei:tei_att.global.rendition.attribute.style"/>
-               <xs:attributeGroup ref="tei:tei_att.global.rendition.attribute.rendition"/>
+               <xs:attributeGroup ref="tei:tei_att.global.linking.attribute.corresp"/>
                <xs:attributeGroup ref="tei:tei_att.global.analytic.attribute.ana"/>
                <xs:attributeGroup ref="tei:tei_att.global.responsibility.attribute.cert"/>
                <xs:attributeGroup ref="tei:tei_att.global.responsibility.attribute.resp"/>
-               <xs:attributeGroup ref="tei:tei_att.global.source.attribute.source"/>
-               <xs:attributeGroup ref="tei:tei_att.sortable.attributes"/>
                <xs:attribute ref="xml:id" use="required"/>
             </xs:extension>
          </xs:complexContent>
@@ -4436,7 +3983,6 @@ Sample values include: 1] suspension (suspension); 2] contraction (contraction);
          <xs:complexContent>
             <xs:extension base="tei:tei_macro.phraseSeq">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.placement.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.written.attributes"/>
             </xs:extension>
@@ -4456,7 +4002,6 @@ Sample values include: 1] suspension (suspension); 2] contraction (contraction);
             <xs:group ref="tei:tei_model.global"/>
          </xs:choice>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.placement.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.written.attributes"/>
       </xs:complexType>
@@ -4495,9 +4040,27 @@ Sample values include: 1] suspension (suspension); 2] contraction (contraction);
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.placement.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.pointing.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.written.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.anchoring.attributes"/>
+               <xs:attribute name="type">
+                  <xs:annotation>
+                     <xs:documentation/>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:token">
+                        <xs:enumeration value="constraintNote">
+                           <xs:annotation>
+                              <xs:documentation/>
+                           </xs:annotation>
+                        </xs:enumeration>
+                        <xs:enumeration value="exceptionNote">
+                           <xs:annotation>
+                              <xs:documentation/>
+                           </xs:annotation>
+                        </xs:enumeration>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:attribute>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -4517,7 +4080,6 @@ Sample values include: 1] suspension (suspension); 2] contraction (contraction);
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.placement.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.pointing.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.written.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.anchoring.attributes"/>
       </xs:complexType>
@@ -4533,7 +4095,6 @@ Sample values include: 1] suspension (suspension); 2] contraction (contraction);
       </xs:annotation>
       <xs:complexType>
          <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.descLike"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.media.attribute.width"/>
          <xs:attributeGroup ref="tei:tei_att.media.attribute.height"/>
@@ -4582,7 +4143,6 @@ Sample values include: 1] suspension (suspension); 2] contraction (contraction);
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.media.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.timed.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
          <xs:attribute name="encoding">
             <xs:simpleType>
                <xs:restriction>
@@ -4609,7 +4169,6 @@ Elements]</xs:documentation>
       <xs:complexType>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.milestoneUnit.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.edition.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.spanning.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.breaking.attributes"/>
@@ -4622,7 +4181,6 @@ Elements]</xs:documentation>
       </xs:annotation>
       <xs:complexType>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.spanning.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.breaking.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.edition.attributes"/>
@@ -4635,7 +4193,6 @@ Elements]</xs:documentation>
       </xs:annotation>
       <xs:complexType>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.edition.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.spanning.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.breaking.attributes"/>
@@ -4648,7 +4205,6 @@ Elements 7.2.5. Speech Contents]</xs:documentation>
       </xs:annotation>
       <xs:complexType>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.edition.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.spanning.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.breaking.attributes"/>
@@ -4661,7 +4217,6 @@ Elements]</xs:documentation>
       </xs:annotation>
       <xs:complexType>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.edition.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.spanning.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.breaking.attributes"/>
@@ -4828,65 +4383,10 @@ Elements]</xs:documentation>
          </xs:complexContent>
       </xs:complexType>
    </xs:element>
-   <xs:element name="title">
+   <xs:element name="title" type="xs:string">
       <xs:annotation>
-         <xs:documentation>(title) contains a title for any kind of work. [3.12.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement 2.2.5. The Series Statement]</xs:documentation>
+         <xs:documentation/>
       </xs:annotation>
-      <xs:complexType>
-         <xs:complexContent>
-            <xs:extension base="tei:tei_macro.paraContent">
-               <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-               <xs:attributeGroup ref="tei:tei_att.canonical.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
-               <xs:attribute name="type">
-                  <xs:annotation>
-                     <xs:documentation>classifies the title according to some convenient typology.
-Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] short; 5] desc (descriptive)</xs:documentation>
-                  </xs:annotation>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                     </xs:restriction>
-                  </xs:simpleType>
-               </xs:attribute>
-               <xs:attribute name="level">
-                  <xs:annotation>
-                     <xs:documentation>indicates the bibliographic level for a title, that is, whether it identifies an article, book, journal, series, or unpublished material.</xs:documentation>
-                  </xs:annotation>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:enumeration value="a">
-                           <xs:annotation>
-                              <xs:documentation>(analytic) the title applies to an analytic item, such as an article, poem, or other work published as part of a larger item.</xs:documentation>
-                           </xs:annotation>
-                        </xs:enumeration>
-                        <xs:enumeration value="m">
-                           <xs:annotation>
-                              <xs:documentation>(monographic) the title applies to a monograph such as a book or other item considered to be a distinct publication, including single volumes of multi-volume works</xs:documentation>
-                           </xs:annotation>
-                        </xs:enumeration>
-                        <xs:enumeration value="j">
-                           <xs:annotation>
-                              <xs:documentation>(journal) the title applies to any serial or periodical publication such as a journal, magazine, or newspaper</xs:documentation>
-                           </xs:annotation>
-                        </xs:enumeration>
-                        <xs:enumeration value="s">
-                           <xs:annotation>
-                              <xs:documentation>(series) the title applies to a series of otherwise distinct publications such as a collection</xs:documentation>
-                           </xs:annotation>
-                        </xs:enumeration>
-                        <xs:enumeration value="u">
-                           <xs:annotation>
-                              <xs:documentation>(unpublished) the title applies to any unpublished material (including theses and dissertations unless published by a commercial press)</xs:documentation>
-                           </xs:annotation>
-                        </xs:enumeration>
-                     </xs:restriction>
-                  </xs:simpleType>
-               </xs:attribute>
-            </xs:extension>
-         </xs:complexContent>
-      </xs:complexType>
    </xs:element>
    <xs:element name="meeting">
       <xs:annotation>
@@ -4981,20 +4481,60 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
       <xs:annotation>
          <xs:documentation>(bibliographic citation) contains a loosely-structured bibliographic citation of which the sub-components may or may not be explicitly tagged. [3.12.1. Methods of Encoding Bibliographic References and Lists of References 2.2.7. The Source Description 15.3.2. Declarable Elements]</xs:documentation>
       </xs:annotation>
-      <xs:complexType mixed="true">
-         <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:group ref="tei:tei_model.highlighted"/>
-            <xs:group ref="tei:tei_model.pPart.data"/>
-            <xs:group ref="tei:tei_model.pPart.edit"/>
-            <xs:element ref="tei:tei_model.ptrLike"/>
-            <xs:group ref="tei:tei_model.biblPart"/>
-            <xs:group ref="tei:tei_model.global"/>
-         </xs:choice>
-         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.declarable.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.sortable.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.docStatus.attributes"/>
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element minOccurs="0" ref="tei:title"/>
+            <xs:element minOccurs="0" ref="tei:biblScope"/>
+            <xs:element ref="tei:respStmt"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:note"/>
+         </xs:sequence>
+         <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlid"/>
+         <xs:attributeGroup ref="tei:tei_att.global.attribute.xmllang"/>
+         <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlbase"/>
+         <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlspace"/>
+         <xs:attribute name="corresp" use="required">
+            <xs:annotation>
+               <xs:documentation>(corresponds) points to elements that correspond to the current element in some way.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction>
+                  <xs:simpleType>
+                     <xs:list>
+                        <xs:simpleType>
+                           <xs:restriction base="xs:anyURI">
+                              <xs:pattern value="\S+"/>
+                           </xs:restriction>
+                        </xs:simpleType>
+                     </xs:list>
+                  </xs:simpleType>
+                  <xs:minLength value="1"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
+         <xs:attribute name="type">
+            <xs:annotation>
+               <xs:documentation/>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:token">
+                  <xs:enumeration value="publication">
+                     <xs:annotation>
+                        <xs:documentation/>
+                     </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value="personalCommunication">
+                     <xs:annotation>
+                        <xs:documentation/>
+                     </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value="primaryData">
+                     <xs:annotation>
+                        <xs:documentation/>
+                     </xs:annotation>
+                  </xs:enumeration>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
       </xs:complexType>
    </xs:element>
    <xs:element name="biblStruct">
@@ -5016,9 +4556,6 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
             </xs:choice>
          </xs:sequence>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.declarable.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.sortable.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.docStatus.attributes"/>
       </xs:complexType>
    </xs:element>
@@ -5041,9 +4578,6 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
             </xs:sequence>
          </xs:sequence>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.sortable.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.declarable.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="relatedItem">
@@ -5056,11 +4590,15 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
             <xs:element ref="tei:tei_model.ptrLike"/>
          </xs:choice>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
-         <xs:attribute name="target" type="xs:anyURI">
+         <xs:attribute name="target">
             <xs:annotation>
                <xs:documentation>points to the related bibliographic element by means of an absolute or relative URI reference</xs:documentation>
             </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:anyURI">
+                  <xs:pattern value="\S+"/>
+               </xs:restriction>
+            </xs:simpleType>
          </xs:attribute>
       </xs:complexType>
    </xs:element>
@@ -5108,7 +4646,6 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
          </xs:sequence>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.divLike.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.declaring.attributes"/>
       </xs:complexType>
    </xs:element>
@@ -5164,6 +4701,7 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
                <xs:attributeGroup ref="tei:tei_att.ascribed.directed.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.placement.attributes"/>
+               <xs:attributeGroup ref="tei:tei_att.written.attributes"/>
                <xs:attribute name="type">
                   <xs:annotation>
                      <xs:documentation>indicates the kind of stage direction.
@@ -5276,7 +4814,6 @@ Suggested values include: 1] setting; 2] entrance; 3] exit; 4] business; 5] nove
             <xs:element maxOccurs="unbounded" ref="tei:tei_model.describedResource"/>
          </xs:sequence>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
          <xs:attribute name="version">
             <xs:annotation>
                <xs:documentation>(version) specifies the version number of the TEI Guidelines against which this document is valid.</xs:documentation>
@@ -5378,13 +4915,24 @@ Suggested values include: 1] setting; 2] entrance; 3] exit; 4] business; 5] nove
       </xs:attribute>
    </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.lexicographic.attribute.location">
-      <xs:attribute name="location" type="xs:anyURI"/>
+      <xs:attribute name="location">
+         <xs:simpleType>
+            <xs:restriction base="xs:anyURI">
+               <xs:pattern value="\S+"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
    </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.lexicographic.attribute.mergedIn">
-      <xs:attribute name="mergedIn" type="xs:anyURI">
+      <xs:attribute name="mergedIn">
          <xs:annotation>
             <xs:documentation>(merged into) gives a reference to another element, where the original appears as a merged form.</xs:documentation>
          </xs:annotation>
+         <xs:simpleType>
+            <xs:restriction base="xs:anyURI">
+               <xs:pattern value="\S+"/>
+            </xs:restriction>
+         </xs:simpleType>
       </xs:attribute>
    </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.lexicographic.attribute.opt">
@@ -5394,10 +4942,18 @@ Suggested values include: 1] setting; 2] entrance; 3] exit; 4] business; 5] nove
          </xs:annotation>
       </xs:attribute>
    </xs:attributeGroup>
-   <xs:element name="usg" substitutionGroup="tei:tei_model.entryPart">
+   <xs:element name="lang">
       <xs:annotation>
-         <xs:documentation>(usage) contains usage information in a dictionary entry. [9.3.5.2. Usage Information and Other Labels]</xs:documentation>
+         <xs:documentation>(language name) contains the name of a language mentioned in etymological or other linguistic discussion. [9.3.4. Etymological Information]</xs:documentation>
       </xs:annotation>
+      <xs:complexType>
+         <xs:complexContent>
+            <xs:extension base="tei:tei_macro.paraContent">
+               <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+               <xs:attributeGroup ref="tei:tei_att.lexicographic.attributes"/>
+            </xs:extension>
+         </xs:complexContent>
+      </xs:complexType>
    </xs:element>
    <xs:attributeGroup name="tei_att.patternReplacement.attributes">
       <xs:attributeGroup ref="tei:tei_att.patternReplacement.attribute.matchPattern"/>
@@ -5587,7 +5143,6 @@ Suggested values include: 1] setting; 2] entrance; 3] exit; 4] business; 5] nove
             </xs:sequence>
          </xs:choice>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.declarable.attributes"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="notesStmt">
@@ -5615,7 +5170,6 @@ Suggested values include: 1] setting; 2] entrance; 3] exit; 4] business; 5] nove
             </xs:choice>
          </xs:choice>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.declarable.attributes"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="encodingDesc" substitutionGroup="tei:tei_model.teiHeaderPart">
@@ -5637,7 +5191,6 @@ Suggested values include: 1] setting; 2] entrance; 3] exit; 4] business; 5] nove
       <xs:complexType>
          <xs:group maxOccurs="unbounded" ref="tei:tei_model.pLike"/>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.declarable.attributes"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="samplingDecl" substitutionGroup="tei:tei_model.encodingDescPart">
@@ -5647,7 +5200,6 @@ Suggested values include: 1] setting; 2] entrance; 3] exit; 4] business; 5] nove
       <xs:complexType>
          <xs:group maxOccurs="unbounded" ref="tei:tei_model.pLike"/>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.declarable.attributes"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="prefixDef">
@@ -5685,39 +5237,6 @@ Suggested values include: 1] setting; 2] entrance; 3] exit; 4] business; 5] nove
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
       </xs:complexType>
    </xs:element>
-   <xs:element name="taxonomy">
-      <xs:annotation>
-         <xs:documentation>(taxonomy) defines a typology either implicitly, by means of a bibliographic citation, or explicitly by a structured taxonomy. [2.3.7. The Classification Declaration]</xs:documentation>
-      </xs:annotation>
-      <xs:complexType>
-         <xs:choice>
-            <xs:choice>
-               <xs:choice maxOccurs="unbounded">
-                  <xs:element ref="tei:category"/>
-                  <xs:element ref="tei:taxonomy"/>
-               </xs:choice>
-               <xs:sequence>
-                  <xs:choice maxOccurs="unbounded">
-                     <xs:group ref="tei:tei_model.descLike"/>
-                     <xs:element ref="tei:gloss"/>
-                  </xs:choice>
-                  <xs:choice minOccurs="0" maxOccurs="unbounded">
-                     <xs:element ref="tei:category"/>
-                     <xs:element ref="tei:taxonomy"/>
-                  </xs:choice>
-               </xs:sequence>
-            </xs:choice>
-            <xs:sequence>
-               <xs:group ref="tei:tei_model.biblLike"/>
-               <xs:choice minOccurs="0" maxOccurs="unbounded">
-                  <xs:element ref="tei:category"/>
-                  <xs:element ref="tei:taxonomy"/>
-               </xs:choice>
-            </xs:sequence>
-         </xs:choice>
-         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-      </xs:complexType>
-   </xs:element>
    <xs:element name="category">
       <xs:annotation>
          <xs:documentation>(category) contains an individual descriptive category, possibly nested within a superordinate category, within a user-defined taxonomy. [2.3.7. The Classification Declaration]</xs:documentation>
@@ -5751,7 +5270,6 @@ Suggested values include: 1] setting; 2] entrance; 3] exit; 4] business; 5] nove
          <xs:complexContent>
             <xs:extension base="tei:tei_macro.phraseSeq">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.declarable.attributes"/>
                <xs:attribute name="datum" default="WGS84">
                   <xs:annotation>
                      <xs:documentation>supplies a commonly used code name for the datum employed.
@@ -5833,7 +5351,6 @@ Suggested values include: 1] WGS84 (World Geodetic System); 2] MGRS (Military Gr
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.canonical.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="appInfo" substitutionGroup="tei:tei_model.encodingDescPart">
@@ -5898,7 +5415,6 @@ Suggested values include: 1] WGS84 (World Geodetic System); 2] MGRS (Military Gr
             <xs:element maxOccurs="unbounded" ref="tei:language"/>
          </xs:choice>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.declarable.attributes"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="language">
@@ -5944,7 +5460,6 @@ Suggested values include: 1] WGS84 (World Geodetic System); 2] MGRS (Military Gr
             <xs:element ref="tei:keywords"/>
          </xs:choice>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.declarable.attributes"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="keywords">
@@ -5957,7 +5472,13 @@ Suggested values include: 1] WGS84 (World Geodetic System); 2] MGRS (Military Gr
             <xs:element ref="tei:list"/>
          </xs:choice>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attribute name="scheme" type="xs:anyURI"/>
+         <xs:attribute name="scheme">
+            <xs:simpleType>
+               <xs:restriction base="xs:anyURI">
+                  <xs:pattern value="\S+"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
       </xs:complexType>
    </xs:element>
    <xs:element name="classCode">
@@ -5968,7 +5489,13 @@ Suggested values include: 1] WGS84 (World Geodetic System); 2] MGRS (Military Gr
          <xs:complexContent>
             <xs:extension base="tei:tei_macro.phraseSeq.limited">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attribute name="scheme" use="required" type="xs:anyURI"/>
+               <xs:attribute name="scheme" use="required">
+                  <xs:simpleType>
+                     <xs:restriction base="xs:anyURI">
+                        <xs:pattern value="\S+"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:attribute>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -5980,7 +5507,13 @@ Suggested values include: 1] WGS84 (World Geodetic System); 2] MGRS (Military Gr
       <xs:complexType>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.pointing.attributes"/>
-         <xs:attribute name="scheme" type="xs:anyURI"/>
+         <xs:attribute name="scheme">
+            <xs:simpleType>
+               <xs:restriction base="xs:anyURI">
+                  <xs:pattern value="\S+"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
       </xs:complexType>
    </xs:element>
    <xs:element name="correspDesc">
@@ -5993,10 +5526,8 @@ Suggested values include: 1] WGS84 (World Geodetic System); 2] MGRS (Military Gr
             <xs:group maxOccurs="unbounded" ref="tei:tei_model.correspDescPart"/>
             <xs:group maxOccurs="unbounded" ref="tei:tei_model.pLike"/>
          </xs:choice>
-         <xs:attributeGroup ref="tei:tei_att.declarable.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.canonical.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="correspAction">
@@ -6009,68 +5540,6 @@ Suggested values include: 1] WGS84 (World Geodetic System); 2] MGRS (Military Gr
             <xs:group maxOccurs="unbounded" ref="tei:tei_model.pLike"/>
          </xs:choice>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-         <xs:attributeGroup ref="tei:tei_att.sortable.attributes"/>
-         <xs:attribute name="type">
-            <xs:annotation>
-               <xs:documentation>describes the nature of the action.
-Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5] forwarded</xs:documentation>
-            </xs:annotation>
-            <xs:simpleType>
-               <xs:union>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:enumeration value="sent">
-                           <xs:annotation>
-                              <xs:documentation>information concerning the sending or dispatch of a message.</xs:documentation>
-                           </xs:annotation>
-                        </xs:enumeration>
-                     </xs:restriction>
-                  </xs:simpleType>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:enumeration value="received">
-                           <xs:annotation>
-                              <xs:documentation>information concerning the receipt of a message.</xs:documentation>
-                           </xs:annotation>
-                        </xs:enumeration>
-                     </xs:restriction>
-                  </xs:simpleType>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:enumeration value="transmitted">
-                           <xs:annotation>
-                              <xs:documentation>information concerning the transmission of a message, i.e. between the dispatch and the next receipt, redirect or forwarding.</xs:documentation>
-                           </xs:annotation>
-                        </xs:enumeration>
-                     </xs:restriction>
-                  </xs:simpleType>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:enumeration value="redirected">
-                           <xs:annotation>
-                              <xs:documentation>information concerning the redirection of an unread message.</xs:documentation>
-                           </xs:annotation>
-                        </xs:enumeration>
-                     </xs:restriction>
-                  </xs:simpleType>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:enumeration value="forwarded">
-                           <xs:annotation>
-                              <xs:documentation>information concerning the forwarding of a message.</xs:documentation>
-                           </xs:annotation>
-                        </xs:enumeration>
-                     </xs:restriction>
-                  </xs:simpleType>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                     </xs:restriction>
-                  </xs:simpleType>
-               </xs:union>
-            </xs:simpleType>
-         </xs:attribute>
       </xs:complexType>
    </xs:element>
    <xs:element name="correspContext">
@@ -6107,7 +5576,6 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.docStatus.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
                <xs:attribute name="target">
                   <xs:annotation>
                      <xs:documentation>(target) points to one or more elements that belong to this change.</xs:documentation>
@@ -6115,7 +5583,13 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                   <xs:simpleType>
                      <xs:restriction>
                         <xs:simpleType>
-                           <xs:list itemType="xs:anyURI"/>
+                           <xs:list>
+                              <xs:simpleType>
+                                 <xs:restriction base="xs:anyURI">
+                                    <xs:pattern value="\S+"/>
+                                 </xs:restriction>
+                              </xs:simpleType>
+                           </xs:list>
                         </xs:simpleType>
                         <xs:minLength value="1"/>
                      </xs:restriction>
@@ -6138,8 +5612,6 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
             </xs:choice>
          </xs:sequence>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.sortable.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
          <xs:attribute name="ordered" default="true" type="xs:boolean"/>
       </xs:complexType>
    </xs:element>
@@ -6159,7 +5631,6 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
             <xs:element maxOccurs="unbounded" ref="tei:purpose"/>
          </xs:sequence>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.declarable.attributes"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="particDesc">
@@ -6176,7 +5647,6 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
             </xs:choice>
          </xs:choice>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.declarable.attributes"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="settingDesc">
@@ -6193,7 +5663,6 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
             </xs:choice>
          </xs:choice>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.declarable.attributes"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="channel">
@@ -6255,36 +5724,6 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
          <xs:complexContent>
             <xs:extension base="tei:tei_macro.phraseSeq.limited">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-               <xs:attribute name="type" default="single">
-                  <xs:annotation>
-                     <xs:documentation>specifies how the text was constituted.</xs:documentation>
-                  </xs:annotation>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:enumeration value="single">
-                           <xs:annotation>
-                              <xs:documentation>a single complete text</xs:documentation>
-                           </xs:annotation>
-                        </xs:enumeration>
-                        <xs:enumeration value="composite">
-                           <xs:annotation>
-                              <xs:documentation>a text made by combining several smaller items, each individually complete</xs:documentation>
-                           </xs:annotation>
-                        </xs:enumeration>
-                        <xs:enumeration value="frags">
-                           <xs:annotation>
-                              <xs:documentation>(fragments) a text made by combining several smaller, not necessarily complete, items</xs:documentation>
-                           </xs:annotation>
-                        </xs:enumeration>
-                        <xs:enumeration value="unknown">
-                           <xs:annotation>
-                              <xs:documentation>composition unknown or unspecified</xs:documentation>
-                           </xs:annotation>
-                        </xs:enumeration>
-                     </xs:restriction>
-                  </xs:simpleType>
-               </xs:attribute>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -6297,18 +5736,6 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
          <xs:complexContent>
             <xs:extension base="tei:tei_macro.phraseSeq.limited">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-               <xs:attribute name="type">
-                  <xs:annotation>
-                     <xs:documentation>categorizes the derivation of the text.
-Sample values include: 1] original; 2] revision; 3] translation; 4] abridgment; 5] plagiarism; 6] traditional</xs:documentation>
-                  </xs:annotation>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                     </xs:restriction>
-                  </xs:simpleType>
-               </xs:attribute>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -6321,18 +5748,6 @@ Sample values include: 1] original; 2] revision; 3] translation; 4] abridgment; 
          <xs:complexContent>
             <xs:extension base="tei:tei_macro.phraseSeq.limited">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-               <xs:attribute name="type">
-                  <xs:annotation>
-                     <xs:documentation>categorizes the domain of use.
-Sample values include: 1] art; 2] domestic; 3] religious; 4] business; 5] education; 6] govt (government); 7] public</xs:documentation>
-                  </xs:annotation>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                     </xs:restriction>
-                  </xs:simpleType>
-               </xs:attribute>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -6345,36 +5760,6 @@ Sample values include: 1] art; 2] domestic; 3] religious; 4] business; 5] educat
          <xs:complexContent>
             <xs:extension base="tei:tei_macro.phraseSeq.limited">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-               <xs:attribute name="type">
-                  <xs:annotation>
-                     <xs:documentation>categorizes the factuality of the text.</xs:documentation>
-                  </xs:annotation>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:enumeration value="fiction">
-                           <xs:annotation>
-                              <xs:documentation>the text is to be regarded as entirely imaginative</xs:documentation>
-                           </xs:annotation>
-                        </xs:enumeration>
-                        <xs:enumeration value="fact">
-                           <xs:annotation>
-                              <xs:documentation>the text is to be regarded as entirely informative or factual</xs:documentation>
-                           </xs:annotation>
-                        </xs:enumeration>
-                        <xs:enumeration value="mixed">
-                           <xs:annotation>
-                              <xs:documentation>the text contains a mixture of fact and fiction</xs:documentation>
-                           </xs:annotation>
-                        </xs:enumeration>
-                        <xs:enumeration value="inapplicable">
-                           <xs:annotation>
-                              <xs:documentation>the fiction/fact distinction is not regarded as helpful or appropriate to this text</xs:documentation>
-                           </xs:annotation>
-                        </xs:enumeration>
-                     </xs:restriction>
-                  </xs:simpleType>
-               </xs:attribute>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -6387,36 +5772,6 @@ Sample values include: 1] art; 2] domestic; 3] religious; 4] business; 5] educat
          <xs:complexContent>
             <xs:extension base="tei:tei_macro.phraseSeq.limited">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-               <xs:attribute name="type">
-                  <xs:annotation>
-                     <xs:documentation>specifies the degree of interaction between active and passive participants in the text.</xs:documentation>
-                  </xs:annotation>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:enumeration value="none">
-                           <xs:annotation>
-                              <xs:documentation>no interaction of any kind, e.g. a monologue</xs:documentation>
-                           </xs:annotation>
-                        </xs:enumeration>
-                        <xs:enumeration value="partial">
-                           <xs:annotation>
-                              <xs:documentation>some degree of interaction, e.g. a monologue with set responses</xs:documentation>
-                           </xs:annotation>
-                        </xs:enumeration>
-                        <xs:enumeration value="complete">
-                           <xs:annotation>
-                              <xs:documentation>complete interaction, e.g. a face to face conversation</xs:documentation>
-                           </xs:annotation>
-                        </xs:enumeration>
-                        <xs:enumeration value="inapplicable">
-                           <xs:annotation>
-                              <xs:documentation>this parameter is inappropriate or inapplicable in this case</xs:documentation>
-                           </xs:annotation>
-                        </xs:enumeration>
-                     </xs:restriction>
-                  </xs:simpleType>
-               </xs:attribute>
                <xs:attribute name="active">
                   <xs:annotation>
                      <xs:documentation>specifies the number of active participants (or addressors) producing parts of the text.
@@ -6540,18 +5895,6 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</xs:do
          <xs:complexContent>
             <xs:extension base="tei:tei_macro.phraseSeq.limited">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-               <xs:attribute name="type">
-                  <xs:annotation>
-                     <xs:documentation>a keyword characterizing the type of preparedness.
-Sample values include: 1] none; 2] scripted; 3] formulaic; 4] revised</xs:documentation>
-                  </xs:annotation>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                     </xs:restriction>
-                  </xs:simpleType>
-               </xs:attribute>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -6564,58 +5907,6 @@ Sample values include: 1] none; 2] scripted; 3] formulaic; 4] revised</xs:docume
          <xs:complexContent>
             <xs:extension base="tei:tei_macro.phraseSeq.limited">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-               <xs:attribute name="type">
-                  <xs:annotation>
-                     <xs:documentation>specifies a particular kind of purpose.
-Suggested values include: 1] persuade; 2] express; 3] inform; 4] entertain</xs:documentation>
-                  </xs:annotation>
-                  <xs:simpleType>
-                     <xs:union>
-                        <xs:simpleType>
-                           <xs:restriction base="xs:token">
-                              <xs:enumeration value="persuade">
-                                 <xs:annotation>
-                                    <xs:documentation>didactic, advertising, propaganda, etc.</xs:documentation>
-                                 </xs:annotation>
-                              </xs:enumeration>
-                           </xs:restriction>
-                        </xs:simpleType>
-                        <xs:simpleType>
-                           <xs:restriction base="xs:token">
-                              <xs:enumeration value="express">
-                                 <xs:annotation>
-                                    <xs:documentation>self expression, confessional, etc.</xs:documentation>
-                                 </xs:annotation>
-                              </xs:enumeration>
-                           </xs:restriction>
-                        </xs:simpleType>
-                        <xs:simpleType>
-                           <xs:restriction base="xs:token">
-                              <xs:enumeration value="inform">
-                                 <xs:annotation>
-                                    <xs:documentation>convey information, educate, etc.</xs:documentation>
-                                 </xs:annotation>
-                              </xs:enumeration>
-                           </xs:restriction>
-                        </xs:simpleType>
-                        <xs:simpleType>
-                           <xs:restriction base="xs:token">
-                              <xs:enumeration value="entertain">
-                                 <xs:annotation>
-                                    <xs:documentation>amuse, entertain, etc.</xs:documentation>
-                                 </xs:annotation>
-                              </xs:enumeration>
-                           </xs:restriction>
-                        </xs:simpleType>
-                        <xs:simpleType>
-                           <xs:restriction base="xs:token">
-                              <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                           </xs:restriction>
-                        </xs:simpleType>
-                     </xs:union>
-                  </xs:simpleType>
-               </xs:attribute>
                <xs:attribute name="degree">
                   <xs:annotation>
                      <xs:documentation>specifies the extent to which this purpose predominates.</xs:documentation>
@@ -6703,7 +5994,6 @@ Suggested values include: 1] persuade; 2] express; 3] inform; 4] entertain</xs:d
             </xs:choice>
          </xs:sequence>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
          <xs:attribute name="version">
             <xs:annotation>
                <xs:documentation>specifies the version number of the TEI Guidelines against which this document is valid.</xs:documentation>
@@ -6838,130 +6128,6 @@ Suggested values include: 1] persuade; 2] express; 3] inform; 4] entertain</xs:d
          <xs:attributeGroup ref="tei:tei_att.declaring.attributes"/>
       </xs:complexType>
    </xs:element>
-   <xs:attributeGroup name="tei_att.datable.custom.attributes">
-      <xs:attributeGroup ref="tei:tei_att.datable.custom.attribute.when-custom"/>
-      <xs:attributeGroup ref="tei:tei_att.datable.custom.attribute.notBefore-custom"/>
-      <xs:attributeGroup ref="tei:tei_att.datable.custom.attribute.notAfter-custom"/>
-      <xs:attributeGroup ref="tei:tei_att.datable.custom.attribute.from-custom"/>
-      <xs:attributeGroup ref="tei:tei_att.datable.custom.attribute.to-custom"/>
-      <xs:attributeGroup ref="tei:tei_att.datable.custom.attribute.datingPoint"/>
-      <xs:attributeGroup ref="tei:tei_att.datable.custom.attribute.datingMethod"/>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.datable.custom.attribute.when-custom">
-      <xs:attribute name="when-custom">
-         <xs:annotation>
-            <xs:documentation>supplies the value of a date or time in some custom standard form.</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:restriction>
-               <xs:simpleType>
-                  <xs:list>
-                     <xs:simpleType>
-                        <xs:restriction base="xs:token">
-                           <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                        </xs:restriction>
-                     </xs:simpleType>
-                  </xs:list>
-               </xs:simpleType>
-               <xs:minLength value="1"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.datable.custom.attribute.notBefore-custom">
-      <xs:attribute name="notBefore-custom">
-         <xs:annotation>
-            <xs:documentation>specifies the earliest possible date for the event in some custom standard form.</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:restriction>
-               <xs:simpleType>
-                  <xs:list>
-                     <xs:simpleType>
-                        <xs:restriction base="xs:token">
-                           <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                        </xs:restriction>
-                     </xs:simpleType>
-                  </xs:list>
-               </xs:simpleType>
-               <xs:minLength value="1"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.datable.custom.attribute.notAfter-custom">
-      <xs:attribute name="notAfter-custom">
-         <xs:annotation>
-            <xs:documentation>specifies the latest possible date for the event in some custom standard form.</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:restriction>
-               <xs:simpleType>
-                  <xs:list>
-                     <xs:simpleType>
-                        <xs:restriction base="xs:token">
-                           <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                        </xs:restriction>
-                     </xs:simpleType>
-                  </xs:list>
-               </xs:simpleType>
-               <xs:minLength value="1"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.datable.custom.attribute.from-custom">
-      <xs:attribute name="from-custom">
-         <xs:annotation>
-            <xs:documentation>indicates the starting point of the period in some custom standard form.</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:restriction>
-               <xs:simpleType>
-                  <xs:list>
-                     <xs:simpleType>
-                        <xs:restriction base="xs:token">
-                           <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                        </xs:restriction>
-                     </xs:simpleType>
-                  </xs:list>
-               </xs:simpleType>
-               <xs:minLength value="1"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.datable.custom.attribute.to-custom">
-      <xs:attribute name="to-custom">
-         <xs:annotation>
-            <xs:documentation>indicates the ending point of the period in some custom standard form.</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:restriction>
-               <xs:simpleType>
-                  <xs:list>
-                     <xs:simpleType>
-                        <xs:restriction base="xs:token">
-                           <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                        </xs:restriction>
-                     </xs:simpleType>
-                  </xs:list>
-               </xs:simpleType>
-               <xs:minLength value="1"/>
-            </xs:restriction>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.datable.custom.attribute.datingPoint">
-      <xs:attribute name="datingPoint" type="xs:anyURI">
-         <xs:annotation>
-            <xs:documentation>supplies a pointer to some location defining a named point in time with reference to which the datable item is understood to have occurred</xs:documentation>
-         </xs:annotation>
-      </xs:attribute>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.datable.custom.attribute.datingMethod">
-      <xs:attribute name="datingMethod" type="xs:anyURI"/>
-   </xs:attributeGroup>
    <xs:group name="tei_model.persNamePart">
       <xs:choice>
          <xs:element ref="tei:surname"/>
@@ -7004,93 +6170,6 @@ Suggested values include: 1] persuade; 2] express; 3] inform; 4] entertain</xs:d
          <xs:element maxOccurs="unbounded" ref="tei:genName"/>
       </xs:sequence>
    </xs:group>
-   <xs:attributeGroup name="tei_att.datable.iso.attributes">
-      <xs:attributeGroup ref="tei:tei_att.datable.iso.attribute.when-iso"/>
-      <xs:attributeGroup ref="tei:tei_att.datable.iso.attribute.notBefore-iso"/>
-      <xs:attributeGroup ref="tei:tei_att.datable.iso.attribute.notAfter-iso"/>
-      <xs:attributeGroup ref="tei:tei_att.datable.iso.attribute.from-iso"/>
-      <xs:attributeGroup ref="tei:tei_att.datable.iso.attribute.to-iso"/>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.datable.iso.attribute.when-iso">
-      <xs:attribute name="when-iso">
-         <xs:annotation>
-            <xs:documentation>supplies the value of a date or time in a standard form.</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:union memberTypes="xs:date xs:gYear xs:gMonth xs:gDay xs:gYearMonth xs:gMonthDay xs:time xs:dateTime">
-               <xs:simpleType>
-                  <xs:restriction base="xs:token">
-                     <xs:pattern value="[0-9.,DHMPRSTWYZ/:+\-]+"/>
-                  </xs:restriction>
-               </xs:simpleType>
-            </xs:union>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.datable.iso.attribute.notBefore-iso">
-      <xs:attribute name="notBefore-iso">
-         <xs:annotation>
-            <xs:documentation>specifies the earliest possible date for the event in standard form, e.g. yyyy-mm-dd.</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:union memberTypes="xs:date xs:gYear xs:gMonth xs:gDay xs:gYearMonth xs:gMonthDay xs:time xs:dateTime">
-               <xs:simpleType>
-                  <xs:restriction base="xs:token">
-                     <xs:pattern value="[0-9.,DHMPRSTWYZ/:+\-]+"/>
-                  </xs:restriction>
-               </xs:simpleType>
-            </xs:union>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.datable.iso.attribute.notAfter-iso">
-      <xs:attribute name="notAfter-iso">
-         <xs:annotation>
-            <xs:documentation>specifies the latest possible date for the event in standard form, e.g. yyyy-mm-dd.</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:union memberTypes="xs:date xs:gYear xs:gMonth xs:gDay xs:gYearMonth xs:gMonthDay xs:time xs:dateTime">
-               <xs:simpleType>
-                  <xs:restriction base="xs:token">
-                     <xs:pattern value="[0-9.,DHMPRSTWYZ/:+\-]+"/>
-                  </xs:restriction>
-               </xs:simpleType>
-            </xs:union>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.datable.iso.attribute.from-iso">
-      <xs:attribute name="from-iso">
-         <xs:annotation>
-            <xs:documentation>indicates the starting point of the period in standard form.</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:union memberTypes="xs:date xs:gYear xs:gMonth xs:gDay xs:gYearMonth xs:gMonthDay xs:time xs:dateTime">
-               <xs:simpleType>
-                  <xs:restriction base="xs:token">
-                     <xs:pattern value="[0-9.,DHMPRSTWYZ/:+\-]+"/>
-                  </xs:restriction>
-               </xs:simpleType>
-            </xs:union>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
-   <xs:attributeGroup name="tei_att.datable.iso.attribute.to-iso">
-      <xs:attribute name="to-iso">
-         <xs:annotation>
-            <xs:documentation>indicates the ending point of the period in standard form.</xs:documentation>
-         </xs:annotation>
-         <xs:simpleType>
-            <xs:union memberTypes="xs:date xs:gYear xs:gMonth xs:gDay xs:gYearMonth xs:gMonthDay xs:time xs:dateTime">
-               <xs:simpleType>
-                  <xs:restriction base="xs:token">
-                     <xs:pattern value="[0-9.,DHMPRSTWYZ/:+\-]+"/>
-                  </xs:restriction>
-               </xs:simpleType>
-            </xs:union>
-         </xs:simpleType>
-      </xs:attribute>
-   </xs:attributeGroup>
    <xs:element name="orgName">
       <xs:annotation>
          <xs:documentation>(organization name) contains an organizational name. [13.2.2. Organizational Names]</xs:documentation>
@@ -7102,7 +6181,6 @@ Suggested values include: 1] persuade; 2] express; 3] inform; 4] entertain</xs:d
                <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.personal.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -7118,7 +6196,6 @@ Suggested values include: 1] persuade; 2] express; 3] inform; 4] entertain</xs:d
                <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.personal.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -7132,7 +6209,6 @@ Suggested values include: 1] persuade; 2] express; 3] inform; 4] entertain</xs:d
             <xs:extension base="tei:tei_macro.phraseSeq">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.personal.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -7146,7 +6222,6 @@ Suggested values include: 1] persuade; 2] express; 3] inform; 4] entertain</xs:d
             <xs:extension base="tei:tei_macro.phraseSeq">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.personal.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -7160,7 +6235,6 @@ Suggested values include: 1] persuade; 2] express; 3] inform; 4] entertain</xs:d
             <xs:extension base="tei:tei_macro.phraseSeq">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.personal.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -7176,7 +6250,6 @@ Suggested values include: 1] persuade; 2] express; 3] inform; 4] entertain</xs:d
                <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.personal.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -7190,7 +6263,6 @@ Suggested values include: 1] persuade; 2] express; 3] inform; 4] entertain</xs:d
             <xs:extension base="tei:tei_macro.phraseSeq">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
             </xs:extension>
          </xs:complexContent>
@@ -7200,15 +6272,30 @@ Suggested values include: 1] persuade; 2] express; 3] inform; 4] entertain</xs:d
       <xs:annotation>
          <xs:documentation>(region) contains the name of an administrative unit such as a state, province, or county, larger than a settlement, but smaller than a country. [13.2.3. Place Names]</xs:documentation>
       </xs:annotation>
-      <xs:complexType>
-         <xs:complexContent>
-            <xs:extension base="tei:tei_macro.phraseSeq">
-               <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
-            </xs:extension>
-         </xs:complexContent>
+      <xs:complexType mixed="true">
+         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+         <xs:attributeGroup ref="tei:tei_att.naming.attribute.role"/>
+         <xs:attributeGroup ref="tei:tei_att.naming.attribute.nymRef"/>
+         <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
+         <xs:attribute name="ref" use="required">
+            <xs:annotation>
+               <xs:documentation>(reference) provides an explicit means of locating a full definition or identity for the entity being named by means of one or more URIs.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction>
+                  <xs:simpleType>
+                     <xs:list>
+                        <xs:simpleType>
+                           <xs:restriction base="xs:anyURI">
+                              <xs:pattern value="\S+"/>
+                           </xs:restriction>
+                        </xs:simpleType>
+                     </xs:list>
+                  </xs:simpleType>
+                  <xs:minLength value="1"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
       </xs:complexType>
    </xs:element>
    <xs:element name="settlement">
@@ -7219,9 +6306,28 @@ Suggested values include: 1] persuade; 2] express; 3] inform; 4] entertain</xs:d
          <xs:complexContent>
             <xs:extension base="tei:tei_macro.phraseSeq">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+               <xs:attributeGroup ref="tei:tei_att.naming.attribute.role"/>
+               <xs:attributeGroup ref="tei:tei_att.naming.attribute.nymRef"/>
                <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
+               <xs:attribute name="ref" use="required">
+                  <xs:annotation>
+                     <xs:documentation>(reference) provides an explicit means of locating a full definition or identity for the entity being named by means of one or more URIs.</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction>
+                        <xs:simpleType>
+                           <xs:list>
+                              <xs:simpleType>
+                                 <xs:restriction base="xs:anyURI">
+                                    <xs:pattern value="\S+"/>
+                                 </xs:restriction>
+                              </xs:simpleType>
+                           </xs:list>
+                        </xs:simpleType>
+                        <xs:minLength value="1"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:attribute>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -7235,7 +6341,6 @@ Suggested values include: 1] persuade; 2] express; 3] inform; 4] entertain</xs:d
             <xs:extension base="tei:tei_macro.phraseSeq">
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
             </xs:extension>
          </xs:complexContent>
@@ -7252,7 +6357,6 @@ Suggested values include: 1] persuade; 2] express; 3] inform; 4] entertain</xs:d
                <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -7268,8 +6372,6 @@ Suggested values include: 1] persuade; 2] express; 3] inform; 4] entertain</xs:d
                <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.dimensions.attributes"/>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -7285,18 +6387,6 @@ Suggested values include: 1] persuade; 2] express; 3] inform; 4] entertain</xs:d
                <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-               <xs:attribute name="type">
-                  <xs:annotation>
-                     <xs:documentation>characterizes the element in some sense, using any convenient classification scheme or typology.
-Sample values include: 1] sponsor; 2] recommend; 3] discredit; 4] pledged</xs:documentation>
-                  </xs:annotation>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                     </xs:restriction>
-                  </xs:simpleType>
-               </xs:attribute>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -7311,19 +6401,6 @@ Sample values include: 1] sponsor; 2] recommend; 3] discredit; 4] pledged</xs:do
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-               <xs:attributeGroup ref="tei:tei_att.dimensions.attributes"/>
-               <xs:attribute name="type">
-                  <xs:annotation>
-                     <xs:documentation>characterizes the element in some sense, using any convenient classification scheme or typology.
-Sample values include: 1] western; 2] sui; 3] subjective; 4] objective; 5] inWorld (in world); 6] chronological; 7] biological; 8] psychological; 9] functional</xs:documentation>
-                  </xs:annotation>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                     </xs:restriction>
-                  </xs:simpleType>
-               </xs:attribute>
                <xs:attribute name="value" type="xs:nonNegativeInteger">
                   <xs:annotation>
                      <xs:documentation>supplies a numeric code representing the age or age group</xs:documentation>
@@ -7343,20 +6420,7 @@ Sample values include: 1] western; 2] sui; 3] subjective; 4] objective; 5] inWor
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.dimensions.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-               <xs:attribute name="type">
-                  <xs:annotation>
-                     <xs:documentation>characterizes the element in some sense, using any convenient classification scheme or typology.
-Sample values include: 1] caesarean (caesarean section); 2] vaginal (vaginal delivery); 3] exNihilo (ex nihilo); 4] incorporated; 5] founded; 6] established</xs:documentation>
-                  </xs:annotation>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                     </xs:restriction>
-                  </xs:simpleType>
-               </xs:attribute>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -7369,22 +6433,9 @@ Sample values include: 1] caesarean (caesarean section); 2] vaginal (vaginal del
          <xs:complexContent>
             <xs:extension base="tei:tei_macro.phraseSeq">
                <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.dimensions.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-               <xs:attribute name="type">
-                  <xs:annotation>
-                     <xs:documentation>characterizes the element in some sense, using any convenient classification scheme or typology.
-Sample values include: 1] proclaimed; 2] assumed; 3] verified; 4] clinical; 5] brain; 6] natural; 7] unnatural; 8] fragmentation; 9] dissolution</xs:documentation>
-                  </xs:annotation>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                     </xs:restriction>
-                  </xs:simpleType>
-               </xs:attribute>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -7400,18 +6451,6 @@ Sample values include: 1] proclaimed; 2] assumed; 3] verified; 4] clinical; 5] b
                <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-               <xs:attribute name="type">
-                  <xs:annotation>
-                     <xs:documentation>characterizes the element in some sense, using any convenient classification scheme or typology.
-Sample values include: 1] primary; 2] secondary; 3] undergraduate; 4] graduate; 5] residency; 6] apprenticeship</xs:documentation>
-                  </xs:annotation>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                     </xs:restriction>
-                  </xs:simpleType>
-               </xs:attribute>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -7437,9 +6476,7 @@ Sample values include: 1] primary; 2] secondary; 3] undergraduate; 4] graduate; 
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.sortable.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.locatable.attributes"/>
       </xs:complexType>
    </xs:element>
@@ -7454,18 +6491,6 @@ Sample values include: 1] primary; 2] secondary; 3] undergraduate; 4] graduate; 
                <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.canonical.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-               <xs:attribute name="type">
-                  <xs:annotation>
-                     <xs:documentation>characterizes the element in some sense, using any convenient classification scheme or typology.
-Sample values include: 1] practicing; 2] clandestine; 3] patrilineal; 4] matrilineal; 5] convert</xs:documentation>
-                  </xs:annotation>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                     </xs:restriction>
-                  </xs:simpleType>
-               </xs:attribute>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -7488,18 +6513,6 @@ Sample values include: 1] practicing; 2] clandestine; 3] patrilineal; 4] matrili
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-         <xs:attribute name="type">
-            <xs:annotation>
-               <xs:documentation>characterizes the element in some sense, using any convenient classification scheme or typology.
-Sample values include: 1] listening; 2] speaking; 3] reading; 4] writing</xs:documentation>
-            </xs:annotation>
-            <xs:simpleType>
-               <xs:restriction base="xs:token">
-                  <xs:pattern value="[^\p{C}\p{Z}]+"/>
-               </xs:restriction>
-            </xs:simpleType>
-         </xs:attribute>
          <xs:attribute name="tags">
             <xs:annotation>
                <xs:documentation>supplies one or more valid language tags for the languages specified</xs:documentation>
@@ -7585,9 +6598,6 @@ Sample values include: 1] listening; 2] speaking; 3] reading; 4] writing</xs:doc
             </xs:choice>
          </xs:sequence>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.declarable.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.sortable.attributes"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="listEvent">
@@ -7601,9 +6611,6 @@ Sample values include: 1] listening; 2] speaking; 3] reading; 4] writing</xs:doc
             <xs:group maxOccurs="unbounded" ref="tei:tei_model.eventLike"/>
          </xs:sequence>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.declarable.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.sortable.attributes"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="listPerson">
@@ -7620,9 +6627,6 @@ Sample values include: 1] listening; 2] speaking; 3] reading; 4] writing</xs:doc
             </xs:choice>
          </xs:sequence>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.declarable.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.sortable.attributes"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="listPlace">
@@ -7639,9 +6643,6 @@ Sample values include: 1] listening; 2] speaking; 3] reading; 4] writing</xs:doc
             </xs:choice>
          </xs:sequence>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.declarable.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.sortable.attributes"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="location">
@@ -7659,7 +6660,6 @@ Sample values include: 1] listening; 2] speaking; 3] reading; 4] writing</xs:doc
             <xs:group ref="tei:tei_model.biblLike"/>
          </xs:choice>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
       </xs:complexType>
@@ -7675,18 +6675,6 @@ Sample values include: 1] listening; 2] speaking; 3] reading; 4] writing</xs:doc
                <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-               <xs:attribute name="type">
-                  <xs:annotation>
-                     <xs:documentation>characterizes the element in some sense, using any convenient classification scheme or typology.
-Sample values include: 1] birth; 2] naturalised; 3] self-assigned</xs:documentation>
-                  </xs:annotation>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                     </xs:restriction>
-                  </xs:simpleType>
-               </xs:attribute>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -7702,20 +6690,20 @@ Sample values include: 1] birth; 2] naturalised; 3] self-assigned</xs:documentat
                <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-               <xs:attribute name="type">
-                  <xs:annotation>
-                     <xs:documentation>characterizes the element in some sense, using any convenient classification scheme or typology.
-Sample values include: 1] primary; 2] other; 3] paid; 4] unpaid</xs:documentation>
-                  </xs:annotation>
+               <xs:attribute name="scheme">
                   <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:pattern value="[^\p{C}\p{Z}]+"/>
+                     <xs:restriction base="xs:anyURI">
+                        <xs:pattern value="\S+"/>
                      </xs:restriction>
                   </xs:simpleType>
                </xs:attribute>
-               <xs:attribute name="scheme" type="xs:anyURI"/>
-               <xs:attribute name="code" type="xs:anyURI"/>
+               <xs:attribute name="code">
+                  <xs:simpleType>
+                     <xs:restriction base="xs:anyURI">
+                        <xs:pattern value="\S+"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:attribute>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -7745,9 +6733,7 @@ Sample values include: 1] primary; 2] other; 3] paid; 4] unpaid</xs:documentatio
             <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.personLike"/>
          </xs:sequence>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.sortable.attributes"/>
          <xs:attribute name="role">
             <xs:annotation>
                <xs:documentation>specifies a primary role or classification for the organization.</xs:documentation>
@@ -7784,7 +6770,6 @@ Sample values include: 1] primary; 2] other; 3] paid; 4] unpaid</xs:documentatio
          </xs:choice>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.sortable.attributes"/>
          <xs:attribute name="role">
             <xs:annotation>
                <xs:documentation>specifies a primary role or classification for the person.</xs:documentation>
@@ -7847,9 +6832,31 @@ Sample values include: 1] primary; 2] other; 3] paid; 4] unpaid</xs:documentatio
                <xs:group ref="tei:tei_model.global"/>
             </xs:choice>
          </xs:choice>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.sortable.attributes"/>
+         <xs:attribute name="type" use="required">
+            <xs:annotation>
+               <xs:documentation/>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:token">
+                  <xs:enumeration value="tribe">
+                     <xs:annotation>
+                        <xs:documentation/>
+                     </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value="religousGroup">
+                     <xs:annotation>
+                        <xs:documentation/>
+                     </xs:annotation>
+                  </xs:enumeration>
+                  <xs:enumeration value="ageGroup">
+                     <xs:annotation>
+                        <xs:documentation/>
+                     </xs:annotation>
+                  </xs:enumeration>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
          <xs:attribute name="role">
             <xs:annotation>
                <xs:documentation>specifies the role of this group of participants in the interaction.</xs:documentation>
@@ -7938,8 +6945,6 @@ Sample values include: 1] primary; 2] other; 3] paid; 4] unpaid</xs:documentatio
          <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.dimensions.attributes"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="residence">
@@ -7953,18 +6958,6 @@ Sample values include: 1] primary; 2] other; 3] paid; 4] unpaid</xs:documentatio
                <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-               <xs:attribute name="type">
-                  <xs:annotation>
-                     <xs:documentation>characterizes the element in some sense, using any convenient classification scheme or typology.
-Sample values include: 1] primary; 2] secondary; 3] temporary; 4] permanent</xs:documentation>
-                  </xs:annotation>
-                  <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                     </xs:restriction>
-                  </xs:simpleType>
-               </xs:attribute>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -7980,20 +6973,20 @@ Sample values include: 1] primary; 2] secondary; 3] temporary; 4] permanent</xs:
                <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
-               <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
-               <xs:attribute name="type">
-                  <xs:annotation>
-                     <xs:documentation>characterizes the element in some sense, using any convenient classification scheme or typology.
-Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] independent</xs:documentation>
-                  </xs:annotation>
+               <xs:attribute name="scheme">
                   <xs:simpleType>
-                     <xs:restriction base="xs:token">
-                        <xs:pattern value="[^\p{C}\p{Z}]+"/>
+                     <xs:restriction base="xs:anyURI">
+                        <xs:pattern value="\S+"/>
                      </xs:restriction>
                   </xs:simpleType>
                </xs:attribute>
-               <xs:attribute name="scheme" type="xs:anyURI"/>
-               <xs:attribute name="code" type="xs:anyURI"/>
+               <xs:attribute name="code">
+                  <xs:simpleType>
+                     <xs:restriction base="xs:anyURI">
+                        <xs:pattern value="\S+"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:attribute>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -8022,9 +7015,7 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.dimensions.attributes"/>
       </xs:complexType>
    </xs:element>
    <xs:element name="trait">
@@ -8052,10 +7043,32 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
          <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
          <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
-         <xs:attributeGroup ref="tei:tei_att.dimensions.attributes"/>
       </xs:complexType>
    </xs:element>
+   <xs:attributeGroup name="tei_att.global.linking.attributes">
+      <xs:attributeGroup ref="tei:tei_att.global.linking.attribute.corresp"/>
+   </xs:attributeGroup>
+   <xs:attributeGroup name="tei_att.global.linking.attribute.corresp">
+      <xs:attribute name="corresp">
+         <xs:annotation>
+            <xs:documentation>(corresponds) points to elements that correspond to the current element in some way.</xs:documentation>
+         </xs:annotation>
+         <xs:simpleType>
+            <xs:restriction>
+               <xs:simpleType>
+                  <xs:list>
+                     <xs:simpleType>
+                        <xs:restriction base="xs:anyURI">
+                           <xs:pattern value="\S+"/>
+                        </xs:restriction>
+                     </xs:simpleType>
+                  </xs:list>
+               </xs:simpleType>
+               <xs:minLength value="1"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
+   </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.lexicographic.normalized.attributes">
       <xs:attributeGroup ref="tei:tei_att.lexicographic.normalized.attribute.norm"/>
       <xs:attributeGroup ref="tei:tei_att.lexicographic.normalized.attribute.orig"/>
@@ -8082,7 +7095,13 @@ Sample values include: 1] atBirth; 2] atDeath; 3] dependent; 4] inherited; 5] in
          <xs:simpleType>
             <xs:restriction>
                <xs:simpleType>
-                  <xs:list itemType="xs:anyURI"/>
+                  <xs:list>
+                     <xs:simpleType>
+                        <xs:restriction base="xs:anyURI">
+                           <xs:pattern value="\S+"/>
+                        </xs:restriction>
+                     </xs:simpleType>
+                  </xs:list>
                </xs:simpleType>
                <xs:minLength value="1"/>
             </xs:restriction>

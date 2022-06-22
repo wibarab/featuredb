@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="802_tei_odd/out/featuredb.xsd" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://www.tei-c.org/ns/1.0 802_tei_odd/out/featuredb.xsd"
+ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 out/featuredb.xsd"
  xmlns="http://www.tei-c.org/ns/1.0" xmlns:l="https://wibarab.acdh.oeaw.ac.at/langDesc">
     <teiHeader>
         <fileDesc>
@@ -37,7 +36,7 @@
     </teiHeader>
     <text>
         <body>
-            <head>Reflexes of <rs type="feature">kaf</rs></head>
+            <head>Reflexes of <name type="feature">kaf</name></head>
             <div>
                 <head>Feature Values</head>
                 <list type="featureValues" xml:id="feats_kaf">
@@ -47,12 +46,12 @@
                     </item>
                     
                     <item xml:id="k_affr1">
-                        <label>kaf</label>
+                        <label>ćaf</label>
                         <p>k → affrication (in the environment of anterior vowel) /ć/</p>
                     </item>
                     
                     <item xml:id="k_affr2">
-                        <label></label>
+                        <label>čaf</label>
                         <p>k → affrication (in the environment of anterior vowel) /č/</p>
                     </item>
                     
@@ -62,7 +61,7 @@
                     </item>
                     
                     <item xml:id="k_emph_k">
-                        <label></label>
+                        <label>ḳ</label>
                         <p>k → /ḳ/</p>
                     </item>
                 </list>
@@ -90,24 +89,59 @@
             </div>
             <div>
                 <head>Feature Value Observations</head>
-                <l:featureValueObservation xml:id="fr_0000" source="#fvo1" fVal="#k_affr2" ana="dial:LBN-ABI" resp="dmp:AD">
-                    <placeName></placeName>
-                    <date></date>
+                <l:featureValueObservation xml:id="fr_0000" resp="dmp:AD" cert="high" status="draft">
+                    <name type="featureValue" ref="#k_emph_k">ḳaf</name>
+                    <bibl corresp="zot:z2023" type="personalCommunication">
+                       <title></title>
+                       <biblScope unit="page">15-23</biblScope>
+                       
+                    </bibl>
+                    <region ref="geo:r124">Region Name</region>
+                    
+                    <!-- In terms of workflow: WHERE SHOULD THIS BE SOURCED FROM ? -->
+                    
+                    <!-- 
+                        
+                        @evidence – on what grounds 
+                            * "internal": the date of data collection is documented in the source itself 
+                            * "external": the date of data collection is witnessed by some external source
+                            * "conjecture": the date of data collection is implied by the 
+                        
+                        @cert - the degree of certainty regarding the dating of data collection: 
+                            * "high":    the exact period of data collection is documented in the source itself, 
+                                         so there's no doubt about it 
+                            * "low":     the source lacks any information on the date of the data collection 
+                                         so the certainty is low 
+                            * "medium":  some indication on the date of the data collection is provided 
+                                         by the source, so even if no exact dates are given, the assumed period
+                                         of data collection is reasonably certain.
+                           
+                            
+                    
+                    -->
+                    <date cert="high" notBefore="1952" notAfter="1958" evidence="conjecture">1950ies</date>
+                    
+                    
+                    
+                    <!-- 
+                        optional NB: if <lang> is provided in the data, it is assumed that the
+                        variety name is used in the source publication.
+                    -->
+                    <lang>[variety name]</lang>
                     
                     <personGrp type="tribe">
-                        
+                        <name>[tribe's name]</name>
+                        <residence></residence>
+                        <bibl corresp="zot:p134ew"></bibl>
+                        <
                     </personGrp>
-                    <personGrp type="religious">
-                        
-                    </personGrp>
-                    <personGrp type="agrGroup">
-                        <age>ancient</age>
-                    </personGrp>
-                    <usg type="etym">MSA</usg>
                     
-                    <usg type="time"></usg>
-                    
-                    <note>Exception: čān - yikūn; there is desaffrication when in contact with coronal consonants [d], [t], [ḏ], [t],̱ [t]̣ et [ḏ̣ ]</note>
+                    <personGrp type="ageGroup" >
+                        <!-- TODO define age groups which are represented by a code number given in @value -->
+                        <age value="3"></age>
+                    </personGrp>
+                    <note type="constraintNote">this feature is realised as gaf in the contect of MSA loanwords</note>
+                    <note type="exceptionNote">Exception: čān - yikūn; there is desaffrication when in contact with coronal consonants [d], [t], [ḏ], [t],̱ [t]̣ et [ḏ̣ ]</note>
                 </l:featureValueObservation>
                 <p></p>
             </div>
