@@ -10,14 +10,17 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="tei:name"/>
-        <xs:element maxOccurs="unbounded" ref="tei:bibl"/>
         <xs:choice>
-          <xs:element minOccurs="0" ref="tei:region"/>
-          <xs:element minOccurs="0" ref="tei:settlement"/>
+          <xs:element minOccurs="0" ref="tei:bibl"/>
+          <xs:element minOccurs="0" ref="tei:correspDesc"/>
+        </xs:choice>
+        <xs:choice>
+          <xs:element maxOccurs="unbounded" ref="tei:region"/>
+          <xs:element maxOccurs="unbounded" ref="tei:settlement"/>
         </xs:choice>
         <xs:element ref="tei:date"/>
-        <xs:element minOccurs="0" ref="tei:lang"/>
-        <xs:element maxOccurs="unbounded" ref="tei:personGrp"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:lang"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:personGrp"/>
         <xs:choice>
           <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:cit"/>
           <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:ptr"/>

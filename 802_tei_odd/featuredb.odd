@@ -29,6 +29,7 @@
       </fileDesc>
       <revisionDesc>
          <change who="#DS">Set up document outline; first draft of Part 1 (functional requirements).</change>
+         <change who="#DS" when="2022-06-23">finalized beta Version 1</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -72,7 +73,10 @@
                <moduleRef key="textstructure" include="TEI back body front div text"/>
                <moduleRef key="namesdates" include="affiliation age birth bloc death district education event faith forename genName geo geogFeat geogName langKnowledge langKnown listEvent listOrg listPerson listPlace location nationality occupation org orgName persName person personGrp place placeName population region residence settlement socecStatus state surname trait"/>
                <moduleRef key="linking" include=""/>
-               <moduleRef key="analysis" include=""/>
+               <!-- DS 2022-06-23 removing analysis module as long as we don't have any encoded examples in the data.  -->
+               <!--
+                  <moduleRef key="analysis" include=""/>
+                  att.global.analytic should be probably deleted and @ana be re-defined only on <w> and certain other elements -->
                
                
                <classSpec type="atts" ident="att.global" mode="change">
@@ -142,13 +146,27 @@
                            <valItem ident="primaryData"/>
                         </valList>
                      </attDef>
+                     <attDef ident="subtype" mode="add">
+                        <!-- This is extraced by running distinct-values(//biblStruct/@type) on the TEI export of the VICAV bibliography. -->
+                        <valList type="closed">
+                           <valItem ident="conferencePaper"/>
+                           <valItem ident="bookSection"/>
+                           <valItem ident="journalArticle"/>
+                           <valItem ident="book"/>
+                           <valItem ident="encyclopediaArticle"/>
+                           <valItem ident="thesis"/>
+                           <valItem ident="magazineArticle"/>
+                           <valItem ident="manuscript"/>
+                        </valList>
+                     </attDef>
                      <attDef ident="cert" mode="delete"/>
-                     <attDef ident="ana" mode="delete"/>
                      <attDef ident="resp" mode="delete"/>
                      <attDef ident="status" mode="delete"/>
                      <attDef ident="corresp" mode="change" usage="req"/>
                   </attList>
                </elementSpec>
+               
+               
                
                
               
@@ -216,6 +234,18 @@
                      <attDef ident="ref" usage="req" mode="change"/>
                   </attList>
                </elementSpec>
+               
+               <elementSpec ident="div" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="replace">
+                        <valList type="closed">
+                           <valItem ident="description"/>
+                           <valItem ident="featureDescription"/>
+                           <valItem ident="featureValueObservations"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
 
                <elementSpec ident="region" mode="change" module="namesdates">
                   <content>
@@ -237,10 +267,27 @@
                   </attList>
                </elementSpec>
                
-               <elementSpec ident="title" mode="replace">
-                  <content>
-                     <textNode/>
-                  </content>
+               <elementSpec ident="title" mode="change">
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="corresp" mode="delete"/>
+                     <attDef ident="notAfter" mode="delete"/>
+                     <attDef ident="notBefore" mode="delete"/>
+                     <attDef ident="when" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                     <attDef ident="resp" mode="delete"/>
+                     
+                     <!-- CHECKME DS 2022-06-23 Why do I have to redefine that here? 
+                     Shouldn't it be included just like @level ?-->
+                     <attDef ident="type" mode="add">
+                        <valList type="closed">
+                           <valItem ident="main"/>
+                           <valItem ident="sub"/>
+                           <valItem ident="short"/>
+                        </valList>
+                     </attDef>
+                  </attList>
                </elementSpec>
                
                <elementSpec ident="date" mode="change">
@@ -251,11 +298,20 @@
                      <attDef ident="resp" mode="delete"/>
                      <attDef ident="confidence" mode="delete"/>
                      <attDef ident="min" mode="delete"/>
-                     <attDef ident="ana" mode="delete"/>
                      <attDef ident="quantity" mode="delete"/>
                      <attDef ident="period" mode="delete"/>
                      <attDef ident="scope" mode="delete"/>
-                     <attDef ident="when" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               
+               <elementSpec ident="cit" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="add">
+                        <valList type="closed">
+                           <valItem ident="example"/>
+                           <valItem ident="originalSource"/>
+                        </valList>
+                     </attDef>
                   </attList>
                </elementSpec>
                
@@ -277,13 +333,13 @@
                            <elementRef key="correspDesc" minOccurs="0"/>
                         </alternate>
                         <alternate minOccurs="1" maxOccurs="1">
-                           <elementRef key="region" maxOccurs="1" minOccurs="0"/>
-                           <elementRef key="settlement" maxOccurs="1" minOccurs="0"/>
+                           <elementRef key="region" maxOccurs="unbounded" minOccurs="1"/>
+                           <elementRef key="settlement" maxOccurs="unbounded" minOccurs="1"/>
                         </alternate>
                         <elementRef key="date" maxOccurs="1" minOccurs="1"/>
-                        <elementRef key="lang" minOccurs="0" maxOccurs="1"/>
+                        <elementRef key="lang" minOccurs="0" maxOccurs="unbounded"/>
                         <!-- personGrp is defining a personGroup (whereas placeName references a place) – but there's no personGrpName element -->
-                       <elementRef key="personGrp" maxOccurs="unbounded" minOccurs="1"/>
+                       <elementRef key="personGrp" maxOccurs="unbounded" minOccurs="0"/>
                          
                         
                         <alternate>
@@ -296,7 +352,6 @@
                   <attList>
                      <attDef ident="xml:id" mode="change" usage="req"/>
                      <attDef ident="corresp" mode="delete"/>
-                     <attDef ident="ana" mode="delete"/>
                   </attList>
                   <!-- 2022-06-21 moving @fVal to <name type="featureValue"> -->
 <!--                  <attList>-->
