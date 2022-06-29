@@ -7,7 +7,7 @@
    xmlns="http://www.tei-c.org/ns/1.0"
    xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   exclude-result-prefixes="tei xsl wib xsi">
+   exclude-result-prefixes="tei xsl wib xsi xs">
 
    <xsl:output method="xml" indent="yes" encoding="UTF-8" omit-xml-declaration="no"/>
 
@@ -190,11 +190,15 @@
    <xsl:template match="tei:div[@type= 'examples']"/>
    
    <xsl:template match="tei:f[@name = 'example']">
-      <xsl:copy-of select="ancestor::tei:TEI//*[@xml:id=substring-after(current()/@fVal.,'#')]"/>
+      <xsl:variable name="exampleID" select="substring-after(current()/@fVal,'#')"/>
+      <xsl:variable name="example" select="root()//*[@xml:id=$exampleID]"/>
+      <xsl:if test="$exampleID != '' and not(exists($example))">
+         <xsl:message terminate="yes">Could not find example with id <xsl:value-of select="$exampleID"/></xsl:message>
+      </xsl:if>
    </xsl:template>
    
    <xsl:template match="tei:f[@name='realisationType']">
-      <name type="featureValue" ref="{@fVal}"><xsl:value-of select="root()//tei:fs[@xml:id = substring-after(current()/@fVal,'#')]"/></name>
+      <name type="featureValue" ref="{@fVal}"/>         
    </xsl:template>
    
    
