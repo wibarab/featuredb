@@ -49,26 +49,44 @@
             <tr>
                <td>Variety</td>
                <td>
-                  <xsl:variable name="dia_id"><xsl:value-of select="substring(tei:name[@type='featureValue'][1]/@ref,2)"/></xsl:variable>
-                  <xsl:value-of select="$dia_id"/>
-<!--
+                  <xsl:variable name="dia_id"><xsl:value-of select="substring(tei:lang/@corresp,5)"/></xsl:variable>
                   <xsl:variable name="fp"><xsl:value-of select="$basePath"/>/vicav_dialects.xml</xsl:variable>
 
                   <xsl:value-of select="document($fp)//tei:fs[@type='dialect'][@xml:id=$dia_id]/tei:f[@name='DialectName']/tei:string"/>
-                  -->
+                  <xsl:text> </xsl:text>(<xsl:value-of select="$dia_id"/>)
                </td>
             </tr>
-<!--
+
             <tr>
                <td>Source</td>
                <td>
-                  <xsl:variable name="id"><xsl:value-of select="substring(@source,2)"/></xsl:variable>
+                  <xsl:variable name="id"><xsl:value-of select="substring(tei:bibl/@corresp,5)"/></xsl:variable>
                   <xsl:variable name="fp"><xsl:value-of select="$basePath"/>/vicav_biblio_tei_zotero.xml</xsl:variable>
 
                   <xsl:value-of select="document($fp)//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:title"/>
                </td>
             </tr>
 
+            <tr>
+               <td>Place</td>
+               <td>
+                  <xsl:variable name="regId"><xsl:value-of select="substring(tei:region/@ref,5)"/></xsl:variable>
+                  <xsl:variable name="setId"><xsl:value-of select="substring(tei:settlement/@ref,5)"/></xsl:variable>
+                  <xsl:variable name="fp"><xsl:value-of select="$basePath"/>/vicav_geodata.xml</xsl:variable>
+                  <xsl:value-of select="document($fp)//tei:place[@xml:id=$regId]/tei:placeName"/>
+               </td>
+            </tr>
+
+            <tr>
+               <td>Notes</td>
+               <td>
+                  <xsl:for-each select="tei:note">
+                  <p><xsl:apply-templates/></p>
+                  </xsl:for-each>
+               </td>
+            </tr>
+
+<!--
             <tr>
                <td>Examples</td>
                <td>
