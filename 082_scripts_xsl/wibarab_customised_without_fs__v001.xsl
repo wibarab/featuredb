@@ -45,7 +45,7 @@
    
    <xsl:template match="tei:encodingDesc[not(tei:listPrefixDef)]">
       <xsl:copy>
-         <xsl:copy-of select="@*|node()"/>
+         <!-- <xsl:copy-of select="@*|node()"/> -->
          <xsl:sequence select="$listPrefixDef"/>
       </xsl:copy>
    </xsl:template>
@@ -327,7 +327,7 @@
          <xsl:otherwise>
             <xsl:element name="{$geoElementName}">
                <xsl:attribute name="ref" select="$geoRef"/>
-               <xsl:value-of select="$geo/tei:placeName"/>
+               <!-- <xsl:value-of select="$geo/tei:placeName"/> -->
             </xsl:element>   
          </xsl:otherwise>
       </xsl:choose>

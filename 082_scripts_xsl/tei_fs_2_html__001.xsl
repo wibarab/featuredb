@@ -2,7 +2,15 @@
    <xsl:output method="html" indent="no" encoding="UTF-8"/>
    <xsl:strip-space elements="tei:body tei:TEI tei:row tei:cell tei:teiHeader tei:text tei:u tei:hi tei:ref tei:p tei:fileDesc tei:titleStmt tei:publicationStmt tei:editionStmt tei:revisionDesc tei:sourceDesc tei:div"/>
 
-   <xsl:variable name="basePath">W:/WIBARAB/Database/features/texts</xsl:variable>
+   <xsl:variable name="basePath">{basePath}</xsl:variable>
+   <xsl:param name="dialectsPath">../102_derived_tei/vicav_dialects.xml</xsl:param>
+   <xsl:param name="zoteroPath">../102_derived_tei/vicav_biblio_tei_zotero.xml</xsl:param>
+   <xsl:param name="geoDataPath">../102_derived_tei/vicav_geodata.xml</xsl:param>
+
+
+   <xsl:variable name="diaDoc" select="document($dialectsPath)"/>
+   <xsl:variable name="zotDoc" select="document($zoteroPath)"/>
+   <xsl:variable name="geoDoc" select="document($geoDataPath)"/>
 
    <xsl:variable name="title">
       <xsl:value-of select="//tei:titleStmt/tei:title"/>
@@ -44,68 +52,64 @@
    <xsl:param name="feVal"/><xsl:apply-templates/>(<xsl:value-of select="$feVal"/>)</xsl:template>
 
    <xsl:template match="wib:featureValueObservation">
-      <div class="featureRealisation">
+      <xsl:variable name="xmlid"><xsl:value-of select="@xml:id"/></xsl:variable>
+      <div class="featureRealisation" id="{$xmlid}">
          <table>
+            <tr><td><a href="goto:{$xmlid}">==&gt;</a></td></tr>
             <tr>
-               <td>Variety</td>
-               <td>
+               <td class="tdLeft">Variety</td>
+               <td class="tdRight">
                   <xsl:variable name="dia_id"><xsl:value-of select="substring(tei:lang/@corresp,5)"/></xsl:variable>
-                  <xsl:variable name="fp"><xsl:value-of select="$basePath"/>/vicav_dialects.xml</xsl:variable>
-
-                  <xsl:value-of select="document($fp)//tei:fs[@type='dialect'][@xml:id=$dia_id]/tei:f[@name='DialectName']/tei:string"/>
-                  <xsl:text> </xsl:text>(<xsl:value-of select="$dia_id"/>)
+                  <xsl:value-of select="$diaDoc//tei:fs[@type='dialect'][@xml:id=$dia_id]/tei:f[@name='dialectName']/tei:string"/>
                </td>
             </tr>
 
             <tr>
-               <td>Source</td>
-               <td>
+               <td class="tdLeft">Source</td>
+               <td class="tdRight">
                   <xsl:variable name="id"><xsl:value-of select="substring(tei:bibl/@corresp,5)"/></xsl:variable>
-                  <xsl:variable name="fp"><xsl:value-of select="$basePath"/>/vicav_biblio_tei_zotero.xml</xsl:variable>
 
-                  <xsl:value-of select="document($fp)//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:title"/>
+                  <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:title"/>
                </td>
             </tr>
 
             <tr>
-               <td>Place</td>
-               <td>
+               <td class="tdLeft">Place</td>
+               <td class="tdRight">
                   <xsl:variable name="regId"><xsl:value-of select="substring(tei:region/@ref,5)"/></xsl:variable>
                   <xsl:variable name="setId"><xsl:value-of select="substring(tei:settlement/@ref,5)"/></xsl:variable>
-                  <xsl:variable name="fp"><xsl:value-of select="$basePath"/>/vicav_geodata.xml</xsl:variable>
-                  <xsl:value-of select="document($fp)//tei:place[@xml:id=$regId]/tei:placeName"/>
+                  <xsl:value-of select="$geoDoc//tei:place[@xml:id=$regId]/tei:placeName"/>
+                  <xsl:value-of select="$geoDoc//tei:place[@xml:id=$setId]/tei:placeName"/>
+
+                  <xsl:if test="($regId = '') and ($setId = '')"><span class="spError">Missing place!!!</span></xsl:if>
                </td>
             </tr>
 
-            <tr>
-               <td>Notes</td>
-               <td>
-                  <xsl:for-each select="tei:note">
-                  <p><xsl:apply-templates/></p>
-                  </xsl:for-each>
-               </td>
-            </tr>
+            <xsl:if test="tei:note">
+              <tr>
+                 <td class="tdLeft">Notes</td>
+                 <td class="tdRight">
+                    <xsl:for-each select="tei:note">
+                       <p><xsl:apply-templates/></p>
+                    </xsl:for-each>
+                 </td>
+              </tr>
+            </xsl:if>
 
-<!--
-            <tr>
-               <td>Examples</td>
-               <td>
-                  <xsl:variable name="feVal" select="substring(tei:f[@name='realisationType']/@fVal,2)"></xsl:variable>
-
-                  <xsl:for-each select="tei:f[@name='example']">
-                     <xsl:variable name="exID"><xsl:value-of select="substring(@fVal,2)"/></xsl:variable>
-                     <xsl:apply-templates select="//tei:cit[@xml:id=$exID]/tei:quote/tei:s">
-                        <xsl:with-param name="feVal" select="$feVal"/>
-                     </xsl:apply-templates>
-                  </xsl:for-each>
-               </td>
-            </tr>
-
-            <tr>
-               <td>lexicalDomain</td>
-               <td><xsl:value-of select="tei:f[@name='lexicalDomain']/tei:string"/></td>
-            </tr>
-            -->
+            <xsl:if test="tei:cit[@type='example']">
+              <tr>
+                 <td class="tdLeft">Examples</td>
+                 <td class="tdRight">
+                    <xsl:for-each select="tei:cit[@type='example']">
+                      <div>
+                         <xsl:value-of select="tei:quote"/>
+                         <xsl:text> </xsl:text>
+                         <i><xsl:value-of select="tei:cit/tei:quote"/></i>
+                      </div>
+                    </xsl:for-each>
+                 </td>
+              </tr>
+            </xsl:if>
          </table>
       </div>
    </xsl:template>
