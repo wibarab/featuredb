@@ -39,7 +39,7 @@
    <xsl:template match="tei:revisionDesc">
       <xsl:copy>
          <xsl:copy-of select="@*|node()"/>
-         <change when="{current-date()}" who="#DS">converted data to new schema version</change>
+         <change when="{current-date()}" who="dmp:DS">converted data to new schema version</change>
       </xsl:copy>
    </xsl:template>
    

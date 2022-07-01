@@ -1,4 +1,4 @@
-<xsl:stylesheet xml:space="preserve" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tei="http://www.tei-c.org/ns/1.0" version="2.0" exclude-result-prefixes="xsl tei">
+<xsl:stylesheet xml:space="preserve" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" version="2.0" exclude-result-prefixes="xsl tei">
    <xsl:output method="html" indent="no" encoding="UTF-8"/>
    <xsl:strip-space elements="tei:body tei:TEI tei:row tei:cell tei:teiHeader tei:text tei:u tei:hi tei:ref tei:p tei:fileDesc tei:titleStmt tei:publicationStmt tei:editionStmt tei:revisionDesc tei:sourceDesc tei:div"/>
 
@@ -14,7 +14,7 @@
          <xsl:comment>XSLT: tei_2_html__simple_text.xsl</xsl:comment>
          <head>
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-            <link rel="stylesheet" href="../css/basic__001.css"></link>
+            <link rel="stylesheet" href="../650_css/basic__001.css"></link>
          </head>
 
          <body>
@@ -32,7 +32,7 @@
             <xsl:apply-templates select="//tei:div[@type='description']"/>
 
             <h3>Instances</h3>
-            <xsl:apply-templates select="//tei:fs[@type='featureRealisationAssertion']"/>
+            <xsl:apply-templates select="//wib:featureValueObservation"/>
          </body>
 
       </html>
@@ -43,19 +43,22 @@
    <xsl:template match="tei:seg">
    <xsl:param name="feVal"/><xsl:apply-templates/>(<xsl:value-of select="$feVal"/>)</xsl:template>
 
-   <xsl:template match="tei:fs[@type='featureRealisationAssertion']">
+   <xsl:template match="wib:featureValueObservation">
       <div class="featureRealisation">
          <table>
             <tr>
-               <td>Dialect</td>
+               <td>Variety</td>
                <td>
-                  <xsl:variable name="dia_id"><xsl:value-of select="substring(tei:f[@name='dialect']/@fVal,2)"/></xsl:variable>
+                  <xsl:variable name="dia_id"><xsl:value-of select="substring(tei:name[@type='featureValue'][1]/@ref,2)"/></xsl:variable>
+                  <xsl:value-of select="$dia_id"/>
+<!--
                   <xsl:variable name="fp"><xsl:value-of select="$basePath"/>/vicav_dialects.xml</xsl:variable>
 
                   <xsl:value-of select="document($fp)//tei:fs[@type='dialect'][@xml:id=$dia_id]/tei:f[@name='DialectName']/tei:string"/>
+                  -->
                </td>
             </tr>
-
+<!--
             <tr>
                <td>Source</td>
                <td>
@@ -84,6 +87,7 @@
                <td>lexicalDomain</td>
                <td><xsl:value-of select="tei:f[@name='lexicalDomain']/tei:string"/></td>
             </tr>
+            -->
          </table>
       </div>
    </xsl:template>
