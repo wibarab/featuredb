@@ -16,7 +16,7 @@
    <xsl:param name="path-to-dmp">../102_derived_tei/wibarab_dmp.xml</xsl:param>
    <xsl:variable name="dmp" select="document($path-to-dmp)"/>
    <xsl:variable name="listPrefixDef" select="$dmp//tei:listPrefixDef"/>
-
+   <xsl:variable name="doc" select="."/>
    
    <xsl:strip-space elements="*"/>
 <!--   <xsl:preserve-space elements="wib:featureValueObservation"/>-->
@@ -107,7 +107,7 @@
          <xsl:apply-templates select="tei:f[@name = 'attestedPlace']"/>
          <xsl:apply-templates select="tei:f[@name = 'attestedDate']"/>
          <xsl:apply-templates select="tei:f[@name = 'dialect']"/>
-         <xsl:apply-templates select="*[not(@name = ('realsiationType','attestedPlace','attestedDate','dialect'))]"/>
+         <xsl:apply-templates select="*[not(@name = ('realisationType','attestedPlace','attestedDate','dialect'))]"/>
       </wib:featureValueObservation>
    </xsl:template>
    
@@ -190,11 +190,14 @@
    <xsl:template match="tei:div[@type= 'examples']"/>
    
    <xsl:template match="tei:f[@name = 'example']">
-      <xsl:variable name="exampleID" select="substring-after(current()/@fVal,'#')"/>
-      <xsl:variable name="example" select="root()//*[@xml:id=$exampleID]"/>
-      <xsl:if test="$exampleID != '' and not(exists($example))">
-         <xsl:message terminate="yes">Could not find example with id <xsl:value-of select="$exampleID"/></xsl:message>
-      </xsl:if>
+      <xsl:for-each select="tokenize(current()/@fVal,' ')">
+         <xsl:variable name="exampleID" select="substring-after(.,'#')"/>
+         <xsl:variable name="example" select="$doc//*[@xml:id=$exampleID]"/>
+         <xsl:if test="$exampleID != '' and not(exists($example))">
+            <xsl:message terminate="yes">Could not find example with id <xsl:value-of select="$exampleID"/></xsl:message>
+         </xsl:if>
+         <xsl:sequence select="$example"/>
+      </xsl:for-each>
    </xsl:template>
    
    <xsl:template match="tei:f[@name='realisationType']">
