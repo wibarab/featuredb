@@ -55,7 +55,7 @@
       <xsl:variable name="xmlid"><xsl:value-of select="@xml:id"/></xsl:variable>
       <div class="featureRealisation" id="{$xmlid}">
          <table>
-            <tr><td><a href="goto:{$xmlid}">==&gt;</a></td></tr>
+            <tr><td colspan="2"><a class="aReturnLink" href="goto:{$xmlid}">==˃ (Go to XML)</a></td></tr>
             <tr>
                <td class="tdLeft">Variety</td>
                <td class="tdRight">
@@ -69,7 +69,11 @@
                <td class="tdRight">
                   <xsl:variable name="id"><xsl:value-of select="substring(tei:bibl/@corresp,5)"/></xsl:variable>
 
+                  <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:author/tei:surname"/>
+                  <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:author/tei:surname"/>
+                  <xsl:text>: </xsl:text>
                   <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:title"/>
+                  <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:title"/>
                </td>
             </tr>
 
