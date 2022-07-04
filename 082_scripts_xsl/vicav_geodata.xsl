@@ -35,12 +35,16 @@
                <tr>
                   <td class="tdHead">Placename</td>
                   <td class="tdHead">Country</td>
+                  <td class="tdHead">Type</td>
                   <td class="tdHead">Coordinates</td>
                   <td class="tdHead">Geonames ID</td>
                </tr>
 
                <xsl:for-each select="//tei:place">
+                  <xsl:sort select="@type"/>
+                  <xsl:sort select="tei:location/tei:country"/>
                   <xsl:sort select="tei:placeName"/>
+
                   <tr>
                      <td style="background:rgb(239,239,239)">
                         <a href="goto:{@xml:id}">
@@ -49,6 +53,7 @@
                      </td>
 
                      <td><xsl:value-of select="tei:location/tei:country"/></td>
+                     <td><xsl:value-of select="@type"/></td>
                      <td><xsl:value-of select="tei:location/tei:geo[@decls='#dd']"/></td>
                      <td><xsl:value-of select="tei:idno"/></td>
                   </tr>
