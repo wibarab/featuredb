@@ -18,7 +18,6 @@
          <sourceDesc>
             <p>This is a born digital document. All sources used in compiling and collected the data are cated in the bibliographic sections of the respective entry / element.</p></sourceDesc>
       </fileDesc>
-
       <encodingDesc>
          <listPrefixDef xml:id="listPrefixDef">
             <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../102_derived_tei/wibarab-dmp.xml#$1"/>
@@ -50,8 +49,10 @@
          <change who="dmp:CM" when="2022-03-02">reworked examples based on last meeting:
             * tentatively added f[@name="explanation"] to featureValues
          </change>
-         <change when="2022-07-01+02:00" who="dmp:DS">converted data to new schema version</change></revisionDesc>
+         <change when="2022-07-04+02:00" who="dmp:DS">converted data to new schema version</change>
+      </revisionDesc>
    </teiHeader>
+
    <text>
       <body xml:base="{docPath}">
          <div type="featureDescription">
@@ -99,10 +100,9 @@
          <div type="featureValueObservations">
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0000" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="#" type="publication" subtype="">
-                  <title type="short"> </title></bibl>
+               <bibl corresp="#" type="publication" subtype=""/>
                <region ref="geo:beqaa"/>
-               <lang corresp="dia:LBN-ABI">Abu ʿĪd (Bekaa Valley)</lang>
+               <lang corresp="dia:LBN-ABI"/>
                <note>Exception: čān - yikūn; there is desaffrication when in contact with coronal consonants [d], [t], [ḏ], [t],̱ [t]̣ et [ḏ̣ ]</note>
                <cit type="example" xml:id="ex_000">
                   <quote>mičān</quote>
@@ -114,47 +114,42 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0001" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="zot:Younes2013" type="publication" subtype="journalArticle">
-                  <title type="short">Herin and Younes 2013</title></bibl>
+               <bibl corresp="zot:Younes2013" type="publication" subtype="journalArticle"/>
                <region ref="geo:wadi_khalid"/>
-               <lang corresp="dia:LBN-ATI">ʿAṛaḅ al-ʿAtīǧ (Wādī Xālid)</lang>
+               <lang corresp="dia:LBN-ATI"/>
                <note>čān - yikūn; ʾabū-k «ton père (m.)» et ʾabū-č«ton père (f.);
                   [k] is reestablished in the passive participles of verbs C-C-k of scheme *maC1C2ūC3 (ex. manyūk, maʿlūk et mahlūk)</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0002" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:El-Hajjé1954" type="publication" subtype="book">
-                  <title type="short">El-Hajjé 1954</title></bibl>
+               <bibl corresp="zot:El-Hajjé1954" type="publication" subtype="book"/>
                <settlement ref="geo:tripoli_lebanon"/>
-               <lang corresp="dia:LBN-TRI">Tripoli</lang>
+               <lang corresp="dia:LBN-TRI"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0003" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl>
+               <bibl corresp="zot:" type="publication" subtype=""/>
                <settlement ref="geo:beirut"/>
-               <lang corresp="dia:LBN-BEI">Beiruti</lang>
+               <lang corresp="dia:LBN-BEI"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0004" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl>
+               <bibl corresp="zot:" type="publication" subtype=""/>
                <settlement ref="geo:zahle"/>
-               <lang corresp="dia:LBN-ZAH">Zahle</lang>
+               <lang corresp="dia:LBN-ZAH"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0005" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:Abu-Haidar1979" type="publication" subtype="book">
-                  <title type="short">Abu-Haidar 1979</title></bibl>
+               <bibl corresp="zot:Abu-Haidar1979" type="publication" subtype="book"/>
                <settlement ref="geo:baskinta"/>
-               <lang corresp="dia:LBN-BAS">Baskinta</lang>
+               <lang corresp="dia:LBN-BAS"/>
                <cit type="example" xml:id="ex_001">
                   <quote>nakar</quote>
                   <cit type="translation">
@@ -172,233 +167,207 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0006" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book">
-                  <title type="short">Behnstedt and Geva-Kleinberger 2019</title></bibl>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
                <region ref="geo:galilee"/>
-               <lang corresp="dia:ISR-ARM">ʕarāmša</lang>
+               <lang corresp="dia:ISR-ARM"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0007" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book">
-                  <title type="short">Behnstedt and Geva-Kleinberger 2019</title></bibl>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
                <region ref="geo:galilee"/>
-               <lang corresp="dia:ISR-MRY">ʕamiriyya</lang>
+               <lang corresp="dia:ISR-MRY"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0008" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book">
-                  <title type="short">Behnstedt and Geva-Kleinberger 2019</title></bibl>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
                <region ref="geo:galilee"/>
-               <lang corresp="dia:ISR-GAW">Ǧawamīs</lang>
+               <lang corresp="dia:ISR-GAW"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0009" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book">
-                  <title type="short">Behnstedt and Geva-Kleinberger 2019</title></bibl>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
                <region ref="geo:galilee"/>
-               <lang corresp="dia:ISR-GET">Gēṭiyya</lang>
+               <lang corresp="dia:ISR-GET"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0010" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book">
-                  <title type="short">Behnstedt and Geva-Kleinberger 2019</title></bibl>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
                <region ref="geo:galilee"/>
-               <lang corresp="dia:ISR-GRI">Ġrīfāt</lang>
+               <lang corresp="dia:ISR-GRI"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0011" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book">
-                  <title type="short">Behnstedt and Geva-Kleinberger 2019</title></bibl>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
                <region ref="geo:galilee"/>
-               <lang corresp="dia:ISR-HAG">Ḥaǧāǧra</lang>
+               <lang corresp="dia:ISR-HAG"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0012" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book">
-                  <title type="short">Behnstedt and Geva-Kleinberger 2019</title></bibl>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
                <region ref="geo:galilee"/>
-               <lang corresp="dia:ISR-HGE">Ḥǧērāt</lang>
+               <lang corresp="dia:ISR-HGE"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0013" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book">
-                  <title type="short">Behnstedt and Geva-Kleinberger 2019</title></bibl>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
                <region ref="geo:galilee"/>
-               <lang corresp="dia:ISR-KAB">Kaʕbiyye</lang>
+               <lang corresp="dia:ISR-KAB"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0014" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book">
-                  <title type="short">Behnstedt and Geva-Kleinberger 2019</title></bibl>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
                <region ref="geo:galilee"/>
-               <lang corresp="dia:ISR-LHE">Lhēb</lang>
+               <lang corresp="dia:ISR-LHE"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0015" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book">
-                  <title type="short">Behnstedt and Geva-Kleinberger 2019</title></bibl>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
                <region ref="geo:galilee"/>
-               <lang corresp="dia:ISR-MAZ">Mazārīb</lang>
+               <lang corresp="dia:ISR-MAZ"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0016" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book">
-                  <title type="short">Behnstedt and Geva-Kleinberger 2019</title></bibl>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
                <region ref="geo:galilee"/>
-               <lang corresp="dia:ISR-N3M">Nʕēm (SHOUD I SPECIFY COUNTRY?)</lang>
+               <lang corresp="dia:ISR-N3M"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0017" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book">
-                  <title type="short">Behnstedt and Geva-Kleinberger 2019</title></bibl>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
                <region ref="geo:galilee"/>
-               <lang corresp="dia:ISR-SA3">Saʕāyda</lang>
+               <lang corresp="dia:ISR-SA3"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0018" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book">
-                  <title type="short">Behnstedt and Geva-Kleinberger 2019</title></bibl>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
                <region ref="geo:galilee"/>
-               <lang corresp="dia:ISR-SAM">Samniyya</lang>
+               <lang corresp="dia:ISR-SAM"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0019" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book">
-                  <title type="short">Behnstedt and Geva-Kleinberger 2019</title></bibl>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
                <region ref="geo:galilee"/>
-               <lang corresp="dia:ISR-SAW">Sawāʕid</lang>
+               <lang corresp="dia:ISR-SAW"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0020" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book">
-                  <title type="short">Behnstedt and Geva-Kleinberger 2019</title></bibl>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
                <region ref="geo:galilee"/>
-               <lang corresp="dia:ISR-SBE">Ṣbēḥ</lang>
+               <lang corresp="dia:ISR-SBE"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0021" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book">
-                  <title type="short">Behnstedt and Geva-Kleinberger 2019</title></bibl>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
                <region ref="geo:galilee"/>
-               <lang corresp="dia:ISR-SHI">Šibli</lang>
+               <lang corresp="dia:ISR-SHI"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0022" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book">
-                  <title type="short">Behnstedt and Geva-Kleinberger 2019</title></bibl>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
                <region ref="geo:galilee"/>
-               <lang corresp="dia:ISR-TAB">Ṭabbāš</lang>
+               <lang corresp="dia:ISR-TAB"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0023" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book">
-                  <title type="short">Behnstedt and Geva-Kleinberger 2019</title></bibl>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
                <region ref="geo:galilee"/>
-               <lang corresp="dia:ISR-XAW">Xawālid</lang>
+               <lang corresp="dia:ISR-XAW"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0024" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book">
-                  <title type="short">Behnstedt and Geva-Kleinberger 2019</title></bibl>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
                <region ref="geo:galilee"/>
-               <lang corresp="dia:ISR-ZUN">Zunnār</lang>
+               <lang corresp="dia:ISR-ZUN"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0025" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book">
-                  <title type="short">Behnstedt and Geva-Kleinberger 2019</title></bibl>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
                <region ref="geo:galilee"/>
-               <lang corresp="dia:ISR-NGE">Nǧēdāt</lang>
+               <lang corresp="dia:ISR-NGE"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0026" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book">
-                  <title type="short">Behnstedt and Geva-Kleinberger 2019</title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:ISR-TUR">ʕArab Turkmān</lang>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:ISR-TUR"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0027" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book">
-                  <title type="short">Behnstedt and Geva-Kleinberger 2019</title></bibl>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
                <settlement ref="geo:haifa"/>
-               <lang corresp="dia:ISR-HAI">Haifa</lang>
+               <lang corresp="dia:ISR-HAI"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0028" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book">
-                  <title type="short">Behnstedt and Geva-Kleinberger 2019</title></bibl>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
                <settlement ref="geo:nazareth"/>
-               <lang corresp="dia:ISR-NAZ">Nazareth</lang>
+               <lang corresp="dia:ISR-NAZ"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0029" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:Shawarbah2011" type="publication" subtype="book">
-                  <title type="short">Shawarbah 2011</title></bibl>
+               <bibl corresp="zot:Shawarbah2011" type="publication" subtype="book"/>
                <region ref="geo:negev"/>
-               <lang corresp="dia:NEG-AZM">ʕAzāzmih Tribe</lang>
+               <lang corresp="dia:NEG-AZM"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0030" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:Blanc1970a" type="publication" subtype="book">
-                  <title type="short">Blanc 1970a</title></bibl>
+               <bibl corresp="zot:Blanc1970a" type="publication" subtype="book"/>
                <region ref="geo:negev"/>
-               <lang corresp="dia:NEG-ZLM">Ẓullām</lang>
+               <lang corresp="dia:NEG-ZLM"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0031" resp="dmp:???">
                <name type="featureValue" ref="#k_affr1"/>
-               <bibl corresp="zot:Palva1980" type="publication" subtype="journalArticle">
-                  <title type="short">Palva 1980</title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:JOR-BSX">Bani Ṣaxar Tribe</lang>
+               <bibl corresp="zot:Palva1980" type="publication" subtype="journalArticle"/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:JOR-BSX"/>
                <cit type="example" xml:id="ex_003">
                   <quote>inćān</quote>
                   <cit type="translation">
@@ -410,17 +379,15 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0032" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:Palva1986" type="publication" subtype="journalArticle">
-                  <title type="short">Palva 1986</title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:JOR-HWT">Ḥwēṭāt Tribe</lang>
+               <bibl corresp="zot:Palva1986" type="publication" subtype="journalArticle"/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:JOR-HWT"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0033" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="zot:Palva1976" type="publication" subtype="book">
-                  <title type="short">Palva 1976</title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:JOR-AGR">əl-ʕAǧārma Tribe</lang>
+               <bibl corresp="zot:Palva1976" type="publication" subtype="book"/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:JOR-AGR"/>
                <cit type="example" xml:id="ex_004">
                   <quote>hanāk </quote>
                   <cit type="translation">
@@ -438,9 +405,8 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0034" resp="dmp:???">
                <name type="featureValue" ref="#k_affr1"/>
-               <bibl corresp="zot:Younes2018a" type="publication" subtype="journalArticle">
-                  <title type="short">Younes 2018a</title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:JOR-AIS">al-ʕĪsa Tribe</lang>
+               <bibl corresp="zot:Younes2018a" type="publication" subtype="journalArticle"/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:JOR-AIS"/>
                <cit type="example" xml:id="ex_006">
                   <quote>ʕammit-ić</quote>
                   <cit type="translation">
@@ -452,9 +418,8 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0035" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:JOR-ABD">Bani ʕAbbād Tribe</lang>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:JOR-ABD"/>
                <note>vestigial variants: čīl "measure, weight", yčammilen "they (f.) complete", čänna "daughter in law", etc.</note>
                <cit type="example" xml:id="ex_007">
                   <quote>rākib</quote>
@@ -467,17 +432,15 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0036" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:Owens1984b" type="publication" subtype="journalArticle">
-                  <title type="short">Bani-Yasin and Owens 1984b</title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:JOR-BDL">Bdūl</lang>
+               <bibl corresp="zot:Owens1984b" type="publication" subtype="journalArticle"/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:JOR-BDL"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0037" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:Yrttiaho1988" type="publication" subtype="journalArticle">
-                  <title type="short">Yrttiaho 1988</title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:JOR-NMT">An-Nʕēmāt Tribe of the Šara Mountains</lang>
+               <bibl corresp="zot:Yrttiaho1988" type="publication" subtype="journalArticle"/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:JOR-NMT"/>
                <cit type="example" xml:id="ex_009">
                   <quote>kilme</quote>
                   <cit type="translation">
@@ -489,92 +452,80 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0038" resp="dmp:???">
                <name type="featureValue" ref="#k__affr1"/>
-               <bibl corresp="zot:Cantineau1936a" type="publication" subtype="journalArticle">
-                  <title type="short">Cantineau 1936a</title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:JOR-SMR">Šammar</lang>
+               <bibl corresp="zot:Cantineau1936a" type="publication" subtype="journalArticle"/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:JOR-SMR"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0039" resp="dmp:???">
                <name type="featureValue" ref="#k__affr1"/>
-               <bibl corresp="zot:Cantineau1936a" type="publication" subtype="journalArticle">
-                  <title type="short">Cantineau 1936a</title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:JOR-ANZ">ʕAnāze</lang>
+               <bibl corresp="zot:Cantineau1936a" type="publication" subtype="journalArticle"/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:JOR-ANZ"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0040" resp="dmp:???">
                <name type="featureValue" ref="#k__affr1"/>
-               <bibl corresp="zot:Cantineau1936a" type="publication" subtype="journalArticle">
-                  <title type="short">Cantineau 1936a</title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:JOR-FDL">Faḏ̣ol</lang>
+               <bibl corresp="zot:Cantineau1936a" type="publication" subtype="journalArticle"/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:JOR-FDL"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0041" resp="dmp:???">
                <name type="featureValue" ref="#k__affr2"/>
-               <bibl corresp="zot:Cantineau1936a" type="publication" subtype="journalArticle">
-                  <title type="short">Cantineau 1936a</title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:JOR-BXD">Bani Xāled</lang>
+               <bibl corresp="zot:Cantineau1936a" type="publication" subtype="journalArticle"/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:JOR-BXD"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0042" resp="dmp:???">
                <name type="featureValue" ref="#k__affr2"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:JOR-SHN">Sirḥān</lang>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:JOR-SHN"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0043" resp="dmp:???">
                <name type="featureValue" ref="#k__affr2"/>
-               <bibl corresp="zot:Cantineau1936a" type="publication" subtype="journalArticle">
-                  <title type="short">Cantineau 1936a</title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:JOR-SDY">Sardīye</lang>
+               <bibl corresp="zot:Cantineau1936a" type="publication" subtype="journalArticle"/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:JOR-SDY"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0044" resp="dmp:???">
                <name type="featureValue" ref="#k__affr2"/>
-               <bibl corresp="zot:Cantineau1936a" type="publication" subtype="journalArticle">
-                  <title type="short">Cantineau 1936a</title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:JOR-SLT">Ṣlūt</lang>
+               <bibl corresp="zot:Cantineau1936a" type="publication" subtype="journalArticle"/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:JOR-SLT"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0045" resp="dmp:???">
                <name type="featureValue" ref="#k__affr2"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:JOR-NEM">Nʕēm (found also in Syria in 1936)</lang>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:JOR-NEM"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0046" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:Palva1969b" type="publication" subtype="journalArticle">
-                  <title type="short">Palva 1969b</title></bibl>
+               <bibl corresp="zot:Palva1969b" type="publication" subtype="journalArticle"/>
                <settlement ref="geo:madaba"/>
-               <lang corresp="dia:JOR-MDB">Mādaba</lang>
+               <lang corresp="dia:JOR-MDB"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0047" resp="dmp:???">
                <name type="featureValue" ref="#k_affr1"/>
-               <bibl corresp="zot:Palva1974" type="publication" subtype="journalArticle">
-                  <title type="short">Palva 1974</title></bibl>
+               <bibl corresp="zot:Palva1974" type="publication" subtype="journalArticle"/>
                <settlement ref="geo:safut"/>
-               <lang corresp="dia:JOR-SFT">Ṣāfūṭ</lang>
+               <lang corresp="dia:JOR-SFT"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0048" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="zot:Herin2010" type="publication" subtype="thesis">
-                  <title type="short">Herin 2010</title></bibl>
+               <bibl corresp="zot:Herin2010" type="publication" subtype="thesis"/>
                <settlement ref="geo:al_salt"/>
-               <!--CHECKME dialect w/ id dia:JOR-SAL not found-->
                <lang corresp="dia:JOR-SAL"/>
                <note>It is a recessive feature</note>
                <cit type="example" xml:id="ex_008">
@@ -601,27 +552,24 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0049" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:Al-Wer2007a" type="publication" subtype="bookSection">
-                  <title type="short">Al-Wer 2007a</title></bibl>
+               <bibl corresp="zot:Al-Wer2007a" type="publication" subtype="bookSection"/>
                <settlement ref="geo:amman"/>
-               <lang corresp="dia:JOR-AMN">ʕAmmān</lang>
+               <lang corresp="dia:JOR-AMN"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0050" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:Palva1989" type="publication" subtype="bookSection">
-                  <title type="short">Palva 1989</title></bibl>
+               <bibl corresp="zot:Palva1989" type="publication" subtype="bookSection"/>
                <settlement ref="geo:al_karak"/>
-               <lang corresp="dia:JOR-KRK">Karak</lang>
+               <lang corresp="dia:JOR-KRK"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0051" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:Il-Hazmy1975" type="publication" subtype="thesis">
-                  <title type="short">Il-Hazmy 1975</title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:SAU-HRB">al-Ḥarb Tribe</lang>
+               <bibl corresp="zot:Il-Hazmy1975" type="publication" subtype="thesis"/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:SAU-HRB"/>
                <cit type="example" xml:id="ex_012">
                   <quote>karam</quote>
                   <cit type="translation">
@@ -633,28 +581,25 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0052" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl>
+               <bibl corresp="zot:" type="publication" subtype=""/>
                <settlement ref="geo:rabat"/>
-               <lang corresp="dia:MAR-ZIR">Zʕīr</lang>
+               <lang corresp="dia:MAR-ZIR"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0053" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl>
+               <bibl corresp="zot:" type="publication" subtype=""/>
                <settlement ref="geo:marrakesh"/>
-               <lang corresp="dia:MAR-MRK">Marrakesh</lang>
+               <lang corresp="dia:MAR-MRK"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0054" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl>
+               <bibl corresp="zot:" type="publication" subtype=""/>
                <settlement ref="geo:tanger"/>
-               <lang corresp="dia:MAR-TGR">Tangier</lang>
+               <lang corresp="dia:MAR-TGR"/>
                <note>k to x: lexically restricted spirantization: xtar 'more',
                   but not *xtir, but ktir 'much'</note>
                <f name="lexicalDomain"><string/></f>
@@ -663,37 +608,33 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0055" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl>
+               <bibl corresp="zot:" type="publication" subtype=""/>
                <settlement ref="geo:oujda"/>
-               <lang corresp="dia:MAR-OJD">Oujda</lang>
+               <lang corresp="dia:MAR-OJD"/>
                <f name="lexicalDomain"><string/></f>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0056" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:MAR-CHA">Chouia/Šāwiya</lang>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:MAR-CHA"/>
                <f name="lexicalDomain"><string/></f>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0057" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:MAR-HYN">Hyayna</lang>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:MAR-HYN"/>
                <f name="lexicalDomain"><string/></f>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0058" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:Herin2017" type="publication" subtype="bookSection">
-                  <title type="short">Herin and Zammit 2017</title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:TUN-KNH1">Kerkennah Islands dialect 1</lang>
+               <bibl corresp="zot:Herin2017" type="publication" subtype="bookSection"/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:TUN-KNH1"/>
                <cit type="example" xml:id="ex_013">
                   <quote>lkullīke</quote>
                   <cit type="translation">
@@ -706,9 +647,8 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0059" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:Herin2017" type="publication" subtype="bookSection">
-                  <title type="short">Herin and Zammit 2017</title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:TUN-KNH2">Kerkennah Islands dialect 2</lang>
+               <bibl corresp="zot:Herin2017" type="publication" subtype="bookSection"/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:TUN-KNH2"/>
                <cit type="example" xml:id="ex_014">
                   <quote>kūfiyye</quote>
                   <cit type="translation">
@@ -721,9 +661,8 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0060" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:Herin2017" type="publication" subtype="bookSection">
-                  <title type="short">Herin and Zammit 2017</title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:TUN-KNH3">Kerkennah Islands dialect 3</lang>
+               <bibl corresp="zot:Herin2017" type="publication" subtype="bookSection"/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:TUN-KNH3"/>
                <cit type="example" xml:id="ex_015">
                   <quote>nāklu</quote>
                   <cit type="translation">
@@ -736,10 +675,9 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0061" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:Behnstedt1999b" type="publication" subtype="journalArticle">
-                  <title type="short">Behnstedt 1999b</title></bibl>
+               <bibl corresp="zot:Behnstedt1999b" type="publication" subtype="journalArticle"/>
                <region ref="geo:djerba"/>
-               <lang corresp="dia:TUN-DJB">Djerba</lang>
+               <lang corresp="dia:TUN-DJB"/>
                <cit type="example" xml:id="ex_016">
                   <quote>yāklu</quote>
                   <cit type="translation">
@@ -752,9 +690,8 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0062" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:TUN-CHB">Chebba</lang>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:TUN-CHB"/>
                <cit type="example" xml:id="ex_017">
                   <quote>nkammlū</quote>
                   <cit type="translation">
@@ -767,10 +704,9 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0063" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl>
+               <bibl corresp="zot:" type="publication" subtype=""/>
                <settlement ref="geo:bengardane"/>
-               <lang corresp="dia:TUN-BGN">Ben Gardane</lang>
+               <lang corresp="dia:TUN-BGN"/>
                <cit type="example" xml:id="ex_018">
                   <quote>ǝl-karhba</quote>
                   <cit type="translation">
@@ -782,10 +718,9 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0064" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:Sellami2019" type="publication" subtype="bookSection">
-                  <title type="short">Sellami 2019</title></bibl>
+               <bibl corresp="zot:Sellami2019" type="publication" subtype="bookSection"/>
                <settlement ref="geo:sfax"/>
-               <lang corresp="dia:TUN-SFX">Sfax</lang>
+               <lang corresp="dia:TUN-SFX"/>
                <cit type="example" xml:id="ex_019">
                   <quote>kalēm</quote>
                   <cit type="translation">
@@ -797,9 +732,8 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0065" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:TUN-SBZ">Sidi Bouzid</lang>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:TUN-SBZ"/>
                <cit type="example" xml:id="ex_020">
                   <quote>karhaba</quote>
                   <cit type="translation">
@@ -811,10 +745,9 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0066" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl>
+               <bibl corresp="zot:" type="publication" subtype=""/>
                <settlement ref="geo:mazara_del_vallo"/>
-               <lang corresp="dia:ITA-MDV">Mazara del Vallo - (Italy but Chebba dialect)</lang>
+               <lang corresp="dia:ITA-MDV"/>
                <cit type="example" xml:id="ex_021">
                   <quote>mā-ikallmū-hum-š</quote>
                   <cit type="translation">
@@ -826,10 +759,9 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0067" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl>
+               <bibl corresp="zot:" type="publication" subtype=""/>
                <region ref="geo:malta"/>
-               <lang corresp="dia:MLT-MAL">Malta</lang>
+               <lang corresp="dia:MLT-MAL"/>
                <cit type="example" xml:id="ex_022">
                   <quote>kelb</quote>
                   <cit type="translation">
@@ -848,10 +780,9 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0068" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:Borg1984" type="publication" subtype="journalArticle">
-                  <title type="short">Borg 1984</title></bibl>
+               <bibl corresp="zot:Borg1984" type="publication" subtype="journalArticle"/>
                <region ref="geo:cyprus"/>
-               <lang corresp="dia:CYP-KOR">Kormakiti</lang>
+               <lang corresp="dia:CYP-KOR"/>
                <note>/k/ in Kormakiti has the palatal and veralallophonic variants
                   /k'/ and /k/ before front and non-front vowels respectively</note>
                <cit type="example" xml:id="ex_024">
@@ -865,9 +796,8 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0069" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:Harrama1993" type="publication" subtype="thesis">
-                  <title type="short">Harrama 1993</title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:LBY-JBL">al-Jabal</lang>
+               <bibl corresp="zot:Harrama1993" type="publication" subtype="thesis"/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:LBY-JBL"/>
                <cit type="example" xml:id="ex_025">
                   <quote>ktāb</quote>
                   <cit type="translation">
@@ -879,10 +809,9 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0070" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:Benkato2014" type="publication" subtype="journalArticle">
-                  <title type="short">Benkato 2014</title></bibl>
+               <bibl corresp="zot:Benkato2014" type="publication" subtype="journalArticle"/>
                <settlement ref="geo:benghazi"/>
-               <lang corresp="dia:LBY-BGZ">Benghazi</lang>
+               <lang corresp="dia:LBY-BGZ"/>
                <cit type="example" xml:id="ex_026">
                   <quote>bikkill</quote>
                   <cit type="translation">
@@ -898,10 +827,9 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0071" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:Marçais2001" type="publication" subtype="book">
-                  <title type="short">Marçais 2001</title></bibl>
+               <bibl corresp="zot:Marçais2001" type="publication" subtype="book"/>
                <region ref="geo:fezzan"/>
-               <lang corresp="dia:LBY-FZN">Fezzan</lang>
+               <lang corresp="dia:LBY-FZN"/>
                <note>Exception:the pronominal suffix of the second person singular
                   feminine may be an affricate č (as noted in  Poesies Fezzanaises)</note>
 
@@ -909,9 +837,7 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0072" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl><!--CHECKME invalid geo reference ""-->
-               <!--CHECKME dialect w/ id dia:#LBY-KMS not found-->
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
                <lang corresp="dia:#LBY-KMS"/>
                <note>There was nothing concrete about the reflex of /k/ in the
                   chapter regarding al-Khums, but in the examples /k/ is always reflected as it is </note>
@@ -926,10 +852,9 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0073" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:Grand_Henry1979" type="publication" subtype="journalArticle">
-                  <title type="short">Grand'Henry 1979</title></bibl>
+               <bibl corresp="zot:Grand_Henry1979" type="publication" subtype="journalArticle"/>
                <settlement ref="geo:saoura"/>
-               <lang corresp="dia:DZA-SAO">Saoura</lang>
+               <lang corresp="dia:DZA-SAO"/>
                <cit type="example" xml:id="ex_028">
                   <quote>kĕbbĕr</quote>
                   <cit type="translation">
@@ -941,10 +866,9 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0074" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl>
+               <bibl corresp="zot:" type="publication" subtype=""/>
                <settlement ref="geo:constantine"/>
-               <lang corresp="dia:DZA-CON">Constantine</lang>
+               <lang corresp="dia:DZA-CON"/>
                <cit type="example" xml:id="ex_029">
                   <quote>kās</quote>
                   <cit type="translation">
@@ -956,19 +880,17 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0075" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:Guerrero2015b" type="publication" subtype="journalArticle">
-                  <title type="short">Guerrero 2015b</title></bibl>
+               <bibl corresp="zot:Guerrero2015b" type="publication" subtype="journalArticle"/>
                <settlement ref="geo:oran"/>
-               <lang corresp="dia:DZA-ORN">Oran</lang>
+               <lang corresp="dia:DZA-ORN"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0076" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:De_Jong2000b" type="publication" subtype="book">
-                  <title type="short">De Jong 2000b</title></bibl>
+               <bibl corresp="zot:De_Jong2000b" type="publication" subtype="book"/>
                <region ref="geo:sinai"/>
-               <lang corresp="dia:EGY-RML">Rmēlāt</lang>
+               <lang corresp="dia:EGY-RML"/>
                <cit type="example" xml:id="ex_030">
                   <quote>kiṯīr</quote>
                   <cit type="translation">
@@ -980,10 +902,9 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0077" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:De_Jong2000b" type="publication" subtype="book">
-                  <title type="short">De Jong 2000b</title></bibl>
+               <bibl corresp="zot:De_Jong2000b" type="publication" subtype="book"/>
                <region ref="geo:sinai"/>
-               <lang corresp="dia:EGY-SWR">Sawārkah</lang>
+               <lang corresp="dia:EGY-SWR"/>
                <cit type="example" xml:id="ex_030">
                   <quote>kiṯīr</quote>
                   <cit type="translation">
@@ -995,10 +916,9 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0078" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:De_Jong2000b" type="publication" subtype="book">
-                  <title type="short">De Jong 2000b</title></bibl>
+               <bibl corresp="zot:De_Jong2000b" type="publication" subtype="book"/>
                <region ref="geo:sinai"/>
-               <lang corresp="dia:EGY-HYW">Aḥaywāt</lang>
+               <lang corresp="dia:EGY-HYW"/>
                <cit type="example" xml:id="ex_030">
                   <quote>kiṯīr</quote>
                   <cit type="translation">
@@ -1010,10 +930,9 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0079" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:De_Jong2000b" type="publication" subtype="book">
-                  <title type="short">De Jong 2000b</title></bibl>
+               <bibl corresp="zot:De_Jong2000b" type="publication" subtype="book"/>
                <region ref="geo:sinai"/>
-               <lang corresp="dia:EGY-BLL">Biliy</lang>
+               <lang corresp="dia:EGY-BLL"/>
                <cit type="example" xml:id="ex_030">
                   <quote>kiṯīr</quote>
                   <cit type="translation">
@@ -1025,10 +944,9 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0080" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:De_Jong2000b" type="publication" subtype="book">
-                  <title type="short">De Jong 2000b</title></bibl>
+               <bibl corresp="zot:De_Jong2000b" type="publication" subtype="book"/>
                <region ref="geo:sinai"/>
-               <lang corresp="dia:EGY-SMN">Samāʕnah</lang>
+               <lang corresp="dia:EGY-SMN"/>
                <cit type="example" xml:id="ex_031">
                   <quote>kbāṛ</quote>
                   <cit type="translation">
@@ -1040,10 +958,9 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0081" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:De_Jong2000b" type="publication" subtype="book">
-                  <title type="short">De Jong 2000b</title></bibl>
+               <bibl corresp="zot:De_Jong2000b" type="publication" subtype="book"/>
                <region ref="geo:sinai"/>
-               <lang corresp="dia:EGY-AGL">ʕAgāylah</lang>
+               <lang corresp="dia:EGY-AGL"/>
                <cit type="example" xml:id="ex_031">
                   <quote>kbāṛ</quote>
                   <cit type="translation">
@@ -1055,37 +972,33 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0082" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:De_Jong2000b" type="publication" subtype="book">
-                  <title type="short">De Jong 2000b</title></bibl>
+               <bibl corresp="zot:De_Jong2000b" type="publication" subtype="book"/>
                <region ref="geo:sinai"/>
-               <lang corresp="dia:EGY-BYD">Biyyāḏ̣iyyah</lang>
+               <lang corresp="dia:EGY-BYD"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0083" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:De_Jong2000b" type="publication" subtype="book">
-                  <title type="short">De Jong 2000b</title></bibl>
+               <bibl corresp="zot:De_Jong2000b" type="publication" subtype="book"/>
                <region ref="geo:sinai"/>
-               <lang corresp="dia:EGY-XRS">Axārsah</lang>
+               <lang corresp="dia:EGY-XRS"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0084" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:De_Jong2000b" type="publication" subtype="book">
-                  <title type="short">De Jong 2000b</title></bibl>
+               <bibl corresp="zot:De_Jong2000b" type="publication" subtype="book"/>
                <region ref="geo:sinai"/>
-               <lang corresp="dia:EGY-DWG">Dawāġrah</lang>
+               <lang corresp="dia:EGY-DWG"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0088" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book">
-                  <title type="short">De Jong 2011</title></bibl>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
                <region ref="geo:sinai"/>
-               <lang corresp="dia:EGY-GBL">Ǧbāliyyah</lang>
+               <lang corresp="dia:EGY-GBL"/>
                <note>ḳ and k are heard and all have a minimal pair showing phonemic
                   opposition bētuḳ “your (sg. masc.) house” – bētik “your (sg. Fem.) house”</note>
 
@@ -1093,10 +1006,9 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0085" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book">
-                  <title type="short">De Jong 2011</title></bibl>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
                <region ref="geo:sinai"/>
-               <lang corresp="dia:EGY-ASD">Awlād Saʕīd</lang>
+               <lang corresp="dia:EGY-ASD"/>
                <note>ḳ and k are heard and all have a minimal pair showing phonemic
                   opposition bētuḳ “your (sg. masc.) house” – bētik “your (sg. Fem.) house”</note>
 
@@ -1104,10 +1016,9 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0087" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book">
-                  <title type="short">De Jong 2011</title></bibl>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
                <region ref="geo:sinai"/>
-               <lang corresp="dia:EGY-SLH">Ṣawālḥah</lang>
+               <lang corresp="dia:EGY-SLH"/>
                <note>ḳ and k are heard and all have a minimal pair showing phonemic
                   opposition bētuḳ “your (sg. masc.) house” – bētik “your (sg. Fem.) house”</note>
 
@@ -1115,10 +1026,9 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0086" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book">
-                  <title type="short">De Jong 2011</title></bibl>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
                <region ref="geo:sinai"/>
-               <lang corresp="dia:EGY-GRR">Garāršah</lang>
+               <lang corresp="dia:EGY-GRR"/>
                <note>ḳ and k are heard and all have a minimal pair showing phonemic
                   opposition bētuḳ “your (sg. masc.) house” – bētik “your (sg. Fem.) house”</note>
 
@@ -1126,10 +1036,9 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0089" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book">
-                  <title type="short">De Jong 2011</title></bibl>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
                <region ref="geo:sinai"/>
-               <lang corresp="dia:EGY-HMD">Ḥamāḏ̣ah</lang>
+               <lang corresp="dia:EGY-HMD"/>
                <note>ḳ and k are heard and all have a minimal pair showing phonemic
                   opposition bētuḳ “your (sg. masc.) house” – bētik “your (sg. Fem.) house”</note>
 
@@ -1137,10 +1046,8 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0090" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book">
-                  <title type="short">De Jong 2011</title></bibl>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
                <region ref="geo:sinai"/>
-               <!--CHECKME dialect w/ id dia:EGY-HND not found-->
                <lang corresp="dia:EGY-HND"/>
                <note>ḳ and k are heard and all have a minimal pair showing phonemic
                   opposition bētuḳ “your (sg. masc.) house” – bētik “your (sg. Fem.) house”</note>
@@ -1149,10 +1056,9 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0091" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book">
-                  <title type="short">De Jong 2011</title></bibl>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
                <region ref="geo:sinai"/>
-               <lang corresp="dia:EGY-LGT">ʕLēgāt</lang>
+               <lang corresp="dia:EGY-LGT"/>
                <note>ḳ and k are heard and all have a minimal pair showing phonemic
                   opposition bētuḳ “your (sg. masc.) house” – bētik “your (sg. Fem.) house”</note>
 
@@ -1160,10 +1066,9 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0092" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book">
-                  <title type="short">De Jong 2011</title></bibl>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
                <region ref="geo:sinai"/>
-               <lang corresp="dia:EGY-MZN">Mzēnah</lang>
+               <lang corresp="dia:EGY-MZN"/>
                <note>ḳ and k are heard, true phonemic opposition in a minimal pair īduḳ “your
                   (sg. masc.) hand” – īdik “your (sg. fem.) hand”</note>
 
@@ -1171,83 +1076,73 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0093" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book">
-                  <title type="short">De Jong 2011</title></bibl>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
                <region ref="geo:sinai"/>
-               <lang corresp="dia:EGY-BWS">Baniy Wāṣil</lang>
+               <lang corresp="dia:EGY-BWS"/>
                <note>ḳ and k are heard, a true phonemic opposition seams to be developing</note>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0094" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book">
-                  <title type="short">De Jong 2011</title></bibl>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
                <region ref="geo:sinai"/>
-               <lang corresp="dia:EGY-TRB">Taṛābīn</lang>
+               <lang corresp="dia:EGY-TRB"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0095" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book">
-                  <title type="short">De Jong 2011</title></bibl>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
                <region ref="geo:sinai"/>
-               <lang corresp="dia:EGY-HWT">Ḥwēṭāt</lang>
+               <lang corresp="dia:EGY-HWT"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0096" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book">
-                  <title type="short">De Jong 2011</title></bibl>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
                <region ref="geo:sinai"/>
-               <lang corresp="dia:EGY-GRG">Garāǧrah</lang>
+               <lang corresp="dia:EGY-GRG"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0097" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book">
-                  <title type="short">De Jong 2011</title></bibl>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
                <region ref="geo:sinai"/>
-               <lang corresp="dia:EGY-TYH">Tayāha</lang>
+               <lang corresp="dia:EGY-TYH"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0098" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book">
-                  <title type="short">De Jong 2011</title></bibl>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
                <region ref="geo:sinai"/>
-               <!--CHECKME dialect w/ id dia:#EGY-BDR not found-->
                <lang corresp="dia:#EGY-BDR"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0099" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book">
-                  <title type="short">De Jong 2011</title></bibl>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
                <region ref="geo:sinai"/>
-               <lang corresp="dia:EGY-DBR">Dbūr</lang>
+               <lang corresp="dia:EGY-DBR"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0100" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book">
-                  <title type="short">De Jong 2011</title></bibl>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
                <region ref="geo:sinai"/>
-               <lang corresp="dia:EGY-MLH">Malālḥah</lang>
+               <lang corresp="dia:EGY-MLH"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0101" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:Reichmuth1983" type="publication" subtype="book">
-                  <title type="short">Reichmuth 1983</title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:SDN-SKR">Šukriyya</lang>
+               <bibl corresp="zot:Reichmuth1983" type="publication" subtype="book"/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:SDN-SKR"/>
                <cit type="example" xml:id="ex_032">
                   <quote>abūk</quote>
                   <cit type="translation">
@@ -1259,9 +1154,8 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0102" resp="dmp:???">
                <name type="featureValue" ref="#k_ḳ"/>
-               <bibl corresp="zot:Reichmuth1983" type="publication" subtype="book">
-                  <title type="short">Reichmuth 1983</title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:SDN-SKR">Šukriyya</lang>
+               <bibl corresp="zot:Reichmuth1983" type="publication" subtype="book"/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:SDN-SKR"/>
                <cit type="example" xml:id="ex_033">
                   <quote>ḏaḳar</quote>
                   <cit type="translation">
@@ -1273,10 +1167,9 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0103" resp="dmp:???">
                <name type="featureValue" ref="#k_lex"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl>
+               <bibl corresp="zot:" type="publication" subtype=""/>
                <settlement ref="geo:al_shirqat"/>
-               <lang corresp="dia:IRQ-SQT">Širqāṭ</lang>
+               <lang corresp="dia:IRQ-SQT"/>
                <cit type="example" xml:id="ex_034">
                   <quote>siččīn</quote>
                   <cit type="translation">
@@ -1294,10 +1187,9 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0104" resp="dmp:???">
                <name type="featureValue" ref="#k_affr1"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl>
+               <bibl corresp="zot:" type="publication" subtype=""/>
                <region ref="geo:khuzestan"/>
-               <lang corresp="dia:IRN-KHU">Khuzestan</lang>
+               <lang corresp="dia:IRN-KHU"/>
                <cit type="example" xml:id="ex_036">
                   <quote>čaləb</quote>
                   <cit type="translation">
@@ -1309,19 +1201,17 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0105" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl>
+               <bibl corresp="zot:" type="publication" subtype=""/>
                <region ref="geo:khuzestan"/>
-               <lang corresp="dia:IRN-KHU">Khuzestan</lang>
+               <lang corresp="dia:IRN-KHU"/>
 
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0106" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl>
+               <bibl corresp="zot:" type="publication" subtype=""/>
                <settlement ref="geo:abha"/>
-               <lang corresp="dia:SAU-ABH">Abha</lang>
+               <lang corresp="dia:SAU-ABH"/>
                <cit type="example" xml:id="ex_037">
                   <quote>kam</quote>
                   <cit type="translation">
@@ -1333,9 +1223,8 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0107" resp="dmp:???">
                <name type="featureValue" ref="#k_affr1"/>
-               <bibl corresp="zot:Ingham1986b" type="publication" subtype="book">
-                  <title type="short">Ingham 1986b</title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:SAU-DHF">Āl Ḏ̣āfir</lang>
+               <bibl corresp="zot:Ingham1986b" type="publication" subtype="book"/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:SAU-DHF"/>
                <cit type="example" xml:id="ex_038">
                   <quote>rāćb</quote>
                   <cit type="translation">
@@ -1353,9 +1242,8 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0108" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:SAU-QRN">Bal-Qarn</lang>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:SAU-QRN"/>
                <cit type="example" xml:id="ex_040">
                   <quote>čitif</quote>
                   <cit type="translation">
@@ -1373,9 +1261,8 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0109" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:SAU-BSR">Bani Bišr</lang>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:SAU-BSR"/>
                <cit type="example" xml:id="ex_042">
                   <quote>čabb - yičibb</quote>
                   <cit type="translation">
@@ -1387,9 +1274,8 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0110" resp="dmp:???">
                <name type="featureValue" ref="#k_affr1"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:SAU-BSH">Bīša</lang>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:SAU-BSH"/>
                <cit type="example" xml:id="ex_043">
                   <quote>ćiṯīr</quote>
                   <cit type="translation">
@@ -1407,10 +1293,9 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0111" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:Toll1983" type="publication" subtype="book">
-                  <title type="short">Toll 1983</title></bibl>
+               <bibl corresp="zot:Toll1983" type="publication" subtype="book"/>
                <region ref="geo:hejaz"/>
-               <lang corresp="dia:SAU-GHA">Ġāmid</lang>
+               <lang corresp="dia:SAU-GHA"/>
                <note>/k/ is realized as the affricate [č] in contact with /i/ by some
                   speakers, probably due to influence from the Eastern part of the peninsula</note>
                <cit type="example" xml:id="ex_045">
@@ -1424,9 +1309,8 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0112" resp="dmp:???">
                <name type="featureValue" ref="#k_affr1"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:SAU-HYL">Ḥayil</lang>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:SAU-HYL"/>
                <cit type="example" xml:id="ex_046">
                   <quote>ćibīr</quote>
                   <cit type="translation">
@@ -1438,9 +1322,8 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0113" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:SAU-HFF">Ḥofūf</lang>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:SAU-HFF"/>
                <cit type="example" xml:id="ex_047">
                   <quote>čabdeh</quote>
                   <cit type="translation">
@@ -1458,9 +1341,8 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0114" resp="dmp:???">
                <name type="featureValue" ref="#k_affr1"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:SAU-RYD">Riyāḏ̣</lang>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:SAU-RYD"/>
                <cit type="example" xml:id="ex_049">
                   <quote>wućil</quote>
                   <cit type="translation">
@@ -1472,9 +1354,8 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0115" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:SAU-RUF">Rufayda</lang>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:SAU-RUF"/>
                <cit type="example" xml:id="ex_050">
                   <quote>kabb</quote>
                   <cit type="translation">
@@ -1486,9 +1367,8 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0116" resp="dmp:???">
                <name type="featureValue" ref="#k_affr1"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:SAU-RWA">Rwala</lang>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:SAU-RWA"/>
                <cit type="example" xml:id="ex_051">
                   <quote>ćibīr</quote>
                   <cit type="translation">
@@ -1500,9 +1380,8 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0117" resp="dmp:???">
                <name type="featureValue" ref="#k_affr2"/>
-               <bibl corresp="zot:" type="publication" subtype="">
-                  <title type="short"> </title></bibl><!--CHECKME invalid geo reference ""-->
-               <lang corresp="dia:SDN-RYD">Rashayda in Sudan</lang>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang corresp="dia:SDN-RYD"/>
                <note>affrication seems to be at least partly lexically conditioned,
                   as in čānūn, "portable hearth"</note>
                <note>note that Young did not transcribe from recordings, but by ear</note>
@@ -1517,10 +1396,8 @@
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0118" resp="dmp:???">
                <name type="featureValue" ref="#k_k"/>
-               <bibl corresp="zot:Lombezzi2019a" type="publication" subtype="bookSection">
-                  <title type="short">Lombezzi 2019a</title></bibl>
+               <bibl corresp="zot:Lombezzi2019a" type="publication" subtype="bookSection"/>
                <settlement ref="geo:ibri"/>
-               <!--CHECKME dialect w/ id dia:OMN-IBR not found-->
                <lang corresp="dia:OMN-IBR"/>
 
             </wib:featureValueObservation>

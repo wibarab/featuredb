@@ -173,6 +173,7 @@
    </xsl:function>
      
    <xsl:template match="tei:f[@name = 'dialect']">
+      <!-- 
       <xsl:variable name="diaRef" select="@fVal"/>
       <xsl:variable name="dialect" select="wib:resolveReference($diaRef)"/>
       <xsl:choose>
@@ -185,6 +186,8 @@
          <xsl:otherwise/>
       </xsl:choose>
       <lang corresp="{@fVal}"><xsl:value-of select="$dialect/tei:f[@name = 'dialectName']/tei:string"/></lang>
+       -->
+      <lang corresp="{@fVal}"></lang>
    </xsl:template>
    
    <xsl:template match="tei:div[@type= 'examples']"/>
@@ -211,6 +214,7 @@
          <xsl:document/>
       </xsl:variable>
       <xsl:variable name="bibl" select="wib:resolveReference($biblRef)"/>
+      <!-- 
       <xsl:variable name="authors" as="element()*">
          <xsl:choose>
             <xsl:when test="count($bibl//tei:author) lt $MAX_AUTHORS">
@@ -255,7 +259,9 @@
                <xsl:when test="position() eq 1 or position() eq $MAX_AUTHORS">
                   <xsl:value-of select="tei:surname"/>
                </xsl:when>
+               -->
                <!-- last name without "et alt." -->
+      <!--
                <xsl:when test="position() eq count($creators) and count($creators) lt $MAX_AUTHORS">
                   <xsl:text> and </xsl:text>
                   <xsl:value-of select="tei:surname"/>
@@ -268,14 +274,14 @@
          <xsl:if test="matches($bibl/@xml:id,'[a-z]$')">
             <xsl:value-of select="substring($bibl/@xml:id,string-length($bibl/@xml:id),1)"/>
          </xsl:if>
-      </xsl:variable>
+         </xsl:variable> -->
       <xsl:choose>
          <xsl:when test="not(exists($bibl))">
             <xsl:comment>CHECKME Zotero Reference missing</xsl:comment>
          </xsl:when>
          <xsl:otherwise>
             <bibl corresp="{.}" type="publication" subtype="{$bibl/@type}">
-               <title type="short"><xsl:value-of select="$shortTitle"/></title>   
+               <!--   <title type="short"><xsl:value-of select="$shortTitle"/></title> -->      
                <!--<biblScope unit="page"><xsl:comment>provide page numbers here</xsl:comment></biblScope>-->
             </bibl>
          </xsl:otherwise>

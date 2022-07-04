@@ -68,12 +68,20 @@
                <td class="tdLeft">Source</td>
                <td class="tdRight">
                   <xsl:variable name="id"><xsl:value-of select="substring(tei:bibl/@corresp,5)"/></xsl:variable>
+                  <xsl:choose>
+                     <xsl:when test="$id=''"><span class="spError">Could not find source</span></xsl:when>
+                     <xsl:otherwise>
+                       <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:author/tei:surname"/>
+                       <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:author/tei:surname"/>
 
-                  <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:author/tei:surname"/>
-                  <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:author/tei:surname"/>
-                  <xsl:text>: </xsl:text>
-                  <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:title"/>
-                  <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:title"/>
+                       <xsl:text>: </xsl:text>
+
+                       <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:title"/>
+                       <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:title"/>
+                      </xsl:otherwise>
+                  </xsl:choose>
+
+
                </td>
             </tr>
 
