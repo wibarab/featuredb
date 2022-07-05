@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.tei-c.org/ns/1.0 out/featuredb.xsd"
+ xmlns="http://www.tei-c.org/ns/1.0" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title></title>
+            </titleStmt>
+            <publicationStmt><p></p></publicationStmt>
+            <sourceDesc><p></p></sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change who="dmp:CM" when="2022-04-08">Added prefixes to attributes</change>
+            <change who="dmp:CM" when="2022-04-07">Added nav link goto:{@xml:id} to XSLT. This allows
+                to navigate from XSLT to XML editor.</change>
+            <change who="dmp:CM" when="2022-04-07">Added visualisation of examples to XSLT</change>
+            <change who="dmp:CM" when="2022-04-07">Replaced f[@name="note"] by note</change>
+            <change who="dmp:CM" when="2022-04-07">Made xPath (elementPath) for feature selection generic,
+                added "contains": //tei:fvLib[contains(@xml:id,'_values')]/tei:fs</change>
+            <change who="dmp:CM" when="2022-04-07">Changed sel </change>
+            <change who="dmp:CM" when="2022-04-07">Replaced --&amp;gt; with Unicode → </change>
+            <change who="dmp:CM" when="2022-04-07">Removed "geo:888" from geo values</change>
+            <change who="dmp:CM" when="2022-04-06">Added @xml:id on featureRealisation:
+                this is needed to navigate in HTML output</change>
+            <change who="dmp:CM" when="2022-04-06">Removed empty featureRealisation templates</change>
+            <change who="dmp:CM" when="2022-02-15">reworked example:
+                * proposed renaming of "occurence" to "featureRealisation"
+                * made
+            </change>
+            <change who="dmp:DS" when="2022-02-16">reworked example based on meeting 2022-02-16</change>
+            <change who="dmp:CM" when="2022-03-02">reworked examples based on last meeting:
+                * tentatively added f[@name="explanation"] to featureValues
+            </change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <head>Reflexes of <name type="feature">kaf</name></head>
+            <div>
+                <head>Feature Values</head>
+                <list type="featureValues" xml:id="feats_kaf">
+                    <item xml:id="k_k">
+                        <label>k → /k/ only</label>
+                        <p></p>
+                    </item>
+                    
+                    <item xml:id="k_affr1">
+                        <label>ćaf</label>
+                        <p>k → affrication (in the environment of anterior vowel) /ć/</p>
+                    </item>
+                    
+                    <item xml:id="k_affr2">
+                        <label>čaf</label>
+                        <p>k → affrication (in the environment of anterior vowel) /č/</p>
+                    </item>
+                    
+                    <item xml:id="k_lex">
+                        <label></label>
+                        <p>k → lexically conditioned affrication to /č/</p>
+                    </item>
+                    
+                    <item xml:id="k_emph_k">
+                        <label>ḳ</label>
+                        <p>k → /ḳ/</p>
+                    </item>
+                </list>
+                
+            </div>
+            
+            <!-- 
+            
+                * Schema fertig definieren
+                * bestehenden Daten umformen
+                * rendering-xslt updaten
+                * Snippets updaten
+                
+            -->
+            <div>
+                <p><!-- Verbose discussion of the feature -->
+                    Uvular realisation is preserved in MSA loanwords, ex. <foreign xml:lang="ar">taqrīban</foreign>
+                    «approximately», <foreign xml:lang="ar">qarīban</foreign> «soon» and in some
+                    Turkish loanwords, ex. <foreign xml:lang="ar">qawūn</foreign> «melon» and
+                    by young speakers often in words realized with <foreign xml:lang="ar">/g/</foreign>
+                    or <foreign xml:lang="ar">/ǧ/</foreign> by older speakers, ex. <foreign xml:lang="ar">gidīm</foreign> or
+                    <foreign xml:lang="ar">ǧidim</foreign> - <foreign xml:lang="ar">qadīm</foreign> «old»,
+                    <foreign xml:lang="ar">gilīl</foreign> or <foreign xml:lang="ar">ǧilīl</foreign> -
+                    <foreign xml:lang="ar">qalīl</foreign> «few, little» ; Devoicing of /g/ to /k/ in contact with /t/, ex. k-t-l (which sometimes becomes affricated in the environment of an anterior vowel c-t-l)</p>
+            </div>
+            <div>
+                <head>Feature Value Observations</head>
+                <!--  -->
+                <wib:featureValueObservation xml:id="fr_0000" resp="dmp:AD" cert="high" status="draft">
+                    <name type="featureValue" ref="#k_emph_k"></name>
+                    <bibl corresp="zot:z2023" type="publication">
+                       <title>{Author Year}</title>
+                        <biblScope unit="page">34-65</biblScope>
+                    </bibl>
+                    
+                    <region ref="geo:r124">Region Name</region>
+                    
+                    <!-- In terms of workflow: WHERE SHOULD THIS BE SOURCED FROM ? -->
+                    
+                    <!-- 
+                        
+                        @evidence – on what grounds 
+                            * "internal": the date of data collection is documented in the source itself 
+                            * "external": the date of data collection is witnessed by some external source
+                            * "conjecture": the date of data collection is implied by the 
+                        
+                        @cert - the degree of certainty regarding the dating of data collection: 
+                            * "high":    the exact period of data collection is documented in the source itself, 
+                                         so there's no doubt about it 
+                            * "low":     the source lacks any information on the date of the data collection 
+                                         so the certainty is low 
+                            * "medium":  some indication on the date of the data collection is provided 
+                                         by the source, so even if no exact dates are given, the assumed period
+                                         of data collection is reasonably certain.
+                           
+                            
+                    
+                    -->
+                    <date cert="high" notBefore="1952" notAfter="1958" evidence="conjecture">1950ies</date>
+                    
+                    
+                    
+                    <!-- 
+                        optional NB: if <lang> is provided in the data, it is assumed that the
+                        variety name is used in the source publication.
+                    -->
+                    <lang>[variety name]</lang>
+                    
+                    <personGrp type="tribe">
+                        <name>[tribe's name]</name>
+                        <residence>
+                            <!-- either one -->
+                            <region ref=""/>
+                            <settlement ref=""/>
+                            
+                        </residence>
+                        <bibl corresp="zot:p134ew"></bibl>
+                        
+                    </personGrp>
+                    
+                    <personGrp type="ageGroup" >
+                        <!-- TODO define age groups which are represented by a code number given in @value -->
+                        <age value="3"></age>
+                    </personGrp>
+                    <note type="constraintNote">this feature is realised as gaf in the contect of MSA loanwords</note>
+                    <note type="exceptionNote">Exception: čān - yikūn; there is desaffrication when in contact with coronal consonants [d], [t], [ḏ], [t],̱ [t]̣ et [ḏ̣ ]</note>
+                </wib:featureValueObservation>
+                <p></p>
+            </div>
+        </body>
+    </text>
+</TEI>

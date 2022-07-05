@@ -23,10 +23,10 @@
       </fileDesc>
       <encodingDesc>
          <listPrefixDef>
-            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="wibarab-dmp.xml#$1"/>
-            <prefixDef ident="zotid" matchPattern="^(.+)$" replacementPattern="vicav_biblio_tei_zotero.xml#$1"/>
-            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="vicav_dialects.xml#$1"/>
-            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="vicav_geodata.xml#$1"/>
+            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../102_derived_tei/wibarab-dmp.xml#$1"/>
+            <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../102_derived_tei/vicav_biblio_tei_zotero.xml#$1"/>
+            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../102_derived_tei/vicav_dialects.xml#$1"/>
+            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../102_derived_tei/vicav_geodata.xml#$1"/>
          </listPrefixDef>
       </encodingDesc>
    </teiHeader>
@@ -66,7 +66,7 @@
             </fs>
             <fs type="dialect" xml:id="LBN-MSX">
                <f name="dialectName">
-                  <string>ʿAṛaḅ Maslax</string>
+                  <string>ʿArab Al-Maslax</string>
                </f>
                <f name="personInCharge" fVal="dmp:AD"/>
             </fs>
@@ -111,7 +111,7 @@
             </fs>
             <fs type="dialect" xml:id="LBN-AKK">
                <f name="dialectName">
-                  <string>Akkar?</string>
+                  <string>Akkar</string>
                </f>
                <f name="typeOfCommunity">
                   <symbol value="N/A"/>
@@ -409,6 +409,52 @@
                </f>
                <f name="personInCharge" fVal="dmp:AT"/>
             </fs>
+
+            <fs type="dialect" xml:id="SAU-RSS">
+               <f name="dialectName">
+                  <string>ar-Rass</string>
+               </f>
+               <f name="place" fVal="geo:ar_rass"/>
+               <f name="typeOfCommunity">
+                  <symbol value=""/>
+               </f>
+               <f name="personInCharge" fVal="dmp:AT"/>
+            </fs>
+
+            <fs type="dialect" xml:id="SYR-HSN">
+               <f name="dialectName">
+                  <string>Ḥsāne</string>
+               </f>
+               <f name="place" fVal="geo:"/>
+               <f name="typeOfCommunity">
+                  <symbol value="tribe"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:AT"/>
+            </fs>
+
+            <fs type="dialect" xml:id="SYR-TYY">
+               <f name="dialectName">
+                  <string>Tayyi</string>
+               </f>
+               <f name="place" fVal="geo:"/>
+               <f name="typeOfCommunity">
+                  <symbol value="tribe"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:AT"/>
+            </fs>
+
+            <fs type="dialect" xml:id="SYR-SBA">
+               <f name="dialectName">
+                  <string>Sbaʕa</string>
+               </f>
+               <f name="place" fVal="geo:"/>
+               <f name="typeOfCommunity">
+                  <symbol value="tribe"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:AT"/>
+            </fs>
+
+
             <fs type="dialect" xml:id="JOR-HWT">
                <f name="dialectName">
                   <string>Ḥwēṭāt Tribe</string>
@@ -554,7 +600,7 @@
                </f>
                <f name="personInCharge" fVal="dmp:AT"/>
             </fs>
-            <fs type="dialect" xml:id="JOR-SLT">
+            <fs type="dialect" xml:id="JOR-SAL">
                <f name="dialectName">
                   <string>Salṭ</string>
                </f>
@@ -648,7 +694,18 @@
                <f name="personInCharge" fVal="dmp:AT"/>
             </fs>
 
-<fs type="dialect" xml:id="PSE-RAS">
+            <fs type="dialect" xml:id="SAU-SLB">
+               <f name="dialectName">
+                  <string>Ṣlēb</string>
+               </f>
+               <f name="place" fVal="geo:wadi_almiyah"/>
+               <f name="typeOfCommunity">
+                  <symbol value="tribe"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:AT"/>
+            </fs>
+
+            <fs type="dialect" xml:id="PSE-RAS">
                <f name="dialectName">
                   <string>Rashayda of Palestine </string>
                </f>
@@ -706,7 +763,7 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="EGY-SWR">
                <f name="dialectName">
@@ -716,7 +773,7 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="EGY-HYW">
                <f name="dialectName">
@@ -726,7 +783,7 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="EGY-BLL">
                <f name="dialectName">
@@ -736,7 +793,7 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="EGY-SMN">
                <f name="dialectName">
@@ -746,7 +803,7 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="EGY-AGL">
                <f name="dialectName">
@@ -756,7 +813,7 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="EGY-BYD">
                <f name="dialectName">
@@ -766,7 +823,7 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="EGY-XRS">
                <f name="dialectName">
@@ -776,7 +833,7 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="EGY-DWG">
                <f name="dialectName">
@@ -786,7 +843,7 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="EGY-GBL">
                <f name="dialectName">
@@ -796,7 +853,7 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="EGY-ASD">
                <f name="dialectName">
@@ -806,7 +863,7 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="EGY-SLH">
                <f name="dialectName">
@@ -816,7 +873,7 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="EGY-GRR">
                <f name="dialectName">
@@ -826,7 +883,7 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="EGY-HMD">
                <f name="dialectName">
@@ -836,7 +893,17 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
+            </fs>
+            <fs type="dialect" xml:id="EGY-HND">
+               <f name="dialectName">
+                  <string>Hanādwah</string>
+               </f>
+               <f name="place" fVal="geo:sinai"/>
+               <f name="typeOfCommunity">
+                  <symbol value="tribe"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="EGY-LGT">
                <f name="dialectName">
@@ -846,7 +913,7 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="EGY-MZN">
                <f name="dialectName">
@@ -856,7 +923,7 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="EGY-BWS">
                <f name="dialectName">
@@ -866,7 +933,7 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="EGY-TRB">
                <f name="dialectName">
@@ -876,7 +943,7 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="EGY-HWT">
                <f name="dialectName">
@@ -886,7 +953,7 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="EGY-GRG">
                <f name="dialectName">
@@ -896,7 +963,7 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="EGY-TYH">
                <f name="dialectName">
@@ -906,7 +973,7 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="EGY-BDR">
                <f name="dialectName">
@@ -916,7 +983,7 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="EGY-DBR">
                <f name="dialectName">
@@ -926,7 +993,7 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="EGY-MLH">
                <f name="dialectName">
@@ -936,7 +1003,7 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="EGY-ALI">
                <f name="dialectName">
@@ -946,7 +1013,7 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="SDN-SKR">
                <f name="dialectName">
@@ -955,7 +1022,7 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="SDN-BGR">
                <f name="dialectName">
@@ -964,7 +1031,7 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="SDN-AHM">
                <f name="dialectName">
@@ -973,7 +1040,7 @@
                <f name="typeOfCommunity">
                   <symbol value="tribe"/>
                </f>
-               <f name="personInCharge" fVal="dmp:VE"/>
+               <f name="personInCharge" fVal="dmp:JD"/>
             </fs>
             <fs type="dialect" xml:id="SDN-RYD">
                <f name="dialectName">
@@ -1359,6 +1426,30 @@
                </f>
                <f name="personInCharge" fVal="dmp:CL"/>
             </fs>
+
+            <fs type="dialect" xml:id="UZB-BXR">
+               <f name="dialectName">
+                  <string>Buxāra</string>
+               </f>
+               <f name="place" fVal="geo:bukhara"/>
+               <f name="typeOfCommunity">
+                  <symbol value="N/A"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:TD"/>
+            </fs>
+
+            <fs type="dialect" xml:id="UZB-QDY">
+               <f name="dialectName">
+                  <string>Qashqa Darya</string>
+               </f>
+               <f name="place" fVal="geo:qashqadaryo_region"/>
+               <f name="typeOfCommunity">
+                  <symbol value="N/A"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:TD"/>
+            </fs>
+
+
             <fs type="dialect" xml:id="MAR-ZIR">
                <f name="dialectName">
                   <string>Zʕīr</string>
@@ -1479,10 +1570,41 @@
                </f>
                <f name="place" fVal="geo:djerba"/>
                <f name="typeOfCommunity">
+                  <symbol value="N/A"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:RZ"/>
+            </fs>
+            <fs type="dialect" xml:id="TUN-DJM">
+               <f name="dialectName">
+                  <string>Djerba Malikite Community</string>
+               </f>
+               <f name="place" fVal="geo:djerba"/>
+               <f name="typeOfCommunity">
                   <symbol value="Muslim_(other)"/>
                </f>
                <f name="personInCharge" fVal="dmp:RZ"/>
             </fs>
+            <fs type="dialect" xml:id="TUN-DJI">
+               <f name="dialectName">
+                  <string>Djerba Ibadi Community</string>
+               </f>
+               <f name="place" fVal="geo:djerba"/>
+               <f name="typeOfCommunity">
+                  <symbol value="Muslim_(other)"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:RZ"/>
+            </fs>
+            <fs type="dialect" xml:id="TUN-DJJ">
+               <f name="dialectName">
+                  <string>Djerba Jewish Community</string>
+               </f>
+               <f name="place" fVal="geo:djerba"/>
+               <f name="typeOfCommunity">
+                  <symbol value="Jews"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:RZ"/>
+            </fs>
+
             <fs type="dialect" xml:id="TUN-KNH1">
                <f name="dialectName">
                   <string>Kerkennah Islands dialect 1</string>
@@ -1517,6 +1639,16 @@
                <f name="place" fVal="geo:tunis"/>
                <f name="typeOfCommunity">
                   <symbol value="N/A"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:RZ"/>
+            </fs>
+            <fs type="dialect" xml:id="TUN-JTS">
+               <f name="dialectName">
+                  <string>Jewish Dialect of Tunis</string>
+               </f>
+               <f name="place" fVal="geo:tunis"/>
+               <f name="typeOfCommunity">
+                  <symbol value="Jews"/>
                </f>
                <f name="personInCharge" fVal="dmp:RZ"/>
             </fs>
@@ -1788,6 +1920,26 @@
                </f>
                <f name="personInCharge" fVal="dmp:RZ"/>
             </fs>
+            <fs type="dialect" xml:id="LBY-ZTN">
+               <f name="dialectName">
+                  <string>Zintan</string>
+               </f>
+               <f name="place" fVal="geo:zintan"/>
+               <f name="typeOfCommunity">
+                  <symbol value="tribe"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:RZ"/>
+            </fs>
+            <fs type="dialect" xml:id="LBY-MRQ">
+               <f name="dialectName">
+                  <string>Murzuq</string>
+               </f>
+               <f name="place" fVal="geo:murzuq"/>
+               <f name="typeOfCommunity">
+                  <symbol value="N/A"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:RZ"/>
+            </fs>
             <fs type="dialect" xml:id="LBY-BGZ">
                <f name="dialectName">
                   <string>Benghazi</string>
@@ -1805,6 +1957,16 @@
                <f name="place" fVal="geo:tripolilibya"/>
                <f name="typeOfCommunity">
                   <symbol value="N/A"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:RZ"/>
+            </fs>
+            <fs type="dialect" xml:id="LBY-JTP">
+               <f name="dialectName">
+                  <string>Jewish Dialect of Tripoli</string>
+               </f>
+               <f name="place" fVal="geo:tripolilibya"/>
+               <f name="typeOfCommunity">
+                  <symbol value="Jews"/>
                </f>
                <f name="personInCharge" fVal="dmp:RZ"/>
             </fs>
@@ -1844,6 +2006,27 @@
                </f>
                <f name="personInCharge" fVal="dmp:RZ"/>
             </fs>
+            <fs type="dialect" xml:id="LBY-LYN">
+               <f name="dialectName">
+                  <string>Jewish Dialect of Yefren</string>
+               </f>
+               <f name="place" fVal="geo:yefren"/>
+               <f name="typeOfCommunity">
+                  <symbol value="Jews"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:RZ"/>
+            </fs>
+
+            <fs type="dialect" xml:id="TCD-TCD">
+               <f name="dialectName">
+                  <string>Chad</string>
+               </f>
+               <f name="typeOfCommunity">
+                  <symbol value="N/A"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:RZ"/>
+            </fs>
+
             <fs type="dialect" xml:id="SAU-ABH">
                <f name="dialectName">
                   <string>Abha</string>
@@ -2187,6 +2370,15 @@
                </f>
                <f name="personInCharge" fVal="dmp:VE"/>
             </fs>
+            <fs type="dialect" xml:id="OMN-IBR">
+               <f name="dialectName">
+                  <string>ʕIbrī</string>
+               </f>
+               <f name="typeOfCommunity">
+                  <symbol value="N/A"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:VE"/>
+            </fs>
             <fs type="dialect" xml:id="OMN-DUR">
                <f name="dialectName">
                   <string>Durūʕ</string>
@@ -2242,6 +2434,282 @@
                   <symbol value="N/A"/>
                </f>
                <f name="personInCharge" fVal="dmp:GuK"/>
+            </fs>
+            <fs type="dialect" xml:id="NGA-NGA">
+               <f name="dialectName">
+                  <string>Nigeria</string>
+               </f>
+               <f name="place" fVal="geo:nigeria"/>
+               <f name="typeOfCommunity">
+                  <symbol value="Community_(other)"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:RZ"/>
+            </fs>
+            <fs type="dialect" xml:id="ITA-SCL">
+               <f name="dialectName">
+                  <string>Sicolo Arabic</string>
+               </f>
+               <f name="place" fVal="geo:sicily"/>
+               <f name="typeOfCommunity">
+                  <symbol value="Community_(other)"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:RZ"/>
+            </fs>
+            <fs type="dialect" xml:id="ESP-ADL">
+               <f name="dialectName">
+                  <string>Andalusi Arabic</string>
+               </f>
+               <f name="place" fVal="geo:seville"/>
+               <f name="typeOfCommunity">
+                  <symbol value="Community_(other)"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:AD"/>
+            </fs>
+
+            <fs type="dialect" xml:id="PSE-DSN">
+               <f name="dialectName">
+                  <string>Dēr is-Sūdān</string>
+               </f>
+               <f name="place" fVal="geo:dar_is_sudan"/>
+               <f name="typeOfCommunity">
+                  <symbol value="Community_(other)"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:JD"/>
+            </fs>
+
+            <fs type="dialect" xml:id="PSE-SWD">
+               <f name="dialectName">
+                  <string>Silwād</string>
+               </f>
+               <f name="place" fVal="geo:silwad"/>
+               <f name="typeOfCommunity">
+                  <symbol value="Community_(other)"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:JD"/>
+            </fs>
+
+            <fs type="dialect" xml:id="PSE-MKY">
+               <f name="dialectName">
+                  <string>il-Mizrʕa iš-Šarkiyya</string>
+               </f>
+               <f name="place" fVal="geo:al_mizra_ish_sharkiyya"/>
+               <f name="typeOfCommunity">
+                  <symbol value="Community_(other)"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:JD"/>
+            </fs>
+
+            <fs type="dialect" xml:id="PSE-TYB">
+               <f name="dialectName">
+                  <string>iṭ-Ṭayybe</string>
+               </f>
+               <f name="place" fVal="geo:it_tayybe"/>
+               <f name="typeOfCommunity">
+                  <symbol value="Christians"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:JD"/>
+            </fs>
+
+            <fs type="dialect" xml:id="PSE-BZT">
+               <f name="dialectName">
+                  <string>Bīr Zēt</string>
+               </f>
+               <f name="place" fVal="geo:birzeit"/>
+               <f name="typeOfCommunity">
+                  <symbol value="Community_(other)"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:JD"/>
+            </fs>
+
+            <fs type="dialect" xml:id="PSE-BLQ">
+               <f name="dialectName">
+                  <string>Bēt Liqya</string>
+               </f>
+               <f name="place" fVal="geo:bēt_liqya"/>
+               <f name="typeOfCommunity">
+                  <symbol value="Community_(other)"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:JD"/>
+            </fs>
+
+            <fs type="dialect" xml:id="PSE-RML">
+               <f name="dialectName">
+                  <string>Ramallah</string>
+               </f>
+               <f name="place" fVal="geo:ramallah"/>
+               <f name="typeOfCommunity">
+                  <symbol value="Community_(other)"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:JD"/>
+            </fs>
+
+            <fs type="dialect" xml:id="PSE-BTL">
+               <f name="dialectName">
+                  <string>Betlehem</string>
+               </f>
+               <f name="place" fVal="geo:bethlehem"/>
+               <f name="typeOfCommunity">
+                  <symbol value="Community_(other)"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:JD"/>
+            </fs>
+
+            <fs type="dialect" xml:id="ISR-JFC">
+               <f name="dialectName">
+                  <string>Jaffa City Dialect</string>
+               </f>
+               <f name="place" fVal="geo:jaffa"/>
+               <f name="typeOfCommunity">
+                  <symbol value="Muslim_(other)"/>
+               </f>
+               <f name="typeOfCommunity">
+                  <symbol value="Christians"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:JD"/>
+            </fs>
+
+            <fs type="dialect" xml:id="ISR-JFS">
+               <f name="dialectName">
+                  <string>Jaffa Samaritans' Dialect</string>
+               </f>
+               <f name="place" fVal="geo:jaffa"/>
+               <f name="typeOfCommunity">
+                  <symbol value="Community_(other)"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:JD"/>
+            </fs>
+
+            <fs type="dialect" xml:id="PSE-KFN">
+               <f name="dialectName">
+                  <string>Kafr'Ana</string>
+               </f>
+               <f name="place" fVal="geo:kafr_ana"/>
+               <f name="typeOfCommunity">
+                  <symbol value="Muslim_(other)"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:JD"/>
+            </fs>
+
+            <fs type="dialect" xml:id="ISR-ZRG">
+               <f name="dialectName">
+                  <string>Ǧisir iz-Zarga</string>
+               </f>
+               <f name="place" fVal="geo:jisr_az_zarqa"/>
+               <f name="typeOfCommunity">
+                  <symbol value="Community_(other)"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:JD"/>
+            </fs>
+
+            <fs type="dialect" xml:id="PSE-DWY">
+               <f name="dialectName">
+                  <string>al-Dawayima</string>
+               </f>
+               <f name="place" fVal="geo:al_dawayima"/>
+               <f name="typeOfCommunity">
+                  <symbol value="Community_(other)"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:JD"/>
+            </fs>
+
+            <fs type="dialect" xml:id="PSE-JRS">
+               <f name="dialectName">
+                  <string>Jerusalem</string>
+               </f>
+               <f name="place" fVal="geo:jerusalem"/>
+               <f name="typeOfCommunity">
+                  <symbol value="Community_(other)"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:JD"/>
+            </fs>
+
+            <fs type="dialect" xml:id="PSE-GZA">
+               <f name="dialectName">
+                  <string>Gaza</string>
+               </f>
+               <f name="place" fVal="geo:gaza"/>
+               <f name="typeOfCommunity">
+                  <symbol value="Community_(other)"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:JD"/>
+            </fs>
+
+            <fs type="dialect" xml:id="ISR-TBR">
+               <f name="dialectName">
+                  <string>Tiberias</string>
+               </f>
+               <f name="place" fVal="geo:tiberias"/>
+               <f name="typeOfCommunity">
+                  <symbol value="Jews"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:JD"/>
+            </fs>
+
+            <fs type="dialect" xml:id="PSE-TKM">
+               <f name="dialectName">
+                  <string>Tulkarm</string>
+               </f>
+               <f name="place" fVal="geo:tulkarm"/>
+               <f name="typeOfCommunity">
+                  <symbol value="Community_(other)"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:JD"/>
+            </fs>
+
+            <fs type="dialect" xml:id="PSE-XLL">
+               <f name="dialectName">
+                  <string>il-Xalīl (Hebron)</string>
+               </f>
+               <f name="place" fVal="geo:il_xalil"/>
+               <f name="typeOfCommunity">
+                  <symbol value="Community_(other)"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:JD"/>
+            </fs>
+
+            <fs type="dialect" xml:id="PSE-ISW">
+               <f name="dialectName">
+                  <string>ʕĪsawīya</string>
+               </f>
+               <f name="place" fVal="geo:isawiya"/>
+               <f name="typeOfCommunity">
+                  <symbol value="Community_(other)"/>
+               </f>
+               <f name="personInCharge" fVal="dmp:JD"/>
+            </fs>
+
+
+            <fs type="dialect" xml:id="">
+               <f name="dialectName">
+                  <string></string>
+               </f>
+               <f name="place" fVal="geo:"/>
+               <f name="typeOfCommunity">
+                  <symbol value=""/>
+               </f>
+               <f name="personInCharge" fVal="dmp:"/>
+            </fs>
+
+            <fs type="dialect" xml:id="">
+               <f name="dialectName">
+                  <string></string>
+               </f>
+               <f name="place" fVal="geo:"/>
+               <f name="typeOfCommunity">
+                  <symbol value=""/>
+               </f>
+               <f name="personInCharge" fVal="dmp:"/>
+            </fs>
+
+            <fs type="dialect" xml:id="">
+               <f name="dialectName">
+                  <string></string>
+               </f>
+               <f name="place" fVal="geo:"/>
+               <f name="typeOfCommunity">
+                  <symbol value=""/>
+               </f>
+               <f name="personInCharge" fVal="dmp:"/>
             </fs>
          </fvLib>
       </body>

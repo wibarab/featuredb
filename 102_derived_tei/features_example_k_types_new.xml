@@ -1,0 +1,917 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../082_scripts_xsl/tei_fs_2_html__001.xsl"?>
+<?xslt inPathSegment="\102_derived_tei\" outPathSegment="\106_html\"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:space="preserve">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Treatment of k</title>
+            <author>Maria Rebecca Zarb</author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>{publisher}</publisher>
+            <date when="0001-01-01"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <ptr target="{ptrtarget}"/>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <fsdDecl>
+            <fvLib n="k featureValues" xml:id="k_values">
+               <fs xml:id="k_k">
+                  <f name="explanation">k → /k/ only</f>
+                  <f name="note"/></fs>
+               <fs xml:id="k_affr1"><f name="explanation">k → affrication (in the environment of anterior vowel) /ć/</f><f name="note"/></fs>
+               <fs xml:id="k_affr2"><f name="explanation">k → affrication (in the environment of anterior vowel) /č/</f></fs>
+               <fs xml:id="k_lex"><f name="explanation">k → lexically conditioned affrication to /č/</f></fs>
+               <fs xml:id="k_emph_k"><f name="explanation">k → /ḳ/</f></fs>
+            </fvLib>
+         </fsdDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change who="dmp:CM" when="2022-04-08">Added prefixes to attributes</change>
+         <change who="dmp:CM" when="2022-04-07">Added nav link goto:{@xml:id} to XSLT. This allows
+            to navigate from XSLT to XML editor.</change>
+         <change who="dmp:CM" when="2022-04-07">Added visualisation of examples to XSLT</change>
+         <change who="dmp:CM" when="2022-04-07">Replaced f[@name="note"] by note</change>
+         <change who="dmp:CM" when="2022-04-07">Made xPath (elementPath) for feature selection generic,
+            added "contains": //tei:fvLib[contains(@xml:id,'_values')]/tei:fs</change>
+         <change who="dmp:CM" when="2022-04-07">Changed sel </change>
+         <change who="dmp:CM" when="2022-04-07">Replaced --&amp;gt; with Unicode → </change>
+         <change who="dmp:CM" when="2022-04-07">Removed "geo:888" from geo values</change>
+         <change who="dmp:CM" when="2022-04-06">Added @xml:id on featureRealisation:
+            this is needed to navigate in HTML output</change>
+         <change who="dmp:CM" when="2022-04-06">Removed empty featureRealisation templates</change>
+         <change who="dmp:CM" when="2022-02-15">reworked example:
+            * proposed renaming of "occurence" to "featureRealisation"
+            * made
+         </change>
+         <change who="dmp:DS" when="2022-02-16">reworked example based on meeting 2022-02-16</change>
+         <change who="dmp:CM" when="2022-03-02">reworked examples based on last meeting:
+            * tentatively added f[@name="explanation"] to featureValues
+         </change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="{docPath}"><list xmlns:l="https://wibarab.acdh.oeaw.ac.at/langDesc" type="featureValues" xml:space="preserve">
+            
+               <item xml:id="k_k">
+                  <label/>
+                  <p>k → /k/ only</p>
+               </item>
+            
+               <item xml:id="k_affr1">
+                  <label/>
+                  <p>k → affrication (in the environment of anterior vowel) /ć/</p>
+               </item>
+            
+               <item xml:id="k_affr2">
+                  <label/>
+                  <p>k → affrication (in the environment of anterior vowel) /č/</p>
+               </item>
+            
+               <item xml:id="k_lex">
+                  <label/>
+                  <p>k → lexically conditioned affrication to /č/</p>
+               </item>
+            
+               <item xml:id="k_emph_k">
+                  <label/>
+                  <p>k → /ḳ/</p>
+               </item>
+            
+         </list>
+         <div type="tbd">
+            <list>
+               <item>featureRealisations should have a source</item>
+               <item>Repair realisationType: fVal needs to be xml:id</item>
+               <item>Remove redundant elements</item>
+            </list>
+         </div>
+         <div type="description">
+            <p><!-- Verbose discussion of the feature -->
+               Uvular realisation is preserved in MSA loanwords, ex. <foreign xml:lang="ar">taqrīban</foreign>
+               «approximately», <foreign xml:lang="ar">qarīban</foreign> «soon» and in some
+               Turkish loanwords, ex. <foreign xml:lang="ar">qawūn</foreign> «melon» and
+               by young speakers often in words realized with <foreign xml:lang="ar">/g/</foreign>
+               or <foreign xml:lang="ar">/ǧ/</foreign> by older speakers, ex. <foreign xml:lang="ar">gidīm</foreign> or
+               <foreign xml:lang="ar">ǧidim</foreign> - <foreign xml:lang="ar">qadīm</foreign> «old»,
+               <foreign xml:lang="ar">gilīl</foreign> or <foreign xml:lang="ar">ǧilīl</foreign> -
+               <foreign xml:lang="ar">qalīl</foreign> «few, little» ; Devoicing of /g/ to /k/ in contact with /t/, ex. k-t-l (which sometimes becomes affricated in the environment of an anterior vowel c-t-l)</p>
+            <p/>
+         </div>
+         <div xmlns:l="https://wibarab.acdh.oeaw.ac.at/langDesc" type="featureValueObservations" xml:space="preserve">
+         
+            <l:featureValueObservation xml:id="fr_0000" source="#" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0001" source="zot:Younes2013" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0002" source="zot:El-Hajjé1954" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0003" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0004" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0005" source="zot:Abu-Haidar1979" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0006" source="zot:Behnstedt2019" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0007" source="zot:Behnstedt2019" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0008" source="zot:Behnstedt2019" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0009" source="zot:Behnstedt2019" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0010" source="zot:Behnstedt2019" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0011" source="zot:Behnstedt2019" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0012" source="zot:Behnstedt2019" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0013" source="zot:Behnstedt2019" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0014" source="zot:Behnstedt2019" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0015" source="zot:Behnstedt2019" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0016" source="zot:Behnstedt2019" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0017" source="zot:Behnstedt2019" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0018" source="zot:Behnstedt2019" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0019" source="zot:Behnstedt2019" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0020" source="zot:Behnstedt2019" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0021" source="zot:Behnstedt2019" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0022" source="zot:Behnstedt2019" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0023" source="zot:Behnstedt2019" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0024" source="zot:Behnstedt2019" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0025" source="zot:Behnstedt2019" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0026" source="zot:Behnstedt2019" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0027" source="zot:Behnstedt2019" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0028" source="zot:Behnstedt2019" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0029" source="zot:Shawarbah2011" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0030" source="zot:Blanc1970a" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0031" source="zot:Palva1980" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0032" source="zot:Palva1986" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0033" source="zot:Palva1976" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0034" source="zot:Younes2018a" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0035" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0036" source="zot:Owens1984b" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0037" source="zot:Yrttiaho1988" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0038" source="zot:Cantineau1936a" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0039" source="zot:Cantineau1936a" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0040" source="zot:Cantineau1936a" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0041" source="zot:Cantineau1936a" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0042" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0043" source="zot:Cantineau1936a" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0044" source="zot:Cantineau1936a" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0045" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0046" source="zot:Palva1969b" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0047" source="zot:Palva1974" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0048" source="zot:Herin2010" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0049" source="zot:Al-Wer2007a" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0050" source="zot:Palva1989" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0051" source="zot:Il-Hazmy1975" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0052" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0053" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0054" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0055" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0056" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0057" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0058" source="zot:Herin2017" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0059" source="zot:Herin2017" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0060" source="zot:Herin2017" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0061" source="zot:Behnstedt1999b" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0062" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0063" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0064" source="zot:Sellami2019" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0065" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0066" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0067" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0068" source="zot:Borg1984" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0069" source="zot:Harrama1993" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0070" source="zot:Benkato2014" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0071" source="zot:Marçais2001" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0072" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0073" source="zot:Grand_Henry1979" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0074" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0075" source="zot:Guerrero2015b" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0076" source="zot:De_Jong2000b" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0077" source="zot:De_Jong2000b" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0078" source="zot:De_Jong2000b" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0079" source="zot:De_Jong2000b" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0080" source="zot:De_Jong2000b" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0081" source="zot:De_Jong2000b" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0082" source="zot:De_Jong2000b" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0083" source="zot:De_Jong2000b" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0084" source="zot:De_Jong2000b" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0088" source="zot:De_Jong2011" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0085" source="zot:De_Jong2011" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0087" source="zot:De_Jong2011" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0086" source="zot:De_Jong2011" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0089" source="zot:De_Jong2011" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0090" source="zot:De_Jong2011" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0091" source="zot:De_Jong2011" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0092" source="zot:De_Jong2011" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0093" source="zot:De_Jong2011" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0094" source="zot:De_Jong2011" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0095" source="zot:De_Jong2011" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0096" source="zot:De_Jong2011" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0097" source="zot:De_Jong2011" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0098" source="zot:De_Jong2011" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0099" source="zot:De_Jong2011" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0100" source="zot:De_Jong2011" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0101" source="zot:Reichmuth1983" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0102" source="zot:Reichmuth1983" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0103" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0104" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0105" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0106" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0107" source="zot:Ingham1986b" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0108" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0109" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0110" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0111" source="zot:Toll1983" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0112" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0113" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0114" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0115" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0116" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0117" source="zot:" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+            <l:featureValueObservation xml:id="fr_0118" source="zot:Lombezzi2019a" fVal="" ana="" resp="dmp:???">
+               
+            </l:featureValueObservation>
+         
+      </div>
+         <div type="examples">
+            <cit type="example" xml:id="ex_000">
+               <quote>mičān</quote>
+               <cit type="translation">
+                  <quote>place</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_001">
+               <quote>nakar</quote>
+               <cit type="translation">
+                  <quote>to deny</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_002">
+               <quote>yiktub</quote>
+               <cit type="translation">
+                  <quote>he writes</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_003">
+               <quote>inćān</quote>
+               <cit type="translation">
+                  <quote>if</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_004">
+               <quote>hanāk </quote>
+               <cit type="translation">
+                  <quote>there</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_005">
+               <quote>bāčer</quote>
+               <cit type="translation">
+                  <quote>tomorrow morning</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_006">
+               <quote>ʕammit-ić</quote>
+               <cit type="translation">
+                  <quote>your (f.) paternal aunt</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_007">
+               <quote>rākib</quote>
+               <cit type="translation">
+                  <quote>riding</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_009">
+               <quote>kilme</quote>
+               <cit type="translation">
+                  <quote>word</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_008">
+               <quote>čam</quote>
+               <cit type="translation">
+                  <quote>how much</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_010">
+               <quote>kān</quote>
+               <cit type="translation">
+                  <quote>he was</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_011">
+               <quote>dyūč</quote>
+               <cit type="translation">
+                  <quote>chickens</quote>
+               </cit>
+               <note>exception</note>
+            </cit>
+            <cit type="example" xml:id="ex_012">
+               <quote>karam</quote>
+               <cit type="translation">
+                  <quote>generosity</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_013">
+               <quote>lkullīke</quote>
+               <cit type="translation">
+                  <quote>everything</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_014">
+               <quote>kūfiyye</quote>
+               <cit type="translation">
+                  <quote>a type of headdress</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_015">
+               <quote>nāklu</quote>
+               <cit type="translation">
+                  <quote>we eat</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_016">
+               <quote>yāklu</quote>
+               <cit type="translation">
+                  <quote>they eat</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_017">
+               <quote>nkammlū</quote>
+               <cit type="translation">
+                  <quote>we complete</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_018">
+               <quote>ǝl-karhba</quote>
+               <cit type="translation">
+                  <quote>the car</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_019">
+               <quote>kalēm</quote>
+               <cit type="translation">
+                  <quote>speech</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_020">
+               <quote>karhaba</quote>
+               <cit type="translation">
+                  <quote>car</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_021">
+               <quote>mā-ikallmū-hum-š</quote>
+               <cit type="translation">
+                  <quote>they don't talk to them</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_022">
+               <quote>kelb</quote>
+               <cit type="translation">
+                  <quote>dog</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_023">
+               <quote>gideb</quote>
+               <cit type="translation">
+                  <quote>he lied</quote>
+               </cit>
+               <note>/k/ sometimes is reflected as /g/</note>
+            </cit>
+            <cit type="example" xml:id="ex_024">
+               <quote>kalp</quote>
+               <cit type="translation">
+                  <quote>dog</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_025">
+               <quote>ktāb</quote>
+               <cit type="translation">
+                  <quote>book</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_026">
+               <quote>bikkill</quote>
+               <cit type="translation">
+                  <quote>completely, at all</quote>
+               </cit>
+               <note>With regards to the example, the /l/ is assimilated to a
+                  following /k/ in <foreign>bikkill - bilkill</foreign> (with vowel harmony). This is a recent change
+                  as previous dialectologists do not record this assimilation in the
+                  same word</note>
+            </cit>
+            <cit type="example" xml:id="ex_027">
+               <quote>nakha</quote>
+               <cit type="translation">
+                  <quote>flavour</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_028">
+               <quote>kĕbbĕr</quote>
+               <cit type="translation">
+                  <quote>he made grow</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_029">
+               <quote>kās</quote>
+               <cit type="translation">
+                  <quote>a glass</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_030">
+               <quote>kiṯīr</quote>
+               <cit type="translation">
+                  <quote>many</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_031">
+               <quote>kbāṛ</quote>
+               <cit type="translation">
+                  <quote>old</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_032">
+               <quote>abūk</quote>
+               <cit type="translation">
+                  <quote>your father</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_033">
+               <quote>ḏaḳar</quote>
+               <cit type="translation">
+                  <quote>man, male</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_034">
+               <quote>siččīn</quote>
+               <cit type="translation">
+                  <quote>knife</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_035">
+               <quote>kull</quote>
+               <cit type="translation">
+                  <quote>every</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_036">
+               <quote>čaləb</quote>
+               <cit type="translation">
+                  <quote>dog</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_037">
+               <quote>kam</quote>
+               <cit type="translation">
+                  <quote>how much</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_038">
+               <quote>rāćb</quote>
+               <cit type="translation">
+                  <quote>rider</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_039">
+               <quote>kalām</quote>
+               <cit type="translation">
+                  <quote>speech</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_040">
+               <quote>čitif</quote>
+               <cit type="translation">
+                  <quote>shoulder</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_041">
+               <quote>kān</quote>
+               <cit type="translation">
+                  <quote>he was</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_042">
+               <quote>čabb - yičibb</quote>
+               <cit type="translation">
+                  <quote>to spill</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_043">
+               <quote>ćiṯīr</quote>
+               <cit type="translation">
+                  <quote>much</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_044">
+               <quote>ćabb</quote>
+               <cit type="translation">
+                  <quote>he spilled</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_045">
+               <quote>kil</quote>
+               <cit type="translation">
+                  <quote>he ate</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_046">
+               <quote>ćibīr</quote>
+               <cit type="translation">
+                  <quote>big</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_047">
+               <quote>čabdeh</quote>
+               <cit type="translation">
+                  <quote>liver</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_048">
+               <quote>čilweh</quote>
+               <cit type="translation">
+                  <quote>kidney</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_049">
+               <quote>wućil</quote>
+               <cit type="translation">
+                  <quote>it was eaten</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_050">
+               <quote>kabb</quote>
+               <cit type="translation">
+                  <quote>he spilled</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_051">
+               <quote>ćibīr</quote>
+               <cit type="translation">
+                  <quote>big</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_052">
+               <quote>čeyf</quote>
+               <cit type="translation">
+                  <quote>how</quote>
+               </cit>
+            </cit>
+         </div>
+      </body>
+      <back>
+      </back>
+   </text>
+   <standOff>
+   </standOff>
+</TEI>

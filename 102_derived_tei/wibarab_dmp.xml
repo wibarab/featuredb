@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
-	schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -19,10 +19,17 @@
             <p>This is a born-digital document</p>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef xml:id="listPrefixDef">
+            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../102_derived_tei/wibarab-dmp.xml#$1"/>
+            <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../102_derived_tei/vicav_biblio_tei_zotero.xml#$1"/>
+            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../102_derived_tei/vicav_dialects.xml#$1"/>
+            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../102_derived_tei/vicav_geodata.xml#$1"/>
+         </listPrefixDef>
+      </encodingDesc>
       <xenoData>
          <structMap ID="sm01" TYPE="LOGICAL" xmlns="http://www.loc.gov/METS/" LABEL="">
             <div>
-               
             </div>
          </structMap>
       </xenoData>
@@ -88,7 +95,7 @@
                   </org>
                   <org>
                      <orgName>Österreichische Akademie der Wissenschaften</orgName>
-                     <listOrg type="subunits"> 
+                     <listOrg type="subunits">
                         <org xml:id="ACDH-CH">
                            <orgName full="yes" xml:lang="en">Austrian Centre for Digital Humanities and Cultural Heritage</orgName>
                            <idno type="URI" subtype="ARCHE"> https://id.acdh.oeaw.ac.at/acdh</idno>
@@ -103,7 +110,6 @@
                      </listOrg>
                   </org>
                </listOrg>
-               
                <listPerson xml:id="coreTeam">
                   <head>Project Team</head>
                   <person xml:id="SP" role="Principal investigator">
@@ -117,6 +123,12 @@
                      <persName>Maria Rebecca Zarb</persName>
                      <affiliation ref="#Orientalistik">University of Vienna, Department of Near Eastern Studies</affiliation>
                      <idno type="URL" subtype="ORCID">https://orcid.org/0000-0002-4554-4787</idno>
+                     <note>collection of data for the database. This includes finding information regarding Bedouin dialects from already published sources and, once the database is operational, feeding it with the information accumulated on the subject, along with the data that will be collected by the other researchers in the course of the project. WP4 </note>
+                  </person>
+                  <person xml:id="JD" role="Pre-MA researcher">
+                     <persName>Johanna Doppelbauer</persName>
+                     <affiliation ref="#Orientalistik">University of Vienna, Department of Near Eastern Studies</affiliation>
+                     <idno type="URL" subtype="ORCID"></idno>
                      <note>collection of data for the database. This includes finding information regarding Bedouin dialects from already published sources and, once the database is operational, feeding it with the information accumulated on the subject, along with the data that will be collected by the other researchers in the course of the project. WP4 </note>
                   </person>
                   <person xml:id="AD" role="Post-doc researcher">
@@ -160,7 +172,6 @@
                      <idno type="URL" subtype="ORCID"></idno>
                      <note>collection of data for the database. This includes finding information regarding Bedouin dialects from already published sources and, once the database is operational, feeding it with the information accumulated on the subject, along with the data that will be collected by the other researchers in the course of the project.</note>
                   </person>
-                  
                   <person xml:id="CM" role="National Project Partner">
                      <persName>Charly Mörth</persName>
                      <affiliation ref="#ACDH-CH">Austrian Academy of Sciences, ACDH-CH</affiliation>
@@ -172,9 +183,6 @@
                      <idno type="URL" subtype="ORCID"></idno>
                   </person>
                </listPerson>
-               
-               
-               
                <listPerson xml:id="extendedTeam">
                   <head>Extended Team, external Collaborators etc.</head>
                   <person xml:id="DS" role="Senior Technical Consultant">
@@ -184,33 +192,27 @@
                      <idno type="URL" subtype="ARCHE">https://id.acdh.oeaw.ac.at/dschopper</idno>
                      <idno type="URL" subtype="VIAF">https://viaf.org/viaf/249676043</idno>
                      <note>senior advisor on TEI modelling, head of working group Data@ACDH-CH; MS Teams and sharepoint admin</note>
-                  </person> 
-                  
+                  </person>
                   <person xml:id="MA" role="Technical Consultant">
                      <persName>Maura Zsófia Abraham</persName>
                      <affiliation ref="#ACDH-CH">Austrian Academy of Sciences, ACDH-CH</affiliation>
                      <idno type="URL" subtype="ORCID"></idno>
                      <note>works on the SHAWI and TUNOCENT projects. We try to keep technical developments in all three projects in sync with each other, so she will participate / advise on relevant points. </note>
-                  </person> 
-                  
-                  
+                  </person>
                   <person xml:id="OS" role="Senior Technical Consultant">
                      <persName>Omar Siam</persName>
                      <affiliation ref="#ACDH-CH">Austrian Academy of Sciences, ACDH-CH</affiliation>
                      <idno type="URL" subtype="ARCHE">https://id.acdh.oeaw.ac.at/osiam</idno>
-                     <note>senior advisor, system administrator at ACDH-CH, technical supervisor for the VICAV infrastructure</note> 
-                  </person> 
-                  
+                     <note>senior advisor, system administrator at ACDH-CH, technical supervisor for the VICAV infrastructure</note>
+                  </person>
                </listPerson>
             </div>
          </div>
-         
          <div xml:id="projectStructure">
             <head>Project Structure</head>
             <list type="workpackages">
                <item xml:id="WP1">
                   <label>Work Package 1</label>
-                  
                   <listRelation>
                      <relation name="hasMember" ref="#CM"/>
                   </listRelation>
@@ -224,13 +226,12 @@
             <list type="storageLocations">
                <item xml:id="oeawCloud">
                   <name>ÖAW Cloud</name>
-                  <p>The OwnCloud service provide by ARZ. Currently this is not used in WIBARAB.</p> 
+                  <p>The OwnCloud service provide by ARZ. Currently this is not used in WIBARAB.</p>
                   <ptr target="https://oeawcloud.oeaw.ac.at"/>
                   <listRelation>
                      <relation name="is_responsible_for" ref="#ARZ"/>
                   </listRelation>
                </item>
-               
                <item xml:id="wibarabSHARE">
                   <name>Project Share</name>
                   <ptr target="//share17.univie.ac.at/orientalistik/WIBARAB"/>
@@ -238,7 +239,6 @@
                      <relation name="is_responsible_for" ref="#ZID"/>
                   </listRelation>
                </item>
-               
                <item xml:id="gitlab">
                   <name>SHAWIBARAB Group@gitlab</name>
                   <p>All manually edited primary data should be versioned using git and be uploaded to one of the repositories in the SHAWIBARAB group at gitlab.</p>
@@ -248,7 +248,6 @@
                   </listRelation>
                   <note>Data Security: Being a </note>
                </item>
-               
                <item xml:id="github">
                   <name>VICAV Project@github</name>
                   <p>Data re-used from the VICAV project is originally located on github</p>
@@ -257,7 +256,6 @@
                      <relation name="is_responsible_for" ref="#DS"/>
                   </listRelation>
                </item>
-               
                <item xml:id="sharepoint">
                   <name>Shared Documents @ WIBARAB Sharepoint</name>
                   <p>This is the main location for administrative documents and for content that needs to be collaboratively edited in (near-to) real time.</p>
@@ -271,7 +269,6 @@
          <div xml:id="datasets">
             <head>Datasets</head>
             <!-- Datasets re-used, produced or edited in this project could be described below here -->
-            
             <div type="dataset" xml:id="vicavPlaceList">
                <head>VICAV Place List</head>
                <p>The VICAV Place list is extended in WIBARAB both by volume (more places being added), by </p>
@@ -285,7 +282,7 @@
                         <relation name="has_responsible_person" ref="#CM #CL"/>
                         <relation name="is_edited_using" ref="#oxygen"/>
                      </listRelation>
-                     <note>From point of view of the WIBARAB project, the VICAV place list is static as any manual changes 
+                     <note>From point of view of the WIBARAB project, the VICAV place list is static as any manual changes
                         will be kept in the WIBARAB namespace but should be ported back to VICAV when finished.</note>
                   </item>
                   <item xml:id="geo_kml">
@@ -298,13 +295,10 @@
                   </item>
                </list>
             </div>
-            
             <div type="dataset" xml:id="vicavBibliography">
                <head xml:lang="en">VICAV Place List</head>
-               
             </div>
          </div>
-         
          <div xml:id="software_services">
             <list>
                <head>Software and Services</head>
@@ -315,14 +309,14 @@
       </body>
       <back>
          <!-- reusable lists go into <back> -->
-         <list type="formats">
-            <head>Formats and Standards used in the project</head>
-            <item xml:id="teiP5">
-               <name>TEI/XML</name>
-               <desc type="definition">Any XML document according to a version of the TEI Schema in Version P 5.</desc>
-               <idno type="URI" subtype="PRONOM">info:pronom/fmt/1476</idno>
-            </item>
-         </list>
-      </back>
-   </text>
-</TEI>
+            <list type="formats">
+               <head>Formats and Standards used in the project</head>
+               <item xml:id="teiP5">
+                  <name>TEI/XML</name>
+                  <desc type="definition">Any XML document according to a version of the TEI Schema in Version P 5.</desc>
+                  <idno type="URI" subtype="PRONOM">info:pronom/fmt/1476</idno>
+               </item>
+            </list>
+         </back>
+      </text>
+   </TEI>

@@ -1,0 +1,89 @@
+<snippets xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xml:space="preserve">
+
+   <!--*************************************************************************-->
+   <!--** The list on the left side is filled with the pseudo-n (pn)        ****-->
+   <!--** and pseudo-name (pname) attributes.                               ****-->
+   <!--** Pseudo-n's can also be used as substittion short-cuts in the XML  ****-->
+   <!--** editor. E.g. #p# is automatically replaced by <p></p>             ****-->
+   <!--*************************************************************************-->
+
+<change pn="ch" who="#{user}" when="{iso-date}">{caret}</change>
+
+<foreign pn="fo" pname="foreign">{caret}{insert}</foreign>
+
+<fs pn="fr" pname="featureRealisation" xml:id="fr_{id}" type="featureRealisation" source="#">
+   <f name="dialect" fVal="{caret}"/>
+   <f name="realisationType" fVal=""/>
+   <f name="attestedPlace" fVal=""></f>
+   <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+</fs>
+
+<f pn="co" pname="f:constraints" name="constraints">
+      <fs>
+         <f name="gender"/>
+         <f name="ageGroup"/>
+         <f name="academicLevel"/>
+         <f name="occupation"/>
+         <f name="note"></f>
+      </fs>
+   </f>
+
+<f pn="ex_f" pname="f:example" name="example" fVal="#{id}"/>
+
+<f pn="ld" name="lexicalDomain"><string>Turkish loans</string></f>
+
+<f pn="nt" pname="f:note" name="note"><string>{insert}{caret}</string></f>
+
+<f name="example" pn="ex_word" pname="f:example:word">
+   <fs>
+     <f name="wordform"><string xml:lang="ar">{insert}{caret}</string></f>
+     <f name="trans"><string xml:lang="en"></string></f>
+     <f name="msd" fVal="#"/>
+   </fs>
+</f>
+
+<cit pn="ex_cit" pname="cit:example" type="example" xml:id="">
+   <quote xml:lang="ar">{insert}{caret}</quote>
+
+   <cit type="translation">
+      <quote xml:lang="en"></quote>
+   </cit>
+</cit>
+
+<cit pn="or_cit" pname="cit:orCit" type="orCit" xml:id="" source="">
+   <quote xml:lang="ar">{insert}{caret}</quote>
+</cit>
+
+<f pn="or_f" pname="f:os" name="originalSource" fVal="#{id}"/>
+
+<seg pn="m" pname="seg:morph" type="morph">{caret}{insert}</seg>
+
+<note pn="no" pname="note">{caret}{insert}</note>
+
+   <!--*************************************************************************-->
+   <!--**   Templates used in XSL **********************************************-->
+   <!--*************************************************************************-->
+
+   <xsl:apply-templates/>{caret}
+
+   <xsl:attribute name="{caret}"></xsl:attribute>
+
+   <xsl:choose>{caret}</xsl:choose>
+
+   <xsl:for-each select="{caret}"></xsl:for-each>
+
+   <xsl:if test="">{caret}</xsl:if>
+
+   <xsl:text>{caret}</xsl:text>
+
+   <xsl:template match="{caret}"></xsl:template>
+
+   <xsl:value-of select="{caret}"/>
+
+   <xsl:variable></xsl:variable>
+
+   <xsl:when test="">{caret}</xsl:when>
+
+   <xsl:otherwise>{caret}</xsl:otherwise>
+
+</snippets>
