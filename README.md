@@ -20,22 +20,17 @@ at the wibarab office we have a lot of fun trying out gitlab and github
 
 # Random Commits
 Here is some text just to try another commit.
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 
 Blabla
-<<<<<<< HEAD
->>>>>>> 8072e0b3dfa2a36e205afddb9fb2564046158aea
-=======
->>>>>>> 813ffbde3e6aacdccbbdc0c91578172ddad4e6de
+
+Na geh!
 
 #I am doing very important edits für the future
 
 <3 indeed!
-=======
 Thats Terlans changes. 
->>>>>>> c2b3163cde2a967612e6f33822d94956eec329df
 
-# HEADS SHALL TURN
+let's try this out, shall we? :D
 
+# weareverycommittedpeople
