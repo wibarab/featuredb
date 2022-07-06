@@ -4,7 +4,7 @@
 
 WIBARAB is a very nice project in the field of Arabic dialectology, because very nice people work on it. It consists of various regional sub-projects (four PhD projects) and a large database about bedouin-type dialects of Arabic.
 
-WIBARAB is a nice project in the field of Arabic dialectology. It consists of various regional sub-projects (four PhD projects) and a large database about bedouin-type dialects of Arabic.
+WIBARAB is a very nice project in the field of Arabic dialectology. It consists of various regional sub-projects (four PhD projects) and a large database about bedouin-type dialects of Arabic.
 
 NEW UNEXPECTED LINES # Surprise
 
@@ -44,5 +44,11 @@ Na geh!
 Thats Terlans changes. 
 
 let's try this out, shall we? :D
+<<<<<<< HEAD
 # weareverycommittedpeople
 Terlan, Claudia and Rebecca
+=======
+
+# weareverycommittedpeople
+>>>>>>> 4c2773bb348a4c243d9cdf288c166fd03cec488e
+gfhfhzfjzgfuj
