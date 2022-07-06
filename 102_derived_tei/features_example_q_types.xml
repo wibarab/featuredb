@@ -1,0 +1,2544 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../082_scripts_xsl/tei_fs_2_html__001.xsl"?>
+<?xslt inPathSegment="\102_derived_tei\" outPathSegment="\106_html\"?>
+<?snippets fn="snippets_wibarab_001.xml"?>
+<?attributeAssignments fn="enricher_attributes.xml"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:space="preserve">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Treatment of qaf</title>
+            <author>Stephan Prochazka</author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>{publisher}</publisher>
+            <date when="0001-01-01"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <ptr target="{ptrtarget}"/>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <fsdDecl>
+            <fvLib n="featureValues" xml:id="q_values">
+               <fs xml:id="q_g"><f name="explanation">q --˃ /g/ only</f><f name="note"></f></fs>
+               <fs xml:id="q_g_affr1"><f name="explanation">q --˃ /g/ + affrication (in the environment of anterior vowel) ǵ</f><f name="note"></f></fs>
+               <fs xml:id="q_g_affr2"><f name="explanation">q --˃ /g/ + affrication (in the environment of anterior vowel) ǧ</f></fs>
+               <fs xml:id="q_hamza"><f name="explanation">q --˃ /ʔ/</f></fs>
+               <fs xml:id="q_gh"><f name="explanation">q --˃ /ġ/</f></fs>
+               <fs xml:id="q_q"><f name="explanation">q --˃ /q/</f></fs>
+               <fs xml:id="q_k_emph"><f name="explanation">q --˃ emphatic k</f></fs>
+               <fs xml:id="q_j"><f name="explanation">q --˃ /j/</f></fs>
+               <fs xml:id="q_k"><f name="explanation">q --˃ /k/</f></fs>
+            </fvLib>
+         </fsdDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change who="#ds" when="2022-02-15">reworked example:
+            * proposed renaming of "occurence" to "featureRealisation"
+            * made
+         </change>
+         <change who="#ds" when="2022-02-16">reworked example based on meeting 2022-02-16</change>
+         <change who="#cm" when="2022-03-02">reworked examples based on last meeting:
+            * tentatively added f[@name="explanation"] to featureValues
+         </change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="{docPath}">
+         <div type="description">
+            <p><!-- Verbose discussion of the feature -->
+               Uvular realisation is preserved in MSA loanwords, ex. <foreign xml:lang="ar">taqrīban</foreign>
+               «approximately», <foreign xml:lang="ar">qarīban</foreign> «soon» and in some
+               Turkish loanwords, ex. <foreign xml:lang="ar">qawūn</foreign> «melon» and
+               by young speakers often in words realized with <foreign xml:lang="ar">/g/</foreign>
+               or <foreign xml:lang="ar">/ǧ/</foreign> by older speakers, ex. <foreign xml:lang="ar">gidīm</foreign> or
+               <foreign xml:lang="ar">ǧidim</foreign> - <foreign xml:lang="ar">qadīm</foreign> «old»,
+               <foreign xml:lang="ar">gilīl</foreign> or <foreign xml:lang="ar">ǧilīl</foreign> -
+               <foreign xml:lang="ar">qalīl</foreign> «few, little» ; Devoicing of /g/ to /k/ in contact with /t/, ex. k-t-l (which sometimes becomes affricated in the environment of an anterior vowel c-t-l)</p>
+            <p></p>
+         </div>
+         <div type="featureRealisations">
+            <fs xml:id="fr_0000" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:LBN-ABI"/>
+               <f name="realisationType" fVal="#q_g_affr2"/>
+               <f name="note"><string>Devoicing of /g/ when before /t/- ex. ktirab «he approached»</string></f>
+               <f name="note"><string> Uvular realisation is preserved in MSA loanwords</string></f>
+               <f name="attestedPlace" fVal="geo:beqaa"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="example" fVal="#ex_000"/>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0001" type="featureRealisation" source="zot:Younes2013">
+               <f name="dialect" fVal="dia:LBN-ATI"/>
+               <f name="realisationType" fVal="#q_g_affr2"/>
+               <f name="note"><string>Uvular realisation is preserved in MSA loanwords, ex. taqrīban «approximately»
+                     and in some Turkish loanwords, ex. qawūn «melon» and by young speakers often in words realized with /g/
+                     or /ǧ/ by older speakers, ex. gidīm or ǧidim - qadīm «old»; Devoicing of /g/ to /k/ in contact with /t/,
+                     ex. k-t-l (which sometimes becomes affricated in the environment of an anterior vowel c-t-l)</string></f>
+               <f name="attestedPlace" fVal="geo:wadi_khalid"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="example" fVal="#ex_001"/>
+               <f name="example" fVal="#ex_002"/>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0002" type="featureRealisation" source="zot:El-Hajjé1954">
+               <f name="dialect" fVal="dia:LBN-TRI"/>
+               <f name="realisationType" fVal="#q_hamza"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:tripoli_lebanon"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0003" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:LBN-BEI"/>
+               <f name="realisationType" fVal="#q_hamza"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:beirut"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0004" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:LBN-ZAH"/>
+               <f name="realisationType" fVal="#q_hamza"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:zahle"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0005" type="featureRealisation" source="zot:Abu-Haidar1979">
+               <f name="dialect" fVal="dia:LBN-BAS"/>
+               <f name="realisationType" fVal="#q_hamza"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:baskinta"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="example" fVal="#ex_003"/>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0006" type="featureRealisation" source="zot:Behnstedt2019">
+               <f name="dialect" fVal="dia:ISR-ARM"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0007" type="featureRealisation" source="zot:Behnstedt2019">
+               <f name="dialect" fVal="dia:ISR-MRY"/>
+               <f name="realisationType" fVal="#q_g_affr2"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0008" type="featureRealisation" source="zot:Behnstedt2019">
+               <f name="dialect" fVal="dia:ISR-GAW"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0009" type="featureRealisation" source="zot:Behnstedt2019">
+               <f name="dialect" fVal="dia:ISR-GET"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0010" type="featureRealisation" source="zot:Behnstedt2019">
+               <f name="dialect" fVal="dia:ISR-GRI"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0011" type="featureRealisation" source="zot:Behnstedt2019">
+               <f name="dialect" fVal="dia:ISR-HAG"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0012" type="featureRealisation" source="zot:Behnstedt2019">
+               <f name="dialect" fVal="dia:ISR-HGE"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0013" type="featureRealisation" source="zot:Behnstedt2019">
+               <f name="dialect" fVal="dia:ISR-KAB"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0014" type="featureRealisation" source="zot:Behnstedt2019">
+               <f name="dialect" fVal="dia:ISR-LHE"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0015" type="featureRealisation" source="zot:Behnstedt2019">
+               <f name="dialect" fVal="dia:ISR-MAZ"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0016" type="featureRealisation" source="zot:Behnstedt2019">
+               <f name="dialect" fVal="dia:ISR-N3M"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0017" type="featureRealisation" source="zot:Behnstedt2019">
+               <f name="dialect" fVal="dia:ISR-SA3"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0018" type="featureRealisation" source="zot:Behnstedt2019">
+               <f name="dialect" fVal="dia:ISR-SAM"/>
+               <f name="realisationType" fVal="#q_g_affr2"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0019" type="featureRealisation" source="zot:Behnstedt2019">
+               <f name="dialect" fVal="dia:ISR-SAW"/>
+               <f name="realisationType" fVal="#q_g #q_g_affr2"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0020" type="featureRealisation" source="zot:Behnstedt2019">
+               <f name="dialect" fVal="dia:ISR-SBE"/>
+               <f name="realisationType" fVal="#q_g_affr2"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0021" type="featureRealisation" source="zot:Behnstedt2019">
+               <f name="dialect" fVal="dia:ISR-SHI"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0022" type="featureRealisation" source="zot:Behnstedt2019">
+               <f name="dialect" fVal="dia:ISR-TAB"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0023" type="featureRealisation" source="zot:Behnstedt2019">
+               <f name="dialect" fVal="dia:ISR-XAW"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0024" type="featureRealisation" source="zot:Behnstedt2019">
+               <f name="dialect" fVal="dia:ISR-XAW"/>
+               <f name="realisationType" fVal="#q_g_affr2"/>
+               <f name="attestedPlace" fVal=""></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+            </fs>
+            <fs xml:id="fr_0025" type="featureRealisation" source="zot:Behnstedt2019">
+               <f name="dialect" fVal="dia:ISR-ZUN"/>
+               <f name="realisationType" fVal="#q_g_affr2"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0026" type="featureRealisation" source="zot:Behnstedt2019">
+               <f name="dialect" fVal="dia:ISR-NGE"/>
+               <f name="realisationType" fVal="#q_g_affr2"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0027" type="featureRealisation" source="zot:Behnstedt2019">
+               <f name="dialect" fVal="dia:ISR-TUR"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0028" type="featureRealisation" source="zot:Behnstedt2019">
+               <f name="dialect" fVal="dia:ISR-TUR"/>
+               <f name="realisationType" fVal="#q_g_affr2"/>
+               <f name="attestedPlace" fVal=""></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+            </fs>
+            <fs xml:id="fr_0029" type="featureRealisation" source="zot:Behnstedt2019">
+               <f name="dialect" fVal="dia:ISR-HAI"/>
+               <f name="realisationType" fVal="#q_hamza"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:haifa"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0030" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:ISR-NAZ"/>
+               <f name="realisationType" fVal="#q_hamza"/>
+               <f name="note"><string>Women seem to use more hamza, which is characteristically
+                     perceived as urban. Christian women are the ones that use hamza more
+                     distinctively</string></f>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:nazareth"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0031" type="featureRealisation" source="zot:_">
+               <f name="dialect" fVal="dia:ISR-NAZ"/>
+               <f name="realisationType" fVal="#q_k_emph"/>
+               <f name="note"><string>Women seem to use more hamza, which is
+                     characteristically perceived as urban. Christian women are the ones
+                     that use hamza more distinctively</string></f>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:nazareth"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+            </fs>
+            <fs xml:id="fr_0032" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:PSE-RAS"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="note"><string>De-voicing occurs word-finally in pausal forms; e.g.
+                     in šigg&gt;šikk, sūg&gt;sūk; this is not limited to reflexes of /q/, but occurs
+                     for other consonants as well. Katz notes that /q/ is very rare and only
+                     occurs in a few loanwords from MSA such as qurʔān.</string></f>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="example" fVal="#ex_004"/>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+            </fs>
+            <fs xml:id="fr_0033" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:NEG-ZLM"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:negev"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+            </fs>
+            <fs xml:id="fr_0034" type="featureRealisation" source="zot:Shawarbah2011">
+               <f name="dialect" fVal="dia:NEG-AZM"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="note"><string>Velarisation of g occurrs in emphatic environment: gamar "moon";
+                     /k/ in vicinity of voiceless consonants + root *qtl and *qtr</string></f>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:negev"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="example" fVal="#ex_005"/>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+            </fs>
+            <fs xml:id="fr_0035" type="featureRealisation" source="zot:Palva1980">
+               <f name="dialect" fVal="dia:JOR-BSX"/>
+               <f name="realisationType" fVal="#q_g_affr1"/>
+               <f name="note"><string>in the contiguity of front vowels g can but need not
+                     to be realized as affricates [dz]</string></f>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="example" fVal="#ex_006"/>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0036" type="featureRealisation" source="zot:Palva1986">
+               <f name="dialect" fVal="dia:JOR-HWT"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0037" type="featureRealisation" source="zot:Palva1976">
+               <f name="dialect" fVal="dia:JOR-AGR"/>
+               <f name="realisationType" fVal="#q_g_affr2"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="example" fVal="#ex_007"/>
+               <f name="example" fVal="#ex_008"/>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0038" type="featureRealisation" source="zot:Younes2018a">
+               <f name="dialect" fVal="dia:JOR-AIS"/>
+               <f name="realisationType" fVal="#q_j"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0039" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:JOR-ABD"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="note"><string>vestigial variants of q&gt;ǧ: ʕeǧib "young children",
+                     ǧiddāmi "in front of me", ǧider "cauldron"</string></f>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="example" fVal="#ex_009"/>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0040" type="featureRealisation" source="zot:Owens1984b">
+               <f name="dialect" fVal="dia:JOR-BDL"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="example" fVal="#ex_010"/>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0041" type="featureRealisation" source="zot:Yrttiaho1988">
+               <f name="dialect" fVal="dia:JOR-NMT"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="example" fVal="#ex_011"/>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0042" type="featureRealisation" source="zot:Cantineau1936a">
+               <f name="dialect" fVal="dia:JOR-SMR"/>
+               <f name="realisationType" fVal="#q_g_affr1"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0043" type="featureRealisation" source="zot:Cantineau1936a">
+               <f name="dialect" fVal="dia:JOR-ANZ"/>
+               <f name="realisationType" fVal="#q_g_affr1"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0044" type="featureRealisation" source="zot:Cantineau1936a">
+               <f name="dialect" fVal="dia:JOR-FDL"/>
+               <f name="realisationType" fVal="#q_g_affr2"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0045" type="featureRealisation" source="zot:Cantineau1936a">
+               <f name="dialect" fVal="dia:JOR-BXD"/>
+               <f name="realisationType" fVal="#q_g_affr2"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0046" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:JOR-SHN"/>
+               <f name="realisationType" fVal="#q_g_affr2"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0047" type="featureRealisation" source="zot:Cantineau1936a">
+               <f name="dialect" fVal="dia:JOR-SLT"/>
+               <f name="realisationType" fVal="#q_g_affr2"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0048" type="featureRealisation" source="zot:Cantineau1936a">
+               <f name="dialect" fVal="dia:JOR-SDY"/>
+               <f name="realisationType" fVal="#q_g_affr2"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0049" type="featureRealisation" source="zot:Cantineau1936a">
+               <f name="dialect" fVal="dia:JOR-NEM"/>
+               <f name="realisationType" fVal="#q_g_affr2"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0050" type="featureRealisation" source="zot:Cantineau1936a">
+               <f name="dialect" fVal="dia:JOR-WAL"/>
+               <f name="realisationType" fVal="#"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+            </fs>
+            <fs xml:id="fr_0051" type="featureRealisation" source="zot:Al-Khatib1988">
+               <f name="dialect" fVal="dia:JOR-IRB"/>
+               <f name="realisationType" fVal="#"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:irbid"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+            </fs>
+            <fs xml:id="fr_0052" type="featureRealisation" source="zot:Herin2010">
+               <f name="dialect" fVal="dia:JOR-SAL"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="note"><string>/q/ in vicinity of voiceless consonants with root *w - q- t
+                     /k/ in vicinity of voiceless consonants with root *q-t-l</string></f>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:al_salt"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="example" fVal="#ex_012"/>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0053" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:JOR-MDB"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:madaba"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0054" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:JOR-SFT"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:safut"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0055" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:JOR-KRK"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:al_karak"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0056" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:JOR-AMN"/>
+               <f name="realisationType" fVal="#q_g #q_hamza"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:amman"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0057" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:SAU-HRB"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0058" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:MAR-ZIR"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0059" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:MAR-HYN"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0060" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:MRT-HSS"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0061" type="featureRealisation" source="zot:De_Jong2000b">
+               <f name="dialect" fVal="dia:EGY-RML"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0062" type="featureRealisation" source="zot:De_Jong2000b">
+               <f name="dialect" fVal="dia:EGY-SWR"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0063" type="featureRealisation" source="zot:De_Jong2000b">
+               <f name="dialect" fVal="dia:EGY-HYW"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0064" type="featureRealisation" source="zot:De_Jong2000b">
+               <f name="dialect" fVal="dia:EGY-BLL"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0065" type="featureRealisation" source="zot:De_Jong2000b">
+               <f name="dialect" fVal="dia:EGY-SMN"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0066" type="featureRealisation" source="zot:De_Jong2000b">
+               <f name="dialect" fVal="dia:EGY-AGL"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0067" type="featureRealisation" source="zot:De_Jong2000b">
+               <f name="dialect" fVal="dia:EGY-BYD"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0068" type="featureRealisation" source="zot:De_Jong2000b">
+               <f name="dialect" fVal="dia:EGY-XRS"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0069" type="featureRealisation" source="zot:De_Jong2000b">
+               <f name="dialect" fVal="dia:EGY-DWG"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0070" type="featureRealisation" source="zot:De_Jong2011">
+               <f name="dialect" fVal="dia:EGY-GBL"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0071" type="featureRealisation" source="zot:De_Jong2011">
+               <f name="dialect" fVal="dia:EGY-ASD"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0072" type="featureRealisation" source="zot:De_Jong2011">
+               <f name="dialect" fVal="dia:EGY-SLH"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0073" type="featureRealisation" source="zot:De_Jong2011">
+               <f name="dialect" fVal="dia:EGY-GRR"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>loans</string></f>
+            </fs>
+            <fs xml:id="fr_0074" type="featureRealisation" source="zot:De_Jong2011">
+               <f name="dialect" fVal="dia:EGY-HMD"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0075" type="featureRealisation" source="zot:De_Jong2011">
+               <f name="dialect" fVal="dia:EGY-LGT"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0076" type="featureRealisation" source="zot:De_Jong2011">
+               <f name="dialect" fVal="dia:EGY-MZN"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0077" type="featureRealisation" source="zot:De_Jong2011">
+               <f name="dialect" fVal="dia:EGY-BWS"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0078" type="featureRealisation" source="zot:De_Jong2011">
+               <f name="dialect" fVal="dia:EGY-TRB"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0079" type="featureRealisation" source="zot:De_Jong2011">
+               <f name="dialect" fVal="dia:EGY-HWT"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0080" type="featureRealisation" source="zot:De_Jong2011">
+               <f name="dialect" fVal="dia:EGY-GRG"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0081" type="featureRealisation" source="zot:De_Jong2011">
+               <f name="dialect" fVal="dia:EGY-TYH"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0082" type="featureRealisation" source="zot:De_Jong2011">
+               <f name="dialect" fVal="dia:EGY-BDR"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0083" type="featureRealisation" source="zot:De_Jong2011">
+               <f name="dialect" fVal="dia:EGY-DBR"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0084" type="featureRealisation" source="zot:De_Jong2011">
+               <f name="dialect" fVal="dia:EGY-MLH"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0085" type="featureRealisation" source="zot:Reichmuth1983">
+               <f name="dialect" fVal="dia:SDN-SKR"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0086" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:IRQ-SBD"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:baghdad"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0087" type="featureRealisation" source="zot:Mahdi1985">
+               <f name="dialect" fVal="dia:IRQ-BSR"/>
+               <f name="realisationType" fVal="#q_g_affr2"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:basra"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0088" type="featureRealisation" source="zot:Mahdi1985">
+               <f name="dialect" fVal="dia:IRQ-BSR"/>
+               <f name="realisationType" fVal="#q_q"/>
+               <f name="attestedPlace" fVal="geo:basra"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+            </fs>
+            <fs xml:id="fr_0089" type="featureRealisation" source="zot:Mahdi1985">
+               <f name="dialect" fVal="dia:IRQ-BSR"/>
+               <f name="realisationType" fVal="#q_j"/>
+               <f name="attestedPlace" fVal="geo:basra"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+            </fs>
+            <fs xml:id="fr_0090" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:IRQ-SQT"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:al_shirqat"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0091" type="featureRealisation" source="#">
+               <f name="dialect" fVal="dia:IRQ-SQT"/>
+               <f name="realisationType" fVal="#q_g_affr2"/>
+               <f name="attestedPlace" fVal="geo:al_shirqat"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+            </fs>
+            <fs xml:id="fr_0092" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:IRQ-HIL"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:hillah"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0093" type="featureRealisation" source="#">
+               <f name="dialect" fVal="dia:IRQ-HIL"/>
+               <f name="realisationType" fVal="#q_q"/>
+               <f name="attestedPlace" fVal="geo:hillah"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+            </fs>
+            <fs xml:id="fr_0094" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:IRN-KHU"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string></string></f>
+            </fs>
+            <fs xml:id="fr_0095" type="featureRealisation" source="#">
+               <f name="dialect" fVal="dia:IRN-KHU"/>
+               <f name="realisationType" fVal="#q_q"/>
+               <f name="attestedPlace" fVal=""></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+            </fs>
+            <fs xml:id="fr_0096" type="featureRealisation" source="#">
+               <f name="dialect" fVal="dia:IRN-KHU"/>
+               <f name="realisationType" fVal="#q_gh"/>
+               <f name="attestedPlace" fVal=""></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+            </fs>
+            <fs xml:id="fr_0097" type="featureRealisation" source="#">
+               <f name="dialect" fVal="dia:IRN-KHU"/>
+               <f name="realisationType" fVal="#q_j"/>
+               <f name="attestedPlace" fVal=""></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+            </fs>
+            <fs xml:id="fr_0098" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:SAU-ABH"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0099" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:SAU-DHF"/>
+               <f name="realisationType" fVal="#q_g_affr1"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0100" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:SAU-QHB"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0101" type="featureRealisation" source="zot:Prochazka1988c">
+               <f name="dialect" fVal="dia:SAU-QSM"/>
+               <f name="realisationType" fVal="#q_g_affr1"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0102" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:SAU-QWZ"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0103" type="featureRealisation" source="zot:Prochazka1988c">
+               <f name="dialect" fVal="dia:SAU-QRN"/>
+               <f name="realisationType" fVal="#q_g_affr2"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0104" type="featureRealisation" source="zot:Prochazka1988c">
+               <f name="dialect" fVal="dia:SAU-BSR"/>
+               <f name="realisationType" fVal="#q_g_affr2"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0105" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:SAU-AMR"/>
+               <f name="realisationType" fVal="#q_g_affr2"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0106" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:SAU-BSH"/>
+               <f name="realisationType" fVal="#q_g_affr1"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0107" type="featureRealisation" source="zot:Johnstone1961">
+               <f name="dialect" fVal="dia:SAU-DWS"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0108" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:SAU-GHA"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0109" type="featureRealisation" source="zot:Prochazka1988c">
+               <f name="dialect" fVal="dia:SAU-HYL"/>
+               <f name="realisationType" fVal="#q_g_affr1"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0110" type="featureRealisation" source="zot:Prochazka1988c">
+               <f name="dialect" fVal="dia:SAU-HFF"/>
+               <f name="realisationType" fVal="#q_g_affr2"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0111" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:SAU-MTR"/>
+               <f name="realisationType" fVal="#q_g_affr1"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0112" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:SAU-RYD"/>
+               <f name="realisationType" fVal="#q_g_affr1"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0113" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:SAU-RUF"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0114" type="featureRealisation" source="zot:Prochazka1988c">
+               <f name="dialect" fVal="dia:SAU-RWA"/>
+               <f name="realisationType" fVal="#q_g_affr1"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0115" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:SAU-TAN"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0116" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:SAU-HJZ"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0117" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:SAU-ZAH"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0118" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:SDN-RYD"/>
+               <f name="realisationType" fVal="#q_g_affr2"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0119" type="featureRealisation" source="zot:Behnstedt1998c">
+               <f name="dialect" fVal="dia:TUN-DJB"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0120" type="featureRealisation" source="zot:Behnstedt1998c">
+               <f name="dialect" fVal="dia:TUN-DJB"/>
+               <f name="realisationType" fVal="#q_q"/>
+               <f name="attestedPlace" fVal=""></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+            </fs>
+            <fs type="featureRealisation" source="zot:Skik2000">
+               <f name="dialect" fVal="dia:TUN-HGZ"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0121" type="featureRealisation" source="zot:Skik2000">
+               <f name="dialect" fVal="dia:TUN-HGZ"/>
+               <f name="realisationType" fVal="#q_q"/>
+               <f name="attestedPlace" fVal=""></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+            </fs>
+            <fs xml:id="fr_0122" type="featureRealisation" source="zot:Ritt-Benmimoun2011b">
+               <f name="dialect" fVal="dia:TUN-MZG"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:douz"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0123" type="featureRealisation" source="zot:Singer1984">
+               <f name="dialect" fVal="dia:TUN-TNS"/>
+               <f name="realisationType" fVal="#q_q"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:tunis"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0124" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:TUN-SBZ"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0125" type="featureRealisation" source="zot:Ritt-Benmimoun2011b">
+               <f name="dialect" fVal="dia:TUN-NFW"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0126" type="featureRealisation" source="zot:Ritt-Benmimoun2011b">
+               <f name="dialect" fVal="dia:TUN-NFW"/>
+               <f name="realisationType" fVal="#q_hamza"/>
+               <f name="attestedPlace" fVal=""></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+            </fs>
+            <fs xml:id="fr_0127" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:TUN-BGN"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0128" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:TUN-CHB"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0129" type="featureRealisation" source="zot:Sellami2019">
+               <f name="dialect" fVal="dia:TUN-SFX"/>
+               <f name="realisationType" fVal="#q_q"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0130" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:ITA-MDV"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0131" type="featureRealisation" source="#">
+               <f name="dialect" fVal="dia:ITA-MDV"/>
+               <f name="realisationType" fVal="#q_q"/>
+               <f name="attestedPlace" fVal=""></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+            </fs>
+            <fs xml:id="fr_0132" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:MLT-MAL"/>
+               <f name="realisationType" fVal="#q_hamza"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0133" type="featureRealisation" source="zot:Borg1984">
+               <f name="dialect" fVal="dia:CYP-KOR"/>
+               <f name="realisationType" fVal="#q_q"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:kormakitis"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0134" type="featureRealisation" source="zot:Borg1984">
+               <f name="dialect" fVal="dia:CYP-KOR"/>
+               <f name="realisationType" fVal="#q_k"/>
+               <f name="attestedPlace" fVal=""></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+            </fs>
+            <fs xml:id="fr_0135" type="featureRealisation" source="zot:Harrama1993">
+               <f name="dialect" fVal="dia:LBY-JBL"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0136" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:LBY-MSR"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0137" type="featureRealisation" source="zot:Marçais2001">
+               <f name="dialect" fVal="dia:LBY-FZN"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0138" type="featureRealisation" source="zot:Benkato2014">
+               <f name="dialect" fVal="dia:LBY-BGZ"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:benghazi"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0139" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:LBY-KMS"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0140" type="featureRealisation" source="zot:Guerrero2015b">
+               <f name="dialect" fVal="dia:DZA-ORN"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:oran"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0141" type="featureRealisation" source="zot:Marçais1902">
+               <f name="dialect" fVal="dia:DZA-TLM"/>
+               <f name="realisationType" fVal="#q_g #q_q"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:tlemcen"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0142" type="featureRealisation" source="zot:Marçais1956b">
+               <f name="dialect" fVal="dia:DZA-DJL"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0143" type="featureRealisation" source="zot:Grand_Henry1979">
+               <f name="dialect" fVal="dia:DZA-SAO"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:888"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0144" type="featureRealisation" source="zot:">
+               <f name="dialect" fVal="dia:DZA-CON"/>
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="example" fVal="#"/>
+               <f name="attestedPlace" fVal="geo:constantine"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+            <fs xml:id="fr_0145" type="featureRealisation" source="#">
+               <f name="dialect" fVal="dia:DZA-CON"/>
+               <f name="realisationType" fVal="#q_q"/>
+               <f name="attestedPlace" fVal="geo:constantine"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+            </fs>
+            <fs type="featureRealisationAssertion" source="zot:younes2014">
+               <f name="realisationType" fVal="#q_g"/>
+               <f name="dialect" fVal="dia:abu_ciid"/>
+               <f name="example" fVal="#s_2929"/>
+               <!-- translation + msd > example ?  -->
+               <f name="trans"><string xml:lang="en">we find</string></f>
+               <f name="msd" fVal="#v_past_sg_p3_f"/>
+               <f name="pageNumber"><string>IV</string></f>
+            </fs>
+            <fs type="featureRealisationAssertion" source="zot:behnstedt2001">
+               <f name="realisationType" fVal="#q_g"></f>
+               <f name="dialect" fVal="dia:abu_cali"></f>
+               <f name="pageNumber"><string>IV</string></f>
+            </fs>
+         </div>
+         <div type="examples">
+            <cit type="example" xml:id="ex_2929">
+               <quote>
+                  <s xml:id="s_2929_1">ana <seg ana="#v_pres_pl_p1">nǝl<seg ana="#q_g">g</seg>a</seg>h fi s-su<seg ana="#q_q">q</seg>.</s>
+               </quote>
+               <cit type="translation">
+                  <quote>we find</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_2041">
+               <quote>
+                  <w ana="#n_sg_f">ḅ<seg ana="#q_g">g</seg>aṛa</w>
+               </quote>
+               <cit type="translation">
+                  <quote>cow</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_000">
+               <quote>ḅgaṛa</quote>
+               <cit type="translation">
+                  <quote>cow</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_001">
+               <quote>ti<seg type="ph">ǧ</seg>īl</quote>
+               <cit type="translation">
+                  <quote>heavy</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_002">
+               <quote>gāl</quote>
+               <cit type="translation">
+                  <quote>he said</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_003">
+               <quote>tiʔra</quote>
+               <cit type="translation">
+                  <quote>you read</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_004">
+               <quote>galb</quote>
+               <cit type="translation">
+                  <quote>heart</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_005">
+               <quote>gaʕad</quote>
+               <cit type="translation">
+                  <quote>to sit</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_006">
+               <quote>nyāg</quote>
+               <cit type="translation">
+                  <quote>she-camels</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_007">
+               <quote>grayya</quote>
+               <cit type="translation">
+                  <quote>little village</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_008">
+               <quote>ǧeddām</quote>
+               <cit type="translation">
+                  <quote>before, in front of</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_009">
+               <quote>gawi</quote>
+               <cit type="translation">
+                  <quote>strong</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_010">
+               <quote>ygūl</quote>
+               <cit type="translation">
+                  <quote>he says</quote>
+               </cit>
+            </cit>
+            <cit type="example" xml:id="ex_011">
+               <quote>gamḥ</quote>
+               <cit type="translation">
+                  <quote>grain</quote>
+               </cit>
+               <f name="note"><string>taken from texts in article</string></f></cit>
+            <cit type="example" xml:id="ex_012">
+               <quote>fundug</quote>
+               <cit type="translation">
+                  <quote>hotel</quote>
+               </cit>
+            </cit>
+         </div>
+      </body>
+      <back>
+      </back>
+   </text>
+   <standOff>
+   </standOff>
+</TEI>

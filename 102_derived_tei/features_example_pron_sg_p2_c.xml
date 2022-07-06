@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../082_scripts_xsl/tei_fs_2_html__001.xsl"?>
+<?xslt inPathSegment="\102_derived_tei\" outPathSegment="\106_html\"?>
+<?snippets fn="snippets_wibarab_001.xml"?>
+<?attributeAssignments fn="enricher_attributes.xml"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:space="preserve">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Treatment of pronouns, 2.p.sg.comunis</title>
+            <author>Maria Rebecca Zarb</author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>{publisher}</publisher>
+            <date when="0001-01-01"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <ptr target="{ptrtarget}"/>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <fsdDecl>
+            <fvLib n="featureValues" xml:id="pron_sg_2_c_values">
+               <fs xml:id="pr_s2c_nta"><f name="explanation">nta</f><f name="note"></f></fs>
+               <fs xml:id="pr_s2c_inti"><f name="explanation">inti</f><f name="note"></f></fs>
+               <fs xml:id="pr_s2c_int"><f name="explanation">int</f></fs>
+               <fs xml:id="pr_s2c_ant"><f name="explanation">ant</f></fs>
+               <fs xml:id="pr_s2c_ntina"><f name="explanation">ntina</f></fs>
+            </fvLib>
+         </fsdDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change who="#cm" when="2022-04-05">reworked examples based on data in excel</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body xml:base="{docPath}">
+         <div type="description">
+            <p><!-- Verbose discussion of the feature --></p>
+            <p></p>
+         </div>
+
+         <div type="featureRealisations">
+            <fs xml:id="fr_0000" type="featureRealisation" source="#zot:Singer1984">
+               <f name="dialect" fVal="dia:TUN-TNS"/>
+               <f name="realisationType" fVal="#pr_s2c_inti"/>
+               <f name="attestedPlace" fVal="geo:tunis"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="originalSource" fVal="#os_000"/>
+            </fs>
+
+            <fs xml:id="fr_0001" type="featureRealisation" source="#">
+               <f name="dialect" fVal="dia:TUN-MHD"/>
+               <f name="realisationType" fVal="#pr_s2c_inti"/>
+               <f name="attestedPlace" fVal="geo:mahdia"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="originalSource" fVal="#os_001"/>
+               <f name="originalSource" fVal="#os_002"/>
+            </fs>
+
+            <fs xml:id="fr_0002" type="featureRealisation" source="#">
+               <f name="dialect" fVal="dia:TUN-CHB"/>
+               <f name="realisationType" fVal="#pr_s2c_inti"/>
+               <f name="attestedPlace" fVal="geo:chebba"></f>
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+               <f name="originalSource" fVal="#os_003"/>
+            </fs>
+         </div>
+
+         <div type="examples">
+
+         </div>
+
+         <div type="originalSources">
+
+            <cit type="orCit" xml:id="os_000" source="">
+               <quote xml:lang="ar">ənti</quote>
+            </cit>
+            <cit type="orCit" xml:id="os_001" source="">
+               <quote xml:lang="ar">inti</quote>
+            </cit>
+            <cit type="orCit" xml:id="os_002" source="">
+               <quote xml:lang="ar">ənti</quote>
+            </cit>
+            <cit type="orCit" xml:id="os_003" source="">
+               <quote xml:lang="ar">ənti</quote>
+            </cit>
+         </div>
+      </body>
+
+      <back>
+      </back>
+   </text>
+</TEI>
