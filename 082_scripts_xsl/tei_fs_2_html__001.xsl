@@ -55,12 +55,31 @@
       <xsl:variable name="xmlid"><xsl:value-of select="@xml:id"/></xsl:variable>
       <div class="featureRealisation" id="{$xmlid}">
          <table>
-            <tr><td colspan="2"><a class="aReturnLink" href="goto:{$xmlid}">==˃ (Go to XML)</a></td></tr>
+            <tr><td colspan="2" class="tdObservation">Observation <xsl:value-of select="position()"/><xsl:text> </xsl:text><a class="aReturnLink" href="goto:{$xmlid}">==˃ (Go to XML)</a></td></tr>
+
+            <tr>
+               <td class="tdLeft">Type</td>
+               <td class="tdRight">
+                  <xsl:variable name="refVal"><xsl:value-of select="substring(tei:name[@type='featureValue']/@ref,2)"/></xsl:variable>
+                  <xsl:variable name="typeLabel"><xsl:value-of select="//tei:item[@xml:id=$refVal]/tei:label"/></xsl:variable>
+
+                  <xsl:choose>
+                     <xsl:when test="$typeLabel=''"><span class="spError">Missing value</span></xsl:when>
+                     <xsl:otherwise><xsl:value-of select="$typeLabel"/></xsl:otherwise>
+                  </xsl:choose>
+               </td>
+            </tr>
+
             <tr>
                <td class="tdLeft">Variety</td>
                <td class="tdRight">
                   <xsl:variable name="dia_id"><xsl:value-of select="substring(tei:lang/@corresp,5)"/></xsl:variable>
-                  <xsl:value-of select="$diaDoc//tei:fs[@type='dialect'][@xml:id=$dia_id]/tei:f[@name='dialectName']/tei:string"/>
+                  <xsl:variable name="dia"><xsl:value-of select="$diaDoc//tei:fs[@type='dialect'][@xml:id=$dia_id]/tei:f[@name='dialectName']/tei:string"/></xsl:variable>
+
+                  <xsl:choose>
+                     <xsl:when test="$dia=''"><span class="spError">Missing value</span></xsl:when>
+                     <xsl:otherwise><xsl:value-of select="$dia"/></xsl:otherwise>
+                  </xsl:choose>
                </td>
             </tr>
 
@@ -80,8 +99,6 @@
                        <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:title"/>
                       </xsl:otherwise>
                   </xsl:choose>
-
-
                </td>
             </tr>
 
@@ -113,10 +130,10 @@
                  <td class="tdLeft">Examples</td>
                  <td class="tdRight">
                     <xsl:for-each select="tei:cit[@type='example']">
-                      <div>
+                      <div class="dvExample">
                          <xsl:value-of select="tei:quote"/>
                          <xsl:text> </xsl:text>
-                         <i><xsl:value-of select="tei:cit/tei:quote"/></i>
+                         <i class="iTrans"><xsl:value-of select="tei:cit/tei:quote"/></i>
                       </div>
                     </xsl:for-each>
                  </td>
