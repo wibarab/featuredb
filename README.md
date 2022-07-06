@@ -17,6 +17,7 @@ I am making changes, but they very much register for some reason.
 Hi I wanted to try and change something
 at the wibarab office we have a lot of fun trying out gitlab and github
 
+all the changes
 
 # Random Commits
 Here is some text just to try another commit.
