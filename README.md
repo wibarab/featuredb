@@ -33,6 +33,7 @@ Further edits for practice
 # HEADS SHALL TURN
 
 
+changes to check name
 
 Blabla
 
@@ -46,6 +47,10 @@ Thats Terlans changes.
 let's try this out, shall we? :D
 # weareverycommittedpeople
 Terlan, Claudia and Rebecca
+
+Where is my pet
+vscode-pets.start
+gooooooo
 
 # weareverycommittedpeople
 gfhfhzfjzgfuj
