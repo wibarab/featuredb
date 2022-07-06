@@ -49,6 +49,8 @@ let's try this out, shall we? :D
 Terlan, Claudia and Rebecca
 
 Where is my pet
+vscode-pets.start
+gooooooo
 
 # weareverycommittedpeople
 gfhfhzfjzgfuj
