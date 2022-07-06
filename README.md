@@ -14,3 +14,8 @@ Hi I wanted to try and change something
 
 # Random Commits
 Here is some text just to try another commit.
+<<<<<<< HEAD
+=======
+
+Blabla
+>>>>>>> 8072e0b3dfa2a36e205afddb9fb2564046158aea
