@@ -8,6 +8,6 @@ next try
 
 # GIT Workshop 
 Let's see if I can also commit from the work computer.
-I am making changes, but they do not register for some reason.
+I am making changes, but they very much register for some reason.
 Hi I wanted to try and change something
 This is a relevant change but you can delete it
