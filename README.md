@@ -1,7 +1,16 @@
+# WIBARAB feature database
+
 # Project Description
 WIBARAB is a nice project in the field of Arabic dialectology. It consists of various regional sub-projects (four PhD projects) and a large database about bedouin-type dialects of Arabic.
 # WIBARAB feature database
-There are many dialects under investigation 
+The WIBARAB team consists of very fun, hard-working people who love TEI
+The database will include a variety of features that are thought to be especially relevant for Bedouin varieties. It is currently under construction.
+hello
+next try
+
+# GIT Workshop 
+Let's see if I can also commit from the work computer.
+I am making changes, but they very much register for some reason.
 Hi I wanted to try and change something
 at the wibarab office we have a lot of fun trying out gitlab and github
 
@@ -9,5 +18,12 @@ at the wibarab office we have a lot of fun trying out gitlab and github
 # Random Commits
 Here is some text just to try another commit.
 
+
 Blabla
+
 Na geh!
+
+#I am doing very important edits für the future
+
+Thats Terlans changes. 
+
