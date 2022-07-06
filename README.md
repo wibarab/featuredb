@@ -13,6 +13,7 @@ The WIBARAB team consists of very fun, hard-working people who love TEI.
 The database will include a variety of features that are thought to be especially relevant for Bedouin varieties. It is currently under construction.
 hellouuiuu
 next try
+
 ttiihhii
 # GIT Workshop 
 Let's see if I can also commit from the work computer.
@@ -24,6 +25,13 @@ all the changes
 
 # Random Commits
 Here is some text just to try another commit.
+Blabla
+#I am doing very important edits für the future
+Thats Terlans changes. 
+# HEADS SHALL ROLL
+Further edits for practice
+# HEADS SHALL TURN
+
 
 changes to check name
 
@@ -37,5 +45,11 @@ Na geh!
 Thats Terlans changes. 
 
 let's try this out, shall we? :D
+<<<<<<< HEAD
+# weareverycommittedpeople
+Terlan, Claudia and Rebecca
+=======
 
 # weareverycommittedpeople
+>>>>>>> 4c2773bb348a4c243d9cdf288c166fd03cec488e
+gfhfhzfjzgfuj
