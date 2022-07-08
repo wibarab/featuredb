@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../082_scripts_xsl/tei_fs_2_html__001.xsl"?>
+<?xslt inPathSegment="\102_derived_tei\" outPathSegment="\106_html\"?>
+<?snippets fn="snippets_wibarab_001.xml"?>
+<?attributeAssignments fn="enricher_attributes.xml"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title>Treatment of pronouns, 1.p.sg.</title>
+				<author>Maria Rebecca Zarb</author>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>{publisher}</publisher>
+				<date when="0001-01-01"/>
+			</publicationStmt>
+			<sourceDesc>
+				<bibl>
+					<ptr target="{ptrtarget}"/>
+				</bibl>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<fsdDecl>
+				<fvLib n="featureValues" xml:id="pron_sg_1_c_values">
+					<fs xml:id="pr_s1c_ana"><f name="explanation">ana</f><f name="note"></f></fs>
+					<fs xml:id="pr_s1c_ani"><f name="explanation">ani</f><f name="note"></f></fs>
+					<fs xml:id="pr_s1c_anaa"><f name="explanation">anā</f></fs>
+					<fs xml:id="pr_s1c_naa"><f name="explanation">nā</f></fs>
+					<fs xml:id="pr_s1c_aana"><f name="explanation">āna</f></fs>
+					<fs xml:id="pr_s1c_aanaaya"><f name="explanation">ānāya</f></fs>
+					<fs xml:id="pr_s1c_iinaayatha"><f name="explanation">īnāyatha</f></fs>
+					<fs xml:id="pr_s1c_yiina"><f name="explanation">yīn(a)</f></fs>
+					<fs xml:id="pr_s1c_aani"><f name="explanation">āni</f></fs>
+				</fvLib>
+			</fsdDecl>
+		</encodingDesc>
+		<revisionDesc>
+			<change who="#cm" when="2022-04-05">reworked examples based on data in excel</change>
+			<change who="#mrz" when="2022-11-05">created this file based on the 2p sg comunis and changed feature values</change>
+		</revisionDesc>
+	</teiHeader>
+	<text>
+		<body xml:base="{docPath}">
+			<div type="description">
+				<p><!-- Verbose discussion of the feature --></p>
+				<p></p>
+			</div>
+			<div type="featureRealisations">
+				<fs xml:id="fr_{id}" type="featureRealisation" source="zot:Abboud1979">
+					<f name="dialect" fVal=""/>
+					<f name="realisationType" fVal=""/>
+					<f name="attestedPlace" fVal=""></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0000" type="featureRealisation" source="zot:Herin2017">
+					<f name="dialect" fVal="dia:TUN-KNH1"/>
+					<f name="realisationType" fVal="#pr_s1c_āna"/>
+					<f name="attestedPlace" fVal="geo:kerkennah_oulad_bou_ali"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0001" type="featureRealisation" source="#zot:Herin2017">
+					<f name="dialect" fVal="dia:TUN-KNH3"/>
+					<f name="realisationType" fVal="#pr_s1c_aana"/>
+					<f name="attestedPlace" fVal="Kerkennah Mellita"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0002" type="featureRealisation" source="#zot:Singer1984">
+					<f name="dialect" fVal="dia:TUN-TNS"/>
+					<f name="realisationType" fVal="#pr_s1c_aana"/>
+					<f name="attestedPlace" fVal="geo:tunis"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+					<f name="originalSource" fVal="#os_000"/>
+				</fs>
+				<fs xml:id="fr_0003" type="featureRealisation" source="#">
+					<f name="dialect" fVal="dia:TUN-MZG"/>
+					<f name="realisationType" fVal="#pr_s1c_anaa"/>
+					<f name="attestedPlace" fVal="geo:douz"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0004" type="featureRealisation" source="#">
+					<f name="dialect" fVal="dia:TUN-SBZ"/>
+					<f name="realisationType" fVal="#pr_s1c_naa"/>
+					<f name="attestedPlace" fVal="geo:sidi_bouzid"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0005" type="featureRealisation" source="#">
+					<f name="dialect" fVal="dia:TUN-MHD"/>
+					<f name="realisationType" fVal="#pr_s1c_aani"/>
+					<f name="attestedPlace" fVal="geo:mahdia"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0006" type="featureRealisation" source="#">
+					<f name="dialect" fVal="dia:TUN-BGN"/>
+					<f name="realisationType" fVal="#pr_s1c_anaa"/>
+					<f name="attestedPlace" fVal="geo:bengardane"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0007" type="featureRealisation" source="#zot:Borg1997b">
+					<f name="dialect" fVal="dia:MLT-MAL"/>
+					<f name="realisationType" fVal="#pr_s1c_yiina"/>
+					<f name="attestedPlace" fVal="geo:malta"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0008" type="featureRealisation" source="#zot:Guerrero2015b">
+					<f name="dialect" fVal="dia:DZA-ORN"/>
+					<f name="realisationType" fVal="#pr_s1c_aana"/>
+					<f name="attestedPlace" fVal="geo:oran"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0009" type="featureRealisation" source="#zot:Guerrero2015b">
+					<f name="dialect" fVal="dia:DZA-ORN"/>
+					<f name="realisationType" fVal="#pr_s1c_aanaaya"/>
+					<f name="attestedPlace" fVal="geo:oran"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0010" type="featureRealisation" source="#zot:Caubet2004a">
+					<f name="dialect" fVal="dia:LBY-FZN"/>
+					<f name="realisationType" fVal="#pr_s1c_anaa"/>
+					<f name="attestedPlace" fVal="geo:fezzan"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0011" type="featureRealisation" source="#zot:Benkato2014">
+					<f name="dialect" fVal="dia:LBY-BGZ"/>
+					<f name="realisationType" fVal="#pr_s1c_anaa"/>
+					<f name="attestedPlace" fVal="geo:benghazi"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0012" type="featureRealisation" source="#zot:Benkato2014">
+					<f name="dialect" fVal="dia:LBY-BGZ"/>
+					<f name="realisationType" fVal="#pr_s1c_naa"/>
+					<f name="attestedPlace" fVal="geo:benghazi"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0013" type="featureRealisation" source="#zot:Harrama1993">
+					<f name="dialect" fVal="dia:LBY-JBL"/>
+					<f name="realisationType" fVal="#pr_s1c_ana"/>
+					<f name="attestedPlace" fVal="geo:al_jabal"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0014" type="featureRealisation" source="#">
+					<f name="dialect" fVal="dia:LBY-MSR"/>
+					<f name="realisationType" fVal="#pr_s1c_anaa"/>
+					<f name="attestedPlace" fVal="geo:misrata"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0015" type="featureRealisation" source="#">
+					<f name="dialect" fVal="dia:LBN-ABI"/>
+					<f name="realisationType" fVal="#pr_s1c_ana"/>
+					<f name="attestedPlace" fVal="geo:beqaa"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0016" type="featureRealisation" source="#">
+					<f name="dialect" fVal="dia:LBN-ABI"/>
+					<f name="realisationType" fVal="#pr_s1c_ani"/>
+					<f name="attestedPlace" fVal="#geo:beqaa"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0017" type="featureRealisation" source="#zot:Younes2013">
+					<f name="dialect" fVal="dia:LBN-ATI"/>
+					<f name="realisationType" fVal="#pr_s1c_ani"/>
+					<f name="attestedPlace" fVal="geo:wadi_khalid"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0018" type="featureRealisation" source="#">
+					<f name="dialect" fVal="dia:LBN-KHA"/>
+					<f name="realisationType" fVal="#pr_s1c_ana"/>
+					<f name="attestedPlace" fVal="geo:khalde"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0019" type="featureRealisation" source="#">
+					<f name="dialect" fVal="dia:LBN-KHA"/>
+					<f name="realisationType" fVal="#pr_s1c_ani"/>
+					<f name="attestedPlace" fVal="geo:khalde"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0020" type="featureRealisation" source="#">
+					<f name="dialect" fVal="dia:LBN-MSX"/>
+					<f name="realisationType" fVal="#pr_s1c_ana"/>
+					<f name="attestedPlace" fVal="geo:el_karantina"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0021" type="featureRealisation" source="#">
+					<f name="dialect" fVal="dia:LBN-MSX"/>
+					<f name="realisationType" fVal="#pr_s1c_ani"/>
+					<f name="attestedPlace" fVal="geo:el_karantina"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0022" type="featureRealisation" source="#">
+					<f name="dialect" fVal="dia:LBN-BEI"/>
+					<f name="realisationType" fVal="#pr_s1c_ana"/>
+					<f name="attestedPlace" fVal="geo:beirut"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0023" type="featureRealisation" source="#">
+					<f name="dialect" fVal="dia:LBN-BEI"/>
+					<f name="realisationType" fVal="#pr_s1c_ani"/>
+					<f name="attestedPlace" fVal="geo:beirut"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0024" type="featureRealisation" source="#">
+					<f name="dialect" fVal="dia:LBN-TRI"/>
+					<f name="realisationType" fVal="#pr_s1c_ana"/>
+					<f name="attestedPlace" fVal="geo:tripoli_lebanon"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0025" type="featureRealisation" source="#">
+					<f name="dialect" fVal="dia:LBN-ZAH"/>
+					<f name="realisationType" fVal="#pr_s1c_ana"/>
+					<f name="attestedPlace" fVal="geo:zahle"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0026" type="featureRealisation" source="#zot:Abu-Haidar1979">
+					<f name="dialect" fVal="dia:LBN-BAS"/>
+					<f name="realisationType" fVal="#pr_s1c_ana"/>
+					<f name="attestedPlace" fVal="geo:baskinta"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0027" type="featureRealisation" source="#zot:Jiha1964">
+					<f name="dialect" fVal="dia:LBN-BIS"/>
+					<f name="realisationType" fVal="#pr_s1c_ana"/>
+					<f name="attestedPlace" fVal="geo:bishmizzine"></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+				<fs xml:id="fr_0028" type="featureRealisation" source="#zot:Fleisch1974b">
+					<f name="dialect" fVal="dia:LBN-KSG"/>
+					<f name="realisationType" fVal="#pr_s1c_ana"/>
+					<f name="attestedPlace" fVal=""></f>
+					<f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+				</fs>
+			</div>
+			<div type="originalSources">
+				<cit type="orCit" xml:id="os_000" source="">
+					<quote>āna</quote>
+				</cit>
+			</div>
+			<div type="examples">
+			</div>
+		</body>
+		<back>
+		</back>
+	</text>
+	<standOff>
+	</standOff>
+</TEI>
