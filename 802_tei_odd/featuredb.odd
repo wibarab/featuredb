@@ -68,7 +68,7 @@
                </elementSpec>-->
                <moduleRef key="tei"/>
                <moduleRef key="dictionaries" include="lang"/>
-               <moduleRef key="header" include="abstract appInfo application availibility catDesc catRef category change classCode classDescl correspAction correspContext correspDesc creation distributor edition editionStmt encodingDesc extent fileDesc funder geoDecl hyphenation keywords langUsage language licence listChange listPrefixDef namespace normalization notesStmt prefixDef principal profileDesc projectDesc publicationStmt punctuation quotation ref revisionDesc samplingDecl seriesStmt sourceDesc sponsor stdVals teiHeader textClass titleStmt unitDecl unitDef"/>
+               <moduleRef key="header" include="abstract appInfo application availibility catDesc catRef category change classCode classDecl correspAction correspContext correspDesc creation distributor edition editionStmt encodingDesc extent fileDesc funder geoDecl hyphenation keywords langUsage language licence listChange listPrefixDef namespace normalization notesStmt prefixDef principal profileDesc projectDesc publicationStmt punctuation quotation ref revisionDesc samplingDecl seriesStmt sourceDesc sponsor stdVals taxonomy teiHeader textClass titleStmt unitDecl unitDef"/>
                <moduleRef key="corpus"/>
                <moduleRef key="textstructure" include="TEI back body front div text"/>
                <moduleRef key="namesdates" include="affiliation age birth bloc death district education event faith forename genName geo geogFeat geogName langKnowledge langKnown listEvent listOrg listPerson listPlace location nationality occupation org orgName persName person personGrp place placeName population region residence settlement socecStatus state surname trait"/>
@@ -159,14 +159,13 @@
                            <valItem ident="manuscript"/>
                         </valList>
                      </attDef>
-                     <attDef ident="cert" mode="delete"/>
+                     <!-- <attDef ident="cert" mode="delete"/> -->
                      <attDef ident="resp" mode="delete"/>
                      <attDef ident="status" mode="delete"/>
                      <attDef ident="corresp" mode="change" usage="req"/>
                   </attList>
                </elementSpec>
-               
-               
+                             
                
                
               
@@ -256,12 +255,25 @@
                   </attList>
                </elementSpec>
                
+               <elementSpec ident="language" mode="change">
+                  <attList>
+                     <attDef ident="ana">
+                        <valList type="closed">
+                           <valItem ident="#bedouin"/>
+                           <valItem ident="#sedentary"/>
+                           <valItem ident="#mixed"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               
                <elementSpec ident="note" mode="change">
                   <attList>
                      <attDef ident="type">
                         <valList type="closed">
                            <valItem ident="constraintNote"/>
                            <valItem ident="exceptionNote"/>
+                           <valItem ident="general"/>
                         </valList>
                      </attDef>
                   </attList>
@@ -270,7 +282,7 @@
                <elementSpec ident="title" mode="change">
                   <attList>
                      <attDef ident="calendar" mode="delete"/>
-                     <attDef ident="cert" mode="delete"/>
+                     <!--      <attDef ident="cert" mode="delete"/> -->
                      <attDef ident="corresp" mode="delete"/>
                      <attDef ident="notAfter" mode="delete"/>
                      <attDef ident="notBefore" mode="delete"/>
@@ -310,6 +322,7 @@
                         <valList type="closed">
                            <valItem ident="example"/>
                            <valItem ident="originalSource"/>
+                           <valItem ident="translation"/>
                         </valList>
                      </attDef>
                   </attList>
@@ -332,21 +345,18 @@
                            <elementRef key="bibl" minOccurs="0"/>
                            <elementRef key="correspDesc" minOccurs="0"/>
                         </alternate>
-                        <alternate minOccurs="1" maxOccurs="1">
-                           <elementRef key="region" maxOccurs="unbounded" minOccurs="1"/>
-                           <elementRef key="settlement" maxOccurs="unbounded" minOccurs="1"/>
-                        </alternate>
-                        <elementRef key="date" maxOccurs="1" minOccurs="1"/>
-                        <elementRef key="lang" minOccurs="0" maxOccurs="unbounded"/>
+                        <elementRef key="placeName" maxOccurs="unbounded" minOccurs="1"/>
+                        <elementRef key="language" minOccurs="0" maxOccurs="unbounded"/>
+                        <elementRef key="date" maxOccurs="1" minOccurs="0"/>
                         <!-- personGrp is defining a personGroup (whereas placeName references a place) – but there's no personGrpName element -->
-                       <elementRef key="personGrp" maxOccurs="unbounded" minOccurs="0"/>
-                         
+                        <elementRef key="personGrp" minOccurs="0" maxOccurs="unbounded"/>
+                        <elementRef key="ptr" minOccurs="0" maxOccurs="unbounded"/>                        
+                        <elementRef key="note" minOccurs="0" maxOccurs="unbounded"/>
                         
                         <alternate>
                            <elementRef key="cit" minOccurs="0" maxOccurs="unbounded"/>
                            <elementRef key="ptr" minOccurs="0" maxOccurs="unbounded"/>
                         </alternate>
-                        <elementRef key="note" maxOccurs="unbounded"/>
                      </sequence>
                   </content>
                   <attList>

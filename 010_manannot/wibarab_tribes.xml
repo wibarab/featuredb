@@ -1,0 +1,71 @@
+<?xml-stylesheet type="text/xsl" href="../082_scripts_xsl/vicav_geodata.xsl"?>
+<?xslt inPathSegment="\102_derived_tei\" outPathSegment="\106_html\"?>
+<?snippets fn="vicav_geodata_snippets.xml" path="{filePath}\..\830_enricher_conf\"?>
+<?processor name="saxon" removePreserveFromXML="true" removePreserveFromXSLT="true"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>WIBARAB tribes</title>
+            <author><name></name></author>
+            <respStmt>
+               <resp>Datamodel provided by</resp>
+               <name>Charly Mörth</name>
+            </respStmt>
+         </titleStmt>
+
+         <publicationStmt>
+            <p/>
+         </publicationStmt>
+
+         <sourceDesc>
+            <p/>
+         </sourceDesc>
+      </fileDesc>
+
+      <encodingDesc>
+         <geoDecl xml:id="dms" datum="WGS84-DMS">World Geodetic System: degrees - minutes - seconds</geoDecl>
+         <geoDecl xml:id="dd" datum="WGS84-DD">World Geodetic System: decimal degrees</geoDecl>
+         <listPrefixDef xml:id="listPrefixDef">
+            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../102_derived_tei/wibarab-dmp.xml#$1"/>
+            <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../102_derived_tei/vicav_biblio_tei_zotero.xml#$1"/>
+            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../102_derived_tei/vicav_dialects.xml#$1"/>
+         </listPrefixDef>
+      </encodingDesc>
+
+      <revisionDesc>
+         <change when="2022-07-03" who="dmp:CM">added listPrefixDef</change>
+         <change when="2022-07-03" who="dmp:CM">geoDecl to encodingDesc</change>
+         <change when="2022-07-03" who="dmp:CM">added @decls to geo eleemnts</change>
+         <change when="2022-07-03" who="dmp:CM">added geo[@decls='#dd'] with DMS data and converted to decimal format</change>
+      </revisionDesc>
+   </teiHeader>
+
+   <text>
+      <body>
+         <list>
+            <item>
+               <name type="tribe">Shukriya</name>
+               
+               <listPlace>
+                  <place>
+                     <location>
+                        <geo decls="#dms"></geo>
+                        <geo decls="#dd"></geo>
+                        <country key="SU">Sudan</country>                                                
+                     </location>
+                  </place> 
+                  <place>
+                     <location>
+                        <geo decls="#dms"></geo>
+                        <geo decls="#dd"></geo>
+                        <country key="SA">Saudi-Arabia</country>                                                
+                     </location>
+                  </place> 
+               </listPlace>            
+            <note/>
+            </item>
+         </list>         
+      </body>
+   </text>
+</TEI>

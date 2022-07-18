@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../082_scripts_xsl/tei_fs_2_html__001.xsl"?>
+<?xslt inPathSegment="\010_manannot\" outPathSegment="\106_html\"?>
+<?snippets fn="snippets_wibarab_001.xml" path="{filePath}\..\830_enricher_conf\"?>
+<?processor name="saxon" removePreserveFromXML="true" removePreserveFromXSLT="true"?>
+<?attributeAssignments fn="enricher_attributes.xml" path="{filePath}\..\830_enricher_conf\"?>
+<?shortCuts fn="wibarab_shortCuts" path="{filePath}\..\830_enricher_conf\"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../802_tei_odd/out/featuredb.xsd">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Treatment of pronouns, 2.p.sg.comunis</title>
+            <author>Maria Rebecca Zarb</author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>{publisher}</publisher>
+            <date when="0001-01-01"/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This is a born digital document. All sources used in compiling and collected the data are cated in the bibliographic sections of the respective entry / element.</p></sourceDesc>
+      </fileDesc>
+
+      <encodingDesc>
+         <classDecl>
+            <taxonomy>
+               <category xml:id="bedouin"><catDesc>bedouin</catDesc></category>
+               <category xml:id="sedentary"><catDesc>sedentary</catDesc></category>
+               <category xml:id="mixed"><catDesc>mixed</catDesc></category>
+            </taxonomy>
+         </classDecl>
+
+         <listPrefixDef xml:id="listPrefixDef">
+            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../010_manannot/wibarab-dmp.xml#$1"/>
+            <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_biblio_tei_zotero.xml#$1"/>
+            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_dialects.xml#$1"/>
+            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_geodata.xml#$1"/>
+         </listPrefixDef>
+      </encodingDesc>
+
+      <revisionDesc>
+         <change when="2022-18-05" who="#rz">created this file based on the 2p comunis file</change>
+         <change when="2022-07-15+02:00" who="dmp:DS">converted data to new schema version</change>
+         <change when="2022-07-15" who="dmp:CM">Conversion from fs schema to new schema</change>
+      </revisionDesc>
+   </teiHeader>
+
+   <text>
+      <body xml:base="{docPath}">
+         <div type="featureDescription">
+            <head>Feature Values</head>
+            <list type="featureValues">
+               <item xml:id="hand_yadd">
+                  <label>yadd</label>
+               </item>
+               <item xml:id="hand_yad">
+                  <label>yad</label>
+               </item>
+               <item xml:id="hand_yid">
+                  <label>yid</label>
+               </item>
+               <item xml:id="hand_yiid">
+                  <label>yīd</label>
+               </item>
+               <item xml:id="hand_yidd">
+                  <label>yidd</label>
+               </item>
+               <item xml:id="hand_ayd">
+                  <label>ayd</label>
+               </item>
+               <item xml:id="hand_eed">
+                  <label>ēd</label>
+               </item>
+               <item xml:id="hand_iid">
+                  <label>īd</label>
+               </item>
+               <item xml:id="hand_idd">
+                  <label>idd</label>
+               </item>
+               <item xml:id="hand_chaff">
+                  <label>čaff</label>
+               </item></list>
+         </div>
+
+         <div type="description">
+            <p xml:space="preserve"><!-- Verbose discussion of the feature --></p>
+         </div>
+
+         <div type="featureValueObservations">
+            <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0000" resp="dmp:???">
+               <name type="featureValue" ref="#hand_yidd"/>
+               <bibl corresp="zot:Behnstedt2011" type="publication" subtype="book"/>
+               <placeName ref="geo:tunis"/>
+               <ptr target="profiles\vicav_profile_TUN-TNS.xml"/>
+               <cit type="orCit" xml:id="os_000" source=""><quote xml:lang="ar">yidd</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0001" resp="dmp:???">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <ptr target="profiles\vicav_profile_.xml"/>
+               <cit type="orCit" xml:id="os_001" source=""><quote xml:lang="ar"/></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0002" resp="dmp:???">
+               <name type="featureValue" ref="#pr_s2c_inti"/>
+               <bibl corresp="#" type="publication" subtype=""/>
+               <placeName ref="geo:chebba"/>
+               <ptr target="profiles\vicav_profile_TUN-CHB.xml"/>
+            </wib:featureValueObservation>
+
+         </div>
+      </body>
+      <back>
+      </back>
+   </text>
+</TEI>
