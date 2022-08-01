@@ -1,5 +1,5 @@
 <?xml-stylesheet type="text/xsl" href="../082_scripts_xsl/vicav_geodata.xsl"?>
-<?xslt inPathSegment="\102_derived_tei\" outPathSegment="\106_html\"?>
+<?xslt inPathSegment="\010_manannot\" outPathSegment="\106_html\"?>
 <?snippets fn="vicav_geodata_snippets.xml" path="{filePath}\..\830_enricher_conf\"?>
 <?processor name="saxon" removePreserveFromXML="true" removePreserveFromXSLT="true"?>
 <TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
@@ -28,9 +28,12 @@
          <geoDecl xml:id="dd" datum="WGS84-DD">World Geodetic System: decimal degrees</geoDecl>
          
          <listPrefixDef xml:id="listPrefixDef">
-            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../102_derived_tei/wibarab-dmp.xml#$1"/>
-            <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../102_derived_tei/vicav_biblio_tei_zotero.xml#$1"/>
-            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../102_derived_tei/vicav_dialects.xml#$1"/>
+            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../010_manannot/wibarab-dmp.xml#$1"></prefixDef>
+            <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_biblio_tei_zotero.xml#$1"></prefixDef>
+            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_dialects.xml#$1"></prefixDef>
+            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_geodata.xml#$1"/>
+            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../010_manannot/wibarab_tribes.xml#$1"></prefixDef>
+
          </listPrefixDef>
       </encodingDesc>
 
