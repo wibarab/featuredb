@@ -22,7 +22,7 @@
          <xsl:comment>XSLT: tei_2_html__simple_text.xsl</xsl:comment>
          <head>
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-            <link rel="stylesheet" href="../650_css/basic__001.css"></link>
+            <link rel="stylesheet" href="../../650_css/basic__001.css"></link>
          </head>
 
          <body>
