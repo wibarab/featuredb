@@ -39,7 +39,7 @@
       <revisionDesc>
          <change who="#" when=""></change>
          <change when="" who="dmp:">c</change>
-         <change when="" who="dmp: "></change>
+         <change when="2022-07-15" who="dmp:CM">Conversion from fs schema to new schema</change>
       </revisionDesc>
    </teiHeader>
 
@@ -47,29 +47,44 @@
       <body xml:base="{docPath}">
          <div type="tbd">
             <list>
-               <item></item>
-               <item></item>
+               <item>Remove empty examples</item>
+               <item>Repair notes in socioLingConstraints</item>
             </list>
          </div>
 
          <div type="featureDescription">
             <head>Feature Values</head>
             <list type="featureValues">
-               <item xml:id="">
-                  <label></label>
+               <item xml:id="ǧ_ǧ">
+                  <label>ǧ → ǧ</label>
                </item>
                <item xml:id="ǧ_ž">
                   <label>ǧ → ž</label>
                </item>
-  </list>
+               <item xml:id="ǧ_ź">
+                  <label>ǧ → ź</label>
+               </item>
+               <item xml:id="ǧ_y">
+                  <label>ǧ → y</label>
+               </item>
+               <item xml:id="ǧ_gy">
+                  <label>ǧ → gy</label>
+               </item>
+               <item xml:id="ǧ_dy">
+                  <label>ǧ → dy</label>
+               </item>
+               <item xml:id="ǧ_g">
+                  <label>ǧ → g</label>
+               </item>
+            </list>
          </div>
 
          <div type="description">
          </div>
 
          <div type="featureValueObservations">
-            <wib:featureValueObservation xml:id="fv_0000" cert="unknown" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref="#"/>
+            <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0000_new_moon_please" resp="dmp:???">
+               <name type="featureValue" ref="#ǧ_ǧ"/>
                <bibl corresp="zot:" type="publication" subtype=""/>
                <placeName ref="geo:beqaa"/>
                <ptr target="profiles\vicav_profile_LBN-ABI.xml"/>
