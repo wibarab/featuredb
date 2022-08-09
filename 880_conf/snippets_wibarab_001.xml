@@ -1,0 +1,78 @@
+<snippets xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" xml:space="preserve">
+
+   <!--*************************************************************************-->
+   <!--** The list on the left side is filled with the pseudo-n (pn)        ****-->
+   <!--** and pseudo-name (pname) attributes.                               ****-->
+   <!--** Pseudo-n's can also be used as substittion short-cuts in the XML  ****-->
+   <!--** editor. E.g. #p# is automatically replaced by <p></p>             ****-->
+   <!--*************************************************************************-->
+
+<wib:featureValueObservation pn="fv" pname="featValueObs" cert="unknown" status="draft" xml:id="" resp="dmp:???">
+   <name type="featureValue" ref="{caret}"/>
+   <bibl corresp="#" type="publication" subtype=""/>
+   <placeName ref=""/>
+</wib:featureValueObservation>
+
+<change pn="ch" pname="change" when="{iso-date}" who="dmp:???">{caret}</change>
+
+<cit pn="ci" pname="cit:example" type="example" xml:id="ex_{rn}">
+   <quote>{caret}</quote>
+
+   <cit type="translation">
+      <quote></quote>
+   </cit>
+</cit>
+
+<cit pn="oc" pname="orCit" type="orCit" xml:id="os_{rn}" source="">
+   <quote></quote>
+</cit>
+
+<language pn="lb" pname="lang:bedouin" ident="ar" ana="#bedouin"/>
+<language pn="ls" pname="lang:sedentary" ident="ar" ana="#sedentary"/>
+<language pn="lm" pname="lang:mixed" ident="ar" ana="#mixed"/>
+
+<note pn="nc" pname="note:constraint" type="constraintNote">{caret}</note>
+
+<note pn="ne" pname="note:exception" type="exceptionNote">{caret}</note>
+
+<note pn="ng" pname="note:general" type="general">{caret}</note>
+
+<personGrp pn="tr" pname="personGrp:tr" type="tribe">
+   <name>[tribe's name]</name>
+   <residence></residence>
+   <bibl corresp=""></bibl>
+</personGrp>
+
+<ptr pn="pp" pname="ptr:profile" target="{caret}"/>
+
+<language pn="la" pname="language" ident="ar" ana="{caret}"/>
+
+
+   <!--*************************************************************************-->
+   <!--**   Templates used in XSL **********************************************-->
+   <!--*************************************************************************-->
+
+   <xsl:apply-templates/>{caret}
+
+   <xsl:attribute name="{caret}"></xsl:attribute>
+
+   <xsl:choose>{caret}</xsl:choose>
+
+   <xsl:for-each select="{caret}"></xsl:for-each>
+
+   <xsl:if test="">{caret}</xsl:if>
+
+   <xsl:otherwise>{caret}</xsl:otherwise>
+
+   <xsl:text>{caret}</xsl:text>
+
+   <xsl:template match="{caret}"></xsl:template>
+
+   <xsl:value-of select="{caret}"/>
+
+   <xsl:variable></xsl:variable>
+
+   <xsl:when test="">{caret}</xsl:when>
+
+
+</snippets>

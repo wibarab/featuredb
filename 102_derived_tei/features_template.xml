@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../082_scripts_xsl/tei_fs_2_html__001.xsl"?>
+<?xslt inPathSegment="\102_derived_tei\" outPathSegment="\106_html\"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Treatment of ???</title>
+            <author></author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>{publisher}</publisher>
+            <date when="0001-01-01"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <ptr target="{ptrtarget}"/>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+
+      <encodingDesc>
+         <fsdDecl>
+            <fvLib n="q featureValues" xml:id="q_values">
+               <fs xml:id="q_g"><f name="explanation">q --˃ /g/ only</f><f name="note"></f></fs>
+               <fs xml:id="q_g_affr1"><f name="explanation">q --˃ /g/ + affrication (in the environment of anterior vowel) ǵ</f><f name="note"></f></fs>
+               <fs xml:id="q_g_affr2"><f name="explanation">q --˃ /g/ + affrication (in the environment of anterior vowel) ǧ</f></fs>
+               <fs xml:id="q_hamza"><f name="explanation">q --˃ /ʔ/</f></fs>
+               <fs xml:id="q_q"><f name="explanation">q --˃ /q/</f></fs>
+               <fs xml:id="q_k_emph"><f name="explanation">q --˃ emphatic k</f></fs>
+               <fs xml:id="q_j"><f name="explanation">q --˃ /j/</f></fs>
+            </fvLib>
+         </fsdDecl>
+      </encodingDesc>
+
+
+      <revisionDesc>
+         <change who="#cm" when="2022-03-02">Created template</change>
+      </revisionDesc>
+   </teiHeader>
+
+   <text>
+      <body xml:base="{docPath}">
+
+         <div type="description">
+            <p></p>
+         </div>
+
+         <div type="featureRealisations">
+            <fs type="featureRealisation" source="#Zimmermann1994">
+               <f name="dialect" fVal="#LBN-BEI2"/>
+               <f name="realisationType" fVal="#q_hamza"/>
+               <f name="attestedPlace" fVal="#agadir"></f>
+               <f name="example" fVal="#id_ex_001"/>
+               <f name="example" fVal="#id_ex_002"/>
+               <f name="example" fVal="#id_ex_003"/>
+
+               <f name="attestedDate"><vColl><symbol value="yearOf"/></vColl></f>
+
+               <f name="socioLingConstraints">
+                  <fs>
+                     <f name="gender"/>
+                     <f name="ageGroup"/>
+                     <f name="academicLevel"/>
+                     <f name="occupation"/>
+                     <f name="note"></f>
+                  </fs>
+               </f>
+
+               <f name="lexicalDomain"><string>Turkish loans</string></f>
+            </fs>
+         </div>
+
+         <div type="examples">
+            <cit type="example" xml:id="id_ex_001">
+               <quote>ana arūḥ s-sū<seg ana="#q_q">q</seg>.</quote>
+
+               <cit type="translation">
+                  <quote>ī go to the market.</quote>
+               </cit>
+            </cit>
+         </div>
+      </body>
+
+      <back>
+
+      </back>
+   </text>
+</TEI>

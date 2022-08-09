@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<?xml-model href="../tools/802_tei_odd/out/vicav_profiles.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../tools/802_tei_odd/out/vicav_profiles.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" xml:id="profile_mekka_01">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>A machine-readable profile of Mecca Arabic</title>
+            <author>Claudia Laaber</author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>ACDH-OeAW</publisher>
+            <pubPlace>Vienna</pubPlace>
+            <date>2019</date>
+            <availability status="restricted">
+               <p>
+                  <ref type="license" target="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
+               </p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This is an original digital text</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <tagsDecl partial="true">
+            <rendition xml:id="i" scheme="css">font-style:italics;</rendition>
+            <rendition xml:id="u" scheme="css">text-decoration:underline;</rendition>
+            <rendition xml:id="b" scheme="css">font-weight:bold;</rendition>
+         </tagsDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change status="created" when="2019-12-03T09:20:00Z" who="#">created</change>
+         <change status="draft" when="2020-09-24T07:42:00Z" who="#">last modified (revision 1)</change>
+         <change status="draft" when="2020-09-24T09:42:21.721+02:00">transformed to TEI-XML</change>
+         <change when="2020-09-24T09:42:22.741+02:00" status="draft"/>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div>
+            <head>
+               <figure>
+                  <graphic url="makka.jpg"/>
+                  <head type="imgCaption">
+                     <ref target="https://commons.wikimedia.org/wiki/Category:Mecca/media/File:Great_Mosque_of_Mecca1.jpg">Wikimedia</ref>
+                  </head>
+               </figure>
+               <label>Name (English)</label>
+               <name type="place" xml:lang="eng">Mecca</name>
+               <label>Name (Fuṣḥā, transcription)</label>
+               <name xml:lang="ara">Makka/Makka al-Mukarrama</name>
+            </head>
+            <div type="positioning">
+               <head>Geo location</head>
+               <p>
+                  <geo>21°25'N 39°49'E</geo>
+                  <country>Saudi Arabia</country>
+               </p>
+            </div>
+            <div type="typology">
+               <head>Typology (Local)</head>
+               <p rend="typology">East (Mashreq) &gt; Arabia &gt; Hijaz</p>
+               <p>special position; closer to the dialects of Sudan</p>
+            </div>
+            <div type="general">
+               <head>General</head>
+               <p>The city of Mecca is located in the Hijaz in far western Saudi Arabia. </p>
+               <p>It is the birthplace of the prophet Muhammad and hosts the most important mosque of Islam. The Kaaba in the Great Mosque is considered the most sacred sanctuary by the majority of Muslims around the world, who face its direction during their daily prayers.</p>
+               <p>Millions of Muslims visit Mecca every year during the annual pilgrimage, the so-called Ḥaǧǧ, which is one of the Five Pillars of Islam and a religious duty required once in a lifetime of all adult Muslims capable of carrying it out.</p>
+               <p>The cosmopolitan character of Mecca is also reflected in its dialect, which is influenced by the numerous pilgrims coming to Mecca from all over the world every year.</p>
+            </div>
+            <div type="researchHistory">
+               <head>Research history</head>
+               <p>One of the first records about Meccan Arabic dates back to the end of the 19th
+               century, when the Dutch scholar Christiaan Snouck Hurgronje spend nearly
+               half a year in Mecca in incognito research. His main focus was on
+               the city’s history and traditions. In the course of this he also made
+               a collection of proverbs, which he later published in German translation
+               with short explanations (<rs type="bibl" ref="zotid:QTGIM2EC">Hurgronje 1886</rs>).
+               Nearly a century later, <rs type="bibl" ref="zotid:E3CIIGJS">Al-Sasi (1971)</rs> also
+               published a collection of Meccan proverbs and folklore texts with German translations.</p>
+
+               <p><rs type="bibl" ref="zotid:NUYJ2FK2">Schreiber (1971)</rs> is a
+               sketch of Meccan Arabic grammar including transcribed sample texts
+               translated into German. <rs type="bibl" ref="zotid:477IIVGV">Ingham (1971)</rs> and
+               <rs type="bibl" ref="zotid:6NBUXHWB">Bakalla (1979)</rs> both deal with phonology and verb morphology.</p>
+               <p><rs type="bibl" ref="zotid:8Y8AN3ZL">Al-Sasi (1972)</rs> is a review of <rs type="bibl" ref="zotid:NUYJ2FK2">Schreiber (1971)</rs> and
+               <rs type="bibl" ref="zotid:477IIVGV">Ingham (1971)</rs>, including notes and additions.</p>
+               <p><rs type="bibl" ref="zotid:X9IM6AM8">Sieny (1978)</rs> is a detailed study of Urban Hijazi Arabic syntax within a tagmemic framework.</p>
+               <p><rs type="bibl" ref="zotid:LE6SGXBC">Bakalla (2002)</rs> is an
+               investigation on Misfalawiyah Arabic, an almost extinct variety of
+               Meccan Arabic spoken between the 1930s and 1960s.</p>
+               <p>A concise linguistic sketch of Meccan Arabic can be found in the <rs type="bibl" ref="zotid:YCEU6U9V">EALL (Abu Mansour 2011)</rs></p>
+            </div>
+            <div type="textBooks">
+               <head>Text books</head>
+               <p><rs type="bibl" ref="zotid:9KUXTVCL">Omar (1975)</rs> is a basic course on
+               Urban Hijazi Arabic containing 50 different units with text-samples and Arabic-English glossary.</p>
+            </div>
+             <div type="bibliography">
+               <p>To view publications on this variety click <rs type="bibl" ref="bibl:geo:Mecca">here</rs>.</p>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

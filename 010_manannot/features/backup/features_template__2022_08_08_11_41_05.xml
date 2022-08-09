@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../../082_scripts_xsl/tei_fs_2_html__001.xsl"?>
+<?xslt inPathSegment="\010_manannot\" outPathSegment="\106_html\"?>
+<?snippets fn="snippets_wibarab_001.xml" path="{filePath}\..\..\880_conf\"?>
+<?processor name="saxon" removePreserveFromXML="true" removePreserveFromXSLT="true"?>
+<?attributeAssignments fn="enricher_attributes.xml" path="{filePath}\..\..\880_conf\"?>
+<?shortCuts fn="wibarab_shortCuts" path="{filePath}\..\..\880_conf\"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../802_tei_odd/out/featuredb.xsd">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Templates for language varieties in North Africa</title>
+            <author>Maria Rebecca Zarb</author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>{publisher}</publisher>
+            <date when="2022-08-04"/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This is a document for the templates for the dialects of North Africa and other peripherial dialects currently supervized by Rebecca.</p></sourceDesc>
+      </fileDesc>
+
+      <encodingDesc>
+         <classDecl>
+            <taxonomy>
+               <category xml:id="bedouin"><catDesc>bedouin</catDesc></category>
+               <category xml:id="sedentary"><catDesc>sedentary</catDesc></category>
+               <category xml:id="mixed"><catDesc>mixed</catDesc></category>
+            </taxonomy>
+         </classDecl>
+         <listPrefixDef xml:id="listPrefixDef">
+            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab-dmp.xml#$1"/>
+            <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_biblio_tei_zotero.xml#$1"/>
+            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_dialects.xml#$1"/>
+            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"/>
+         </listPrefixDef>
+      </encodingDesc>
+
+      <revisionDesc>
+         <change who="#" when=""></change>
+         <change when="" who="dmp:">c</change>
+         <change when="" who="dmp: "></change>
+      </revisionDesc>
+   </teiHeader>
+
+   <text>
+      <body xml:base="{docPath}">
+         <div type="tbd">
+            <list>
+               <item></item>
+               <item></item>
+            </list>
+         </div>
+
+         <div type="featureDescription">
+            <head>Feature Values</head>
+            <list type="featureValues">
+               <item xml:id="">
+                  <label></label>
+               </item>
+               <item xml:id="ǧ_ž">
+                  <label>ǧ → ž</label>
+               </item>
+  </list>
+         </div>
+
+         <div type="description">
+         </div>
+
+         <div type="featureValueObservations">
+
+
+            <wib:featureValueObservation xml:id="fv_0000" cert="unknown" status="draft" resp="dmp:RZ">
+               <name type="featureValue" ref=" "/>
+               <bibl corresp="zot:Behnstedt1998c" type="publication" subtype="journalArticle"/>
+               <placeName ref="geo:djerba"/>
+               <ptr target="profiles\vicav_profile_TUN-DJI.xml"/>
+               <language ident="ar" ana="#sedentary"/>
+
+	       <cit type="example" xml:id="ct_0000"><quote></quote>
+	       <cit type="translation"><quote></quote>
+               </cit>
+               </cit>
+               <note type="general">note 1</note>
+               <note type="constraintNote">note 2</note>
+               <note type="exceptionNote">note 3</note>
+               <f name="socioLingConstraints">
+               <fs>
+               <note type="general"></note>
+               </fs>
+               </f>
+               </wib:featureValueObservation>
+
+ 	       <wib:featureValueObservation xml:id="fv_0002" cert="unknown" status="draft" resp="dmp:RZ">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Behnstedt1998c" type="publication" subtype="journalArticle"/>
+               <placeName ref="geo:djerba"/>
+               <ptr target="profiles\vicav_profile_TUN-DJJ.xml"/>
+               <language ident="ar" ana="#sedentary"/>
+	       <cit type="example" xml:id="ct_0001"><quote>kelb</quote>
+	       <cit type="translation"><quote>dog</quote>
+               </cit>
+               </cit>
+               <note type="general">1</note>
+               <note type="constraintNote">2</note>
+               <note type="exceptionNote">3</note>
+	       <f name="socioLingConstraints">
+               <fs>
+               <note type="general"></note>
+               </fs>
+               </f>
+	       </wib:featureValueObservation>
+
+                <wib:featureValueObservation xml:id="fv_0001" cert="unknown" status="draft" resp="dmp:RZ">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Behnstedt1998c" type="publication" subtype="journalArticle"/>
+               <placeName ref="geo:djerba"/>
+               <ptr target="profiles\vicav_profile_TUN-DJM.xml"/>
+               <language ident="ar" ana="#sedentary"/>
+ 	        <cit type="example" xml:id="ct_0001"><quote></quote>
+	       <cit type="translation"><quote></quote>
+               </cit>
+               </cit>
+               <note type="general"></note>
+               <note type="constraintNote"></note>
+               <note type="exceptionNote"></note>
+	       <f name="socioLingConstraints">
+               <fs>
+               <note type="general"></note>
+               </fs>
+               </f>
+	       </wib:featureValueObservation>
+
+	       <wib:featureValueObservation cert="unknown" status="draft" xml:id="" resp="dmp:RZ">
+               <name type="featureValue" ref=" "/>
+               <bibl corresp="zot:Herin2017" type="publication" subtype="book"/>
+               <placeName ref="geo:kerkennah_oulad_bou_ali"/>
+               <ptr target="profiles\vicav_profile_TUN-KNH1.xml"/>
+               <language ident="ar" ana="#sedentary"/>
+ 	       <cit type="example" xml:id="ct_0002"><quote></quote>
+	       <cit type="translation"><quote></quote>
+	        </cit>
+                </cit>
+               <note type="general"></note>
+               <note type="constraintNote"></note>
+               <note type="exceptionNote"></note>
+	       <f name="socioLingConstraints">
+               <fs>
+               <note type="general"> socio note</note>
+               </fs>
+               </f>
+	       </wib:featureValueObservation>
+
+	       <wib:featureValueObservation cert="unknown" status="draft" xml:id="" resp="dmp:RZ">
+               <name type="featureValue" ref=" "/>
+               <bibl corresp="zot:Herin2017" type="publication" subtype="book"/>
+               <placeName ref="geo:kerkennah_oulad_kacem"/>
+               <ptr target="profiles\vicav_profile_TUN-KNH2.xml"/>
+               <language ident="ar" ana="#sedentary"/>
+ 	       <cit type="example" xml:id="ct_0003"><quote></quote>
+	       <cit type="translation"><quote></quote>
+               </cit>
+               </cit>
+               <note type="general"></note>
+               <note type="constraintNote"></note>
+               <note type="exceptionNote"></note>
+	       <f name="socioLingConstraints">
+               <fs>
+               <note type="general"> socio note</note>
+               </fs>
+               </f>
+	       </wib:featureValueObservation>
+
+	       <wib:featureValueObservation cert="unknown" status="draft" xml:id="" resp="dmp:RZ">
+               <name type="featureValue" ref=" "/>
+               <bibl corresp="zot:Herin2017" type="publication" subtype="book"/>
+               <placeName ref="geo:kerkennah_mellita"/>
+               <ptr target="profiles\vicav_profile_TUN-KNH3.xml"/>
+               <language ident="ar" ana="#sedentary"/>
+ 	       <cit type="example" xml:id="ct_0001"><quote></quote>
+	       <cit type="translation"><quote></quote>
+               </cit>
+               </cit>
+               <note type="general"></note>
+               <note type="constraintNote"></note>
+               <note type="exceptionNote"></note>
+	       <f name="socioLingConstraints">
+               <fs>
+               <note type="general"> socio note</note>
+               </fs>
+               </f>
+	       </wib:featureValueObservation>
+
+               <wib:featureValueObservation cert="unknown" status="draft" xml:id="" resp="dmp:RZ">
+               <name type="featureValue" ref=" "/>
+               <bibl corresp="zot:Singer1984" type="publication" subtype="book"/>
+               <placeName ref="geo:tunis"/>
+               <ptr target="profiles\vicav_profile_tunis.xml"/>
+               <language ident="ar" ana="#sedentary"/>
+ 	       <cit type="example" xml:id="ct_0001"><quote></quote>
+	       <cit type="translation"><quote></quote>
+               </cit>
+               </cit>
+               <personGrp type="tribe">
+ 	         <name>[Marazig-women]</name>
+   		 <residence></residence>
+   		 <bibl corresp="zot:Ritt2004"></bibl>
+		 </personGrp>
+               <note type="general"></note>
+               <note type="constraintNote"></note>
+               <note type="exceptionNote"></note>
+	       <f name="socioLingConstraints">
+               <fs>
+               <note type="general"></note>
+               </fs>
+               </f>
+	       </wib:featureValueObservation>
+         </div>
+      </body>
+      <back>
+      </back>
+   </text>
+</TEI>
