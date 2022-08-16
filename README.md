@@ -7,16 +7,6 @@ WIBARAB is a very nice project in the field of Arabic dialectology. It consists 
 The *Feature Database* will be the main point of integrating the results of the sub-projects. In this repository we collect the primary data of the database in TEI/XML.
 
 
-<<<<<<< HEAD
-# Random Commits
-Here is some text just to try another commit.
-
-Blabla
-
-#I am doing very important edits für the future
-Thats Terlans changes. 
-Second chnage by Terlan
-=======
 Principal Investigator: Stephan Procházka (University of Vienna)     
 National Cooperation Partner: Charly Mörth (Austrian Academy of Sciences)     
 
@@ -64,12 +54,14 @@ When a new version of the schema is to be released:
 
 * In the ODD document:
 	* update `@n` on `<edition>` to only contain the exact version number (e.g. `2.1.3b`).
-	* change `<edition>` to include the version number. These elements are treated only as labels and can thus include human-readble additions (like e.g. `Version 2.1.3 Beta`)BBK
+	* change `<edition>` to include the version number. These elements are treated only as labels and can thus include human-readble additions (like e.g. `Version 2.1.3 Beta`)
 	* add a `<change>` element with your editor ID and the current date, setting `@status="published"`. Ideally add a `<list>` with all the changes you did in the ODD. 
+	* *Do not change the filename of the ODD document.*
 * In oXygen:
 	* Generate the XSD schema from the ODD by right-clicking on `802_tei_odd/featuredb.odd` and selecting `Transform > Transform with > TEI ODD to XML Schema`. The resulting files are placed into a new directory `802_tei_odd/out`. 
-	* create a new subfolder named `{versionnumber}` in `804_xsd/`, e.g. `804_xsd/2.1.3b/` and move the files from `802_tei_odd/out` to that folder. Afterwards delete `802_tei_odd/out`. *Do not change the filename of the ODD document.*
+	* create a new subfolder named `{versionnumber}` in `804_xsd/`, e.g. `804_xsd/2.1.3b/` and move the files from `802_tei_odd/out` to that folder. 
 * Generate the html documentation and place it under `850_docs/featuredb_{versionnumber}.html`
+* Afterwards delete `802_tei_odd/out`. 
 * Write a conversion script to transform documents from the previous schema version to the current one. 
 	* Important: make sure that the conversion script updates the `@xsi:schemaLocation` in the migrated document instance.
 	* Place the XSLT script under `082_scripts_xsl/migrations` and name it `migrate_to_{versionnumber}.xsl` (e.g. migrations/migrate_to_1.0.0b.xsl`).
@@ -83,6 +75,5 @@ When a new version of the schema is to be released:
 ## About this file
 
 This README file has a long-wound and dark history of editing. If you dare, you can check it out [here](https://github.com/wibarab/featuredb/commits/e5d4a768a1702403e8772a0085a3ac2c66c0cf3f/README.md).
->>>>>>> a224ebef8a8eda653959d20934bcd48ea3e1130c
 
 
