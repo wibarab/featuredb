@@ -169,8 +169,14 @@
                            <valItem ident="campaign"/>
                         </valList>
                      </attDef>
-                     <attDef ident="subtype" mode="add">
-                        <!-- This is extraced by running distinct-values(//biblStruct/@type) on the TEI export of the VICAV bibliography. -->
+                     <!-- 
+                        
+                        Removing @subtype from data-entry TEI
+                        Cf. https://github.com/wibarab/featuredb/issues/6#issuecomment-1217537096
+                     
+                     -->
+                     <!--<attDef ident="subtype" mode="add">
+                        <!-\- This is extraced by running distinct-values(//biblStruct/@type) on the TEI export of the VICAV bibliography. -\->
                         <valList type="closed">
                            <valItem ident="conferencePaper"/>
                            <valItem ident="bookSection"/>
@@ -181,7 +187,7 @@
                            <valItem ident="magazineArticle"/>
                            <valItem ident="manuscript"/>
                         </valList>
-                     </attDef>
+                     </attDef>-->
                      <!-- <attDef ident="cert" mode="delete"/> -->
                      <attDef ident="resp" mode="delete"/>
                      <attDef ident="status" mode="delete"/>
@@ -451,9 +457,9 @@
                </elementSpec>
                
                <elementSpec ident="lang" mode="change">
-                  <attList>
-                     <attRef class="att.canonical" name="ref"/>
-                  </attList> 
+                  <classes mode="change">
+                     <memberOf key="att.naming"/>
+                  </classes> 
                </elementSpec>
                
                
