@@ -141,6 +141,17 @@
               </tr>
             </xsl:if>
 
+            <xsl:if test="tei:lang">
+              <tr>
+                 <td class="tdLeft">Profiles</td>
+                 <td class="tdRight">
+                    <xsl:for-each select="tei:lang">
+                    <p><xsl:value-of select="@target"/></p>
+                    </xsl:for-each>
+                 </td>
+              </tr>
+            </xsl:if>
+
             <xsl:if test="tei:cit[@type='example']">
               <tr>
                  <td class="tdLeft">Examples</td>
