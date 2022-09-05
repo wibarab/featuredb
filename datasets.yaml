@@ -1,0 +1,95 @@
+---
+# This is a sample DDD (Dataset Description Document) describing the 
+# datasets provided by the WIBARAB FeatureDB repository. It should get 
+# picked up automatically by the ACDH-CH Resource Catalogue Crawler which
+# can use this information to further 
+
+meta:
+  author: daniel.schopper@oeaw.ac.at
+  project: WIBARAB
+
+Datasets: 
+  - label: VICAV Place List
+    id: 1b2c3a93-bd1c-48b6-b4fc-4dcf5df7bfdf
+    description: |
+        This is a TEI-encoded list of all places mentioned in the WIBARAB project.
+        Originally stemming from VICAV, the list is extended in WIBARAB both by quantity 
+        and quality: On the one hand, more places are being added by the editorial team 
+        during data collection, on the other hand is planned that regions (marked 
+        with @type='region' on `<place>`) geoshapes will be added / 
+        in order to render regions on the map).
+    owners:
+      Datasets karlheinz.moerth@oeaw.ac.at
+      - daniel.schopper@oeaw.ac.at
+
+    datasetInstances:
+      - label: VICAV Place List - Original Data
+        id:  06409bce-5e7b-47b6-a3ae-c1ed1f5eb3a9
+        curationMode: manual
+        location: https://github.com/acdh-oeaw/vicav-content/blob/master/vicav_biblio/vicav_geodata.xml
+        note: > 
+          From point of view of the WIBARAB project, the VICAV place list is  
+          static as any manual changes will be kept in the WIBARAB namespace but
+          should be ported back to VICAV when finished.
+      - label: VICAV Place List - WIBARAB fork
+        status: curated
+        curationMode: manual
+        location: 010_manannot/vicav_geodata.xml    
+        note: > 
+          This is the instance actively being edited by the WIBARAB team.
+        curators:
+        - rebecca.zarb@univie.ac.at
+        - veronika.engler@univie.ac.at
+  
+  - label: WIBARAB Feature Database
+    id: 67e4ef18-a1a3-462b-ba69-7746317bbb90
+    description: > 
+      A database of linguistic phenomena (features) observed in the Arabic varieties under investigation.
+    
+    datasetInstances:
+      - label: FeatureDB Source Records
+        status: curated
+        location: "./010_manannot/features/*.xml"
+        curationMode: manual
+        note: > 
+          These documents are manually encoded by the editorial team. Instead of replicating 
+          information found in other locations, it just references that
+        format: #populated_by_crawler
+        size: #populated_by_crawler
+      - label: FeatureDB Enriched records
+        creationMode: generated
+        generatedBy: "./082_scripts_xsl/enrichRecords.xsl"
+        format: #populated_by_crawler
+        size: #populated_by_crawler
+  
+  - label: VICAV Bibliography
+    type: data
+    status: reused
+    note: >
+      This is a copy of the VICAV Bibliography 
+    relations:
+      - input: 6f715c0a-8d9d-4cf9-a295-cd7a921ffdbbs
+    datasetInstances:
+      - label: export
+
+
+  - label: featuredb enricher script
+    id: d3daa999-fd12-4dac-af2d-8835d241aee9
+    type: software
+    description: > 
+      This script is used to de-reference information into the featuredb records, 
+      thus creating stand-alone documents for further display / querying etc.
+    datasetInstances:
+      - label: Script
+        location: "./082_scripts_xsl/enrichRecords.xsl"
+        relations:
+          - input: "./010_manannot/features/*.xml"
+          - input: "./010_manannot/vicav_biblio_tei_zotero.xml"
+          - input: "./010_manannot/wibarab_dmp.xml"
+          - input: "./010_manannot/wibarab_sources.xml"
+          - input: "./010_manannot/wibarab_tribes.xml"
+          - output: "./102_derived_tei/features/*.xml"
+
+
+
+...

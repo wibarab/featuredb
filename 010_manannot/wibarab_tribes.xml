@@ -11,18 +11,16 @@
             <respStmt>
                <resp>Datamodel provided by</resp>
                <name>Charly Mörth</name>
+               <name>Daniel Schopper</name>
             </respStmt>
          </titleStmt>
-
          <publicationStmt>
-            <p/>
+            <p>Publication Information</p>
          </publicationStmt>
-
          <sourceDesc>
-            <p/>
+            <p>Information about the source</p>
          </sourceDesc>
       </fileDesc>
-
       <encodingDesc>
          <geoDecl xml:id="dms" datum="WGS84-DMS">World Geodetic System: degrees - minutes - seconds</geoDecl>
          <geoDecl xml:id="dd" datum="WGS84-DD">World Geodetic System: decimal degrees</geoDecl>
@@ -32,46 +30,49 @@
             <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_biblio_tei_zotero.xml#$1"></prefixDef>
             <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_dialects.xml#$1"></prefixDef>
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_geodata.xml#$1"/>
-            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../010_manannot/wibarab_tribes.xml#$1"></prefixDef>
-
          </listPrefixDef>
       </encodingDesc>
 
       <revisionDesc>
-         <change when="2022-07-03" who="dmp:CM">added listPrefixDef</change>
-         <change when="2022-07-03" who="dmp:CM">geoDecl to encodingDesc</change>
-         <change when="2022-07-03" who="dmp:CM">added @decls to geo eleemnts</change>
-         <change when="2022-07-03" who="dmp:CM">added geo[@decls='#dd'] with DMS data and converted to decimal format</change>
+         <change when="2022-09-05" who="dmp:DS">initial template</change>
       </revisionDesc>
    </teiHeader>
 
    <text>
       <body>
-         <list>
-            <item>
-               <name type="tribe">Shukriya</name>
-               
-               <listPlace>
-                  <place>
-                     <location>
-                        <geo decls="#dms"></geo>
-                        <geo decls="#dd"></geo>
-                        <country key="SU">Sudan</country>                                                
-                     </location>
-                     <bibl corresp="#sdkl_skks" type="publication"/>
-                     <ptr target="http://asasasa.html"/>
-                  </place> 
-                  <place>
-                     <location>
-                        <geo decls="#dms"></geo>
-                        <geo decls="#dd"></geo>
-                        <country key="SA">Saudi-Arabia</country>                                                
-                     </location>
-                  </place> 
-               </listPlace>            
-            <note/>
-            </item>
-         </list>         
+         <listPerson xml:id="religions">
+            <head>Religious Groups</head>
+            <personGrp role="religion">
+               <name>Christians</name>
+            </personGrp>
+         </listPerson>
+         
+         <listPerson xml:id="tribes_clans">
+            <head>List of tribes and clans in <name type="project">WIBARAB</name></head>
+            
+            <personGrp role="clan" xml:id="clan">
+               <name>Clan name</name>
+            </personGrp>
+            
+            <relation name="hasParts" active="#conf" passive="#tribe">
+               <desc>there's even some text to describe the relation</desc>
+            </relation>
+            
+            <relation name="hasParts" active="#tribe" passive="#clan">
+               <desc>there's even some text to describe the relation</desc>
+            </relation>
+            
+            <personGrp role="tribe" xml:id="tribe">
+               <name>Tribe name</name>
+               <residence>
+                  <placeName ref="geolist.xml#place-id"/>
+               </residence>
+            </personGrp>
+            
+            <personGrp role="confederation" xml:id="conf">
+               <name>confederation name</name>
+            </personGrp>            
+         </listPerson>
       </body>
    </text>
 </TEI>
