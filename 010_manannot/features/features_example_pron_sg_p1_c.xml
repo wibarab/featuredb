@@ -34,6 +34,7 @@
             <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_biblio_tei_zotero.xml#$1"/>
             <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_dialects.xml#$1"/>
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"/>
+            <prefixDef ident="trb" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_tribes.xml#$1"/>
          </listPrefixDef>
       </encodingDesc>
       <revisionDesc>
@@ -88,7 +89,8 @@
                <name type="featureValue" ref=""/>
                <bibl corresp="zot:Abboud1979" type="publication" subtype="journalArticle"/>
                <!--CHECKME invalid geo reference ""-->
-               <lang target="..\profiles\vicav_profile_.xml"/>
+               <lang ident="ar" ana="#bedouin" target="..\profiles\vicav_profile_.xml"/>
+               <personGrp type="religousAffiliatian" corresp="trb:id"></personGrp>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation cert="unknown" status="draft" xml:id="fr_0000" resp="dmp:???">
