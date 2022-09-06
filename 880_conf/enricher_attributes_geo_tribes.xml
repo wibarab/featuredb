@@ -1,0 +1,182 @@
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>˂TEI˃Enricher Attributes List</title>
+            <author>Charly Moerth</author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Charly Moerth</publisher>
+            <date when="2022-04-08"/>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <ptr target="{ptrtarget}"/>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2022-04-22" who="#cm">added ensurePrefixHash</change>
+      </revisionDesc>
+   </teiHeader>
+
+   <text>
+      <body>
+         <div type="attributes">
+
+            <fs type="attribute">
+               <f name="matchString"><string>//personGrp</string></f>
+               <f name="atttrName"><string>corresp</string></f>
+
+               <f name="elementPath"><string>//tei:personGrp[@role="religion"]</string></f>
+               <f name="selectPath"><string>tei:name</string></f>
+               <f name="altPath"><string>@xml:id</string></f>
+               <f name="filePath"><string>{basePath}\..\wibarab_tribes.xml</string></f>
+               <f name="prefix"><string></string></f>
+               <f name="ensurePrefixHash"><binary value="true"/></f>
+            </fs>
+
+            <fs type="attribute">
+               <f name="matchString"><string>//lang</string></f>
+               <f name="atttrName"><string>ana</string></f>
+
+               <f name="elementPath"><string>//tei:taxonomy[@n='sedentismType']/tei:category</string></f>
+               <f name="selectPath"><string>tei:catDesc</string></f>
+               <f name="altPath"><string></string></f>
+               <f name="filePath"><string>{self}</string></f>
+               <f name="prefix"><string></string></f>
+               <f name="ensurePrefixHash"><binary value="true"/></f>
+            </fs>
+
+            <fs type="attribute">
+               <f name="matchString"><string>//region</string></f>
+               <f name="atttrName"><string>ref</string></f>
+
+               <f name="elementPath"><string>//tei:place</string></f>
+               <f name="selectPath"><string>tei:placeName</string></f>
+               <f name="filePath"><string>{basePath}\..\vicav_geodata.xml</string></f>
+               <f name="altPath"><string>@xml:id</string></f>
+               <f name="explanationPath"><string></string></f>
+               <f name="prefix"><string>geo:</string></f>
+               <f name="ensurePrefixHash"><binary value="false"/></f>
+            </fs>
+
+            <fs type="attribute">
+               <f name="matchString"><string>//placeName</string></f>
+               <f name="atttrName"><string>ref</string></f>
+
+               <f name="elementPath"><string>//tei:place</string></f>
+               <f name="selectPath"><string>tei:placeName</string></f>
+               <f name="filePath"><string>{basePath}\..\010_manannot\vicav_geodata.xml</string></f>
+               <f name="altPath"><string>@xml:id</string></f>
+               <f name="explanationPath"><string></string></f>
+               <f name="prefix"><string>geo:</string></f>
+               <f name="ensurePrefixHash"><binary value="false"/></f>
+            </fs>
+
+            <fs type="attribute">
+               <f name="matchString"><string>z</string></f>
+               <f name="atttrName"><string>corresp</string></f>
+
+               <f name="elementPath"><string>//tei:biblStruct</string></f>
+               <f name="selectPath"><string>@xml:id</string></f>
+               <f name="filePath"><string>{basePath}\..\vicav_biblio_tei_zotero.xml</string></f>
+               <f name="altPath"><string></string></f>
+               <f name="explanationPath"><string>{.//tei:author/tei:surname}, {.//tei:author/tei:forname}\r\n\r\n{.//tei:title}\r\n{.//tei:date}\r\n{.//tei:pubPlace}</string></f>
+               <f name="prefix"><string>zot:</string></f>
+               <f name="ensurePrefixHash"><binary value="false"/></f>
+            </fs>
+
+            <fs type="attribute">
+               <f name="matchString"><string>//bibl</string></f>
+               <f name="atttrName"><string>corresp</string></f>
+               <f name="secAtttrName"><string>subType</string></f>
+
+               <f name="elementPath"><string>//tei:biblStruct</string></f>
+               <f name="selectPath"><string>@xml:id</string></f>
+               <f name="secSelectPath"><string>@type</string></f>
+               <f name="filePath"><string>{basePath}\..\vicav_biblio_tei_zotero.xml</string></f>
+               <f name="altPath"><string></string></f>
+               <f name="explanationPath"><string>{.//tei:author/tei:surname}, {.//tei:author/tei:forname}\r\n\r\n{.//tei:title}\r\n{.//tei:date}\r\n{.//tei:pubPlace}</string></f>
+               <f name="prefix"><string>zot:</string></f>
+               <f name="ensurePrefixHash"><binary value="false"/></f>
+            </fs>
+
+            <fs type="attribute">
+               <f name="matchString"><string>//name[@type='featureValue']</string></f>
+               <f name="atttrName"><string>ref</string></f>
+
+               <f name="elementPath"><string>//tei:item</string></f>
+               <f name="selectPath"><string>@xml:id</string></f>
+               <f name="explanationPath"><string>{tei:label}</string></f>
+               <f name="filePath"><string>{self}</string></f>
+               <f name="prefix"><string></string></f>
+               <f name="ensurePrefixHash"><binary value="true"/></f>
+            </fs>
+
+            <fs type="attribute">
+               <f name="matchString"><string>//f[@name='example']</string></f>
+
+               <f name="elementPath"><string>//tei:cit[@type='example']</string></f>
+               <f name="selectPath"><string>@xml:id</string></f>
+               <f name="altPath"><string></string></f>
+               <f name="filePath"><string>{self}</string></f>
+               <f name="prefix"><string></string></f>
+               <f name="ensurePrefixHash"><binary value="true"/></f>
+            </fs>
+
+
+            <fs type="attribute">
+               <f name="matchString"><string>//change</string></f>
+               <f name="atttrName"><string>who</string></f>
+
+               <f name="elementPath"><string>//tei:person</string></f>
+               <f name="selectPath"><string>@xml:id</string></f>
+               <f name="filePath"><string>{basePath}\..\wibarab_dmp.xml</string></f>
+               <f name="altPath"><string></string></f>
+               <f name="explanationPath"><string>{tei:persName}</string></f>
+               <f name="ensurePrefixHash"><binary value="false"/></f>
+               <f name="prefix"><string>dmp:</string></f>
+            </fs>
+
+            <fs type="attribute">
+               <f name="matchString"><string>//wib:featureValueObservation</string></f>
+               <f name="atttrName"><string>resp</string></f>
+
+               <f name="elementPath"><string>//tei:person</string></f>
+               <f name="selectPath"><string>@xml:id</string></f>
+               <f name="filePath"><string>{basePath}\..\wibarab_dmp.xml</string></f>
+               <f name="altPath"><string></string></f>
+               <f name="explanationPath"><string>{tei:persName}</string></f>
+               <f name="ensurePrefixHash"><binary value="false"/></f>
+               <f name="prefix"><string>dmp:</string></f>
+            </fs>
+
+            <fs type="attribute">
+               <f name="matchString"><string>dmp:</string></f>
+               <f name="atttrName"><string>resp</string></f>
+
+               <f name="elementPath"><string>//tei:person</string></f>
+               <f name="selectPath"><string>@xml:id</string></f>
+               <f name="filePath"><string>{basePath}\..\wibarab_dmp.xml</string></f>
+               <f name="altPath"><string></string></f>
+               <f name="explanationPath"><string>{tei:persName}</string></f>
+               <f name="ensurePrefixHash"><binary value="false"/></f>
+               <f name="prefix"><string>dmp:</string></f>
+            </fs>
+
+            <fs type="attribute">
+               <f name="matchString"><string>//f[@name='msd']</string></f>
+
+               <f name="elementPath"><string>//tei:fs</string></f>
+               <f name="selectPath"><string>@xml:id</string></f>
+               <f name="filePath"><string>{basePath}\..\fLib.xml</string></f>
+               <f name="altPath"><string></string></f>
+               <f name="explanationPath"><string></string></f>
+               <f name="ensurePrefixHash"><binary value="false"/></f>
+               <f name="prefix"><string>mrp:</string></f>
+            </fs>
+         </div>
+      </body>
+   </text>
+</TEI>
