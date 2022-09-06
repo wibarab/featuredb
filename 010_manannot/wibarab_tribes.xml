@@ -26,7 +26,7 @@
       <encodingDesc>
          <geoDecl xml:id="dms" datum="WGS84-DMS">World Geodetic System: degrees - minutes - seconds</geoDecl>
          <geoDecl xml:id="dd" datum="WGS84-DD">World Geodetic System: decimal degrees</geoDecl>
-         
+
          <listPrefixDef xml:id="listPrefixDef">
             <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../010_manannot/wibarab-dmp.xml#$1"></prefixDef>
             <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_biblio_tei_zotero.xml#$1"></prefixDef>
@@ -72,19 +72,19 @@
 
          <listPerson xml:id="tribes_clans">
             <head>List of tribes and clans in <name type="project">WIBARAB</name></head>
-            
+
             <personGrp role="clan" xml:id="clan">
                <name>Clan name</name>
             </personGrp>
-            
+
             <relation name="hasParts" active="#conf" passive="#tribe">
                <desc>there's even some text to describe the relation</desc>
             </relation>
-            
+
             <relation name="hasParts" active="#tribe" passive="#clan">
                <desc>there's even some text to describe the relation</desc>
             </relation>
-            
+
             <personGrp role="tribe" xml:id="tribe">
                <name>Tribe name</name>
                <residence>
@@ -102,20 +102,29 @@
             <personGrp role="tribe" xml:id="minabbih">
                <name>Minabbih</name>
                <residence>
-                  <placeName ref=""/>
+                  <placeName ref="geo:al_maddaha"/>
                </residence>
             </personGrp>
 
-            <personGrp role="tribe" xml:id="tribe">
-               <name>Tribe name</name>
+            <personGrp role="tribe" xml:id="al_murra">
+               <name>Āl Murra</name>
+               <residence>
+                  <placeName ref="geo:summan"/>
+                  <placeName ref="geo:shahaniya"/>
+               </residence>
+            </personGrp>
+
+            <personGrp type="tribe">
+               <name>[tribe's name]</name>
                <residence>
                   <placeName ref=""/>
                </residence>
             </personGrp>
-            
+
+
             <personGrp role="confederation" xml:id="conf">
                <name>confederation name</name>
-            </personGrp>            
+            </personGrp>
          </listPerson>
       </body>
    </text>
