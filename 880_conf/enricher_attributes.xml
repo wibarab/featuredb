@@ -25,6 +25,14 @@
          <div type="attributes">
 
             <fs type="attribute">
+               <f name="matchString"><string>//lang</string></f>
+               <f name="atttrName"><string>target</string></f>
+               <f name="prefix"><string></string></f>
+               <f name="directory"><string>{basePath}..\profiles</string></f>
+               <f name="addMode"><string>withBasePath</string></f>
+            </fs>
+
+            <fs type="attribute">
                <f name="matchString"><string>//personGrp</string></f>
                <f name="atttrName"><string>corresp</string></f>
 
@@ -32,18 +40,6 @@
                <f name="selectPath"><string>tei:name</string></f>
                <f name="altPath"><string>@xml:id</string></f>
                <f name="filePath"><string>{basePath}\..\wibarab_tribes.xml</string></f>
-               <f name="prefix"><string></string></f>
-               <f name="ensurePrefixHash"><binary value="true"/></f>
-            </fs>
-
-            <fs type="attribute">
-               <f name="matchString"><string>//lang</string></f>
-               <f name="atttrName"><string>ana</string></f>
-
-               <f name="elementPath"><string>//tei:taxonomy[@n='sedentismType']/tei:category</string></f>
-               <f name="selectPath"><string>tei:catDesc</string></f>
-               <f name="altPath"><string></string></f>
-               <f name="filePath"><string>{self}</string></f>
                <f name="prefix"><string></string></f>
                <f name="ensurePrefixHash"><binary value="true"/></f>
             </fs>
