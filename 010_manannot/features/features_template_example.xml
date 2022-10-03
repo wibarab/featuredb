@@ -1,0 +1,1250 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../../082_scripts_xsl/tei_fs_2_html__001.xsl"?>
+<?xslt inPathSegment="\010_manannot\" outPathSegment="\106_html\"?>
+<?snippets fn="snippets_wibarab_001.xml" path="{filePath}\..\..\880_conf\"?>
+<?processor name="saxon" removePreserveFromXML="true" removePreserveFromXSLT="true"?>
+<?attributeAssignments fn="enricher_attributes.xml" path="{filePath}\..\..\880_conf\"?>
+<?shortCuts fn="wibarab_shortCuts" path="{filePath}\..\..\880_conf\"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../../804_xsd/1.0.0/featuredb.xsd">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Sample template created out of the k-types.</title>
+            <author>Johanna Doppelbauer</author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>{publisher}</publisher>
+            <date when="2022-10-03"/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This is an attempt to create a template out of the file wich already contains most information.</p></sourceDesc>
+      </fileDesc>
+
+      <encodingDesc>
+        
+         <listPrefixDef xml:id="listPrefixDef">
+            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab-dmp.xml#$1"/>
+            <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_biblio_tei_zotero.xml#$1"/>
+            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_dialects.xml#$1"/>
+            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"/>
+         </listPrefixDef>
+      </encodingDesc>
+
+      <revisionDesc>
+         <change when="2022-08-17" who="dmp:">c</change>
+         <change when="2022-08-17" who="dmp: "></change>
+      </revisionDesc>
+   </teiHeader>
+
+ 
+   
+ <text>
+      <body xml:base="{docPath}">
+         <div type="tbd">
+            <list>
+               <item></item>
+               <item></item>
+            </list>
+         </div>
+
+         <div type="featureDescription">
+            <head>Feature Values</head>
+            <list type="featureValues">
+               <item xml:id="it_001">
+                  <label></label>
+               </item>
+               <item xml:id="ǧ_ž">
+                  <label>ǧ → ž</label>
+               </item>
+            </list>
+         </div>
+
+         <div type="description">
+         </div>
+
+         <div type="featureValueObservations">
+
+            <wib:featureValueObservation xml:id="fr_0000" resp="dmp:AD">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="#" type="publication"/>
+               <placeName ref="geo:beqaa"/>
+               <lang target="..\profiles\vicav_profile_LBN-ABI.xml"/>
+                <cit type="example" xml:id=""><quote></quote>
+                  <cit type="translation"><quote></quote></cit>
+               </cit>
+               <note type="general">1</note>
+               <note type="constraintNote">2</note>
+               <note type="exceptionNote">3</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0001" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Younes2013" type="publication"/>
+               <placeName ref="geo:wadi_khalid"/>
+               <lang target="..\profiles\vicav_profile_LBN-ATI.xml"/>
+               <note type="general">čān - yikūn; ʾabū-k «ton père (m.)» et ʾabū-č«ton père (f.);
+                  [k] is reestablished in the passive participles of verbs C-C-k of scheme *maC1C2ūC3 (ex. manyūk, maʿlūk et mahlūk)</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0002" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:El-Hajjé1954" type="publication" subtype="book"/>
+               <placeName ref="geo:tripoli_lebanon"/>
+               <lang target="..\profiles\vicav_profile_LBN-TRI.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0003" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/>
+               <placeName ref="geo:beirut"/>
+               <lang target="..\profiles\vicav_profile_LBN-BEI.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0004" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/>
+               <placeName ref="geo:zahle"/>
+               <lang target="..\profiles\vicav_profile_LBN-ZAH.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0005" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Abu-Haidar1979" type="publication" subtype="book"/>
+               <placeName ref="geo:baskinta"/>
+               <lang target="..\profiles\vicav_profile_LBN-BAS.xml"/>
+               <cit type="example" xml:id="ex_001">
+                  <quote>nakar</quote>
+                  <cit type="translation">
+                     <quote>to deny</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ex_002">
+                  <quote>yiktub</quote>
+                  <cit type="translation">
+                     <quote>he writes</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0006" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
+               <placeName ref="geo:galilee"/>
+               <lang target="..\profiles\vicav_profile_ISR-ARM.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0007" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
+               <placeName ref="geo:galilee"/>
+               <lang target="..\profiles\vicav_profile_ISR-MRY.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0008" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
+               <placeName ref="geo:galilee"/>
+               <lang target="..\profiles\vicav_profile_ISR-GAW.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0009" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
+               <placeName ref="geo:galilee"/>
+               <lang target="..\profiles\vicav_profile_ISR-GET.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0010" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
+               <placeName ref="geo:galilee"/>
+               <lang target="..\profiles\vicav_profile_ISR-GRI.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0011" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
+               <placeName ref="geo:galilee"/>
+               <lang target="..\profiles\vicav_profile_ISR-HAG.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0012" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
+               <placeName ref="geo:galilee"/>
+               <lang target="..\profiles\vicav_profile_ISR-HGE.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0013" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
+               <placeName ref="geo:galilee"/>
+               <lang target="..\profiles\vicav_profile_ISR-KAB.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0014" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
+               <placeName ref="geo:galilee"/>
+               <lang target="..\profiles\vicav_profile_ISR-LHE.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0015" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
+               <placeName ref="geo:galilee"/>
+               <lang target="..\profiles\vicav_profile_ISR-MAZ.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0016" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
+               <placeName ref="geo:galilee"/>
+               <lang target="..\profiles\vicav_profile_ISR-N3M.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0017" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
+               <placeName ref="geo:galilee"/>
+               <lang target="..\profiles\vicav_profile_ISR-SA3.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0018" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
+               <placeName ref="geo:galilee"/>
+               <lang target="..\profiles\vicav_profile_ISR-SAM.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0019" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
+               <placeName ref="geo:galilee"/>
+               <lang target="..\profiles\vicav_profile_ISR-SAW.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0020" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
+               <placeName ref="geo:galilee"/>
+               <lang target="..\profiles\vicav_profile_ISR-SBE.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0021" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
+               <placeName ref="geo:galilee"/>
+               <lang target="..\profiles\vicav_profile_ISR-SHI.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0022" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
+               <placeName ref="geo:galilee"/>
+               <lang target="..\profiles\vicav_profile_ISR-TAB.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0023" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
+               <placeName ref="geo:galilee"/>
+               <lang target="..\profiles\vicav_profile_ISR-XAW.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0024" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
+               <placeName ref="geo:galilee"/>
+               <lang target="..\profiles\vicav_profile_ISR-ZUN.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0025" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
+               <placeName ref="geo:galilee"/>
+               <lang target="..\profiles\vicav_profile_ISR-NGE.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0026" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_ISR-TUR.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0027" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
+               <placeName ref="geo:haifa"/>
+               <lang target="..\profiles\vicav_profile_ISR-HAI.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0028" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Behnstedt2019" type="publication" subtype="book"/>
+               <placeName ref="geo:nazareth"/>
+               <lang target="..\profiles\vicav_profile_ISR-NAZ.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0029" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Shawarbah2011" type="publication" subtype="book"/>
+               <placeName ref="geo:negev"/>
+               <lang target="..\profiles\vicav_profile_NEG-AZM.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0030" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Blanc1970a" type="publication" subtype="book"/>
+               <placeName ref="geo:negev"/>
+               <lang target="..\profiles\vicav_profile_NEG-ZLM.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0031" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Palva1980" type="publication"/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_JOR-BSX.xml"/>
+               <cit type="example" xml:id="ex_003">
+                  <quote>inćān</quote>
+                  <cit type="translation">
+                     <quote>if</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0032" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Palva1986" type="publication"/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_JOR-HWT.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0033" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Palva1976" type="publication" subtype="book"/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_JOR-AGR.xml"/>
+               <cit type="example" xml:id="ex_004">
+                  <quote>hanāk </quote>
+                  <cit type="translation">
+                     <quote>there</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ex_005">
+                  <quote>bāčer</quote>
+                  <cit type="translation">
+                     <quote>tomorrow morning</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0034" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Younes2018a" type="publication"/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_JOR-AIS.xml"/>
+               <cit type="example" xml:id="ex_006">
+                  <quote>ʕammit-ić</quote>
+                  <cit type="translation">
+                     <quote>your (f.) paternal aunt</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0035" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_JOR-ABD.xml"/>
+               <note type="general">vestigial variants: čīl "measure, weight", yčammilen "they (f.) complete", čänna "daughter in law", etc.</note>
+               <cit type="example" xml:id="ex_007">
+                  <quote>rākib</quote>
+                  <cit type="translation">
+                     <quote>riding</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0036" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Owens1984b" type="publication"/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_JOR-BDL.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0037" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Yrttiaho1988" type="publication"/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_JOR-NMT.xml"/>
+               <cit type="example" xml:id="ex_009">
+                  <quote>kilme</quote>
+                  <cit type="translation">
+                     <quote>word</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0038" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Cantineau1936a" type="publication"/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_JOR-SMR.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0039" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Cantineau1936a" type="publication"/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_JOR-ANZ.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0040" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Cantineau1936a" type="publication"/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_JOR-FDL.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0041" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Cantineau1936a" type="publication"/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_JOR-BXD.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0042" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_JOR-SHN.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0043" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Cantineau1936a" type="publication"/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_JOR-SDY.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0044" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Cantineau1936a" type="publication"/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_JOR-SLT.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0045" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_JOR-NEM.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0046" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Palva1969b" type="publication"/>
+               <placeName ref="geo:madaba"/>
+               <lang target="..\profiles\vicav_profile_JOR-MDB.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0047" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Palva1974" type="publication"/>
+               <placeName ref="geo:safut"/>
+               <lang target="..\profiles\vicav_profile_JOR-SFT.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0048" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Herin2010" type="publication" subtype="thesis"/>
+               <placeName ref="geo:al_salt"/>
+               <lang target="..\profiles\vicav_profile_JOR-SAL.xml"/>
+               <note type="general">It is a recessive feature</note>
+               <cit type="example" xml:id="ex_008">
+                  <quote>čam</quote>
+                  <cit type="translation">
+                     <quote>how much</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ex_010">
+                  <quote>kān</quote>
+                  <cit type="translation">
+                     <quote>he was</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ex_011">
+                  <quote>dyūč</quote>
+                  <cit type="translation">
+                     <quote>chickens</quote></cit>
+                  <note>exception</note></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0049" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Al-Wer2007a" type="publication" subtype="bookSection"/>
+               <placeName ref="geo:amman"/>
+               <lang target="..\profiles\vicav_profile_JOR-AMN.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0050" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Palva1989" type="publication" subtype="bookSection"/>
+               <placeName ref="geo:al_karak"/>
+               <lang target="..\profiles\vicav_profile_JOR-KRK.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0051" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Il-Hazmy1975" type="publication" subtype="thesis"/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_SAU-HRB.xml"/>
+               <cit type="example" xml:id="ex_012">
+                  <quote>karam</quote>
+                  <cit type="translation">
+                     <quote>generosity</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0052" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/>
+               <placeName ref="geo:rabat"/>
+               <lang target="..\profiles\vicav_profile_MAR-ZIR.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0053" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/>
+               <placeName ref="geo:marrakesh"/>
+               <lang target="..\profiles\vicav_profile_MAR-MRK.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0054" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/>
+               <placeName ref="geo:tanger"/>
+               <lang target="..\profiles\vicav_profile_MAR-TGR.xml"/>
+               <note type="general">k to x: lexically restricted spirantization: xtar 'more',
+                  but not *xtir, but ktir 'much'</note>
+               <f name="lexicalDomain"><string/></f>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0055" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/>
+               <placeName ref="geo:oujda"/>
+               <lang target="..\profiles\vicav_profile_MAR-OJD.xml"/>
+               <f name="lexicalDomain"><string/></f>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0056" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_MAR-CHA.xml"/>
+               <f name="lexicalDomain"><string/></f>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0057" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_MAR-HYN.xml"/>
+               <f name="lexicalDomain"><string/></f>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0058" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Herin2017" type="publication" subtype="bookSection"/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_TUN-KNH1.xml"/>
+               <cit type="example" xml:id="ex_013">
+                  <quote>lkullīke</quote>
+                  <cit type="translation">
+                     <quote>everything</quote>
+                  </cit>
+               </cit>
+               <f name="lexicalDomain"><string/></f>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0059" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Herin2017" type="publication" subtype="bookSection"/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_TUN-KNH2.xml"/>
+               <cit type="example" xml:id="ex_014">
+                  <quote>kūfiyye</quote>
+                  <cit type="translation">
+                     <quote>a type of headdress</quote>
+                  </cit>
+               </cit>
+               <f name="lexicalDomain"><string/></f>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0060" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Herin2017" type="publication" subtype="bookSection"/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_TUN-KNH3.xml"/>
+               <cit type="example" xml:id="ex_015">
+                  <quote>nāklu</quote>
+                  <cit type="translation">
+                     <quote>we eat</quote>
+                  </cit>
+               </cit>
+               <f name="lexicalDomain"><string/></f>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0061" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Behnstedt1999b" type="publication"/>
+               <placeName ref="geo:djerba"/>
+               <lang target="..\profiles\vicav_profile_TUN-DJB.xml"/>
+               <cit type="example" xml:id="ex_016">
+                  <quote>yāklu</quote>
+                  <cit type="translation">
+                     <quote>they eat</quote>
+                  </cit>
+               </cit>
+               <f name="lexicalDomain"><string/></f>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0062" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_TUN-CHB.xml"/>
+               <cit type="example" xml:id="ex_017">
+                  <quote>nkammlū</quote>
+                  <cit type="translation">
+                     <quote>we complete</quote>
+                  </cit>
+               </cit>
+               <f name="lexicalDomain"><string/></f>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0063" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/>
+               <placeName ref="geo:bengardane"/>
+               <lang target="..\profiles\vicav_profile_TUN-BGN.xml"/>
+               <cit type="example" xml:id="ex_018">
+                  <quote>ǝl-karhba</quote>
+                  <cit type="translation">
+                     <quote>the car</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0064" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Sellami2019" type="publication" subtype="bookSection"/>
+               <placeName ref="geo:sfax"/>
+               <lang target="..\profiles\vicav_profile_TUN-SFX.xml"/>
+               <cit type="example" xml:id="ex_019">
+                  <quote>kalēm</quote>
+                  <cit type="translation">
+                     <quote>speech</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0065" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_TUN-SBZ.xml"/>
+               <cit type="example" xml:id="ex_020">
+                  <quote>karhaba</quote>
+                  <cit type="translation">
+                     <quote>car</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0066" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/>
+               <placeName ref="geo:mazara_del_vallo"/>
+               <lang target="..\profiles\vicav_profile_ITA-MDV.xml"/>
+               <cit type="example" xml:id="ex_021">
+                  <quote>mā-ikallmū-hum-š</quote>
+                  <cit type="translation">
+                     <quote>they don't talk to them</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0067" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/>
+               <placeName ref="geo:malta"/>
+               <lang target="..\profiles\vicav_profile_MLT-MAL.xml"/>
+               <cit type="example" xml:id="ex_022">
+                  <quote>kelb</quote>
+                  <cit type="translation">
+                     <quote>dog</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ex_023">
+                  <quote>gideb</quote>
+                  <cit type="translation">
+                     <quote>he lied</quote></cit>
+                  <note>/k/ sometimes is reflected as /g/</note></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0068" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Borg1984" type="publication"/>
+               <placeName ref="geo:cyprus"/>
+               <lang target="..\profiles\vicav_profile_CYP-KOR.xml"/>
+               <note type="general">/k/ in Kormakiti has the palatal and veralallophonic variants
+                  /k'/ and /k/ before front and non-front vowels respectively</note>
+               <cit type="example" xml:id="ex_024">
+                  <quote>kalp</quote>
+                  <cit type="translation">
+                     <quote>dog</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0069" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Harrama1993" type="publication" subtype="thesis"/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_LBY-JBL.xml"/>
+               <cit type="example" xml:id="ex_025">
+                  <quote>ktāb</quote>
+                  <cit type="translation">
+                     <quote>book</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0070" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Benkato2014" type="publication"/>
+               <placeName ref="geo:benghazi"/>
+               <lang target="..\profiles\vicav_profile_LBY-BGZ.xml"/>
+               <cit type="example" xml:id="ex_026">
+                  <quote>bikkill</quote>
+                  <cit type="translation">
+                     <quote>completely, at all</quote></cit>
+                  <note>With regards to the example, the /l/ 'is assimilated to a
+                     following /k/ in <foreign>bikkill - bilkill</foreign> (with vowel harmony). This is a recent change
+                     as previous dialectologists do not record this assimilation in the
+                     same word</note></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0071" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Marçais2001" type="publication" subtype="book"/>
+               <placeName ref="geo:fezzan"/>
+               <lang target="..\profiles\vicav_profile_LBY-FZN.xml"/>
+               <note type="general">Exception:the pronominal suffix of the second person singular
+                  feminine may be an affricate č (as noted in  Poesies Fezzanaises)</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0072" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_#LBY-KMS.xml"/>
+               <note type="general">There was nothing concrete about the reflex of /k/ in the
+                  chapter regarding al-Khums, but in the examples /k/ is always reflected as it is </note>
+               <cit type="example" xml:id="ex_027">
+                  <quote>nakha</quote>
+                  <cit type="translation">
+                     <quote>flavour</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0073" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Grand_Henry1979" type="publication"/>
+               <placeName ref="geo:saoura"/>
+               <lang target="..\profiles\vicav_profile_DZA-SAO.xml"/>
+               <cit type="example" xml:id="ex_028">
+                  <quote>kĕbbĕr</quote>
+                  <cit type="translation">
+                     <quote>he made grow</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0074" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/>
+               <placeName ref="geo:constantine"/>
+               <lang target="..\profiles\vicav_profile_DZA-CON.xml"/>
+               <cit type="example" xml:id="ex_029">
+                  <quote>kās</quote>
+                  <cit type="translation">
+                     <quote>a glass</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0075" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Guerrero2015b" type="publication"/>
+               <placeName ref="geo:oran"/>
+               <lang target="..\profiles\vicav_profile_DZA-ORN.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0076" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:De_Jong2000b" type="publication" subtype="book"/>
+               <placeName ref="geo:sinai"/>
+               <lang target="..\profiles\vicav_profile_EGY-RML.xml"/>
+               <cit type="example" xml:id="ex_030">
+                  <quote>kiṯīr</quote>
+                  <cit type="translation">
+                     <quote>many</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0077" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:De_Jong2000b" type="publication" subtype="book"/>
+               <placeName ref="geo:sinai"/>
+               <lang target="..\profiles\vicav_profile_EGY-SWR.xml"/>
+               <cit type="example" xml:id="ex_030">
+                  <quote>kiṯīr</quote>
+                  <cit type="translation">
+                     <quote>many</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0078" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:De_Jong2000b" type="publication" subtype="book"/>
+               <placeName ref="geo:sinai"/>
+               <lang target="..\profiles\vicav_profile_EGY-HYW.xml"/>
+               <cit type="example" xml:id="ex_030">
+                  <quote>kiṯīr</quote>
+                  <cit type="translation">
+                     <quote>many</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0079" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:De_Jong2000b" type="publication" subtype="book"/>
+               <placeName ref="geo:sinai"/>
+               <lang target="..\profiles\vicav_profile_EGY-BLL.xml"/>
+               <cit type="example" xml:id="ex_030">
+                  <quote>kiṯīr</quote>
+                  <cit type="translation">
+                     <quote>many</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0080" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:De_Jong2000b" type="publication" subtype="book"/>
+               <placeName ref="geo:sinai"/>
+               <lang target="..\profiles\vicav_profile_EGY-SMN.xml"/>
+               <cit type="example" xml:id="ex_031">
+                  <quote>kbāṛ</quote>
+                  <cit type="translation">
+                     <quote>old</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0081" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:De_Jong2000b" type="publication" subtype="book"/>
+               <placeName ref="geo:sinai"/>
+               <lang target="..\profiles\vicav_profile_EGY-AGL.xml"/>
+               <cit type="example" xml:id="ex_031">
+                  <quote>kbāṛ</quote>
+                  <cit type="translation">
+                     <quote>old</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0082" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:De_Jong2000b" type="publication" subtype="book"/>
+               <placeName ref="geo:sinai"/>
+               <lang target="..\profiles\vicav_profile_EGY-BYD.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0083" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:De_Jong2000b" type="publication" subtype="book"/>
+               <placeName ref="geo:sinai"/>
+               <lang target="..\profiles\vicav_profile_EGY-XRS.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0084" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:De_Jong2000b" type="publication" subtype="book"/>
+               <placeName ref="geo:sinai"/>
+               <lang target="..\profiles\vicav_profile_EGY-DWG.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0088" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
+               <placeName ref="geo:sinai"/>
+               <lang target="..\profiles\vicav_profile_EGY-GBL.xml"/>
+               <note type="general">ḳ and k are heard and all have a minimal pair showing phonemic
+                  opposition bētuḳ “your (sg. masc.) house” – bētik “your (sg. Fem.) house”</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0085" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
+               <placeName ref="geo:sinai"/>
+               <lang target="..\profiles\vicav_profile_EGY-ASD.xml"/>
+               <note type="general">ḳ and k are heard and all have a minimal pair showing phonemic
+                  opposition bētuḳ “your (sg. masc.) house” – bētik “your (sg. Fem.) house”</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0087" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
+               <placeName ref="geo:sinai"/>
+               <lang target="..\profiles\vicav_profile_EGY-SLH.xml"/>
+               <note type="general">ḳ and k are heard and all have a minimal pair showing phonemic
+                  opposition bētuḳ “your (sg. masc.) house” – bētik “your (sg. Fem.) house”</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0086" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
+               <placeName ref="geo:sinai"/>
+               <lang target="..\profiles\vicav_profile_EGY-GRR.xml"/>
+               <note type="general">ḳ and k are heard and all have a minimal pair showing phonemic
+                  opposition bētuḳ “your (sg. masc.) house” – bētik “your (sg. Fem.) house”</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0089" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
+               <placeName ref="geo:sinai"/>
+               <lang target="..\profiles\vicav_profile_EGY-HMD.xml"/>
+               <note type="general">ḳ and k are heard and all have a minimal pair showing phonemic
+                  opposition bētuḳ “your (sg. masc.) house” – bētik “your (sg. Fem.) house”</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0090" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
+               <placeName ref="geo:sinai"/>
+               <lang target="..\profiles\vicav_profile_EGY-HND.xml"/>
+               <note type="general">ḳ and k are heard and all have a minimal pair showing phonemic
+                  opposition bētuḳ “your (sg. masc.) house” – bētik “your (sg. Fem.) house”</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0091" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
+               <placeName ref="geo:sinai"/>
+               <lang target="..\profiles\vicav_profile_EGY-LGT.xml"/>
+               <note type="general">ḳ and k are heard and all have a minimal pair showing phonemic
+                  opposition bētuḳ “your (sg. masc.) house” – bētik “your (sg. Fem.) house”</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0092" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
+               <placeName ref="geo:sinai"/>
+               <lang target="..\profiles\vicav_profile_EGY-MZN.xml"/>
+               <note type="general">ḳ and k are heard, true phonemic opposition in a minimal pair īduḳ “your
+                  (sg. masc.) hand” – īdik “your (sg. fem.) hand”</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0093" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
+               <placeName ref="geo:sinai"/>
+               <lang target="..\profiles\vicav_profile_EGY-BWS.xml"/>
+               <note type="general">ḳ and k are heard, a true phonemic opposition seams to be developing</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0094" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
+               <placeName ref="geo:sinai"/>
+               <lang target="..\profiles\vicav_profile_EGY-TRB.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0095" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
+               <placeName ref="geo:sinai"/>
+               <lang target="..\profiles\vicav_profile_EGY-HWT.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0096" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
+               <placeName ref="geo:sinai"/>
+               <lang target="..\profiles\vicav_profile_EGY-GRG.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0097" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
+               <placeName ref="geo:sinai"/>
+               <lang target="..\profiles\vicav_profile_EGY-TYH.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0098" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
+               <placeName ref="geo:sinai"/>
+               <lang target="..\profiles\vicav_profile_#EGY-BDR.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0099" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
+               <placeName ref="geo:sinai"/>
+               <lang target="..\profiles\vicav_profile_EGY-DBR.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0100" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:De_Jong2011" type="publication" subtype="book"/>
+               <placeName ref="geo:sinai"/>
+               <lang target="..\profiles\vicav_profile_EGY-MLH.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0101" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Reichmuth1983" type="publication" subtype="book"/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_SDN-SKR.xml"/>
+               <cit type="example" xml:id="ex_032">
+                  <quote>abūk</quote>
+                  <cit type="translation">
+                     <quote>your father</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0102" resp="">
+               <name type="featureValue" ref="#k_ḳ"/>
+               <bibl corresp="zot:Reichmuth1983" type="publication" subtype="book"/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_SDN-SKR.xml"/>
+               <cit type="example" xml:id="ex_033">
+                  <quote>ḏaḳar</quote>
+                  <cit type="translation">
+                     <quote>man, male</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0103" resp="">
+               <name type="featureValue" ref="#k_lex"/>
+               <bibl corresp="zot:" type="publication" subtype=""/>
+               <placeName ref="geo:al_shirqat"/>
+               <lang target="..\profiles\vicav_profile_IRQ-SQT.xml"/>
+               <cit type="example" xml:id="ex_034">
+                  <quote>siččīn</quote>
+                  <cit type="translation">
+                     <quote>knife</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ex_035">
+                  <quote>kull</quote>
+                  <cit type="translation">
+                     <quote>every</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0104" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/>
+               <placeName ref="geo:khuzestan"/>
+               <lang target="..\profiles\vicav_profile_IRN-KHU.xml"/>
+               <cit type="example" xml:id="ex_036">
+                  <quote>čaləb</quote>
+                  <cit type="translation">
+                     <quote>dog</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0105" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/>
+               <placeName ref="geo:khuzestan"/>
+               <lang target="..\profiles\vicav_profile_IRN-KHU.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0106" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/>
+               <placeName ref="geo:abha"/>
+               <lang target="..\profiles\vicav_profile_SAU-ABH.xml"/>
+               <cit type="example" xml:id="ex_037">
+                  <quote>kam</quote>
+                  <cit type="translation">
+                     <quote>how much</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0107" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Ingham1986b" type="publication" subtype="book"/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_SAU-DHF.xml"/>
+               <cit type="example" xml:id="ex_038">
+                  <quote>rāćb</quote>
+                  <cit type="translation">
+                     <quote>rider</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ex_039">
+                  <quote>kalām</quote>
+                  <cit type="translation">
+                     <quote>speech</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0108" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_SAU-QRN.xml"/>
+               <cit type="example" xml:id="ex_040">
+                  <quote>čitif</quote>
+                  <cit type="translation">
+                     <quote>shoulder</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ex_041">
+                  <quote>kān</quote>
+                  <cit type="translation">
+                     <quote>he was</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0109" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_SAU-BSR.xml"/>
+               <cit type="example" xml:id="ex_042">
+                  <quote>čabb - yičibb</quote>
+                  <cit type="translation">
+                     <quote>to spill</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0110" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_SAU-BSH.xml"/>
+               <cit type="example" xml:id="ex_043">
+                  <quote>ćiṯīr</quote>
+                  <cit type="translation">
+                     <quote>much</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ex_044">
+                  <quote>ćabb</quote>
+                  <cit type="translation">
+                     <quote>he spilled</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0111" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Toll1983" type="publication" subtype="book"/>
+               <placeName ref="geo:hejaz"/>
+               <lang target="..\profiles\vicav_profile_SAU-GHA.xml"/>
+               <note type="general">/k/ is realized as the affricate [č] in contact with /i/ by some
+                  speakers, probably due to influence from the Eastern part of the peninsula</note>
+               <cit type="example" xml:id="ex_045">
+                  <quote>kil</quote>
+                  <cit type="translation">
+                     <quote>he ate</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0112" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_SAU-HYL.xml"/>
+               <cit type="example" xml:id="ex_046">
+                  <quote>ćibīr</quote>
+                  <cit type="translation">
+                     <quote>big</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0113" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_SAU-HFF.xml"/>
+               <cit type="example" xml:id="ex_047">
+                  <quote>čabdeh</quote>
+                  <cit type="translation">
+                     <quote>liver</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ex_048">
+                  <quote>čilweh</quote>
+                  <cit type="translation">
+                     <quote>kidney</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0114" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_SAU-RYD.xml"/>
+               <cit type="example" xml:id="ex_049">
+                  <quote>wućil</quote>
+                  <cit type="translation">
+                     <quote>it was eaten</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0115" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_SAU-RUF.xml"/>
+               <cit type="example" xml:id="ex_050">
+                  <quote>kabb</quote>
+                  <cit type="translation">
+                     <quote>he spilled</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0116" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_SAU-RWA.xml"/>
+               <cit type="example" xml:id="ex_051">
+                  <quote>ćibīr</quote>
+                  <cit type="translation">
+                     <quote>big</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0117" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
+               <lang target="..\profiles\vicav_profile_SDN-RYD.xml"/>
+               <note type="general">affrication seems to be at least partly lexically conditioned,
+                  as in čānūn, "portable hearth"</note>
+               <note type="general">note that Young did not transcribe from recordings, but by ear</note>
+               <cit type="example" xml:id="ex_052">
+                  <quote>čeyf</quote>
+                  <cit type="translation">
+                     <quote>how</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fr_0118" resp="">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Lombezzi2019a" type="publication" subtype="bookSection"/>
+               <placeName ref="geo:ibri"/>
+               <lang target="..\profiles\vicav_profile_OMN-IBR.xml"/>
+            </wib:featureValueObservation>
+
+         </div>
+      </body>
+   </text>
+</TEI>
