@@ -21,7 +21,7 @@
       </fileDesc>
 
       <encodingDesc>
-
+        
          <listPrefixDef xml:id="listPrefixDef">
             <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab-dmp.xml#$1"/>
             <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_biblio_tei_zotero.xml#$1"/>
@@ -36,9 +36,9 @@
       </revisionDesc>
    </teiHeader>
 
-
-
-   <text>
+ 
+   
+ <text>
       <body xml:base="{docPath}">
          <div type="tbd">
             <list>
@@ -63,28 +63,40 @@
          </div>
 
          <div type="featureValueObservations">
+         
 
-            <wib:featureValueObservation status="draft" xml:id="" resp="">
+            <wib:featureValueObservation status="draft" xml:id="" resp="dmp:AD">
                <name type="featureValue" ref=""/>
                <bibl corresp="" type="publication" cert="unknown"/>
-               <placeName ref=""/>
-               <lang target=""/>
-               <personGrp type="" corresp=""/>
-               <cit type="example" xml:id=""><quote></quote>
-                  <cit type="translation"><quote></quote></cit>
-               </cit>
-               <note type="general">1</note>
-               <note type="constraintNote">2</note>
-               <note type="exceptionNote">3</note>
-
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation status="draft" xml:id="fr_0000" resp="dmp:AD">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="#" type="publication" cert="unknown"/>
-               <placeName ref="geo:beqaa"/>
+               <placeName ref="geo:haouch_el_nabi"/>
                <lang target="..\profiles\vicav_profile_LBN-ABI.xml"/>
-               <cit type="example" xml:id=""><quote></quote>
+                <cit type="example" xml:id=""><quote></quote>
+                  <cit type="translation"><quote></quote></cit>
+               </cit>
+               <note type="general">1</note>
+               <note type="constraintNote">2</note>
+               <note type="exceptionNote">3</note>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="" status="draft" resp="dmp:AD">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="" type="fieldwork" cert="unknown"/>
+               <placeName ref="geo:haouch_el_harime"/>
+               <lang target="..\profiles\vicav_profile_LBN-ABI.xml"/>
+                <cit type="example" xml:id=""><quote></quote>
+                  <cit type="translation"><quote></quote></cit>
+               </cit>
+               <note type="general">1</note>
+               <note type="constraintNote">2</note>
+               <note type="exceptionNote">3</note>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation status="draft" xml:id="" resp="dmp:AD">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="" type="publication" cert="unknown"/>
+               <placeName ref="geo:rayak"/>
+               <lang target="..\profiles\vicav_profile_LBN-ABI.xml"/>
+                <cit type="example" xml:id=""><quote></quote>
                   <cit type="translation"><quote></quote></cit>
                </cit>
                <note type="general">1</note>
@@ -92,16 +104,20 @@
                <note type="exceptionNote">3</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation status="draft" xml:id="fr_0001" resp="">
+            <wib:featureValueObservation xml:id="" status="draft" resp="dmp:AD">
                <name type="featureValue" ref=""/>
                <bibl corresp="zot:Younes2013" type="publication" cert="unknown"/>
                <placeName ref="geo:wadi_khalid"/>
                <lang target="..\profiles\vicav_profile_LBN-ATI.xml"/>
-               <note type="general">čān - yikūn; ʾabū-k «ton père (m.)» et ʾabū-č«ton père (f.);
-                  [k] is reestablished in the passive participles of verbs C-C-k of scheme *maC1C2ūC3 (ex. manyūk, maʿlūk et mahlūk)</note>
-            </wib:featureValueObservation>
+               <cit type="example" xml:id=""><quote></quote>
+                  <cit type="translation"><quote></quote></cit>
+               </cit>
+               <note type="general">1</note>
+               <note type="constraintNote">2</note>
+               <note type="exceptionNote">3</note>
+                </wib:featureValueObservation>
 
-            <wib:featureValueObservation status="draft" xml:id="fr_0002" resp="">
+            <wib:featureValueObservation status="draft" xml:id="" resp="dmp:AD">
                <name type="featureValue" ref=""/>
                <bibl corresp="zot:El-Hajjé1954" type="publication" subtype="book"/>
                <placeName ref="geo:tripoli_lebanon"/>
@@ -1185,99 +1201,78 @@
 
             <wib:featureValueObservation status="draft" xml:id="fr_0113" resp="">
                <name type="featureValue" ref=""/>
-               <bibl corresp="" type="publication" subtype=""/>
-               <placeName ref="geo:hofuf"/>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
                <lang target="..\profiles\vicav_profile_SAU-HFF.xml"/>
-               <cit type="example" xml:id="">
-                  <quote></quote>
+               <cit type="example" xml:id="ex_047">
+                  <quote>čabdeh</quote>
                   <cit type="translation">
-                     <quote></quote>
+                     <quote>liver</quote>
                   </cit>
                </cit>
-               <note type="general">1</note>
-               <note type="constraintNote">2</note>
-               <note type="exceptionNote">3</note>
+               <cit type="example" xml:id="ex_048">
+                  <quote>čilweh</quote>
+                  <cit type="translation">
+                     <quote>kidney</quote>
+                  </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation status="draft" xml:id="fr_0114" resp="">
                <name type="featureValue" ref=""/>
-               <bibl corresp="" type="publication" subtype=""/>
-               <placeName ref="geo:riyadh"/>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
                <lang target="..\profiles\vicav_profile_SAU-RYD.xml"/>
-               <cit type="example" xml:id="">
-                  <quote></quote>
+               <cit type="example" xml:id="ex_049">
+                  <quote>wućil</quote>
                   <cit type="translation">
-                     <quote></quote>
+                     <quote>it was eaten</quote>
                   </cit>
                </cit>
-               <note type="general">1</note>
-               <note type="constraintNote">2</note>
-               <note type="exceptionNote">3</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation status="draft" xml:id="fr_0115" resp="">
                <name type="featureValue" ref=""/>
-               <bibl corresp="" type="publication" subtype=""/>
-               <placeName ref="geo:rufaydah"/>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
                <lang target="..\profiles\vicav_profile_SAU-RUF.xml"/>
-               <cit type="example" xml:id="">
-                  <quote></quote>
+               <cit type="example" xml:id="ex_050">
+                  <quote>kabb</quote>
                   <cit type="translation">
-                     <quote></quote>
+                     <quote>he spilled</quote>
                   </cit>
                </cit>
-               <note type="general">1</note>
-               <note type="constraintNote">2</note>
-               <note type="exceptionNote">3</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation status="draft" xml:id="fr_0116" resp="">
                <name type="featureValue" ref=""/>
-               <bibl corresp="" type="publication" subtype=""/>
-               <placeName ref="geo:sirhan"/>
+               <bibl corresp="zot:" type="publication" subtype=""/><!--CHECKME invalid geo reference ""-->
                <lang target="..\profiles\vicav_profile_SAU-RWA.xml"/>
-               <cit type="example" xml:id="">
-                  <quote></quote>
+               <cit type="example" xml:id="ex_051">
+                  <quote>ćibīr</quote>
                   <cit type="translation">
-                     <quote></quote>
+                     <quote>big</quote>
                   </cit>
                </cit>
-               <note type="general">1</note>
-               <note type="constraintNote">2</note>
-               <note type="exceptionNote">3</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation status="draft" xml:id="fr_0117" resp="">
                <name type="featureValue" ref=""/>
-               <bibl corresp="" type="publication" cert="unknown"/>
-               <placeName ref="geo:khashm"/>
-               <placeName ref="geo:sawakin"/>
+               <bibl corresp="zot:" type="publication" cert="unknown"/>
                <lang target="..\profiles\vicav_profile_SDN-RYD.xml"/>
-               <cit type="example" xml:id="">
-                  <quote></quote>
+               <note type="general">affrication seems to be at least partly lexically conditioned,
+                  as in čānūn, "portable hearth"</note>
+               <note type="general">note that Young did not transcribe from recordings, but by ear</note>
+               <cit type="example" xml:id="ex_052">
+                  <quote>čeyf</quote>
                   <cit type="translation">
-                     <quote></quote>
+                     <quote>how</quote>
                   </cit>
                </cit>
-               <note type="general">1</note>
-               <note type="constraintNote">2</note>
-               <note type="exceptionNote">3</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation status="draft" xml:id="fr_0118" resp="">
                <name type="featureValue" ref=""/>
-               <bibl corresp="zot:Lombezzi2019a" type="publication" cert="low"/>
+               <bibl corresp="zot:Lombezzi2019a" type="publication" cert="unknown"/>
                <placeName ref="geo:ibri"/>
                <lang target="..\profiles\vicav_profile_OMN-IBR.xml"/>
-               <cit type="example" xml:id="">
-                  <quote></quote>
-                  <cit type="translation">
-                     <quote></quote>
-                  </cit>
-               </cit>
-               <note type="general">1</note>
-               <note type="constraintNote">2</note>
-               <note type="exceptionNote">3</note>
             </wib:featureValueObservation>
 
          </div>
