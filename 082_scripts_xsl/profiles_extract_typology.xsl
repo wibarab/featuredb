@@ -10,6 +10,7 @@
         <xsl:variable name="xml" as="element()">
             <profiles>
                 <xsl:for-each select="collection($path-to-profiles-dir)">
+                    <xsl:sort select="document-uri()"/>
                     <xsl:variable name="fn" select="tokenize(document-uri(.),'/')[last()]"/>
                     <xsl:variable name="typology" select="//tei:p[@rend = 'typology']"/>
                     <xsl:variable name="classification" select="$typology/@ana"/>
