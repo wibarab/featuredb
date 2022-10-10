@@ -12,7 +12,7 @@
                 <xsl:for-each select="collection($path-to-profiles-dir)">
                     <xsl:sort select="document-uri()"/>
                     <xsl:variable name="fn" select="tokenize(document-uri(.),'/')[last()]"/>
-                    <xsl:variable name="typology" select="//tei:p[@rend = 'typology']"/>
+                    <xsl:variable name="typology" select="//tei:div[@type = 'typology']"/>
                     <xsl:variable name="classification" select="$typology/@ana"/>
                     <profile>
                         <filename><xsl:value-of select="$fn"/></filename>
@@ -27,7 +27,9 @@
                                 <xsl:otherwise/>
                             </xsl:choose>
                         </classification>
-                        <typology><xsl:value-of select="$typology"/></typology>
+                        <typology>
+                            <xsl:value-of select="string-join($typology/tei:p,'&#10;')"/>
+                        </typology>
                     </profile>
                 </xsl:for-each>
             </profiles>
