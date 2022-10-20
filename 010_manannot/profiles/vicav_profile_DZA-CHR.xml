@@ -1,15 +1,19 @@
 <?xml version="1.0"?>
-<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" xml:id="profile_DZA-CHR_01">
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" xml:id="profile_cherchell_01">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>A machine-readable profile of Cherchell Arabic</title>
-            <author/>
+            <respStmt>
+               <resp>document preparation</resp>
+               <name xml:id="charly">Karlheinz Moerth</name>
+            </respStmt>
+            <author xml:id="aleksandra">Aleksandra Ercegovčević</author>
          </titleStmt>
          <publicationStmt>
             <publisher>ACDH-OeAW</publisher>
             <pubPlace>Vienna</pubPlace>
-            <date>2018</date>
+            <date>2019</date>
             <availability status="restricted">
                <p>
                   <ref type="license" target="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
@@ -20,55 +24,70 @@
             <p>This is an original digital text</p>
          </sourceDesc>
       </fileDesc>
-
       <encodingDesc>
-         <listPrefixDef>
-            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="wibarab-dmp.xml#$1"/>
-            <prefixDef ident="zotid" matchPattern="^(.+)$" replacementPattern="vicav_biblio_tei_zotero.xml#$1"/>
-            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="vicav_dialects.xml#$1"/>
-            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="vicav_geodata.xml#$1"/>
-         </listPrefixDef>
+         <tagsDecl partial="true">
+            <rendition xml:id="i" scheme="css">font-style:italics;</rendition>
+            <rendition xml:id="u" scheme="css">text-decoration:underline;</rendition>
+            <rendition xml:id="b" scheme="css">font-weight:bold;</rendition>
+         </tagsDecl>
       </encodingDesc>
-
       <revisionDesc>
-         <change status="created" when="2022-07-12" who="dmp:CM">created this document from vicav_dialects.xml, entry by <persName ref="dmp:RZ"/></change>
+         <change status="created" when="2018-05-02T08:20:00Z" who="#aleksandra">created</change>
+         <change status="draft" when="2018-11-20T11:24:00Z" who="#aleksandra">last modified (revision 11)</change>
+         <change status="draft" when="2019-02-19T23:28:16.109+01:00">transformed to TEI-XML</change>
+         <change when="2019-02-19T23:28:17.16+01:00" status="draft"/>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div>
             <head>
+               <figure>
+                  <graphic url="cherchell.jpg"/>
+                  <head type="imgCaption"><ref target="https://fr.wikipedia.org/wiki/Cherchell#/media/File:CherchellsPort.JPG ">Wikimedia</ref>
+                  </head>
+               </figure>
                <label>Name (English)</label>
                <name type="place" xml:lang="eng">Cherchell</name>
-               <label>Name (MSA)</label>
-               <name xml:lang="ara"></name>
-               <label>Name (MSA, trans.)</label>
-               <name xml:lang="ara-x-DMG"></name>
+               <label>MSA name</label>
+               <name xml:lang="ara">شرشال</name>
+               <label>MSA name (trans.)</label>
+               <name xml:lang="ara-x-DMG">Šaršāl</name>
                <label>Local name (trans.)</label>
-               <name xml:lang="ajp-Latn" type="latLoc"></name>
+               <name xml:lang="ara-Latn" type="latLoc">Šaršāl </name>
             </head>
-
             <div type="positioning">
+               <head>Geo location</head>
                <p>
-                  <geo></geo>
-                  <country></country>
+                  <geo>36°36'N 02°11'E</geo>
+                  <country>Algeria</country>
                </p>
             </div>
-
             <div type="typology">
+               <head>Typology (Local)</head>
+               <p rend="typology">West (Maghreb) › Algeria › Northern dialects</p>
+               <p>Archaic urban dialect of the pre-Hilalian-type</p>
             </div>
-
             <div type="general">
+               <p>Cherchell is a small port town located about 100 km west of Algiers. It is on
+                  the dividing line between the Eastern and Western regions of Algeria.</p>
+               <p>Because Cherchell is situated between the sea and the hill country
+                  inhabited by Berbers, its dialect has been rather insulated from Bedouin Arabic influences
+                  and is among the urban Algerian dialects which have preserved many linguistic features from
+                  the initial period of Arabization. It is one of the few non-Bedouin Algerian dialects which possess interdentals. </p>
             </div>
-
             <div type="researchHistory">
+               <p>The only existing description of the dialect of Cherchell is
+                  <rs type="bibl" ref="zotid:AVBNUMUL">Grand'Henry (1972)</rs>. This monograph, which focuses
+                  on the phonology and morphology of the dialect, consists of three parts: about 40 pages on
+                  phonology; 140 pages on morphology (including verbal and a nominal sections); and three
+                  texts in Arabic script (with transcription and French translation), one about a religious
+                  building dedicated to a local saint, one about marriage customs, and the third a collection of short anecdotes.</p>
             </div>
 
-            <div type="bibliography">
-            </div>
-
-            <div type="bibliography">
-            </div>
+            <div type="bibliography">               
+                    <p xml:space="preserve">To view publications on this variety click <rs type="bibl" ref="bibl:geo:Cherchell">here</rs>.</p>
+                </div>
          </div>
       </body>
    </text>

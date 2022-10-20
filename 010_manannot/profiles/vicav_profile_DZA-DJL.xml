@@ -1,15 +1,19 @@
 <?xml version="1.0"?>
-<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" xml:id="profile_DZA-DJL_01">
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" xml:id="profile_jijel_01">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>A machine-readable profile of Djidjelli Arabic</title>
-            <author/>
+            <title>A machine-readable profile of Jijel (formerly Djidjelli) Arabic</title>
+            <respStmt>
+               <resp>document preparation</resp>
+               <name xml:id="aleksandra">Aleksandra Ercegovcevic</name>
+            </respStmt>
+            <author>Aleksandra Ercegovčević</author>
          </titleStmt>
          <publicationStmt>
             <publisher>ACDH-OeAW</publisher>
             <pubPlace>Vienna</pubPlace>
-            <date>2018</date>
+            <date>2019</date>
             <availability status="restricted">
                <p>
                   <ref type="license" target="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
@@ -20,54 +24,75 @@
             <p>This is an original digital text</p>
          </sourceDesc>
       </fileDesc>
-
       <encodingDesc>
-         <listPrefixDef>
-            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="wibarab-dmp.xml#$1"/>
-            <prefixDef ident="zotid" matchPattern="^(.+)$" replacementPattern="vicav_biblio_tei_zotero.xml#$1"/>
-            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="vicav_dialects.xml#$1"/>
-            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="vicav_geodata.xml#$1"/>
-         </listPrefixDef>
+         <tagsDecl partial="true">
+            <rendition xml:id="i" scheme="css">font-style:italics;</rendition>
+            <rendition xml:id="u" scheme="css">text-decoration:underline;</rendition>
+            <rendition xml:id="b" scheme="css">font-weight:bold;</rendition>
+         </tagsDecl>
       </encodingDesc>
-
       <revisionDesc>
-         <change status="created" when="2022-07-12" who="dmp:CM">created this document from vicav_dialects.xml, entry by <persName ref="dmp:RZ"/></change>
+         <change status="created" when="2019-01-31T10:27:00Z" who="#aleksandra">created</change>
+         <change status="draft" when="2019-01-31T10:29:00Z" who="#aleksandra">last modified (revision 3)</change>
+         <change status="draft" when="2019-02-19T23:29:38.292+01:00">transformed to TEI-XML</change>
+         <change when="2019-02-19T23:29:39.476+01:00" status="draft"/>
       </revisionDesc>
    </teiHeader>
+
    <text>
       <body>
          <div>
             <head>
+               <figure>
+                  <graphic url="jijel.jpg"/>
+                  <head type="imgCaption"><ref target="https://en.wikipedia.org/wiki/Jijel#/media/File:Vue_G%C3%A9n%C3%A9rale_sur_la_Ville_de_Jijel_(Alg%C3%A9rie).JPG">Wikimedia</ref>
+                  </head>
+               </figure>
                <label>Name (English)</label>
-               <name type="place" xml:lang="eng">Djidjelli</name>
-               <label>Name (MSA)</label>
-               <name xml:lang="ara"></name>
-               <label>Name (MSA, trans.)</label>
-               <name xml:lang="ara-x-DMG"></name>
+               <name type="place" xml:lang="eng">Jijel (formerly Djidjelli)</name>
+               <label>MSA name</label>
+               <name xml:lang="ara">جيجل</name>
+               <label>MSA name (trans.)</label>
+               <name xml:lang="ara-x-DMG">Ğīǧal</name>
                <label>Local name (trans.)</label>
-               <name xml:lang="ajp-Latn" type="latLoc"></name>
+               <name xml:lang="ara-Latn" type="latLoc">Žīžəl</name>
             </head>
 
             <div type="positioning">
+               <head>Geo location</head>
                <p>
-                  <geo></geo>
-                  <country></country>
+                  <geo>36°49'N 05°45'E</geo>
+                  <country>Algeria</country>
                </p>
             </div>
 
             <div type="typology">
+               <head>Typology (Local)</head>
+               <p rend="typology">West (Maghreb) › Algeria</p>
+               <p>Archaic urban dialect of the pre-Hilalian type</p>
             </div>
 
             <div type="general">
+               <p>Jijel is a northeastern Algerian coastal city situated in the region of Corniche Jjilienne. Due to the rugged landscape, it is rather isolated. Although today the majority speak Arabic, Jijel’s population is of Berber descent – mainly of the Kutama tribe. Therefore the dialect of Jijel shows certain influences of a Berber substratum.  </p>
             </div>
 
             <div type="researchHistory">
+               <p><rs type="bibl" ref="zotid:QDYKKRHC">Marçais (1945-1948)</rs> is a short article on plural agreement in the 
+               Jijel dialect of some usually singular nouns. <rs type="bibl" ref="zotid:Y37XX42R">Marçais (1954)</rs> is a 
+               collection of texts, including five on everyday life, six folk narratives, and twelve songs in the dialect 
+               of Jijel. <rs type="bibl" ref="zotid:VN6XFWA6">Marçais (1956)</rs> is a comprehensive study of the dialect of Jijel, 
+               including an extraordinarily long section on phonology (140 pages), and chapters (of at least 100 pages each) on the 
+               verb, the noun, pronouns, and particles. The chapter on syntax, however, consists of only ten pages focusing on topics 
+               like affirmation and negation. In the conclusion, the author discusses the Jijel dialect's Berber substratum and its innovative features.</p>
+            </div>
+
+            <div type="dictionaries">
+               <p><rs type="bibl" ref="zotid:Y37XX42R">Marçais (1954)</rs> includes a glossary of about 40 pages. 
+               <rs type="bibl" ref="zotid:VN6XFWA6">Marçais (1956)</rs> contains significant lexicographical information.</p>
             </div>
 
             <div type="bibliography">
-            </div>
-
-            <div type="bibliography">
+              <p>To view publications on this variety click <rs type="bibl" ref="bibl:geo:Jijel">here</rs>.</p>
             </div>
          </div>
       </body>
