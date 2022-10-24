@@ -1,15 +1,21 @@
 <?xml version="1.0"?>
-<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" xml:id="profile_TUR-TIL_01">
+<?xml-model href="../tools/802_tei_odd/out/vicav_profiles.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../tools/802_tei_odd/out/vicav_profiles.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" xml:id="profile_tillo_01">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>A machine-readable profile of Tillo Arabic</title>
-            <author/>
+            <title>A machine-readable profile of  Arabic</title>
+            <respStmt>
+               <resp>document preparation</resp>
+               <name xml:id="BL">Bettina Leitner</name>
+            </respStmt>
+            <author>Bettina Leitner</author>
          </titleStmt>
          <publicationStmt>
             <publisher>ACDH-OeAW</publisher>
             <pubPlace>Vienna</pubPlace>
-            <date>2018</date>
+            <date>2019</date>
             <availability status="restricted">
                <p>
                   <ref type="license" target="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
@@ -20,54 +26,77 @@
             <p>This is an original digital text</p>
          </sourceDesc>
       </fileDesc>
-
       <encodingDesc>
+         <tagsDecl partial="true">
+            <rendition xml:id="i" scheme="css">font-style:italics;</rendition>
+            <rendition xml:id="u" scheme="css">text-decoration:underline;</rendition>
+            <rendition xml:id="b" scheme="css">font-weight:bold;</rendition>
+         </tagsDecl>
          <listPrefixDef>
-            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="wibarab-dmp.xml#$1"/>
-            <prefixDef ident="zotid" matchPattern="^(.+)$" replacementPattern="vicav_biblio_tei_zotero.xml#$1"/>
-            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="vicav_dialects.xml#$1"/>
-            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="vicav_geodata.xml#$1"/>
+            <prefixDef ident="zotid" matchPattern="([a-z]+)" replacementPattern="https://www.zotero.org/groups/2165756/vicav/items/itemKey/#$1">
+               <p>Private URIs with the prefix "zotid" point to the respective bibliographic record in the VICAV Zotero library and/or to a local copy of it.</p>
+            </prefixDef>
          </listPrefixDef>
       </encodingDesc>
-
       <revisionDesc>
-         <change status="created" when="2022-07-12" who="dmp:CM">created this document from vicav_dialects.xml, entry by <persName ref="dmp:CL"/></change>
+         <change status="created" when="2020-02-04T08:07:00Z" who="#BL">created</change>
+         <change status="draft" when="2020-09-24T12:32:14Z" who="#">last modified (revision 3)</change>
+         <change status="draft" when="2020-09-24T12:35:09.48+02:00">transformed to TEI-XML</change>
+         <change when="2020-09-24T12:35:10.165+02:00" status="draft"/>
       </revisionDesc>
    </teiHeader>
+
    <text>
       <body>
          <div>
             <head>
-               <label>Name (English)</label>
+               <figure>
+                  <graphic url="tillo.jpg"/>
+                  <head type="imgCaption">
+                     <ref target="http://www.milliyet.com.tr/aydinlar-49-yil-sonra-tillo-oldu-siyaset-1785089/">http://www.milliyet.com.tr/aydinlar-49-yil-sonra-tillo-oldu-siyaset-1785089/</ref>
+                  </head>
+               </figure>
+                <label>Name (English)</label>
                <name type="place" xml:lang="eng">Tillo</name>
-               <label>Name (MSA)</label>
-               <name xml:lang="ara"></name>
-               <label>Name (MSA, trans.)</label>
-               <name xml:lang="ara-x-DMG"></name>
-               <label>Local name (trans.)</label>
-               <name xml:lang="ajp-Latn" type="latLoc"></name>
+               <label>Name in local variety (in transcription)</label>
+               <name xml:lang="ara-x-DMG">Təllo (Turkish Aydınlar)</name>
             </head>
 
             <div type="positioning">
+               <head>Geo location</head>
                <p>
-                  <geo></geo>
-                  <country></country>
+                  <geo>37°56'N 42°00'E</geo>
+                  <country>Turkey</country>
                </p>
             </div>
-
             <div type="typology">
+               <head>Typology (Local)</head>
+               <p rend="Normal">East (Mashreq) › Mesopotamia › Anatolia (qəltu) › Siirt group</p>
+               <p>Sedentary</p>
             </div>
-
             <div type="general">
+               <head>General</head>
+               <p>Tillo is a large village in the province of Siirt about 8 km northeast of the town of Siirt in southeastern Turkey. Its name is probably derived from Arabic tall “hill, elevation” due to its location on the chain of hills surrounding the city of Siirt. As a consequence of the 1990 ban on non-Turkish names, Tillo was officially renamed Aydınlar.</p>
+               <p>Tillo is said to have been a relatively important centre of learning under the Ottomans and there are still several madrasas in the village. A number of Muslim saints are known to be buried in the village’s cemeteries, one of whom is the eminent Shaykh Ismaʕīl Faqīr Allāh b. Qāsim b. ʕAbd al-Jamāl (d. 1147/1734).</p>
+               <p>In the early 2000s, <rs type="bibl" ref="zotid:Z5PAE9GX">Lahdo (2009)</rs> estimated the number of Arabic-speaking inhabitants in Tillo as about 1,500; but their number seems to be decreasing rapidly.</p>
             </div>
-
             <div type="researchHistory">
+               <head>Research history</head>
+               <p>Ablahad Lahdo published a monograph in <rs type="bibl" ref="zotid:Z5PAE9GX">2009</rs> (almost
+               identical with <rs type="bibl" ref="zotid:4KPV8DX2">Lahdo (2010)</rs>) and,
+               earlier, four articles (<rs type="bibl" ref="zotid:8JC6WQRL">2002</rs>, <rs type="bibl" ref="zotid:G8X3DBSX">2003</rs>,
+               <rs type="bibl" ref="zotid:N8HUY4RP">2004</rs>, <rs type="bibl" ref="zotid:DS4KFZPJ">2015</rs>)
+               on the village’s vernacular. <rs type="bibl" ref="zotid:N8HUY4RP">Lahdo
+               (2004)</rs> discusses the influence of Turkish on the town’s Arabic dialect.
+               <rs type="bibl" ref="zotid:DS4KFZPJ">Lahdo (2015)</rs> contains two texts.</p>
+            </div>
+            <div type="dictionaries">
+               <head>Dictionaries</head>
+               <p><rs type="bibl" ref="zotid:TJCF9NH4">Lahdo (2009)</rs> also has a glossary (pp.256-276).</p>
             </div>
 
             <div type="bibliography">
-            </div>
-
-            <div type="bibliography">
+                    <p xml:space="preserve">To view publications on this variety click <rs type="bibl" ref="bibl:geo:Tillo">here</rs>.</p>
             </div>
          </div>
       </body>
