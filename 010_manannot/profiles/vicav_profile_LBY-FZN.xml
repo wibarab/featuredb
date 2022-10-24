@@ -1,15 +1,21 @@
 <?xml version="1.0"?>
-<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" xml:id="profile_LBY-FZN_01">
+<?xml-model href="../tools/802_tei_odd/out/vicav_profiles.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../tools/802_tei_odd/out/vicav_profiles.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" xml:id="profile_fezzan_01">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>A machine-readable profile of Fezzan Arabic</title>
-            <author/>
+            <respStmt>
+               <resp>document preparation</resp>
+               <name xml:id="BL">Bettina Leitner</name>
+            </respStmt>
+            <author>Bettina Leitner</author>
          </titleStmt>
          <publicationStmt>
             <publisher>ACDH-OeAW</publisher>
             <pubPlace>Vienna</pubPlace>
-            <date>2018</date>
+            <date>2019</date>
             <availability status="restricted">
                <p>
                   <ref type="license" target="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
@@ -20,18 +26,18 @@
             <p>This is an original digital text</p>
          </sourceDesc>
       </fileDesc>
-
       <encodingDesc>
-         <listPrefixDef>
-            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="wibarab-dmp.xml#$1"/>
-            <prefixDef ident="zotid" matchPattern="^(.+)$" replacementPattern="vicav_biblio_tei_zotero.xml#$1"/>
-            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="vicav_dialects.xml#$1"/>
-            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="vicav_geodata.xml#$1"/>
-         </listPrefixDef>
+         <tagsDecl partial="true">
+            <rendition xml:id="i" scheme="css">font-style:italics;</rendition>
+            <rendition xml:id="u" scheme="css">text-decoration:underline;</rendition>
+            <rendition xml:id="b" scheme="css">font-weight:bold;</rendition>
+         </tagsDecl>
       </encodingDesc>
-
       <revisionDesc>
-         <change status="created" when="2022-07-12" who="dmp:CM">created this document from vicav_dialects.xml, entry by <persName ref="dmp:RZ"/></change>
+         <change status="created" when="2020-02-04T07:44:00Z" who="#BL">created</change>
+         <change status="draft" when="2020-02-04T07:44:00Z" who="#">last modified (revision 2)</change>
+         <change status="draft" when="2020-09-24T09:37:55.388+02:00">transformed to TEI-XML</change>
+         <change when="2020-09-24T09:37:56.395+02:00" status="draft"/>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -39,35 +45,54 @@
          <div>
             <head>
                <label>Name (English)</label>
-               <name type="place" xml:lang="eng">Fezzan</name>
-               <label>Name (MSA)</label>
-               <name xml:lang="ara"></name>
-               <label>Name (MSA, trans.)</label>
-               <name xml:lang="ara-x-DMG"></name>
-               <label>Local name (trans.)</label>
-               <name xml:lang="ajp-Latn" type="latLoc"></name>
+               <name type="region" xml:lang="eng">Fezzan</name>
+                <label>MSA name</label>
+               <name xml:lang="ara">فزان</name>
+               <label>MSA name (trans.)</label>
+                <name xml:lang="ara-x-DMG">Fizzān</name>
+                <label>Name in local variety (in transcription)</label>
+               <name xml:lang="ara-x-DMG">Fəzzān</name>
             </head>
 
             <div type="positioning">
-               <p>
-                  <geo></geo>
-                  <country></country>
-               </p>
+               <head>Geo location</head>
+               <p><geo>26°00'N 14°00'E</geo>
+               <country>Libya</country> (Sebha)</p>
             </div>
 
             <div type="typology">
+               <head>Typology (Local)</head>
+               <p>West (Maghreb) &gt; Libya &gt; Western group (Tripolitania and Fezzan)</p>
+               <p>Conservative variety of Bedouin Libyan Arabic</p>
             </div>
 
             <div type="general">
+               <head>General</head>
+               <p>The toponym Fezzan goes back to antiquity (Latin Phasania) and refers to a large area of oases in the Libyan Desert. Sebha is the chief town of the Fezzan, which is inhabited by approximately 450,000 people, about three quarters of whom are sedentary and called Fazāzna (sg. Fazzānī). They are all Sunnī Muslims of the Mālikī rite and the cultivators of these oases.</p>
+               <p>The Libyan dialects have been divided into three areas: the western area includes Tripolitania and Fezzan, the eastern area is Cyrenaica, and the transitional zone includes Sebha in the Fezzan, Misurata in Tripolitania, and the Sirt and Jufra regions.</p>
             </div>
 
             <div type="researchHistory">
+               <head>Research history</head>
+               <p><rs type="bibl" ref="zotero:HHMRB5I6">Marçais (2001)</rs>
+               contains, besides a short description of morphological elements, a
+               number of texts in the Arabic dialects of the Fezzan which were collected in the 1950s.</p>
+
+               <p>All further publications on Fezzani Arabic are based on Marçais’ prose
+               texts published in 2001. Grammatical remarks are found in <rs type="bibl" ref="zotid:LDAZFZIW">Bettini (2004)</rs>.
+               <rs type="bibl" ref="zotero:Z8BXD2S8">Caubet (2004)</rs> is a concise description
+               of the phonology, morphology, syntax, and lexicon of both the nomadic and sedentary dialects of the Fezzan.</p>
+
+               <p><rs type="bibl" ref="zotid:FUWPTPV9">D’Anna (2017a)</rs> deals with
+               the development of conditional particles in Fezzani Arabic, and <rs type="bibl" ref="zotid:ZZG85PP5">D’Anna (2017b)</rs> is on agreement patterns.</p>
+
+               <p><rs type="bibl" ref="zotid:JXGBYNFC">D’Anna &amp; Marmorstein (2018)</rs>
+               is the most recent article on Fezzani Arabic, discussing verbal negation in the dialects.</p>
             </div>
 
             <div type="bibliography">
-            </div>
-
-            <div type="bibliography">
+               <head>Bibliography</head>
+                  <p>To view publications on this variety click <rs type="bibl" ref="bibl:reg:Fezzan">here</rs>.</p>
             </div>
          </div>
       </body>
