@@ -36,6 +36,42 @@
                <f name="ensurePrefixHash"><binary value="true"/></f>
             </fs>
 
+           <fs type="attribute">
+               <f name="matchString"><string>//personGrp[@role="gender"]</string></f>
+               <f name="atttrName"><string>corresp</string></f>
+
+               <f name="elementPath"><string>//tei:personGrp[@role="gender"]</string></f>
+               <f name="selectPath"><string>tei:name</string></f>
+               <f name="altPath"><string>@xml:id</string></f>
+               <f name="filePath"><string>{basePath}\..\wibarab_tribes.xml</string></f>
+               <f name="prefix"><string></string></f>
+               <f name="ensurePrefixHash"><binary value="true"/></f>
+            </fs>
+
+           <fs type="attribute">
+               <f name="matchString"><string>//personGrp[@role="age"]</string></f>
+               <f name="atttrName"><string>corresp</string></f>
+
+               <f name="elementPath"><string>//tei:personGrp[@role="age"]</string></f>
+               <f name="selectPath"><string>tei:name</string></f>
+               <f name="altPath"><string>@xml:id</string></f>
+               <f name="filePath"><string>{basePath}\..\wibarab_tribes.xml</string></f>
+               <f name="prefix"><string></string></f>
+               <f name="ensurePrefixHash"><binary value="true"/></f>
+            </fs>
+
+            <fs type="attribute">
+               <f name="matchString"><string>//personGrp[@role="clan"]</string></f>
+               <f name="atttrName"><string>corresp</string></f>
+
+               <f name="elementPath"><string>//tei:personGrp[@role="clan"]</string></f>
+               <f name="selectPath"><string>tei:name</string></f>
+               <f name="altPath"><string>@xml:id</string></f>
+               <f name="filePath"><string>{basePath}\..\wibarab_tribes.xml</string></f>
+               <f name="prefix"><string></string></f>
+               <f name="ensurePrefixHash"><binary value="true"/></f>
+            </fs>
+
              <fs type="attribute">
                <f name="matchString"><string>//personGrp[@role="tribe"]</string></f>
                <f name="atttrName"><string>corresp</string></f>
