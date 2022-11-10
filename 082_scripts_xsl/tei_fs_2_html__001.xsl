@@ -60,7 +60,7 @@
       <xsl:variable name="xmlid"><xsl:value-of select="@xml:id"/></xsl:variable>
       <div class="featureRealisation" id="{$xmlid}">
          <table>
-            <tr><td colspan="2" class="tdObservation">Observation <xsl:value-of select="position()"/><xsl:text> </xsl:text><a class="aReturnLink" href="goto:{$xmlid}">==˃ (Go to XML)</a></td></tr>
+            <tr><td colspan="2" class="tdObservation">Observation <xsl:value-of select="position()"/> (<xsl:value-of select="@xml:id"/>)<xsl:text> </xsl:text><a class="aReturnLink" href="goto:{$xmlid}">==˃ (Go to XML)</a></td></tr>
 
             <tr>
                <td class="tdLeft">Type</td>
