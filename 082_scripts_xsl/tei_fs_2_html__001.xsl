@@ -112,9 +112,9 @@
             <tr>
                <td class="tdLeft">Place</td>
                <td class="tdRight">
-                   <xsl:for-each select="tei:placename">
+                   <xsl:for-each select="tei:placeName">
                       <xsl:variable name="id"><xsl:value-of select="substring(@ref,5)"/></xsl:variable>
-                      <xsl:value-of select="$geoDoc//tei:place[@xml:id=$id]"/>
+                      <xsl:value-of select="$geoDoc//tei:place[@xml:id=$id]/tei:placeName"/>
 
                       <xsl:if test="($id = '')"><span class="spError">Missing place!!! (<xsl:value-of select="."/>)</span></xsl:if>
                    </xsl:for-each>
