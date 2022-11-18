@@ -3612,6 +3612,7 @@
                <bibl corresp="zot:Behnstedt1997b" type="publication"></bibl>
                <placeName ref="geo:mhardi"></placeName>
                <lang target="..\profiles\vicav_profile_SYR-MRD.xml"></lang>
+               <personGrp role="religion" corresp="#christians"></personGrp>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0203" status="draft" resp="dmp:SP">
@@ -3636,6 +3637,7 @@
                <bibl corresp="zot:Behnstedt1997b" type="publication"></bibl>
                <placeName ref="geo:abu_qbes"></placeName>
                <lang target="..\profiles\vicav_profile_SYR-QBS.xml"></lang>
+               <personGrp role="religion" corresp="#alawis"></personGrp>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0205" status="done" resp="dmp:SP">
@@ -3643,7 +3645,7 @@
                <bibl corresp="zot:Behnstedt1997b" type="publication"></bibl>
                <placeName ref="geo:qanawat"></placeName>
                <lang target="..\profiles\vicav_profile_SYR-QNW.xml"></lang>
-               <personGrp role="" corresp=""></personGrp>
+               <personGrp role="religion" corresp="#druzes"></personGrp>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0206" status="done" resp="dmp:SP">
@@ -3740,21 +3742,34 @@
                <note type="exceptionNote">Loanwords from MSA and religious terminology tends to retain the /q/, e.g.  qbǝl ‘before’, fǝrqa ‘band’</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0260" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0260" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#q_q"></name>
                <bibl corresp="zot:Behnstedt1998c" type="publication"></bibl>
                <placeName ref="geo:houmt_souk"></placeName>
                <lang target="..\profiles\vicav_profile_TUN-DJI.xml"></lang>
                <personGrp role="religion" corresp="#ibadis"></personGrp>
-               <cit type="example" xml:id="">
-                  <quote></quote>
+               <cit xml:id="ct_0116" type="example">
+                  <quote>sāq</quote>
                   <cit type="translation">
-                     <quote></quote>
+                     <quote>foot</quote>
                   </cit>
                </cit>
-               <note type="general">1</note>
-               <note type="constraintNote">2</note>
-               <note type="exceptionNote">3</note>
+               <note type="general">/q/ appears in about 35 % of all roots</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0260" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#q_g"></name>
+               <bibl corresp="zot:Behnstedt1998c" type="publication"></bibl>
+               <placeName ref="geo:houmt_souk"></placeName>
+               <lang target="..\profiles\vicav_profile_TUN-DJI.xml"></lang>
+               <personGrp role="religion" corresp="#ibadis"></personGrp>
+               <cit xml:id="ct_0117" type="example">
+                  <quote>burdgān</quote>
+                  <cit type="translation">
+                     <quote>orange</quote>
+                  </cit>
+               </cit>
+               <note type="general">/g/ appears in abouth 65 % of all roots</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0261" status="draft" resp="dmp:SP">
@@ -3791,21 +3806,33 @@
                <note type="exceptionNote">3</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0262" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0262" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#q_gh"></name>
                <bibl corresp="zot:Cantineau1951" type="publication"></bibl>
                <placeName ref="geo:gabes"></placeName>
                <lang target="..\profiles\vicav_profile_TUN-GBS.xml"></lang>
-               <personGrp role="" corresp=""></personGrp>
-               <cit type="example" xml:id="">
-                  <quote></quote>
+               <cit xml:id="ct_0118" type="example">
+                  <quote>ġaləb</quote>
                   <cit type="translation">
-                     <quote></quote>
+                     <quote>heart</quote>
                   </cit>
                </cit>
-               <note type="general">1</note>
-               <note type="constraintNote">2</note>
-               <note type="exceptionNote">3</note>
+               <note type="general">Besides /g/</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0262" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#q_g"></name>
+               <bibl corresp="zot:Cantineau1951" type="publication"></bibl>
+               <placeName ref="geo:gabes"></placeName>
+               <lang target="..\profiles\vicav_profile_TUN-GBS.xml"></lang>
+               <cit xml:id="ct_0118" type="example">
+                  <quote>ġaləb</quote>
+                  <cit type="translation">
+                     <quote>heart</quote>
+                  </cit>
+               </cit>
+               <note type="general">Besides /ġ/</note>
+               <note type="exceptionNote">In some words from MSA /q/</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0263" status="draft" resp="dmp:SP">
@@ -3881,60 +3908,50 @@
                <note type="exceptionNote">3</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0265" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0265" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#q_g"></name>
                <bibl corresp="" type="publication"></bibl>
                <placeName ref="geo:douz"></placeName>
                <lang target="..\profiles\vicav_profile_TUN-MZG.xml"></lang>
-               <personGrp role="" corresp=""></personGrp>
-               <cit type="example" xml:id="">
-                  <quote></quote>
+               <cit xml:id="ct_0119" type="example">
+                  <quote>gṛūn</quote>
                   <cit type="translation">
-                     <quote></quote>
+                     <quote>horns</quote>
                   </cit>
                </cit>
-               <note type="general">1</note>
-               <note type="constraintNote">2</note>
-               <note type="exceptionNote">3</note>
+               <note type="exceptionNote">In a few loans from CA and MSA /q/, e.g. maqṛōna "noodles"</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0266" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0266" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#q_g"></name>
                <bibl corresp="zot:Prinoth2017" type="publication"></bibl>
                <placeName ref="geo:sidi_bouzid"></placeName>
                <lang target="..\profiles\vicav_profile_TUN-SBZ.xml"></lang>
-               <personGrp role="" corresp=""></personGrp>
-               <cit type="example" xml:id="">
-                  <quote></quote>
+               <cit xml:id="ct_0120" type="example">
+                  <quote>zarga</quote>
                   <cit type="translation">
-                     <quote></quote>
+                     <quote>blue (fem)</quote>
                   </cit>
                </cit>
-               <note type="general">1</note>
-               <note type="constraintNote">2</note>
-               <note type="exceptionNote">3</note>
+               <note type="exceptionNote">Whilst /g/ prevails more than /q/ as a reflex of MSA /q/, there are many instances where /q/ is also retained, e.g. qlāṣt (socks)</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0025" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0025" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#q_q"></name>
                <bibl corresp="zot:Sellami2019" type=" publication"></bibl>
                <placeName ref="geo:sfax"></placeName>
                <lang target="..\profiles\vicav_profile_TUN-SFX.xml"></lang>
-               <personGrp role="" corresp=""></personGrp>
-               <cit type="example" xml:id="">
-                  <quote></quote>
+               <cit xml:id="ct_0121" type="example">
+                  <quote>qēʕid</quote>
                   <cit type="translation">
-                     <quote></quote>
+                     <quote>sitting</quote>
                   </cit>
                </cit>
-               <note type="general">1</note>
-               <note type="constraintNote">2</note>
-               <note type="exceptionNote">3</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0267" status="draft" resp="dmp:SP">
                <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
+               <bibl corresp="zot:Talmoudi1980" type="publication"></bibl>
                <placeName ref="geo:sousse"></placeName>
                <lang target="..\profiles\vicav_profile_TUN-SUS.xml"></lang>
                <personGrp role="" corresp=""></personGrp>
@@ -3951,7 +3968,7 @@
 
             <wib:featureValueObservation xml:id="fv_0268" status="draft" resp="dmp:SP">
                <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
+               <bibl corresp="zot:Marçais1925" type="publication"></bibl>
                <placeName ref=""></placeName>
                <lang target="..\profiles\vicav_profile_TUN-TKR.xml"></lang>
                <personGrp role="" corresp=""></personGrp>
