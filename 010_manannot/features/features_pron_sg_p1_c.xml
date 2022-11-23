@@ -9,7 +9,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Sample template created out of the k-types.</title>
+            <title>Variants of 1st person singular communis pronoun</title>
             <author>Johanna Doppelbauer</author>
          </titleStmt>
          <publicationStmt>
@@ -17,7 +17,7 @@
             <date when="2022-10-03"></date>
          </publicationStmt>
          <sourceDesc>
-            <p>This is an attempt to create a template out of the file wich already contains most information.</p>
+            <p>This is the feature-file for the 1st person singular communis pronoun.</p>
          </sourceDesc>
       </fileDesc>
 
@@ -33,7 +33,7 @@
 
       <revisionDesc>
          <change when="2022-11-17" who="dmp:SK">Young 1996 does not provide information about the pron SG 1p for the Rashāyda (SDN-RDY).</change>
-         <change when="2022-11-21" who="dmp:VE">No information available for OMN-KHB, YEM-NDR</change>
+         <change when="2022-11-21" who="dmp:VE">No information available for OMN-KHB,OMN-SUR, OMN-WAH, YEM-NDR</change>
          <change when="2022-08-17" who="dmp:JD">The given sources do not provide any information about the pron SG 1p for PSE-BTL, PSE-GZA, EGY-BWS and EGY-LGT.</change>
          <change when="2022-11-22" who="dmp:VE">No information available for EGY-ASW, EGY-ASY, EGY-BDR, EGY-BSW, EGY-LXR, EGY-MNY, EGY-NMS and EGY-SHG</change>
          <change when="2022-11-23" who="dmp:SK">No information available for TCD-BBL, TCD-ABK and TCD-ULR.</change>
@@ -68,6 +68,9 @@
                </item>
                <item xml:id="pr_s1c_naa">
                   <label>nā/nē</label>
+               </item>
+               <item xml:id="pr_s1c_nii">
+                  <label>nī</label>
                </item>
                <item xml:id="pr_s1c_aana">
                   <label>āna</label>
@@ -3253,8 +3256,8 @@
                <lang target="..\profiles\vicav_profile_MAR-CSB.xml"></lang>
                <personGrp role="" corresp=""></personGrp>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="fv_0240" status="done" resp="dmp:TD">
+
+            <wib:featureValueObservation xml:id="fv_0240" status="done" resp="dmp:TD">
                <name type="featureValue" ref="#pr_s1c_aanaaya"></name>
                <bibl corresp="zot:Aguadé2003b" type="publication"></bibl>
                <placeName ref="geo:casablanca"></placeName>
@@ -3613,21 +3616,12 @@
                <cit type="sourceRepresentation"><quote>ana</quote></cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0294" status="draft" resp="dmp:VE">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0294" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#pr_s1c_ana"></name>
                <bibl corresp="" type="publication"></bibl>
                <placeName ref="geo:muscat"></placeName>
                <lang target="..\profiles\vicav_profile_OMN-MSQ.xml"></lang>
-               <personGrp role="" corresp=""></personGrp>
-               <cit type="example" xml:id="">
-                  <quote></quote>
-                  <cit type="translation">
-                     <quote></quote>
-                  </cit>
-               </cit>
-               <note type="general">1</note>
-               <note type="constraintNote">2</note>
-               <note type="exceptionNote">3</note>
+               <cit type="sourceRepresentation"><quote>ʔana</quote></cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0295" status="draft" resp="dmp:VE">
@@ -3636,40 +3630,6 @@
                <placeName ref="geo:al_ristaq"></placeName>
                <lang target="..\profiles\vicav_profile_OMN-RST.xml"></lang>
                <cit type="sourceRepresentation"><quote>ene</quote></cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0296" status="draft" resp="dmp:VE">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Holes1995d" type="publication"></bibl>
-               <placeName ref="geo:sur"></placeName>
-               <lang target="..\profiles\vicav_profile_OMN-SUR.xml"></lang>
-               <personGrp role="" corresp=""></personGrp>
-               <cit type="example" xml:id="">
-                  <quote></quote>
-                  <cit type="translation">
-                     <quote></quote>
-                  </cit>
-               </cit>
-               <note type="general">1</note>
-               <note type="constraintNote">2</note>
-               <note type="exceptionNote">3</note>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0297" status="draft" resp="dmp:VE">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Webster1991" type="publication"></bibl>
-               <placeName ref="geo:al_wahiba"></placeName>
-               <lang target="..\profiles\vicav_profile_OMN-WAH.xml"></lang>
-               <personGrp role="" corresp=""></personGrp>
-               <cit type="example" xml:id="">
-                  <quote></quote>
-                  <cit type="translation">
-                     <quote></quote>
-                  </cit>
-               </cit>
-               <note type="general">1</note>
-               <note type="constraintNote">2</note>
-               <note type="exceptionNote">3</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0007" status="done" resp="dmp:VE">
@@ -3716,21 +3676,20 @@
                <cit type="sourceRepresentation"><quote>ʔana (ʔana)</quote></cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0300" status="draft" resp="dmp:VE">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
+            <wib:featureValueObservation xml:id="fv_0300" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#pr_s1c_naa"></name>
+               <bibl corresp="" type="personal communication"></bibl>
                <placeName ref="geo:hadramaut"></placeName>
                <lang target="..\profiles\vicav_profile_YEM-HAD.xml"></lang>
-               <personGrp role="" corresp=""></personGrp>
-               <cit type="example" xml:id="">
-                  <quote></quote>
-                  <cit type="translation">
-                     <quote></quote>
-                  </cit>
-               </cit>
-               <note type="general">1</note>
-               <note type="constraintNote">2</note>
-               <note type="exceptionNote">3</note>
+               <personGrp role="gender" corresp="#male"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0276" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#pr_s1c_nii"></name>
+               <bibl corresp="" type="personal communication"></bibl>
+               <placeName ref="geo:hadramaut"></placeName>
+               <lang target="..\profiles\vicav_profile_YEM-HAD.xml"></lang>
+               <personGrp role="gender" corresp="#female"></personGrp>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0301" status="done" resp="dmp:VE">
@@ -3774,16 +3733,16 @@
                <placeName ref="geo:manakhah"></placeName>
                <lang target="..\profiles\vicav_profile_YEM-MAN.xml"></lang>
                <personGrp role="gender" corresp="#female"></personGrp>
-              <cit type="sourceRepresentation"><quote>ʔanī</quote></cit>
+               <cit type="sourceRepresentation"><quote>ʔanī</quote></cit>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="fv_0304" status="done" resp="dmp:VE">
+
+            <wib:featureValueObservation xml:id="fv_0304" status="done" resp="dmp:VE">
                <name type="featureValue" ref="#pr_s1c_anaa"></name>
                <bibl corresp="zot:Werbeck2001" type="publication"></bibl>
                <placeName ref="geo:manakhah"></placeName>
                <lang target="..\profiles\vicav_profile_YEM-MAN.xml"></lang>
                <personGrp role="gender" corresp="#male"></personGrp>
-              <cit type="sourceRepresentation"><quote>ʔanā</quote></cit>
+               <cit type="sourceRepresentation"><quote>ʔanā</quote></cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0305" status="done" resp="dmp:VE">
@@ -3851,7 +3810,7 @@
                <bibl corresp="zot:Watson1993" type="publication" cert="unknown"></bibl>
                <placeName ref="geo:sanaa"></placeName>
                <lang target="..\profiles\vicav_profile_YEM-SAN.xml"></lang>
-              <cit type="sourceRepresentation"><quote>ʔanā</quote></cit>
+               <cit type="sourceRepresentation"><quote>ʔanā</quote></cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0310" status="done" resp="dmp:VE">
