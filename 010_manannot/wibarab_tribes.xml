@@ -126,27 +126,8 @@
             </personGrp>
          </listPerson>
 
-         <listPerson xml:id="tribes_clans">
-            <head>List of tribes and clans in <name type="project">WIBARAB</name></head>
-
-            <personGrp role="clan" xml:id="clan">
-               <name>Clan name</name>
-            </personGrp>
-
-            <relation name="hasParts" active="#conf" passive="#tribe">
-               <desc>there's even some text to describe the relation</desc>
-            </relation>
-
-            <relation name="hasParts" active="#tribe" passive="#clan">
-               <desc>there's even some text to describe the relation</desc>
-            </relation>
-
-            <personGrp role="tribe" xml:id="tribe">
-               <name>Tribe name</name>
-               <residence>
-                  <placeName ref=""/>
-               </residence>
-            </personGrp>
+         <listPerson xml:id="tribes">
+            <head>List of tribes in <name type="project">WIBARAB</name></head>
 
             <personGrp role="tribe" xml:id="abu_eid">
                <name>Abu ʕĪd</name>
@@ -377,7 +358,7 @@
                </residence>
             </personGrp>
 
-            <personGrp role="clan" xml:id="bani_saxar_twaga_clan">
+            <personGrp role="tribe" xml:id="bani_saxar_twaga_clan">
                <name>Ṭwaga Clan of Bani Ṣaxar</name>
                <residence>
                   <placeName ref=""/>
@@ -419,7 +400,7 @@
                </residence>
             </personGrp>
 
-            <personGrp role="confederation" xml:id="chaouia">
+            <personGrp role="tribe" xml:id="chaouia">
                <name>Chaouia</name>
                <residence>
                   <placeName ref="geo:casablanca-settat"/>
@@ -983,7 +964,7 @@
                </residence>
             </personGrp>
 
-            <personGrp role="confederation" xml:id="zaer">
+            <personGrp role="tribe" xml:id="zaer">
                <name>Zʕīr</name>
                <residence>
                   <placeName ref="geo:zaer"/>
@@ -1028,9 +1009,7 @@
                </residence>
             </personGrp>
 
-            <personGrp role="confederation" xml:id="conf">
-               <name>confederation name</name>
-            </personGrp>
+            
          </listPerson>
       </body>
    </text>
