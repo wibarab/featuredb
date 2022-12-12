@@ -23,6 +23,10 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					<resp>contributor</resp>
 					<name type="person" ref="dmp:RZ">Maria Rebecca Zarb</name>
 				</respStmt>
+				<respStmt>
+					<resp>contributor</resp>
+					<name type="person" ref="dmp:RZ">Johanna Doppelbauer</name>
+				</respStmt>
 			</titleStmt>
 			<editionStmt>
 				<edition n="1.0.0">Version 1.0.0</edition>
@@ -55,9 +59,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 	</teiHeader>
 	<text>
 		<body>
-			<!-- TODO 2022-07-08 TODO: Add prose description and introduction  -->
 			<head>WIBARAB Feature DB: Functional requirements and Data Specification</head>
-			<p>This purpose of this TEI customization is to formalize the data structures needed to
+			<p>The purpose of this TEI customization is to formalize the data structures needed to
             implement the WIBARAB Feature DB application. Thus, we start with a brief
             introduction into the most important functionalities which the application is
             expected to provide (Part I), discuss the overall data model in Part II with the formal
@@ -72,7 +75,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 				<head>Part II: Sources</head>
 				<p>The main sources used in the database are:
 
-               <list type="ordered">
+               			       	    <list type="ordered">
 						<item>
 							<term>publication</term> recorded in a Zotero library</item>
 						<item><term>personal communication</term>despriction</item>
@@ -85,10 +88,10 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 				<p>The main entities of the database are:
 
                <list type="ordered">
-						<!--<note type="general">What is this feature, by which dimensions is it described, what does it contain?
+						<!--What is this feature, by which dimensions is it described, what does it contain?
                      existing varieties vs our approach of grouping features
                      explain profiles where we store info on what was historically
-                     in which file can you find which kind of information? (include file path)</note>-->
+                     in which file can you find which kind of information? (include file path)-->
 						<item>Linguistic <term>features</term> of any kind / size</item>
 						<item><term>feature values</term>, i.e. a series of distinct ways a feature is actually realized in a vernacular</item>
 						<item><term>Feature Value Observations</term>: The report in a source that a <term>feature value</term> was witnessed being realized in a given moment in space and time</item>
@@ -99,7 +102,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 			</div>
 			<div>
 				<head>Part IV: Working Files</head>
-				<!-- <note type="general">where do i find what info? in which files is what? - you find sources in this file, profiles in that file etc.</note> -->
+				<!-- where do i find what info? in which files is what? - you find sources in this file, profiles in that file etc. -->
 				<p>The files comprising the database are:
 
                <list type="ordered">
