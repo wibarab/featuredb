@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml"
-	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
 	<teiHeader>
 		<fileDesc>
@@ -64,14 +64,14 @@
             TEI customization being presented in Part III.</p>
 			<div>
 				<head>Part I: Functional Requirements of <name>WIBARAB Feature DB</name></head>
-				<p>The <name>WIBARAB Feature DB</name> should allow researchers to explore and compare lingustic features in 
+				<p>The <name>WIBARAB Feature DB</name> should allow researchers to explore and compare lingustic features in
                different Arabic vernacular, especially by comparing features of "sedentary" vs. "bedouine" vernaculars.</p>
 				<p>This</p>
 			</div>
 			<div>
 				<head>Part II: Sources</head>
 				<p>The main sources used in the database are:
-               
+
                <list type="ordered">
 						<item>
 							<term>publication</term> recorded in a Zotero library</item>
@@ -83,13 +83,30 @@
 			<div>
 				<head>Part III: Data Model</head>
 				<p>The main entities of the database are:
-               
+
                <list type="ordered">
+						<!--<note type="general">What is this feature, by which dimensions is it described, what does it contain?
+                     existing varieties vs our approach of grouping features
+                     explain profiles where we store info on what was historically
+                     in which file can you find which kind of information? (include file path)</note>-->
 						<item>Linguistic <term>features</term> of any kind / size</item>
 						<item><term>feature values</term>, i.e. a series of distinct ways a feature is actually realized in a vernacular</item>
 						<item><term>Feature Value Observations</term>: The report in a source that a <term>feature value</term> was witnessed being realized in a given moment in space and time</item>
 						<item><term>Places</term> where these observations have been made</item>
 						<item><term>Groups of Speakers</term> who are witnessed to have realized the attested feature value</item>
+					</list>
+				</p>
+			</div>
+			<div>
+				<head>Part IV: Working Files</head>
+				<!-- <note type="general">where do i find what info? in which files is what? - you find sources in this file, profiles in that file etc.</note> -->
+				<p>The files comprising the database are:
+
+               <list type="ordered">
+						<item>
+							<term>publication</term> recorded in a Zotero library</item>
+						<item><term>personal communication</term>despriction</item>
+						<item><term>fieldwork</term>description</item>
 					</list>
 				</p>
 			</div>
@@ -109,8 +126,8 @@
 					<moduleRef key="linking" include="seg"/>
 					<!-- DS 2022-06-23 removing analysis module as long as we don't have any encoded examples in the data.  -->
 					<!--
-                  <moduleRef key="analysis" include=""/>
-                  att.global.analytic should be probably deleted and @ana be re-defined only on <w> and certain other elements -->
+               <moduleRef key="analysis" include=""/>
+               att.global.analytic should be probably deleted and @ana be re-defined only on <w> and certain other elements -->
 					<classSpec type="atts" ident="att.global" mode="change">
 						<attList>
 							<attDef ident="n" mode="delete"/>
@@ -155,10 +172,10 @@
 						</attList>
 					</classSpec>
 					<!-- TODO add schematron rules
-               
-              * check existence of <biblScope> when @type = "publication" 
-              * check respStmt[resp="sender"/"recipient"] when @type = "personal communication"
-            -->
+
+                  * check existence of <biblScope> when @type = "publication"
+                     * check respStmt[resp="sender"/"recipient"] when @type = "personal communication"
+                     -->
 					<elementSpec ident="bibl" mode="change">
 						<content>
 							<elementRef key="title" minOccurs="0"/>
@@ -173,25 +190,25 @@
 									<valItem ident="campaign"/>
 								</valList>
 							</attDef>
-							<!-- 
-                        
-                        Removing @subtype from data-entry TEI
-                        Cf. https://github.com/wibarab/featuredb/issues/6#issuecomment-1217537096
-                     
-                     -->
+							<!--
+
+                           Removing @subtype from data-entry TEI
+                           Cf. https://github.com/wibarab/featuredb/issues/6#issuecomment-1217537096
+
+                           -->
 							<!--<attDef ident="subtype" mode="add">
-                        <!-\- This is extraced by running distinct-values(//biblStruct/@type) on the TEI export of the VICAV bibliography. -\->
-                        <valList type="closed">
-                           <valItem ident="conferencePaper"/>
-                           <valItem ident="bookSection"/>
-                           <valItem ident="journalArticle"/>
-                           <valItem ident="book"/>
-                           <valItem ident="encyclopediaArticle"/>
-                           <valItem ident="thesis"/>
-                           <valItem ident="magazineArticle"/>
-                           <valItem ident="manuscript"/>
-                        </valList>
-                     </attDef>-->
+                              <!-\- This is extraced by running distinct-values(//biblStruct/@type) on the TEI export of the VICAV bibliography. -\->
+                              <valList type="closed">
+                                 <valItem ident="conferencePaper"/>
+                                 <valItem ident="bookSection"/>
+                                 <valItem ident="journalArticle"/>
+                                 <valItem ident="book"/>
+                                 <valItem ident="encyclopediaArticle"/>
+                                 <valItem ident="thesis"/>
+                                 <valItem ident="magazineArticle"/>
+                                 <valItem ident="manuscript"/>
+                              </valList>
+                           </attDef>-->
 							<!-- <attDef ident="cert" mode="delete"/> -->
 							<attDef ident="resp" mode="delete"/>
 							<attDef ident="status" mode="delete"/>
@@ -230,11 +247,11 @@
 					</elementSpec>
 					<elementSpec ident="personGrp" mode="change">
 						<!-- TODO Discuss with TEI-L why personGrp is not a member of att.typed -->
-						<!-- locally defined type in order to enforce possible values // DS 2022-06-13 
-                    
-                    <classes mode="change">
-                     <memberOf key="att.typed"/>
-                  </classes>-->
+						<!-- locally defined type in order to enforce possible values // DS 2022-06-13
+
+                        <classes mode="change">
+                           <memberOf key="att.typed"/>
+                        </classes>-->
 						<attList>
 							<attDef ident="type" usage="req">
 								<valList type="closed">
@@ -245,13 +262,13 @@
 							</attDef>
 						</attList>
 					</elementSpec>
-					<!-- TODO add Schematron rules to enforce: 
+					<!-- TODO add Schematron rules to enforce:
                      * <age> in type="ageGroup"
-                     * <faith> in type="religious"
-                     * <residence> in type="tribe" subtype="sedentary"
-                     
-                     // DS 2022-06-13
-               -->
+                        * <faith> in type="religious"
+                           * <residence> in type="tribe" subtype="sedentary"
+
+                              // DS 2022-06-13
+                              -->
 					<elementSpec ident="settlement" mode="change" module="namesdates">
 						<attList>
 							<attDef ident="ref" usage="req" mode="change"/>
@@ -308,8 +325,8 @@
 							<attDef ident="when" mode="delete"/>
 							<attDef ident="ref" mode="delete"/>
 							<attDef ident="resp" mode="delete"/>
-							<!-- CHECKME DS 2022-06-23 Why do I have to redefine that here? 
-                     Shouldn't it be included just like @level ?-->
+							<!-- CHECKME DS 2022-06-23 Why do I have to redefine that here?
+                                    Shouldn't it be included just like @level ?-->
 							<attDef ident="type" mode="add">
 								<valList type="closed">
 									<valItem ident="main"/>
@@ -354,12 +371,12 @@
 						</classes>
 						<content>
 							<sequence>
-								<!-- We require exactly one <name> element which we require to 
-                               ... have a @ref attribute pointing to one of the <item>s in the feauterValues list  
-                              ... have a @type attribute with the value "featureValue"
-                              
-                              TODO add Schematron rule to enforce @type value
-                        -->
+								<!-- We require exactly one <name> element which we require to
+                                          ... have a @ref attribute pointing to one of the <item>s in the feauterValues list
+                                             ... have a @type attribute with the value "featureValue"
+
+                                             TODO add Schematron rule to enforce @type value
+                                             -->
 								<elementRef key="name" maxOccurs="1" minOccurs="1"/>
 								<!-- We require exactly one <bibl> element which represents the source of the parent record. -->
 								<elementRef key="bibl" minOccurs="1" maxOccurs="1"/>
@@ -384,44 +401,44 @@
 						</attList>
 						<!-- 2022-06-21 moving @fVal to <name type="featureValue"> -->
 						<!--                  <attList>-->
-						<!-- DS this is a hard copy of the original definition on <f> – not nice, 
-                          but I don't know a way of referencing a locally defined attribute.  -->
+						<!-- DS this is a hard copy of the original definition on <f> – not nice,
+                                                      but I don't know a way of referencing a locally defined attribute.  -->
 						<!--<attDef ident="fVal" usage="opt">
-                        <gloss versionDate="2007-07-04" xml:lang="en">feature value</gloss>
-                        <gloss versionDate="2007-12-20" xml:lang="ko">자질 값</gloss>
-                        <gloss versionDate="2008-04-06" xml:lang="es">valor del rasgo</gloss>
-                        <gloss versionDate="2008-03-30" xml:lang="fr">valeur de traits</gloss>
-                        <gloss versionDate="2007-11-06" xml:lang="it">valore del tratto</gloss>
-                        <desc versionDate="2005-01-14" xml:lang="en">references any element which can be used to represent the
-                           value of a feature.</desc>
-                        <desc versionDate="2007-12-20" xml:lang="ko">자질의 값을 표시할 수 있는 요소를 참조한다.</desc>
-                        <desc versionDate="2007-05-02" xml:lang="zh-TW">參照任何可用來代表功能值的元素。</desc>
-                        <desc versionDate="2008-04-05" xml:lang="ja">素性値を表す要素を参照する．</desc>
-                        <desc versionDate="2007-06-12" xml:lang="fr">référence n'importe quel élément pouvant être
-                           utilisé pour représenter la valeur d'un trait.</desc>
-                        <desc versionDate="2007-05-04" xml:lang="es">indica cualquier elemento que puede ser usado para representar el valor de un rasgo.</desc>
-                        <desc versionDate="2007-01-21" xml:lang="it">indica un qualsiasi elemento che può essere usato come valore di un tratto.</desc>
-                        <datatype><dataRef key="teidata.pointer"/></datatype>
-                        <remarks versionDate="2005-01-14" xml:lang="en">
-                           <p>If this attribute is supplied as well as content, the value referenced is to be unified with  that contained.</p>
-                        </remarks>
-                        <remarks xml:lang="fr" versionDate="2007-06-12">
-                           <p>Si cet attribut est fourni en plus d'un contenu, la valeur référencée doit
-                              être unifiée avec ce contenu.</p>
-                        </remarks>
-                        <remarks xml:lang="ja" versionDate="2008-04-05">
-                           <p>
-                              当該属性の値は，参照された要素内容とされる．
-                           </p>
-                        </remarks>
-                     </attDef>-->
+                                                         <gloss versionDate="2007-07-04" xml:lang="en">feature value</gloss>
+                                                         <gloss versionDate="2007-12-20" xml:lang="ko">자질 값</gloss>
+                                                         <gloss versionDate="2008-04-06" xml:lang="es">valor del rasgo</gloss>
+                                                         <gloss versionDate="2008-03-30" xml:lang="fr">valeur de traits</gloss>
+                                                         <gloss versionDate="2007-11-06" xml:lang="it">valore del tratto</gloss>
+                                                         <desc versionDate="2005-01-14" xml:lang="en">references any element which can be used to represent the
+                                                            value of a feature.</desc>
+                                                         <desc versionDate="2007-12-20" xml:lang="ko">자질의 값을 표시할 수 있는 요소를 참조한다.</desc>
+                                                         <desc versionDate="2007-05-02" xml:lang="zh-TW">參照任何可用來代表功能值的元素。</desc>
+                                                         <desc versionDate="2008-04-05" xml:lang="ja">素性値を表す要素を参照する．</desc>
+                                                         <desc versionDate="2007-06-12" xml:lang="fr">référence n'importe quel élément pouvant être
+                                                            utilisé pour représenter la valeur d'un trait.</desc>
+                                                         <desc versionDate="2007-05-04" xml:lang="es">indica cualquier elemento que puede ser usado para representar el valor de un rasgo.</desc>
+                                                         <desc versionDate="2007-01-21" xml:lang="it">indica un qualsiasi elemento che può essere usato come valore di un tratto.</desc>
+                                                         <datatype><dataRef key="teidata.pointer"/></datatype>
+                                                         <remarks versionDate="2005-01-14" xml:lang="en">
+                                                            <p>If this attribute is supplied as well as content, the value referenced is to be unified with  that contained.</p>
+                                                         </remarks>
+                                                         <remarks xml:lang="fr" versionDate="2007-06-12">
+                                                            <p>Si cet attribut est fourni en plus d'un contenu, la valeur référencée doit
+                                                               être unifiée avec ce contenu.</p>
+                                                         </remarks>
+                                                         <remarks xml:lang="ja" versionDate="2008-04-05">
+                                                            <p>
+                                                               当該属性の値は，参照された要素内容とされる．
+                                                            </p>
+                                                         </remarks>
+                                                      </attDef>-->
 						<!--<attDef ident="fValRef" mode="add" usage="req">
-                        <gloss>feature value reference</gloss>
-                        <desc>points to one <gi>item</gi> in a <tag>list type="featureValues"</tag>.</desc>
-                        <datatype>
-                           <dataRef key="teidata.pointer"/>
-                        </datatype>
-                     </attDef>-->
+                                                         <gloss>feature value reference</gloss>
+                                                         <desc>points to one <gi>item</gi> in a <tag>list type="featureValues"</tag>.</desc>
+                                                         <datatype>
+                                                            <dataRef key="teidata.pointer"/>
+                                                         </datatype>
+                                                      </attDef>-->
 						<!--</attList>-->
 					</elementSpec>
 					<elementSpec ident="seg" mode="change">
@@ -438,43 +455,43 @@
 							<memberOf key="att.naming"/>
 						</classes>
 					</elementSpec>
-					<!-- removed <listFeatureValues> and <featureValue> in favour of <list>  
-                    for sake of simplicity DS 2022-05-08
-                   
-                    
-               <elementSpec ident="listFeatureValues" mode="add" ns="https://id.acdh.oeaw.ac.at/langDesc">
-                  <gloss>Feature Value List</gloss>
-                  <desc>lists possible values a feature can be realised</desc>
-                  <classes>
-                     <memberOf key="model.divTop"/>
-                  </classes>
-                  <content>                     
-                     <elementRef key="featureValue" minOccurs="2" maxOccurs="unbounded"/>
-                  </content>
-                  <attList>
-                     <attRef class="att.global" name="xml:id"/>
-                  </attList>
-               </elementSpec>
-               
--->
+					<!-- removed <listFeatureValues> and <featureValue> in favour of <list>
+                                                         for sake of simplicity DS 2022-05-08
+
+
+                                                         <elementSpec ident="listFeatureValues" mode="add" ns="https://id.acdh.oeaw.ac.at/langDesc">
+                                                            <gloss>Feature Value List</gloss>
+                                                            <desc>lists possible values a feature can be realised</desc>
+                                                            <classes>
+                                                               <memberOf key="model.divTop"/>
+                                                            </classes>
+                                                            <content>
+                                                               <elementRef key="featureValue" minOccurs="2" maxOccurs="unbounded"/>
+                                                            </content>
+                                                            <attList>
+                                                               <attRef class="att.global" name="xml:id"/>
+                                                            </attList>
+                                                         </elementSpec>
+
+                                                         -->
 					<!--<elementSpec ident="featureValue" mode="add" ns="https://id.acdh.oeaw.ac.at/langDesc">
-                  <gloss>feature value</gloss>
-                  <desc>describes one feature value</desc>
-                  <content>
-                     <sequence>
-                        <elementRef key="name" minOccurs="1"/>
-                        <elementRef key="p" minOccurs="1" maxOccurs="unbounded"/>
-                        <alternate>
-                           <elementRef key="note" minOccurs="0" maxOccurs="unbounded"/>
-                           <elementRef key="cit" minOccurs="0" maxOccurs="unbounded"/>
-                           <elementRef key="fs" minOccurs="0" maxOccurs="1"/>
-                        </alternate>
-                     </sequence>
-                  </content>
-                  <attList>
-                     <attRef class="att.global" name="xml:id"/>
-                  </attList>
-               </elementSpec>-->
+                                                            <gloss>feature value</gloss>
+                                                            <desc>describes one feature value</desc>
+                                                            <content>
+                                                               <sequence>
+                                                                  <elementRef key="name" minOccurs="1"/>
+                                                                  <elementRef key="p" minOccurs="1" maxOccurs="unbounded"/>
+                                                                  <alternate>
+                                                                     <elementRef key="note" minOccurs="0" maxOccurs="unbounded"/>
+                                                                     <elementRef key="cit" minOccurs="0" maxOccurs="unbounded"/>
+                                                                     <elementRef key="fs" minOccurs="0" maxOccurs="1"/>
+                                                                  </alternate>
+                                                               </sequence>
+                                                            </content>
+                                                            <attList>
+                                                               <attRef class="att.global" name="xml:id"/>
+                                                            </attList>
+                                                         </elementSpec>-->
 				</schemaSpec>
 			</div>
 		</body>
