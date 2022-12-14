@@ -3,64 +3,64 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml"
 schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader>
-      <fileDesc>
-         <titleStmt>
-            <title>WIBARAB FeatureDB TEI Customization</title>
-            <title type="desc">Version 1.0.0</title>
-            <author><name type="person" xml:id="CM">Charly Mörth</name></author>
-            <author><name type="person" xml:id="DS">Daniel Schoper</name></author>
-            <principal><name type="person" xml:id="SP">Stephan Procházka</name></principal>
-            <respStmt>
-               <resp>contributor</resp>
-               <name type="person" ref="dmp:AD">Ana Iriarte Díez</name>
-            </respStmt>
-            <respStmt>
-               <resp>contributor</resp>
-               <name type="person" ref="dmp:VE">Veronika Engler</name>
-            </respStmt>
-            <respStmt>
-               <resp>contributor</resp>
-               <name type="person" ref="dmp:RZ">Maria Rebecca Zarb</name>
-            </respStmt>
-            <respStmt>
-               <resp>contributor</resp>
-               <name type="person" ref="dmp:JD">Johanna Doppelbauer</name>
-            </respStmt>
-         </titleStmt>
-         <editionStmt>
-            <edition n="1.0.0">Version 1.0.0</edition>
-         </editionStmt>
-         <publicationStmt>
-            <publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
-            <date>2022</date>
-            <availability>
-               <licence>CC BY 4.0</licence>
-            </availability>
-         </publicationStmt>
-         <sourceDesc>
-            <p>This is a born digital document.</p>
-         </sourceDesc>
-      </fileDesc>
-      <encodingDesc>
-         <listPrefixDef>
-            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../010_manannot/wibarab_dmp.xml#$1"/>
-            <prefixDef ident="zotid" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_biblio_tei_zotero.xml#$1"/>
-            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_dialects.xml#$1"/>
-            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_geodata.xml#$1"/>
-         </listPrefixDef>
-      </encodingDesc>
-      <revisionDesc>
-         <change who="#DS">Set up document outline; first draft of Part 1 (functional requirements).</change>
-         <change who="#DS" when="2022-06-23">finalized beta Version 1</change>
-         <change when="2022-08-12" who="dmp:DS" status="published">releasing version 1.0.0</change>
-         <change when="2022-08-16" who="dmp:CM" status="published"></change>
-      </revisionDesc>
-   </teiHeader>
-   <text>
-      <body>
-         <head>WIBARAB Feature DB: Functional requirements and Data Specification</head>
-         <p>The purpose of this TEI customization is to formalize the data structures needed to
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title>WIBARAB FeatureDB TEI Customization</title>
+				<title type="desc">Version 1.0.0</title>
+				<author><name type="person" xml:id="CM">Charly Mörth</name></author>
+				<author><name type="person" xml:id="DS">Daniel Schoper</name></author>
+				<principal><name type="person" xml:id="SP">Stephan Procházka</name></principal>
+				<respStmt>
+					<resp>contributor</resp>
+					<name type="person" ref="dmp:AD">Ana Iriarte Díez</name>
+				</respStmt>
+				<respStmt>
+					<resp>contributor</resp>
+					<name type="person" ref="dmp:VE">Veronika Engler</name>
+				</respStmt>
+				<respStmt>
+					<resp>contributor</resp>
+					<name type="person" ref="dmp:RZ">Maria Rebecca Zarb</name>
+				</respStmt>
+				<respStmt>
+					<resp>contributor</resp>
+					<name type="person" ref="dmp:JD">Johanna Doppelbauer</name>
+				</respStmt>
+			</titleStmt>
+			<editionStmt>
+				<edition n="1.0.0">Version 1.0.0</edition>
+			</editionStmt>
+			<publicationStmt>
+				<publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
+				<date>2022</date>
+				<availability>
+					<licence>CC BY 4.0</licence>
+				</availability>
+			</publicationStmt>
+			<sourceDesc>
+				<p>This is a born digital document.</p>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<listPrefixDef>
+				<prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../010_manannot/wibarab_dmp.xml#$1"/>
+				<prefixDef ident="zotid" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_biblio_tei_zotero.xml#$1"/>
+				<prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_dialects.xml#$1"/>
+				<prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_geodata.xml#$1"/>
+			</listPrefixDef>
+		</encodingDesc>
+		<revisionDesc>
+			<change who="#DS">Set up document outline; first draft of Part 1 (functional requirements).</change>
+			<change who="#DS" when="2022-06-23">finalized beta Version 1</change>
+			<change when="2022-08-12" who="dmp:DS" status="published">releasing version 1.0.0</change>
+			<change when="2022-08-16" who="dmp:CM" status="published"></change>
+		</revisionDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<head>WIBARAB Feature DB: Functional requirements and Data Specification</head>
+			<p>The purpose of this TEI customization is to formalize the data structures needed to
             implement the WIBARAB Feature DB application. Thus, we start with a brief
             introduction into the most important functionalities which the application is
             expected to provide (Part I), discuss the overall data model in Part II with the formal
@@ -94,13 +94,15 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 			<div>
 				<head>Part III: Data Model</head>
 				<p> The data included in the database is organized around a series of linguistic <term>features</term>. The criteria used for the selection of the linguistic <term>features</term> treated
-                                rely mainly on typological considerations and on previously reported sociolinguistic salience. Every linguistic feature has a set of <term>feature values</term> that indicates the different posible 
+                                rely mainly on typological considerations and on previously reported high levels of sociolinguistic salience. Every linguistic feature has a set of <term>feature values</term> that indicates the different possible 
                                 realizations of a specific feature in the studied varieties. The documentation of an occurrence of a specific feature value(s) in a specific location is done via <term>Feature Value Observations</term>.
                                 Every <term>Feature Value Observation</term> specifies that one feature value occurs in a specific place, by a specific speaker or group of speakers. When information about the speakers and their communities
-                                is available, the sociolinguistic profile of the speaker or the community of speakers is indicated via the <term>Person Group</term> element, which may specify the tribal affiliation, religious affiliation,
-                                age group, gender
-                                existing varieties vs our approach of grouping features
-                  explain profiles where we store info on what was historically)
+                                is available, the sociolinguistic profile of the speaker or the community of speakers is indicated via the <term>Person Group</term> element, which may specify values regarding the speakers' tribal affiliation, 
+                                religious affiliation, age group, gender, mother tongue among others.</p>
+				<p>Some sources often group the combination of realizations of feature values and characterize them as a linguistic variety. These linguistic varieties may be labelled after the approximate location they are spoken at, 
+                                and/or the community of speakers that use them. These common groupings or varieties are indicated via Language <term>Profiles</term> and refer to the historical and linguistic information available on a specific variety according
+                                to a source. 
+                                 
                   	</p>
 			</div>
 			<p>The main entities of the database are:</p>
@@ -126,109 +128,109 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 				<p>The files comprising the database are:
 
                <list type="ordered">
-                  <item>The<term>geodata</term> list contains all the places. Path: \featuredb\010_manannot\vicav_geodata.xml </item>
-                  <item>The<term>biblio</term>list contains all the sources found in the Zotero library. Path: \featuredb\010_manannot\vicav_biblio_tei_zotero.xml</item>
-                  <item>The<term>sources</term>list contains all sources that are not from Zotero, i.e., fieldwork campains and personal communications. Path:\featuredb\010_manannot\wibarab_sources.xml</item>
-                  <item>The<term>Data Management Plan</term>contains a description of the project including information about the researchers who contribute to the database. The<term>Responsible Person</term> attribute links to this list. Path: \featuredb\010_manannot\wibarab_dmp.xml </item>
-                  <item>The<term>Profiles</term>each describe an arabic variety. Path: \featuredb\010_manannot\profiles\</item>
-                  <item>The<term>PersonGroup</term>list contains different person groups, such as religion, age, gender, mothertongue, socio-economic classification and affiliation to a tribe. Path: \featuredb\010_manannot\wibarab_PersonGroup.xml</item>
-                  <item>The<term>Feature Files</term>each describe one linguistic feature. Path: C:\featuredb\010_manannot\features\</item>
-               </list>
-            </p>
-         </div>
-         <div>
-            <head>Formal Specification</head>
-            <schemaSpec ident="featuredb" prefix="tei_" start="TEI" xml:lang="en" defaultExceptions="https://id.acdh.oeaw.ac.at/langDesc http://www.tei-c.org/ns/1.0 teix:egXML">
-               <moduleRef key="core" exclude="abbr add addrLine address author analytic editor email gap head imprint item label list listBibl measure measureGrp mentioned monogr note num pb postBox postCode ptr pubPlace publisher quote ref resp respStmt rs series street term title unclear unit"/>
-               <!--<elementSpec ident="TEI" mode="replace" module="textstructure">
+						<item>The<term>geodata</term> list contains all the places. Path: \featuredb\010_manannot\vicav_geodata.xml </item>
+						<item>The<term>biblio</term>list contains all the sources found in the Zotero library. Path: \featuredb\010_manannot\vicav_biblio_tei_zotero.xml</item>
+						<item>The<term>sources</term>list contains all sources that are not from Zotero, i.e., fieldwork campains and personal communications. Path:\featuredb\010_manannot\wibarab_sources.xml</item>
+						<item>The<term>Data Management Plan</term>contains a description of the project including information about the researchers who contribute to the database. The<term>Responsible Person</term> attribute links to this list. Path: \featuredb\010_manannot\wibarab_dmp.xml </item>
+						<item>The<term>Profiles</term>each describe an arabic variety. Path: \featuredb\010_manannot\profiles\</item>
+						<item>The<term>PersonGroup</term>list contains different person groups, such as religion, age, gender, mothertongue, socio-economic classification and affiliation to a tribe. Path: \featuredb\010_manannot\wibarab_PersonGroup.xml</item>
+						<item>The<term>Feature Files</term>each describe one linguistic feature. Path: C:\featuredb\010_manannot\features\</item>
+					</list>
+				</p>
+			</div>
+			<div>
+				<head>Formal Specification</head>
+				<schemaSpec ident="featuredb" prefix="tei_" start="TEI" xml:lang="en" defaultExceptions="https://id.acdh.oeaw.ac.at/langDesc http://www.tei-c.org/ns/1.0 teix:egXML">
+					<moduleRef key="core" exclude="abbr add addrLine address author analytic editor email gap head imprint item label list listBibl measure measureGrp mentioned monogr note num pb postBox postCode ptr pubPlace publisher quote ref resp respStmt rs series street term title unclear unit"/>
+					<!--<elementSpec ident="TEI" mode="replace" module="textstructure">
                   <desc xml:lang="en">In the context of the WIBARAB Feature Database, each defined feature is described in one TEI document which keeps together the definition and discussion of the feature, the possible ways it can be realised (<soCalled>feature values</soCalled>) as well as descriptions of documented observations of this specific feature in literature or in the data collected in the fieldwork of WIBARAB.</desc>
                </elementSpec>-->
-               <moduleRef key="tei"/>
-               <moduleRef key="dictionaries" include="lang"/>
-               <moduleRef key="header" include="abstract appInfo application availibility catDesc catRef category change classCode classDecl correspAction correspContext correspDesc creation distributor edition editionStmt encodingDesc extent fileDesc funder geoDecl hyphenation keywords langUsage language licence listChange listPrefixDef namespace normalization notesStmt prefixDef principal profileDesc projectDesc publicationStmt punctuation quotation ref revisionDesc samplingDecl seriesStmt sourceDesc sponsor stdVals taxonomy teiHeader textClass titleStmt unitDecl unitDef"/>
-               <moduleRef key="corpus"/>
-               <moduleRef key="textstructure" include="TEI back body front div text"/>
-               <moduleRef key="namesdates" include="affiliation age birth bloc death district education event faith forename genName geo geogFeat geogName langKnowledge langKnown listEvent listOrg listPerson listPlace location nationality occupation org orgName persName person personGrp place placeName population region residence settlement socecStatus state surname trait"/>
-               <moduleRef key="linking" include="seg"/>
-               <!-- DS 2022-06-23 removing analysis module as long as we don't have any encoded examples in the data.  -->
-               <!--
+					<moduleRef key="tei"/>
+					<moduleRef key="dictionaries" include="lang"/>
+					<moduleRef key="header" include="abstract appInfo application availibility catDesc catRef category change classCode classDecl correspAction correspContext correspDesc creation distributor edition editionStmt encodingDesc extent fileDesc funder geoDecl hyphenation keywords langUsage language licence listChange listPrefixDef namespace normalization notesStmt prefixDef principal profileDesc projectDesc publicationStmt punctuation quotation ref revisionDesc samplingDecl seriesStmt sourceDesc sponsor stdVals taxonomy teiHeader textClass titleStmt unitDecl unitDef"/>
+					<moduleRef key="corpus"/>
+					<moduleRef key="textstructure" include="TEI back body front div text"/>
+					<moduleRef key="namesdates" include="affiliation age birth bloc death district education event faith forename genName geo geogFeat geogName langKnowledge langKnown listEvent listOrg listPerson listPlace location nationality occupation org orgName persName person personGrp place placeName population region residence settlement socecStatus state surname trait"/>
+					<moduleRef key="linking" include="seg"/>
+					<!-- DS 2022-06-23 removing analysis module as long as we don't have any encoded examples in the data.  -->
+					<!--
                <moduleRef key="analysis" include=""/>
                att.global.analytic should be probably deleted and @ana be re-defined only on <w> and certain other elements -->
-                  <classSpec type="atts" ident="att.global" mode="change">
-                     <attList>
-                        <attDef ident="n" mode="delete"/>
-                     </attList>
-                  </classSpec>
-                  <classSpec type="atts" ident="att.editLike" mode="change">
-                     <attList>
-                        <attDef ident="instant" mode="delete"/>
-                     </attList>
-                  </classSpec>
-                  <classSpec type="atts" ident="att.dimensions" mode="delete"/>
-                  <classSpec type="atts" ident="att.ranging" mode="delete"/>
-                  <classSpec type="atts" ident="att.canonical" mode="change">
-                     <attList>
-                        <attDef ident="key" mode="delete"/>
-                     </attList>
-                  </classSpec>
-                  <classSpec type="atts" ident="att.global.rendition" mode="delete"/>
-                  <classSpec type="atts" ident="att.global.linking" mode="change">
-                     <attList>
-                        <attDef ident="synch" mode="delete"/>
-                        <attDef ident="sameAs" mode="delete"/>
-                        <attDef ident="copyOf" mode="delete"/>
-                        <attDef ident="next" mode="delete"/>
-                        <attDef ident="prev" mode="delete"/>
-                        <attDef ident="exclude" mode="delete"/>
-                        <attDef ident="select" mode="delete"/>
-                     </attList>
-                  </classSpec>
-                  <classSpec type="atts" ident="att.global.facs" mode="delete"/>
-                  <classSpec type="atts" ident="att.global.change" mode="delete"/>
-                  <classSpec type="atts" ident="att.global.source" mode="delete"/>
-                  <classSpec type="atts" ident="att.sortable" mode="delete"/>
-                  <classSpec type="atts" ident="att.typed" mode="delete"/>
-                  <classSpec type="atts" ident="att.declarable" mode="delete"/>
-                  <classSpec type="atts" ident="att.datable.custom" mode="delete"/>
-                  <classSpec type="atts" ident="att.datable.iso" mode="delete"/>
-                  <classSpec type="atts" ident="att.datable.w3c" mode="change">
-                     <attList>
-                        <attDef ident="from" mode="delete"/>
-                        <attDef ident="to" mode="delete"/>
-                     </attList>
-                  </classSpec>
-                  <!-- TODO add schematron rules
+					<classSpec type="atts" ident="att.global" mode="change">
+						<attList>
+							<attDef ident="n" mode="delete"/>
+						</attList>
+					</classSpec>
+					<classSpec type="atts" ident="att.editLike" mode="change">
+						<attList>
+							<attDef ident="instant" mode="delete"/>
+						</attList>
+					</classSpec>
+					<classSpec type="atts" ident="att.dimensions" mode="delete"/>
+					<classSpec type="atts" ident="att.ranging" mode="delete"/>
+					<classSpec type="atts" ident="att.canonical" mode="change">
+						<attList>
+							<attDef ident="key" mode="delete"/>
+						</attList>
+					</classSpec>
+					<classSpec type="atts" ident="att.global.rendition" mode="delete"/>
+					<classSpec type="atts" ident="att.global.linking" mode="change">
+						<attList>
+							<attDef ident="synch" mode="delete"/>
+							<attDef ident="sameAs" mode="delete"/>
+							<attDef ident="copyOf" mode="delete"/>
+							<attDef ident="next" mode="delete"/>
+							<attDef ident="prev" mode="delete"/>
+							<attDef ident="exclude" mode="delete"/>
+							<attDef ident="select" mode="delete"/>
+						</attList>
+					</classSpec>
+					<classSpec type="atts" ident="att.global.facs" mode="delete"/>
+					<classSpec type="atts" ident="att.global.change" mode="delete"/>
+					<classSpec type="atts" ident="att.global.source" mode="delete"/>
+					<classSpec type="atts" ident="att.sortable" mode="delete"/>
+					<classSpec type="atts" ident="att.typed" mode="delete"/>
+					<classSpec type="atts" ident="att.declarable" mode="delete"/>
+					<classSpec type="atts" ident="att.datable.custom" mode="delete"/>
+					<classSpec type="atts" ident="att.datable.iso" mode="delete"/>
+					<classSpec type="atts" ident="att.datable.w3c" mode="change">
+						<attList>
+							<attDef ident="from" mode="delete"/>
+							<attDef ident="to" mode="delete"/>
+						</attList>
+					</classSpec>
+					<!-- TODO add schematron rules
 
                   * check existence of <biblScope> when @type = "publication"
                      * check respStmt[resp="sender"/"recipient"] when @type = "personal communication"
                      -->
-                     <elementSpec ident="bibl" mode="change">
-                        <content>
-                           <elementRef key="title" minOccurs="0"/>
-                           <elementRef key="biblScope" minOccurs="0"/>
-                           <elementRef key="note" maxOccurs="unbounded" minOccurs="0"/>
-                        </content>
-                        <attList>
-                           <attDef ident="type" mode="add">
-                              <valList type="closed">
-                                 <valItem ident="publication">
-                                    <desc>Published written documents, recorded in the VICAV Zotero library</desc>
-                                 </valItem>
-                                 <valItem ident="personalCommunication">
-                                    <desc>Personal communication with native speakers of the variety via phone, e-mail or in person.</desc>
-                                 </valItem>
-                                 <valItem ident="campaign">
-                                    <desc>Data from fieldwork conducted by members of the team.</desc>
-                                 </valItem>
-                              </valList>
-                           </attDef>
-                           <!--
+					<elementSpec ident="bibl" mode="change">
+						<content>
+							<elementRef key="title" minOccurs="0"/>
+							<elementRef key="biblScope" minOccurs="0"/>
+							<elementRef key="note" maxOccurs="unbounded" minOccurs="0"/>
+						</content>
+						<attList>
+							<attDef ident="type" mode="add">
+								<valList type="closed">
+									<valItem ident="publication">
+										<desc>Published written documents, recorded in the VICAV Zotero library</desc>
+									</valItem>
+									<valItem ident="personalCommunication">
+										<desc>Personal communication with native speakers of the variety via phone, e-mail or in person.</desc>
+									</valItem>
+									<valItem ident="campaign">
+										<desc>Data from fieldwork conducted by members of the team.</desc>
+									</valItem>
+								</valList>
+							</attDef>
+							<!--
 
                            Removing @subtype from data-entry TEI
                            Cf. https://github.com/wibarab/featuredb/issues/6#issuecomment-1217537096
 
                            -->
-                           <!--<attDef ident="subtype" mode="add">
+							<!--<attDef ident="subtype" mode="add">
                               <!-\- This is extraced by running distinct-values(//biblStruct/@type) on the TEI export of the VICAV bibliography. -\->
                               <valList type="closed">
                                  <valItem ident="conferencePaper"/>
@@ -241,201 +243,201 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                  <valItem ident="manuscript"/>
                               </valList>
                            </attDef>-->
-                           <!-- <attDef ident="cert" mode="delete"/> -->
-                           <attDef ident="resp" mode="delete"/>
-                           <attDef ident="status" mode="delete"/>
-                           <attDef ident="corresp" mode="change" usage="req"/>
-                        </attList>
-                     </elementSpec>
-                     <elementSpec ident="list" mode="change">
-                        <attList>
-                           <attDef ident="type" mode="replace" usage="rec">
-                              <valList type="closed">
-                                 <valItem ident="featureValues">
-                                    <desc>Feature Values</desc>
-                                 </valItem>
-                              </valList>
-                           </attDef>
-                        </attList>
-                     </elementSpec>
-                     <elementSpec ident="item" mode="change">
-                        <attList>
-                           <attDef ident="xml:id" mode="change" usage="req"/>
-                        </attList>
-                     </elementSpec>
-                     <elementSpec ident="name" mode="change">
-                        <attList>
-                           <attDef ident="type" mode="replace" usage="rec">
-                              <valList type="closed">
-                                 <valItem ident="variety"/>
-                                 <valItem ident="tribe"/>
-                                 <valItem ident="person"/>
-                                 <valItem ident="feature"/>
-                                 <valItem ident="featureValue"/>
-                              </valList>
-                           </attDef>
-                        </attList>
-                        <!-- TODO add Schematron rule to enforce @source on name[@type="dialect"] -->
-                     </elementSpec>
-                     <elementSpec ident="personGrp" mode="change">
-                        <!-- TODO Discuss with TEI-L why personGrp is not a member of att.typed -->
-                        <!-- locally defined type in order to enforce possible values // DS 2022-06-13
+							<!-- <attDef ident="cert" mode="delete"/> -->
+							<attDef ident="resp" mode="delete"/>
+							<attDef ident="status" mode="delete"/>
+							<attDef ident="corresp" mode="change" usage="req"/>
+						</attList>
+					</elementSpec>
+					<elementSpec ident="list" mode="change">
+						<attList>
+							<attDef ident="type" mode="replace" usage="rec">
+								<valList type="closed">
+									<valItem ident="featureValues">
+										<desc>Feature Values</desc>
+									</valItem>
+								</valList>
+							</attDef>
+						</attList>
+					</elementSpec>
+					<elementSpec ident="item" mode="change">
+						<attList>
+							<attDef ident="xml:id" mode="change" usage="req"/>
+						</attList>
+					</elementSpec>
+					<elementSpec ident="name" mode="change">
+						<attList>
+							<attDef ident="type" mode="replace" usage="rec">
+								<valList type="closed">
+									<valItem ident="variety"/>
+									<valItem ident="tribe"/>
+									<valItem ident="person"/>
+									<valItem ident="feature"/>
+									<valItem ident="featureValue"/>
+								</valList>
+							</attDef>
+						</attList>
+						<!-- TODO add Schematron rule to enforce @source on name[@type="dialect"] -->
+					</elementSpec>
+					<elementSpec ident="personGrp" mode="change">
+						<!-- TODO Discuss with TEI-L why personGrp is not a member of att.typed -->
+						<!-- locally defined type in order to enforce possible values // DS 2022-06-13
 
                         <classes mode="change">
                            <memberOf key="att.typed"/>
                         </classes>-->
-                        <attList>
-                           <attDef ident="type" usage="req">
-                              <valList type="closed">
-                                 <valItem ident="tribe"/>
-                                 <valItem ident="religousGroup"/>
-                                 <valItem ident="ageGroup"/>
-                              </valList>
-                           </attDef>
-                        </attList>
-                     </elementSpec>
-                     <!-- TODO add Schematron rules to enforce:
+						<attList>
+							<attDef ident="type" usage="req">
+								<valList type="closed">
+									<valItem ident="tribe"/>
+									<valItem ident="religousGroup"/>
+									<valItem ident="ageGroup"/>
+								</valList>
+							</attDef>
+						</attList>
+					</elementSpec>
+					<!-- TODO add Schematron rules to enforce:
                      * <age> in type="ageGroup"
                         * <faith> in type="religious"
                            * <residence> in type="tribe" subtype="sedentary"
 
                               // DS 2022-06-13
                               -->
-                              <elementSpec ident="settlement" mode="change" module="namesdates">
-                                 <attList>
-                                    <attDef ident="ref" usage="req" mode="change"/>
-                                 </attList>
-                              </elementSpec>
-                              <elementSpec ident="div" mode="change">
-                                 <attList>
-                                    <attDef ident="type" mode="replace">
-                                       <valList type="closed">
-                                          <valItem ident="description"/>
-                                          <valItem ident="featureDescription"/>
-                                          <valItem ident="featureValueObservations"/>
-                                       </valList>
-                                    </attDef>
-                                 </attList>
-                              </elementSpec>
-                              <elementSpec ident="region" mode="change" module="namesdates">
-                                 <content>
-                                    <textNode/>
-                                 </content>
-                                 <attList>
-                                    <attDef ident="ref" mode="change" usage="req"/>
-                                 </attList>
-                              </elementSpec>
-                              <elementSpec ident="language" mode="change">
-                                 <attList>
-                                    <attDef ident="ana">
-                                       <valList type="closed">
-                                          <valItem ident="#bedouin"/>
-                                          <valItem ident="#sedentary"/>
-                                          <valItem ident="#mixed"/>
-                                       </valList>
-                                    </attDef>
-                                 </attList>
-                              </elementSpec>
-                              <elementSpec ident="note" mode="change">
-                                 <attList>
-                                    <attDef ident="type">
-                                       <valList type="closed">
-                                          <valItem ident="constraintNote"/>
-                                          <valItem ident="exceptionNote"/>
-                                          <valItem ident="general"/>
-                                       </valList>
-                                    </attDef>
-                                 </attList>
-                              </elementSpec>
-                              <elementSpec ident="title" mode="change">
-                                 <attList>
-                                    <attDef ident="calendar" mode="delete"/>
-                                    <!--      <attDef ident="cert" mode="delete"/> -->
-                                    <attDef ident="corresp" mode="delete"/>
-                                    <attDef ident="notAfter" mode="delete"/>
-                                    <attDef ident="notBefore" mode="delete"/>
-                                    <attDef ident="when" mode="delete"/>
-                                    <attDef ident="ref" mode="delete"/>
-                                    <attDef ident="resp" mode="delete"/>
-                                    <!-- CHECKME DS 2022-06-23 Why do I have to redefine that here?
+					<elementSpec ident="settlement" mode="change" module="namesdates">
+						<attList>
+							<attDef ident="ref" usage="req" mode="change"/>
+						</attList>
+					</elementSpec>
+					<elementSpec ident="div" mode="change">
+						<attList>
+							<attDef ident="type" mode="replace">
+								<valList type="closed">
+									<valItem ident="description"/>
+									<valItem ident="featureDescription"/>
+									<valItem ident="featureValueObservations"/>
+								</valList>
+							</attDef>
+						</attList>
+					</elementSpec>
+					<elementSpec ident="region" mode="change" module="namesdates">
+						<content>
+							<textNode/>
+						</content>
+						<attList>
+							<attDef ident="ref" mode="change" usage="req"/>
+						</attList>
+					</elementSpec>
+					<elementSpec ident="language" mode="change">
+						<attList>
+							<attDef ident="ana">
+								<valList type="closed">
+									<valItem ident="#bedouin"/>
+									<valItem ident="#sedentary"/>
+									<valItem ident="#mixed"/>
+								</valList>
+							</attDef>
+						</attList>
+					</elementSpec>
+					<elementSpec ident="note" mode="change">
+						<attList>
+							<attDef ident="type">
+								<valList type="closed">
+									<valItem ident="constraintNote"/>
+									<valItem ident="exceptionNote"/>
+									<valItem ident="general"/>
+								</valList>
+							</attDef>
+						</attList>
+					</elementSpec>
+					<elementSpec ident="title" mode="change">
+						<attList>
+							<attDef ident="calendar" mode="delete"/>
+							<!--      <attDef ident="cert" mode="delete"/> -->
+							<attDef ident="corresp" mode="delete"/>
+							<attDef ident="notAfter" mode="delete"/>
+							<attDef ident="notBefore" mode="delete"/>
+							<attDef ident="when" mode="delete"/>
+							<attDef ident="ref" mode="delete"/>
+							<attDef ident="resp" mode="delete"/>
+							<!-- CHECKME DS 2022-06-23 Why do I have to redefine that here?
                                     Shouldn't it be included just like @level ?-->
-                                    <attDef ident="type" mode="add">
-                                       <valList type="closed">
-                                          <valItem ident="main"/>
-                                          <valItem ident="sub"/>
-                                          <valItem ident="short"/>
-                                       </valList>
-                                    </attDef>
-                                 </attList>
-                              </elementSpec>
-                              <elementSpec ident="date" mode="change">
-                                 <attList>
-                                    <attDef ident="corresp" mode="delete"/>
-                                    <attDef ident="unit" mode="delete"/>
-                                    <attDef ident="ref" mode="delete"/>
-                                    <attDef ident="resp" mode="delete"/>
-                                    <attDef ident="confidence" mode="delete"/>
-                                    <attDef ident="min" mode="delete"/>
-                                    <attDef ident="quantity" mode="delete"/>
-                                    <attDef ident="period" mode="delete"/>
-                                    <attDef ident="scope" mode="delete"/>
-                                 </attList>
-                              </elementSpec>
-                              <elementSpec ident="cit" mode="change">
-                                 <attList>
-                                    <attDef ident="type" mode="add">
-                                       <valList type="closed">
-                                          <valItem ident="example"/>
-                                          <valItem ident="sourceRepresentation"/>
-                                          <valItem ident="translation"/>
-                                       </valList>
-                                    </attDef>
-                                 </attList>
-                              </elementSpec>
-                              <elementSpec ident="featureValueObservation" mode="add" ns="https://wibarab.acdh.oeaw.ac.at/langDesc">
-                                 <gloss>feature value observation</gloss>
-                                 <desc>contains data gathered by a source about the realisation of a given feature</desc>
-                                 <classes>
-                                    <memberOf key="model.divPart"/>
-                                    <memberOf key="att.global"/>
-                                    <memberOf key="att.global.responsibility"/>
-                                    <memberOf key="att.docStatus"/>
-                                 </classes>
-                                 <content>
-                                    <sequence>
-                                       <!-- We require exactly one <name> element which we require to
+							<attDef ident="type" mode="add">
+								<valList type="closed">
+									<valItem ident="main"/>
+									<valItem ident="sub"/>
+									<valItem ident="short"/>
+								</valList>
+							</attDef>
+						</attList>
+					</elementSpec>
+					<elementSpec ident="date" mode="change">
+						<attList>
+							<attDef ident="corresp" mode="delete"/>
+							<attDef ident="unit" mode="delete"/>
+							<attDef ident="ref" mode="delete"/>
+							<attDef ident="resp" mode="delete"/>
+							<attDef ident="confidence" mode="delete"/>
+							<attDef ident="min" mode="delete"/>
+							<attDef ident="quantity" mode="delete"/>
+							<attDef ident="period" mode="delete"/>
+							<attDef ident="scope" mode="delete"/>
+						</attList>
+					</elementSpec>
+					<elementSpec ident="cit" mode="change">
+						<attList>
+							<attDef ident="type" mode="add">
+								<valList type="closed">
+									<valItem ident="example"/>
+									<valItem ident="sourceRepresentation"/>
+									<valItem ident="translation"/>
+								</valList>
+							</attDef>
+						</attList>
+					</elementSpec>
+					<elementSpec ident="featureValueObservation" mode="add" ns="https://wibarab.acdh.oeaw.ac.at/langDesc">
+						<gloss>feature value observation</gloss>
+						<desc>contains data gathered by a source about the realisation of a given feature</desc>
+						<classes>
+							<memberOf key="model.divPart"/>
+							<memberOf key="att.global"/>
+							<memberOf key="att.global.responsibility"/>
+							<memberOf key="att.docStatus"/>
+						</classes>
+						<content>
+							<sequence>
+								<!-- We require exactly one <name> element which we require to
                                           ... have a @ref attribute pointing to one of the <item>s in the feauterValues list
                                              ... have a @type attribute with the value "featureValue"
 
                                              TODO add Schematron rule to enforce @type value
                                              -->
-                                             <elementRef key="name" maxOccurs="1" minOccurs="1"/>
-                                             <!-- We require exactly one <bibl> element which represents the source of the parent record. -->
-                                                <elementRef key="bibl" minOccurs="1" maxOccurs="1"/>
-                                                <!-- There can be one or more placeNames which indicate where the feature value was observed -->
-                                                <elementRef key="placeName" maxOccurs="unbounded" minOccurs="1"/>
-                                                <!-- There can be one or more lang elements refering to a VICAV language profile via a @ref attribute-->
-                                                <elementRef key="lang" minOccurs="0" maxOccurs="unbounded"/>
-                                                <!-- There can be one optional <date> element indicating the date the feature value was observed (as provided by the source) -->
-                                                   <elementRef key="date" maxOccurs="1" minOccurs="0"/>
-                                                   <!-- There can be 0 or more personGrp elements representing any distinct group of speakers (be it a tribe, religious community, age group etc. -->
-                                                   <!-- CHECKME is defining a personGroup (whereas placeName references a place) – but there's no personGrpName element -->
-                                                   <elementRef key="personGrp" minOccurs="0" maxOccurs="unbounded"/>
-                                                   <!-- There can be several optional notes -->
-                                                   <elementRef key="note" minOccurs="0" maxOccurs="unbounded"/>
-                                                   <!-- There can be several optional examples or quotations from the source -->
-                                                   <elementRef key="cit" minOccurs="0" maxOccurs="unbounded"/>
-                                                </sequence>
-                                             </content>
-                                             <attList>
-                                                <attDef ident="xml:id" mode="change" usage="req"/>
-                                                <attDef ident="corresp" mode="delete"/>
-                                             </attList>
-                                             <!-- 2022-06-21 moving @fVal to <name type="featureValue"> -->
-                                                <!--                  <attList>-->
-                                                   <!-- DS this is a hard copy of the original definition on <f> – not nice,
+								<elementRef key="name" maxOccurs="1" minOccurs="1"/>
+								<!-- We require exactly one <bibl> element which represents the source of the parent record. -->
+								<elementRef key="bibl" minOccurs="1" maxOccurs="1"/>
+								<!-- There can be one or more placeNames which indicate where the feature value was observed -->
+								<elementRef key="placeName" maxOccurs="unbounded" minOccurs="1"/>
+								<!-- There can be one or more lang elements refering to a VICAV language profile via a @ref attribute-->
+								<elementRef key="lang" minOccurs="0" maxOccurs="unbounded"/>
+								<!-- There can be one optional <date> element indicating the date the feature value was observed (as provided by the source) -->
+								<elementRef key="date" maxOccurs="1" minOccurs="0"/>
+								<!-- There can be 0 or more personGrp elements representing any distinct group of speakers (be it a tribe, religious community, age group etc. -->
+								<!-- CHECKME is defining a personGroup (whereas placeName references a place) – but there's no personGrpName element -->
+								<elementRef key="personGrp" minOccurs="0" maxOccurs="unbounded"/>
+								<!-- There can be several optional notes -->
+								<elementRef key="note" minOccurs="0" maxOccurs="unbounded"/>
+								<!-- There can be several optional examples or quotations from the source -->
+								<elementRef key="cit" minOccurs="0" maxOccurs="unbounded"/>
+							</sequence>
+						</content>
+						<attList>
+							<attDef ident="xml:id" mode="change" usage="req"/>
+							<attDef ident="corresp" mode="delete"/>
+						</attList>
+						<!-- 2022-06-21 moving @fVal to <name type="featureValue"> -->
+						<!--                  <attList>-->
+						<!-- DS this is a hard copy of the original definition on <f> – not nice,
                                                       but I don't know a way of referencing a locally defined attribute.  -->
-                                                      <!--<attDef ident="fVal" usage="opt">
+						<!--<attDef ident="fVal" usage="opt">
                                                          <gloss versionDate="2007-07-04" xml:lang="en">feature value</gloss>
                                                          <gloss versionDate="2007-12-20" xml:lang="ko">자질 값</gloss>
                                                          <gloss versionDate="2008-04-06" xml:lang="es">valor del rasgo</gloss>
@@ -464,30 +466,30 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                                             </p>
                                                          </remarks>
                                                       </attDef>-->
-                                                      <!--<attDef ident="fValRef" mode="add" usage="req">
+						<!--<attDef ident="fValRef" mode="add" usage="req">
                                                          <gloss>feature value reference</gloss>
                                                          <desc>points to one <gi>item</gi> in a <tag>list type="featureValues"</tag>.</desc>
                                                          <datatype>
                                                             <dataRef key="teidata.pointer"/>
                                                          </datatype>
                                                       </attDef>-->
-                                                      <!--</attList>-->
-                                                </elementSpec>
-                                                <elementSpec ident="seg" mode="change">
-                                                   <attList>
-                                                      <attDef ident="type" mode="add">
-                                                         <valList type="closed">
-                                                            <valItem ident="morph"/>
-                                                         </valList>
-                                                      </attDef>
-                                                   </attList>
-                                                </elementSpec>
-                                                <elementSpec ident="lang" mode="change">
-                                                   <classes mode="change">
-                                                      <memberOf key="att.naming"/>
-                                                   </classes>
-                                                </elementSpec>
-                                                <!-- removed <listFeatureValues> and <featureValue> in favour of <list>
+						<!--</attList>-->
+					</elementSpec>
+					<elementSpec ident="seg" mode="change">
+						<attList>
+							<attDef ident="type" mode="add">
+								<valList type="closed">
+									<valItem ident="morph"/>
+								</valList>
+							</attDef>
+						</attList>
+					</elementSpec>
+					<elementSpec ident="lang" mode="change">
+						<classes mode="change">
+							<memberOf key="att.naming"/>
+						</classes>
+					</elementSpec>
+					<!-- removed <listFeatureValues> and <featureValue> in favour of <list>
                                                          for sake of simplicity DS 2022-05-08
 
 
@@ -506,7 +508,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                                          </elementSpec>
 
                                                          -->
-                                                         <!--<elementSpec ident="featureValue" mode="add" ns="https://id.acdh.oeaw.ac.at/langDesc">
+					<!--<elementSpec ident="featureValue" mode="add" ns="https://id.acdh.oeaw.ac.at/langDesc">
                                                             <gloss>feature value</gloss>
                                                             <desc>describes one feature value</desc>
                                                             <content>
@@ -524,8 +526,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                                                <attRef class="att.global" name="xml:id"/>
                                                             </attList>
                                                          </elementSpec>-->
-                                                      </schemaSpec>
-                                                   </div>
-                                                </body>
-                                             </text>
-                                          </TEI>
+				</schemaSpec>
+			</div>
+		</body>
+	</text>
+</TEI>
