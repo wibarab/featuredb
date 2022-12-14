@@ -114,7 +114,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<item>The<term>sources</term>list contains all sources that are not from Zotero, i.e., fieldwork campains and personal communications. Path:\featuredb\010_manannot\wibarab_sources.xml</item>
 						<item>The<term>Data Management Plan</term>contains a description of the project including information about the researchers who contribute to the database. The<term>Responsible Person</term> attribute links to this list. Path: \featuredb\010_manannot\wibarab_dmp.xml </item>
 						<item>The<term>Profiles</term>each describe an arabic variety. Path: \featuredb\010_manannot\profiles\</item>
-						<item>The<term>PersonGroup</term>list contains different person groups, such as religion, age, gender, mothertongue, socio-economic classification and affiliation to a tribe or confederation. Path: \featuredb\010_manannot\wibarab_PersonGroup.xml</item>
+						<item>The<term>PersonGroup</term>list contains different person groups, such as religion, age, gender, mothertongue, socio-economic classification and affiliation to a tribe. Path: \featuredb\010_manannot\wibarab_PersonGroup.xml</item>
 						<item>The<term>Feature Files</term>each describe one linguistic feature. Path: C:\featuredb\010_manannot\features\</item>
 					</list>
 				</p>
@@ -194,7 +194,9 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<attList>
 							<attDef ident="type" mode="add">
 								<valList type="closed">
-									<valItem ident="publication"/>
+									<valItem ident="publication">
+										<desc>Published written documents, recorded in the VICAV Zotero library</desc>
+									</valItem>
 									<valItem ident="personalCommunication"/>
 									<valItem ident="campaign"/>
 								</valList>
@@ -363,7 +365,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 							<attDef ident="type" mode="add">
 								<valList type="closed">
 									<valItem ident="example"/>
-									<valItem ident="originalSource"/>
+									<valItem ident="sourceRepresentation"/>
 									<valItem ident="translation"/>
 								</valList>
 							</attDef>
