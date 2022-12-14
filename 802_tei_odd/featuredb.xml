@@ -68,20 +68,20 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 			<div>
 				<head>Part I: Functional Requirements of <name>WIBARAB Feature DB</name></head>
 				<p>The <name>WIBARAB Feature DB</name> should allow researchers to explore and compare the different realizations of lingustic features in
-               a variety of Arabic vernaculars. Since the main objective of the project is to investigate the linguistic "Bedouin" and "Sedentary" split,the <name>WIBARAB Feature DB</name> 
-               focuses on those Arabic varieties spoken by traditionally nomadic communities and on varieties that have been traditionally classified as "Bedouin", and includes as well the 
-               better documented sedentary varieties for comparative purposes. The database includes a variety of linguistic features that are considered especially relevant for typological purposes, 
-               and most of which have been reported in the literature to be especially salient of the speech of Bedouin communities.</p>
-				<p>In this way, the <name>WIBARAB Feature DB</name> represents both a specialized archive gathering linguistic data from a variety of Arabic varieties,
-               as well as an analysis research tool that should enable the WIBARAB team and other researchers to either confirm the existence of common linguistic trends
-               among Bedouin communities across the Arab World, and accurately identify the common features and its respective realizations, or provide sufficient data to
+               an array of Arabic vernaculars. Since the main objective of the project is to investigate the linguistic Bedouin-Sedentary split, the <name>WIBARAB Feature DB</name> 
+               focuses on those Arabic varieties spoken by traditionally nomadic communities and on varieties that have been traditionally classified as "Bedouin". For comparative purposes, it also includes the 
+               better documented sedentary varieties. The database focuses on a set of linguistic features that are considered especially relevant for typological purposes, 
+               and most of which have been reported in previously published academic studies to be especially salient of the speech of Bedouin communities.</p>
+				<p>In this way, the <name>WIBARAB Feature DB</name> represents both a specialized archive gathering linguistic data from an array of Arabic varieties,
+               and an analytical research tool. It should thus enable the WIBARAB team and other researchers to either confirm the existence of common linguistic trends
+               among Bedouin communities across the Arab World, accurately identifying the common features and its respective realizations, or provide sufficient data to
                reject the currently prevailing Bedouin-Sedentary split hypothesis.</p>
 			</div>
 			<div>
 				<head>Part II: Sources</head>
-				<p>The data included in the <name>WIBARAB Feature DB</name> has been extracted from three main types of sources. First, from written academic <term>publications</term>,
-               in a minor degree, data from new <term>fieldwork</term> campaigns carried out by the WIBARAB team in the frame of the project, and, to a minor degree,
-               <term>personal communications</term> from native speakers of specific varieties under study.</p>
+				<p>The data included in the <name>WIBARAB Feature DB</name> has been extracted from three main types of sources. First, from written academic <term>publications</term>, 
+                                secondly, data from new <term>fieldwork</term> campaigns carried out by the WIBARAB team in the frame of the project, and, to a minor degree, data from <term>personal communications</term>
+                                with native speakers of specific varieties under study.</p>
 				<list type="ordered">
 					<item>
 						<term>publication</term>Academic published written documents, compiled and documented in the VICAV Zotero library, found in the <term>biblio</term> file</item>
@@ -92,17 +92,17 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 			<div>
 				<head>Part III: Data Model</head>
 				<p> The data included in the database is organized around a series of linguistic <term>features</term>. The criteria used for the selection of the linguistic <term>features</term> treated
-                                rely mainly on typological considerations and on previously reported high levels of sociolinguistic salience. Every linguistic feature has a set of <term>feature values</term> that indicates the different possible 
+                                rely mainly on typological considerations and on previously reported high levels of sociolinguistic salience. Every linguistic feature has a set of <term>feature values</term> that indicates the different attested
                                 realizations of a specific feature in the studied varieties. The documentation of an occurrence of a specific feature value(s) in a specific location is done via <term>Feature Value Observations</term>.
                                 Every <term>Feature Value Observation</term> specifies that one feature value occurs in a specific place, by a specific speaker or group of speakers. When information about the speakers and their communities
                                 is available, the sociolinguistic profile of the speaker or the community of speakers is indicated via the <term>Person Group</term> element, which may specify values regarding the speakers' tribal affiliation, 
-                                religious affiliation, age group, gender, mother tongue among others. When specific remarks that are not codifiable via previously explained elements are due, they are indicated in prose within the exception notes, 
+                                religious affiliation, age group, gender, and mother tongue among others. When specific remarks that are not codifiable via previously explained elements are due, they are indicated in prose within the exception notes, 
                                 constraint notes or general notes.</p>
-				<p>Some sources often group the combination of realizations of feature values and characterize them as a linguistic variety. These linguistic varieties may be labelled after the approximate location they are spoken at, 
-                                and/or the community of speakers that use them. These common groupings or varieties are indicated via Language <term>Profiles</term> and refer to the historical and linguistic information available on a specific variety according
-                                to a source.</p>
-				<p>As for the data inputting process, different areas of the Arab world have been assigned to different members of the WIBARAB team. Therefore, there is always a member of the team that is responsible of the extraction and the inputting of the 
-                                data of a specific location. This person is the <term>Responsible Person</term> and her/his name is codified in 2 or 3 capital letters: ex. Johanna Doppelbauer is JD; Ana Iriarte Diez is AID. </p>
+				<p>Some sources often group the combination of realizations of feature values and characterize them as a linguistic variety or dialect. These linguistic varieties may be labelled after the approximate location 
+                                they are spoken at, and/or the community of speakers that use them. These common groupings or varieties are indicated via language <term>Profiles</term> and provide additional historical and linguistic information available 
+                                regarding a specific variety according to one or more sources.</p>
+				<p>As for the data inputting process, different areas of the Arab world have been assigned to different members of the WIBARAB team. Therefore, there is always a member of the team that is responsible of the extraction and
+                                 the inputting of the data of a specific location. This person is the <term>Responsible Person</term> and her/his name is codified in 2 or 3 capital letters: ex. Johanna Doppelbauer is JD; Ana Iriarte Diez is AID. </p>
 			</div>
 			<list type="ordered">
 				<item>Linguistic <term>features</term> of any kind / size</item>
@@ -119,7 +119,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 				<head>Part IV: Working Files</head>
 				<p>The information described in Part II and III above is organized and stored in files. There are background files compiling and documenting the sources (biblio list and sources list), 
                                 the geolocations (geodata), the linguistic profiles (profiles) and the personGroup element (PersonGroup). The <term>Feature Value Observations</term> are stored according to different features via <term>Feature Files</term>.
-                                This is, there is one file for every feature where the <term>Feature Value Observations</term> of that feature are stored together. At the beginning of every feature file there is a description in prose of the feature in question
+                                Hence, there is one file for every feature where the <term>Feature Value Observations</term> of that feature are stored together. At the beginning of every feature file there is a description in prose of the feature in question
                                 followed by an explanation of the feature values and of its symbolic representation in the map.</p>
 				<p>The files comprising the database are:
 
