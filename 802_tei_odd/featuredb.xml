@@ -61,6 +61,64 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 		<body>
 			<head>WIBARAB Feature DB: Functional requirements and Data Specification</head>
 			<p>The purpose of this TEI customization is to formalize the data structures needed to
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title>WIBARAB FeatureDB TEI Customization</title>
+				<title type="desc">Version 1.0.0</title>
+				<author><name type="person" xml:id="CM">Charly Mörth</name></author>
+				<author><name type="person" xml:id="DS">Daniel Schoper</name></author>
+				<principal><name type="person" xml:id="SP">Stephan Procházka</name></principal>
+				<respStmt>
+					<resp>contributor</resp>
+					<name type="person" ref="dmp:AD">Ana Iriarte Díez</name>
+				</respStmt>
+				<respStmt>
+					<resp>contributor</resp>
+					<name type="person" ref="dmp:VE">Veronika Engler</name>
+				</respStmt>
+				<respStmt>
+					<resp>contributor</resp>
+					<name type="person" ref="dmp:RZ">Maria Rebecca Zarb</name>
+				</respStmt>
+				<respStmt>
+					<resp>contributor</resp>
+					<name type="person" ref="dmp:JD">Johanna Doppelbauer</name>
+				</respStmt>
+			</titleStmt>
+			<editionStmt>
+				<edition n="1.0.0">Version 1.0.0</edition>
+			</editionStmt>
+			<publicationStmt>
+				<publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
+				<date>2022</date>
+				<availability>
+					<licence>CC BY 4.0</licence>
+				</availability>
+			</publicationStmt>
+			<sourceDesc>
+				<p>This is a born digital document.</p>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<listPrefixDef>
+				<prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../010_manannot/wibarab_dmp.xml#$1"/>
+				<prefixDef ident="zotid" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_biblio_tei_zotero.xml#$1"/>
+				<prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_dialects.xml#$1"/>
+				<prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_geodata.xml#$1"/>
+			</listPrefixDef>
+		</encodingDesc>
+		<revisionDesc>
+			<change who="#DS">Set up document outline; first draft of Part 1 (functional requirements).</change>
+			<change who="#DS" when="2022-06-23">finalized beta Version 1</change>
+			<change when="2022-08-12" who="dmp:DS" status="published">releasing version 1.0.0</change>
+			<change when="2022-08-16" who="dmp:CM" status="published"></change>
+		</revisionDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<head>WIBARAB Feature DB: Functional requirements and Data Specification</head>
+			<p>The purpose of this TEI customization is to formalize the data structures needed to
             implement the WIBARAB Feature DB application. Thus, we start with a brief
             introduction into the most important functionalities which the application is
             expected to provide (Part I), discuss the overall data model in Part II with the formal
@@ -72,16 +130,16 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                focuses on those Arabic varieties spoken by traditionally nomadic communities and on varieties that have been traditionally classified as "Bedouin", and includes as well the 
                better documented sedentary varieties for comparative purposes. The database includes a variety of linguistic features that are considered especially relevant for typological purposes, 
                and most of which have been reported in the literature to be especially salient of the speech of Bedouin communities.</p>
-				<p>In this way, the <name>WIBARAB Feature DB</name> represents both a specialized archive gathering linguistic data from a variety of Arabic varieties, 
-                                 as well as an analysis research tool that should enable the WIBARAB team and other researchers to either confirm the existence of common linguistic trends 
-                                 among Bedouin communities across the Arab World, and accurately identify the common features and its respective realizations, or provide sufficient data to 
-                                 reject the currently prevailing Bedouin-Sedentary split hypothesis.</p>
+				<p>In this way, the <name>WIBARAB Feature DB</name> represents both a specialized archive gathering linguistic data from a variety of Arabic varieties,
+               as well as an analysis research tool that should enable the WIBARAB team and other researchers to either confirm the existence of common linguistic trends
+               among Bedouin communities across the Arab World, and accurately identify the common features and its respective realizations, or provide sufficient data to
+               reject the currently prevailing Bedouin-Sedentary split hypothesis.</p>
 			</div>
 			<div>
 				<head>Part II: Sources</head>
-				<p>The data included in the <name>WIBARAB Feature DB</name> has been extracted from three main types of sources. First, from written academic <term>publications</term>, 
-                                in a minor degree, data from new <term>fieldwork</term> campaigns carried out by the WIBARAB team in the frame of the project, and, to a minor degree, 
-                                <term>personal communications</term> from native speakers of specific varieties under study. 
+				<p>The data included in the <name>WIBARAB Feature DB</name> has been extracted from three main types of sources. First, from written academic <term>publications</term>,
+               in a minor degree, data from new <term>fieldwork</term> campaigns carried out by the WIBARAB team in the frame of the project, and, to a minor degree,
+               <term>personal communications</term> from native speakers of specific varieties under study.
 
                <list type="ordered">
 						<item>
@@ -98,20 +156,15 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 realizations of a specific feature in the studied varieties. The documentation of an occurrence of a specific feature value(s) in a specific location is done via <term>Feature Value Observations</term>.
                                 Every <term>Feature Value Observation</term> specifies that one feature value occurs in a specific place, by a specific speaker or group of speakers. When information about the speakers and their communities
                                 is available, the sociolinguistic profile of the speaker or the community of speakers is indicated via the <term>Person Group</term> element, which may specify values regarding the speakers' tribal affiliation, 
-                                religious affiliation, age group, gender, mother tongue among others.</p>
+                                religious affiliation, age group, gender, mother tongue among others. When specific remarks that are not codifiable via previously explained elements are due, they are indicated in prose within the exception notes, 
+                                constraint notes or general notes.</p>
 				<p>Some sources often group the combination of realizations of feature values and characterize them as a linguistic variety. These linguistic varieties may be labelled after the approximate location they are spoken at, 
                                 and/or the community of speakers that use them. These common groupings or varieties are indicated via Language <term>Profiles</term> and refer to the historical and linguistic information available on a specific variety according
-                                to a source. 
-                                 
-                  	</p>
+                                to a source.</p>
+				<p>As for the data inputting process, different areas of the Arab world have been assigned to different members of the WIBARAB team. Therefore, there is always a member of the team that is responsible of the extraction and the inputting of the 
+                                data of a specific location. This person is the <term>Responsible Person</term> and her/his name is codified in 2 or 3 capital letters: ex. Johanna Doppelbauer is JD; Ana Iriarte Diez is AID. </p>
 			</div>
-			<p>The main entities of the database are:</p>
 			<list type="ordered">
-				<!--the <name>WIBARAB Feature DB</name> 
-               focuses on those Arabic varieties spoken by traditionally nomadic communities and on varieties that have been traditionally classified as "Bedouin", and includes as well the 
-               better documented sedentary varieties for comparative purposes. The database includes a variety of linguistic features that are considered especially relevant for typological purposes, 
-               and most of which have been reported in the literature to be especially salient of the speech of Bedouin communities.</p> is this feature, by which dimensions is it described, what does it contain?
-                 -->
 				<item>Linguistic <term>features</term> of any kind / size</item>
 				<item><term>feature values</term>, i.e. a series of distinct ways a feature is actually realized in a vernacular</item>
 				<item><term>Feature Value Observations</term>: The report in a source that a <term>feature value</term> was witnessed being realized in a given moment in space and time</item>
@@ -124,7 +177,10 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 			</list>
 			<div>
 				<head>Part IV: Working Files</head>
-				<!-- where do i find what info? (include file path) in which files is what? - you find sources in this file, profiles in that file etc. -->
+				<p>The information described in Part II and III above is organized and stored in files. There are background files compiling and documenting the sources (biblio list and sources list), 
+                                the geolocations (geodata), the linguistic profiles (profiles) and the personGroup element (PersonGroup). The <term>Feature Value Observations</term> are stored according to different features via <term>Feature Files</term>.
+                                This is, there is one file for every feature where the <term>Feature Value Observations</term> of that feature are stored together. At the beginning of every feature file there is a description in prose of the feature in question
+                                followed by an explanation of the feature values and of its symbolic representation in the map.</p>
 				<p>The files comprising the database are:
 
                <list type="ordered">
