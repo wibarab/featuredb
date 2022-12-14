@@ -61,68 +61,10 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 		<body>
 			<head>WIBARAB Feature DB: Functional requirements and Data Specification</head>
 			<p>The purpose of this TEI customization is to formalize the data structures needed to
-	<teiHeader>
-		<fileDesc>
-			<titleStmt>
-				<title>WIBARAB FeatureDB TEI Customization</title>
-				<title type="desc">Version 1.0.0</title>
-				<author><name type="person" xml:id="CM">Charly Mörth</name></author>
-				<author><name type="person" xml:id="DS">Daniel Schoper</name></author>
-				<principal><name type="person" xml:id="SP">Stephan Procházka</name></principal>
-				<respStmt>
-					<resp>contributor</resp>
-					<name type="person" ref="dmp:AD">Ana Iriarte Díez</name>
-				</respStmt>
-				<respStmt>
-					<resp>contributor</resp>
-					<name type="person" ref="dmp:VE">Veronika Engler</name>
-				</respStmt>
-				<respStmt>
-					<resp>contributor</resp>
-					<name type="person" ref="dmp:RZ">Maria Rebecca Zarb</name>
-				</respStmt>
-				<respStmt>
-					<resp>contributor</resp>
-					<name type="person" ref="dmp:JD">Johanna Doppelbauer</name>
-				</respStmt>
-			</titleStmt>
-			<editionStmt>
-				<edition n="1.0.0">Version 1.0.0</edition>
-			</editionStmt>
-			<publicationStmt>
-				<publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
-				<date>2022</date>
-				<availability>
-					<licence>CC BY 4.0</licence>
-				</availability>
-			</publicationStmt>
-			<sourceDesc>
-				<p>This is a born digital document.</p>
-			</sourceDesc>
-		</fileDesc>
-		<encodingDesc>
-			<listPrefixDef>
-				<prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../010_manannot/wibarab_dmp.xml#$1"/>
-				<prefixDef ident="zotid" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_biblio_tei_zotero.xml#$1"/>
-				<prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_dialects.xml#$1"/>
-				<prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_geodata.xml#$1"/>
-			</listPrefixDef>
-		</encodingDesc>
-		<revisionDesc>
-			<change who="#DS">Set up document outline; first draft of Part 1 (functional requirements).</change>
-			<change who="#DS" when="2022-06-23">finalized beta Version 1</change>
-			<change when="2022-08-12" who="dmp:DS" status="published">releasing version 1.0.0</change>
-			<change when="2022-08-16" who="dmp:CM" status="published"></change>
-		</revisionDesc>
-	</teiHeader>
-	<text>
-		<body>
-			<head>WIBARAB Feature DB: Functional requirements and Data Specification</head>
-			<p>The purpose of this TEI customization is to formalize the data structures needed to
             implement the WIBARAB Feature DB application. Thus, we start with a brief
             introduction into the most important functionalities which the application is
-            expected to provide (Part I), discuss the overall data model in Part II with the formal
-            TEI customization being presented in Part III.</p>
+            expected to provide in Part I, a discussion of the sources feeding the database in Part II, descriptions of the overall data model in Part III and of the organization of the working files in Part IV, and finally a presentation
+            of the formal TEI customization in Part V.</p>
 			<div>
 				<head>Part I: Functional Requirements of <name>WIBARAB Feature DB</name></head>
 				<p>The <name>WIBARAB Feature DB</name> should allow researchers to explore and compare the different realizations of lingustic features in
@@ -139,15 +81,13 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 				<head>Part II: Sources</head>
 				<p>The data included in the <name>WIBARAB Feature DB</name> has been extracted from three main types of sources. First, from written academic <term>publications</term>,
                in a minor degree, data from new <term>fieldwork</term> campaigns carried out by the WIBARAB team in the frame of the project, and, to a minor degree,
-               <term>personal communications</term> from native speakers of specific varieties under study.
-
-               <list type="ordered">
-						<item>
-							<term>publication</term>Academic published written documents, compiled and documented in the VICAV Zotero library, found in the <term>biblio</term> file</item>
-						<item><term>personal communication</term>Personal communication with native speakers of the variety via phone, e-mail or in person.</item>
-						<item><term>fieldwork</term>Data from fieldwork conducted by members of the team.</item>
-					</list>
-				</p>
+               <term>personal communications</term> from native speakers of specific varieties under study.</p>
+				<list type="ordered">
+					<item>
+						<term>publication</term>Academic published written documents, compiled and documented in the VICAV Zotero library, found in the <term>biblio</term> file</item>
+					<item><term>personal communication</term>Personal communication with native speakers of the variety via phone, e-mail or in person.</item>
+					<item><term>fieldwork</term>Data from fieldwork conducted by members of the team.</item>
+				</list>
 			</div>
 			<div>
 				<head>Part III: Data Model</head>
@@ -195,7 +135,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 				</p>
 			</div>
 			<div>
-				<head>Formal Specification</head>
+				<head>Part V: Formal Specification</head>
 				<schemaSpec ident="featuredb" prefix="tei_" start="TEI" xml:lang="en" defaultExceptions="https://id.acdh.oeaw.ac.at/langDesc http://www.tei-c.org/ns/1.0 teix:egXML">
 					<moduleRef key="core" exclude="abbr add addrLine address author analytic editor email gap head imprint item label list listBibl measure measureGrp mentioned monogr note num pb postBox postCode ptr pubPlace publisher quote ref resp respStmt rs series street term title unclear unit"/>
 					<!--<elementSpec ident="TEI" mode="replace" module="textstructure">
