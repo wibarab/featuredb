@@ -414,26 +414,24 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                  <gloss>feature value observation</gloss>
                                  <desc>
                                  <div>
-                                 <p>The Feature Value Observation consists of a group of elements encompassing different types of information describing
-            the details of the realization of a specific feature value in a specific place or places according to a source. Thus, every Feature Value Observation
-            must have:
+                                 
+            <p>The Feature Value Observation consists of a group of elements encompassing different types of information describing the details of the realization of a specific feature value in a specific place or places according to a source.
+             Thus, every Feature Value Observation must have:
 	    <list type="ordered">
-               <item> At least one <term>place</term> element </item>
-               <item> At least one <term>place</term> element </item>
+               <item> At least one <term>place</term> element</item>
                <item> One unique <term>feature value</term></item>
                <item> One unique <term>source</term></item>
-            </list>
-           
-            The occurrence of multiple values or of multiple sources will then result in the creation of additional Feature Value Observation. Every Feature Value Observation
-            is identifiable by a unique xml ID.</p>
+               </list>
+            The occurrence of multiple values or of multiple sources will then result in the creation of additional Feature Value Observations. Every Feature Value Observation is identifiable by a unique xml ID.</p>
             
             <p>Additionally, the Feature Value Observation may contain other optional elements:
              <list type="ordered">
-               <item> A <term>Person Group</term> element of different types(tribe, age, religion, sociolinguistic perception and mother tongue) that further specifies information about the speakers from whom the feature
-            realization of a feature value has been observed or documented in the source.</item>
-               <item> At least one <term>place</term> element </item>
-               <item> One unique <term>feature value</term></item>
-               <item> One unique <term>source</term></item>
+               <item> One or several <term>Person Group</term> element(s) of different types (tribe, age, religion, sociolinguistic perception and mother tongue) that further specifies information about the speakers from whom the realization
+                of a feature value has been observed or documented in the source.</item>
+               <item> One or several Language <term>Profile</term> element, linking the Feature Value Observation to a VICAV Profile</item>
+               <item> One or several <term>Source Representation</term> element(s), where literal information from the source is quoted in its original form (e.g. original reflexes of some items as documented by the author in the original source
+               featuring the source's transcription system.)</item>
+               <item> One or several examples to illustrate a feature value, as taken from the original source and with their English translation.</item>
             </list>
              </p> 
          </div>
