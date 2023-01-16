@@ -48,7 +48,7 @@
                <f name="ensurePrefixHash"><binary value="true"/></f>
             </fs>
 
-           <fs type="attribute">
+            <fs type="attribute">
                <f name="matchString"><string>//personGrp[@role="gender"]</string></f>
                <f name="atttrName"><string>corresp</string></f>
 
@@ -60,7 +60,7 @@
                <f name="ensurePrefixHash"><binary value="true"/></f>
             </fs>
 
-           <fs type="attribute">
+            <fs type="attribute">
                <f name="matchString"><string>//personGrp[@role="age"]</string></f>
                <f name="atttrName"><string>corresp</string></f>
 
@@ -84,7 +84,7 @@
                <f name="ensurePrefixHash"><binary value="true"/></f>
             </fs>
 
-             <fs type="attribute">
+            <fs type="attribute">
                <f name="matchString"><string>//personGrp[@role="tribe"]</string></f>
                <f name="atttrName"><string>corresp</string></f>
 
@@ -146,7 +146,6 @@
             <fs type="attribute">
                <f name="matchString"><string>z</string></f>
                <f name="atttrName"><string>corresp</string></f>
-
                <f name="elementPath"><string>//tei:biblStruct</string></f>
                <f name="selectPath"><string>@xml:id</string></f>
                <f name="filePath"><string>{basePath}\..\vicav_biblio_tei_zotero.xml</string></f>
@@ -156,7 +155,21 @@
                <f name="ensurePrefixHash"><binary value="false"/></f>
             </fs>
 
+
+
             <fs type="attribute">
+               <f name="matchString"><string>s</string></f>
+               <f name="atttrName"><string>corresp</string></f>
+               <f name="elementPath"><string>//tei:event</string></f>
+               <f name="selectPath"><string>@xml:id</string></f>
+               <f name="filePath"><string>{basePath}\..\wibarab_sources.xml</string></f>
+               <f name="altPath"><string></string></f>
+               <f name="explanationPath"><string>{.//tei:head}</string></f>
+               <f name="prefix"><string>src:</string></f>
+               <f name="ensurePrefixHash"><binary value="false"/></f>
+            </fs>
+
+         <!--   <fs type="attribute">
                <f name="matchString"><string>//bibl</string></f>
                <f name="atttrName"><string>corresp</string></f>
                <f name="secAtttrName"><string>subType</string></f>
@@ -169,7 +182,7 @@
                <f name="explanationPath"><string>{.//tei:author/tei:surname}, {.//tei:author/tei:forname}\r\n\r\n{.//tei:title}\r\n{.//tei:date}\r\n{.//tei:pubPlace}</string></f>
                <f name="prefix"><string>zot:</string></f>
                <f name="ensurePrefixHash"><binary value="false"/></f>
-            </fs>
+            </fs> -->
 
             <fs type="attribute">
                <f name="matchString"><string>//name[@type='featureValue']</string></f>
