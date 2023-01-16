@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml"
+schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?renderer type="macro" href="{appPath}macros/macro_odd_transform_002.mcr"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title>WIBARAB FeatureDB TEI Customization</title>
+				<title type="desc">Version 1.0.0</title>
+				<author><name type="person" xml:id="CM">Ana Iriarte</name></author>
+				<respStmt>
+					<resp>contributor</resp>
+					<name type="person" ref="dmp:AD">Charly Mörth</name>
+				</respStmt>
+			</titleStmt>
+			<editionStmt>
+				<edition n="1.0.0">Version 1.0.0</edition>
+			</editionStmt>
+			<publicationStmt>
+				<publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
+				<date>2022</date>
+				<availability>
+					<licence>CC BY 4.0</licence>
+				</availability>
+			</publicationStmt>
+			<sourceDesc>
+				<p>This is a born digital document.</p>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<listPrefixDef>
+				<prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../010_manannot/wibarab_dmp.xml#$1"/>
+				<prefixDef ident="zotid" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_biblio_tei_zotero.xml#$1"/>
+				<prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_dialects.xml#$1"/>
+				<prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_geodata.xml#$1"/>
+			</listPrefixDef>
+		</encodingDesc>
+		<revisionDesc>
+		</revisionDesc>
+	</teiHeader>
+         <elementSpec ident="featureValueObservation" mode="add" ns="https://wibarab.acdh.oeaw.ac.at/langDesc">
+                                 <gloss>feature value observation</gloss>
+                                 <desc>
+                                 <div>
+                                 
+            <p>The Feature Value Observation consists of a group of elements encompassing different types of information describing the details of the realization of a specific feature value in a specific place or places according to a source.
+             Thus, every Feature Value Observation must have:
+	    <list type="ordered">
+               <item> At least one <term>place</term> element</item>
+               <item> One unique <term>feature value</term></item>
+               <item> One unique <term>source</term></item>
+               </list>
+            The occurrence of multiple values or of multiple sources will then result in the creation of additional Feature Value Observations. Every Feature Value Observation is identifiable by a unique xml ID.</p>
+            
+            <p>Additionally, the Feature Value Observation may contain other optional elements:
+             <list type="ordered">
+               <item> One or several <term>Person Group</term> element(s) of different types (tribe, age, religion, sociolinguistic perception and mother tongue) that further specifies information about the speakers from whom the realization
+                of a feature value has been observed or documented in the source.</item>
+               <item> One or several Language <term>Profile</term> element, linking the Feature Value Observation to a VICAV Profile</item>
+               <item> One or several <term>Source Representation</term> element(s), where literal information from the source is quoted in its original form (e.g. original reflexes of some items as documented by the author in the original source
+               featuring the source's transcription system.)</item>
+               <item> One or several examples to illustrate a feature value, as taken from the original source and with their English translation.</item>
+               <item> One or several notes to clarify  specificities, exceptions,and constraints concerning the realization of a feature value.</item>
+            </list>
+             </p> 
+         </div>
+         </desc>
+ </elementSpec>
+</TEI>
