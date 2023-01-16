@@ -9,24 +9,10 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 			<titleStmt>
 				<title>WIBARAB FeatureDB TEI Customization</title>
 				<title type="desc">Version 1.0.0</title>
-				<author><name type="person" xml:id="CM">Charly Mörth</name></author>
-				<author><name type="person" xml:id="DS">Daniel Schopper</name></author>
-				<principal><name type="person" xml:id="SP">Stephan Procházka</name></principal>
+				<author><name type="person" xml:id="CM">Ana Iriarte</name></author>
 				<respStmt>
 					<resp>contributor</resp>
-					<name type="person" ref="dmp:AD">Ana Iriarte Díez</name>
-				</respStmt>
-				<respStmt>
-					<resp>contributor</resp>
-					<name type="person" ref="dmp:VE">Veronika Engler</name>
-				</respStmt>
-				<respStmt>
-					<resp>contributor</resp>
-					<name type="person" ref="dmp:RZ">Maria Rebecca Zarb</name>
-				</respStmt>
-				<respStmt>
-					<resp>contributor</resp>
-					<name type="person" ref="dmp:JD">Johanna Doppelbauer</name>
+					<name type="person" ref="dmp:AD">Charly Mörth</name>
 				</respStmt>
 			</titleStmt>
 			<editionStmt>
@@ -52,54 +38,34 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 			</listPrefixDef>
 		</encodingDesc>
 		<revisionDesc>
-			<change who="#DS">Set up document outline; first draft of Part 1 (functional requirements).</change>
-			<change who="#DS" when="2022-06-23">finalized beta Version 1</change>
-			<change when="2022-08-12" who="dmp:DS" status="published">releasing version 1.0.0</change>
-			<change when="2022-08-16" who="dmp:CM" status="published"></change>
 		</revisionDesc>
 	</teiHeader>
-	<text>
-		<body>
-			<head>WIBARAB Feature DB: Functional requirements and Data Specification</head>
-			<p>The purpose of this TEI customization is to formalize the data structures needed to
-            implement the WIBARAB Feature DB application. Thus, we start with a brief
-            introduction into the most important functionalities which the application is
-            expected to provide in Part I, a discussion of the sources feeding the database in Part II, descriptions of the overall data model in Part III and of the organization of the working files in Part IV, and finally a presentation
-            of the formal TEI customization in Part V.</p>
-			<div>
-				<head>Part I: Functional Requirements of <name>WIBARAB Feature DB</name></head>
-				<p>The <name>WIBARAB Feature DB</name> should allow researchers to explore and compare the different realizations of lingustic features in
-               an array of Arabic vernaculars. Since the main objective of the project is to investigate the linguistic Bedouin-Sedentary split, the <name>WIBARAB Feature DB</name>
-               focuses on those Arabic varieties spoken by traditionally nomadic communities and on varieties that have been traditionally classified as "Bedouin". For comparative purposes, it also includes the
-               better documented sedentary varieties. The database focuses on a set of linguistic features that are considered especially relevant for typological purposes,
-               and most of which have been reported in previously published academic studies to be especially salient of the speech of Bedouin communities.</p>
-				<p>In this way, the <name>WIBARAB Feature DB</name> represents both a specialized archive gathering linguistic data from an array of Arabic varieties,
-               and an analytical research tool. It should thus enable the WIBARAB team and other researchers to either confirm the existence of common linguistic trends
-               among Bedouin communities across the Arab World, accurately identifying the common features and its respective realizations, or provide sufficient data to
-               reject the currently prevailing Bedouin-Sedentary split hypothesis.</p>
-			</div>
-			<div>
-				<head>Part II: Sources</head>
-				<p>The data included in the <name>WIBARAB Feature DB</name> has been extracted from three main types of sources. First, from written academic <term>publications</term>,
-               secondly, data from new <term>fieldwork</term> campaigns carried out by the WIBARAB team in the frame of the project, and, to a minor degree, data from <term>personal communications</term>
-               with native speakers of specific varieties under study.</p>
-				<list type="ordered">
-					<item>
-						<term>publication</term> Academic published written documents, compiled and documented in the VICAV Zotero library, found in the <term>biblio</term> file</item>
-					<item><term>personal communication</term> Personal communication with native speakers of the variety via phone, e-mail or in person.</item>
-					<item><term>fieldwork</term> Data from fieldwork conducted by members of the team.</item>
-				</list>
-			</div>
-			<div>
-				<head>Part III: Data Model</head>
-				<p> The data included in the database is organized around a series of linguistic <term>features</term>. The criteria used for the selection of the linguistic <term>features</term> treated
-               rely mainly on typological considerations and on previously reported high levels of sociolinguistic salience. Every linguistic feature has a set of <term>feature values</term> that indicates the different attested
-               realizations of a specific feature in the studied varieties. The documentation of an occurrence of a specific feature value(s) in a specific location is done via <term>Feature Value Observations</term>.
-               Every <term>Feature Value Observation</term> specifies that one feature value occurs in a specific place, by a specific speaker or group of speakers. When information about the speakers and their communities
-               is available, the sociolinguistic profile of the speaker or the community of speakers is indicated via the <term>Person Group</term> element, which may specify values regarding the speakers' tribal affiliation,
-               religious affiliation, age group, gender, and mother tongue among others. When specific remarks that are not codifiable via previously explained elements are due, they are indicated in prose within the exception notes,
-               constraint notes or general notes.</p>
-			</div>
-		</body>
-	</text>
+         <elementSpec ident="featureValueObservation" mode="add" ns="https://wibarab.acdh.oeaw.ac.at/langDesc">
+                                 <gloss>feature value observation</gloss>
+                                 <desc>
+                                 <div>
+                                 
+            <p>The Feature Value Observation consists of a group of elements encompassing different types of information describing the details of the realization of a specific feature value in a specific place or places according to a source.
+             Thus, every Feature Value Observation must have:
+	    <list type="ordered">
+               <item> At least one <term>place</term> element</item>
+               <item> One unique <term>feature value</term></item>
+               <item> One unique <term>source</term></item>
+               </list>
+            The occurrence of multiple values or of multiple sources will then result in the creation of additional Feature Value Observations. Every Feature Value Observation is identifiable by a unique xml ID.</p>
+            
+            <p>Additionally, the Feature Value Observation may contain other optional elements:
+             <list type="ordered">
+               <item> One or several <term>Person Group</term> element(s) of different types (tribe, age, religion, sociolinguistic perception and mother tongue) that further specifies information about the speakers from whom the realization
+                of a feature value has been observed or documented in the source.</item>
+               <item> One or several Language <term>Profile</term> element, linking the Feature Value Observation to a VICAV Profile</item>
+               <item> One or several <term>Source Representation</term> element(s), where literal information from the source is quoted in its original form (e.g. original reflexes of some items as documented by the author in the original source
+               featuring the source's transcription system.)</item>
+               <item> One or several examples to illustrate a feature value, as taken from the original source and with their English translation.</item>
+               <item> One or several notes to clarify  specificities, exceptions,and constraints concerning the realization of a feature value.</item>
+            </list>
+             </p> 
+         </div>
+         </desc>
+ </elementSpec>
 </TEI>
