@@ -88,8 +88,14 @@
                <item xml:id="pr_p2m_ittu">
                   <label>ittu</label>
                </item>
+               <item xml:id="pr_p2m_itte">
+                  <label>itte</label>
+               </item>
                <item xml:id="pr_p2m_antu">
                   <label>antu</label>
+               </item>
+               <item xml:id="pr_p2m_uttu">
+                  <label>uttu</label>
                </item>
                <item xml:id="pr_p2m_ntuumaha">
                   <label>ntūmaha</label>
@@ -1479,11 +1485,20 @@
                <lang target="..\profiles\vicav_profile_SAU-NJD.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0183" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
+            <wib:featureValueObservation xml:id="fv_0183" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#pr_p2m_ittu"></name>
+               <bibl corresp="zot:Manfredi2012" type="publication"></bibl>
                <placeName ref="geo:kurdufan"></placeName>
                <lang target="..\profiles\vicav_profile_SDN-KDF.xml"></lang>
+               <note type="general">urban</note>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="fv_0183" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#pr_p2m_uttu"></name>
+               <bibl corresp="zot:Manfredi2012" type="publication"></bibl>
+               <placeName ref="geo:kurdufan"></placeName>
+               <lang target="..\profiles\vicav_profile_SDN-KDF.xml"></lang>
+               <note type="general">rural</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0185" status="draft" resp="dmp:SK">
