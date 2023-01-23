@@ -64,8 +64,8 @@
                <item xml:id="pr_p3m_hun">
                   <label>hun</label>
                </item>
-               <item xml:id="pr_p3m_">
-                  <label></label>
+               <item xml:id="pr_p3m_ihmah">
+                  <label>ihmah</label>
                </item>
                <item xml:id="pr_p3m_">
                   <label></label>
@@ -694,12 +694,24 @@
                <personGrp role="tribe" corresp="#slut"></personGrp>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0100" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0100" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#pr_p3m_hum"></name>
+               <cit type="sourceRepresentation"><quote>hum</quote></cit>
                <bibl corresp="zot:Il-Hazmy1975" type="publication"></bibl>
                <placeName ref="geo:hejaz"></placeName>
                <lang target="..\profiles\vicav_profile_SAU-HRB.xml"></lang>
                <personGrp role="tribe" corresp="#al_harb"></personGrp>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="fv_0007" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#pr_p3m_ihmah"></name>
+               <cit type="sourceRepresentation"><quote>ihmah</quote></cit>
+               <bibl corresp="zot:Il-Hazmy1975" type="publication"></bibl>
+               <placeName ref="geo:hejaz"></placeName>
+               <lang target="..\profiles\vicav_profile_SAU-HRB.xml"></lang>
+               <personGrp role="tribe" corresp="#al_harb"></personGrp>
+               <note type="exceptionNote">only used by the Ṣuwaydira of the
+               Northern Central group</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0084" status="draft" resp="dmp:AT">
