@@ -68,7 +68,7 @@
                <note></note>
             </event>
             
-            <event type="campaign" from-iso="2022-05" to-iso="2022-05" xml:id="JOR_2022_CL">
+            <event type="campaign" from-iso="2022-05-01" to-iso="2022-05-31" xml:id="JOR_2022_CL">
                <head>Jordan Fieldwork Campaign Claudia Laaber 2022</head>
                <desc>
                   <listPerson type="participants">
@@ -81,7 +81,7 @@
                <note></note>
             </event>
             
-            <event type="campaign" from-iso="2022-03" to-iso="2022-03" xml:id="MOR_2022_TD">
+            <event type="campaign" from-iso="2022-03-01" to-iso="2022-03-31" xml:id="MOR_2022_TD">
                <head>Morocco Fieldwork Campaign Terlan Djavadova 2022</head>
                <desc>
                   <listPerson type="participants">
@@ -94,7 +94,7 @@
                <note></note>
             </event>
             
-            <event type="campaign" from-iso="2002-08" to-iso="2022-11" xml:id="TUR_2002-2022_SP">
+            <event type="campaign" from-iso="2002-08-01" to-iso="2022-11-30" xml:id="TUR_2002-2022_SP">
                <head>Turkey Fieldwork Campaign Stephan Procházka 2002-2022</head>
                <desc>
                   <listPerson type="participants">
@@ -110,19 +110,32 @@
          </listEvent>
          
          <listEvent xml:id="personal_communication">
-            <event type="campaign" from-iso="2022-02-22" to-iso="2022-03-18" xml:id="AIDLebanon2022">
-               <head>Lebanon Fieldwork Campaign Ana Iriarte Diez 2022</head>
+            <!-- dummy example -->
+            <event type="personal_communication" subtype="academic|native" from-iso="2022-02-22" to-iso="2022-03-18" xml:id="PC_example">
+               <head>exchange with Manfred Woidich</head>
                <desc>
                   <listPerson type="participants">
                      <person>
-                        <persName>Ana Iriarte Diez</persName>
+                        <persName>Stephan Procházka</persName>
+                     </person>
+                     <person xml:id="MW" role="academic">
+                        <persName>Manfred Woidich</persName>
+                        <!-- no langKnow for academics  -->
+                     </person>
+                     
+                     <person role="native">
+                        <idno>BP</idno>
+                         <langKnowledge>
+                           <langKnown tag="dialect-id" corresp="profiles/vicav_profile_DJI-OBK.xml"/>
+                        </langKnowledge>
                      </person>
                   </listPerson>
-                  <placeName ref="Lebanon"/>
                </desc>
                <note></note>
             </event>
          </listEvent>
+         
       </body>
    </text>
 </TEI>
+
