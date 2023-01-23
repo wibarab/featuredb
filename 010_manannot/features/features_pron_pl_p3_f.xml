@@ -53,7 +53,7 @@
             <head>Feature Values</head>
             <list type="featureValues">
                <item xml:id="pr_p3f_hin">
-                  <label>hin</label>
+                  <label>hin, hen</label>
                </item>
                <item xml:id="pr_p3f_hennah">
                   <label></label>
@@ -71,7 +71,7 @@
                   <label>hunna</label>
                </item>
                <item xml:id="pr_p3f_hinni">
-                  <label>hinni, hinne</label>
+                  <label>hinni, hinne, henne</label>
                </item>
                <item xml:id="pr_p3f_">
                   <label></label>
@@ -487,9 +487,19 @@
                <personGrp role="tribe" corresp="#fadol"></personGrp>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0316" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication" cert="unknown"></bibl>
+            <wib:featureValueObservation xml:id="fv_0316" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#pr_p3f_hin"></name>
+               <cit type="sourceRepresentation"><quote>hen(n)</quote></cit>
+               <bibl corresp="zot:Cantineau1946" type="publication" cert="unknown"></bibl>
+               <placeName ref="geo:hawraan"></placeName>
+               <placeName ref="geo:jabal_al_druze"></placeName>
+               <lang target="..\profiles\vicav_profile_JOR-HRN.xml"></lang>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="fv_0007" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#pr_p3f_hinni"></name>
+               <cit type="sourceRepresentation"><quote>hẹnne</quote></cit>
+               <bibl corresp="zot:Cantineau1946" type="publication" cert="unknown"></bibl>
                <placeName ref="geo:hawraan"></placeName>
                <placeName ref="geo:jabal_al_druze"></placeName>
                <lang target="..\profiles\vicav_profile_JOR-HRN.xml"></lang>

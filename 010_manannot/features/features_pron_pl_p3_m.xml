@@ -53,13 +53,13 @@
             <head>Feature Values</head>
             <list type="featureValues">
                <item xml:id="pr_p3m_hum">
-                  <label>hum</label>
+                  <label>hum, humm, homm</label>
                </item>
                <item xml:id="pr_p3m_hummah">
                   <label>hummah</label>
                </item>
                <item xml:id="pr_p3m_humma">
-                  <label>humma</label>
+                  <label>humma, huṃṃa, hoṃṃa</label>
                </item>
                <item xml:id="pr_p3m_hun">
                   <label>hun</label>
@@ -487,9 +487,19 @@
                <personGrp role="tribe" corresp="#fadol"></personGrp>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0316" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication" cert="unknown"></bibl>
+            <wib:featureValueObservation xml:id="fv_0316" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#pr_p3m_hum"></name>
+               <cit type="sourceRepresentation"><quote>huṃṃ, hoṃṃ</quote></cit>
+               <bibl corresp="zot:Cantineau1946" type="publication" cert="unknown"></bibl>
+               <placeName ref="geo:hawraan"></placeName>
+               <placeName ref="geo:jabal_al_druze"></placeName>
+               <lang target="..\profiles\vicav_profile_JOR-HRN.xml"></lang>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="fv_0051" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#pr_p3m_humma"></name>
+               <cit type="sourceRepresentation"><quote>huṃṃa, hoṃṃa</quote></cit>
+               <bibl corresp="zot:Cantineau1946" type="publication" cert="unknown"></bibl>
                <placeName ref="geo:hawraan"></placeName>
                <placeName ref="geo:jabal_al_druze"></placeName>
                <lang target="..\profiles\vicav_profile_JOR-HRN.xml"></lang>
