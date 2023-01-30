@@ -36,6 +36,7 @@
          <change when="2022-08-17" who="dmp:">c</change>
          <change when="2022-08-17" who="dmp: "></change>
          <change when="2022-11-24" who="dmp:VE">No information available for YEM-NDR</change>
+         <change when="2023-1-30" who="dmp:AID">Removed the k_lex value because it applied to only one dialect and replaced in by two FVOs</change>
       </revisionDesc>
    </teiHeader>
 
@@ -71,9 +72,6 @@
                <item xml:id="k_affr4">
                   <label>ḳ + affrication to /č/</label>
                </item>
-               <item xml:id="k_lex">
-                  <label>k → lexically conditioned affrication to /č/</label>
-               </item>
                <item xml:id="k_emph_k">
                   <label>k → /ḳ/</label>
                </item>
@@ -92,7 +90,6 @@
                <item>Remove redundant elements</item>
             </list>
          </div>
-
          <div type="description">
             <p xml:space="preserve"><!-- Verbose discussion of the feature -->
                Uvular realisation is preserved in MSA loanwords, ex. <foreign xml:lang="ar">taqrīban</foreign>
@@ -3861,7 +3858,7 @@
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0372" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#k_lex"></name>
+               <name type="featureValue" ref="#k_k"></name>
                <bibl corresp="zot:Behnstedt1987b" type="publication" cert="unknown"></bibl>
                <placeName ref="geo:sa_dah"></placeName>
                <lang target="..\profiles\vicav_profile_YEM-SAD.xml"></lang>
@@ -3871,6 +3868,14 @@
                      <quote>military</quote>
                   </cit>
                </cit>
+               <note type="general">/k/ is often used in new, political or cultural vocabulary, while č is mostly used in vocabulary connected to every day life</note>
+            </wib:featureValueObservation>
+            
+               <wib:featureValueObservation xml:id="fv_0015"  status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#k_affr3"></name>
+               <bibl corresp="zot:Behnstedt1987b" type="publication" cert="unknown"></bibl>
+               <placeName ref="geo:sa_dah"></placeName>
+               <lang target="..\profiles\vicav_profile_YEM-SAD.xml"></lang>
                <cit xml:id="ct_0068" type="example">
                   <quote>čam</quote>
                   <cit type="translation">
@@ -3878,7 +3883,6 @@
                   </cit>
                </cit>
                <note type="general">/k/ is often used in new, political or cultural vocabulary, while č is mostly used in vocabulary connected to every day life</note>
-
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0000" status="done" resp="dmp:VE">
