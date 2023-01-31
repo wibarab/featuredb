@@ -178,7 +178,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <div>
                <head>Feature Value Observation</head>
                <p>In their initial experiments, the working group made use of a highly
-                  abstracted system made up of typefied <gi>fs</gi> (feature structure) 
+                  abstracted system made up of typefied <gi>fs</gi> (feature structure)
                   elements. However, after extensive discussions and consultations
                   with experts, we remodelled the entire structure attempting to make
                   use of more expressive existing TEI elements. To come up with a
@@ -197,18 +197,18 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </list>
                </p>
 
-               <p>To describe this kind of data we made use of the following mandatory 
-                 elements. Each <term>feature value observation</term> is based on the occurence
-                  of a linguistic feature in a specific way, i.e., a <term>feature 
-                  realisation</term>. These realisations are grouped into a set of 
-                  <term>feature values</term>, hence the <term>feature value 
-                  observation</term> shows how a source attests that a given 
-                  feature is realised by a certain <term>Feature Value</term> at 
+               <p>To describe this kind of data we made use of the following mandatory
+                  elements. Each <term>feature value observation</term> is based on the occurence
+                  of a linguistic feature in a specific way, i.e., a <term>feature
+                     realisation</term>. These realisations are grouped into a set of
+                  <term>feature values</term>, hence the <term>feature value
+                     observation</term> shows how a source attests that a given
+                  feature is realised by a certain <term>Feature Value</term> at
                   a specific location. The <term>feature value observation</term>
                   can additionally include information on the person group for which this particular
                   <term>Feature Realisation</term> is attested and it is linked to
                   the language profile of the variety to which it is customarily assigned.</p>
-                  
+
                <p>The <gi>featureValueObservation</gi> element consists of a group
                   of elements encompassing different types of information describing the details of
                   the realization of a specific feature value in a specific place or places according
@@ -219,13 +219,33 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <item>one unique <term>source</term></item>
                   </list>
                </p>
-               
-               <div></div>
-               
+
                <p>The occurrence of multiple values or of multiple sources will then
-                  result in the creation of additional <gi>featureValueObservations</gi> 
-                  elements. <gi>featureValueObservations</gi> is identifiable by a 
+                  result in the creation of additional <gi>featureValueObservations</gi>
+                  elements. <gi>featureValueObservations</gi> is identifiable by a
                   unique @xml:id attribute.</p>
+
+               <div>
+                  <head>Feature name</head>
+                  <p>The feature description at the beginning of each document contains a list
+                  of feature values that allow to neatly group the observed 
+                  linguistic phenomena under clearly identifiable labels. This information 
+                  is referred to in each <gi>featureValueObservation</gi> in a
+                  <gi>name</gi> element with a <att>ref</att> attributing pointing to 
+                  particular items of the list of feature names.</p>
+               </div>
+
+               <div>
+                  <head>Place</head>
+                  <p>The places are indicated via the <gi>placeName</gi> element and a <att>ref</att>
+                     attribute pointing to the <name>vicav_geodata.xml</name> file.</p>
+               </div>
+
+               
+               <div>
+                  <head>Source</head>
+                  <p></p>
+               </div>
 
                <p>Additionally, a <gi>featureValueObservations</gi> may contain other optional
                   elements:
