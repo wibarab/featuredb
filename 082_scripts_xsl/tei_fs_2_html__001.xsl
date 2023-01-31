@@ -6,11 +6,12 @@
    <xsl:param name="dialectsPath">../010_manannot/vicav_dialects.xml</xsl:param>
    <xsl:param name="zoteroPath">../010_manannot/vicav_biblio_tei_zotero.xml</xsl:param>
    <xsl:param name="geoDataPath">../010_manannot/vicav_geodata.xml</xsl:param>
-
+   <xsl:param name="pgrDataPath">../010_manannot/wibarab_PersonGroup.xml</xsl:param>
 
    <xsl:variable name="diaDoc" select="document($dialectsPath)"/>
    <xsl:variable name="zotDoc" select="document($zoteroPath)"/>
    <xsl:variable name="geoDoc" select="document($geoDataPath)"/>
+   <xsl:variable name="prgDoc" select="document($pgrDataPath)"/>
 
    <xsl:variable name="title">
       <xsl:value-of select="//tei:titleStmt/tei:title"/>
@@ -18,8 +19,6 @@
 
    <xsl:template match="/">
       <html>
-         <xsl:comment>This is a generated page, do not edit!</xsl:comment>
-         <xsl:comment>XSLT: tei_2_html__simple_text.xsl</xsl:comment>
          <head>
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
             <link rel="stylesheet" href="../../650_css/basic__001.css"></link>
@@ -114,6 +113,7 @@
                <td class="tdRight">
                    <xsl:for-each select="tei:placeName">
                       <xsl:variable name="id"><xsl:value-of select="substring(@ref,5)"/></xsl:variable>
+                      <xsl:if test="position()&gt;1">, </xsl:if>
                       <xsl:value-of select="$geoDoc//tei:place[@xml:id=$id]/tei:placeName"/>
 
                       <xsl:if test="($id = '')"><span class="spError">Missing place!!! (<xsl:value-of select="."/>)</span></xsl:if>
@@ -130,10 +130,20 @@
 
             <xsl:if test="tei:personGrp">
               <tr>
-                 <td class="tdLeft">personGrp</td>
+                 <td class="tdLeft">Persongrp.</td>
                  <td class="tdRight">
                     <xsl:for-each select="tei:personGrp">
-                       <div><xsl:value-of select="tei:name"/> (<xsl:value-of select="@type"/>)</div>
+                       <div>
+                          <xsl:variable name="id"><xsl:value-of select="substring(@corresp,5)"/></xsl:variable>
+                          <xsl:value-of select="$prgDoc//tei:personGrp[@xml:id=$id]/tei:name"/>
+                            (<xsl:value-of select="@role"/>:
+                               <xsl:for-each select="$prgDoc//tei:personGrp[@xml:id=$id]/tei:residence/tei:placeName">
+                                  <xsl:if test="position()&gt;1">, </xsl:if>
+                                  <xsl:variable name="placeID"><xsl:value-of select="substring(@ref,5)"/></xsl:variable>
+                                  <xsl:value-of select="$geoDoc//tei:place[@xml:id=$placeID]/tei:placeName"/>
+                               </xsl:for-each>)
+
+                       </div>
                     </xsl:for-each>
                  </td>
               </tr>
@@ -144,7 +154,11 @@
                  <td class="tdLeft">Notes</td>
                  <td class="tdRight">
                     <xsl:for-each select="tei:note">
-                       <p><xsl:apply-templates/></p>
+                       <div class="dvNoteHead">
+                          <xsl:value-of select="@type"/>
+                       </div>
+
+                       <div class="dvNote"><xsl:apply-templates/></div>
                     </xsl:for-each>
                  </td>
               </tr>
