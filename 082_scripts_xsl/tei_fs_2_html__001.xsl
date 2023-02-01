@@ -102,11 +102,35 @@
                        <xsl:text>: </xsl:text>
 
                        <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:title"/>
-                       <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:title"/>
+
+                       <xsl:if test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr">
+                          <xsl:text>. In: </xsl:text>
+                          <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:title"/>
+                       </xsl:if>
                       </xsl:otherwise>
                   </xsl:choose>
                </td>
             </tr>
+
+            <xsl:if test="tei:cit[@type='sourceRepresentation']">
+              <tr>
+                 <td class="tdLeft">Or. src.</td>
+                 <td class="tdRight">
+                    <xsl:for-each select="tei:cit[@type='sourceRepresentation']">
+                      <div class="dvExample">
+                         <xsl:choose>
+                            <xsl:when test="(tei:quote='')">
+                               <span class="spError">OrCit element has no data!!!</span>
+                            </xsl:when>
+                            <xsl:otherwise>
+                               <xsl:value-of select="tei:quote"/>
+                            </xsl:otherwise>
+                         </xsl:choose>
+                      </div>
+                    </xsl:for-each>
+                 </td>
+              </tr>
+            </xsl:if>
 
             <tr>
                <td class="tdLeft">Place</td>
@@ -169,7 +193,7 @@
                  <td class="tdLeft">Profiles</td>
                  <td class="tdRight">
                     <xsl:for-each select="tei:lang">
-                    <p><xsl:value-of select="@target"/></p>
+                    <div><xsl:value-of select="@target"/></div>
                     </xsl:for-each>
                  </td>
               </tr>
@@ -197,25 +221,6 @@
               </tr>
             </xsl:if>
 
-            <xsl:if test="tei:cit[@type='orCit']">
-              <tr>
-                 <td class="tdLeft">Orig. sources</td>
-                 <td class="tdRight">
-                    <xsl:for-each select="tei:cit[@type='orCit']">
-                      <div class="dvExample">
-                         <xsl:choose>
-                            <xsl:when test="(tei:quote='')">
-                               <span class="spError">OrCit element has no data!!!</span>
-                            </xsl:when>
-                            <xsl:otherwise>
-                               <xsl:value-of select="tei:quote"/>
-                            </xsl:otherwise>
-                         </xsl:choose>
-                      </div>
-                    </xsl:for-each>
-                 </td>
-              </tr>
-            </xsl:if>
          </table>
       </div>
    </xsl:template>
