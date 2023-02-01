@@ -6,12 +6,14 @@
    <xsl:param name="dialectsPath">../010_manannot/vicav_dialects.xml</xsl:param>
    <xsl:param name="zoteroPath">../010_manannot/vicav_biblio_tei_zotero.xml</xsl:param>
    <xsl:param name="geoDataPath">../010_manannot/vicav_geodata.xml</xsl:param>
-   <xsl:param name="pgrDataPath">../010_manannot/wibarab_PersonGroup.xml</xsl:param>
+   <xsl:param name="prgDataPath">../010_manannot/wibarab_PersonGroup.xml</xsl:param>
+   <xsl:param name="srcDataPath">../010_manannot/wibarab_sources.xml</xsl:param>
 
    <xsl:variable name="diaDoc" select="document($dialectsPath)"/>
    <xsl:variable name="zotDoc" select="document($zoteroPath)"/>
    <xsl:variable name="geoDoc" select="document($geoDataPath)"/>
-   <xsl:variable name="prgDoc" select="document($pgrDataPath)"/>
+   <xsl:variable name="prgDoc" select="document($prgDataPath)"/>
+   <xsl:variable name="srcDoc" select="document($srcDataPath)"/>
 
    <xsl:variable name="title">
       <xsl:value-of select="//tei:titleStmt/tei:title"/>
@@ -93,52 +95,62 @@
                <td class="tdLeft">Source</td>
                <td class="tdRight">
                   <xsl:variable name="id"><xsl:value-of select="substring(tei:bibl/@corresp,5)"/></xsl:variable>
+
                   <xsl:choose>
-                     <xsl:when test="$id=''"><span class="spError">Could not find source</span></xsl:when>
+                     <xsl:when test="starts-with(tei:bibl/@corresp,'src')">
+                        <xsl:value-of select="$srcDoc//tei:event[@xml:id=$id]/tei:head"/>
+                     </xsl:when>
                      <xsl:otherwise>
-                       <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:author/tei:surname"/>
-                       <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:author/tei:surname"/>
+                        <xsl:choose>
+                           <xsl:when test="$id=''"><span class="spError">Could not find source</span></xsl:when>
+                           <xsl:otherwise>
+                             <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:author/tei:surname"/>
+                             <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:author/tei:surname"/>
 
-                       <xsl:text>: </xsl:text>
+                             <xsl:text>: </xsl:text>
 
-                       <xsl:choose>
-                          <xsl:when test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:title[@type='short']">
-                             <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:title"/>
-                             <xsl:text>.</xsl:text>
-                          </xsl:when>
-                          <xsl:when test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr">
-                             <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:title[1]"/>
-                             <xsl:text>.</xsl:text>
-                          </xsl:when>
-                          <xsl:otherwise>
-                             <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:title[1]"/>
-                             <xsl:text>.</xsl:text>
-                          </xsl:otherwise>
-                       </xsl:choose>
+                             <xsl:choose>
+                                <xsl:when test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:title[@type='short']">
+                                   <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:title"/>
+                                   <xsl:text>.</xsl:text>
+                                </xsl:when>
+                                <xsl:when test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr">
+                                   <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:title[1]"/>
+                                   <xsl:text>.</xsl:text>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                   <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:title[1]"/>
+                                   <xsl:text>.</xsl:text>
+                                </xsl:otherwise>
+                             </xsl:choose>
 
 
-                       <xsl:if test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr">
-                          <xsl:text> In: </xsl:text>
-                          <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:title"/>
-                          <xsl:if test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:imprint/tei:biblScope[@unit='volume']">
-                             <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:imprint/tei:biblScope[@unit='volume']"/>
-                             <xsl:text>.</xsl:text>
-                          </xsl:if>
-                          <xsl:if test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:imprint/tei:biblScope[@unit='issue']">
-                             <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:imprint/tei:biblScope[@unit='issue']"/>
-                             <xsl:text>.</xsl:text>
-                          </xsl:if>
-                          <xsl:if test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:imprint/tei:biblScope[@unit='page']">
-                             <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:imprint/tei:biblScope[@unit='page']"/>
-                             <xsl:text>.</xsl:text>
-                          </xsl:if>
-                          <xsl:if test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:date">
-                             <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:date"/>
-                             <xsl:text>.</xsl:text>
-                          </xsl:if>
-                       </xsl:if>
-                      </xsl:otherwise>
+                             <xsl:if test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr">
+                                <xsl:text> In: </xsl:text>
+                                <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:title"/>
+                                <xsl:if test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:imprint/tei:biblScope[@unit='volume']">
+                                   <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:imprint/tei:biblScope[@unit='volume']"/>
+                                   <xsl:text>.</xsl:text>
+                                </xsl:if>
+                                <xsl:if test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:imprint/tei:biblScope[@unit='issue']">
+                                   <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:imprint/tei:biblScope[@unit='issue']"/>
+                                   <xsl:text>.</xsl:text>
+                                </xsl:if>
+                                <xsl:if test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:imprint/tei:biblScope[@unit='page']">
+                                   <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:imprint/tei:biblScope[@unit='page']"/>
+                                   <xsl:text>.</xsl:text>
+                                </xsl:if>
+                                <xsl:if test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:date">
+                                   <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:date"/>
+                                   <xsl:text>.</xsl:text>
+                                </xsl:if>
+                             </xsl:if>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                     </xsl:otherwise>
                   </xsl:choose>
+
+
                </td>
             </tr>
 
