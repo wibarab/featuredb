@@ -101,11 +101,41 @@
 
                        <xsl:text>: </xsl:text>
 
-                       <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:title"/>
+                       <xsl:choose>
+                          <xsl:when test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:title[@type='short']">
+                             <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:title"/>
+                             <xsl:text>.</xsl:text>
+                          </xsl:when>
+                          <xsl:when test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr">
+                             <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:title[1]"/>
+                             <xsl:text>.</xsl:text>
+                          </xsl:when>
+                          <xsl:otherwise>
+                             <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:title[1]"/>
+                             <xsl:text>.</xsl:text>
+                          </xsl:otherwise>
+                       </xsl:choose>
+
 
                        <xsl:if test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr">
-                          <xsl:text>. In: </xsl:text>
+                          <xsl:text> In: </xsl:text>
                           <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:title"/>
+                          <xsl:if test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:imprint/tei:biblScope[@unit='volume']">
+                             <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:imprint/tei:biblScope[@unit='volume']"/>
+                             <xsl:text>.</xsl:text>
+                          </xsl:if>
+                          <xsl:if test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:imprint/tei:biblScope[@unit='issue']">
+                             <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:imprint/tei:biblScope[@unit='issue']"/>
+                             <xsl:text>.</xsl:text>
+                          </xsl:if>
+                          <xsl:if test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:imprint/tei:biblScope[@unit='page']">
+                             <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:imprint/tei:biblScope[@unit='page']"/>
+                             <xsl:text>.</xsl:text>
+                          </xsl:if>
+                          <xsl:if test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:date">
+                             <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:date"/>
+                             <xsl:text>.</xsl:text>
+                          </xsl:if>
                        </xsl:if>
                       </xsl:otherwise>
                   </xsl:choose>
