@@ -35,6 +35,7 @@
       <revisionDesc status="done">
          <change when="2023-01-30" who="dmp:JD">Changed Status to done, apart from a few entries on draft the document is ready to be validated.</change>
          <change when="2023-1-30" who="dmp:AID">Removed the k_lex value because it applied to only one dialect and replaced in by two FVOs</change>
+          <change when="2023-1-31" who="dmp:AID">Removed the k_g value because it applied to only one dialect and it is an assimilation case already contemplated in the chapter</change>
       </revisionDesc>
    </teiHeader>
 
@@ -69,9 +70,6 @@
                </item>
                <item xml:id="k_affr4">
                   <label>ḳ + affrication to /č/</label>
-               </item>
-               <item xml:id="k_g">
-                  <label>k → /g/</label>
                </item>
                <item xml:id="k_x">
                   <label>k → /x/</label>
@@ -256,21 +254,17 @@
                </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0270" status="draft" resp="dmp:SP">
+            <wib:featureValueObservation xml:id="fv_0270" status="done" resp="dmp:SP">
                <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
+               <bibl corresp="zot:Zarb2023" type="publication"></bibl>
                <placeName ref="geo:testour"></placeName>
                <lang target="..\profiles\vicav_profile_TUN-TSR.xml"></lang>
-               <personGrp role="" corresp=""></personGrp>
-               <cit type="example" xml:id="">
-                  <quote></quote>
+               <cit xml:id="ct_0121" type="example" >
+                  <quote>akṯar</quote>
                   <cit type="translation">
-                     <quote></quote>
+                     <quote>more</quote>
                   </cit>
                </cit>
-               <note type="general">1</note>
-               <note type="constraintNote">2</note>
-               <note type="exceptionNote">3</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0077" status="draft" resp="dmp:AID">
@@ -2785,20 +2779,13 @@
                <bibl corresp="zot:Lahdo2003" type="publication"></bibl>
                <placeName ref="geo:siirt"></placeName>
                <lang target="..\profiles\vicav_profile_TUR-SII.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0115" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#k_g"></name>
-               <bibl corresp="zot:Lahdo2003" type="publication"></bibl>
-               <placeName ref="geo:siirt"></placeName>
-               <lang target="..\profiles\vicav_profile_TUR-SII.xml"></lang>
-               <cit xml:id="ct_0032" type="example">
-                  <quote>gbīr</quote>
+                <cit xml:id="ct_0032" type="example">
+                  <quote>kān</quote>
                   <cit type="translation">
-                     <quote>big</quote>
+                     <quote>he was</quote>
                   </cit>
                </cit>
-               <note type="general">in contact position before the voiced bilabial plosive b</note>
+               <note type="general">Pronounced g when in contact position before the voiced bilabial plosive b</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0219" status="done" resp="dmp:TD">
