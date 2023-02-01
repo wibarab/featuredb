@@ -76,6 +76,9 @@
                </item> 
                <item xml:id="nep_maa_shii">
                   <label>mā šī</label>
+               </item>
+               <item xml:id="nep_maash">
+                  <label>māš</label>
                </item> 
                <item xml:id="nep_fiishi">
                   <label>fīši</label>
@@ -1060,8 +1063,23 @@
                <lang target="..\profiles\vicav_profile_PSE-KFN.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0161" status="draft" resp="dmp:JD">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0161" status="done" resp="dmp:JD">
+               <name type="featureValue" ref="#nep_biish"></name>
+               <bibl corresp="zot:Belinkov2014" type="publication"></bibl>
+               <placeName ref="geo:jisr_az_zarqa"></placeName>
+               <lang target="..\profiles\vicav_profile_ISR-ZRG.xml"></lang>
+               <note type="exceptionNote">One instance of mā bīš was also recorded.</note>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="fv_0049" status="done" resp="dmp:JD">
+               <name type="featureValue" ref="#nep_fiish"></name>
+               <bibl corresp="zot:Belinkov2014" type="publication"></bibl>
+               <placeName ref="geo:jisr_az_zarqa"></placeName>
+               <lang target="..\profiles\vicav_profile_ISR-ZRG.xml"></lang>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="fv_0051" status="done" resp="dmp:JD">
+               <name type="featureValue" ref="#nep_ma_fiish"></name>
                <bibl corresp="zot:Belinkov2014" type="publication"></bibl>
                <placeName ref="geo:jisr_az_zarqa"></placeName>
                <lang target="..\profiles\vicav_profile_ISR-ZRG.xml"></lang>
