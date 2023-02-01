@@ -36,6 +36,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <p>This is a born digital document.</p>
          </sourceDesc>
       </fileDesc>
+
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../010_manannot/wibarab_dmp.xml#$1"/>
@@ -44,12 +45,12 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_geodata.xml#$1"/>
          </listPrefixDef>
       </encodingDesc>
+
       <revisionDesc status="published">
          <change who="#DS">Set up document outline; first draft of Part 1 (functional
             requirements).</change>
          <change who="#DS" when="2022-06-23">finalized beta Version 1</change>
          <change when="2022-08-12" who="dmp:DS">releasing version 1.0.0</change>
-         <change when="2022-08-16" who="dmp:CM"/>
          <change when="2022-12-22" who="dmp:VE">start preliminary description of
             FVO</change>
          <change when="2023-01-12" who="dmp:JD">add status description</change>
@@ -57,6 +58,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2023-01-19" who="dmp:DS">consolidating ODD: validating; moving
             long description of FVO from elementSpec to prose section; moving "contributors"
             to "authors" to teiHeader</change>
+         <change when="2023-02-01" who="dmp:CM">expanding details of FVO element</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -74,16 +76,17 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <div>
             <head>Part I: Functional Requirements of <name>WIBARAB Feature DB</name></head>
             <p>The <name>WIBARAB Feature DB</name> should allow researchers to explore
-               and compare the different realizations of lingustic features in
+               and compare the different realizations of particular lingustic features in
                an array of Arabic vernaculars. Since the main objective of the project
                is to investigate the linguistic Bedouin-Sedentary split, the <name>WIBARAB
                   Feature DB</name> focuses on those Arabic varieties spoken by traditionally nomadic
-               communities and on varieties that have been traditionally classified as "Bedouin".
-               For comparative purposes, it also includes the
-               better documented sedentary varieties. The database focuses on a set
-               of linguistic features that are considered especially relevant for typological purposes,
-               and most of which have been reported in previously published academic
-               studies to be especially salient of the speech of Bedouin communities.</p>
+               communities and on varieties that have been classified as "Bedouin" both
+               by the envolved communities as well as researchers. For comparative purposes,
+               it also includes the better documented sedentary varieties. The database
+               focuses on a set of linguistic features that are considered especially
+               relevant for typological purposes, most of which have been reported on
+               in previously published academic studies to be especially
+               salient of the speech of Bedouin communities.</p>
 
             <p>In this way, the <name>WIBARAB Feature DB</name> represents both a
                specialized archive gathering linguistic data from an array of Arabic varieties,
@@ -92,38 +95,40 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                among Bedouin communities across the Arab World, accurately identifying
                the common features and its respective realizations, or provide sufficient data to
                reject the currently prevailing Bedouin-Sedentary split hypothesis.</p>
+
+            <p>The term <term>database</term> in the name of the described resource
+               has been chosen for pragmatic reasons and has to be understood in a very
+               broad sense as an organized collection of structured data electronically stored and
+               accessible. The entire textual source of <name>WIBARAB Feature DB</name>
+               is encoded in accordance with the <name>Guidelines of the Text Encoding Initiaitive</name>. </p>
          </div>
 
          <div>
             <head>Part II: Sources</head>
-            <p>The data included in the <name>WIBARAB Feature DB</name> has been
-               extracted from three main types of sources. First, from written academic <term>publications</term>,
-               secondly, data from new <term>fieldwork</term> campaigns carried out
-               by the WIBARAB team in the frame of the project, and, to a minor degree, data from
-               <term>personal communications</term>
-               with native speakers of specific varieties under study.</p>
-
-            <p>The VICAV Zotero library aims at providing to an up-to-date bibliographical
-               tool for the fields of Arabic dialectology and Arabic linguistics focusing on the
-               spoken varieties.
-               All bibliographical items are provided at least with information on
-               the region dealt with in the publication, but many items contain also further information
-               about content and type
-               (e.g. dictionary, grammatical description, textbook etc.) The endevour
-               to provide an online bibliography on the fields mentioned before started in 2018.
-               Currently, the VICAV library
-               contains more than 5,000 titles.</p>
-
-            <list type="ordered">
-               <item>
-                  <term>publication</term> Academic published written documents,
-                  compiled and documented in the VICAV Zotero library, found in the <term>biblio</term>
-                  file</item>
-               <item><term>personal communication</term> Personal communication with
-                  native speakers of the variety via phone, e-mail or in person.</item>
-               <item><term>fieldwork</term> Data from fieldwork conducted by members
-                  of the team.</item>
+            <p>The data included in the <name>WIBARAB Feature DB</name> draws
+               on three main types of sources:</p>
+            <list>
+               <item>written academic <term>publications,</term></item>
+               <item>data from new <term>fieldwork</term> campaigns carried out
+                  by the WIBARAB team in the framework of the <name>WIBARAB project</name>,</item>
+               <item>and,to a lesser degree, data from <term>personal communications</term>
+                  with L1 speakers of specific varieties under investigation in the project.</item>
             </list>
+
+            <p>The research library has been stored in the <name>VICAV Zotero library</name>
+               the creation of which antedates the project by several years. This library
+               has been built-up mainly by students and researchers of the <name>Institute of Oriental Studies</name>
+               of the <name>University of Vienna</name> and has been used as part
+               of the VICAV digital infrastructure by several projects (TUNICO, SHAWI, TUNOCENT, WIBARAB).
+               It collects research publications in the fields of Arabic dialectology
+               and Arabic linguistics focusing on spoken varieties. All bibliographical
+               items are provided at least with information on the region dealt
+               with in the publication, but many items contain also further information
+               about content and type (e.g. dictionary, grammatical description, textbook etc.).
+               Currently, the VICAV library contains more than 5,000 titles.</p>
+            <p>Zotero is a freely available up-to-date bibliographical tool which allows to collaboratively compile
+               bibliographies. It also provides a number of export functions, most conveniently
+               also into TEI.</p>
          </div>
 
          <div>
@@ -155,12 +160,13 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                additional historical and linguistic information available
                regarding a specific variety according to one or more sources.</p>
 
-            <p>Regarding the data input procedures, different areas of the areas
-               under investigatin have been assigned to different members of the
-               WIBARAB team. Therefore, there is always a member of the team that is responsible of the extraction
-               and the inputting of the data of a specific location. This person is the
-               <term>Responsible Person</term> and her/his name is codified in 2 or 3 capital letters:
-               ex. Johanna Doppelbauer is JD; Ana Iriarte Diez is AID. </p>
+            <p>Regarding the data input procedures, different geographical areas
+               under investigation have been assigned to particular members of the
+               WIBARAB team. Therefore, there is always a member of the team that
+               is responsible of the extraction and the inputting of the data of
+               a specific location. This person is the <term>Responsible Person</term> and
+               her/his name is codified in 2 or 3 capital letters: ex. Johanna Doppelbauer
+               is JD, Ana Iriarte Diez is AID. </p>
 
             <p>The status of the working document is specified in the <term>revision
                   description</term> of the <term>header</term> of the document
@@ -223,25 +229,25 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <p>The occurrence of multiple values or of multiple sources will then
                   result in the creation of additional <gi>featureValueObservations</gi>
                   elements. <gi>featureValueObservations</gi> is identifiable by a
-                  unique @xml:id attribute.</p>
+                  unique <att>@xml:id</att> attribute.</p>
 
                <div>
                   <head>Feature name</head>
                   <p>The feature description at the beginning of each document contains a list
-                  of feature values that allow to neatly group the observed 
-                  linguistic phenomena under clearly identifiable labels. This information 
-                  is referred to in each <gi>featureValueObservation</gi> in a
-                  <gi>name</gi> element with a <att>ref</att> attributing pointing to 
-                  particular items of the list of feature names.</p>
+                     of feature values that allow to neatly group the observed
+                     linguistic phenomena under clearly identifiable labels. This information
+                     is referred to in each <gi>featureValueObservation</gi> in a
+                     <gi>name</gi> element with a <att>ref</att> attributing pointing to
+                     particular items of the list of feature names.</p>
                </div>
 
                <div>
                   <head>Place</head>
-                  <p>The places are indicated via the <gi>placeName</gi> element and a <att>ref</att>
+                  <p>Locations to anchor particular phenomena geographically are indicated
+                     via <gi>placeName</gi> elements and a <att>ref</att>
                      attribute pointing to the <name>vicav_geodata.xml</name> file.</p>
                </div>
 
-               
                <div>
                   <head>Source</head>
                   <p></p>
@@ -299,45 +305,95 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </list>
             </div>
          </div>
+
          <div>
             <head>Part IV: Working Files</head>
             <p>The information described in Part II and III above is organized and
-               stored in files. There are background files compiling and documenting the sources
-               (biblio list and sources list),
-               the geolocations (geodata), the linguistic profiles (profiles) and
-               the personGroup element (PersonGroup). The <term>Feature Value Observations</term>
-               are stored according to different features via <term>Feature Files</term>.
-               Hence, there is one file for every feature where the <term>Feature
-                  Value Observations</term> of that feature are stored together. At the beginning of
-               every feature file there is a description in prose of the feature in question
-               followed by an explanation of the feature values and of its symbolic
-               representation in the map.</p>
-            <p>The files comprising the database are:
+               stored in different types of documents. There are two document types
+               with an open number of files, five documents containing data that is being
+               reused in different places of the system.</p>
 
-               <list type="ordered">
-                  <item>The <term>geodata</term> list contains all the places.<ref
-                        type="file" target="\010_manannot\vicav_geodata.xml"></ref> </item>
-                  <item>The <term>biblio</term> list contains all the sources found
-                     in the Zotero library <ref type="file" target="/010_manannot/vicav_biblio.xml"></ref>.</item>
-                  <item>The <term>sources</term> list contains all sources that are
-                     not from Zotero, i.e., fieldwork campains and personal communications. <ref type="file"
-                        target="featuredb\010_manannot\wibarab_sources.xml"></ref></item>
-                  <item>The <term>Data Management Plan</term> contains a description
-                     of the project including information about the researchers who contribute to the
-                     database. The<term>Responsible Person</term> attribute links to this list <ref type="file"
-                        target="\featuredb\010_manannot\wibarab_dmp.xml"></ref></item>
-                  <item>The <term>Profiles</term> each describe an arabic variety
-                     <ref type="file" target="\010_manannot\profiles\"></ref></item>
-                  <item>The <term>PersonGroup</term> list contains different person
-                     groups, such as religion, age, gender, mothertongue, sociolinguistic  and affiliation
-                     to a tribe <ref type="file" target="\010_manannot\wibarab_PersonGroup.xml"></ref></item>
-                  <item>The <term>Feature Files</term> each describe one linguistic
-                     feature <ref type="file" target="\010_manannot\features\"></ref></item>
+            <p>The first category comprise the feature files and the language profiles.
+               The feature files contain numerous links to reusable data stored in
+               six external files. These `background´ files are used to compile the linguistic
+               features and to document the sources:
+               <list>
+                  <item>vicav_biblio_tei_zotero.xml</item>
+                  <item>vicav_geodata.xml</item>
+                  <item>wibarab_dmp.xml</item>
+                  <item>wibarab_sources.xml</item>
+                  <item>wibarab_PersonGroup.xml</item>
                </list>
             </p>
+
+            <div>
+               <head>The feature files</head>
+               <p>The <term>Feature Files</term> each describe one linguistic
+                  feature <ref type="file" target="\010_manannot\features\"></ref>
+               </p>
+               <p>   The <term>feature value observations</term>
+                  are stored according to different features in what has been dubbed
+                  in the project's internal  nomenclature  <term>feature files</term>.
+                  Hence, there is one file for every feature where the <term>feature
+                     value observations</term> of that particular feature are stored
+                  together. At the beginning of every feature file there is a prose description
+                  of the phenomenon at hand followed by an explanation of the
+                  feature values and its symbolic representation in the map.</p>
+            </div>
+
+            <div>
+               <head>The language profiles</head>
+               <p>The <term>Profiles</term> each describe an arabic variety
+                  <ref type="file" target="\010_manannot\profiles\"></ref></p>
+            </div>
+
+            <div>
+               <head>VICAV Geodata (vicav_biblio_tei_zotero.xml)</head>
+               <p>The <term>biblio</term> list contains all the sources found
+                  in the Zotero library <ref type="file" target="/010_manannot/vicav_biblio.xml"></ref>.</p>
+            </div>
+
+            <div>
+               <head>VICAV Zotero file (vicav_geodata.xml)</head>
+               <p>The <term>geodata</term> list contains all the places.<ref
+                     type="file" target="\010_manannot\vicav_geodata.xml"></ref> </p>
+            </div>
+
+            <div>
+               <head>WIBARAB Individual Contributors (wibarab_dmp.xml)</head>
+               <p>The <term>Data Management Plan</term> contains a description
+                  of the project including information about the researchers who contribute to the
+                  database. The<term>Responsible Person</term> attribute links to this list <ref type="file"
+                     target="\featuredb\010_manannot\wibarab_dmp.xml"></ref></p>
+            </div>
+
+            <div>
+               <head>WIBARAB campaigns (wibarab_sources.xml)</head>
+               <p>The <term>sources</term> list contains all sources that are
+                  not from Zotero, i.e., fieldwork campains and personal communications. <ref type="file"
+                     target="featuredb\010_manannot\wibarab_sources.xml"></ref></p>
+            </div>
+
+            <div>
+               <head>WIBARAB Person Groups (wibarab_PersonGroup.xml)</head>
+               <p>The <term>PersonGroup</term> list contains different person
+                  groups, such as religion, age, gender, mothertongue, sociolinguistic  and affiliation
+                  to a tribe <ref type="file" target="\010_manannot\wibarab_PersonGroup.xml"></ref></p>
+            </div>
+
          </div>
+
          <div>
-            <head>Part V: Formal Specification</head>
+            <head>Part V: Other components of the infrastructure</head>
+            <p>The TEI data have been created making use of ...</p>
+
+            <p>Viewing during the editing process has been accomplished with an
+               XSL file <name>tei_fs_2_html__001.xsl</name> which has also been used
+               to integrate the data stored in the various files described in Part IV.</p>
+         </div>
+
+         <div>
+            <head>Part VI: Formal Specification</head>
             <schemaSpec ident="featuredb" prefix="tei_" start="TEI" xml:lang="en"
                defaultExceptions="https://id.acdh.oeaw.ac.at/langDesc http://www.tei-c.org/ns/1.0
                teix:egXML">
