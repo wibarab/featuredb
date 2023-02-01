@@ -126,6 +126,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                with in the publication, but many items contain also further information
                about content and type (e.g. dictionary, grammatical description, textbook etc.).
                Currently, the VICAV library contains more than 5,000 titles.</p>
+               
             <p>Zotero is a freely available up-to-date bibliographical tool which allows to collaboratively compile
                bibliographies. It also provides a number of export functions, most conveniently
                also into TEI.</p>
@@ -150,8 +151,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                which may specify values regarding the speakers' tribal affiliation,
                religious affiliation, age group, gender, and mother tongue among
                others. When specific remarks that are not codifiable via previously
-               explained elements are due, they are indicated in prose within the exception notes,
-               constraint notes or general notes.</p>
+               explained elements are due, they are indicated in prose within the 
+               exception notes, constraint notes or general notes.</p>
 
             <p>Some sources often group the combination of realizations of feature
                values and characterize them as a linguistic variety or dialect.
@@ -166,9 +167,10 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                under investigation have been assigned to particular members of the
                WIBARAB team. Therefore, there is always a member of the team that
                is responsible of the extraction and the inputting of the data of
-               a specific location. This person is the <term>Responsible Person</term> and
+               a specific location. This person is the <term>responsible person</term> and
                her/his name is codified in 2 or 3 capital letters: ex. Johanna Doppelbauer
-               is JD, Ana Iriarte Diez is AID. </p>
+               is JD, Ana Iriarte Diez is AID in accordance with the information given in 
+               <name>wibarab_dmp.xml</name> file. </p>
 
             <div>
                <head>Header</head>
@@ -201,8 +203,21 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <div>
                <head>Feature Values</head>
                <p>Every document starts with a list of <term>feature values</term>
-                  which represent in principle one of the results of the research done
-                  on the particular phenomenon.</p>
+                  which represents one of the results of the research carried out on
+                  the particular phenomenon.</p>
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <head>Feature Values</head>
+                  <list type="featureValues">
+                     <item xml:id="pr_p1c_nihna">
+                        <label>niḥna/nəḥna</label>
+                     </item>
+
+                     <item xml:id="pr_p1c_ihna">
+                        <label>iḥna/əḥnä</label>
+                     </item>
+                     ...
+                  </list>
+               </egXML>
             </div>
 
             <div>
@@ -215,9 +230,9 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   solution fitting our particular goals, we customized the TEI Schema attempting
                   to reuse as many TEI elements as possible. So far, we managed to do
                   with only one additional new element (<gi>featureValueObservation</gi>) which had emerged from our
-                  discussions and appeared to serve the particular purpose best. 
-                  This element is centre piece of the customisation, all other elements 
-                  exist in the <name>Guidelines</name> and appear to be applicable without 
+                  discussions and appeared to serve the particular purpose best.
+                  This element is centre piece of the customisation, all other elements
+                  exist in the <name>Guidelines</name> and appear to be applicable without
                   twisting their originally intended semantics too much.
                </p>
 
@@ -335,8 +350,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <head>Part IV: Working Files</head>
             <p>The information described in Part II and III above is organized and
                stored in different types of documents. There are two document types
-               with an open number of files, five documents containing data that is being
-               reused in different places of the system.</p>
+               with an open number of files, while five document types contain data that is being
+               reused in different places of the system are therefore unique.</p>
 
             <p>The first category comprise the feature files and the language profiles.
                The feature files contain numerous links to reusable data stored in
@@ -362,8 +377,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   in the project's internal  nomenclature  <term>feature files</term>.
                   Hence, there is one file for every feature where the <term>feature
                      value observations</term> of that particular feature are stored
-                  together. At the beginning of every feature file there is a prose description
-                  of the phenomenon at hand followed by an explanation of the
+                  together. At the beginning of every feature file there is a prose
+                  description of the phenomenon at hand followed by an explanation of the
                   feature values and its symbolic representation in the map.</p>
             </div>
 
@@ -375,16 +390,36 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
             <div>
                <head>VICAV Geodata (vicav_biblio_tei_zotero.xml)</head>
-               <p>The <term>geodata</term> list contains all the places.<ref
-                     type="file" target="\010_manannot\vicav_geodata.xml"></ref>
-                  Wherever possible, the place listed in this document refer to
-                  s refer to are</p>
+               <p>The <term><ref
+                     type="file" target="\010_manannot\vicav_geodata.xml">geodata</ref></term> document 
+                     contains a list of all the  referenced places.
+                  Wherever possible, the place listed in this document refers to
+                  respective entries in the <name>GeoNames</name> geographical database.</p>
+
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<place type="geo" xml:id="aaouade">
+               <placeName>Aaouade</placeName>
+
+               <location>
+                  <geo decls="#dms">34°37'34"N 36°22'38"E</geo>
+                  <geo decls="#dd">34.62611 36.37722</geo>
+                  <country key="LB">Lebanon</country>
+                  <country/>
+               </location>
+               
+               <idno type="geoNames">2266310</idno>
+               
+               <note>Location for the ʕAṛaḅ al-ʕAtīǧ</note>
+            </place>
+</egXML>
             </div>
 
             <div>
                <head>VICAV Zotero file (vicav_geodata.xml)</head>
                <p>The <term>biblio</term> list contains all the sources found
-                  in the Zotero library <ref type="file" target="/010_manannot/vicav_biblio.xml"></ref>.</p>
+                  in the Zotero library <ref type="file" target="/010_manannot/vicav_biblio.xml"></ref>. 
+                  The export from the Zotero database is enriched with the geo-locations 
+                  making use of the above described geodata file.</p>
             </div>
 
             <div>
@@ -417,7 +452,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                a freely available XML editor that has been developed geared to the special case
                of TEI in research contexts.</p>
 
-            <p>Viewing during the editing process has been accomplished with an
+            <p>Data visualisation during the editing process is accomplished through an
                XSL file <name>tei_fs_2_html__001.xsl</name> which has also been used
                to integrate the data stored in the various files described in Part IV.</p>
          </div>
