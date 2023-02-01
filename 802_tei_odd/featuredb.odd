@@ -140,27 +140,29 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                of sociolinguistic salience. Every linguistic feature has a set
                of <term>feature values</term> that indicates the different attested
                realizations of a specific feature in the studied varieties. The
-               documentation of an occurrence of a specific feature value(s) in a specific location is done via
-               <term>Feature Value Observations</term>. Every <term>Feature Value Observation</term> specifies that one feature
-               value occurs in a specific place, by a specific speaker or group of speakers. When
-               information about the speakers and their communities
+               documentation of an occurrence of a specific feature value(s) in a
+               specific location is done via <term>feature value observations</term>.
+               Every <term>feature value observation</term> specifies that one feature
+               value occurs in a specific place, by a specific speaker or group of
+               speakers. When information about the speakers and their communities
                is available, the sociolinguistic profile of the speaker or the community
-               of speakers is indicated via the <term>Person Group</term> element, which may specify
-               values regarding the speakers' tribal affiliation,
+               of speakers is indicated via the <term>personGrp</term> element,
+               which may specify values regarding the speakers' tribal affiliation,
                religious affiliation, age group, gender, and mother tongue among
-               others. When specific remarks that are not codifiable via previously explained elements
-               are due, they are indicated in prose within the exception notes,
+               others. When specific remarks that are not codifiable via previously
+               explained elements are due, they are indicated in prose within the exception notes,
                constraint notes or general notes.</p>
 
             <p>Some sources often group the combination of realizations of feature
-               values and characterize them as a linguistic variety or dialect. These linguistic
-               varieties may be labelled after the approximate location
-               they are spoken at, and/or the community of speakers that use them.
-               These common groupings or varieties are indicated via language <term>Profiles</term> and provide
-               additional historical and linguistic information available
-               regarding a specific variety according to one or more sources.</p>
+               values and characterize them as a linguistic variety or dialect.
+               These linguistic varieties may be labelled after the approximate
+               location they are spoken at, and/or the community of speakers that
+               use them. These common groupings or varieties are indicated via
+               language <term>Profiles</term> and provide additional historical
+               and linguistic information available regarding a specific variety
+               according to one or more sources.</p>
 
-            <p>Regarding the data input procedures, different geographical areas
+            <p>Regarding data input procedures, different geographical areas
                under investigation have been assigned to particular members of the
                WIBARAB team. Therefore, there is always a member of the team that
                is responsible of the extraction and the inputting of the data of
@@ -168,18 +170,40 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                her/his name is codified in 2 or 3 capital letters: ex. Johanna Doppelbauer
                is JD, Ana Iriarte Diez is AID. </p>
 
-            <p>The status of the working document is specified in the <term>revision
-                  description</term> of the <term>header</term> of the document
-               the following way: <term>draft</term> is used to indicate that data
-               collection is still ongoing, <term>done</term> means that the major part of data
-               input has been done and the document is ready to be
-               validated, <term>validated</term> indicates that the document has
-               been validated and no changes are required/the document is valid, <term>needs revision</term>
-               shows that after the validation the document has to be revised and corrected
-               in order to be valid, <term>revised</term> indicates that the necessary change have
-               been made and the document is ready to be validated again, <term>completed</term>
-               indicates that this is the final version of the document and the file is ready to
-               be published.</p>
+            <div>
+               <head>Header</head>
+               <p>The status of the working document is indicated in the
+                  <att>status</att> attribute of the <gi>revisionDesc</gi> element of the document.
+                  It can assume the following values:
+                  <list>
+                     <item><term>draft</term> is set when the input of the <term>feature value observations</term> is still not complete, that data
+                        collection is still ongoing</item>
+                     <item><term>done</term> is used when the input of the <term>feature value oservations</term>
+                        is considered as completed by the <term>responsible person</term>
+                        which is encoded as the <gi>author</gi> of the document, implying
+                        that the major part of data input has been done and the document is ready to be
+                        validated.</item>
+                     <item><term>validated</term> indicates that the document has
+                        been validated and no changes are required/the document is valid.</item>
+                     <item><term>needs revision</term>
+                        shows that after the validation the document has to be revised and corrected
+                        in order to be valid</item>
+                     <item><term>revised</term> indicates that the necessary change have
+                        been made and the document is ready to be validated again, <term>completed</term>
+                        indicates that this is the final version of the document and the file is ready to
+                        be published.</item>
+                  </list>
+                  The <term>responsible person</term> is the researcher mainly responsible to research
+                  and input data for certain varieties.</p>
+
+            </div>
+
+            <div>
+               <head>Feature Values</head>
+               <p>Every document starts with a list of <term>feature values</term>
+                  which represent in principle one of the results of the research done
+                  on the particular phenomenon.</p>
+            </div>
 
             <div>
                <head>Feature Value Observation</head>
@@ -190,8 +214,11 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   use of more expressive existing TEI elements. To come up with a
                   solution fitting our particular goals, we customized the TEI Schema attempting
                   to reuse as many TEI elements as possible. So far, we managed to do
-                  with only one additional new element that had emerged from our
-                  discussions and appeared to serve the particular purpose best.
+                  with only one additional new element (<gi>featureValueObservation</gi>) which had emerged from our
+                  discussions and appeared to serve the particular purpose best. 
+                  This element is centre piece of the customisation, all other elements 
+                  exist in the <name>Guidelines</name> and appear to be applicable without 
+                  twisting their originally intended semantics too much.
                </p>
 
                <p>The newly introduced <gi>featureValueObservation</gi> element
@@ -201,6 +228,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <item>information on the location of the phenomenon,</item>
                      <item>and the source where the information comes from.</item>
                   </list>
+
+                  The specificities of the respective elements are descibed below.
                </p>
 
                <p>To describe this kind of data we made use of the following mandatory
@@ -215,24 +244,16 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <term>Feature Realisation</term> is attested and it is linked to
                   the language profile of the variety to which it is customarily assigned.</p>
 
-               <p>The <gi>featureValueObservation</gi> element consists of a group
-                  of elements encompassing different types of information describing the details of
-                  the realization of a specific feature value in a specific place or places according
-                  to a source. Thus, every <gi>featureValueObservation</gi> must have:
-                  <list>
-                     <item>at least one element, indicating the place</item>
-                     <item>one unique <term>feature value</term>, identifying the phenomenon</item>
-                     <item>one unique <term>source</term></item>
-                  </list>
-               </p>
-
                <p>The occurrence of multiple values or of multiple sources will then
                   result in the creation of additional <gi>featureValueObservations</gi>
                   elements. <gi>featureValueObservations</gi> is identifiable by a
                   unique <att>@xml:id</att> attribute.</p>
 
+               <p>Additionally, a <gi>featureValueObservations</gi> may contain a number
+                  of optional elements outlined below.</p>
+
                <div>
-                  <head>Feature name</head>
+                  <head>Feature name (mandatory)</head>
                   <p>The feature description at the beginning of each document contains a list
                      of feature values that allow to neatly group the observed
                      linguistic phenomena under clearly identifiable labels. This information
@@ -242,67 +263,71 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                </div>
 
                <div>
-                  <head>Place</head>
+                  <head>Place (mandatory)</head>
                   <p>Locations to anchor particular phenomena geographically are indicated
                      via <gi>placeName</gi> elements and a <att>ref</att>
-                     attribute pointing to the <name>vicav_geodata.xml</name> file.</p>
+                     attribute pointing to the <name>VICAV Geodata File</name>.</p>
                </div>
 
                <div>
-                  <head>Source</head>
-                  <p></p>
+                  <head>Source (mandatory)</head>
+                  <p>Each <gi>featureValueObservation</gi> element needs to have
+                     at least one source indicating where the information comes from. The
+                     most common case is <gi>bibl[type="publication"]</gi>, the
+                     reference to the bibliography (Zotero file) being put in a <att>@corresp</att> attribute.
+                  </p>
                </div>
 
-               <p>Additionally, a <gi>featureValueObservations</gi> may contain other optional
-                  elements:
-                  <list type="ordered">
-                     <item> One or several <term>Person Group</term> element(s) of
-                        different types (tribe, age, religion, sociolinguistic perception and mother tongue)
-                        that further specifies information about the speakers from whom the realization
-                        of a feature value has been observed or documented in the
-                        source.</item>
-                     <item> One or several Language <term>Profile</term> element,
-                        linking the Feature Value Observation to a VICAV Profile</item>
-                     <item> One or several <term>Source Representation</term> element(s),
-                        where literal information from the source is quoted in its original form (e.g. original
-                        reflexes of some items as documented by the author in the original source
-                        featuring the source's transcription system.)</item>
-                     <item> One or several examples to illustrate a feature value,
-                        as taken from the original source and with their English translation.</item>
-                     <item> One or several notes to clarify  specificities, exceptions,and
-                        constraints concerning the realization of a feature value.</item>
-                  </list>
-               </p>
-            </div>
-
-            <div>
-               <head>Other relevant concepts in the data</head>
-               <list type="ordered">
-                  <item><term>Places</term> exact locations where these linguistic
-                     observations have been made or reported. Stored in the geodata file <ref type="file"
-                        target="featuredb/010_manannot/vicav_biblio.xml"></ref></item>
-                  <item><term>Status</term> is used to indicate draft or done for
-                     the person responsible for inputting data into the databank. The possible values
-                     are "draft"
-                     when the input of the <term>Feature Value Observations</term>
-                     is still not complete and "done" when the the input of the <term>Feature Value Observations</term>
-                     is considered to be completed
-                     by the <term>Responsible Person</term></item>
-                  <item>The <term>Responsible Person</term> is responsible to research
-                     and input data for certain varieties.</item>
-                  <item>The Language <term>Profile</term> is a file which contains
-                     any extra information collected about the variety and the place where it is spoken.
-                     These Profiles are named after our internal naming System with a 3 letter countrycode,
-                     dash, variety code. Some Profiles have been generated from pre-existing data from
-                     VICAV.</item>
-                  <item><term>Person Group</term> describes any specific discernable
+               <div>
+                  <head>Person group</head>
+                  <p>
+                     <term>Person Group</term> describes any specific discernable
                      group of people that have the realization of a feature in common such as tribal affiliation,
-                     religious affiliation, age group, gender, mother tongue, etc.</item>
-                  <item>In the <term>exception Notes</term> any exceptions to the
-                     standard realization of a feature are recorded.</item>
-                  <item>In the <term>Constraint Notes</term> any (sociolinguistic)
-                     constraints to the standard realization of a feature are recorded.</item>
-               </list>
+                     religious affiliation, age group, gender, mother tongue, etc.
+                     To encode this kind of informatin, we make use <term>persGroup</term> element(s)
+                     which are furnished with <att>@role</att> attributes that specify
+                     tribe, age, religion, sociolinguistic perception and mother tongue)
+                     that further specifies information about the speakers from whom the realization
+                     of a feature value has been observed or documented in the source.</p>
+               </div>
+
+               <div>
+                  <head>Variety</head>
+                  <p>Information on a particular linguistic variety can be specified
+                     in a <name>VICAV language profile</name>. A <gi>lang</gi> element
+                     contains a link to a VICAV profile. The <term>language profile</term>
+                     is a file which contains any extra information collected about
+                     the variety and the place where it is spoken. These Profiles
+                     are named after our internal naming System with a 3 letter countrycode,
+                     dash, variety code. Some Profiles have been generated from pre-existing data from
+                     VICAV. For varieties that do not have a profile, stubs have been created. </p>
+               </div>
+
+               <div>
+                  <head>Source representation</head>
+                  <p>By contrast to the normalized transciptions of the feature values,
+                     <term>source representations</term> allow the encoders to give
+                     the original representation as found int sources, reflecting the
+                     literal information from the source quoted in its original form,
+                     i.e. in the source's transcription system.</p>
+                  <p>This information is encoded making use of <gi>cit[@type="sourceRepresentation"]/quote</gi>
+                     constructs.</p>
+               </div>
+
+               <div>
+                  <head>Examples</head>
+                  <p>Examples can be used to illustrate a feature value. They are
+                     taken from original source and furnished with English translations.
+                     They are encoded with <gi>cit[@type="example"]/quote</gi> constructs
+                     which have been chosen in analogy to common lexicographic procedures.</p>
+               </div>
+
+               <div>
+                  <head>Notes</head>
+                  <p>Notes can be used to clarify specificities of a particular phenomenon, especially
+                     exceptions and constraints concerning the realization of a feature value.
+                  </p>
+               </div>
             </div>
          </div>
 
@@ -331,7 +356,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <p>The <term>Feature Files</term> each describe one linguistic
                   feature <ref type="file" target="\010_manannot\features\"></ref>
                </p>
-               <p>   The <term>feature value observations</term>
+
+               <p>The <term>feature value observations</term>
                   are stored according to different features in what has been dubbed
                   in the project's internal  nomenclature  <term>feature files</term>.
                   Hence, there is one file for every feature where the <term>feature
@@ -349,14 +375,16 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
             <div>
                <head>VICAV Geodata (vicav_biblio_tei_zotero.xml)</head>
-               <p>The <term>biblio</term> list contains all the sources found
-                  in the Zotero library <ref type="file" target="/010_manannot/vicav_biblio.xml"></ref>.</p>
+               <p>The <term>geodata</term> list contains all the places.<ref
+                     type="file" target="\010_manannot\vicav_geodata.xml"></ref>
+                  Wherever possible, the place listed in this document refer to
+                  s refer to are</p>
             </div>
 
             <div>
                <head>VICAV Zotero file (vicav_geodata.xml)</head>
-               <p>The <term>geodata</term> list contains all the places.<ref
-                     type="file" target="\010_manannot\vicav_geodata.xml"></ref> </p>
+               <p>The <term>biblio</term> list contains all the sources found
+                  in the Zotero library <ref type="file" target="/010_manannot/vicav_biblio.xml"></ref>.</p>
             </div>
 
             <div>
@@ -385,7 +413,9 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
          <div>
             <head>Part V: Other components of the infrastructure</head>
-            <p>The TEI data have been created making use of ...</p>
+            <p>The TEI data has-for the most part-been created making use of ˂TEI˃Enricher,
+               a freely available XML editor that has been developed geared to the special case
+               of TEI in research contexts.</p>
 
             <p>Viewing during the editing process has been accomplished with an
                XSL file <name>tei_fs_2_html__001.xsl</name> which has also been used
