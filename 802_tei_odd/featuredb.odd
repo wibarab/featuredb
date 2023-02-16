@@ -12,7 +12,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <author><name type="person" xml:id="CM">Charly Mörth</name></author>
             <author><name type="person" xml:id="DS">Daniel Schopper</name></author>
             <principal><name type="person" xml:id="SP">Stephan Procházka</name></principal>
-            <author><name type="person" ref="dmp:AD">Ana Iriarte Díez</name></author>
+            <author><name type="person" ref="dmp:AID">Ana Iriarte Díez</name></author>
             <author><name type="person" ref="dmp:VE">Veronika Engler</name></author>
             <author><name type="person" ref="dmp:JD">Johanna Doppelbauer</name></author>
             <respStmt>
@@ -102,7 +102,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                broad sense as an organized collection of semi-structured data
                electronically stored and accessible. The entire textual source
                of <name>WIBARAB Feature DB</name> is encoded in accordance with
-               the <name>Guidelines of the Text Encoding Initiaitive</name>. </p>
+               the <name>Guidelines of the Text Encoding Initiative</name>. </p>
          </div>
 
          <div>
@@ -114,7 +114,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <item>data from new fieldwork campaigns carried out
                   by the WIBARAB team in the framework of the <name>WIBARAB project</name>,</item>
                <item>and,to a lesser degree, data from <term>personal communications</term>
-                  with L1 speakers of specific varieties being investigated in the project.</item>
+                  with L1 speakers or known experts of specific varieties being investigated in the project.</item>
             </list>
 
             <p>The research library has been stored in the <name>VICAV Zotero library</name>
@@ -146,7 +146,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                Every linguistic feature has a set of <term>feature values</term>
                that indicates the different attested realizations of a specific
                feature in the studied varieties. The documentation of an occurrence
-               of a specific feature value(s) in a specific location is accomplished
+               of (a) specific feature value(s) in a specific location is accomplished
                via <term>feature value observations</term>. Every <term>feature value observation</term>
                specifies that one particular feature value occurs in a specific
                place and is produced by a specific speaker or group of speakers.
@@ -154,7 +154,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                is available, the sociolinguistic profile of the speaker or the community
                of speakers is indicated via the <term>personGrp</term> element,
                which may specify values regarding the speakers' tribal affiliation,
-               religious affiliation, age group, gender, and mother tongue among
+               religious affiliation, age group, gender, and native language among
                others. When specific remarks that are not codifiable via previously
                explained elements are due, they are indicated in prose within the
                exception notes, constraint notes or general notes.</p>
@@ -175,7 +175,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <att>status</att> attribute of the <gi>revisionDesc</gi> element
                   of the document. It can have the following values:
                   <list>
-                     <item><term>draft</term> is set when the input of the <term>feature value observations</term> is still not complete, that data
+                     <item><term>draft</term> is set when the input of the <term>feature value observations</term> is still not complete, data
                         collection is still ongoing</item>
                      <item><term>done</term> is used when the input of the <term>feature value oservations</term>
                         is considered as completed by the <term>responsible person</term>
@@ -188,7 +188,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         shows that after the validation the document has to be revised and corrected
                         in order to be valid</item>
                      <item><term>revised</term> indicates that the necessary change have
-                        been made and the document is ready to be validated again, <term>completed</term>
+                        been made and the document is ready to be validated again </item>
+                        <item><term>completed</term>
                         indicates that this is the final version of the document and the file is ready to
                         be published.</item>
                   </list>
