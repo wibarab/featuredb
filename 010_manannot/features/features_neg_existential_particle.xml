@@ -111,6 +111,12 @@
                <item xml:id="nep_maa_shii">
                   <label>mā šī</label>
                </item>
+               <item xml:id="nep_maashay">
+                  <label>māšay</label>
+               </item>
+               <item xml:id="nep_laashay">
+                  <label>lāšay</label>
+               </item>
                <item xml:id="nep_maaku">
                   <label>mākū</label>
                </item>
@@ -3014,8 +3020,23 @@
                <lang target="..\profiles\vicav_profile_OMN-BUR.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0296" status="draft" resp="dmp:VE">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0296" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#nep_maa_shii"></name>
+               <bibl corresp="zot:Holes2013c" type="publication"></bibl>
+               <placeName ref="geo:sur"></placeName>
+               <cit type="sourceRepresentation"><quote></quote></cit>
+               <lang target="..\profiles\vicav_profile_OMN-SUR.xml"></lang>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="fv_0292" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#nep_laashay"></name>
+               <bibl corresp="zot:Holes2013c" type="publication"></bibl>
+               <placeName ref="geo:sur"></placeName>
+               <lang target="..\profiles\vicav_profile_OMN-SUR.xml"></lang>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="fv_0381" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#nep_maashay"></name>
                <bibl corresp="zot:Holes2013c" type="publication"></bibl>
                <placeName ref="geo:sur"></placeName>
                <lang target="..\profiles\vicav_profile_OMN-SUR.xml"></lang>

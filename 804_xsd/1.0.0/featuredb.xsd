@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:dcr="http://www.isocat.org/ns/dcr"
+<xs:schema xmlns:dcr="http://www.isocat.org/ns/dcr"
            xmlns:langdesc="https://wibarab.acdh.oeaw.ac.at/langDesc"
            xmlns:tei="http://www.tei-c.org/ns/1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified"
            targetNamespace="http://www.tei-c.org/ns/1.0">
    <xs:import namespace="http://www.isocat.org/ns/dcr" schemaLocation="dcr.tmp"/>
@@ -11,7 +11,7 @@
    <xs:import namespace="https://wibarab.acdh.oeaw.ac.at/langDesc"
               schemaLocation="langdesc.tmp"/>
    <!--
-    Schema generated from ODD source 2022-08-17T06:57:13Z. .
+    Schema generated from ODD source 2023-02-17T09:04:36Z. .
     TEI Edition: Version 4.4.0. Last updated on
             19th April 2022, revision ff9cc28b0
     TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.4.0/
@@ -3270,7 +3270,7 @@ Suggested values include: 1] spoken (spoken); 2] thought (thought); 3] written (
                         <xs:documentation/>
                      </xs:annotation>
                   </xs:enumeration>
-                  <xs:enumeration value="originalSource">
+                  <xs:enumeration value="sourceRepresentation">
                      <xs:annotation>
                         <xs:documentation/>
                      </xs:annotation>
@@ -4692,17 +4692,17 @@ Elements]</xs:documentation>
                <xs:restriction base="xs:token">
                   <xs:enumeration value="publication">
                      <xs:annotation>
-                        <xs:documentation/>
+                        <xs:documentation>Published written documents, recorded in the VICAV Zotero library</xs:documentation>
                      </xs:annotation>
                   </xs:enumeration>
                   <xs:enumeration value="personalCommunication">
                      <xs:annotation>
-                        <xs:documentation/>
+                        <xs:documentation>Personal communication with native speakers of the variety or researchers via phone, e-mail or in person.</xs:documentation>
                      </xs:annotation>
                   </xs:enumeration>
                   <xs:enumeration value="campaign">
                      <xs:annotation>
-                        <xs:documentation/>
+                        <xs:documentation>data from fieldwork conducted by members of the team indcluding both campaigns conducted within the project and prior to it.</xs:documentation>
                      </xs:annotation>
                   </xs:enumeration>
                </xs:restriction>
@@ -5121,9 +5121,27 @@ Suggested values include: 1] setting; 2] entrance; 3] exit; 4] business; 5] nove
       <xs:complexType>
          <xs:complexContent>
             <xs:extension base="tei:tei_macro.paraContent">
-               <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.lexicographic.attributes"/>
+               <xs:attribute name="target">
+                  <xs:annotation>
+                     <xs:documentation/>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction>
+                        <xs:simpleType>
+                           <xs:list>
+                              <xs:simpleType>
+                                 <xs:restriction base="xs:anyURI">
+                                    <xs:pattern value="\S+"/>
+                                 </xs:restriction>
+                              </xs:simpleType>
+                           </xs:list>
+                        </xs:simpleType>
+                        <xs:minLength value="1"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:attribute>
             </xs:extension>
          </xs:complexContent>
       </xs:complexType>
@@ -6223,6 +6241,9 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</xs:do
       </xs:complexType>
    </xs:element>
    <xs:element name="TEI" substitutionGroup="tei:tei_model.describedResource">
+      <xs:annotation>
+         <xs:documentation>(TEI document) In the context of the WIBARAB Feature Database, each TEI feature document contains the description of one feature, the possible ways it can be realised (feature values) in a `&lt;list type="features"&gt;` and documented observations of this specific feature in literature or in the data collected in the fieldwork of WIBARAB. [4. Default Text Structure 15.1. Varieties of Composite Text]</xs:documentation>
+      </xs:annotation>
       <xs:complexType>
          <xs:sequence>
             <xs:element ref="tei:teiHeader"/>
@@ -7061,20 +7082,12 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</xs:do
          </xs:attribute>
       </xs:complexType>
    </xs:element>
-   <xs:element name="personGrp" substitutionGroup="tei:tei_model.personLike">
+   <xs:element name="personGrp">
       <xs:annotation>
-         <xs:documentation>(personal group) describes a group of individuals treated as a single person for analytic purposes. [15.2.2. The Participant Description]</xs:documentation>
+         <xs:documentation/>
       </xs:annotation>
       <xs:complexType>
-         <xs:choice>
-            <xs:group maxOccurs="unbounded" ref="tei:tei_model.pLike"/>
-            <xs:choice minOccurs="0" maxOccurs="unbounded">
-               <xs:group ref="tei:tei_model.personPart"/>
-               <xs:group ref="tei:tei_model.global"/>
-            </xs:choice>
-         </xs:choice>
-         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
-         <xs:attribute name="type" use="required">
+         <xs:attribute name="role" use="required">
             <xs:annotation>
                <xs:documentation/>
             </xs:annotation>
@@ -7085,7 +7098,7 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</xs:do
                         <xs:documentation/>
                      </xs:annotation>
                   </xs:enumeration>
-                  <xs:enumeration value="religousGroup">
+                  <xs:enumeration value="religion">
                      <xs:annotation>
                         <xs:documentation/>
                      </xs:annotation>
@@ -7098,59 +7111,14 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</xs:do
                </xs:restriction>
             </xs:simpleType>
          </xs:attribute>
-         <xs:attribute name="role">
+         <xs:attribute name="corresp" use="required">
             <xs:annotation>
-               <xs:documentation>specifies the role of this group of participants in the interaction.</xs:documentation>
-            </xs:annotation>
-            <xs:simpleType>
-               <xs:restriction base="xs:token">
-                  <xs:pattern value="[^\p{C}\p{Z}]+"/>
-               </xs:restriction>
-            </xs:simpleType>
-         </xs:attribute>
-         <xs:attribute name="sex">
-            <xs:annotation>
-               <xs:documentation>specifies the sex of the participant group.</xs:documentation>
+               <xs:documentation/>
             </xs:annotation>
             <xs:simpleType>
                <xs:restriction>
                   <xs:simpleType>
-                     <xs:list>
-                        <xs:simpleType>
-                           <xs:restriction base="xs:token">
-                              <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                           </xs:restriction>
-                        </xs:simpleType>
-                     </xs:list>
-                  </xs:simpleType>
-                  <xs:minLength value="1"/>
-               </xs:restriction>
-            </xs:simpleType>
-         </xs:attribute>
-         <xs:attribute name="age">
-            <xs:annotation>
-               <xs:documentation>specifies the age group of the participants.</xs:documentation>
-            </xs:annotation>
-            <xs:simpleType>
-               <xs:restriction base="xs:token">
-                  <xs:pattern value="[^\p{C}\p{Z}]+"/>
-               </xs:restriction>
-            </xs:simpleType>
-         </xs:attribute>
-         <xs:attribute name="size">
-            <xs:annotation>
-               <xs:documentation>describes informally the size or approximate size of the group for example by means of a number and an indication of accuracy e.g. approx 200.</xs:documentation>
-            </xs:annotation>
-            <xs:simpleType>
-               <xs:restriction>
-                  <xs:simpleType>
-                     <xs:list>
-                        <xs:simpleType>
-                           <xs:restriction base="xs:token">
-                              <xs:pattern value="[^\p{C}\p{Z}]+"/>
-                           </xs:restriction>
-                        </xs:simpleType>
-                     </xs:list>
+                     <xs:list itemType="xs:token"/>
                   </xs:simpleType>
                   <xs:minLength value="1"/>
                </xs:restriction>

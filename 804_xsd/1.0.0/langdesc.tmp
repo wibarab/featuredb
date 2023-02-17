@@ -5,7 +5,7 @@
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.tmp"/>
   <xs:element name="featureValueObservation">
     <xs:annotation>
-      <xs:documentation>(feature value observation) contains data gathered by a source about the realisation of a given feature</xs:documentation>
+      <xs:documentation>(feature value observation) contains data gathered by a source about the realisation of a fiven feature</xs:documentation>
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
@@ -15,17 +15,14 @@
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:lang"/>
         <xs:element minOccurs="0" ref="tei:date"/>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:personGrp"/>
-        <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:note"/>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:cit"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:note"/>
       </xs:sequence>
       <xs:attributeGroup ref="tei:tei_att.global.attribute.xmllang"/>
       <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlbase"/>
       <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlspace"/>
-      <!-- 
       <xs:attributeGroup ref="tei:tei_att.global.responsibility.attribute.cert"/>
       <xs:attributeGroup ref="tei:tei_att.global.responsibility.attribute.resp"/>
-      -->
-      <xs:attributeGroup ref="tei:tei_att.global.responsibility.attributes"/>
       <xs:attributeGroup ref="tei:tei_att.docStatus.attributes"/>
       <xs:attribute ref="xml:id" use="required"/>
     </xs:complexType>
