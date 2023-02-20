@@ -268,7 +268,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <p>The occurrence of multiple values or of multiple sources for a specific place or variety will then
                   result in the creation of additional <gi>featureValueObservations</gi>
                   elements. <gi>featureValueObservations</gi> is identifiable by a
-                  unique <att>@xml:id</att> attribute.</p>
+                  unique <att>xml:id</att> attribute.</p>
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                     <wib:featureValueObservation xml:id="fv_0048" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#q_q"></name>
@@ -286,8 +286,6 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <note type="general">Young speakers often use q in words realized with /g/ or /ǧ/ by older speakers, ex. <foreign>gilīl</foreign> or <foreign>ǧilīl</foreign> - <foreign>qalīl</foreign> «few, little»</note>
                     </wib:featureValueObservation>
                   </egXML>
-
-
                <div>
                   <head>Mandatory Elements</head>
                   <div>
@@ -311,22 +309,20 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <head>Source</head>
                      <p>Each <gi>featureValueObservation</gi> element needs to have
                         at least one source indicating where the information comes from. The
-                        most common case is <gi>bibl[type="publication"]</gi>, the
-                        reference to the bibliography (Zotero file) being put in a <att>@corresp</att> attribute.
+                        most common case is <tag>bibl[type="publication"]</tag>, the
+                        reference to the bibliography (Zotero file) being put in a <att>corresp</att> attribute.
                         However, as mentioned above the <gi>bibl</gi> element can also contain a reference to a fieldwork
                         campaign or personal communication (source file).
                      </p>
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <wib:featureValueObservation xml:id="fv_0027" status="done" resp="dmp:AID">
+                           <name type="featureValue" ref="#pr_p1c_ihna"></name>
+                           <bibl corresp="zot:Behnstedt2019" type="publication"></bibl>
+                           <placeName ref="geo:jurdeih"></placeName>
+                           ...
+                        </wib:featureValueObservation>
+                     </egXML>
                   </div>
-
-
-                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<wib:featureValueObservation xml:id="fv_0027" status="done" resp="dmp:AID">
-   <name type="featureValue" ref="#pr_p1c_ihna"></name>
-   <bibl corresp="zot:Behnstedt2019" type="publication"></bibl>
-   <placeName ref="geo:jurdeih"></placeName>
-...
-            </wib:featureValueObservation>
-              </egXML>
                </div>
 
                <div>
@@ -340,7 +336,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         group of people that have the realization of a feature in common such as tribal affiliation,
                         religious affiliation, age group, gender, native language, etc.
                         To encode this kind of informatin, we make use <term>persGroup</term> element(s)
-                        which are furnished with <att>@role</att> attributes that specify
+                        which are furnished with <att>role</att> attributes that specify
                         tribe, age, religion, sociolinguistic perception and native language)
                         that further specifies information about the speakers from whom the realization
                         of a feature value has been observed or documented in the source.</p>
@@ -366,7 +362,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         literal information from the source quoted in its original form,
                         i.e. in the source's transcription system.</p>
 
-                     <p>This information is encoded making use of <gi>cit[@type="sourceRepresentation"]/quote</gi>
+                     <p>This information is encoded making use of <tag>cit[@type="sourceRepresentation"]/quote</tag>
                         constructs.</p>
                   </div>
 
@@ -374,7 +370,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <head>Examples</head>
                      <p>Examples can be used to illustrate a feature value. They are
                         taken from original source and furnished with English translations.
-                        They are encoded with <gi>cit[@type="example"]/quote</gi> constructs
+                        They are encoded with <tag>cit[@type="example"]/quote</tag> constructs
                         which have been chosen in analogy to common lexicographic procedures.</p>
                   </div>
 
