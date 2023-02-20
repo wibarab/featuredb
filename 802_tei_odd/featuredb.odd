@@ -12,7 +12,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <author><name type="person" xml:id="CM">Charly Mörth</name></author>
             <author><name type="person" xml:id="DS">Daniel Schopper</name></author>
             <principal><name type="person" xml:id="SP">Stephan Procházka</name></principal>
-            <author><name type="person" ref="dmp:AD">Ana Iriarte Díez</name></author>
+            <author><name type="person" ref="dmp:AID">Ana Iriarte Díez</name></author>
             <author><name type="person" ref="dmp:VE">Veronika Engler</name></author>
             <author><name type="person" ref="dmp:JD">Johanna Doppelbauer</name></author>
             <respStmt>
@@ -89,7 +89,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                salient of the speech of Bedouin communities.</p>
 
             <p>In this way, the <name>WIBARAB Feature DB</name> represents both a
-               specialized archive gathering linguistic data from a wide range of 
+               specialized archive gathering linguistic data from a wide range of
                Arabic varieties, and an analytical research tool. It should enable the WIBARAB team
                and other researchers to both confirm the existence of common linguistic trends
                among Bedouin communities across the Arab World, accurately identifying
@@ -102,7 +102,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                broad sense as an organized collection of semi-structured data
                electronically stored and accessible. The entire textual source
                of <name>WIBARAB Feature DB</name> is encoded in accordance with
-               the <name>Guidelines of the Text Encoding Initiaitive</name>. </p>
+               the <name>Guidelines of the Text Encoding Initiative</name>. </p>
          </div>
 
          <div>
@@ -113,8 +113,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <item>written academic publications,</item>
                <item>data from new fieldwork campaigns carried out
                   by the WIBARAB team in the framework of the <name>WIBARAB project</name>,</item>
-               <item>and,to a lesser degree, data from <term>personal communications</term>
-                  with L1 speakers of specific varieties being investigated in the project.</item>
+               <item>and, to a lesser degree, data from <term>personal communications</term>
+                  with L1 speakers or known experts of specific varieties being investigated in the project.</item>
             </list>
 
             <p>The research library has been stored in the <name>VICAV Zotero library</name>
@@ -146,7 +146,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                Every linguistic feature has a set of <term>feature values</term>
                that indicates the different attested realizations of a specific
                feature in the studied varieties. The documentation of an occurrence
-               of a specific feature value(s) in a specific location is accomplished
+               of (a) specific feature value(s) in a specific location is accomplished
                via <term>feature value observations</term>. Every <term>feature value observation</term>
                specifies that one particular feature value occurs in a specific
                place and is produced by a specific speaker or group of speakers.
@@ -154,7 +154,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                is available, the sociolinguistic profile of the speaker or the community
                of speakers is indicated via the <term>personGrp</term> element,
                which may specify values regarding the speakers' tribal affiliation,
-               religious affiliation, age group, gender, and mother tongue among
+               religious affiliation, age group, gender, and native language among
                others. When specific remarks that are not codifiable via previously
                explained elements are due, they are indicated in prose within the
                exception notes, constraint notes or general notes.</p>
@@ -175,8 +175,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <att>status</att> attribute of the <gi>revisionDesc</gi> element
                   of the document. It can have the following values:
                   <list>
-                     <item><term>draft</term> is set when the input of the <term>feature value observations</term> is still not complete, that data
-                        collection is still ongoing</item>
+                     <item><term>draft</term> is set when the input of the <term>feature value observations</term> is still not complete, data
+                        collection is still ongoing.</item>
                      <item><term>done</term> is used when the input of the <term>feature value oservations</term>
                         is considered as completed by the <term>responsible person</term>
                         which is encoded as the <gi>author</gi> of the document, implying
@@ -186,9 +186,10 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         been validated and no changes are required/the document is valid.</item>
                      <item><term>needsRevision</term>
                         shows that after the validation the document has to be revised and corrected
-                        in order to be valid</item>
+                        in order to be valid.</item>
                      <item><term>revised</term> indicates that the necessary change have
-                        been made and the document is ready to be validated again, <term>completed</term>
+                        been made and the document is ready to be validated again.</item>
+                     <item><term>completed</term>
                         indicates that this is the final version of the document and the file is ready to
                         be published.</item>
                   </list>
@@ -264,11 +265,27 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <term>Feature Realisation</term> is attested and it is linked to
                   the language profile of the variety to which it is customarily assigned.</p>
 
-               <p>The occurrence of multiple values or of multiple sources will then
+               <p>The occurrence of multiple values or of multiple sources for a specific place or variety will then
                   result in the creation of additional <gi>featureValueObservations</gi>
                   elements. <gi>featureValueObservations</gi> is identifiable by a
                   unique <att>xml:id</att> attribute.</p>
-
+               <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <wib:featureValueObservation xml:id="fv_0048" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#q_q"></name>
+               <bibl corresp="zot:Younes2013" type="publication"></bibl>
+               <placeName ref="geo:wadi_khalid"></placeName>
+               <lang target="..\profiles\vicav_profile_LBN-ATI.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:arab_al_atij"></personGrp>
+               <personGrp role="age" corresp="pgr:young"></personGrp>
+               <cit xml:id="ct_0028" type="example">
+                  <quote>qalīl</quote>
+                  <cit type="translation">
+                     <quote>a little</quote>
+                  </cit>
+               </cit>
+               <note type="general">Young speakers often use q in words realized with /g/ or /ǧ/ by older speakers, ex. <foreign>gilīl</foreign> or <foreign>ǧilīl</foreign> - <foreign>qalīl</foreign> «few, little»</note>
+                    </wib:featureValueObservation>
+                  </egXML>
                <div>
                   <head>Mandatory Elements</head>
                   <div>
@@ -294,18 +311,18 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         at least one source indicating where the information comes from. The
                         most common case is <tag>bibl[type="publication"]</tag>, the
                         reference to the bibliography (Zotero file) being put in a <att>corresp</att> attribute.
+                        However, as mentioned above the <gi>bibl</gi> element can also contain a reference to a fieldwork
+                        campaign or personal communication (source file).
                      </p>
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <wib:featureValueObservation xml:id="fv_0027" status="done" resp="dmp:AID">
+                           <name type="featureValue" ref="#pr_p1c_ihna"></name>
+                           <bibl corresp="zot:Behnstedt2019" type="publication"></bibl>
+                           <placeName ref="geo:jurdeih"></placeName>
+                           ...
+                        </wib:featureValueObservation>
+                     </egXML>
                   </div>
-
-
-                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<wib:featureValueObservation xml:id="fv_0027" status="done" resp="dmp:AID">
-   <name type="featureValue" ref="#pr_p1c_ihna"></name>
-   <bibl corresp="zot:Behnstedt2019" type="publication"></bibl>
-   <placeName ref="geo:jurdeih"></placeName>
-...
-            </wib:featureValueObservation>
-              </egXML>
                </div>
 
                <div>
@@ -317,10 +334,10 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <p>
                         <term>Person Group</term> describes any specific discernable
                         group of people that have the realization of a feature in common such as tribal affiliation,
-                        religious affiliation, age group, gender, mother tongue, etc.
+                        religious affiliation, age group, gender, native language, etc.
                         To encode this kind of informatin, we make use <term>persGroup</term> element(s)
-                        which are furnished with <att>@role</att> attributes that specify
-                        tribe, age, religion, sociolinguistic perception and mother tongue)
+                        which are furnished with <att>role</att> attributes that specify
+                        tribe, age, religion, sociolinguistic perception and native language)
                         that further specifies information about the speakers from whom the realization
                         of a feature value has been observed or documented in the source.</p>
                   </div>
@@ -341,7 +358,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <head>Source Representation</head>
                      <p>By contrast to the normalized transciptions of the feature values,
                         <term>source representations</term> allow the encoders to give
-                        the original representation as found int sources, reflecting the
+                        the original representation as found in the sources, reflecting the
                         literal information from the source quoted in its original form,
                         i.e. in the source's transcription system.</p>
 
@@ -397,7 +414,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <div>
                <head>The Feature Files</head>
                <p>The <term>feature files</term> each describe one linguistic
-                  feature <ref type="file" target="\010_manannot\features\">.</ref>
+                  feature. <ref type="file" target="\010_manannot\features\"></ref>
                </p>
 
                <p>The <term>feature value observations</term>
@@ -412,14 +429,14 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
             <div>
                <head>The Language Profiles</head>
-               <p>The <term>profiles</term> each describe an arabic variety
+               <p>The <term>profiles</term> each describe an arabic variety.
                   <ref type="file" target="\010_manannot\profiles\"></ref></p>
             </div>
 
             <div>
                <head>VICAV Geodata (vicav_biblio_tei_zotero.xml)</head>
                <p>The <term><ref type="file" target="\010_manannot\vicav_geodata.xml">geodata</ref></term>
-                  document contains a list of all the  referenced places.
+                  file contains a list of all the  referenced places.
                   Wherever possible, the place listed in this document refers to
                   respective entries in the <name>GeoNames</name> geographical database.</p>
 
@@ -443,8 +460,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
             <div>
                <head>VICAV Zotero file (vicav_geodata.xml)</head>
-               <p>The <term>biblio</term> list contains all the sources found
-                  in the Zotero library <ref type="file" target="/010_manannot/vicav_biblio.xml"></ref>.
+               <p>The <term>biblio</term> file contains all the sources found
+                  in the Zotero library. <ref type="file" target="/010_manannot/vicav_biblio.xml"></ref>
                   The export from the Zotero database is enriched with geo-locations
                   making use of the above described geodata file.</p>
             </div>
@@ -453,13 +470,13 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <head>WIBARAB Individual Contributors (wibarab_dmp.xml)</head>
                <p>The <term>Data Management Plan</term> contains a description
                   of the project including information about the researchers who contribute to the
-                  database. The<term>Responsible Person</term> attribute links to this list <ref type="file"
+                  database. The <term>Responsible Person</term> attribute links to this list. <ref type="file"
                      target="\featuredb\010_manannot\wibarab_dmp.xml"></ref></p>
             </div>
 
             <div>
                <head>WIBARAB Campaigns (wibarab_sources.xml)</head>
-               <p>The <term>sources</term> list contains all sources that are
+               <p>The <term>sources</term> file contains all sources that are
                   not from Zotero, i.e., fieldwork campains and personal communications. <ref type="file"
                      target="featuredb\010_manannot\wibarab_sources.xml"></ref></p>
             </div>
@@ -467,8 +484,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <div>
                <head>WIBARAB Person Groups (wibarab_PersonGroup.xml)</head>
                <p>The <term>PersonGroup</term> list contains different person
-                  groups, such as religion, age, gender, mothertongue, sociolinguistic  and affiliation
-                  to a tribe <ref type="file" target="\010_manannot\wibarab_PersonGroup.xml"></ref></p>
+                  groups, such as religion, age, gender, native language, sociolinguistics  and affiliation
+                  to a tribe. <ref type="file" target="\010_manannot\wibarab_PersonGroup.xml"></ref></p>
             </div>
 
          </div>
@@ -477,7 +494,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <head>Part V: Other Components of the Infrastructure</head>
             <p>The Schema of the customisation ... ; namespace wib:</p>
 
-            <p>The TEI data has-for the most part-been created making use of ˂TEI˃Enricher,
+            <p>The TEI data has for the most part been created making use of ˂TEI˃Enricher,
                a freely available XML editor that has been developed at the ACDH-CH.
                This tool is geared to the use with TEI conformant data in research contexts.</p>
 
