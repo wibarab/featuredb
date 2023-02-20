@@ -267,7 +267,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <p>The occurrence of multiple values or of multiple sources will then
                   result in the creation of additional <gi>featureValueObservations</gi>
                   elements. <gi>featureValueObservations</gi> is identifiable by a
-                  unique <att>@xml:id</att> attribute.</p>
+                  unique <att>xml:id</att> attribute.</p>
 
                <div>
                   <head>Mandatory Elements</head>
@@ -292,8 +292,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <head>Source</head>
                      <p>Each <gi>featureValueObservation</gi> element needs to have
                         at least one source indicating where the information comes from. The
-                        most common case is <gi>bibl[type="publication"]</gi>, the
-                        reference to the bibliography (Zotero file) being put in a <att>@corresp</att> attribute.
+                        most common case is <tag>bibl[type="publication"]</tag>, the
+                        reference to the bibliography (Zotero file) being put in a <att>corresp</att> attribute.
                      </p>
                   </div>
 
@@ -345,7 +345,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         literal information from the source quoted in its original form,
                         i.e. in the source's transcription system.</p>
 
-                     <p>This information is encoded making use of <gi>cit[@type="sourceRepresentation"]/quote</gi>
+                     <p>This information is encoded making use of <tag>cit[@type="sourceRepresentation"]/quote</tag>
                         constructs.</p>
                   </div>
 
@@ -353,7 +353,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <head>Examples</head>
                      <p>Examples can be used to illustrate a feature value. They are
                         taken from original source and furnished with English translations.
-                        They are encoded with <gi>cit[@type="example"]/quote</gi> constructs
+                        They are encoded with <tag>cit[@type="example"]/quote</tag> constructs
                         which have been chosen in analogy to common lexicographic procedures.</p>
                   </div>
 
