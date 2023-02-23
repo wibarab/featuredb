@@ -295,8 +295,6 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <note type="general">Young speakers often use q in words realized with /g/ or /ǧ/ by older speakers, ex. <foreign>gilīl</foreign> or <foreign>ǧilīl</foreign> - <foreign>qalīl</foreign> «few, little»</note>
                   </wib:featureValueObservation>
                </egXML>
-
-
                <div>
                   <head>Mandatory Elements</head>
                   <div>
@@ -325,17 +323,15 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         However, as mentioned above the <gi>bibl</gi> element can also contain a reference to a fieldwork
                         campaign or personal communication (source file).
                      </p>
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <wib:featureValueObservation xml:id="fv_0027" status="done" resp="dmp:AID">
+                           <name type="featureValue" ref="#pr_p1c_ihna"></name>
+                           <bibl corresp="zot:Behnstedt2019" type="publication"></bibl>
+                           <placeName ref="geo:jurdeih"></placeName>
+                           ...
+                        </wib:featureValueObservation>
+                     </egXML>
                   </div>
-
-
-                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                     <wib:featureValueObservation xml:id="fv_0027" status="done" resp="dmp:AID">
-                        <name type="featureValue" ref="#pr_p1c_ihna"></name>
-                        <bibl corresp="zot:Behnstedt2019" type="publication"></bibl>
-                        <placeName ref="geo:jurdeih"></placeName>
-                        ...
-                     </wib:featureValueObservation>
-                  </egXML>
                </div>
 
                <div>
@@ -369,7 +365,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
                   <div>
                      <head>Source Representation</head>
-                     <p>By contrast to the normalized transciptions of the feature values,
+                     <p>In contrast to the normalized transciptions of the feature values,
                         <term>source representations</term> allow the encoders to give
                         the original representation as found in the sources, reflecting the
                         literal information from the source quoted in its original form,
