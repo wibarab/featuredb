@@ -9,9 +9,10 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <titleStmt>
             <title>WIBARAB FeatureDB TEI Customization</title>
             <title type="desc">Version 1.0.0</title>
+            <principal><name type="person" xml:id="SP">Stephan Procházka</name></principal>
             <author><name type="person" xml:id="CM">Charly Mörth</name></author>
             <author><name type="person" xml:id="DS">Daniel Schopper</name></author>
-            <principal><name type="person" xml:id="SP">Stephan Procházka</name></principal>
+            <author><name type="person" ref="dmp:AD">Ana Iriarte Díez</name></author>
             <author><name type="person" ref="dmp:AID">Ana Iriarte Díez</name></author>
             <author><name type="person" ref="dmp:VE">Veronika Engler</name></author>
             <author><name type="person" ref="dmp:JD">Johanna Doppelbauer</name></author>
@@ -138,11 +139,18 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
          </div>
 
          <div>
-            <head>Part III: Data Model</head>
-            <p> The data included in the database is supposed to describe a series of
+            <head>Part III: Data Model of Feature Documents</head>
+            <p>The data included in the database is supposed to describe a series of
                salient linguistic <term>features</term>. The criteria used for the
                selection of these features mainly rely on typological considerations
                and on previously reported high levels of sociolinguistic salience.
+               The feature descriptions are organised in documents grouping together
+               feature value observations pertaining to particular linguistic phenomena,
+               such as e.g. all observations that pertain to the existential particle,
+               observations that pertain the reflexes of Classical Arabic interdentals
+               in the modern varieties etc.</p>
+            
+            <p>
                Every linguistic feature has a set of <term>feature values</term>
                that indicates the different attested realizations of a specific
                feature in the studied varieties. The documentation of an occurrence
@@ -211,6 +219,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <p>Every document starts with a list of <term>feature values</term>
                   which represents one of the results of the research carried out on
                   the particular phenomenon.</p>
+                  
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <head>Feature Values</head>
                   <list type="featureValues">
@@ -270,22 +279,22 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   elements. <gi>featureValueObservations</gi> is identifiable by a
                   unique <att>xml:id</att> attribute.</p>
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                    <wib:featureValueObservation xml:id="fv_0048" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#q_q"></name>
-               <bibl corresp="zot:Younes2013" type="publication"></bibl>
-               <placeName ref="geo:wadi_khalid"></placeName>
-               <lang target="..\profiles\vicav_profile_LBN-ATI.xml"></lang>
-               <personGrp role="tribe" corresp="pgr:arab_al_atij"></personGrp>
-               <personGrp role="age" corresp="pgr:young"></personGrp>
-               <cit xml:id="ct_0028" type="example">
-                  <quote>qalīl</quote>
-                  <cit type="translation">
-                     <quote>a little</quote>
-                  </cit>
-               </cit>
-               <note type="general">Young speakers often use q in words realized with /g/ or /ǧ/ by older speakers, ex. <foreign>gilīl</foreign> or <foreign>ǧilīl</foreign> - <foreign>qalīl</foreign> «few, little»</note>
-                    </wib:featureValueObservation>
-                  </egXML>
+                  <wib:featureValueObservation xml:id="fv_0048" status="done" resp="dmp:AID">
+                     <name type="featureValue" ref="#q_q"></name>
+                     <bibl corresp="zot:Younes2013" type="publication"></bibl>
+                     <placeName ref="geo:wadi_khalid"></placeName>
+                     <lang target="..\profiles\vicav_profile_LBN-ATI.xml"></lang>
+                     <personGrp role="tribe" corresp="pgr:arab_al_atij"></personGrp>
+                     <personGrp role="age" corresp="pgr:young"></personGrp>
+                     <cit xml:id="ct_0028" type="example">
+                        <quote>qalīl</quote>
+                        <cit type="translation">
+                           <quote>a little</quote>
+                        </cit>
+                     </cit>
+                     <note type="general">Young speakers often use q in words realized with /g/ or /ǧ/ by older speakers, ex. <foreign>gilīl</foreign> or <foreign>ǧilīl</foreign> - <foreign>qalīl</foreign> «few, little»</note>
+                  </wib:featureValueObservation>
+               </egXML>
                <div>
                   <head>Mandatory Elements</head>
                   <div>
@@ -309,7 +318,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <head>Source</head>
                      <p>Each <gi>featureValueObservation</gi> element needs to have
                         at least one source indicating where the information comes from. The
-                        most common case is <tag>bibl[type="publication"]</tag>, the
+                        most common case is <tag>bibl type="publication"</tag>, the
                         reference to the bibliography (Zotero file) being put in a <att>corresp</att> attribute.
                         However, as mentioned above the <gi>bibl</gi> element can also contain a reference to a fieldwork
                         campaign or personal communication (source file).
@@ -362,7 +371,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         literal information from the source quoted in its original form,
                         i.e. in the source's transcription system.</p>
 
-                     <p>This information is encoded making use of <tag>cit[@type="sourceRepresentation"]/quote</tag>
+                     <p>This information is encoded making use of <tag>cit[type="sourceRepresentation"]/quote</tag>
                         constructs.</p>
                   </div>
 
@@ -370,7 +379,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <head>Examples</head>
                      <p>Examples can be used to illustrate a feature value. They are
                         taken from original source and furnished with English translations.
-                        They are encoded with <tag>cit[@type="example"]/quote</tag> constructs
+                        They are encoded with <tag>cit[type="example"}/quote</tag> constructs
                         which have been chosen in analogy to common lexicographic procedures.</p>
                   </div>
 
@@ -381,12 +390,12 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      </p>
 
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-   <note type="general">
-      Rosenhouse (1984: 17) notes similar <foreign>ʔəḥna</foreign>
-      and <foreign>ʔaḥna</foreign> forms of this pronoun for the north
-      Israeli Bedouin without further specification
-</note>
-</egXML>
+                        <note type="general">
+                           Rosenhouse (1984: 17) notes similar <foreign>ʔəḥna</foreign>
+                           and <foreign>ʔaḥna</foreign> forms of this pronoun for the north
+                           Israeli Bedouin without further specification
+                        </note>
+                     </egXML>
                   </div>
                </div>
             </div>
@@ -420,7 +429,10 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <p>The <term>feature value observations</term>
                   are stored according to different features in what has been dubbed
                   in the project's internal  nomenclature  <term>feature files</term>.
-                  Hence, there is one file for every feature where the <term>feature
+                  These files have names that consist in the prefix <hi>features_</hi> and
+                  a concise title describing the contents of the documents. Document 
+                  names must not contain special characters or whitespace. Hence, 
+                  there is one file for every feature where the <term>feature
                      value observations</term> of that particular feature are stored
                   together. At the beginning of every feature file there is a prose
                   description of the phenomenon at hand followed by an explanation of the
@@ -441,21 +453,21 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   respective entries in the <name>GeoNames</name> geographical database.</p>
 
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-<place type="geo" xml:id="aaouade">
-               <placeName>Aaouade</placeName>
+                  <place type="geo" xml:id="aaouade">
+                     <placeName>Aaouade</placeName>
 
-               <location>
-                  <geo decls="#dms">34°37'34"N 36°22'38"E</geo>
-                  <geo decls="#dd">34.62611 36.37722</geo>
-                  <country key="LB">Lebanon</country>
-                  <country/>
-               </location>
+                     <location>
+                        <geo decls="#dms">34°37'34"N 36°22'38"E</geo>
+                        <geo decls="#dd">34.62611 36.37722</geo>
+                        <country key="LB">Lebanon</country>
+                        <country/>
+                     </location>
 
-               <idno type="geoNames">2266310</idno>
+                     <idno type="geoNames">2266310</idno>
 
-               <note>Location for the ʕAṛaḅ al-ʕAtīǧ</note>
-            </place>
-</egXML>
+                     <note>Location for the ʕAṛaḅ al-ʕAtīǧ</note>
+                  </place>
+               </egXML>
             </div>
 
             <div>
@@ -597,7 +609,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <elementRef key="note" maxOccurs="unbounded" minOccurs="0"/>
                                  </content>
                                  <attList>
-                                    <attDef ident="type" mode="add">
+                                    <attDef ident="type" mode="replace">
                                        <valList type="closed">
                                           <valItem ident="publication">
                                              <desc>Published written documents, recorded in
@@ -607,7 +619,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                              <desc>Personal communication with native speakers
                                                 of the variety or researchers via phone, e-mail or in person.</desc>
                                           </valItem>
-                                          <valItem ident="campaign">
+                                          <valItem ident="fieldwork">
                                              <desc>data from fieldwork conducted by members
                                                 of the team indcluding both campaigns conducted within the project and prior to it.</desc>
                                           </valItem>
@@ -618,6 +630,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <attDef ident="corresp" mode="change" usage="req"/>
                                  </attList>
                               </elementSpec>
+                              
                               <elementSpec ident="list" mode="change">
                                  <attList>
                                     <attDef ident="type" mode="replace" usage="rec">
@@ -649,17 +662,21 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                  <!-- TODO add Schematron rule to enforce @source on name[@type="dialect"]
                                  -->
                               </elementSpec>
-                              <elementSpec ident="personGrp" mode="change">
+                              <elementSpec ident="personGrp" mode="replace">
                                  <attList>
-                                    <attDef ident="type" usage="req">
+                                    <attDef ident="role" usage="req">
                                        <valList type="closed">
                                           <valItem ident="tribe"/>
-                                          <valItem ident="religousGroup"/>
+                                          <valItem ident="religion"/>
                                           <valItem ident="ageGroup"/>
                                        </valList>
                                     </attDef>
+                                    <attDef ident="corresp" usage="req" mode="add">                                                   
+                                       <datatype minOccurs="1" maxOccurs="unbounded"><dataRef name="token"/></datatype>
+                                    </attDef>                                    
                                  </attList>
                               </elementSpec>
+               
                               <elementSpec ident="settlement" mode="change" module="namesdates">
                                  <attList>
                                     <attDef ident="ref" usage="req" mode="change"/>
@@ -748,61 +765,61 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </attDef>
                                  </attList>
                               </elementSpec>
-                              <elementSpec ident="featureValueObservation" mode="add"
-                                 ns="https://wibarab.acdh.oeaw.ac.at/langDesc">
+                              
+                              <elementSpec ident="featureValueObservation" mode="add" ns="https://wibarab.acdh.oeaw.ac.at/langDesc">
                                  <gloss>feature value observation</gloss>
                                  <desc>contains data gathered by a source about the
                                     realisation of a fiven feature</desc>
                                  <classes>
                                     <memberOf key="model.divPart"/>
                                     <memberOf key="att.global"/>
-                                    <memberOf key="att.global.responsibility"/>
+                                    <!-- <memberOf key="att.global.responsibility"/> -->
                                     <memberOf key="att.docStatus"/>
                                  </classes>
                                  <content>
                                     <sequence>
                                        <elementRef key="name" maxOccurs="1" minOccurs="1"/>
-
                                        <elementRef key="bibl" minOccurs="1" maxOccurs="1"/>
-
                                        <elementRef key="placeName" maxOccurs="unbounded" minOccurs="1"/>
-
                                        <elementRef key="lang" minOccurs="0" maxOccurs="unbounded"/>
-
                                        <elementRef key="date" maxOccurs="1" minOccurs="0"/>
-                                       <elementRef key="personGrp" minOccurs="0"
-                                          maxOccurs="unbounded"/>
-                                          <elementRef key="note" minOccurs="0"
-                                             maxOccurs="unbounded"/>
-                                             <elementRef key="cit" minOccurs="0"
-                                                maxOccurs="unbounded"/>
-                                             </sequence>
-                                          </content>
-                                          <attList>
-                                             <attDef ident="xml:id" mode="change"
-                                                usage="req"/>
-                                                <attDef ident="corresp" mode="delete"/>
-                                             </attList>
+                                       <elementRef key="personGrp" minOccurs="0" maxOccurs="unbounded"/>
+                                       <elementRef key="cit" minOccurs="0" maxOccurs="unbounded"/>
+                                       <elementRef key="note" minOccurs="0" maxOccurs="unbounded"/>
+                                    </sequence>
+                                 </content>
+                                 <attList>
+                                    <attDef ident="xml:id" mode="change" usage="req"/>
+                                    <attDef ident="corresp" mode="delete"/>
+                                 </attList>
+                              </elementSpec>
 
-                                          </elementSpec>
-                                          <elementSpec ident="seg" mode="change">
-                                             <attList>
-                                                <attDef ident="type" mode="add">
-                                                   <valList type="closed">
-                                                      <valItem ident="morph"/>
-                                                   </valList>
-                                                </attDef>
-                                             </attList>
-                                          </elementSpec>
-                                          <elementSpec ident="lang" mode="change">
-                                             <classes mode="change">
-                                                <memberOf key="att.naming"/>
-                                             </classes>
-                                          </elementSpec>
+                              <elementSpec ident="seg" mode="change">
+                                 <attList>
+                                    <attDef ident="type" mode="add">
+                                       <valList type="closed">
+                                          <valItem ident="morph"/>
+                                       </valList>
+                                    </attDef>
+                                 </attList>
+                              </elementSpec>
+                              <elementSpec ident="lang" mode="change">
+                     <!--            <classes mode="change">
+                                    <memberOf key="att.naming"/>
+                                 </classes>
+                                 -->
+                                 <attList>
+                                    <attDef ident="target" mode="add">
+                                       <datatype minOccurs="1" maxOccurs="unbounded">
+                                          <dataRef key="teidata.pointer"/>
+                                       </datatype>
+                                    </attDef>
+                                 </attList>
+                              </elementSpec>
 
 
-                                       </schemaSpec>
-                                    </div>
-                                 </body>
-                              </text>
-                           </TEI>
+                           </schemaSpec>
+                        </div>
+                     </body>
+                  </text>
+               </TEI>
