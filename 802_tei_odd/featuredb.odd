@@ -371,7 +371,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         literal information from the source quoted in its original form,
                         i.e. in the source's transcription system.</p>
 
-                     <p>This information is encoded making use of <tag>cit[type="sourceRepresentation"]/quote</tag>
+                     <p>This information is encoded making use of <tag>cit[@type="sourceRepresentation"]/quote</tag>
                         constructs.</p>
                   </div>
 
@@ -379,7 +379,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <head>Examples</head>
                      <p>Examples can be used to illustrate a feature value. They are
                         taken from original source and furnished with English translations.
-                        They are encoded with <tag>cit[type="example"}/quote</tag> constructs
+                        They are encoded with <tag>cit[@type="example"]/quote</tag> constructs
                         which have been chosen in analogy to common lexicographic procedures.</p>
                   </div>
 
@@ -662,7 +662,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                  <!-- TODO add Schematron rule to enforce @source on name[@type="dialect"]
                                  -->
                               </elementSpec>
-                              <elementSpec ident="personGrp" mode="replace">
+                              <elementSpec ident="personGrp" mode="change">
                                  <attList>
                                     <attDef ident="role" usage="req">
                                        <valList type="closed">
@@ -672,11 +672,15 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                           <valItem ident="gender"/>
                                           <valItem ident="firstLanguage"/>
                                        </valList>
+                                       <remarks><p>This attribute is (mis-)used as a ad-hoc short-cut for a more verbose markup construct using <gi>trait</gi> and <gi>desc</gi>.</p><p>In a final version, all <gi>personGrp</gi> elements within a <gi>featureValueObservation</gi> will be merged into one, with their content being transformed into <gi>trait</gi> elements.</p></remarks>
                                     </attDef>
                                     <attDef ident="corresp" usage="req" mode="add">                                                   
                                        <datatype minOccurs="1" maxOccurs="unbounded"><dataRef name="token"/></datatype>
                                     </attDef>                                    
                                  </attList>
+                                 <remarks>
+                                    <p>This element is used to indicate any sociolinguistic variables which the source mentions with respect to the observed feature realization. Several <gi>personGrp</gi> elements should be interpreted as a conjunction, i.e. combined by a logical "AND".</p>
+                                 </remarks>
                               </elementSpec>
                
                               <elementSpec ident="settlement" mode="change" module="namesdates">
