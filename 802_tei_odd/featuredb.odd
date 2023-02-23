@@ -783,21 +783,17 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                        <elementRef key="placeName" maxOccurs="unbounded" minOccurs="1"/>
                                        <elementRef key="lang" minOccurs="0" maxOccurs="unbounded"/>
                                        <elementRef key="date" maxOccurs="1" minOccurs="0"/>
-                                       <elementRef key="personGrp" minOccurs="0"
-                                          maxOccurs="unbounded"/>
-                                          <elementRef key="cit" minOccurs="0"
-                                             maxOccurs="unbounded"/>
-                                              <elementRef key="note" minOccurs="0"
-                                             maxOccurs="unbounded"/>
-                                          </alternate>
-                                          </content>
-                                          <attList>
-                                             <attDef ident="xml:id" mode="change"
-                                                usage="req"/>
-                                                <attDef ident="corresp" mode="delete"/>
-                                             </attList>
-
-                              <elementSpec ident="seg" mode="change">
+                                       <elementRef key="personGrp" minOccurs="0" maxOccurs="unbounded"/>
+                                       <elementRef key="cit" minOccurs="0" maxOccurs="unbounded"/>
+                                       <elementRef key="note" minOccurs="0" maxOccurs="unbounded"/>
+                                    </alternate>
+                                 </content>
+                                 <attList>
+                                    <attDef ident="xml:id" mode="change" usage="req"/>
+                                    <attDef ident="corresp" mode="delete"/>
+                                 </attList>
+                              </elementSpec>
+                              <elementSpec ident="seg" mode="change">s
                                  <attList>
                                     <attDef ident="type" mode="add">
                                        <valList type="closed">
@@ -806,21 +802,6 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </attDef>
                                  </attList>
                               </elementSpec>
-                              <elementSpec ident="lang" mode="change">
-                     <!--            <classes mode="change">
-                                    <memberOf key="att.naming"/>
-                                 </classes>
-                                 -->
-                                 <attList>
-                                    <attDef ident="target" mode="add">
-                                       <datatype minOccurs="1" maxOccurs="unbounded">
-                                          <dataRef key="teidata.pointer"/>
-                                       </datatype>
-                                    </attDef>
-                                 </attList>
-                              </elementSpec>
-
-
                            </schemaSpec>
                         </div>
                      </body>
