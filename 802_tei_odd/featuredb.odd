@@ -665,6 +665,22 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                               <elementSpec ident="personGrp" mode="change">
                                  <attList>
                                     <attDef ident="role" usage="req">
+                                    <desc> 
+                                    <p> This is an intermediary attribute acting as an umbrella term for the different speaker traits that are specified to be relevant sociolinguistically in the sources
+                                     and therefore may be necessary for the correct and accurate interpretation of cerain featureValueObservations. The coexistence of several <gi>personGrp</gi> elements should be interpreted as a conjunction,
+                                     i.e. combined by a logical "AND", this is, it should be interpreted as the combination of these two or more roles, and would therefore exclusive of all the other roles.</p>
+                                      
+                                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                       <name type="featureValue" ref="#q_g_affr2"></name>
+              				   <personGrp role="tribe" corresp="pgr:arab_maslax"></personGrp>
+              				    <personGrp role="age" corresp="pgr:old"></personGrp>
+                                      </egXML>
+                                      
+                                       <p>For instance, in the example above the featureValue #q_g_affr2 has only been documented amongst old men that belong to the Arab Maslax tribe, 
+				       which would exclude all the women of this tribe, as well as all the middle-age and young male speakers.</p>
+                                      
+                                      
+                                     </desc>
                                        <valList type="closed">
                                           <valItem ident="tribe"/>
                                           <valItem ident="religion"/>
@@ -679,7 +695,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </attDef>                                    
                                  </attList>
                                  <remarks>
-                                    <p>This element is used to indicate any sociolinguistic variables which the source mentions with respect to the observed feature realization. Several <gi>personGrp</gi> elements should be interpreted as a conjunction, i.e. combined by a logical "AND".</p>
+                                    <p>This element is used to indicate any sociolinguistic variables which the source mentions with respect to the observed feature realization.</p>
                                  </remarks>
                               </elementSpec>
                
