@@ -45,10 +45,7 @@
    <text>
       <body xml:base="{docPath}">
          <div type="tbd">
-            <list>
-               <item></item>
-               <item></item>
-            </list>
+
          </div>
 
          <div type="featureDescription">
@@ -132,7 +129,7 @@
                <note type="exceptionNote">3</note>
             </wib:featureValueObservation>-->
 
-           <!--Incomplete <wib:featureValueObservation xml:id="fv_0060" status="draft" resp="dmp:AID">
+            <!--Incomplete <wib:featureValueObservation xml:id="fv_0060" status="draft" resp="dmp:AID">
                <name type="featureValue" ref=""></name>
                <bibl corresp="" type="fieldwork"></bibl>
                <placeName ref="geo:marouahine"></placeName>
@@ -236,7 +233,7 @@
 
             <wib:featureValueObservation xml:id="fv_0063" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#k_affr2"></name>
-               <bibl corresp="src:LEB_2022_AID" type="fieldwork"></bibl>
+               <bibl corresp="src:LEB_2022_AID" type="campaign"></bibl>
                <placeName ref="geo:khalde"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBN-KHA.xml"></lang>
                <personGrp role="tribe" corresp="pgr:arab_xalde"></personGrp>
@@ -250,7 +247,7 @@
 
             <wib:featureValueObservation xml:id="fv_0047" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#k_affr2"></name>
-               <bibl corresp="src:LEB_2022_AID" type="fieldwork"></bibl>
+               <bibl corresp="src:LEB_2022_AID" type="campaign"></bibl>
                <placeName ref="geo:ed_dhayra"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBN-ARA.xml"></lang>
                <personGrp role="tribe" corresp="pgr:aramsha_lebanon"></personGrp>
@@ -277,12 +274,12 @@
 
             <wib:featureValueObservation xml:id="fv_0071" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#k_k"></name>
-               <bibl corresp="src:LEB_2022_AID" type="fieldwork"></bibl>
+               <bibl corresp="src:LEB_2022_AID" type="campaign"></bibl>
                <placeName ref="geo:el_karantina"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"></lang>
                <personGrp role="tribe" corresp="pgr:arab_maslax"></personGrp>
-               <personGrp role="age" corresp="pgr:middle"></personGrp>
-               <personGrp role="age" corresp="pgr:young"></personGrp>
+               <personGrp role="ageGroup" corresp="pgr:middle"></personGrp>
+               <personGrp role="ageGroup" corresp="pgr:young"></personGrp>
 
                <cit xml:id="ct_0125" type="example">
                   <quote>kān</quote>
@@ -300,12 +297,12 @@
 
             <wib:featureValueObservation xml:id="fv_0009" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#k_affr2"></name>
-               <bibl corresp="src:LEB_2022_AID" type="fieldwork"></bibl>
+               <bibl corresp="src:LEB_2022_AID" type="campaign"></bibl>
                <placeName ref="geo:el_karantina"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"></lang>
                <personGrp role="tribe" corresp="pgr:arab_maslax"></personGrp>
-               <personGrp role="age" corresp="pgr:old"></personGrp>
-               <personGrp role="age" corresp="pgr:middle"></personGrp>
+               <personGrp role="ageGroup" corresp="pgr:old"></personGrp>
+               <personGrp role="ageGroup" corresp="pgr:middle"></personGrp>
                <cit xml:id="ct_0127" type="example">
                   <quote>člāb</quote>
                   <cit type="translation">
@@ -324,13 +321,13 @@
                      <quote>big (f)</quote>
                   </cit>
                </cit>
-               <note type="constraint">Middle-age speakers use affrication of k to č very rarely in natural speech but report to use it when speaking to the older generation</note>
+               <note type="constraintNote">Middle-age speakers use affrication of k to č very rarely in natural speech but report to use it when speaking to the older generation</note>
                <note type="general">Affrication of k to č is normally identified as one of the most salient features marking the "Bedouin" character of this community's variety. This feature is subject of mockery from the young generation</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0075" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#k_affr2"></name>
-               <bibl corresp="src:LEB_2022_AID" type="fieldwork"></bibl>
+               <bibl corresp="src:LEB_2022_AID" type="campaign"></bibl>
                <placeName ref="geo:khalde"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBN-ZRG.xml"></lang>
                <personGrp role="tribe" corresp="pgr:zreyjat"></personGrp>
@@ -958,7 +955,6 @@
                <bibl corresp="zot:Cantineau1937" type="publication" cert="unknown"></bibl>
                <placeName ref="geo:al_jawf"></placeName>
                <lang corresp="..\profiles\vicav_profile_SAU-GOF.xml"></lang>
-               <personGrp role="socio" corresp="pgr:bedouin"></personGrp>
                <cit xml:id="ct_0047" type="example">
                   <quote>ćáffa</quote>
                   <cit type="translation">
@@ -971,6 +967,7 @@
                      <quote>shoulder</quote>
                   </cit>
                </cit>
+               <note type="general">this realisation is perceived as bedouin</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0319" status="done" resp="dmp:AT">
@@ -978,7 +975,6 @@
                <bibl corresp="zot:Cantineau1937" type="publication" cert="unknown"></bibl>
                <placeName ref="geo:ar_rass"></placeName>
                <lang corresp="..\profiles\vicav_profile_SAU-RSS.xml"></lang>
-               <personGrp role="socio" corresp="pgr:bedouin"></personGrp>
                <cit xml:id="ct_0051" type="example">
                   <quote>ćáffa</quote>
                   <cit type="translation">
@@ -991,6 +987,7 @@
                      <quote>shoulder</quote>
                   </cit>
                </cit>
+               <note type="general">this realisation is perceived as bedouin</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0318" status="done" resp="dmp:AT">
@@ -1313,7 +1310,7 @@
                <bibl corresp="zot:Shawarbah2011" type="publication"></bibl>
                <placeName ref="geo:negev"></placeName>
                <lang corresp="..\profiles\vicav_profile_NEG-AZM.xml"></lang>
-               <personGrp role="tribe" corresp="pgr:azazmih"></personGrp>ù
+               <personGrp role="tribe" corresp="pgr:azazmih"></personGrp>
                <note type="general">feature value taken from the table inventory of consonants</note>
             </wib:featureValueObservation>
 
@@ -1737,13 +1734,13 @@
                <placeName ref="geo:jaffa"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-JFS.xml"></lang>
                <personGrp role="religion" corresp="pgr:samaritans"></personGrp>
-               <cit xml:id="ct_0133" type="example">
+               <cit xml:id="ct_0184" type="example">
                   <quote>kalb</quote>
                   <cit type="translation">
                      <quote>dog</quote>
                   </cit>
                </cit>
-               <cit xml:id="ct_0134" type="example">
+               <cit xml:id="ct_0185" type="example">
                   <quote>dīk</quote>
                   <cit type="translation">
                      <quote>rooster</quote>
@@ -1914,13 +1911,13 @@
                <placeName ref="geo:al_kuntilla"></placeName>
                <lang corresp="..\profiles\vicav_profile_EGY-HYW.xml"></lang>
                <personGrp role="tribe" corresp="pgr:ahaywat"></personGrp>
-               <cit xml:id="ct_0159" type="example">
+               <cit xml:id="ct_0186" type="example">
                   <quote>kaḏḏāb</quote>
                   <cit type="translation">
                      <quote>liar</quote>
                   </cit>
                </cit>
-               <cit xml:id="ct_0160" type="example">
+               <cit xml:id="ct_0187" type="example">
                   <quote>kiṯīr</quote>
                   <cit type="translation">
                      <quote>many</quote>
@@ -1934,13 +1931,13 @@
                <placeName ref="geo:nakhal_diqla"></placeName>
                <lang corresp="..\profiles\vicav_profile_EGY-RML.xml"></lang>
                <personGrp role="tribe" corresp="pgr:rmelat"></personGrp>
-               <cit xml:id="ct_0159" type="example">
+               <cit xml:id="ct_0188" type="example">
                   <quote>kaḏḏāb</quote>
                   <cit type="translation">
                      <quote>liar</quote>
                   </cit>
                </cit>
-               <cit xml:id="ct_0160" type="example">
+               <cit xml:id="ct_0189" type="example">
                   <quote>kiṯīr</quote>
                   <cit type="translation">
                      <quote>many</quote>
@@ -1954,13 +1951,13 @@
                <placeName ref="geo:wadi_al_arish"></placeName>
                <lang corresp="..\profiles\vicav_profile_EGY-SWR.xml"></lang>
                <personGrp role="tribe" corresp="pgr:sawarkah"></personGrp>
-               <cit xml:id="ct_0159" type="example">
+               <cit xml:id="ct_0190" type="example">
                   <quote>kaḏḏāb</quote>
                   <cit type="translation">
                      <quote>liar</quote>
                   </cit>
                </cit>
-               <cit xml:id="ct_0160" type="example">
+               <cit xml:id="ct_0191" type="example">
                   <quote>kiṯīr</quote>
                   <cit type="translation">
                      <quote>many</quote>
@@ -1974,7 +1971,7 @@
                <placeName ref="geo:rumanah"></placeName>
                <lang corresp="..\profiles\vicav_profile_EGY-AGL.xml"></lang>
                <personGrp role="tribe" corresp="pgr:agaylah"></personGrp>
-               <cit xml:id="ct_0161" type="example">
+               <cit xml:id="ct_0192" type="example">
                   <quote>kbāṛ</quote>
                   <cit type="translation">
                      <quote>old</quote>
@@ -2714,7 +2711,7 @@
                <bibl corresp="zot:Simeone-Senelle2002c" type="publication"></bibl>
                <placeName ref="geo:raheita"></placeName>
                <lang corresp="..\profiles\vicav_profile_ERI-RHY.xml"></lang>
-               <personGrp role="age" corresp="pgr:old"></personGrp>
+               <personGrp role="ageGroup" corresp="pgr:old"></personGrp>
                <cit xml:id="ct_0113" type="example">
                   <quote>óbox</quote>
                   <cit type="translation">
@@ -3025,7 +3022,6 @@
                <bibl corresp="zot:Ritt-Benmimoun2014c" type="publication"></bibl>
                <placeName ref="geo:douz"></placeName>
                <lang corresp="..\profiles\vicav_profile_TUN-MZG.xml"></lang>
-               <personGrp role="" corresp=""></personGrp>
                <cit xml:id="ct_0089" type="example">
                   <quote>kusksi</quote>
                   <cit type="translation">
@@ -3069,7 +3065,7 @@
                <lang corresp="..\profiles\vicav_profile_TUN-SUS.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0270" status="done" resp="dmp:SP">
+            <!--<wib:featureValueObservation xml:id="fv_0270" status="draft" resp="dmp:SP">
                <name type="featureValue" ref=""></name>
                <bibl corresp="zot:Zarb2023" type="publication"></bibl>
                <placeName ref="geo:testour"></placeName>
@@ -3080,7 +3076,7 @@
                      <quote>more</quote>
                   </cit>
                </cit>
-            </wib:featureValueObservation>
+            </wib:featureValueObservation>-->
 
             <!-- Incomplete<wib:featureValueObservation xml:id="fv_0242" status="draft" resp="dmp:TD">
                <name type="featureValue" ref=""></name>
@@ -3253,7 +3249,7 @@
                </cit>
             </wib:featureValueObservation>
 
-           <!-- Incomplete <wib:featureValueObservation xml:id="fv_0072" status="draft" resp="dmp:TD">
+            <!-- Incomplete <wib:featureValueObservation xml:id="fv_0072" status="draft" resp="dmp:TD">
                <name type="featureValue" ref=""></name>
                <bibl corresp="zot:Colin1921" type="publication"></bibl>
                <placeName ref="geo:branes"></placeName>
@@ -3489,7 +3485,7 @@
                <placeName ref="geo:sefrou"></placeName>
                <lang corresp="..\profiles\vicav_profile_MAR-RBS.xml"></lang>
                <personGrp role="religion" corresp="pgr:jews"></personGrp>
-               <cit type="example" xml:id="">
+               <cit xml:id="ct_0193" type="example" >
                   <quote>käf</quote>
                   <cit type="translation">
                      <quote>cave</quote>
@@ -3535,7 +3531,7 @@
 
             <wib:featureValueObservation xml:id="fv_0300" status="done" resp="dmp:VE">
                <name type="featureValue" ref="#k_k"></name>
-               <bibl corresp="src:PC_SB" type="PersonalCommunication"></bibl>
+               <bibl corresp="src:PC_SB" type="personalCommunication"></bibl>
                <placeName ref="geo:hadramaut"></placeName>
                <lang corresp="..\profiles\vicav_profile_YEM-HAD.xml"></lang>
                <cit xml:id="ct_0077" type="example">
