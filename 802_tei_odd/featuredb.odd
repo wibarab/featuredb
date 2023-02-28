@@ -664,7 +664,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                               </elementSpec>
                               <elementSpec ident="personGrp" mode="change">
                                  <attList>
-                                    <attDef ident="role" usage="req">
+                                    <attDef ident="role" usage="req" mode="replace">
                                     <desc>documents speaker traits that are specified to be relevant sociolinguistically in the sources and therefore may be necessary for the correct and accurate interpretation of cerain featureValueObservations.</desc>
                                     <valList type="closed">
                                        <valItem ident="tribe"/>
@@ -688,9 +688,11 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                           <p>This attribute is (mis-)used as a ad-hoc short-cut for a more verbose markup construct using <gi>trait</gi> and <gi>desc</gi>.</p><p>In a final version, all <gi>personGrp</gi> elements within a <gi>featureValueObservation</gi> will be merged into one, with their content being transformed into <gi>trait</gi> elements.</p>
                                        </remarks>
                                     </attDef>
+                                    <!--
                                     <attDef ident="corresp" usage="req" mode="add">                                                   
                                        <datatype minOccurs="1" maxOccurs="unbounded"><dataRef name="token"/></datatype>
                                     </attDef>                                    
+                                    -->
                                  </attList>
                               </elementSpec>
                
