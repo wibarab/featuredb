@@ -796,16 +796,20 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <memberOf key="att.docStatus"/>
                                  </classes>
                                  <content>
-                                    <alternate>
-                                       <elementRef key="name" maxOccurs="1" minOccurs="1"/>
-                                       <elementRef key="bibl" minOccurs="1" maxOccurs="1"/>
-                                       <elementRef key="placeName" maxOccurs="unbounded" minOccurs="1"/>
-                                       <elementRef key="lang" minOccurs="0" maxOccurs="unbounded"/>
-                                       <elementRef key="date" maxOccurs="1" minOccurs="0"/>
-                                       <elementRef key="personGrp" minOccurs="0" maxOccurs="unbounded"/>
-                                       <elementRef key="cit" minOccurs="0" maxOccurs="unbounded"/>
-                                       <elementRef key="note" minOccurs="0" maxOccurs="unbounded"/>
-                                    </alternate>
+                                       <sequence>
+                                          <elementRef key="name" maxOccurs="1" minOccurs="1"/>
+                                          <elementRef key="bibl" minOccurs="1" maxOccurs="1"/>
+                                          <elementRef key="placeName" maxOccurs="unbounded" minOccurs="1"/>
+                                          
+                                          <elementRef key="lang" minOccurs="0" maxOccurs="unbounded"/>
+                                          <elementRef key="date" minOccurs="0" maxOccurs="1"/>
+                                          
+                                          <alternate minOccurs="0" maxOccurs="unbounded">   
+                                             <elementRef key="personGrp" />
+                                             <elementRef key="cit"/>
+                                             <elementRef key="note"/>
+                                          </alternate>
+                                       </sequence>
                                  </content>
                                  <attList>
                                     <attDef ident="xml:id" mode="change" usage="req"/>
