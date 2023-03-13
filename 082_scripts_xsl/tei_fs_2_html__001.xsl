@@ -27,6 +27,24 @@
          </head>
 
          <body>
+            <h3>ERRORS</h3>
+            <table>
+               <xsl:for-each select="//wib:featureValueObservation[@status='done'][tei:name[string-length(@ref)=0]]">
+                  <tr>
+                     <td>done + tei:name[@ref='']</td>
+                     <td><a class="aReturnLink" href="goto:{@xml:id}">==˃ <xsl:value-of select="@xml:id"/></a></td>
+                  </tr>
+               </xsl:for-each>
+
+               <xsl:for-each select="//wib:featureValueObservation[@status='done'][tei:bibl[string-length(@corresp)=0]]">
+                  <tr>
+                     <td>done + tei:bibl[@corresp='']</td>
+                     <td><a class="aReturnLink" href="goto:{@xml:id}">==˃ <xsl:value-of select="@xml:id"/></a></td>
+                  </tr>
+               </xsl:for-each>
+            </table>
+
+
             <h3>Feature Values</h3>
             <table>
                <xsl:for-each select="//tei:list[@type='featureValues']/tei:item">
