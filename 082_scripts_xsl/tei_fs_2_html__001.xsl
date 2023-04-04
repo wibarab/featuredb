@@ -72,6 +72,22 @@
 
    <xsl:template match="tei:foreign"><i><xsl:apply-templates/></i></xsl:template>
 
+   <xsl:template match="tei:head">
+      <xsl:variable name="depth" select="count(ancestor::tei:div)"/>
+         <xsl:choose>
+            <xsl:when test="$depth=2"><h4><xsl:apply-templates/></h4></xsl:when>
+            <xsl:when test="$depth=3"><h5><xsl:apply-templates/></h5></xsl:when>
+            <xsl:when test="$depth=4"><h6><xsl:apply-templates/></h6></xsl:when>
+         </xsl:choose>
+      </xsl:template>
+   <xsl:template match="tei:p"><p><xsl:apply-templates/></p></xsl:template>
+   <xsl:template match="tei:table"><table><xsl:apply-templates/></table></xsl:template>
+   <xsl:template match="tei:row"><tr><xsl:apply-templates/></tr></xsl:template>
+   <xsl:template match="tei:cell"><td><xsl:apply-templates/></td></xsl:template>
+   <xsl:template match="tei:list"><ol><xsl:apply-templates/></ol></xsl:template>
+   <xsl:template match="tei:item"><li><xsl:apply-templates/></li></xsl:template>
+   <xsl:template match="tei:label"><xsl:apply-templates/></xsl:template>
+
    <xsl:template match="tei:seg">
    <xsl:param name="feVal"/><xsl:apply-templates/>(<xsl:value-of select="$feVal"/>)</xsl:template>
 
@@ -291,7 +307,6 @@
    <xsl:template match="tei:cit"/>
    <xsl:template match="tei:header"/>
    <xsl:template match="tei:note"/>
-   <xsl:template match="tei:label"/>
    <xsl:template match="tei:particDesc"/>
    <xsl:template match="tei:prefixDef/tei:p"/>
    <xsl:template match="tei:string"/>
