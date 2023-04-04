@@ -21,6 +21,7 @@
          </sourceDesc>
       </fileDesc>
 
+      
       <encodingDesc>
 
          <listPrefixDef xml:id="listPrefixDef">
@@ -60,6 +61,9 @@
                </item>
                <item xml:id="pr_s2f_ntii">
                   <label>ntī</label>
+               </item>
+               <item xml:id="pr_s2f_nchi">
+                  <label>nči</label>
                </item>
                <item xml:id="pr_s2f_ntiih">
                   <label>ntīh</label>
@@ -1367,13 +1371,6 @@
                <lang corresp="..\profiles\vicav_profile_PSE-ISW.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0226" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
-               <placeName ref="geo:toledo"></placeName>
-               <lang corresp="..\profiles\vicav_profile_ESP-TLD.xml"></lang>
-            </wib:featureValueObservation>
-
             <wib:featureValueObservation xml:id="fv_0228" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#pr_s2f_intii"></name>
                <bibl corresp="zot:Benkato2014" type="publication"></bibl>
@@ -1381,13 +1378,23 @@
                <lang corresp="..\profiles\vicav_profile_LBY-BGZ.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0229" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
+            <wib:featureValueObservation xml:id="fv_0229" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#pr_s2f_inti"></name>
+               <bibl corresp="zot:Caubet2004e" type="publication"></bibl>
                <placeName ref="geo:fezzan"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBY-FZN.xml"></lang>
+               <note type="general">This is based on the sedentary dialects of Ǧdid and Brak</note>
             </wib:featureValueObservation>
 
+                <wib:featureValueObservation xml:id="fv_0065" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#pr_s2f_inti"></name>
+               <bibl corresp="zot:Caubet2004e" type="publication"></bibl>
+               <placeName ref="geo:fezzan"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBY-FZN.xml"></lang>
+               <note type="general">This is based on the bedouin dialect of Brak</note>
+            </wib:featureValueObservation>
+            
+            
             <wib:featureValueObservation xml:id="fv_0232" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#pr_s2f_anti"></name>
                <cit type="sourceRepresentation"><quote>ənti</quote></cit>
@@ -1397,13 +1404,7 @@
                <personGrp role="religion" corresp="pgr:jews"></personGrp>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0233" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
-               <placeName ref="geo:murzuq"></placeName>
-               <lang corresp="..\profiles\vicav_profile_LBY-MRQ.xml"></lang>
-            </wib:featureValueObservation>
-
+          
             <wib:featureValueObservation xml:id="fv_0003" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#pr_s2f_inti"></name>
                <cit type="sourceRepresentation"><quote>enti</quote></cit>
@@ -1412,19 +1413,14 @@
                <lang corresp="..\profiles\vicav_profile_LBY-MSR.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0234" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
+            <wib:featureValueObservation xml:id="fv_0059" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#pr_s2f_inti"></name>
+               <bibl corresp="zot:Pereira2010" type="publication"></bibl>
                <placeName ref="geo:tripoli_libya"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBY-TPL.xml"></lang>
+               <cit type="sourceRepresentation"><quote>ənti</quote></cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0235" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
-               <placeName ref="geo:zintan"></placeName>
-               <lang corresp="..\profiles\vicav_profile_LBY-ZTN.xml"></lang>
-            </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0322" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#pr_s2f_anti"></name>
@@ -1440,9 +1436,9 @@
                <lang corresp="..\profiles\vicav_profile_SAU-DHF.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0092" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication" cert="unknown"></bibl>
+            <wib:featureValueObservation xml:id="fv_0068" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#pr_s2f_inti"></name>
+               <bibl corresp="zot:Omar1975" type="publication" cert="unknown"></bibl>
                <placeName ref="geo:hejaz"></placeName>
                <lang corresp="..\profiles\vicav_profile_SAU-HJZ.xml"></lang>
             </wib:featureValueObservation>
@@ -1457,18 +1453,11 @@
                <personGrp role="tribe" corresp="pgr:al_murra"></personGrp>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0321" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication" cert="unknown"></bibl>
+            <wib:featureValueObservation xml:id="fv_0321" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#pr_s2f_inti"></name>
+               <bibl corresp="zot:Abboud1964" type="publication" cert="unknown"></bibl>
                <placeName ref="geo:najd"></placeName>
                <lang corresp="..\profiles\vicav_profile_SAU-NJD.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0183" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
-               <placeName ref="geo:kurdufan"></placeName>
-               <lang corresp="..\profiles\vicav_profile_SDN-KDF.xml"></lang>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0185" status="done" resp="dmp:SK">
@@ -1486,32 +1475,18 @@
                <lang corresp="..\profiles\vicav_profile_TCD-ODY.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0190" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0190" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#pr_s2f_inti"></name>
                <bibl corresp="zot:Décobert1985" type="publication"></bibl>
                <placeName ref="geo:massaguet"></placeName>
                <lang corresp="..\profiles\vicav_profile_TCD-ABK.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0191" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0191" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#pr_s2f_inti"></name>
                <bibl corresp="zot:Décobert1985" type="publication"></bibl>
                <placeName ref="geo:bout_el_fil"></placeName>
                <lang corresp="..\profiles\vicav_profile_TCD-BBL.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0195" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Décobert1985" type="publication"></bibl>
-               <placeName ref="geo:djedaa"></placeName>
-               <lang corresp="..\profiles\vicav_profile_TCD-ULR.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0215" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Elramli" type="publication"></bibl>
-               <placeName ref="geo:al_khums"></placeName>
-               <lang corresp="..\profiles\vicav_profile_LBY-KMS.xml"></lang>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0230" status="done" resp="dmp:SK">
@@ -1521,8 +1496,8 @@
                <lang corresp="..\profiles\vicav_profile_LBY-JBL.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0320" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0320" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#pr_s2f_inti"></name>
                <bibl corresp="zot:Holes1990" type="publication" cert="unknown"></bibl>
                <placeName ref="geo:gulf"></placeName>
                <lang corresp="..\profiles\vicav_profile_SAU-GLF.xml"></lang>
@@ -1586,13 +1561,6 @@
                <lang corresp="..\profiles\vicav_profile_SDN-KDG.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0192" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Owens1985a" type="publication"></bibl>
-               <placeName ref="geo:ndjamena"></placeName>
-               <lang corresp="..\profiles\vicav_profile_TCD-NDJ.xml"></lang>
-            </wib:featureValueObservation>
-
             <wib:featureValueObservation xml:id="fv_0180" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#pr_s2f_inti"></name>
                <bibl corresp="zot:Owens1993c" type="publication"></bibl>
@@ -1636,8 +1604,8 @@
                <lang corresp="..\profiles\vicav_profile_SDN-OMD.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0231" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0231" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#pr_s2f_nchi"></name>
                <bibl corresp="zot:Yoda2005" type="publication"></bibl>
                <placeName ref="geo:tripoli_libya"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBY-JTP.xml"></lang>
@@ -1650,6 +1618,7 @@
                <placeName ref="geo:khashm"></placeName>
                <placeName ref="geo:sawakin"></placeName>
                <lang corresp="..\profiles\vicav_profile_SDN-RYD.xml"></lang>
+                 <personGrp role="tribe" corresp="#rashayda_sudan"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0176" status="draft" resp="dmp:SK">
@@ -1909,8 +1878,8 @@
                <lang corresp="..\profiles\vicav_profile_MAR-TZA.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0315" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0315" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#pr_s2f_ntiiya"></name>
                <bibl corresp="zot:Behnstedt2002c" type="publication"></bibl>
                <placeName ref="geo:oujda"></placeName>
                <lang corresp="..\profiles\vicav_profile_MAR-OJD.xml"></lang>
