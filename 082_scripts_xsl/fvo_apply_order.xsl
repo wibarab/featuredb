@@ -24,7 +24,7 @@
             <xsl:copy-of select="tei:personGrp"/>
             <xsl:copy-of select="tei:cit"/>
             <xsl:copy-of select="tei:note"/>
-            <xsl:copy-of select="*[not(self::tei:name|self::tei:bibl|self::tei:placeName|self::tei:lang|self::tei:date|self::personGrp|self::note)]"/>
+            <xsl:copy-of select="*[not(self::tei:name|self::tei:bibl|self::tei:placeName|self::tei:lang|self::tei:date|self::tei:personGrp|self::tei:note|self::tei:cit)]"/>
         </xsl:copy>
     </xsl:template>
 </xsl:stylesheet>
