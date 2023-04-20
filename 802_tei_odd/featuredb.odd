@@ -537,13 +537,14 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         it can be realised (<soCalled>feature values</soCalled>) in a <tag>list type="features"</tag>
                         and  documented observations of this specific feature in literature or in the data
                         collected in the fieldwork of WIBARAB.</desc>
-                    <attList>
+                    <!-- removing xsi:schemaLocation attribute (added for the RNG schema) because it should not be re-defined in the XSD output -->
+                     <!--<attList>
                        <attDef ns="http://www.w3.org/2001/XMLSchema-instance" ident="schemaLocation" mode="add">
                           <datatype minOccurs="1" maxOccurs="2">
                              <dataRef key="teidata.pointer"/>
                           </datatype>
                        </attDef>
-                    </attList>
+                       </attList>-->
                   </elementSpec>
                   <moduleRef key="tei"/>
                   <moduleRef key="dictionaries" include="lang"/>
