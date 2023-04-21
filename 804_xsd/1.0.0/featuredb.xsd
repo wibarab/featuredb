@@ -9,7 +9,7 @@
    <xs:import namespace="https://wibarab.acdh.oeaw.ac.at/langDesc"
               schemaLocation="langdesc.tmp"/>
    <!--
-    Schema generated from ODD source 2023-04-20T15:16:01Z. .
+    Schema generated from ODD source 2023-04-21T10:50:37Z. .
     TEI Edition: Version 4.5.0. Last updated on
             25th October 2022, revision 3e98e619e
     TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.5.0/
@@ -523,9 +523,34 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
          </xs:simpleType>
       </xs:attribute>
    </xs:attributeGroup>
+   <xs:attributeGroup name="tei_att.global.source.attributes">
+      <xs:attributeGroup ref="tei:tei_att.global.source.attribute.source"/>
+   </xs:attributeGroup>
+   <xs:attributeGroup name="tei_att.global.source.attribute.source">
+      <xs:attribute name="source">
+         <xs:annotation>
+            <xs:documentation>specifies the source from which some aspect of this element is drawn.</xs:documentation>
+         </xs:annotation>
+         <xs:simpleType>
+            <xs:restriction>
+               <xs:simpleType>
+                  <xs:list>
+                     <xs:simpleType>
+                        <xs:restriction base="xs:anyURI">
+                           <xs:pattern value="\S+"/>
+                        </xs:restriction>
+                     </xs:simpleType>
+                  </xs:list>
+               </xs:simpleType>
+               <xs:minLength value="1"/>
+            </xs:restriction>
+         </xs:simpleType>
+      </xs:attribute>
+   </xs:attributeGroup>
    <xs:attributeGroup name="tei_att.global.attributes">
       <xs:attributeGroup ref="tei:tei_att.global.linking.attributes"/>
       <xs:attributeGroup ref="tei:tei_att.global.responsibility.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.global.source.attributes"/>
       <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlid"/>
       <xs:attributeGroup ref="tei:tei_att.global.attribute.xmllang"/>
       <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlbase"/>
@@ -3596,7 +3621,20 @@ Suggested values include: 1] spoken (spoken); 2] thought (thought); 3] written (
             <xs:group ref="tei:tei_model.attributable"/>
             <xs:element ref="tei:q"/>
          </xs:choice>
-         <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+         <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlid"/>
+         <xs:attributeGroup ref="tei:tei_att.global.attribute.xmllang"/>
+         <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlbase"/>
+         <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlspace"/>
+         <xs:attributeGroup ref="tei:tei_att.global.linking.attribute.corresp"/>
+         <xs:attributeGroup ref="tei:tei_att.global.responsibility.attribute.cert"/>
+         <xs:attributeGroup ref="tei:tei_att.global.responsibility.attribute.resp"/>
+         <xs:attribute name="source">
+            <xs:simpleType>
+               <xs:restriction base="xs:anyURI">
+                  <xs:pattern value="\S+"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:attribute>
          <xs:attribute name="type">
             <xs:annotation>
                <xs:documentation/>
@@ -3618,13 +3656,6 @@ Suggested values include: 1] spoken (spoken); 2] thought (thought); 3] written (
                         <xs:documentation/>
                      </xs:annotation>
                   </xs:enumeration>
-               </xs:restriction>
-            </xs:simpleType>
-         </xs:attribute>
-         <xs:attribute name="source">
-            <xs:simpleType>
-               <xs:restriction base="xs:anyURI">
-                  <xs:pattern value="\S+"/>
                </xs:restriction>
             </xs:simpleType>
          </xs:attribute>
@@ -4271,6 +4302,7 @@ Measures]</xs:documentation>
          <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlbase"/>
          <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlspace"/>
          <xs:attributeGroup ref="tei:tei_att.global.responsibility.attribute.cert"/>
+         <xs:attributeGroup ref="tei:tei_att.global.source.attribute.source"/>
          <xs:attributeGroup ref="tei:tei_att.datable.attribute.calendar"/>
          <xs:attributeGroup ref="tei:tei_att.datable.w3c.attribute.when"/>
          <xs:attributeGroup ref="tei:tei_att.datable.w3c.attribute.notBefore"/>
@@ -4466,11 +4498,24 @@ Measures]</xs:documentation>
       <xs:complexType>
          <xs:complexContent>
             <xs:extension base="tei:tei_macro.specialPara">
-               <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+               <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlid"/>
+               <xs:attributeGroup ref="tei:tei_att.global.attribute.xmllang"/>
+               <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlbase"/>
+               <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlspace"/>
+               <xs:attributeGroup ref="tei:tei_att.global.linking.attribute.corresp"/>
+               <xs:attributeGroup ref="tei:tei_att.global.responsibility.attribute.cert"/>
+               <xs:attributeGroup ref="tei:tei_att.global.responsibility.attribute.resp"/>
                <xs:attributeGroup ref="tei:tei_att.placement.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.pointing.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.written.attributes"/>
                <xs:attributeGroup ref="tei:tei_att.anchoring.attributes"/>
+               <xs:attribute name="source">
+                  <xs:simpleType>
+                     <xs:restriction base="xs:anyURI">
+                        <xs:pattern value="\S+"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:attribute>
                <xs:attribute name="type">
                   <xs:annotation>
                      <xs:documentation/>
@@ -4492,13 +4537,6 @@ Measures]</xs:documentation>
                               <xs:documentation/>
                            </xs:annotation>
                         </xs:enumeration>
-                     </xs:restriction>
-                  </xs:simpleType>
-               </xs:attribute>
-               <xs:attribute name="source">
-                  <xs:simpleType>
-                     <xs:restriction base="xs:anyURI">
-                        <xs:pattern value="\S+"/>
                      </xs:restriction>
                   </xs:simpleType>
                </xs:attribute>
@@ -4852,6 +4890,7 @@ Elements]</xs:documentation>
                <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlbase"/>
                <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlspace"/>
                <xs:attributeGroup ref="tei:tei_att.global.responsibility.attribute.cert"/>
+               <xs:attributeGroup ref="tei:tei_att.global.source.attribute.source"/>
                <xs:attributeGroup ref="tei:tei_att.datable.attribute.period"/>
                <xs:attribute name="type">
                   <xs:annotation>
@@ -5019,6 +5058,7 @@ Elements]</xs:documentation>
          <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlbase"/>
          <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlspace"/>
          <xs:attributeGroup ref="tei:tei_att.global.responsibility.attribute.cert"/>
+         <xs:attributeGroup ref="tei:tei_att.global.source.attribute.source"/>
          <xs:attribute name="corresp" use="required">
             <xs:annotation>
                <xs:documentation>(corresponds) points to elements that correspond to the current element in some way.</xs:documentation>

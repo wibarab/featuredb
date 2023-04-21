@@ -537,7 +537,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         it can be realised (<soCalled>feature values</soCalled>) in a <tag>list type="features"</tag>
                         and  documented observations of this specific feature in literature or in the data
                         collected in the fieldwork of WIBARAB.</desc>
-                    <!-- removing xsi:schemaLocation attribute (added for the RNG schema) because it should not be re-defined in the XSD output -->
+                    <!-- DS 2023-04-21 removing xsi:schemaLocation attribute (added for the RNG schema) because it should not be re-defined in the XSD output -->
                      <!--<attList>
                        <attDef ns="http://www.w3.org/2001/XMLSchema-instance" ident="schemaLocation" mode="add">
                           <datatype minOccurs="1" maxOccurs="2">
@@ -589,7 +589,6 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                  <attDef ident="key" mode="delete"/>
                               </attList>
                            </classSpec>
-                           <classSpec type="atts" ident="att.global.source" mode="delete"/>
                            <classSpec type="atts" ident="att.global.rendition" mode="delete"/>
                            <classSpec type="atts" ident="att.global.linking" mode="change">
                               <attList>
@@ -797,7 +796,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                           <valItem ident="general"/>
                                        </valList>
                                     </attDef>
-                                    <attDef ident="source" mode="add" usage="opt">
+                                    <attDef ident="source" mode="replace" usage="opt">
                                        <desc><att>source</att> on <tag>cit type="example"</tag> documents the source an example is taken from. 
                                           In case the value of it points to a <gi>person</gi> element, that means that the
                                           example is provided by an informant. When it's absent, the example is drawn from source indicated 
@@ -848,7 +847,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                           <valItem ident="translation"/>
                                        </valList>
                                     </attDef>
-                                    <attDef ident="source" mode="add" usage="opt">
+                                    <attDef ident="source" mode="replace" usage="opt">
                                        <desc><att>source</att> on <tag>cit type="example"</tag> documents the source an example is taken from. 
                                           In case the value of it points to a <gi>person</gi> element, that means that the
                                           example is provided by an informant. When it's absent, the example is drawn from source indicated 

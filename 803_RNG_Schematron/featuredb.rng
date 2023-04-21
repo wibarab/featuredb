@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2023-04-20T15:15:16Z. .
+Schema generated from ODD source 2023-04-21T10:50:25Z. .
 TEI Edition: Version 4.5.0. Last updated on
         25th October 2022, revision 3e98e619e
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.5.0/
@@ -495,9 +495,43 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
          </attribute>
       </optional>
    </define>
+   <define name="tei_att.global.source.attributes">
+      <ref name="tei_att.global.source.attribute.source"/>
+   </define>
+   <define name="tei_att.global.source.attribute.source">
+      <optional>
+         <attribute name="source">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the source from which some aspect of this element is drawn.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="featuredb-att.global.source-source-only_1_ODD_source-constraint-rule-5">
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
+                context="tei:*[@source]">
+         <sch:let name="srcs" value="tokenize( normalize-space(@source),' ')"/>
+         <sch:report test="( self::tei:classRef               | self::tei:dataRef               | self::tei:elementRef               | self::tei:macroRef               | self::tei:moduleRef               | self::tei:schemaSpec )               and               $srcs[2]">
+              When used on a schema description element (like
+              <sch:value-of select="name(.)"/>), the @source attribute
+              should have only 1 value. (This one has <sch:value-of select="count($srcs)"/>.)
+            </sch:report>
+      </sch:rule>
+   </pattern>
    <define name="tei_att.global.attributes">
       <ref name="tei_att.global.linking.attributes"/>
       <ref name="tei_att.global.responsibility.attributes"/>
+      <ref name="tei_att.global.source.attributes"/>
       <ref name="tei_att.global.attribute.xmlid"/>
       <ref name="tei_att.global.attribute.xmllang"/>
       <ref name="tei_att.global.attribute.xmlbase"/>
@@ -713,7 +747,7 @@ Suggested values include: 1] m (metre); 2] kg (kilogram); 3] s (second); 4] Hz (
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="featuredb-att.measurement-att-measurement-unitRef-constraint-rule-5">
+            id="featuredb-att.measurement-att-measurement-unitRef-constraint-rule-6">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -834,7 +868,7 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="featuredb-att.pointing-targetLang-targetLang-constraint-rule-6">
+            id="featuredb-att.pointing-targetLang-targetLang-constraint-rule-7">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -934,7 +968,7 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
       </optional>
    </define>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="featuredb-att.spanning-spanTo-spanTo-points-to-following-constraint-rule-7">
+            id="featuredb-att.spanning-spanTo-spanTo-points-to-following-constraint-rule-8">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -3184,7 +3218,7 @@ Suggested values include: 1] page; 2] column; 3] line; 4] book; 5] poem; 6] cant
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(paragraph) marks paragraphs in prose. [3.1. Paragraphs 7.2.5. Speech Contents]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-p-abstractModel-structure-p-in-ab-or-p-constraint-report-5">
+                  id="featuredb-p-abstractModel-structure-p-in-ab-or-p-constraint-report-6">
             <rule context="tei:p">
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -3196,7 +3230,7 @@ Suggested values include: 1] page; 2] column; 3] line; 4] book; 5] poem; 6] cant
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-p-abstractModel-structure-p-in-l-or-lg-constraint-report-6">
+                  id="featuredb-p-abstractModel-structure-p-in-l-or-lg-constraint-report-7">
             <rule context="tei:p">
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -3366,7 +3400,22 @@ Suggested values include: 1] spoken (spoken); 2] thought (thought); 3] written (
                <ref name="tei_q"/>
             </choice>
          </oneOrMore>
-         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.global.attribute.xmlid"/>
+         <ref name="tei_att.global.attribute.xmllang"/>
+         <ref name="tei_att.global.attribute.xmlbase"/>
+         <ref name="tei_att.global.attribute.xmlspace"/>
+         <ref name="tei_att.global.linking.attribute.corresp"/>
+         <ref name="tei_att.global.responsibility.attribute.cert"/>
+         <ref name="tei_att.global.responsibility.attribute.resp"/>
+         <optional>
+            <attribute name="source">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                  <code xmlns="http://www.w3.org/1999/xhtml">@source</code> on `&lt;cit type="example"&gt;` documents the source an example is taken from. In case the value of it points to a <code xmlns="http://www.w3.org/1999/xhtml">&lt;person&gt;</code> element, that means that the example is provided by an informant. When it's absent, the example is drawn from source indicated by the <code xmlns="http://www.w3.org/1999/xhtml">&lt;bibl&gt;</code> element in the parent <code xmlns="http://www.w3.org/1999/xhtml">&lt;featureValueObservation&gt;</code>.</a:documentation>
+               <data type="anyURI">
+                  <param name="pattern">\S+</param>
+               </data>
+            </attribute>
+         </optional>
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -3378,15 +3427,6 @@ Suggested values include: 1] spoken (spoken); 2] thought (thought); 3] written (
                   <value>translation</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                </choice>
-            </attribute>
-         </optional>
-         <optional>
-            <attribute name="source">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <code xmlns="http://www.w3.org/1999/xhtml">@source</code> on `&lt;cit type="example"&gt;` documents the source an example is taken from. In case the value of it points to a <code xmlns="http://www.w3.org/1999/xhtml">&lt;person&gt;</code> element, that means that the example is provided by an informant. When it's absent, the example is drawn from source indicated by the <code xmlns="http://www.w3.org/1999/xhtml">&lt;bibl&gt;</code> element in the parent <code xmlns="http://www.w3.org/1999/xhtml">&lt;featureValueObservation&gt;</code>.</a:documentation>
-               <data type="anyURI">
-                  <param name="pattern">\S+</param>
-               </data>
             </attribute>
          </optional>
          <empty/>
@@ -3413,7 +3453,7 @@ Suggested values include: 1] spoken (spoken); 2] thought (thought); 3] written (
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(description) contains a short description of the purpose, function, or use of its parent element, or when the parent is a documentation element, describes or defines the object being documented.  [22.4.1. Description of Components]</a:documentation>
          <ref name="tei_macro.limitedContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-desc-deprecationInfo-only-in-deprecated-constraint-rule-8">
+                  id="featuredb-desc-deprecationInfo-only-in-deprecated-constraint-rule-9">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -3490,7 +3530,7 @@ Suggested values include: 1] spoken (spoken); 2] thought (thought); 3] written (
             </attribute>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-rt-target-rt-target-not-span-constraint-report-7">
+                  id="featuredb-rt-target-rt-target-not-span-constraint-report-8">
             <rule context="tei:rt/@target">
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -3725,7 +3765,7 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
                  prefix="tei"
                  uri="http://www.tei-c.org/ns/1.0"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-name-fvo-name-constraint-rule-9">
+                  id="featuredb-name-fvo-name-constraint-rule-10">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -3905,6 +3945,7 @@ Measures]</a:documentation>
          <ref name="tei_att.global.attribute.xmlbase"/>
          <ref name="tei_att.global.attribute.xmlspace"/>
          <ref name="tei_att.global.responsibility.attribute.cert"/>
+         <ref name="tei_att.global.source.attribute.source"/>
          <ref name="tei_att.datable.attribute.calendar"/>
          <ref name="tei_att.datable.w3c.attribute.when"/>
          <ref name="tei_att.datable.w3c.attribute.notBefore"/>
@@ -3950,7 +3991,7 @@ Measures]</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(pointer) pointer to one featureValue in the list of featureValues [3.7. Simple Links and Cross-References 16.1. Links]</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-ptr-ptrAtts-constraint-report-12">
+                  id="featuredb-ptr-ptrAtts-constraint-report-13">
             <rule context="tei:ptr">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -3972,7 +4013,7 @@ attributes @target and @cRef may be supplied on <name/>.</report>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference) defines a reference to another location, possibly modified by additional text or comment. [3.7. Simple Links and Cross-References 16.1. Links]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-ref-refAtts-constraint-report-13">
+                  id="featuredb-ref-refAtts-constraint-report-14">
             <rule context="tei:ref">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4043,7 +4084,7 @@ attributes @target and @cRef may be supplied on <name/>.</report>
             </zeroOrMore>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-list-gloss-list-must-have-labels-constraint-rule-10">
+                  id="featuredb-list-gloss-list-must-have-labels-constraint-rule-11">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4076,7 +4117,7 @@ attributes @target and @cRef may be supplied on <name/>.</report>
                  prefix="tei"
                  uri="http://www.tei-c.org/ns/1.0"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-item-fv-item-constraint-rule-11">
+                  id="featuredb-item-fv-item-constraint-rule-12">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4140,11 +4181,26 @@ attributes @target and @cRef may be supplied on <name/>.</report>
       <element name="note">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(note) contains a note or annotation. [3.9.1. Notes and Simple Annotation 2.2.6. The Notes Statement 3.12.2.8. Notes and Statement of Language 9.3.5.4. Notes within Entries]</a:documentation>
          <ref name="tei_macro.specialPara"/>
-         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.global.attribute.xmlid"/>
+         <ref name="tei_att.global.attribute.xmllang"/>
+         <ref name="tei_att.global.attribute.xmlbase"/>
+         <ref name="tei_att.global.attribute.xmlspace"/>
+         <ref name="tei_att.global.linking.attribute.corresp"/>
+         <ref name="tei_att.global.responsibility.attribute.cert"/>
+         <ref name="tei_att.global.responsibility.attribute.resp"/>
          <ref name="tei_att.placement.attributes"/>
          <ref name="tei_att.pointing.attributes"/>
          <ref name="tei_att.written.attributes"/>
          <ref name="tei_att.anchoring.attributes"/>
+         <optional>
+            <attribute name="source">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                  <code xmlns="http://www.w3.org/1999/xhtml">@source</code> on `&lt;cit type="example"&gt;` documents the source an example is taken from. In case the value of it points to a <code xmlns="http://www.w3.org/1999/xhtml">&lt;person&gt;</code> element, that means that the example is provided by an informant. When it's absent, the example is drawn from source indicated by the <code xmlns="http://www.w3.org/1999/xhtml">&lt;bibl&gt;</code> element in the parent <code xmlns="http://www.w3.org/1999/xhtml">&lt;featureValueObservation&gt;</code>.</a:documentation>
+               <data type="anyURI">
+                  <param name="pattern">\S+</param>
+               </data>
+            </attribute>
+         </optional>
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -4156,15 +4212,6 @@ attributes @target and @cRef may be supplied on <name/>.</report>
                   <value>general</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                </choice>
-            </attribute>
-         </optional>
-         <optional>
-            <attribute name="source">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <code xmlns="http://www.w3.org/1999/xhtml">@source</code> on `&lt;cit type="example"&gt;` documents the source an example is taken from. In case the value of it points to a <code xmlns="http://www.w3.org/1999/xhtml">&lt;person&gt;</code> element, that means that the example is provided by an informant. When it's absent, the example is drawn from source indicated by the <code xmlns="http://www.w3.org/1999/xhtml">&lt;bibl&gt;</code> element in the parent <code xmlns="http://www.w3.org/1999/xhtml">&lt;featureValueObservation&gt;</code>.</a:documentation>
-               <data type="anyURI">
-                  <param name="pattern">\S+</param>
-               </data>
             </attribute>
          </optional>
          <empty/>
@@ -4533,6 +4580,7 @@ Elements]</a:documentation>
          <ref name="tei_att.global.attribute.xmlbase"/>
          <ref name="tei_att.global.attribute.xmlspace"/>
          <ref name="tei_att.global.responsibility.attribute.cert"/>
+         <ref name="tei_att.global.source.attribute.source"/>
          <ref name="tei_att.datable.attribute.period"/>
          <optional>
             <attribute name="type">
@@ -4660,6 +4708,7 @@ Elements]</a:documentation>
          <ref name="tei_att.global.attribute.xmlbase"/>
          <ref name="tei_att.global.attribute.xmlspace"/>
          <ref name="tei_att.global.responsibility.attribute.cert"/>
+         <ref name="tei_att.global.source.attribute.source"/>
          <attribute name="corresp">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(corresponds) points to elements that correspond to the current element in some way.</a:documentation>
             <list>
@@ -4757,7 +4806,7 @@ Elements]</a:documentation>
             </choice>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-relatedItem-targetorcontent1-constraint-report-16">
+                  id="featuredb-relatedItem-targetorcontent1-constraint-report-17">
             <rule context="tei:relatedItem">
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -4799,7 +4848,7 @@ relatedItem element must be empty</sch:report>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-l-abstractModel-structure-l-in-l-constraint-report-17">
+                  id="featuredb-l-abstractModel-structure-l-in-l-constraint-report-18">
             <rule context="tei:l">
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -4861,7 +4910,7 @@ relatedItem element must be empty</sch:report>
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-lg-abstractModel-structure-lg-in-l-constraint-report-18">
+                  id="featuredb-lg-abstractModel-structure-lg-in-l-constraint-report-19">
             <rule context="tei:lg">
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -6407,7 +6456,7 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</a:doc
             </optional>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-div-abstractModel-structure-div-in-l-or-lg-constraint-report-20">
+                  id="featuredb-div-abstractModel-structure-div-in-l-or-lg-constraint-report-21">
             <rule context="tei:div">
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -6419,7 +6468,7 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</a:doc
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-div-abstractModel-structure-div-in-ab-or-p-constraint-report-21">
+                  id="featuredb-div-abstractModel-structure-div-in-ab-or-p-constraint-report-22">
             <rule context="tei:div">
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -7434,6 +7483,7 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</a:doc
          <ref name="tei_att.global.attribute.xmlspace"/>
          <ref name="tei_att.global.responsibility.attribute.cert"/>
          <ref name="tei_att.global.responsibility.attribute.resp"/>
+         <ref name="tei_att.global.source.attribute.source"/>
          <ref name="tei_att.docStatus.attributes"/>
          <attribute name="xml:id">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) provides a unique identifier for the element bearing the attribute.</a:documentation>
