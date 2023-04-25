@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2023-04-21T10:50:25Z. .
+Schema generated from ODD source 2023-04-21T22:29:50Z. .
 TEI Edition: Version 4.5.0. Last updated on
         25th October 2022, revision 3e98e619e
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.5.0/
@@ -3764,21 +3764,104 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
                  xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
                  prefix="tei"
                  uri="http://www.tei-c.org/ns/1.0"/>
+         <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                 xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
+                 prefix="fn"
+                 uri="http://www.w3.org/2005/xpath-function"/>
+         <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                 xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
+                 prefix="wib"
+                 uri="https://wibarab.acdh.oeaw.ac.at/langDesc"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="featuredb-name-fvo-name-constraint-rule-10">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
-                      context="tei:name[@type = 'featureValue']">
-               <sch:let name="idRef" value="@ref"/>
-               <sch:let name="targetID" value="substring-after(@ref,'#')"/>
-               <sch:let name="target" value="root()//*[@xml:id = $targetID]"/>
-               <sch:report test="$idRef = ''">missing or empty @ref on featureValue name</sch:report>
+                      context="tei:name[@type = 'featureValue']/@ref">
+               <sch:extends rule="reference"/>
+            </sch:rule>
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
+                      context="tei:placeName/@ref">
+               <sch:extends rule="reference"/>
+            </sch:rule>
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
+                      context="tei:bibl/@corresp">
+               <sch:extends rule="reference"/>
+            </sch:rule>
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
+                      context="tei:lang/@corresp">
+               <sch:extends rule="reference"/>
+            </sch:rule>
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
+                      context="wib:featureValueObservation/@resp">
+               <sch:extends rule="reference"/>
+            </sch:rule>
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
+                      id="reference"
+                      abstract="true">
+               <sch:let name="idRef" value="."/>
+               <sch:let name="localID"
+                        value="if (matches($idRef,'^#')) then substring-after($idRef,'#') else ()"/>
+               <sch:let name="prefixDefs" value="root()//tei:prefixDef"/>
+               <sch:let name="prefixRegex"
+                        value="concat('^(',string-join($prefixDefs/@ident,'|'),'):(.+)$')"/>
+               <sch:let name="prefixMatch"
+                        value="if (exists($prefixDefs)) then analyze-string($idRef, $prefixRegex)//*:group[1] else ()"/>
+               <sch:let name="referenceMatch"
+                        value="if (exists($prefixDefs)) then analyze-string($idRef, $prefixRegex)//*:group[2] else ()"/>
+               <sch:let name="prefixDef"
+                        value="if (exists($prefixMatch)) then $prefixDefs[@ident = $prefixMatch] else ()"/>
+               <sch:let name="prefixGroups"
+                        value="if (exists($prefixMatch)) then analyze-string($referenceMatch, $prefixDef/@matchPattern)//*:group else ()"/>
+               <sch:let name="grpr1"
+                        value="if (exists($prefixGroups[@nr = '1'])) then replace($prefixDef/@replacementPattern,'\$1', $prefixGroups[@nr = '1']) else $prefixDef/@replacementPattern"/>
+               <sch:let name="grpr2"
+                        value="if (exists($prefixGroups[@nr = '2'])) then replace($grpr1,'\$2', $prefixGroups[@nr = '2']) else $grpr1"/>
+               <sch:let name="grpr3"
+                        value="if (exists($prefixGroups[@nr = '3'])) then replace($grpr2,'\$3', $prefixGroups[@nr = '3']) else $grpr2"/>
+               <sch:let name="grpr4"
+                        value="if (exists($prefixGroups[@nr = '4'])) then replace($grpr3,'\$4', $prefixGroups[@nr = '4']) else $grpr3"/>
+               <sch:let name="grpr5"
+                        value="if (exists($prefixGroups[@nr = '5'])) then replace($grpr4,'\$5', $prefixGroups[@nr = '5']) else $grpr4"/>
+               <sch:let name="grpr6"
+                        value="if (exists($prefixGroups[@nr = '6'])) then replace($grpr5,'\$6', $prefixGroups[@nr = '6']) else $grpr5"/>
+               <sch:let name="grpr7"
+                        value="if (exists($prefixGroups[@nr = '7'])) then replace($grpr6,'\$7', $prefixGroups[@nr = '7']) else $grpr6"/>
+               <sch:let name="grpr8"
+                        value="if (exists($prefixGroups[@nr = '8'])) then replace($grpr7,'\$8', $prefixGroups[@nr = '8']) else $grpr7"/>
+               <sch:let name="grpr9"
+                        value="if (exists($prefixGroups[@nr = '9'])) then replace($grpr8,'\$9', $prefixGroups[@nr = '9']) else $grpr8"/>
+               <sch:let name="grpr10"
+                        value="if (exists($prefixGroups[@nr = '10'])) then replace($grpr9,'\$10', $prefixGroups[@nr = '10']) else $grpr9"/>
+               <sch:let name="targetRaw"
+                        value="if ($localID != '') then $idRef else if (exists($prefixDef)) then $grpr10 else $idRef"/>
+               <sch:let name="target" value="translate($targetRaw,'\','/')"/>
+               <sch:let name="targetResolves"
+                        value="if ($localID != '' ) then exists(root()//*[@xml:id = $localID]) else if (matches($idRef,'^(http|https)')) then true() else doc-available(resolve-uri($target, base-uri($idRef)))"/>
+               <sch:report test="$target = ''">unexpected target "<sch:value-of select="$idRef"/>" in reference <sch:value-of select="local-name($idRef)"/>
+               </sch:report>
+               <sch:assert test="$targetResolves">the target "<sch:value-of select="$target"/>" of pointer "<sch:value-of select="$idRef"/>" cannot be resolved</sch:assert>
                <sch:report test="count(tokenize($idRef,' ')) gt 1">pointer "<sch:value-of select="$idRef"/>" contains more than one references (whitespace)</sch:report>
-               <sch:report test="not(matches($idRef, '^#.+$'))">pointer "<sch:value-of select="$idRef"/>" is not a local fragment identifier / does not start with a #</sch:report>
-               <sch:report test="not(exists($target))">pointer "<sch:value-of select="$idRef"/>" points nowhere.</sch:report>
-               <sch:assert test="$target/self::tei:item[parent::tei:list/@type = 'featureValues']">the element targeted by pointer "<sch:value-of select="@ref"/>" must be an item in the featureValues list.</sch:assert>
             </sch:rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
@@ -3991,7 +4074,7 @@ Measures]</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(pointer) pointer to one featureValue in the list of featureValues [3.7. Simple Links and Cross-References 16.1. Links]</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-ptr-ptrAtts-constraint-report-13">
+                  id="featuredb-ptr-ptrAtts-constraint-report-11">
             <rule context="tei:ptr">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4013,7 +4096,7 @@ attributes @target and @cRef may be supplied on <name/>.</report>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference) defines a reference to another location, possibly modified by additional text or comment. [3.7. Simple Links and Cross-References 16.1. Links]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-ref-refAtts-constraint-report-14">
+                  id="featuredb-ref-refAtts-constraint-report-12">
             <rule context="tei:ref">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4084,7 +4167,7 @@ attributes @target and @cRef may be supplied on <name/>.</report>
             </zeroOrMore>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-list-gloss-list-must-have-labels-constraint-rule-11">
+                  id="featuredb-list-gloss-list-must-have-labels-constraint-rule-16">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4117,7 +4200,7 @@ attributes @target and @cRef may be supplied on <name/>.</report>
                  prefix="tei"
                  uri="http://www.tei-c.org/ns/1.0"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-item-fv-item-constraint-rule-12">
+                  id="featuredb-item-fv-item-constraint-rule-17">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -4806,7 +4889,7 @@ Elements]</a:documentation>
             </choice>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-relatedItem-targetorcontent1-constraint-report-17">
+                  id="featuredb-relatedItem-targetorcontent1-constraint-report-15">
             <rule context="tei:relatedItem">
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -4848,7 +4931,7 @@ relatedItem element must be empty</sch:report>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-l-abstractModel-structure-l-in-l-constraint-report-18">
+                  id="featuredb-l-abstractModel-structure-l-in-l-constraint-report-16">
             <rule context="tei:l">
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -4910,7 +4993,7 @@ relatedItem element must be empty</sch:report>
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-lg-abstractModel-structure-lg-in-l-constraint-report-19">
+                  id="featuredb-lg-abstractModel-structure-lg-in-l-constraint-report-17">
             <rule context="tei:lg">
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -6456,7 +6539,7 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</a:doc
             </optional>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-div-abstractModel-structure-div-in-l-or-lg-constraint-report-21">
+                  id="featuredb-div-abstractModel-structure-div-in-l-or-lg-constraint-report-19">
             <rule context="tei:div">
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -6468,7 +6551,7 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</a:doc
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-div-abstractModel-structure-div-in-ab-or-p-constraint-report-22">
+                  id="featuredb-div-abstractModel-structure-div-in-ab-or-p-constraint-report-20">
             <rule context="tei:div">
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"

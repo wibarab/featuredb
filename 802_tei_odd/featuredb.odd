@@ -691,16 +691,58 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                               <elementSpec ident="name" mode="change">
                                  <constraintSpec ident="fvo-name" scheme="schematron">
                                     <constraint>
+                                       
                                        <sch:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>
-                                       <sch:rule context="tei:name[@type = 'featureValue']">
-                                          <sch:let name="idRef" value="@ref"/>
-                                          <sch:let name="targetID" value="substring-after(@ref,'#')"/>
-                                          <sch:let name="target" value="root()//*[@xml:id = $targetID]"/>
-                                          <sch:report test="$idRef = ''">missing or empty @ref on featureValue name</sch:report>
+                                       <sch:ns prefix="fn" uri="http://www.w3.org/2005/xpath-function"/>
+                                       <sch:ns prefix="wib" uri="https://wibarab.acdh.oeaw.ac.at/langDesc"/>
+                                       <sch:rule context="tei:name[@type = 'featureValue']/@ref">
+                                          <sch:extends rule="reference"/>
+                                       </sch:rule>
+                                       <sch:rule context="tei:placeName/@ref">
+                                          <sch:extends rule="reference"/>
+                                       </sch:rule>
+                                       <sch:rule context="tei:bibl/@corresp">
+                                          <sch:extends rule="reference"/>
+                                       </sch:rule>
+                                       <sch:rule context="tei:lang/@corresp">
+                                          <sch:extends rule="reference"/>
+                                       </sch:rule>
+                                       <sch:rule context="wib:featureValueObservation/@resp">
+                                          <sch:extends rule="reference"/>
+                                       </sch:rule>
+                                       
+                                       <sch:rule id="reference" abstract="true">
+                                          <sch:let name="idRef" value="."/>
+                                          <sch:let name="localID"
+                                             value="if (matches($idRef,'^#')) then substring-after($idRef,'#') else ()"/>
+                                          <sch:let name="prefixDefs" value="root()//tei:prefixDef"/>
+                                          <sch:let name="prefixRegex"
+                                             value="concat('^(',string-join($prefixDefs/@ident,'|'),'):(.+)$')"/>
+                                          <sch:let name="prefixMatch"
+                                             value="if (exists($prefixDefs)) then analyze-string($idRef, $prefixRegex)//*:group[1] else ()"/>
+                                          <sch:let name="referenceMatch"
+                                             value="if (exists($prefixDefs)) then analyze-string($idRef, $prefixRegex)//*:group[2] else ()"/>
+                                          <sch:let name="prefixDef"
+                                             value="if (exists($prefixMatch)) then $prefixDefs[@ident = $prefixMatch] else ()"/>
+                                          <sch:let name="prefixGroups"
+                                             value="if (exists($prefixMatch)) then analyze-string($referenceMatch, $prefixDef/@matchPattern)//*:group else ()"/>
+                                          <sch:let name="grpr1" value="if (exists($prefixGroups[@nr = '1'])) then replace($prefixDef/@replacementPattern,'\$1', $prefixGroups[@nr = '1']) else $prefixDef/@replacementPattern"/>
+                                          <sch:let name="grpr2" value="if (exists($prefixGroups[@nr = '2'])) then replace($grpr1,'\$2', $prefixGroups[@nr = '2']) else $grpr1"/>
+                                          <sch:let name="grpr3" value="if (exists($prefixGroups[@nr = '3'])) then replace($grpr2,'\$3', $prefixGroups[@nr = '3']) else $grpr2"/>
+                                          <sch:let name="grpr4" value="if (exists($prefixGroups[@nr = '4'])) then replace($grpr3,'\$4', $prefixGroups[@nr = '4']) else $grpr3"/>
+                                          <sch:let name="grpr5" value="if (exists($prefixGroups[@nr = '5'])) then replace($grpr4,'\$5', $prefixGroups[@nr = '5']) else $grpr4"/>
+                                          <sch:let name="grpr6" value="if (exists($prefixGroups[@nr = '6'])) then replace($grpr5,'\$6', $prefixGroups[@nr = '6']) else $grpr5"/>
+                                          <sch:let name="grpr7" value="if (exists($prefixGroups[@nr = '7'])) then replace($grpr6,'\$7', $prefixGroups[@nr = '7']) else $grpr6"/>
+                                          <sch:let name="grpr8" value="if (exists($prefixGroups[@nr = '8'])) then replace($grpr7,'\$8', $prefixGroups[@nr = '8']) else $grpr7"/>
+                                          <sch:let name="grpr9"  value="if (exists($prefixGroups[@nr = '9'])) then replace($grpr8,'\$9', $prefixGroups[@nr = '9']) else $grpr8"/>
+                                          <sch:let name="grpr10" value="if (exists($prefixGroups[@nr = '10'])) then replace($grpr9,'\$10', $prefixGroups[@nr = '10']) else $grpr9"/>
+                                          <sch:let name="targetRaw" value="if ($localID != '') then $idRef else if (exists($prefixDef)) then $grpr10 else $idRef"/>
+                                          <sch:let name="target" value="translate($targetRaw,'\','/')"/>
+                                          <sch:let name="targetResolves" value="if ($localID != '' ) then exists(root()//*[@xml:id = $localID]) else if (matches($idRef,'^(http|https)')) then true() else doc-available(resolve-uri($target, base-uri($idRef)))"/>
+                                          <sch:report test="$target = ''">unexpected target "<sch:value-of select="$idRef"/>" in reference <sch:value-of select="local-name($idRef)"/>
+                                          </sch:report>
+                                          <sch:assert test="$targetResolves">the target "<sch:value-of select="$target"/>" of pointer "<sch:value-of select="$idRef"/>" cannot be resolved</sch:assert>
                                           <sch:report test="count(tokenize($idRef,' ')) gt 1">pointer "<sch:value-of select="$idRef"/>" contains more than one references (whitespace)</sch:report>
-                                          <sch:report test="not(matches($idRef, '^#.+$'))">pointer "<sch:value-of select="$idRef"/>" is not a local fragment identifier / does not start with a #</sch:report>
-                                          <sch:report test="not(exists($target))">pointer "<sch:value-of select="$idRef"/>" points nowhere.</sch:report>
-                                          <sch:assert test="$target/self::tei:item[parent::tei:list/@type = 'featureValues']">the element targeted by pointer "<sch:value-of select="@ref"/>" must be an item in the featureValues list.</sch:assert>
                                        </sch:rule>
                                     </constraint>
                                  </constraintSpec>
