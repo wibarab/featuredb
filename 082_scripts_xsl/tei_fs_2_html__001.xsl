@@ -45,16 +45,6 @@
             </table>
 
 
-            <h3>Feature Values</h3>
-            <table>
-               <xsl:for-each select="//tei:list[@type='featureValues']/tei:item">
-                  <tr>
-                     <td><xsl:value-of select="@xml:id"/></td>
-                     <td><xsl:value-of select="tei:label"/></td>
-                  </tr>
-               </xsl:for-each>
-             </table>
-
             <h3>Open issues</h3>
             <xsl:for-each select="//tei:div[@type='tbd']/tei:list/tei:item">
                <div><xsl:value-of select="."/></div>
@@ -298,6 +288,20 @@
             </xsl:if>
 
          </table>
+      </div>
+   </xsl:template>
+
+   <xsl:template match="tei:divGen[@type='featureValues']">
+      <div>
+         <table>
+            <xsl:for-each select="//tei:list[@type='featureValues']/tei:item">
+                <tr>
+                   <td><xsl:value-of select="@xml:id"/></td>
+                   <td><xsl:value-of select="tei:label"/></td>
+                   <td><xsl:value-of select="tei:desc"/></td>
+                </tr>
+             </xsl:for-each>
+           </table>
       </div>
    </xsl:template>
 
