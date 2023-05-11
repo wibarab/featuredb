@@ -5,6 +5,8 @@
     xmlns:w="https://wibarab.acdh.oeaw.ac.at/langDesc"
     exclude-result-prefixes="#all"
     version="2.0">
+    <xsl:strip-space elements="*"/>
+    
     <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
         <desc>re-orders the content of fvo elements to fit the schema</desc>
     </doc>
@@ -13,7 +15,8 @@
             <xsl:apply-templates select="node() | @*"/>
         </xsl:copy>
     </xsl:template>
-    <xsl:template match="w:featureValueObservation">
+    
+    <xsl:template match="w:featureValueObservation" xml:space="preserve">
         <xsl:copy>
             <xsl:copy-of select="@*"/>
             <xsl:copy-of select="tei:name"/>
