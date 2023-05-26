@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="../../082_scripts_xsl/tei_fs_2_html__001.xsl"?>
 <?xslt inPathSegment="\010_manannot\" outPathSegment="\106_html\"?>
 <?snippets fn="snippets_wibarab_001.xml" path="{filePath}\..\..\880_conf\"?>
-<?processor name="saxon" removePreserveFromXML="true" removePreserveFromXSLT="true"?>
+<?processor name="saxon" removePreserveFromXML="true" remFovePreserveFromXSLT="true"?>
 <?attributeAssignments fn="enricher_attributes.xml" path="{filePath}\..\..\880_conf\"?>
 <?shortCuts fn="wibarab_shortCuts" path="{filePath}\..\..\880_conf\"?>
 <TEI xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../../804_xsd/1.0.0/featuredb.xsd" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -1112,11 +1112,12 @@
             </wib:featureValueObservation>
 
 
-            <wib:featureValueObservation xml:id="fv_0229" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
+            <wib:featureValueObservation xml:id="fv_0229" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#bp_s3mc_a"></name>
+               <bibl corresp="zot:Caubet2004e" type="publication"></bibl>
                <placeName ref="geo:fezzan"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBY-FZN.xml"></lang>
+               <cit type="sourceRepresentation"><quote>/-ä/</quote></cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0232" status="draft" resp="dmp:RZ">
@@ -1127,12 +1128,7 @@
                <personGrp role="religion" corresp="pgr:jews"></personGrp>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0233" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
-               <placeName ref="geo:murzuq"></placeName>
-               <lang corresp="..\profiles\vicav_profile_LBY-MRQ.xml"></lang>
-            </wib:featureValueObservation>
+          
 
             <wib:featureValueObservation xml:id="fv_0003" status="draft" resp="dmp:RZ">
                <name type="featureValue" ref=""></name>
@@ -1148,13 +1144,7 @@
                <lang corresp="..\profiles\vicav_profile_LBY-TPL.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0235" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
-               <placeName ref="geo:zintan"></placeName>
-               <lang corresp="..\profiles\vicav_profile_LBY-ZTN.xml"></lang>
-            </wib:featureValueObservation>
-
+   
             <wib:featureValueObservation xml:id="fv_0322" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#bp_s3mc_uh"></name>
                <bibl corresp="zot:Prochazka1988b" type="publication" cert="unknown"></bibl>
@@ -1216,26 +1206,34 @@
                <cit type="sourceRepresentation"><quote>Prochazka describes two close reflexes: /-uh/ and /-ūh/</quote></cit>
             </wib:featureValueObservation>
             
-            <wib:featureValueObservation xml:id="fv_0334" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Behnstedt2011b" type="publication"></bibl>
+            <wib:featureValueObservation xml:id="fv_0334" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#bp_s3mc_uu"></name>
+               <bibl corresp="zot:Alfaifí2010" type="publication"></bibl>
                <placeName ref="geo:jabal_fayfa"></placeName>
                <lang corresp="..\profiles\vicav_profile_SAU-FYF.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0228" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0228" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#bp_s3mc_ah"></name>
                <bibl corresp="zot:Benkato2014" type="publication"></bibl>
                <placeName ref="geo:benghazi"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBY-BGZ.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0004" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Bettega2016a" type="publication"></bibl>
+            <wib:featureValueObservation xml:id="fv_0004" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#bp_s3mc_ih"></name>
+               <bibl corresp="zot:Johnstone1967b" type="publication"></bibl>
                <placeName ref="geo:doha"></placeName>
                <lang corresp="..\profiles\vicav_profile_QTR-DHA.xml"></lang>
             </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="fv_0293" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#bp_s3mc_ah"></name>
+               <bibl corresp="zot:Johnstone1967b" type="publication"></bibl>
+               <placeName ref="geo:doha"></placeName>
+               <lang corresp="..\profiles\vicav_profile_QTR-DHA.xml"></lang>
+            </wib:featureValueObservation>
+
 
             <wib:featureValueObservation xml:id="fv_0215" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#bp_s3mc_a"></name>
@@ -1258,22 +1256,32 @@
                <lang corresp="..\profiles\vicav_profile_SAU-GLF.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0324" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0324" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#bp_s3mc_ah"></name>
                <bibl corresp="zot:Holes2006a" type="publication" cert="unknown"></bibl>
                <placeName ref="geo:manama"></placeName>
                <lang corresp="..\profiles\vicav_profile_BHR-ARB.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0323" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0292" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#bp_s3mc_ah"></name>
                <bibl corresp="zot:Holes2006a" type="publication" cert="unknown"></bibl>
                <placeName ref="geo:muharraq"></placeName>
                <lang corresp="..\profiles\vicav_profile_BHR-BHN.xml"></lang>
+               <note type="general">This reflex is found in the dialect of the Baḥarna in  the villages and the city</note>
             </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="fv_0323" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#bp_s3mc_uh"></name>
+               <bibl corresp="zot:Holes2006a" type="publication" cert="unknown"></bibl>
+               <placeName ref="geo:muharraq"></placeName>
+               <lang corresp="..\profiles\vicav_profile_BHR-BHN.xml"></lang>
+               <note type="exceptionNote">This reflex is only found in the village dialect of the Baḥarna</note>
+            </wib:featureValueObservation>
+            
 
-            <wib:featureValueObservation xml:id="fv_0002" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0002" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#bp_s3mc_ah"></name>
                <bibl corresp="zot:Holes2007c" type="publication"></bibl>
                <placeName ref="geo:kuwait_city"></placeName>
                <lang corresp="..\profiles\vicav_profile_KWT-KWC.xml"></lang>
@@ -1286,8 +1294,8 @@
                <lang corresp="..\profiles\vicav_profile_SAU-MTR.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0335" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0335" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#bp_s3mc_ih"></name>
                <bibl corresp="zot:Johnstone1961" type="publication" cert="unknown"></bibl>
                <placeName ref="geo:kuwait"></placeName>
                <lang corresp="..\profiles\vicav_profile_SAU-DWS.xml"></lang>
@@ -1329,8 +1337,8 @@
                <lang corresp="..\profiles\vicav_profile_SAU-QWZ.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0327" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0327" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#bp_s3mc_ih"></name>
                <bibl corresp="zot:Prochazka1988b" type="publication" cert="unknown"></bibl>
                <placeName ref="geo:tanuma"></placeName>
                <lang corresp="..\profiles\vicav_profile_SAU-TAN.xml"></lang>
@@ -1995,9 +2003,9 @@
                <lang corresp="..\profiles\vicav_profile_DZA-ORN.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0227" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
+            <wib:featureValueObservation xml:id="fv_0227" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#bp_s3mc_u"></name>
+               <bibl corresp="zot:D_Anna2020c" type="publication"></bibl>
                <placeName ref="geo:mazara_del_vallo"></placeName>
                <lang corresp="..\profiles\vicav_profile_ITA-MDV.xml"></lang>
             </wib:featureValueObservation>
@@ -2044,9 +2052,9 @@
                <lang corresp="..\profiles\vicav_profile_MAR-STT.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0258" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
+            <wib:featureValueObservation xml:id="fv_0258" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#bp_s3mc_u"></name>
+               <bibl corresp="src:PC_RZ" type="publication"></bibl>
                <placeName ref="geo:malta"></placeName>
                <lang corresp="..\profiles\vicav_profile_MLT-MAL.xml"></lang>
             </wib:featureValueObservation>
