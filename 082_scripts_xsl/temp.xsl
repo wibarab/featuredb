@@ -2,7 +2,7 @@
    <xsl:output method="xml" indent="no" encoding="UTF-8"/>
    <xsl:strip-space elements="*"/>
 
-   <xsl:variable name="basePath">features_q.xml</xsl:variable>
+   <xsl:variable name="basePath">features_djim.xml</xsl:variable>
    <xsl:param name="dialectsPath">../010_manannot/vicav_dialects.xml</xsl:param>
    <xsl:param name="zoteroPath">../010_manannot/vicav_biblio_tei_zotero.xml</xsl:param>
    <xsl:param name="geoDataPath">../010_manannot/vicav_geodata.xml</xsl:param>
