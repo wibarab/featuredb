@@ -1,11 +1,11 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../../082_scripts_xsl/tei_fs_2_html__001.xsl"?>
 <?xslt inPathSegment="\010_manannot\" outPathSegment="\106_html\"?>
 <?snippets fn="snippets_wibarab_001.xml" path="{filePath}\..\..\880_conf\"?>
 <?processor name="saxon" removePreserveFromXML="true" removePreserveFromXSLT="true"?>
 <?attributeAssignments fn="enricher_attributes.xml" path="{filePath}\..\..\880_conf\"?>
 <?shortCuts fn="wibarab_shortCuts" path="{filePath}\..\..\880_conf\"?>
-<TEI xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../../804_xsd/1.0.0/featuredb.xsd" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../../804_xsd/1.0.0/featuredb.xsd">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -14,7 +14,7 @@
          </titleStmt>
          <publicationStmt>
             <publisher>{publisher}</publisher>
-            <date when="2022-10-03"></date>
+            <date when="2022-10-03"/>
          </publicationStmt>
          <sourceDesc>
             <p>his is the feature-file for the 3rd person singular communis pronoun.</p>
@@ -24,18 +24,18 @@
       <encodingDesc>
 
          <listPrefixDef xml:id="listPrefixDef">
-            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab-dmp.xml#$1"></prefixDef>
-            <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_biblio_tei_zotero.xml#$1"></prefixDef>
-            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_dialects.xml#$1"></prefixDef>
-            <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"></prefixDef>
-            <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1"></prefixDef>
-            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"></prefixDef>
+            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab-dmp.xml#$1"/>
+            <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_biblio_tei_zotero.xml#$1"/>
+            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_dialects.xml#$1"/>
+            <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
+            <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1"/>
+            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"/>
          </listPrefixDef>
       </encodingDesc>
 
       <revisionDesc status="draft">
          <change when="2022-08-17" who="dmp:">c</change>
-         <change when="2022-08-17" who="dmp: "></change>
+         <change when="2022-08-17" who="dmp: "/>
          <change when="2022-08-17" who="dmp:">For EGY-___ there are no values found</change>
       </revisionDesc>
    </teiHeader>
@@ -66,190 +66,32 @@
          <div type="description">
          </div>
 
-         <div type="featureValueObservations" xmlns:tei="http://www.tei-c.org/ns/1.0">
+         <div xmlns:tei="http://www.tei-c.org/ns/1.0" type="featureValueObservations">
 
             
             <wib:featureValueObservation xml:id="fv_0176" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Youssi2002" type="publication"></bibl>
-               <placeName ref="geo:obock"></placeName>
-               <lang corresp="..\profiles\vicav_profile_DJI-OBK.xml"></lang>
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:Youssi2002" type="publication"/>
+               <placeName ref="geo:obock"/>
+               <lang corresp="..\profiles\vicav_profile_DJI-OBK.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0182" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_s3c_hu"></name>
+               <name type="featureValue" ref="#pr_s3c_hu"/>
+               <bibl corresp="zot:Roset2018" type="publication"/>
+               <placeName ref="geo:darfur"/>
+               <lang corresp="..\profiles\vicav_profile_SDN-DRF.xml"/>
                <cit type="sourceRepresentation"><quote>hu(wa)</quote></cit>
-               <bibl corresp="zot:Roset2018" type="publication"></bibl>
-               <placeName ref="geo:darfur"></placeName>
-               <lang corresp="..\profiles\vicav_profile_SDN-DRF.xml"></lang>
             </wib:featureValueObservation>
             
             <wib:featureValueObservation xml:id="fv_0000" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_s3c_hi"></name>
+               <name type="featureValue" ref="#pr_s3c_hi"/>
+               <bibl corresp="zot:Roset2018" type="publication"/>
+               <placeName ref="geo:darfur"/>
+               <lang corresp="..\profiles\vicav_profile_SDN-DRF.xml"/>
                <cit type="sourceRepresentation"><quote>hi(ya)</quote></cit>
-               <bibl corresp="zot:Roset2018" type="publication"></bibl>
-               <placeName ref="geo:darfur"></placeName>
-               <lang corresp="..\profiles\vicav_profile_SDN-DRF.xml"></lang>
                <note type="exceptionNote">Seldomly used, hu(wa) is most common.</note>
             </wib:featureValueObservation>
-           
-            <wib:featureValueObservation xml:id="fv_0216" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
-               <placeName ref="geo:cyprus"></placeName>
-               <lang corresp="..\profiles\vicav_profile_CYP-KOR.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0219" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Laraba1981" type="publication"></bibl>
-               <placeName ref="geo:constantine"></placeName>
-               <lang corresp="..\profiles\vicav_profile_DZA-CON.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0223" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Grand_Henry1979" type="publication"></bibl>
-               <placeName ref="geo:saoura"></placeName>
-               <lang corresp="..\profiles\vicav_profile_DZA-SAO.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0224" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Marçais1908" type="publication"></bibl>
-               <placeName ref="geo:saida"></placeName>
-               <lang corresp="..\profiles\vicav_profile_DZA-SDA.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0236" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Vicente2000" type="publication"></bibl>
-               <placeName ref="geo:anjra"></placeName>
-               <lang corresp="..\profiles\vicav_profile_MAR-ANJ.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0237" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Francisco2019" type="publication"></bibl>
-               <placeName ref="geo:zaouia_akermoud"></placeName>
-               <lang corresp="..\profiles\vicav_profile_MAR-CDM.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0238" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Kampffmeyer1912" type="publication"></bibl>
-               <placeName ref="geo:casablanca-settat"></placeName>
-               <lang corresp="..\profiles\vicav_profile_MAR-CHA.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0239" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
-               <placeName ref="geo:chefchaouen"></placeName>
-               <lang corresp="..\profiles\vicav_profile_MAR-CHF.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0240" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Aguadé2003b" type="publication"></bibl>
-               <placeName ref="geo:casablanca"></placeName>
-               <lang corresp="..\profiles\vicav_profile_MAR-CSB.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0241" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Aguadé2000b" type="publication"></bibl>
-               <placeName ref="geo:oued_draa"></placeName>
-               <lang corresp="..\profiles\vicav_profile_MAR-DRA.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0242" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
-               <placeName ref="geo:fez"></placeName>
-               <lang corresp="..\profiles\vicav_profile_MAR-FES.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0243" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Zoubid2011" type="publication"></bibl>
-               <placeName ref="geo:hyayna"></placeName>
-               <lang corresp="..\profiles\vicav_profile_MAR-HYN.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0244" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Colin1921" type="publication"></bibl>
-               <placeName ref="geo:jbala"></placeName>
-               <lang corresp="..\profiles\vicav_profile_MAR-JBL.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0247" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Vicente2003b" type="publication"></bibl>
-               <placeName ref="geo:masmouda"></placeName>
-               <lang corresp="..\profiles\vicav_profile_MAR-MSM.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0315" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Behnstedt2002c" type="publication"></bibl>
-               <placeName ref="geo:oujda"></placeName>
-               <lang corresp="..\profiles\vicav_profile_MAR-OJD.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0248" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Heath2002" type="publication"></bibl>
-               <placeName ref="geo:rabat"></placeName>
-               <lang corresp="..\profiles\vicav_profile_MAR-RBJ.xml"></lang>
-               <personGrp role="religion" corresp="pgr:jews"></personGrp>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0249" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Stillman1988" type="publication"></bibl>
-               <placeName ref="geo:sefrou"></placeName>
-               <lang corresp="..\profiles\vicav_profile_MAR-RBS.xml"></lang>
-               <personGrp role="religion" corresp="pgr:jews"></personGrp>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0250" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Heath2002" type="publication"></bibl>
-               <placeName ref="geo:rabat"></placeName>
-               <lang corresp="..\profiles\vicav_profile_MAR-RBT.xml"></lang>
-            </wib:featureValueObservation>
-            
-
-            <wib:featureValueObservation xml:id="fv_0252" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
-               <placeName ref="geo:tafilalet"></placeName>
-               <lang corresp="..\profiles\vicav_profile_MAR-SMS.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0253" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Moscoso2002a" type="publication"></bibl>
-               <placeName ref="geo:souss_massa"></placeName>
-               <lang corresp="..\profiles\vicav_profile_MAR-SOS.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0254" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
-               <placeName ref="geo:settat"></placeName>
-               <lang corresp="..\profiles\vicav_profile_MAR-STT.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0255" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Heath2002" type="publication"></bibl>
-               <placeName ref="geo:tanger"></placeName>
-               <lang corresp="..\profiles\vicav_profile_MAR-TGR.xml"></lang>
-            </wib:featureValueObservation>
-
                                                        
          </div>
       </body>

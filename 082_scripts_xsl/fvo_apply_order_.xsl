@@ -10,7 +10,7 @@
 		</xsl:copy>
 	</xsl:template>
 	<xsl:template match="w:featureValueObservation">
-		<xsl:variable name="ordered" select="tei:name | tei:bibl | tei:placeName | tei:lang | tei:date | tei:personGrp | tei:cit | tei:note" as="element()*"/>
+		<xsl:variable name="ordered" select="tei:name, tei:bibl, tei:placeName, tei:lang, tei:date, tei:personGrp, tei:cit, tei:note" as="element()*"/>
 		<xsl:variable name="theRest" select="* except $ordered"/>
 		<xsl:variable name="outerIndent" select="tokenize(preceding-sibling::text()[1],'&#xA;')[last()]"/>
 		<xsl:variable name="indent" select="translate(text()[1],'&#xA;','')"/>
@@ -19,7 +19,7 @@
 			<xsl:text>
 </xsl:text>
 			<xsl:copy-of select="$indent"/>
-			<xsl:for-each select="$ordered|$theRest">
+			<xsl:for-each select="$ordered, $theRest">
 				<xsl:sequence select="."/>
 				<xsl:text>
 </xsl:text>
