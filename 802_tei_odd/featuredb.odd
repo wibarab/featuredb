@@ -3,7 +3,7 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml"
 schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?renderer type="macro" href="{appPath}macros/macro_odd_transform_002.mcr"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" >
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -39,7 +39,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../010_manannot/wibarab_dmp.xml#$1"/>
-            <prefixDef ident="zotid" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_biblio_tei_zotero.xml#$1"/>
+            <prefixDef ident="zotid" matchPattern="^(.+)$" replacementPattern="../0e10_manannot/vicav_biblio_tei_zotero.xml#$1"/>
             <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_dialects.xml#$1"/>
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_geodata.xml#$1"/>
          </listPrefixDef>
@@ -59,6 +59,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
             to "authors" to teiHeader</change>
          <change when="2023-02-01" who="dmp:CM">adding more structure</change>
          <change when="2023-02-01" who="dmp:CM">expanding details of FVO element</change>
+         <change when="2023-03-16" who="dmp:DS">fixing order in FVO element</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -275,8 +276,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   the language profile of the variety to which it is customarily assigned.</p>
 
                <p>The occurrence of multiple values or of multiple sources for a specific place or variety will then
-                  result in the creation of additional <gi>featureValueObservations</gi>
-                  elements. <gi>featureValueObservations</gi> is identifiable by a
+                  result in the creation of additional <gi>featureValueObservation</gi>
+                  elements. Each <gi>featureValueObservation</gi> is identifiable by a
                   unique <att>xml:id</att> attribute.</p>
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <wib:featureValueObservation xml:id="fv_0048" status="done" resp="dmp:AID">
@@ -399,6 +400,12 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   </div>
                </div>
             </div>
+            
+            <div>
+               <head>Discussion Section</head>
+               <p>Each feature document can contain a section (<tag>div type="description"</tag>) with a description of the linguistic feature it describes, which is located right after the feature value list.</p>
+               <p>In order to include a copy of the feature value list in the description, one may use the <gi>divGen</gi> element with an <att>type</att> attribute with the value <val>featureValues</val>.</p>
+            </div>
          </div>
 
          <div>
@@ -520,7 +527,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <schemaSpec ident="featuredb" prefix="tei_" start="TEI" xml:lang="en"
                defaultExceptions="https://id.acdh.oeaw.ac.at/langDesc http://www.tei-c.org/ns/1.0
                teix:egXML">
-               <moduleRef key="core" exclude="abbr add addrLine address author analytic
+               <moduleRef key="core" exclude="abbr add addrLine address author analytic divGen
                   editor email gap head imprint item label list listBibl measure measureGrp mentioned
                   monogr note num pb postBox postCode ptr pubPlace publisher ref resp respStmt
                   rs series street term title unclear unit"/>
@@ -530,23 +537,38 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         it can be realised (<soCalled>feature values</soCalled>) in a <tag>list type="features"</tag>
                         and  documented observations of this specific feature in literature or in the data
                         collected in the fieldwork of WIBARAB.</desc>
+                    <!-- DS 2023-04-21 removing xsi:schemaLocation attribute (added for the RNG schema) because it should not be re-defined in the XSD output -->
+                     <!--<attList>
+                       <attDef ns="http://www.w3.org/2001/XMLSchema-instance" ident="schemaLocation" mode="add">
+                          <datatype minOccurs="1" maxOccurs="2">
+                             <dataRef key="teidata.pointer"/>
+                          </datatype>
+                       </attDef>
+                       </attList>-->
                   </elementSpec>
                   <moduleRef key="tei"/>
                   <moduleRef key="dictionaries" include="lang"/>
-                  <moduleRef key="header" include="abstract appInfo application availibility
+                  <moduleRef key="header" include="abstract appInfo application availability
                      catDesc catRef category change classCode classDecl correspAction correspContext correspDesc
                      creation distributor edition editionStmt encodingDesc extent fileDesc funder geoDecl
                      hyphenation keywords langUsage language licence listChange listPrefixDef namespace
                      normalization notesStmt prefixDef principal profileDesc projectDesc publicationStmt
                      punctuation quotation ref revisionDesc samplingDecl seriesStmt sourceDesc sponsor
                      stdVals taxonomy teiHeader textClass titleStmt unitDecl unitDef"/>
+                <elementSpec ident="TEI" mode="change" module="textstructure">
+                    <desc xml:lang="en">In the context of the WIBARAB Feature Database,
+                        each TEI feature document contains the description of one feature, the possible ways
+                        it can be realised (<soCalled>feature values</soCalled>) in a <tag>list type="features"</tag>
+                        and  documented observations of this specific feature in literature or in the data
+                        collected in the fieldwork of WIBARAB.</desc>
+                </elementSpec>
                      <moduleRef key="corpus"/>
                      <moduleRef key="textstructure" include="TEI back body front div text"/>
                      <moduleRef key="namesdates" include="affiliation age birth bloc death
                         district education event faith forename genName geo geogFeat geogName langKnowledge
                         langKnown listEvent listOrg listPerson listPlace location nationality occupation
                         org orgName persName person personGrp place placeName population region residence
-                        settlement socecStatus state surname trait"/>
+                        settlement socecStatus surename"/>
                         <moduleRef key="linking" include="seg"/>
                         <!-- DS 2022-06-23 removing analysis module as long as we don't have
                         any encoded examples in the data.  -->
@@ -559,11 +581,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                  <attDef ident="n" mode="delete"/>
                               </attList>
                            </classSpec>
-                           <classSpec type="atts" ident="att.editLike" mode="change">
-                              <attList>
-                                 <attDef ident="instant" mode="delete"/>
-                              </attList>
-                           </classSpec>
+                           <classSpec type="atts" ident="att.editLike" mode="delete"/> 
                            <classSpec type="atts" ident="att.dimensions" mode="delete"/>
                            <classSpec type="atts" ident="att.ranging" mode="delete"/>
                            <classSpec type="atts" ident="att.canonical" mode="change">
@@ -583,9 +601,11 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                  <attDef ident="select" mode="delete"/>
                               </attList>
                            </classSpec>
+                           <elementSpec ident="ptr" mode="change">
+                              <desc>pointer to one featureValue in the list of featureValues</desc>
+                           </elementSpec>
                            <classSpec type="atts" ident="att.global.facs" mode="delete"/>
                            <classSpec type="atts" ident="att.global.change" mode="delete"/>
-                           <classSpec type="atts" ident="att.global.source" mode="delete"/>
                            <classSpec type="atts" ident="att.sortable" mode="delete"/>
                            <classSpec type="atts" ident="att.typed" mode="delete"/>
                            <classSpec type="atts" ident="att.declarable" mode="delete"/>
@@ -597,6 +617,16 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                  <attDef ident="to" mode="delete"/>
                               </attList>
                            </classSpec>
+                           
+                           <elementSpec ident="divGen" mode="change">
+                              <attList>
+                                 <attDef ident="type" mode="replace" usage="req">
+                                    <valList type="closed">
+                                       <valItem ident="featureValues"><desc>list of feature values</desc></valItem>
+                                    </valList>
+                                 </attDef>
+                              </attList>
+                           </elementSpec>
                            <!-- TODO add schematron rules
 
                            * check existence of <biblScope> when @type = "publication"
@@ -643,11 +673,79 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                  </attList>
                               </elementSpec>
                               <elementSpec ident="item" mode="change">
+                                 <constraintSpec ident="fv-item" scheme="schematron">
+                                    <constraint>
+                                       <sch:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>
+                                       <sch:rule context="tei:item[parent::tei:list/@type = 'featureValues']">
+                                          <sch:report test="not(exists(@xml:id[.!='']))">missing or empty xml:id on featureValue item</sch:report>
+                                          <sch:report test="not(exists(tei:label[. != '']))">missing label or empty xml:id on featureValue item</sch:report>
+                                       </sch:rule>
+                                    </constraint>
+                                 </constraintSpec>
                                  <attList>
-                                    <attDef ident="xml:id" mode="change" usage="req"/>
+                                    <attDef ident="rend" mode="change" usage="rec">
+                                       <desc>in the context of featureValue lists: indicates how the item should be represented visually (e.g. on a map)</desc>
+                                    </attDef>
                                  </attList>
                               </elementSpec>
                               <elementSpec ident="name" mode="change">
+                                 <constraintSpec ident="fvo-name" scheme="schematron">
+                                    <constraint>
+                                       
+                                       <sch:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>
+                                       <sch:ns prefix="fn" uri="http://www.w3.org/2005/xpath-function"/>
+                                       <sch:ns prefix="wib" uri="https://wibarab.acdh.oeaw.ac.at/langDesc"/>
+                                       <sch:rule context="tei:name[@type = 'featureValue']/@ref">
+                                          <sch:extends rule="reference"/>
+                                       </sch:rule>
+                                       <sch:rule context="tei:placeName/@ref">
+                                          <sch:extends rule="reference"/>
+                                       </sch:rule>
+                                       <sch:rule context="tei:bibl/@corresp">
+                                          <sch:extends rule="reference"/>
+                                       </sch:rule>
+                                       <sch:rule context="tei:lang/@corresp">
+                                          <sch:extends rule="reference"/>
+                                       </sch:rule>
+                                       <sch:rule context="wib:featureValueObservation/@resp">
+                                          <sch:extends rule="reference"/>
+                                       </sch:rule>
+                                       
+                                       <sch:rule id="reference" abstract="true">
+                                          <sch:let name="idRef" value="."/>
+                                          <sch:let name="localID"
+                                             value="if (matches($idRef,'^#')) then substring-after($idRef,'#') else ()"/>
+                                          <sch:let name="prefixDefs" value="root()//tei:prefixDef"/>
+                                          <sch:let name="prefixRegex"
+                                             value="concat('^(',string-join($prefixDefs/@ident,'|'),'):(.+)$')"/>
+                                          <sch:let name="prefixMatch"
+                                             value="if (exists($prefixDefs)) then analyze-string($idRef, $prefixRegex)//*:group[1] else ()"/>
+                                          <sch:let name="referenceMatch"
+                                             value="if (exists($prefixDefs)) then analyze-string($idRef, $prefixRegex)//*:group[2] else ()"/>
+                                          <sch:let name="prefixDef"
+                                             value="if (exists($prefixMatch)) then $prefixDefs[@ident = $prefixMatch] else ()"/>
+                                          <sch:let name="prefixGroups"
+                                             value="if (exists($prefixMatch)) then analyze-string($referenceMatch, $prefixDef/@matchPattern)//*:group else ()"/>
+                                          <sch:let name="grpr1" value="if (exists($prefixGroups[@nr = '1'])) then replace($prefixDef/@replacementPattern,'\$1', $prefixGroups[@nr = '1']) else $prefixDef/@replacementPattern"/>
+                                          <sch:let name="grpr2" value="if (exists($prefixGroups[@nr = '2'])) then replace($grpr1,'\$2', $prefixGroups[@nr = '2']) else $grpr1"/>
+                                          <sch:let name="grpr3" value="if (exists($prefixGroups[@nr = '3'])) then replace($grpr2,'\$3', $prefixGroups[@nr = '3']) else $grpr2"/>
+                                          <sch:let name="grpr4" value="if (exists($prefixGroups[@nr = '4'])) then replace($grpr3,'\$4', $prefixGroups[@nr = '4']) else $grpr3"/>
+                                          <sch:let name="grpr5" value="if (exists($prefixGroups[@nr = '5'])) then replace($grpr4,'\$5', $prefixGroups[@nr = '5']) else $grpr4"/>
+                                          <sch:let name="grpr6" value="if (exists($prefixGroups[@nr = '6'])) then replace($grpr5,'\$6', $prefixGroups[@nr = '6']) else $grpr5"/>
+                                          <sch:let name="grpr7" value="if (exists($prefixGroups[@nr = '7'])) then replace($grpr6,'\$7', $prefixGroups[@nr = '7']) else $grpr6"/>
+                                          <sch:let name="grpr8" value="if (exists($prefixGroups[@nr = '8'])) then replace($grpr7,'\$8', $prefixGroups[@nr = '8']) else $grpr7"/>
+                                          <sch:let name="grpr9"  value="if (exists($prefixGroups[@nr = '9'])) then replace($grpr8,'\$9', $prefixGroups[@nr = '9']) else $grpr8"/>
+                                          <sch:let name="grpr10" value="if (exists($prefixGroups[@nr = '10'])) then replace($grpr9,'\$10', $prefixGroups[@nr = '10']) else $grpr9"/>
+                                          <sch:let name="targetRaw" value="if ($localID != '') then $idRef else if (exists($prefixDef)) then $grpr10 else $idRef"/>
+                                          <sch:let name="target" value="translate($targetRaw,'\','/')"/>
+                                          <sch:let name="targetResolves" value="if ($localID != '' ) then exists(root()//*[@xml:id = $localID]) else if (matches($idRef,'^(http|https)')) then true() else doc-available(resolve-uri($target, base-uri($idRef)))"/>
+                                          <sch:report test="$target = ''">unexpected target "<sch:value-of select="$idRef"/>" in reference <sch:value-of select="local-name($idRef)"/>
+                                          </sch:report>
+                                          <sch:assert test="$targetResolves">the target "<sch:value-of select="$target"/>" of pointer "<sch:value-of select="$idRef"/>" cannot be resolved</sch:assert>
+                                          <sch:report test="count(tokenize($idRef,' ')) gt 1">pointer "<sch:value-of select="$idRef"/>" contains more than one references (whitespace)</sch:report>
+                                       </sch:rule>
+                                    </constraint>
+                                 </constraintSpec>
                                  <attList>
                                     <attDef ident="type" mode="replace" usage="rec">
                                        <valList type="closed">
@@ -740,6 +838,15 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                           <valItem ident="general"/>
                                        </valList>
                                     </attDef>
+                                    <attDef ident="source" mode="replace" usage="opt">
+                                       <desc><att>source</att> on <tag>cit type="example"</tag> documents the source an example is taken from. 
+                                          In case the value of it points to a <gi>person</gi> element, that means that the
+                                          example is provided by an informant. When it's absent, the example is drawn from source indicated 
+                                          by the <gi>bibl</gi> element in the parent <gi>featureValueObservation</gi>.</desc>
+                                       <datatype minOccurs="1" maxOccurs="1">
+                                          <dataRef key="teidata.pointer"/>
+                                       </datatype>
+                                    </attDef>
                                  </attList>
                               </elementSpec>
                               <elementSpec ident="title" mode="change">
@@ -781,6 +888,15 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                           <valItem ident="sourceRepresentation"/>
                                           <valItem ident="translation"/>
                                        </valList>
+                                    </attDef>
+                                    <attDef ident="source" mode="replace" usage="opt">
+                                       <desc><att>source</att> on <tag>cit type="example"</tag> documents the source an example is taken from. 
+                                          In case the value of it points to a <gi>person</gi> element, that means that the
+                                          example is provided by an informant. When it's absent, the example is drawn from source indicated 
+                                          by the <gi>bibl</gi> element in the parent <gi>featureValueObservation</gi>.</desc>
+                                       <datatype minOccurs="1" maxOccurs="1">
+                                          <dataRef key="teidata.pointer"/>
+                                       </datatype>
                                     </attDef>
                                  </attList>
                               </elementSpec>

@@ -44,7 +44,7 @@
 
    <text>
       <body xml:base="{docPath}">
-         
+
 
          <div type="featureDescription">
             <head>Feature Values</head>
@@ -75,16 +75,59 @@
          </div>
 
          <div type="description">
-            <p xml:space="preserve">
-               <!-- Verbose discussion of the feature -->
-               Uvular realisation is preserved in MSA loanwords, ex. <foreign xml:lang="ar">taqrīban</foreign>
-               «approximately», <foreign xml:lang="ar">qarīban</foreign> «soon» and in some
-               Turkish loanwords, ex. <foreign xml:lang="ar">qawūn</foreign> «melon» and
-               by young speakers often in words realized with <foreign xml:lang="ar">/g/</foreign>
-               or <foreign xml:lang="ar">/ǧ/</foreign> by older speakers, ex. <foreign xml:lang="ar">gidīm</foreign> or
-               <foreign xml:lang="ar">ǧidim</foreign> - <foreign xml:lang="ar">qadīm</foreign> «old»,
-               <foreign xml:lang="ar">gilīl</foreign> or <foreign xml:lang="ar">ǧilīl</foreign> -
-               <foreign xml:lang="ar">qalīl</foreign> «few, little» ; Devoicing of /g/ to /k/ in contact with /t/, ex. k-t-l (which sometimes becomes affricated in the environment of an anterior vowel c-t-l)</p>
+
+            <div><head>Reflexes of <foreign>*k</foreign></head>
+               <p>Kāf is the name of the 22nd letter of the Arabic alphabet. It is pronounced as a voiceless velar stop [k] in Classical and Modern Standard Arabic.
+                  In both of these varieties there is no voiced counterpart [g]. In the contemporary spoken dialects, /k/ exhibits less variation than /q/ and /ǧ/;
+                  the most widespread innovations are different kinds of affrication. </p>
+            </div>
+            <div><head>General remarks</head>
+               <p>The map for this feature shows the value that is generally used in the specific location according to the sources. More common exceptions concerning the
+                  realization of /k/ are discussed in this paragraph (and in the notes of every feature value observation) <hi rend="bold">yet not represented as different values in the map.</hi></p>
+
+               <p>Particularly regarding affricated reflexes, there are generational differences in many regions where this feature is common. The common tendency is towards de-affrication
+                  (č > k) among the younger generation under the influence of Standard Arabic and regional prestige varieties. In case we have reliable socio-linguistic information, such
+                  generational differences are also indicated on the map.</p>
+               <p>Loanwords from MSA or Classical Arabic are often not affected by affrication, e.g. words like kitāb ‘book’ are usually pronounced with [k] and not with [ʧ]</p>
+               <p>In many varieties where non-affricated and affricated dialects have got into mutual contact, the distribution of /k/ and /č/ is more or less lexicalized and
+                  does no longer follow the phonological rules given below. E.g., Baghdad: ḏaki ‘intelligent’ (and not *ḏači), fikra ‘idea’ (and not *fičra).</p>
+               <p>The peculiar shift *k > š, which is restricted to the 2sg.f pronominal suffix -iš/-š in some dialects of southern and eastern Arabia, has not been considered.</p>
+               <p>The values in the map do not represent punctual changes in the realization of /k/ that are due to assimilation processes in certain lexemes or roots, e.g. *kbīr > gbīr  ‘big’.</p>
+               <p>In several dialects of northern Syria, Mesopotamia, and Arabia, the phoneme /č/ occurs also in loanwords from Turkish, Persian and English. Such words are not considered,
+                  because in these cases the sound [ʧ] cannot be regarded as a reflex of OA *k.</p>
+               <p>When values /k/ [k] + affricate č [ʧ] and /k/ [k] + affricate ć [ʦ] are indicated, affrication is only realized in the environment of an anterior vowel.
+                  In the rest of environments, the phoneme is realized as /k/ [k]. In the few cases where affrication or the lack thereof is lexicalized, the two values
+                  /k/ [k] and /č/ [ʧ] are indicated along with an explicative note.</p>
+
+               <div><head>Values</head>
+
+                  <divGen type="featureValues"></divGen>
+               </div>
+            </div>
+
+            <div><head>Geographical distribution</head>
+               <!-- work on this section after looking at the actual map-->
+               <p>The “standard” and “classical” pronunciation of /k/ as a voiceless velar stop [k] is still very widespread in the east and it is by far the most
+                  common reflex in all Arabic varieties spoken in North Africa.</p>
+
+               <p>The palatalized reflex <ptr target="#k_ky"/>, which can be seen as the first step towards affrication, is rather rare and more or less restricted 
+               to south-eastern Arabia and scattered occurrences in Algeria.</p>
+               
+               <p>Many eastern Bedouin-type dialects show affrication of /k/ in specific phonetic environments. It is assumed that the dialects at the periphery of 
+               Arabia exhibit the older stage affrication *k > č [ʧ], whereas the central dialects of the camel breeding nomadic tribes surface a further stage of 
+               affrication, which is *k > *č > ć [ʦ].</p>
+               <p>The unconditioned affrication of *k to č [ʧ] is attested for several non-connected regions situated far apart from each other: a small pocket of 
+               dialects in northern Yemen and south-western Saudi Arabia, some Omani dialects, and the dialects of Central Palestine. There is an ongoing discussion 
+               whether or not this sound shift is a contact-induced feature that has been triggered through contact with Bedouins;
+               see e.g. (Behnstedt 2016: 21 with further references).</p>
+               <p>Affricated *k > *č > ć [ʦ] in Jewish dialects of Morocco? </p>
+
+               </div>
+               
+               <div><head>Discussion / Theoretical Remarks </head>
+               <p>REFLEXES OF k IN THE BEDOUIN-SEDENTARY SPLIT – a bit of a lit review, 
+               highlight the significance of this feature and why we consider this feature needs to be part of the database.  </p>
+               </div>
          </div>
 
          <div type="featureValueObservations" xmlns:tei="http://www.tei-c.org/ns/1.0">
@@ -2517,8 +2560,8 @@
                </cit>
                <note type="exceptionNote">The sound ć also appears instead of other phonemes, e.g. ćāy ("tea").</note>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="fv_0051" status="done" resp="dmp:RZ">
+
+            <wib:featureValueObservation xml:id="fv_0051" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#k_k"></name>
                <bibl corresp="zot:Ingham1986b" type="publication"></bibl>
                <placeName ref="geo:sufayri"></placeName>
@@ -2543,8 +2586,8 @@
                   </cit>
                </cit>
             </wib:featureValueObservation>
-            
-              <wib:featureValueObservation xml:id="fv_0112" status="done" resp="dmp:RZ">
+
+            <wib:featureValueObservation xml:id="fv_0112" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#k_k"></name>
                <bibl corresp="zot:Ingham1979" type="publication" cert="unknown"></bibl>
                <placeName ref="geo:kuwait"></placeName>
@@ -2575,7 +2618,7 @@
                      <quote>to become big</quote>
                   </cit>
                </cit>
-                <cit type="sourceRepresentation">
+               <cit type="sourceRepresentation">
                   <quote>cabir</quote>
                </cit>
                <note type="general">This realisation occurs in frontal positions only.</note>
@@ -2775,12 +2818,22 @@
                <placeName ref="geo:khashm"></placeName>
                <placeName ref="geo:sawakin"></placeName>
                <lang corresp="..\profiles\vicav_profile_SDN-RYD.xml"></lang>
+               <personGrp role="tribe" corresp="#rashayda_sudan"/>
                <cit xml:id="ct_0183" type="example">
                   <quote>čāriha</quote>
                   <cit type="translation">
                      <quote>the hating (step before divorce)</quote>
                   </cit>
                </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0113"     status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#k_affr2"></name>
+               <bibl corresp="src:SDN_2023_SK" type="fieldwork"></bibl>
+               <placeName ref="geo:mwees"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SDN-RYD.xml"></lang>
+               <personGrp role="tribe" corresp="#rashayda_sudan"/>
+               <note type="general">The exact realization is [ʨ].</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0194" status="done" resp="dmp:SK">
@@ -3098,9 +3151,9 @@
                </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0242" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
+            <wib:featureValueObservation xml:id="fv_0242" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#k_k"></name>
+               <bibl corresp="zot:Heath2002" type="publication"></bibl>
                <placeName ref="geo:fez"></placeName>
                <lang corresp="..\profiles\vicav_profile_MAR-FES.xml"></lang>
             </wib:featureValueObservation>
@@ -3147,26 +3200,20 @@
                <note type="general">often labialisation takʷli "you eat" (f)</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0241" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Aguadé2000b" type="publication"></bibl>
-               <placeName ref="geo:oued_draa"></placeName>
-               <lang corresp="..\profiles\vicav_profile_MAR-DRA.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0240" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0240" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#k_k"></name>
                <bibl corresp="zot:Aguadé2003b" type="publication"></bibl>
                <placeName ref="geo:casablanca"></placeName>
                <lang corresp="..\profiles\vicav_profile_MAR-CSB.xml"></lang>
                <note type="general">allophone ç after interdentals, and in intervocalis and postvocalic positions, e.g. bĭntəç 'your daughter'</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0256" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0256" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#k_k"></name>
                <bibl corresp="zot:Behnstedt2002b" type="publication"></bibl>
                <placeName ref="geo:taza"></placeName>
                <lang corresp="..\profiles\vicav_profile_MAR-TZA.xml"></lang>
+               <note type="general">deduced from example text</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0315" status="done" resp="dmp:TD">
@@ -3384,8 +3431,8 @@
                <lang corresp="..\profiles\vicav_profile_DZA-DJL.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0049" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0049" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#k_k"></name>
                <bibl corresp="zot:Marjani2019" type="publication"></bibl>
                <placeName ref="geo:rehamna"></placeName>
                <lang corresp="..\profiles\vicav_profile_MAR-RHA.xml"></lang>
@@ -3565,6 +3612,22 @@
                <placeName ref="geo:qutur"></placeName>
                <lang corresp="..\profiles\vicav_profile_EGY-QTR.xml"></lang>
             </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="fv_0115" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#k_k"></name>
+               <bibl corresp="zot:Bettega2016a" type="publication"></bibl>
+               <placeName ref="geo:doha"></placeName>
+               <lang corresp="..\profiles\vicav_profile_QTR-DHA.xml"></lang>
+               <note type="general">Deduced from examples</note>
+               <cit type="example" xml:id="ct_0108">
+                  <quote>yiktubūn</quote>
+                  <cit type="translation">
+                     <quote>they write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
 
             <wib:featureValueObservation xml:id="fv_0287" status="done" resp="dmp:VE">
                <name type="featureValue" ref="#k_k"></name>
