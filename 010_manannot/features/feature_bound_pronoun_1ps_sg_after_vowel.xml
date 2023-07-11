@@ -57,6 +57,9 @@
                <item xml:id="bp_s1cv_y">
                   <label>-y</label>
                </item>
+               <item xml:id="bp_s1cv_ey">
+                  <label>-ey</label>
+               </item>
                <item xml:id="bp_s1cv_ye">
                   <label>-ye, -yä</label>
                </item>
@@ -2023,11 +2026,20 @@
                <lang corresp="..\profiles\vicav_profile_MAR-ANJ.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0243" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0243" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#bp_s1cv_i"></name>
                <bibl corresp="zot:Zoubid2011" type="publication"></bibl>
                <placeName ref="geo:hyayna"></placeName>
                <lang corresp="..\profiles\vicav_profile_MAR-HYN.xml"></lang>
+               <personGrp role="gender" corresp="#male"/>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="fv_0078" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#bp_s1cv_ey"></name>
+               <bibl corresp="zot:Zoubid2011" type="publication"></bibl>
+               <placeName ref="geo:hyayna"></placeName>
+               <lang corresp="..\profiles\vicav_profile_MAR-HYN.xml"></lang>
+               <personGrp role="gender" corresp="#female"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0291" status="done" resp="dmp:VE">
