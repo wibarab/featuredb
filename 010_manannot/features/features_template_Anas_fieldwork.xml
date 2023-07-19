@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../../082_scripts_xsl/tei_fs_2_html__001.xsl"?>
+<?xslt inPathSegment="\010_manannot\" outPathSegment="\106_html\"?>
+<?snippets fn="snippets_wibarab_001.xml" path="{filePath}\..\..\880_conf\"?>
+<?processor name="saxon" removePreserveFromXML="true" removePreserveFromXSLT="true"?>
+<?attributeAssignments fn="enricher_attributes.xml" path="{filePath}\..\..\880_conf\"?>
+<?shortCuts fn="wibarab_shortCuts" path="{filePath}\..\..\880_conf\"?>
+<TEI xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../../804_xsd/1.0.0/featuredb.xsd" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Variants of 1st person plural communis pronoun</title>
+            <author>Veronika Engler</author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>{publisher}</publisher>
+            <date when="2022-10-03"></date>
+         </publicationStmt>
+         <sourceDesc>
+            <p>his is the feature-file for the 1st person plural communis pronoun.</p>
+         </sourceDesc>
+      </fileDesc>
+
+      <encodingDesc>
+
+         <listPrefixDef xml:id="listPrefixDef">
+            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab-dmp.xml#$1"></prefixDef>
+            <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_biblio_tei_zotero.xml#$1"></prefixDef>
+            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_dialects.xml#$1"></prefixDef>
+            <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1"></prefixDef>
+            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"></prefixDef>
+            <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"></prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
+
+      <revisionDesc status="draft">
+         <change when="2022-08-17" who="dmp:">c</change>
+         <change when="2022-08-17" who="dmp: "></change>
+         <change when="2022-08-17" who="dmp:">For EGY-___ there are no values found</change>
+      </revisionDesc>
+   </teiHeader>
+
+
+
+   <text>
+      <body xml:base="{docPath}">
+        
+         <div type="featureDescription">
+            <head>Feature Values</head>
+            <list type="featureValues">
+               <item xml:id="pr_s2f_inti">
+                  <label>inti/enti</label>
+               </item>
+               <item xml:id="pr_s2f_intii">
+                  <label>intī</label>
+               </item>
+               <item xml:id="pr_s2f_inte">
+                  <label>inte</label>
+               </item>
+               <item xml:id="pr_s2f_ntii">
+                  <label>ntī</label>
+               </item>
+               <item xml:id="pr_s2f_ntiiya">
+                  <label>ntīya</label>
+               </item>
+               <item xml:id="pr_s2f_ntin">
+                  <label>ntin</label>
+               </item>
+               <item xml:id="pr_s2f_anshi">
+                  <label>anši</label>
+               </item>
+               <item xml:id="pr_s2f_anti">
+                  <label>anti</label>
+               </item>
+               <item xml:id="pr_s2f_hinti">
+                  <label>hinti</label>
+               </item>
+            </list>
+         </div>
+         <div type="description">
+         </div>
+
+         <div type="featureValueObservations" xmlns:tei="http://www.tei-c.org/ns/1.0">
+            <wib:featureValueObservation xml:id="fv_0046" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="" type="fieldwork"></bibl>
+               <placeName ref="geo:haouch_el_harime"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-ABI.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:abu_eid"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0050" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="" type="fieldwork"></bibl>
+               <placeName ref="geo:ed_dhayra"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-ARA.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:aramsha_lebanon"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0060" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="" type="fieldwork"></bibl>
+               <placeName ref="geo:marouahine"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-GLY.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:gleytat"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0059" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="" type="fieldwork"></bibl>
+               <placeName ref="geo:yarine"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-GLY.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:gleytat"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0063" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="" type="fieldwork"></bibl>
+               <placeName ref="geo:khalde"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-KHA.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:arab_xalde"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0064" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="" type="fieldwork"></bibl>
+               <placeName ref="geo:bourghliyeh"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-KRD.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:kredin"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0066" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="" type="fieldwork"></bibl>
+               <placeName ref="geo:tallet_qarmita"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-LWS.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:lwes"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0067" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="" type="fieldwork"></bibl>
+               <placeName ref="geo:el_marj"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-LWS.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:lwes"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0071" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="" type="fieldwork"></bibl>
+               <placeName ref="geo:naameh"></placeName>
+               <placeName ref="geo:el_karantina"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:arab_maslax"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0075" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="" type="fieldwork"></bibl>
+               <placeName ref="geo:khalde"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-ZRG.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:zreyjat"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0076" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="" type="fieldwork"></bibl>
+               <placeName ref="geo:haret_ej_jdide"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-ZRG.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:zreyjat"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0077" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="" type="fieldwork"></bibl>
+               <placeName ref="geo:burj_el_shemali"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-ZRG.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:zreyjat"></personGrp>
+            </wib:featureValueObservation>
+
+           
+           
+           
+          
+            
+            
+           
+         </div>
+      </body>
+   </text>
+</TEI>

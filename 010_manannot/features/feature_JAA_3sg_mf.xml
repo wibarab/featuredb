@@ -9,7 +9,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Variants of Raising of a in pre-tonic (unstressed) closed syllable before ā - CaCCāC </title>
+            <title>Variants of ǧāʔ inflection: 3SG.M 3.SG.F in PFV </title>
             <author>Veronika Engler</author>
          </titleStmt>
          <publicationStmt>
@@ -17,7 +17,7 @@
             <date when="2022-10-03"></date>
          </publicationStmt>
          <sourceDesc>
-            <p>This is the feature-file for Raising of a in pre-tonic (unstressed) closed syllable before ā - CaCCāC.</p>
+            <p>This is the feature-file for ǧāʔ inflection: 3SG.M 3.SG.F in PFV </p>
          </sourceDesc>
       </fileDesc>
 
@@ -36,7 +36,7 @@
       <revisionDesc status="draft">
          <change when="2022-08-17" who="dmp:">c</change>
          <change when="2022-08-17" who="dmp: "></change>
-         
+         <change when="2022-08-17" who="dmp:">For EGY-___ there are no values found</change>
       </revisionDesc>
    </teiHeader>
 
@@ -48,17 +48,22 @@
          <div type="featureDescription">
             <head>Feature Values</head>
             <list type="featureValues">
-               <item xml:id="raisinga_pc_a_to_i">
-                  <label>a > i	fillāḥ - ḥimmām </label>
-                  <desc>also includes raising to u in different environments</desc>
-               </item>
-               <item xml:id="raisinga_pc_a_to_a">
-                  <label>a > a  fallāḥ - ḥammām</label>
+               <item xml:id="JAA_3sgmf_pfv_ǧaa_ǧat">
+                  <label>ǧā - ǧat</label>
                   <desc></desc>
                </item>
-               <item xml:id="raisinga_pc_a_to schwa">
-                  <label>a > ə   fəllāḥ - ḥammām</label>
+               <item xml:id="JAA_3sgmf_pfv_yaa-yat">
+                  <label>yā-yat</label>
                   <desc></desc>
+               </item>
+               <item xml:id="JAA_3sgmf_pfv_iǧi-iǧit">
+                  <label>əǧi-əǧət</label>
+                  <desc></desc>
+               </item>
+                <item xml:id="JAA_3sgmf_pfv_ǧē-fem.notgiven">
+                  <label>ǧē-not given</label>
+                  <desc></desc>
+                  
                </item>
             </list>
          </div>
@@ -66,7 +71,13 @@
          </div>
 
          <div type="featureValueObservations" xmlns:tei="http://www.tei-c.org/ns/1.0">
-            
+            <wib:featureValueObservation xml:id="fv_0046" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="" type="fieldwork"></bibl>
+               <placeName ref="geo:haouch_el_harime"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-ABI.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:abu_eid"></personGrp>
+            </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0050" status="draft" resp="dmp:AID">
                <name type="featureValue" ref=""></name>
@@ -76,6 +87,21 @@
                <personGrp role="tribe" corresp="pgr:aramsha_lebanon"></personGrp>
             </wib:featureValueObservation>
 
+            <wib:featureValueObservation xml:id="fv_0060" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="" type="fieldwork"></bibl>
+               <placeName ref="geo:marouahine"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-GLY.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:gleytat"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0059" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="" type="fieldwork"></bibl>
+               <placeName ref="geo:yarine"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-GLY.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:gleytat"></personGrp>
+            </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0063" status="draft" resp="dmp:AID">
                <name type="featureValue" ref=""></name>
@@ -85,61 +111,38 @@
                <personGrp role="tribe" corresp="pgr:arab_xalde"></personGrp>
             </wib:featureValueObservation>
 
-           
-           
-            <wib:featureValueObservation xml:id="fv_0071" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#raisinga_pc_a_to_i"></name>
+            <wib:featureValueObservation xml:id="fv_0064" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref=""></name>
                <bibl corresp="" type="fieldwork"></bibl>
-               <placeName ref="geo:naameh"></placeName>
-               <placeName ref="geo:el_karantina"></placeName>
-               <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"></lang>
-               <personGrp role="tribe" corresp="pgr:arab_maslax"></personGrp>
-               <personGrp role="age" corresp="#old"/>
-               <personGrp role="age" corresp="#middle"/>
-               <note type="general">Elderly (70+), Old (60-70) and some middle age speakers show consistent raising of short medial a in unstressed closed syllable before ā, in the pattern CaCCāC(v), as in: nižžār (carpenter), fillāḥ (peasant) and, surprisingly, 
-               ḥimmām (toilet, bathroom) and xirbāna (spoiled, broken). Other examples of this, outside of the aforementioned pattern is miʕnāt-a (hence, lit. her meaning). 
-               The examples suggest that a preceding /ḥ/ or /x/ does not always block the raising in this pattern.</note>
-               <cit type="example" xml:id="ct_0004">
-                     <quote>xirbān</quote>
-                     <cit type="translation">
-                        <quote>broken, spoiled</quote>
-                     </cit>
-                  </cit>
-                  <cit type="example" xml:id="ct_0005">
-                     <quote>ḥimmām</quote>
-                     <cit type="translation">
-                        <quote>toilet</quote>
-                     </cit>
-                  </cit>
-               
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="fv_0016"  status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#raisinga_pc_a_to schwa"></name>
-               <bibl corresp="" type="fieldwork"></bibl>
-               <placeName ref="geo:naameh"></placeName>
-               <placeName ref="geo:el_karantina"></placeName>
-               <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"></lang>
-               <personGrp role="tribe" corresp="pgr:arab_maslax"></personGrp>
-              <personGrp role="age" corresp="#young"/>
-               <personGrp role="age" corresp="#middle"/>
-               <note type="general">Young speakers and some middle-aged speakers do not show raising to i of short medial a in unstressed closed syllable before a,
-                unlike Elderly (70+), Old (60-70) and some middle age speakers. Here, instead of a - i these speakers show a - ə.</note>
-               <cit xml:id="ct_0006" type="example" >
-                     <quote>xərbēn</quote>
-                     <cit type="translation">
-                        <quote>broken, spoiled</quote>
-                     </cit>
-                  </cit>
-                  <cit xml:id="ct_0007" type="example" >
-                     <quote>ḥəmmēm</quote>
-                     <cit type="translation">
-                        <quote>toilet</quote>
-                     </cit>
-                  </cit>
-               
+               <placeName ref="geo:bourghliyeh"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-KRD.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:kredin"></personGrp>
             </wib:featureValueObservation>
 
+            <wib:featureValueObservation xml:id="fv_0066" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="" type="fieldwork"></bibl>
+               <placeName ref="geo:tallet_qarmita"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-LWS.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:lwes"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0067" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="" type="fieldwork"></bibl>
+               <placeName ref="geo:el_marj"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-LWS.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:lwes"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0071" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="" type="fieldwork"></bibl>
+               <placeName ref="geo:naameh"></placeName>
+               <placeName ref="geo:el_karantina"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:arab_maslax"></personGrp>
+            </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0075" status="draft" resp="dmp:AID">
                <name type="featureValue" ref=""></name>
@@ -351,8 +354,69 @@
                <lang corresp="..\profiles\vicav_profile_LBN-BIS.xml"></lang>
             </wib:featureValueObservation>
 
-         
-         
+            <wib:featureValueObservation xml:id="fv_0047" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#JAA_3sgmf_pfv_ǧē-fem.notgiven"></name>
+               <bibl corresp="zot:Pickett2005" type="publication"></bibl>
+               <placeName ref="geo:rayak"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-ABI.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:abu_eid"></personGrp>
+               <note type="general">Pickett (2005:226-227) notes: "The raising of ā in 'he came' however is a clear dialect marker distinguishing the Lebanese and closely related smaller Syrian tribes from the (Aniza, 
+Šammar, ʕumūr and Euphrates tribal dialects described above".</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0048" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#JAA_3sgmf_pfv_ǧē-fem.notgiven"></name>
+               <bibl corresp="zot:Pickett2005" type="publication"></bibl>
+               <placeName ref="geo:saadnayel"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-AGB.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:abu_jabal"></personGrp>
+                <note type="general">Pickett (2005:226-227) notes: "The raising of ā in 'he came' however is a clear dialect marker distinguishing the Lebanese and closely related smaller Syrian tribes from the (Aniza, 
+Šammar, ʕumūr and Euphrates tribal dialects described above".</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0058" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#JAA_3sgmf_pfv_ǧē-fem.notgiven"></name>
+               <bibl corresp="zot:Pickett2005" type="publication"></bibl>
+               <placeName ref="geo:el_khiara"></placeName>
+               <placeName ref="geo:tall_dunub"></placeName>
+               <placeName ref="geo:el_qaa"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-EDI.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:edin"></personGrp>
+                <note type="general">Pickett (2005:226-227) notes: "The raising of ā in 'he came' however is a clear dialect marker distinguishing the Lebanese and closely related smaller Syrian tribes from the (Aniza, 
+Šammar, ʕumūr and Euphrates tribal dialects described above".</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0061" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#JAA_3sgmf_pfv_ǧē-fem.notgiven"></name>
+               <bibl corresp="zot:Pickett2005" type="publication"></bibl>
+               <placeName ref="geo:nabaa_el_faaour"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-HRK.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:hruk"></personGrp>
+                <note type="general">Pickett (2005:226-227) notes: "The raising of ā in 'he came' however is a clear dialect marker distinguishing the Lebanese and closely related smaller Syrian tribes from the (Aniza, 
+Šammar, ʕumūr and Euphrates tribal dialects described above".</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0068" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#JAA_3sgmf_pfv_ǧē-fem.notgiven"></name>
+               <bibl corresp="zot:Pickett2005" type="publication"></bibl>
+               <placeName ref="geo:taanayel"></placeName>
+               <placeName ref="geo:barr_elias"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-LWS.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:lwes"></personGrp>
+                <note type="general">Pickett (2005:226-227) notes: "The raising of ā in 'he came' however is a clear dialect marker distinguishing the Lebanese and closely related smaller Syrian tribes from the (Aniza, 
+Šammar, ʕumūr and Euphrates tribal dialects described above".</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0070" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#JAA_3sgmf_pfv_ǧē-fem.notgiven"></name>
+               <bibl corresp="zot:Pickett2005" type="publication"></bibl>
+               <placeName ref="geo:ain_aanjar"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-MAW.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:mawali_lebanon"></personGrp>
+                <note type="general">Pickett (2005:226-227) notes: "The raising of ā in 'he came' however is a clear dialect marker distinguishing the Lebanese and closely related smaller Syrian tribes from the (Aniza, 
+Šammar, ʕumūr and Euphrates tribal dialects described above".</note>
+            </wib:featureValueObservation>
+
             <wib:featureValueObservation xml:id="fv_0028" status="draft" resp="dmp:AID">
                <name type="featureValue" ref=""></name>
                <bibl corresp="zot:Rosenhouse1983" type="publication"></bibl>
@@ -368,52 +432,30 @@
                <lang corresp="..\profiles\vicav_profile_LBN-BEI.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0052" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#raisinga_pc_a_to_i"></name>
+            <wib:featureValueObservation xml:id="fv_0052" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref=""></name>
                <bibl corresp="zot:Younes2013" type="publication"></bibl>
                <placeName ref="geo:wadi_khalid"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBN-ATI.xml"></lang>
                <personGrp role="tribe" corresp="pgr:arab_al_atij"></personGrp>
-               <cit type="example" xml:id="ex_{rn}">
-                     <quote>birrād</quote>
-                     <cit type="translation">
-                        <quote>fridge</quote>
-                     </cit>
-                  </cit>
-               
-                <note type="general">Younes (2013: 39) notes that: "La voyelle /a/ se maintient en contexte emphatique dans le schème C1aC2C2āC3: ḥammāl, «porteur». On observe cependant birrād̄
-«réfrigérateur». Le maintien s’observe aussi dans le schème C1aC2C3ān: ʕaṭšān ayant soif». Nous avons cependant relevé ʿimyān «aveugle»".</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0045" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#raisinga_pc_a_to_a"></name>
+            <wib:featureValueObservation xml:id="fv_0045" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref=""></name>
                <bibl corresp="zot:Younes2014" type="publication"></bibl>
                <placeName ref="geo:haouch_el_nabi"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBN-ABI.xml"></lang>
                <personGrp role="tribe" corresp="pgr:abu_eid"></personGrp>
-               <cit type="example" xml:id="ct_0000">
-                     <quote>nazzāla</quote>
-                     <cit type="translation">
-                        <quote>female visitor</quote>
-                     </cit>
-                  </cit>
-            </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="fv_0047"  status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#raisinga_pc_a_to schwa"></name>
-               <bibl corresp="zot:Younes2014" type="publication"></bibl>
-               <placeName ref="geo:haouch_el_nabi"></placeName>
-               <lang corresp="..\profiles\vicav_profile_LBN-ABI.xml"></lang>
-               <personGrp role="tribe" corresp="pgr:abu_eid"></personGrp>
-               <cit xml:id="ct_0001" type="example" >
-                     <quote>ḏəbbād</quote>
-                     <cit type="translation">
-                        <quote>sweet, pure</quote>
-                     </cit>
-                  </cit>
             </wib:featureValueObservation>
 
-           
+            <wib:featureValueObservation xml:id="fv_0141" status="draft" resp="dmp:AT">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:Cantineau1936a" type="publication" cert="unknown"></bibl>
+               <placeName ref="geo:irbid_reg"></placeName>
+               <lang corresp="..\profiles\vicav_profile_JOR-NEM.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:neem_jordan"></personGrp>
+            </wib:featureValueObservation>
+
             <wib:featureValueObservation xml:id="fv_0089" status="draft" resp="dmp:AT">
                <name type="featureValue" ref=""></name>
                <bibl corresp="zot:Al-Khatib1988" type="publication"></bibl>
@@ -428,6 +470,12 @@
                <lang corresp="..\profiles\vicav_profile_JOR-AMN.xml"></lang>
             </wib:featureValueObservation>
 
+            <wib:featureValueObservation xml:id="fv_0091" status="draft" resp="dmp:AT">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:Andrzej_Czapkiewicz1960" type="publication"></bibl>
+               <placeName ref="geo:madaba"></placeName>
+               <lang corresp="..\profiles\vicav_profile_JOR-MDB.xml"></lang>
+            </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0105" status="draft" resp="dmp:AT">
                <name type="featureValue" ref=""></name>
@@ -470,7 +518,68 @@
                <personGrp role="tribe" corresp="pgr:zullam"></personGrp>
             </wib:featureValueObservation>
 
-     
+            <wib:featureValueObservation xml:id="fv_0086" status="draft" resp="dmp:AT">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:Cantineau1936a" type="publication"></bibl>
+               <placeName ref="geo:rumtha"></placeName>
+               <lang corresp="..\profiles\vicav_profile_JOR-BXD.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:bani_xaled"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0087" status="draft" resp="dmp:AT">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:Cantineau1936a" type="publication"></bibl>
+               <placeName ref="geo:muwaysa"></placeName>
+               <lang corresp="..\profiles\vicav_profile_JOR-FDL.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:fadol"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0102" status="draft" resp="dmp:AT">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:Cantineau1936a" type="publication"></bibl>
+               <placeName ref="geo:al_qudayr"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-HDD.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:hadidin"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0104" status="draft" resp="dmp:AT">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:Cantineau1936a" type="publication"></bibl>
+               <placeName ref="geo:kursi"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-MND.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:manadre"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0108" status="draft" resp="dmp:AT">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:Cantineau1936a" type="publication"></bibl>
+               <placeName ref="geo:assal_al_ward"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-OMR.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:omur"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0096" status="draft" resp="dmp:AT">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:Cantineau1936a" type="publication"></bibl>
+               <placeName ref="geo:mughayyir_as_sirhan"></placeName>
+               <lang corresp="..\profiles\vicav_profile_JOR-SHN.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:sirhan"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0016" status="draft" resp="dmp:AT">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:Cantineau1936a" type="publication" cert="unknown"></bibl>
+               <placeName ref="geo:shahba"></placeName>
+               <lang corresp="..\profiles\vicav_profile_JOR-SLU.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0094" status="draft" resp="dmp:AT">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:Cantineau1937" type="publication"></bibl>
+               <placeName ref="geo:al_musayfirah"></placeName>
+               <lang corresp="..\profiles\vicav_profile_JOR-SDY.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:sardiye"></personGrp>
+            </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0101" status="draft" resp="dmp:AT">
                <name type="featureValue" ref=""></name>
@@ -480,7 +589,52 @@
                <personGrp role="tribe" corresp="pgr:shammar_saudi_arabia"></personGrp>
             </wib:featureValueObservation>
 
-        
+            <wib:featureValueObservation xml:id="fv_0187" status="draft" resp="dmp:AT">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:Cantineau1937" type="publication" cert="unknown"></bibl>
+               <placeName ref="geo:al_nuaymah"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-WAL.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:weld_ali"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0317" status="draft" resp="dmp:AT">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:Cantineau1937" type="publication" cert="unknown"></bibl>
+               <placeName ref="geo:al_jawf"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-GOF.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0319" status="draft" resp="dmp:AT">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:Cantineau1937" type="publication" cert="unknown"></bibl>
+               <placeName ref="geo:ar_rass"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-RSS.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0318" status="draft" resp="dmp:AT">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:Cantineau1937" type="publication" cert="unknown"></bibl>
+               <placeName ref="geo:wadi_al_miyah"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-SLB.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:sleb"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0103" status="draft" resp="dmp:AT">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:Cantineau1937" type="publication"></bibl>
+               <placeName ref="geo:rayyan"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-HSN.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:hsane"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0109" status="draft" resp="dmp:AT">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:Cantineau1937" type="publication"></bibl>
+               <placeName ref="geo:khirbat_ras_al_war"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-SBA.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:sbaa"></personGrp>
+            </wib:featureValueObservation>
+
             <wib:featureValueObservation xml:id="fv_0111" status="draft" resp="dmp:AT">
                <name type="featureValue" ref=""></name>
                <bibl corresp="zot:Talay2008" type="publication"></bibl>
@@ -502,8 +656,16 @@
                <bibl corresp="zot:Herin2010" type="publication"></bibl>
                <placeName ref="geo:al_salt"></placeName>
                <lang corresp="..\profiles\vicav_profile_JOR-SLT.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:slut"></personGrp>
             </wib:featureValueObservation>
 
+            <wib:featureValueObservation xml:id="fv_0100" status="draft" resp="dmp:AT">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:Il-Hazmy1975" type="publication"></bibl>
+               <placeName ref="geo:hejaz"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-HRB.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:al_harb"></personGrp>
+            </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0084" status="draft" resp="dmp:AT">
                <name type="featureValue" ref=""></name>
@@ -513,7 +675,21 @@
                <personGrp role="tribe" corresp="pgr:bdul"></personGrp>
             </wib:featureValueObservation>
 
-          
+            <wib:featureValueObservation xml:id="fv_0095" status="draft" resp="dmp:AT">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:Palva1974" type="publication"></bibl>
+               <placeName ref="geo:safut"></placeName>
+               <lang corresp="..\profiles\vicav_profile_JOR-SFT.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="fv_0081" status="draft" resp="dmp:AT">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:Palva1976" type="publication"></bibl>
+               <placeName ref="geo:sel_hisban"></placeName>
+               <lang corresp="..\profiles\vicav_profile_JOR-AGR.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:al_agarma"></personGrp>
+            </wib:featureValueObservation>
+
             <wib:featureValueObservation xml:id="fv_0085" status="draft" resp="dmp:AT">
                <name type="featureValue" ref=""></name>
                <bibl corresp="zot:Palva1980" type="publication"></bibl>
@@ -591,12 +767,13 @@
                <personGrp role="tribe" corresp="pgr:ugedat"></personGrp>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0121" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
+            <wib:featureValueObservation xml:id="fv_0121" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#JAA_3sgmf_pfv_iǧi-iǧit"></name>
+               <bibl corresp="zot:Talay1999" type="publication"></bibl>
                <placeName ref="geo:khawetna"></placeName>
                <lang corresp="..\profiles\vicav_profile_SYR-KHA.xml"></lang>
                <personGrp role="tribe" corresp="pgr:khawetna_tribe"></personGrp>
+               <cit type="sourceRepresentation"><quote>əǧi-əǧət</quote></cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0123" status="draft" resp="dmp:CL">
@@ -620,11 +797,12 @@
                <lang corresp="..\profiles\vicav_profile_TUR-HAS.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0128" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
+            <wib:featureValueObservation xml:id="fv_0128" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#JAA_3sgmf_pfv_ǧaa_ǧat"></name>
+               <bibl corresp="zot:Wittrich2001" type="publication"></bibl>
                <placeName ref="geo:idil_aazex"></placeName>
                <lang corresp="..\profiles\vicav_profile_TUR-IDI.xml"></lang>
+               <cit type="sourceRepresentation"><quote>ǧā-ǧat</quote></cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0129" status="draft" resp="dmp:CL">
@@ -733,13 +911,6 @@
                <lang corresp="..\profiles\vicav_profile_ISR-ZRG.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0166" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Cleveland1967" type="publication"></bibl>
-               <placeName ref="geo:al_dawayima"></placeName>
-               <lang corresp="..\profiles\vicav_profile_PSE-DWY.xml"></lang>
-            </wib:featureValueObservation>
-
             <wib:featureValueObservation xml:id="fv_0118" status="draft" resp="dmp:CL">
                <name type="featureValue" ref=""></name>
                <bibl corresp="zot:Cowell1964" type="publication"></bibl>
@@ -754,11 +925,20 @@
                <lang corresp="..\profiles\vicav_profile_IRN-KHU.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0114" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0114" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#JAA_3sgmf_pfv_ǧaa_ǧat"></name>
                <bibl corresp="zot:Mahdi1985" type="publication"></bibl>
                <placeName ref="geo:basra"></placeName>
                <lang corresp="..\profiles\vicav_profile_IRQ-BSR.xml"></lang>
+               <cit type="sourceRepresentation"><quote>ja(a)-jat</quote></cit>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="fv_0051" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#JAA_3sgmf_pfv_yaa-yat"></name>
+               <bibl corresp="zot:Mahdi1985" type="publication"></bibl>
+               <placeName ref="geo:basra"></placeName>
+               <lang corresp="..\profiles\vicav_profile_IRQ-BSR.xml"></lang>
+               <cit type="sourceRepresentation"><quote>ya(a)-yat</quote></cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0173" status="draft" resp="dmp:CL">
@@ -768,11 +948,12 @@
                <lang corresp="..\profiles\vicav_profile_PSE-TKM.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0116" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0116" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#JAA_3sgmf_pfv_ǧaa_ǧat"></name>
                <bibl corresp="zot:Salonen1980a" type="publication"></bibl>
                <placeName ref="geo:al_shirqat"></placeName>
                <lang corresp="..\profiles\vicav_profile_IRQ-SQT.xml"></lang>
+               <cit type="sourceRepresentation"><quote>ǧē-ǧät</quote></cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0175" status="draft" resp="dmp:CL">
@@ -1141,18 +1322,11 @@ Ff
                <lang corresp="..\profiles\vicav_profile_SDN-KRT.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0193" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#raisinga_pc_a_to_i"></name>
+            <wib:featureValueObservation xml:id="fv_0193" status="draft" resp="dmp:SK">
+               <name type="featureValue" ref=""></name>
                <bibl corresp="zot:Carbou1913" type="publication"></bibl>
                <placeName ref="geo:ouaday"></placeName>
                <lang corresp="..\profiles\vicav_profile_TCD-ODY.xml"></lang>
-               <cit xml:id="ct_0004" type="example" >
-                     <quote>sikrān</quote>
-                     <cit type="translation">
-                        <quote>drunk</quote>
-                     </cit>
-                  </cit>
-                  <cit type="sourceRepresentation"><quote>sekrān</quote></cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0132" status="draft" resp="dmp:SK">
@@ -1404,17 +1578,11 @@ Ff
                <lang corresp="..\profiles\vicav_profile_TCD-NDJ.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0180" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#raisinga_pc_a_to_a"></name>
+            <wib:featureValueObservation xml:id="fv_0180" status="draft" resp="dmp:SK">
+               <name type="featureValue" ref=""></name>
                <bibl corresp="zot:Owens1993c" type="publication"></bibl>
                <placeName ref="geo:nigeria"></placeName>
                <lang corresp="..\profiles\vicav_profile_NGA-NGA.xml"></lang>
-               <cit xml:id="ct_0005" type="example" >
-                     <quote>ʕammāt</quote>
-                     <cit type="translation">
-                        <quote>father´s sisters</quote>
-                     </cit>
-                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0188" status="draft" resp="dmp:SK">
@@ -1424,30 +1592,18 @@ Ff
                <lang corresp="..\profiles\vicav_profile_SDN-SKR.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0182" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#raisinga_pc_a_to_a"></name>
+            <wib:featureValueObservation xml:id="fv_0182" status="draft" resp="dmp:SK">
+               <name type="featureValue" ref=""></name>
                <bibl corresp="zot:Roset2018" type="publication"></bibl>
                <placeName ref="geo:darfur"></placeName>
                <lang corresp="..\profiles\vicav_profile_SDN-DRF.xml"></lang>
-               <cit xml:id="ct_0006"   type="example" >
-                     <quote>hakkāma</quote>
-                     <cit type="translation">
-                        <quote>lead singer</quote>
-                     </cit>
-                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0189" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#raisinga_pc_a_to_a"></name>
+            <wib:featureValueObservation xml:id="fv_0189" status="draft" resp="dmp:SK">
+               <name type="featureValue" ref=""></name>
                <bibl corresp="zot:Roth1979" type="publication"></bibl>
                <placeName ref="geo:abeche"></placeName>
                <lang corresp="..\profiles\vicav_profile_TCD-ABC.xml"></lang>
-               <cit xml:id="ct_0002" type="example" >
-                     <quote>barrād</quote>
-                     <cit type="translation">
-                        <quote>tea pot</quote>
-                     </cit>
-                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0186" status="draft" resp="dmp:SK">
@@ -1481,17 +1637,11 @@ Ff
                <lang corresp="..\profiles\vicav_profile_DJI-OBK.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0194" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#raisinga_pc_a_to_a"></name>
+            <wib:featureValueObservation xml:id="fv_0194" status="draft" resp="dmp:SK">
+               <name type="featureValue" ref=""></name>
                <bibl corresp="zot:Zeltner1986" type="publication"></bibl>
                <placeName ref="geo:salamat"></placeName>
                <lang corresp="..\profiles\vicav_profile_TCD-ULE.xml"></lang>
-               <cit xml:id="ct_0003" type="example" >
-                     <quote>kaḍḍāb</quote>
-                     <cit type="translation">
-                        <quote>liar</quote>
-                     </cit>
-                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0270" status="draft" resp="dmp:SP">
