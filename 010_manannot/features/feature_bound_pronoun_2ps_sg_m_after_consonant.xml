@@ -24,7 +24,7 @@
       <encodingDesc>
 
          <listPrefixDef xml:id="listPrefixDef">
-            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab-dmp.xml#$1"></prefixDef>
+            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_dmp.xml#$1"></prefixDef>
             <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_biblio_tei_zotero.xml#$1"></prefixDef>
             <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_dialects.xml#$1"></prefixDef>
             <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1"></prefixDef>
@@ -1555,6 +1555,14 @@
                <bibl corresp="zot:Trimingham1946" type="publication"></bibl>
                <placeName ref="geo:omdurman"></placeName>
                <lang corresp="..\profiles\vicav_profile_SDN-OMD.xml"></lang>
+            </wib:featureValueObservation>
+                        
+            <wib:featureValueObservation xml:id="fv_0069"    status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#bp_s2mc_k"></name>
+               <bibl corresp="src:SDN_2023_SK" type="fieldwork"></bibl>
+               <placeName ref="geo:mwees"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SDN-RYD.xml"></lang>
+               <personGrp role="tribe" corresp="#rashayda_sudan"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0194" status="done" resp="dmp:SK">
