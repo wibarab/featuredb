@@ -14,7 +14,9 @@ jobs:
         with:
           python-version: '3.11'
           cache: "pipenv"
-      - name: download from Zotero and convert to TEI
+      - name: download from Zotero and convert to TEI      
+        env:
+          API_TOKEN: ${{ secrets.ZOTERO_API_TOKEN }}
         run: |
           python --version
           python -m pip install pipenv
