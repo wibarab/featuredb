@@ -1,0 +1,35 @@
+name: Download bibliography from Zotero and convert to TEI
+on:
+  repository_dispatch:
+    types: [run]
+  workflow_dispatch: {}
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: get python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: "pipenv"
+      - name: download from Zotero and convert to TEI
+        run: |
+          python --version
+          python -m pip install pipenv
+          cd 080_scripts_generic/vicav_zotero
+          pipenv install
+          pipenv run jupyter nbconvert --to script fetch_generated_tei_and_process.ipynb
+          GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} pipenv run python fetch_generated_tei_and_process.py
+      - name: Commit converted bibliography
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add 010_manannot/vicav_biblio_tei_zotero.xml
+          git commit -m "TEI bibliography converted from Zotero data" -a
+      - name: Push changes back to GitHub
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
