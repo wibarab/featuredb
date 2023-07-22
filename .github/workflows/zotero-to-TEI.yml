@@ -18,6 +18,9 @@ jobs:
       - name: download from Zotero and convert to TEI      
         env:
           API_TOKEN: ${{ secrets.ZOTERO_API_TOKEN }}
+          LIMIT_DOWNLOADS_TO: ${{ vars.ZOTERO_LIMIT_DOWNLOADS_TO }}
+          MAX_CONNECTIONS: ${{ vars.ZOTERO_MAX_CONNECTIONS }}
+          TIMEOUT: ${{ vars.ZOTERO_TIMEOUT }}
         run: |
           python --version
           python -m pip install pipenv
