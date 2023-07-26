@@ -24,7 +24,7 @@
       <encodingDesc>
 
          <listPrefixDef xml:id="listPrefixDef">
-            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab-dmp.xml#$1"/>
+            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_dmp.xml#$1"/>
             <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_biblio_tei_zotero.xml#$1"/>
             <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_dialects.xml#$1"/>
             <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1"/>
@@ -43,7 +43,7 @@
 
 
    <text>
-      <body xml:base="{docPath}">
+      <body>
 
          <div type="featureDescription">
             <head>Feature Values</head>
@@ -97,7 +97,7 @@
                <personGrp role="ageGroup" corresp="#old"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0115"  status="draft" resp="dmp:AID">
+            <wib:featureValueObservation xml:id="fv_0115" status="draft" resp="dmp:AID">
                <name type="featureValue" ref=""></name>
                <bibl corresp="" type="fieldwork"></bibl>
                <placeName ref="geo:khalde"></placeName>
@@ -724,14 +724,7 @@
                </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0111" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:Talay2008" type="publication"/>
-               <placeName ref="geo:qamishli"/>
-               <lang corresp="..\profiles\vicav_profile_SYR-TYY.xml"/>
-               <personGrp role="tribe" corresp="pgr:tayyi"/>
-            </wib:featureValueObservation>
-
+         
             <wib:featureValueObservation xml:id="fv_0097" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#kept"/>
                <bibl corresp="zot:Herin2010" type="publication"/>
@@ -1167,13 +1160,6 @@
                <lang corresp="..\profiles\vicav_profile_PSE-DWY.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0157" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="" type="publication"/>
-               <placeName ref="geo:gaza"/>
-               <lang corresp="..\profiles\vicav_profile_PSE-GZA.xml"/>
-            </wib:featureValueObservation>
-
             <wib:featureValueObservation xml:id="fv_0168" status="done" resp="dmp:CL">
                <name type="featureValue" ref="#postdentals"/>
                <bibl corresp="zot:Löhr1905" type="publication"/>
@@ -1285,7 +1271,7 @@
                <personGrp role="ageGroup" corresp="#old"/>
             </wib:featureValueObservation>
             
-            <wib:featureValueObservation xml:id="fv_0195"  status="done" resp="dmp:SK">
+            <wib:featureValueObservation xml:id="fv_0195" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#postdentals_vestigial_ḏ̣"/>
                <bibl corresp="zot:De_Jong2000b" type="publication"/>
                <placeName ref="geo:bir_qatia"/>
@@ -1631,48 +1617,7 @@
                <lang corresp="..\profiles\vicav_profile_PSE-XLL.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0162" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:Seeger2013a" type="publication"/>
-               <placeName ref="geo:bet_liqya"/>
-               <lang corresp="..\profiles\vicav_profile_PSE-BLQ.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0164" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:Seeger2013a" type="publication"/>
-               <placeName ref="geo:birzeit"/>
-               <lang corresp="..\profiles\vicav_profile_PSE-BZT.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0165" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:Seeger2013a" type="publication"/>
-               <placeName ref="geo:dar_is_sudan"/>
-               <lang corresp="..\profiles\vicav_profile_PSE-DSN.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0170" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:Seeger2013a" type="publication"/>
-               <placeName ref="geo:al_mizra_ish_sharkiyya"/>
-               <lang corresp="..\profiles\vicav_profile_PSE-MKY.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0172" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:Seeger2013a" type="publication"/>
-               <placeName ref="geo:silwad"/>
-               <lang corresp="..\profiles\vicav_profile_PSE-SWD.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0174" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:Seeger2013a" type="publication"/>
-               <placeName ref="geo:it_tayybe"/>
-               <lang corresp="..\profiles\vicav_profile_PSE-TYB.xml"/>
-            </wib:featureValueObservation>
-
+      
             <wib:featureValueObservation xml:id="fv_0167" status="done" resp="dmp:CL">
                <name type="featureValue" ref="#kept"/>
                <bibl corresp="zot:Yoda2015" type="publication"/>
@@ -2738,7 +2683,7 @@
                <bibl corresp="zot:Grand_Henry1979" type="publication"/>
                <placeName ref="geo:saoura"/>
                <lang corresp="..\profiles\vicav_profile_DZA-SAO.xml"/>
-               <note type="general">one example where interdental > sibilant: ksir (kaṯīr)</note>
+               <note type="general">one example where interdental &gt; sibilant: ksir (kaṯīr)</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0250" status="done" resp="dmp:TD">

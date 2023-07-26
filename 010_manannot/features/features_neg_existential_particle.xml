@@ -24,7 +24,7 @@
       <encodingDesc>
 
          <listPrefixDef xml:id="listPrefixDef">
-            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab-dmp.xml#$1"/>
+            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_dmp.xml#$1"/>
             <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_biblio_tei_zotero.xml#$1"/>
             <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_dialects.xml#$1"/>
             <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1"/>
@@ -43,7 +43,7 @@
 
 
    <text>
-      <body xml:base="{docPath}">
+      <body>
 
 
          <div type="featureDescription">
@@ -766,20 +766,6 @@
                <cit type="sourceRepresentation"><quote>ma fī</quote></cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0081" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:Palva1976" type="publication"/>
-               <placeName ref="geo:sel_hisban"/>
-               <lang corresp="..\profiles\vicav_profile_JOR-AGR.xml"/>
-               <personGrp role="tribe" corresp="pgr:al_agarma"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0090" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:Palva1989" type=" publication"/>
-               <placeName ref="geo:al_karak"/>
-               <lang corresp="..\profiles\vicav_profile_JOR-KRK.xml"/>
-            </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0098" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#nep_maash"/>
@@ -790,8 +776,8 @@
                <cit type="sourceRepresentation"><quote>māš</quote></cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0080" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="fv_0080" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#nep_ma_fii"/>
                <bibl corresp="zot:Torzullo2022" type="publication"/>
                <placeName ref="geo:badr_al_jadidah"/>
                <placeName ref="geo:wadi_as_sir"/>
@@ -800,6 +786,16 @@
                <personGrp role="tribe" corresp="pgr:bani_abbad"/>
             </wib:featureValueObservation>
 
+             <wib:featureValueObservation xml:id="fv_0001" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#nep_ma_fiish"/>
+               <bibl corresp="zot:Torzullo2022" type="publication"/>
+               <placeName ref="geo:badr_al_jadidah"/>
+               <placeName ref="geo:wadi_as_sir"/>
+               <placeName ref="geo:mahis"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-ABD.xml"/>
+               <personGrp role="tribe" corresp="pgr:bani_abbad"/>
+            </wib:featureValueObservation>
+            
             <wib:featureValueObservation xml:id="fv_0082" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#nep_ma_fii"/>
                <bibl corresp="zot:Younes2018a" type="publication"/>

@@ -24,7 +24,7 @@
       <encodingDesc>
 
          <listPrefixDef xml:id="listPrefixDef">
-            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab-dmp.xml#$1"/>
+            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_dmp.xml#$1"/>
             <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_biblio_tei_zotero.xml#$1"/>
             <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_dialects.xml#$1"/>
             <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
@@ -42,7 +42,7 @@
    
 
    <text>
-      <body xml:base="{docPath}">
+      <body>
 
 
          <div type="featureDescription">
@@ -1142,14 +1142,6 @@
                <lang corresp="..\profiles\vicav_profile_SYR-DZR.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0120" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="" type="publication"/>
-               <placeName ref="geo:homs"/>
-               <lang corresp="..\profiles\vicav_profile_SYR-KDT.xml"/>
-               <personGrp role="tribe" corresp="pgr:ugedat"/>
-            </wib:featureValueObservation>
-
             <wib:featureValueObservation xml:id="fv_0121" status="done" resp="dmp:CL">
                <name type="featureValue" ref="#pr_p1c_ihna"/>
                <bibl corresp="zot:Talay1999" type="publication"/>
@@ -1165,11 +1157,12 @@
                <lang corresp="..\profiles\vicav_profile_SYR-PAL.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0123" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="" type="publication"/>
+            <wib:featureValueObservation xml:id="fv_0123" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#pr_p1c_nihne"/>
+               <bibl corresp="zot:Behnstedt1997b" type="publication"/>
                <placeName ref="geo:qamishli"/>
                <lang corresp="..\profiles\vicav_profile_SYR-QAM.xml"/>
+               <cit type="sourceRepresentation"><quote>niḥne</quote></cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0124" status="done" resp="dmp:CL">
