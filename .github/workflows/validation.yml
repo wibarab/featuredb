@@ -1,4 +1,4 @@
-name: Download bibliography from Zotero and convert to TEI
+name: Validate XML files
 on:
   push: {}
   repository_dispatch:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch: {}
 jobs:
   build:
-    name: Download bibliography from Zotero and convert to TEI
+    name: Validate XML files
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
@@ -33,9 +33,9 @@ jobs:
           GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} pipenv run python validate.py
       - name: Commit errors to gh_pages
         run: |
+          cd gh_pages
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          cd gh_pages
           git add *.html
           git commit -m "New validation results" -a
       - name: Push changes back to GitHub
