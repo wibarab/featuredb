@@ -33,6 +33,7 @@ jobs:
           GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} pipenv run python validate.py
       - name: Commit errors to gh_pages
         run: |
+          cp main/080_scripts_generic/validation/tmp/*.html gh_pages/
           cd gh_pages
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
