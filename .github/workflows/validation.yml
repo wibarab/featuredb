@@ -1,0 +1,46 @@
+name: Validate XML files
+on:
+  push: {}
+  repository_dispatch:
+    types: [run]
+  workflow_dispatch: {}
+jobs:
+  build:
+    name: Validate XML files
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          path: main
+      - name: Checkout gh_pages
+        uses: actions/checkout@v3
+        with:
+          ref: gh_pages
+          path: gh_pages
+      - name: Get python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: "pipenv"
+      - name: Validate XML files
+        run: |
+          python --version
+          python -m pip install pipenv
+          cd main/080_scripts_generic/validation
+          pipenv install
+          pipenv run jupyter nbconvert --to script validate.ipynb
+          GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} pipenv run python validate.py
+      - name: Commit errors to gh_pages
+        run: |
+          cp main/080_scripts_generic/validation/tmp/*.html gh_pages/
+          cd gh_pages
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add *.html
+          git commit -m "New validation results" -a || true
+      - name: Push changes back to GitHub
+        uses: ad-m/github-push-action@master
+        with:
+          branch: gh_pages
+          directory: gh_pages
