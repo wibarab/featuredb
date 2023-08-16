@@ -49,11 +49,11 @@
             <head>Feature Values</head>
             <list type="featureValues">
                <item xml:id="pfv_3sgf_ət">
-                  <label>-ət</label>
+                  <label>-ət, -əţ, əṯ</label>
                   <desc></desc>
                </item>
                <item xml:id="pfv_3sgf_at">
-                  <label>-at</label>
+                  <label>-at, -āt</label>
                   <desc></desc>
                </item>
                <item xml:id="pfv_3sgf_ech">
@@ -84,6 +84,10 @@
                   <label>-eh</label>
                   <desc></desc>
                </item>
+               <item xml:id="pfv_3sgf_t">
+                  <label>-t, -ţ</label>
+                  <desc></desc>
+               </item>
                <item xml:id="pfv_3sgf_a">
                   <label>-a</label>
                   <desc></desc>
@@ -95,11 +99,23 @@
 
          <div type="featureValueObservations" xmlns:tei="http://www.tei-c.org/ns/1.0">
             <wib:featureValueObservation xml:id="fv_0050" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+               <name type="featureValue" ref="#pfv_3sgf_at"></name>
                <bibl corresp="" type="fieldwork"></bibl>
                <placeName ref="geo:ed_dhayra"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBN-ARA.xml"></lang>
                <personGrp role="tribe" corresp="pgr:aramsha_lebanon"></personGrp>
+               <cit type="example" xml:id="ct_0086">
+                     <quote>ḏ̣urbat, ḏ̣arbat</quote>
+                     <cit type="translation">
+                        <quote>she hit</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ct_0087">
+                     <quote>libsat</quote>
+                     <cit type="translation">
+                        <quote>she wore</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0063" status="draft" resp="dmp:AID">
@@ -110,226 +126,554 @@
                <personGrp role="tribe" corresp="pgr:arab_xalde"></personGrp>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0071" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0071" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_at"></name>
                <bibl corresp="" type="fieldwork"></bibl>
                <placeName ref="geo:naameh"></placeName>
                <placeName ref="geo:el_karantina"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"></lang>
                <personGrp role="tribe" corresp="pgr:arab_maslax"></personGrp>
+               <personGrp role="age" corresp="#old"/>
+               <cit xml:id="ct_0088" type="example" >
+                     <quote>ḏ̣urbat, ḏ̣arbat</quote>
+                     <cit type="translation">
+                        <quote>she hit</quote>
+                     </cit>
+                  </cit>
+                  <cit xml:id="ct_0089" type="example" >
+                     <quote>libsat</quote>
+                     <cit type="translation">
+                        <quote>she wore</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="fv_0071" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_it"></name>
+               <bibl corresp="" type="fieldwork"></bibl>
+               <placeName ref="geo:naameh"></placeName>
+               <placeName ref="geo:el_karantina"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:arab_maslax"></personGrp>
+               <personGrp role="age" corresp="#young"/>
+               <cit xml:id="ct_0088" type="example" >
+                     <quote>ḍarabit</quote>
+                     <cit type="translation">
+                        <quote>she hit</quote>
+                     </cit>
+                  </cit>
+                  <cit xml:id="ct_0089" type="example" >
+                     <quote>libsit</quote>
+                     <cit type="translation">
+                        <quote>she wore</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0053" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0053" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_it"></name>
                <bibl corresp="zot:Abu-Haidar1979" type="publication"></bibl>
                <placeName ref="geo:baskinta"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBN-BAS.xml"></lang>
+               <cit type="example" xml:id="ct_0130">
+                     <quote>ḍárabit</quote>
+                     <cit type="translation">
+                        <quote>she hit</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ct_0131">
+                     <quote>širbit</quote>
+                     <cit type="translation">
+                        <quote>she drank</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0027" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0027" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_at"></name>
                <bibl corresp="zot:Behnstedt2019" type="publication"></bibl>
                <placeName ref="geo:jurdeih"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-ARM.xml"></lang>
                <personGrp role="tribe" corresp="pgr:aramsha_israel"></personGrp>
+                <cit xml:id="ct_0091"  type="example" >
+                     <quote>ḏ̣urbat, ḏ̣arbat</quote>
+                     <cit type="translation">
+                        <quote>she hit</quote>
+                     </cit>
+                  </cit>
+                  <cit xml:id="ct_0090"  type="example" >
+                     <quote>libsat</quote>
+                     <cit type="translation">
+                        <quote>she wore</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0029" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0029" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_at"></name>
                <bibl corresp="zot:Behnstedt2019" type="publication"></bibl>
                <placeName ref="geo:hajajra"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-GAW.xml"></lang>
                <personGrp role="tribe" corresp="pgr:jawamis"></personGrp>
+                <cit xml:id="ct_0125"   type="example" >
+                     <quote>ḏ̣urbat, ḏ̣arbat</quote>
+                     <cit type="translation">
+                        <quote>she hit</quote>
+                     </cit>
+                  </cit>
+                  <cit xml:id="ct_0126"   type="example" >
+                     <quote>libsat</quote>
+                     <cit type="translation">
+                        <quote>she wore</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0030" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0030" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_at"></name>
                <bibl corresp="zot:Behnstedt2019" type="publication"></bibl>
                <placeName ref="geo:hamam"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-GET.xml"></lang>
                <personGrp role="tribe" corresp="pgr:getiyya"></personGrp>
+                <cit xml:id="ct_0094"  type="example" >
+                     <quote>ḏ̣urbat, ḏ̣arbat</quote>
+                     <cit type="translation">
+                        <quote>she hit</quote>
+                     </cit>
+                  </cit>
+                  <cit xml:id="ct_0095"  type="example" >
+                     <quote>libsat</quote>
+                     <cit type="translation">
+                        <quote>she wore</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0026" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0026" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_at"></name>
                <bibl corresp="zot:Behnstedt2019" type="publication"></bibl>
                <placeName ref="geo:haifa"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-HAI.xml"></lang>
+                <cit xml:id="ct_0092"  type="example" >
+                     <quote>ḏ̣urbat, ḏ̣arbat</quote>
+                     <cit type="translation">
+                        <quote>she hit</quote>
+                     </cit>
+                  </cit>
+                  <cit xml:id="ct_0093"  type="example" >
+                     <quote>libsat</quote>
+                     <cit type="translation">
+                        <quote>she wore</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0031" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0031" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_at"></name>
                <bibl corresp="zot:Behnstedt2019" type="publication"></bibl>
                <placeName ref="geo:hujeirat_dhara"></placeName>
                <placeName ref="geo:bir_el_maksur"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-HGE.xml"></lang>
                <personGrp role="tribe" corresp="pgr:hjerat"></personGrp>
+                <cit xml:id="ct_0096"  type="example" >
+                     <quote>ḏ̣urbat, ḏ̣arbat</quote>
+                     <cit type="translation">
+                        <quote>she hit</quote>
+                     </cit>
+                  </cit>
+                  <cit xml:id="ct_0097"  type="example" >
+                     <quote>libsat</quote>
+                     <cit type="translation">
+                        <quote>she wore</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0032" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0032" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_at"></name>
                <bibl corresp="zot:Behnstedt2019" type="publication"></bibl>
                <placeName ref="geo:kaabiyya"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-KAB.xml"></lang>
                <personGrp role="tribe" corresp="pgr:kabiyye"></personGrp>
+                <cit xml:id="ct_0098"  type="example" >
+                     <quote>ḏ̣urbat, ḏ̣arbat</quote>
+                     <cit type="translation">
+                        <quote>she hit</quote>
+                     </cit>
+                  </cit>
+                  <cit xml:id="ct_0099"  type="example" >
+                     <quote>libsat</quote>
+                     <cit type="translation">
+                        <quote>she wore</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0033" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0033" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_at"></name>
                <bibl corresp="zot:Behnstedt2019" type="publication"></bibl>
                <placeName ref="geo:tuba_zangariya"></placeName>
                <placeName ref="geo:mashhad"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-LHE.xml"></lang>
                <personGrp role="tribe" corresp="pgr:lheb"></personGrp>
+                <cit xml:id="ct_0100"  type="example" >
+                     <quote>ḏ̣urbat, ḏ̣arbat</quote>
+                     <cit type="translation">
+                        <quote>she hit</quote>
+                     </cit>
+                  </cit>
+                  <cit xml:id="ct_0101"  type="example" >
+                     <quote>libsat</quote>
+                     <cit type="translation">
+                        <quote>she wore</quote>
+                     </cit>
+                  </cit>
+               
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0034" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0034" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_at"></name>
                <bibl corresp="zot:Behnstedt2019" type="publication"></bibl>
                <placeName ref="geo:ibtin"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-MRY.xml"></lang>
                <personGrp role="tribe" corresp="pgr:amiriyya"></personGrp>
+                <cit xml:id="ct_0102"  type="example" >
+                     <quote>ḏ̣urbat, ḏ̣arbat</quote>
+                     <cit type="translation">
+                        <quote>she hit</quote>
+                     </cit>
+                  </cit>
+                  <cit xml:id="ct_0103"  type="example" >
+                     <quote>libsat</quote>
+                     <cit type="translation">
+                        <quote>she wore</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0035" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0035" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_at"></name>
                <bibl corresp="zot:Behnstedt2019" type="publication"></bibl>
                <placeName ref="geo:nazareth"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-NAZ.xml"></lang>
+                <cit xml:id="ct_0104"  type="example" >
+                     <quote>ḏ̣urbat, ḏ̣arbat</quote>
+                     <cit type="translation">
+                        <quote>she hit</quote>
+                     </cit>
+                  </cit>
+                  <cit xml:id="ct_0105"  type="example" >
+                     <quote>libsat</quote>
+                     <cit type="translation">
+                        <quote>she wore</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0036" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0036" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_at"></name>
                <bibl corresp="zot:Behnstedt2019" type="publication"></bibl>
                <placeName ref="geo:basmat_tabun"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-NEM.xml"></lang>
                <personGrp role="tribe" corresp="pgr:neem_israel"></personGrp>
+                <cit xml:id="ct_0106"  type="example" >
+                     <quote>ḏ̣urbat, ḏ̣arbat</quote>
+                     <cit type="translation">
+                        <quote>she hit</quote>
+                     </cit>
+                  </cit>
+                  <cit xml:id="ct_0107"  type="example" >
+                     <quote>libsat</quote>
+                     <cit type="translation">
+                        <quote>she wore</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0037" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0037" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_at"></name>
                <bibl corresp="zot:Behnstedt2019" type="publication"></bibl>
                <placeName ref="geo:buayna_nujaydat"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-NGE.xml"></lang>
                <personGrp role="tribe" corresp="pgr:njedat"></personGrp>
+                <cit xml:id="ct_0108"  type="example" >
+                     <quote>ḏ̣urbat, ḏ̣arbat</quote>
+                     <cit type="translation">
+                        <quote>she hit</quote>
+                     </cit>
+                  </cit>
+                  <cit xml:id="ct_0109"  type="example" >
+                     <quote>libsat</quote>
+                     <cit type="translation">
+                        <quote>she wore</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0038" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0038" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_at"></name>
                <bibl corresp="zot:Behnstedt2019" type="publication"></bibl>
                <placeName ref="geo:umm_el_ghanam"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-SA3.xml"></lang>
                <personGrp role="tribe" corresp="pgr:saayda"></personGrp>
+                <cit xml:id="ct_0110"  type="example" >
+                     <quote>ḏ̣urbat, ḏ̣arbat</quote>
+                     <cit type="translation">
+                        <quote>she hit</quote>
+                     </cit>
+                  </cit>
+                  <cit xml:id="ct_0111"  type="example" >
+                     <quote>libsat</quote>
+                     <cit type="translation">
+                        <quote>she wore</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0039" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0039" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_at"></name>
                <bibl corresp="zot:Behnstedt2019" type="publication"></bibl>
                <placeName ref="geo:kammaana"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-SAW.xml"></lang>
                <personGrp role="tribe" corresp="pgr:sawaid"></personGrp>
+                <cit xml:id="ct_0112"   type="example" >
+                     <quote>ḏ̣urbat, ḏ̣arbat</quote>
+                     <cit type="translation">
+                        <quote>she hit</quote>
+                     </cit>
+                  </cit>
+                  <cit xml:id="ct_0113"   type="example" >
+                     <quote>libsat</quote>
+                     <cit type="translation">
+                        <quote>she wore</quote>
+                     </cit>
+                  </cit>
+               
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0040" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0040" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_at"></name>
                <bibl corresp="zot:Behnstedt2019" type="publication"></bibl>
                <placeName ref="geo:shibli"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-SHI.xml"></lang>
                <personGrp role="tribe" corresp="pgr:shibli"></personGrp>
+                <cit xml:id="ct_0114"   type="example" >
+                     <quote>ḏ̣urbat, ḏ̣arbat</quote>
+                     <cit type="translation">
+                        <quote>she hit</quote>
+                     </cit>
+                  </cit>
+                  <cit xml:id="ct_0115"   type="example" >
+                     <quote>libsat</quote>
+                     <cit type="translation">
+                        <quote>she wore</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0041" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0041" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_at"></name>
                <bibl corresp="zot:Behnstedt2019" type="publication"></bibl>
                <placeName ref="geo:halaf_tabbash"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-TAB.xml"></lang>
                <personGrp role="tribe" corresp="pgr:tabbash"></personGrp>
+                <cit xml:id="ct_0116"   type="example" >
+                     <quote>ḏ̣urbat, ḏ̣arbat</quote>
+                     <cit type="translation">
+                        <quote>she hit</quote>
+                     </cit>
+                  </cit>
+                  <cit xml:id="ct_0117"   type="example" >
+                     <quote>libsat</quote>
+                     <cit type="translation">
+                        <quote>she wore</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0042" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0042" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_at"></name>
                <bibl corresp="zot:Behnstedt2019" type="publication"></bibl>
                <placeName ref="geo:suulam"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-TUR.xml"></lang>
                <personGrp role="tribe" corresp="pgr:arab_turkman"></personGrp>
+               <cit xml:id="ct_0122"    type="example" >
+                     <quote>ḏ̣arbat</quote>
+                     <cit type="translation">
+                        <quote>she hit</quote>
+                     </cit>
+                  </cit>
+                  <note type="constraintNote">-at for a-type verbs.</note>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="fv_0055"  status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_it"></name>
+               <bibl corresp="zot:Behnstedt2019" type="publication"></bibl>
+               <placeName ref="geo:suulam"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ISR-TUR.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:arab_turkman"></personGrp>
+               <cit xml:id="ct_0123"    type="example" >
+                     <quote>libsit</quote>
+                     <cit type="translation">
+                        <quote>she wore</quote>
+                     </cit>
+                  </cit>
+                  <note type="constraintNote">-it for i-type verbs.</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0043" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0043" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_at"></name>
                <bibl corresp="zot:Behnstedt2019" type="publication"></bibl>
                <placeName ref="geo:khawalid"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-XAW.xml"></lang>
                <personGrp role="tribe" corresp="pgr:xawalid"></personGrp>
+                <cit xml:id="ct_0118"   type="example" >
+                     <quote>ḏ̣urbat, ḏ̣arbat</quote>
+                     <cit type="translation">
+                        <quote>she hit</quote>
+                     </cit>
+                  </cit>
+                  <cit xml:id="ct_0119"   type="example" >
+                     <quote>libsat</quote>
+                     <cit type="translation">
+                        <quote>she wore</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0044" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0044" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_at"></name>
                <bibl corresp="zot:Behnstedt2019" type="publication"></bibl>
                <placeName ref="geo:maloot_tarshiiha"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-ZUN.xml"></lang>
                <personGrp role="tribe" corresp="pgr:zunnar"></personGrp>
+                <cit xml:id="ct_0120"   type="example" >
+                     <quote>ḏ̣arbat</quote>
+                     <cit type="translation">
+                        <quote>she hit</quote>
+                     </cit>
+                  </cit>
+                  <note type="constraintNote">-at for a-type verbs.</note>
+                  
             </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="fv_0051"  status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_it"></name>
+               <bibl corresp="zot:Behnstedt2019" type="publication"></bibl>
+               <placeName ref="geo:maloot_tarshiiha"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ISR-ZUN.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:zunnar"></personGrp>
+                <cit xml:id="ct_0121"   type="example" >
+                     <quote>libsit</quote>
+                     <cit type="translation">
+                        <quote>she wore</quote>
+                     </cit>
+                  </cit>
+                  <note type="constraintNote">-it for i-type verbs.</note>
+            </wib:featureValueObservation>
+            
 
-            <wib:featureValueObservation xml:id="fv_0074" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0074" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_et"></name>
                <bibl corresp="zot:El-Hajjé1954" type="publication"></bibl>
                <placeName ref="geo:tripoli_lebanon"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBN-TRI.xml"></lang>
+               <cit xml:id="ct_0128" type="example" >
+                     <quote>katbet</quote>
+                     <cit type="translation">
+                        <quote>she wrote</quote>
+                     </cit>
+                  </cit>
+                  <cit xml:id="ct_0129"  type="example" >
+                     <quote>šərbet</quote>
+                     <cit type="translation">
+                        <quote>she drank</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0062" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0062" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_et"></name>
                <bibl corresp="zot:Féghali1919" type="publication"></bibl>
                <placeName ref="geo:kfar_aabida"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBN-KAB.xml"></lang>
+               <cit type="example" xml:id="ct_0127">
+                     <quote>ḥ́əmlet</quote>
+                     <cit type="translation">
+                        <quote>she carried</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0079" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0079" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_ət"></name>
                <bibl corresp="zot:Fleisch1947" type="publication"></bibl>
                <placeName ref="geo:zahle"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBN-ZAH.xml"></lang>
+               <cit type="example" xml:id="ct_0134">
+                     <quote>katabət</quote>
+                     <cit type="translation">
+                        <quote>she wrote</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0065" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0065" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_et"></name>
                <bibl corresp="zot:Fleisch1974b" type="publication"></bibl>
                <placeName ref="geo:kfar_sghab"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBN-KSG.xml"></lang>
+                <cit type="example" xml:id="ct_0135">
+                     <quote>ḍarbet</quote>
+                     <cit type="translation">
+                        <quote>she hit</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">-it in pausal position.</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0056" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0056" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_it"></name>
                <bibl corresp="zot:Jiha1964" type="publication"></bibl>
                <placeName ref="geo:bishmizzine"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBN-BIS.xml"></lang>
+               <cit type="example" xml:id="ct_0132">
+                     <quote>darsit</quote>
+                     <cit type="translation">
+                        <quote>she studied</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ct_0133">
+                     <quote>širbit</quote>
+                     <cit type="translation">
+                        <quote>she drank</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0028" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Rosenhouse1983" type="publication"></bibl>
-               <placeName ref="geo:yaara"></placeName>
-               <lang corresp="..\profiles\vicav_profile_ISR-ARM.xml"></lang>
-               <personGrp role="tribe" corresp="pgr:aramsha_israel"></personGrp>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0054" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0054" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_it"></name>
                <bibl corresp="zot:Schukro2004" type="publication"></bibl>
                <placeName ref="geo:beirut"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBN-BEI.xml"></lang>
+               <cit type="example" xml:id="ct_0124">
+                     <quote>nizlit</quote>
+                     <cit type="translation">
+                        <quote>she went down</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0052" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0052" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_at"></name>
                <bibl corresp="zot:Younes2013" type="publication"></bibl>
                <placeName ref="geo:wadi_khalid"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBN-ATI.xml"></lang>
                <personGrp role="tribe" corresp="pgr:arab_al_atij"></personGrp>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0045" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0045" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#pfv_3sgf_at"></name>
                <bibl corresp="zot:Younes2014" type="publication"></bibl>
                <placeName ref="geo:haouch_el_nabi"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBN-ABI.xml"></lang>
@@ -1168,11 +1512,18 @@
                </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0227" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0227" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#pfv_3sgf_ət"></name>
                <bibl corresp="" type="publication"></bibl>
                <placeName ref="geo:mazara_del_vallo"></placeName>
                <lang corresp="..\profiles\vicav_profile_ITA-MDV.xml"></lang>
+               <cit type="example" xml:id="ct_0086">
+                     <quote>mā-ʕarrsət-š</quote>
+                     <cit type="translation">
+                        <quote>she did not get married</quote>
+                     </cit>
+                  </cit>
+               <note type="general">Deduced from examples</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0258" status="done" resp="dmp:RZ">
@@ -1208,47 +1559,87 @@
                <lang corresp="..\profiles\vicav_profile_SAU-ALM.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0228" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0228" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#pfv_3sgf_at"></name>
                <bibl corresp="zot:Benkato2014" type="publication"></bibl>
                <placeName ref="geo:benghazi"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBY-BGZ.xml"></lang>
+               <cit type="example" xml:id="ct_0136">
+                     <quote> ktábät</quote>
+                     <cit type="translation">
+                        <quote>she wrote</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ct_0137">
+                     <quote> kátbät </quote>
+                     <cit type="translation">
+                        <quote>she wrote</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">Both examples are taken from Panetta (1943).</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0229" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0229" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#pfv_3sgf_et"></name>
                <bibl corresp="zot:Caubet2004e" type="publication"></bibl>
                <placeName ref="geo:fezzan"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBY-FZN.xml"></lang>
+               <cit type="example" xml:id="ct_0138">
+                     <quote>ḏ̣aṛbet</quote>
+                     <cit type="translation">
+                        <quote>she hit</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ct_0139">
+                     <quote>ḏ̣ṛabet</quote>
+                     <cit type="translation">
+                        <quote>she hit</quote>
+                     </cit>
+                  </cit>
+                  <note type="constraintNote">If preceding an object suffix, the verbal suffix would be -at, e.g. ḏ̣arbathum 'she hit them'.</note>
             </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0233" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""></name>
+            
+            <wib:featureValueObservation xml:id="fv_0028" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#pfv_3sgf_at"></name>
                <bibl corresp="zot:Caubet2004e" type="publication"></bibl>
-               <placeName ref="geo:murzuq"></placeName>
-               <lang corresp="..\profiles\vicav_profile_LBY-MRQ.xml"></lang>
-            </wib:featureValueObservation>
+               <placeName ref="geo:fezzan"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBY-FZN.xml"></lang>
+               <cit type="example" xml:id="ct_0140">
+                     <quote>ftaḥat</quote>
+                     <cit type="translation">
+                        <quote>she opened</quote>
+                     </cit>
+                  </cit>
+                  <cit type="sourceRepresentation"><quote>ftáḥăt</quote></cit>
+                   </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0235" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Caubet2004e" type="publication"></bibl>
-               <placeName ref="geo:zintan"></placeName>
-               <lang corresp="..\profiles\vicav_profile_LBY-ZTN.xml"></lang>
-            </wib:featureValueObservation>
+           
 
-            <wib:featureValueObservation xml:id="fv_0003" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0003" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#pfv_3sgf_ət"></name>
                <bibl corresp="zot:D_Anna2017c" type="publication"></bibl>
                <placeName ref="geo:misrata"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBY-MSR.xml"></lang>
+               <cit type="example" xml:id="ct_0141">
+                     <quote>kétәbәt</quote>
+                     <cit type="translation">
+                        <quote>she wrote</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0232" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0232" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#pfv_3sgf_ət"></name>
                <bibl corresp="zot:D_Anna2021" type="publication"></bibl>
                <placeName ref="geo:yefren"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBY-JYN.xml"></lang>
                <personGrp role="religion" corresp="pgr:jews"></personGrp>
+               <cit type="example" xml:id="ct_0087">
+                     <quote>kabbrət</quote>
+                     <cit type="translation">
+                        <quote>she raised</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0230" status="done" resp="dmp:RZ">
@@ -2060,7 +2451,7 @@
 
             <wib:featureValueObservation xml:id="fv_0270" status="draft" resp="dmp:SP">
                <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
+               <bibl corresp="zot:Zarb2023" type="publication"></bibl>
                <placeName ref="geo:testour"></placeName>
                <lang corresp="..\profiles\vicav_profile_TUN-TSR.xml"></lang>
             </wib:featureValueObservation>
@@ -2343,32 +2734,51 @@
                <lang corresp="..\profiles\vicav_profile_CYP-KOR.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0217" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
+            <wib:featureValueObservation xml:id="fv_0217" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#pfv_3sgf_ət"></name>
+               <bibl corresp="#zot:Boucherit2002" type="publication"></bibl>
                <placeName ref="geo:algier"></placeName>
                <lang corresp="..\profiles\vicav_profile_DZA-ALR.xml"></lang>
+               <cit type="example" xml:id="ct_0067">
+                     <quote>kətb-ət</quote>
+                     <cit type="translation">
+                        <quote>she wrote</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0221" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
+            <wib:featureValueObservation xml:id="fv_0221" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#pfv_3sgf_ət"></name>
+               <bibl corresp="zot:Grand_Henry1976c" type="publication"></bibl>
                <placeName ref="geo:mzab"></placeName>
                <lang corresp="..\profiles\vicav_profile_DZA-MZB.xml"></lang>
+               <cit type="example" xml:id="ct_0068">
+                     <quote>kətbət</quote>
+                     <cit type="translation">
+                        <quote>she wrote</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0222" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
+            <wib:featureValueObservation xml:id="fv_0222" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#pfv_3sgf_ət"></name>
+               <bibl corresp="zot:Guerrero2015a" type="publication"></bibl>
                <placeName ref="geo:oran"></placeName>
                <lang corresp="..\profiles\vicav_profile_DZA-ORN.xml"></lang>
+               <cit type="example" xml:id="ct_0069">
+                     <quote>fəṭṛət</quote>
+                     <cit type="translation">
+                        <quote>she had lunch</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0239" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
+            <wib:featureValueObservation xml:id="fv_0239" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#pfv_3sgf_ət"></name>
+               <bibl corresp="zot:Moscoso_García2003a" type="publication"></bibl>
                <placeName ref="geo:chefchaouen"></placeName>
                <lang corresp="..\profiles\vicav_profile_MAR-CHF.xml"></lang>
+              <note type="general">posiible endings are -əţ or -əṯ</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0242" status="draft" resp="dmp:TD">
@@ -2378,43 +2788,68 @@
                <lang corresp="..\profiles\vicav_profile_MAR-FES.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0246" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
+            <wib:featureValueObservation xml:id="fv_0246" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#pfv_3sgf_at"></name>
+               <bibl corresp="zot:Sánchez2014" type="publication"></bibl>
                <placeName ref="geo:marrakesh"></placeName>
                <lang corresp="..\profiles\vicav_profile_MAR-MRK.xml"></lang>
+               <cit type="example" xml:id="ct_0070">
+                     <quote>səmʕāt</quote>
+                     <cit type="translation">
+                        <quote>she heard</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0252" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
+            <wib:featureValueObservation xml:id="fv_0252" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#pfv_3sgf_it"></name>
+               <bibl corresp="zot:Heath1982" type="publication"></bibl>
                <placeName ref="geo:tafilalet"></placeName>
                <lang corresp="..\profiles\vicav_profile_MAR-SMS.xml"></lang>
+               <personGrp role="religion" corresp="#jews"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0254" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
+            <wib:featureValueObservation xml:id="fv_0254" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#pfv_3sgf_ət"></name>
+               <bibl corresp="zot:Aguadé2013" type="publication"></bibl>
                <placeName ref="geo:settat"></placeName>
                <lang corresp="..\profiles\vicav_profile_MAR-STT.xml"></lang>
+               <cit type="example" xml:id="ct_0071">
+                     <quote>xadməţ</quote>
+                     <cit type="translation">
+                        <quote>she worked</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0259" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
+            <wib:featureValueObservation xml:id="fv_0259" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#pfv_3sgf_ət"></name>
+               <bibl corresp="zot:Taine-Cheikh2011" type="publication"></bibl>
                <placeName ref="geo:mauritania"></placeName>
                <lang corresp="..\profiles\vicav_profile_MRT-HSS.xml"></lang>
+               <cit type="example" xml:id="ct_0072">
+                     <quote>kətbət</quote>
+                     <cit type="translation">
+                        <quote>she wrote</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0272" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="" type="publication"></bibl>
+            <wib:featureValueObservation xml:id="fv_0272" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#pfv_3sgf_et"></name>
+               <bibl corresp="zot:Chikovani2009" type="publication"></bibl>
                <placeName ref="geo:bukhara"></placeName>
                <lang corresp="..\profiles\vicav_profile_UZB-BXR.xml"></lang>
             </wib:featureValueObservation>
+            <cit type="example" xml:id="ct_0073">
+                     <quote>daxal-et</quote>
+                     <cit type="translation">
+                        <quote>she went in</quote>
+                     </cit>
+                  </cit>
 
-            <wib:featureValueObservation xml:id="fv_0251" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0251" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#pfv_3sgf_ət"></name>
                <bibl corresp="zot:Aguadé1995a" type="publication"></bibl>
                <placeName ref="geo:skoura"></placeName>
                <lang corresp="..\profiles\vicav_profile_MAR-SKR.xml"></lang>
@@ -2427,11 +2862,17 @@
                <lang corresp="..\profiles\vicav_profile_MAR-DRA.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0240" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0240" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#pfv_3sgf_at"></name>
                <bibl corresp="zot:Aguadé2003b" type="publication"></bibl>
                <placeName ref="geo:casablanca"></placeName>
                <lang corresp="..\profiles\vicav_profile_MAR-CSB.xml"></lang>
+               <cit type="example" xml:id="ct_0074">
+                     <quote>šəṛbāt</quote>
+                     <cit type="translation">
+                        <quote>she drank</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0256" status="draft" resp="dmp:TD">
@@ -2441,33 +2882,45 @@
                <lang corresp="..\profiles\vicav_profile_MAR-TZA.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0315" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0315" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#pfv_3sgf_ət"></name>
                <bibl corresp="zot:Behnstedt2002c" type="publication"></bibl>
                <placeName ref="geo:oujda"></placeName>
                <lang corresp="..\profiles\vicav_profile_MAR-OJD.xml"></lang>
+               <cit type="example" xml:id="ex_{rn}">
+                     <quote>šərbət</quote>
+                     <cit type="translation">
+                        <quote>she drank</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">with suffix, -ət becomes -āt</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0273" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0273" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#pfv_3sgf_at"></name>
                <bibl corresp="zot:Chikovani2008" type="publication"></bibl>
                <placeName ref="geo:qashqadaryo_region"></placeName>
                <lang corresp="..\profiles\vicav_profile_UZB-QDY.xml"></lang>
+               <cit type="example" xml:id="ct_0075">
+                     <quote>katabat</quote>
+                     <cit type="translation">
+                        <quote>she wrote</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0130" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0130" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#pfv_3sgf_ət"></name>
                <bibl corresp="zot:Colin1921" type="publication"></bibl>
                <placeName ref="geo:branes"></placeName>
                <lang corresp="..\profiles\vicav_profile_MAR-BRA.xml"></lang>
                <personGrp role="tribe" corresp="pgr:branes"></personGrp>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0244" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Colin1921" type="publication"></bibl>
-               <placeName ref="geo:jbala"></placeName>
-               <lang corresp="..\profiles\vicav_profile_MAR-JBL.xml"></lang>
+               <cit type="example" xml:id="ct_0076">
+                     <quote>kətbət</quote>
+                     <cit type="translation">
+                        <quote>she wrote</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0237" status="draft" resp="dmp:TD">
@@ -2477,11 +2930,17 @@
                <lang corresp="..\profiles\vicav_profile_MAR-CDM.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0218" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0218" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#pfv_3sgf_ət"></name>
                <bibl corresp="zot:Grand_Henry1972" type="publication"></bibl>
                <placeName ref="geo:cherchell"></placeName>
                <lang corresp="..\profiles\vicav_profile_DZA-CHR.xml"></lang>
+               <cit type="example" xml:id="ct_0077">
+                     <quote>kəţbəţ</quote>
+                     <cit type="translation">
+                        <quote>she wrote</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0223" status="draft" resp="dmp:TD">
@@ -2513,77 +2972,138 @@
                <lang corresp="..\profiles\vicav_profile_MAR-TGR.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0238" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0238" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#pfv_3sgf_ət"></name>
                <bibl corresp="zot:Kampffmeyer1912" type="publication"></bibl>
                <placeName ref="geo:casablanca-settat"></placeName>
                <lang corresp="..\profiles\vicav_profile_MAR-CHA.xml"></lang>
+               <cit type="example" xml:id="ct_0078">
+                     <quote>ḍəṛbət</quote>
+                     <cit type="translation">
+                        <quote>she punched</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0219" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0219" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#pfv_3sgf_ət"></name>
                <bibl corresp="zot:Laraba1981" type="publication"></bibl>
                <placeName ref="geo:constantine"></placeName>
                <lang corresp="..\profiles\vicav_profile_DZA-CON.xml"></lang>
+               <cit type="example" xml:id="ct_0079">
+                     <quote>ləbsət</quote>
+                     <cit type="translation">
+                        <quote>she wore</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0257" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0257" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#pfv_3sgf_ət"></name>
                <bibl corresp="zot:Loubignac1952" type="publication"></bibl>
                <placeName ref="geo:zaer"></placeName>
                <lang corresp="..\profiles\vicav_profile_MAR-ZIR.xml"></lang>
                <personGrp role="tribe" corresp="pgr:zaer"></personGrp>
+               <cit type="example" xml:id="ex_{rn}">
+                     <quote>ləʕbət</quote>
+                     <cit type="translation">
+                        <quote>she played</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0225" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0225" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#pfv_3sgf_ət"></name>
                <bibl corresp="zot:Marçais1902" type="publication"></bibl>
                <placeName ref="geo:tlemcen"></placeName>
                <lang corresp="..\profiles\vicav_profile_DZA-TLM.xml"></lang>
+               <cit type="example" xml:id="ct_0080">
+                     <quote>kəţbəţ</quote>
+                     <cit type="translation">
+                        <quote>she wrote</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0224" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0224" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#pfv_3sgf_et"></name>
                <bibl corresp="zot:Marçais1908" type="publication"></bibl>
                <placeName ref="geo:saida"></placeName>
                <lang corresp="..\profiles\vicav_profile_DZA-SDA.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:ulad ibrahim"/>
+               <cit type="example" xml:id="ct_0081">
+                     <quote>gesmet</quote>
+                     <cit type="translation">
+                        <quote>she shared</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0220" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0220" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#pfv_3sgf_ət"></name>
                <bibl corresp="zot:Marçais1956b" type="publication"></bibl>
                <placeName ref="geo:jijel"></placeName>
                <lang corresp="..\profiles\vicav_profile_DZA-DJL.xml"></lang>
+               <cit type="example" xml:id="ct_0082">
+                     <quote>rəfdət</quote>
+                     <cit type="translation">
+                        <quote>she took off</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0179" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0179" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#pfv_3sgf_ət"></name>
                <bibl corresp="zot:Marjani2019" type="publication"></bibl>
                <placeName ref="geo:rehamna"></placeName>
                <lang corresp="..\profiles\vicav_profile_MAR-RHA.xml"></lang>
                <personGrp role="tribe" corresp="pgr:rhamna"></personGrp>
+               <cit type="example" xml:id="ct_0083">
+                     <quote>fəhmət</quote>
+                     <cit type="translation">
+                        <quote>she understood</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0253" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0253" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#pfv_3sgf_ət"></name>
                <bibl corresp="zot:Moscoso2002a" type="publication"></bibl>
                <placeName ref="geo:souss_massa"></placeName>
                <lang corresp="..\profiles\vicav_profile_MAR-SOS.xml"></lang>
+               <cit type="example" xml:id="ex_{rn}">
+                     <quote>dəxlət</quote>
+                     <cit type="translation">
+                        <quote>she went in</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0249" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0249" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#pfv_3sgf_t"></name>
                <bibl corresp="zot:Stillman1988" type="publication"></bibl>
                <placeName ref="geo:sefrou"></placeName>
                <lang corresp="..\profiles\vicav_profile_MAR-RBS.xml"></lang>
                <personGrp role="religion" corresp="pgr:jews"></personGrp>
+               <cit type="example" xml:id="ct_0084">
+                     <quote>srəbţ</quote>
+                     <cit type="translation">
+                        <quote>she drank</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="fv_0236" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="fv_0236" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#pfv_3sgf_ət"></name>
                <bibl corresp="zot:Vicente2000" type="publication"></bibl>
                <placeName ref="geo:anjra"></placeName>
                <lang corresp="..\profiles\vicav_profile_MAR-ANJ.xml"></lang>
+               <cit type="example" xml:id="ct_0085">
+                     <quote>kəţbəţ</quote>
+                     <cit type="translation">
+                        <quote>she wrote</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0247" status="draft" resp="dmp:TD">
@@ -2831,14 +3351,6 @@
                <bibl corresp="zot:Watson1993" type="publication"></bibl>
                <placeName ref="geo:sanaa"></placeName>
                <lang corresp="..\profiles\vicav_profile_YEM-SAN.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="fv_0297" status="draft" resp="dmp:VE">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:Webster1991" type="publication"></bibl>
-               <placeName ref="geo:al_wahiba"></placeName>
-               <lang corresp="..\profiles\vicav_profile_OMN-WAH.xml"></lang>
-               <personGrp role="tribe" corresp="#al_wahiba"></personGrp>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="fv_0304" status="done" resp="dmp:VE">
