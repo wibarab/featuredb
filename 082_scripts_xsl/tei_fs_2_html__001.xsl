@@ -119,16 +119,151 @@
                <td class="tdLeft">Source</td>
                <td class="tdRight">
                   <xsl:variable name="id"><xsl:value-of select="substring(tei:bibl/@corresp,5)"/></xsl:variable>
+                  <xsl:variable name="bibtype">
+                     <xsl:value-of>
+                      <xsl:choose>
+                        <xsl:when test="$zotDoc//tei:biblStruct[@xml:id=$id][not(tei:analytic)][tei:monogr]">mo</xsl:when>
+                        <xsl:when test="$zotDoc//tei:biblStruct[@xml:id=$id][tei:analytic][tei:monogr]">ana_mo</xsl:when>
+                        <xsl:when test="$zotDoc//tei:biblStruct[@xml:id=$id][tei:series][tei:monogr]">ser_mo</xsl:when>
+                        <xsl:otherwise>other</xsl:otherwise>
+                      </xsl:choose>
+                     </xsl:value-of>
+                  </xsl:variable>
+
 
                   <xsl:choose>
                      <xsl:when test="starts-with(tei:bibl/@corresp,'src')">
                         <xsl:value-of select="$srcDoc//tei:event[@xml:id=$id]/tei:head"/>
                      </xsl:when>
+
                      <xsl:otherwise>
                         <xsl:choose>
-                           <xsl:when test="$id=''"><span class="spError">Could not find source</span></xsl:when>
+                           <xsl:when test="$id=''"><span class="spError">bibl/@corresp is empty</span></xsl:when>
+                           <xsl:when test="not($zotDoc//tei:biblStruct[@xml:id=$id])"><span class="spError">Could not find source <xsl:value-of select="$id"/></span></xsl:when>
                            <xsl:otherwise>
-                             <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:author/tei:surname"/>
+                              <xsl:choose>
+                                 <xsl:when test="$bibtype='mo'">
+                                    <!-- DEBUG: <div>Type: mo</div>-->
+                                    <!--**** Authors monograph****-->
+                                    <xsl:if test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:author">
+                                      <xsl:for-each select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:author/tei:surname">
+                                         <xsl:if test="position()&gt;1">, </xsl:if>
+                                         <xsl:value-of select="."/>
+                                      </xsl:for-each>
+                                      <xsl:text>: </xsl:text>
+                                    </xsl:if>
+
+                                    <!--**** Title monograph****-->
+                                    <xsl:choose>
+                                      <xsl:when test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:title[@type='short']">
+                                         <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:title[@type='short']"/>
+                                      </xsl:when>
+                                      <xsl:otherwise>
+                                         <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:title[1]"/>
+                                      </xsl:otherwise>
+                                    </xsl:choose>
+                                      <xsl:text>. </xsl:text>
+
+                                    <xsl:if test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:imprint/tei:date">
+                                       <xsl:text> </xsl:text>
+                                       <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:imprint/tei:date"/>
+                                       <xsl:text>.</xsl:text>
+                                    </xsl:if>
+
+                                 </xsl:when>
+
+                                 <xsl:when test="$bibtype='ana_mo'">
+                                    <!-- DEBUG: <div>Type: ana_mo</div>-->
+                                    <!--**** Authors analytic****-->
+                                    <xsl:for-each select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:author/tei:surname">
+                                       <xsl:if test="position()&gt;1">, </xsl:if>
+                                       <xsl:value-of select="."/>
+                                    </xsl:for-each>
+                                    <xsl:text>: </xsl:text>
+
+                                    <!--**** Title analytic****-->
+                                    <xsl:choose>
+                                      <xsl:when test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:title[@type='short']">
+                                         <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:title[@type='short']"/>
+                                      </xsl:when>
+                                      <xsl:otherwise>
+                                         <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:title[1]"/>
+                                      </xsl:otherwise>
+                                    </xsl:choose>
+                                    <xsl:text>. In: </xsl:text>
+
+                                    <!--**** Authors monograph/journal****-->
+                                    <xsl:if test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:author">
+                                      <xsl:for-each select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:author/tei:surname">
+                                         <xsl:if test="position()&gt;1">, </xsl:if>
+                                         <xsl:value-of select="."/>
+                                      </xsl:for-each>
+                                      <xsl:text>: </xsl:text>
+                                    </xsl:if>
+
+                                    <!--**** Title monograph/journal****-->
+                                    <xsl:choose>
+                                      <xsl:when test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:title[@type='short']">
+                                         <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:title[@type='short']"/>
+                                      </xsl:when>
+                                      <xsl:otherwise>
+                                         <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:title[1]"/>
+                                      </xsl:otherwise>
+                                    </xsl:choose>
+
+                                    <!--**** Title monograph/journal number etc****-->
+                                    <xsl:if test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:imprint/tei:biblScope">
+                                       <xsl:for-each select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:imprint/tei:biblScope">
+                                          <xsl:if test="position()&gt;1">, </xsl:if>
+                                          <xsl:text> </xsl:text>
+                                          <xsl:value-of select="."/>
+                                       </xsl:for-each>
+                                       <xsl:text>.</xsl:text>
+                                    </xsl:if>
+                                    <xsl:if test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:imprint/tei:date">
+                                       <xsl:text> </xsl:text>
+                                       <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:imprint/tei:date"/>
+                                       <xsl:text>.</xsl:text>
+                                    </xsl:if>
+
+                                 </xsl:when>
+
+                                 <xsl:when test="$bibtype='ser_mo'">
+                                   <!-- DEBUG: <div>Type: ser_mo</div>-->
+                                    <!--**** Authors ****-->
+                                    <xsl:for-each select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:author/tei:surname">
+                                       <xsl:if test="position()&gt;1">, </xsl:if>
+                                       <xsl:value-of select="."/>
+                                    </xsl:for-each>
+                                    <xsl:text>: </xsl:text>
+
+                                    <!--**** Title ****-->
+                                    <xsl:choose>
+                                      <xsl:when test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:title[@type='short']">
+                                         <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:title[@type='short']"/>
+                                      </xsl:when>
+                                      <xsl:otherwise>
+                                         <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:title[1]"/>
+                                      </xsl:otherwise>
+                                    </xsl:choose>
+                                    <xsl:text>. In: </xsl:text>
+
+                                    <!--**** Series ****-->
+                                    <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:series/tei:title[1]"/>
+                                    <xsl:text>.</xsl:text>
+                                    <xsl:if test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:series/tei:biblScope">
+                                       <xsl:for-each select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:series/tei:biblScope">
+                                          <xsl:if test="position()&gt;1">, </xsl:if>
+                                          <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:series/tei:biblScope"/>
+                                       </xsl:for-each>
+                                       <xsl:text>.</xsl:text>
+                                    </xsl:if>
+                                 </xsl:when>
+
+                                 <xsl:otherwise><span style="color:red">unidentified bibl-rec type</span></xsl:otherwise>
+                              </xsl:choose>
+
+<!--                             <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:author/tei:surname"/>
                              <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:author/tei:surname"/>
 
                              <xsl:text>: </xsl:text>
@@ -150,7 +285,9 @@
 
 
                              <xsl:if test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr">
-                                <xsl:text> In: </xsl:text>
+                                <xsl:if test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic">
+                                   <xsl:text> In: </xsl:text>
+                                </xsl:if>
                                 <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:title"/>
                                 <xsl:if test="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:imprint/tei:biblScope[@unit='volume']">
                                    <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:monogr/tei:imprint/tei:biblScope[@unit='volume']"/>
@@ -169,6 +306,7 @@
                                    <xsl:text>.</xsl:text>
                                 </xsl:if>
                              </xsl:if>
+                             -->
                             </xsl:otherwise>
                         </xsl:choose>
                      </xsl:otherwise>
