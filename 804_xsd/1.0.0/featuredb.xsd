@@ -9,10 +9,10 @@
    <xs:import namespace="https://wibarab.acdh.oeaw.ac.at/langDesc"
               schemaLocation="langdesc.tmp"/>
    <!--
-    Schema generated from ODD source 2023-04-21T10:50:37Z. .
-    TEI Edition: Version 4.5.0. Last updated on
-            25th October 2022, revision 3e98e619e
-    TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.5.0/
+    Schema generated from ODD source 2023-08-21T15:35:34Z. .
+    TEI Edition: Version 4.6.0. Last updated on
+            4th April 2023, revision f18deffba
+    TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.6.0/
     
   -->
    <!-- CC BY 4.0 -->
@@ -4014,7 +4014,7 @@ Sample values include: 1] rubbing (rubbing); 2] mildew (mildew); 3] smoke (smoke
                <xs:attribute name="reason">
                   <xs:annotation>
                      <xs:documentation>indicates why the material is hard to transcribe.
-Suggested values include: 1] illegible (illegible); 2] inaudible (inaudible); 3] faded (faded); 4] background_noise (background_noise); 5] eccentric_ductus (eccentric_ductus)</xs:documentation>
+Suggested values include: 1] illegible (illegible); 2] inaudible (inaudible); 3] faded (faded); 4] background_noise (background noise); 5] eccentric_ductus (eccentric ductus)</xs:documentation>
                   </xs:annotation>
                   <xs:simpleType>
                      <xs:restriction>
@@ -4053,7 +4053,7 @@ Suggested values include: 1] illegible (illegible); 2] inaudible (inaudible); 3]
                                        <xs:restriction base="xs:token">
                                           <xs:enumeration value="background_noise">
                                              <xs:annotation>
-                                                <xs:documentation>(background_noise) </xs:documentation>
+                                                <xs:documentation>(background noise) </xs:documentation>
                                              </xs:annotation>
                                           </xs:enumeration>
                                        </xs:restriction>
@@ -4062,7 +4062,7 @@ Suggested values include: 1] illegible (illegible); 2] inaudible (inaudible); 3]
                                        <xs:restriction base="xs:token">
                                           <xs:enumeration value="eccentric_ductus">
                                              <xs:annotation>
-                                                <xs:documentation>(eccentric_ductus) indicates illegibility due to an unusual, awkward, or incompetent execution of a glyph or glyphs </xs:documentation>
+                                                <xs:documentation>(eccentric ductus) indicates illegibility due to an unusual, awkward, or incompetent execution of a glyph or glyphs </xs:documentation>
                                              </xs:annotation>
                                           </xs:enumeration>
                                        </xs:restriction>
@@ -5197,12 +5197,14 @@ Elements]</xs:documentation>
                <xs:group ref="tei:tei_model.lLike"/>
                <xs:group ref="tei:tei_model.stageLike"/>
                <xs:group ref="tei:tei_model.labelLike"/>
+               <xs:group ref="tei:tei_model.pPart.transcriptional"/>
                <xs:element ref="tei:lg"/>
             </xs:choice>
             <xs:choice minOccurs="0" maxOccurs="unbounded">
                <xs:group ref="tei:tei_model.lLike"/>
                <xs:group ref="tei:tei_model.stageLike"/>
                <xs:group ref="tei:tei_model.labelLike"/>
+               <xs:group ref="tei:tei_model.pPart.transcriptional"/>
                <xs:group ref="tei:tei_model.global"/>
                <xs:element ref="tei:lg"/>
             </xs:choice>
