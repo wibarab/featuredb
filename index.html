@@ -9,11 +9,16 @@
     <title>Beschreibung der Seite</title>
   </head>
   <body>
-    <h2>Results of validating of  featuredb XML files</h2>
+    <h2>Results of validating of featuredb XML files</h2>
     <p>These are the results of the XML validation process automatically running after each push to the repository.</p>
-<h3>Validation report</h3>
-{% include_relative validationReport.html %}
-<h3>Ignored files</h3>
-{% include_relative ignoredFiles.html %}
+    <h3>Validation report</h3>
+    {% include_relative validationReport.html %}
+    <h3>Ignored files</h3>
+    {% include_relative ignoredFiles.html %}
+    
+    <h2>Overview over all FeatureValueObservation documents</h2>
+    {% include_relative statsReport.html %}
+    <h2>Overview over unfinished FeatureValueObservations</h2>
+    {% include_relative fvoStatusByMember.html %}
   </body>
 </html>
