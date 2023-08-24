@@ -1,4 +1,4 @@
-name: Validate XML files
+name: Validate XML files and generate statisitcs
 on:
   push: {}
   repository_dispatch:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch: {}
 jobs:
   build:
-    name: Validate XML files
+    name: Validate XML files and generate statisitc
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
@@ -31,14 +31,23 @@ jobs:
           pipenv install
           pipenv run jupyter nbconvert --to script validate.ipynb
           GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} pipenv run python validate.py
+      - name: Generate statistics
+        run: |
+          python --version
+          python -m pip install pipenv
+          cd main/080_scripts_generic/stats
+          pipenv install
+          pipenv run jupyter nbconvert --to script wibarab_featuredb_stats.ipynb
+          GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} pipenv run python wibarab_featuredb_stats.py
       - name: Commit errors to gh_pages
         run: |
           cp main/080_scripts_generic/validation/tmp/*.html gh_pages/
+          cp main/080_scripts_generic/stats/tmp/*.html gh_pages/
           cd gh_pages
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add *.html
-          git commit -m "New validation results" -a || true
+          git commit -m "New validation results and statistics" -a || true
       - name: Push changes back to GitHub
         uses: ad-m/github-push-action@master
         with:
