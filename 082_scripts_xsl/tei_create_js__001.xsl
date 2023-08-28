@@ -25,8 +25,9 @@
 <item><xsl:for-each select="tei:placeName">
 <xsl:variable name="id"><xsl:value-of select="substring(@ref,5)"/></xsl:variable>
 <xsl:variable name="placeName"><xsl:value-of select="$geoDoc//tei:place[@xml:id=$id]/tei:placeName"/></xsl:variable>
-<xsl:variable name="lat"><xsl:value-of select="substring-before($geoDoc//tei:place[@xml:id=$id]/tei:location/tei:geo[@decls='#dd'],' ')"/></xsl:variable>
-<xsl:variable name="lng"><xsl:value-of select="substring-after($geoDoc//tei:place[@xml:id=$id]/tei:location/tei:geo[@decls='#dd'],' ')"/></xsl:variable>
+<xsl:variable name="latlng"><xsl:value-of select="normalize-space($geoDoc//tei:place[@xml:id=$id]/tei:location/tei:geo[@decls='#dd'])"/></xsl:variable>
+<xsl:variable name="lat"><xsl:value-of select="substring-before($latlng,' ')"/></xsl:variable>
+<xsl:variable name="lng"><xsl:value-of select="substring-after($latlng,' ')"/></xsl:variable>
 <fs>
    <f name="lat"><string><xsl:value-of select="$lat"/></string></f>
    <f name="lng"><string><xsl:value-of select="$lng"/></string></f>
