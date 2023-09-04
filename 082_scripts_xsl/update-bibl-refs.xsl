@@ -41,7 +41,7 @@
             <xsl:apply-templates select="node() | @*"/>
         </xsl:copy>
     </xsl:template>
-    <xsl:template match="tei:bibl[@type='publication'][parent::w:featureValueObservation]/@corresp">
+    <xsl:template match="tei:bibl[@type='publication'][parent::w:featureValueObservation]/@corresp[. != '' or . != 'zot:']">
         <xsl:variable name="ref" select="substring-after(.,':')"/>
         <xsl:variable name="entry" select="$bibliography//tei:biblStruct[@n = $ref]"/>
         <xsl:variable name="newID" select="$entry/@xml:id"/>
