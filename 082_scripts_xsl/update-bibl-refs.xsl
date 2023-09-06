@@ -6,7 +6,7 @@
     xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:w="https://wibarab.acdh.oeaw.ac.at/langDesc"
     exclude-result-prefixes="w tei utils xs xsl"
-    version="1.0">
+    version="2.0">
     <!--<xsl:include href="https://gist.githubusercontent.com/dasch124/07b5c3bbfb0d79f531b2942304fd07f2/raw/9215fd3b7a67cd7b43652ed5f8f2650a49957995/expandPrivateURIScheme.xsl"/>
     <xsl:function name="utils:getReferencedContent">
         <xsl:param name="idRef"/>
@@ -33,7 +33,7 @@
         <xsl:copy>
             <xsl:copy-of select="@*"/>
             <xsl:apply-templates/>
-            <change when="2023-09-04" who="dmp:VE">updating references to Zotero IDs</change>
+            <change when="{current-date()}" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change>
         </xsl:copy>
     </xsl:template>
     <xsl:template match="node() | @*">
