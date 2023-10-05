@@ -5,7 +5,7 @@
 <?processor name="saxon" removePreserveFromXML="true" removePreserveFromXSLT="true"?>
 <?attributeAssignments fn="enricher_attributes.xml" path="{filePath}\..\..\880_conf\"?>
 <?shortCuts fn="wibarab_shortCuts" path="{filePath}\..\..\880_conf\"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../../804_xsd/1.0.1/featuredb.xsd" xml:id="ft_bnd_pr_2ps_pl_m">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../../804_xsd/1.0.1/featuredb.xsd" xml:id="ft_bnd_pr_2ps_pl_m">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -37,7 +37,7 @@
          <change when="2022-08-17" who="dmp:">c</change>
          <change when="2022-08-17" who="dmp: "/>
          <change when="2022-08-17" who="dmp:">For EGY-___ there are no values found</change>
-      <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change></revisionDesc>
+      <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change><change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change></revisionDesc>
    </teiHeader>
 
 
@@ -533,7 +533,7 @@
 
             <wib:featureValueObservation xml:id="ft_bnd_pr_2ps_pl_m.fv_0090" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#bp_p2m_ku"/>
-               <bibl corresp="zot:Palva1989" type=" publication"/>
+               <bibl corresp="zot:palva_1989_0000" type=" publication"/>
                <placeName ref="geo:al_karak"/>
                <lang corresp="..\profiles\vicav_profile_JOR-KRK.xml"/>
             </wib:featureValueObservation>
@@ -815,7 +815,7 @@
            
             <wib:featureValueObservation xml:id="ft_bnd_pr_2ps_pl_m.fv_0003" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#bp_p2m_kum"/>
-               <bibl corresp="zot:d'anna_2017_6228" type="publication"/>
+               <bibl corresp="zot:DAnna_2017_4912" type="publication"/>
                <placeName ref="geo:misrata"/>
                <lang corresp="..\profiles\vicav_profile_LBY-MSR.xml"/>
             </wib:featureValueObservation>

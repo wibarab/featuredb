@@ -5,7 +5,7 @@
 <?processor name="saxon" removePreserveFromXML="true" removePreserveFromXSLT="true"?>
 <?attributeAssignments fn="enricher_attributes.xml" path="{filePath}\..\..\880_conf\"?>
 <?shortCuts fn="wibarab_shortCuts" path="{filePath}\..\..\880_conf\"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../../804_xsd/1.0.1/featuredb.xsd" xml:id="ft_q">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../../804_xsd/1.0.1/featuredb.xsd" xml:id="ft_q">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -36,7 +36,7 @@
       <revisionDesc status="done">
          <change when="2023-01-24" who="dmp:VE">changed status to done</change>
 
-      <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change></revisionDesc>
+      <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change><change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change></revisionDesc>
    </teiHeader>
 
    <text>
@@ -777,14 +777,14 @@
 
             <wib:featureValueObservation xml:id="ft_q.fv_0083" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#q_g"/>
-               <bibl corresp="zot:Al-Wer2007a" type=" publication"/>
+               <bibl corresp="zot:wer_2007_5826" type=" publication"/>
                <placeName ref="geo:amman"/>
                <lang corresp="..\profiles\vicav_profile_JOR-AMN.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_q.fv_0330" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#q_hamza"/>
-               <bibl corresp="zot:Al-Wer2007a" type=" publication"/>
+               <bibl corresp="zot:wer_2007_5826" type=" publication"/>
                <placeName ref="geo:amman"/>
                <lang corresp="..\profiles\vicav_profile_JOR-AMN.xml"/>
             </wib:featureValueObservation>
@@ -1338,7 +1338,7 @@
 
             <wib:featureValueObservation xml:id="ft_q.fv_0090" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#q_g"/>
-               <bibl corresp="zot:Palva1989" type=" publication"/>
+               <bibl corresp="zot:palva_1989_0000" type=" publication"/>
                <placeName ref="geo:al_karak"/>
                <lang corresp="..\profiles\vicav_profile_JOR-KRK.xml"/>
             </wib:featureValueObservation>
@@ -2698,7 +2698,7 @@
 
             <wib:featureValueObservation xml:id="ft_q.fv_0232" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#q_q"/>
-               <bibl corresp="zot:d'anna_2021_1234" type="publication"/>
+               <bibl corresp="zot:DAnna_2021_9340" type="publication"/>
                <placeName ref="geo:yefren"/>
                <lang corresp="..\profiles\vicav_profile_LBY-JYN.xml"/>
                <personGrp role="religion" corresp="pgr:jews"/>
@@ -3561,7 +3561,7 @@
 
             <wib:featureValueObservation xml:id="ft_q.fv_0020" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#q_g"/>
-               <bibl corresp="zot:d'anna_2020_7795" type="publication"/>
+               <bibl corresp="zot:DAnna_2020_6708" type="publication"/>
                <placeName ref="geo:chebba"/>
                <lang corresp="..\profiles\vicav_profile_TUN-CHB.xml"/>
                <cit xml:id="ft_q.fv_0020.ct_0114" type="example">
@@ -3575,7 +3575,7 @@
 
             <wib:featureValueObservation xml:id="ft_q.fv_0023" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#q_q"/>
-               <bibl corresp="zot:Herin2017" type=" publication"/>
+               <bibl corresp="zot:prochazka_2016_3167" type=" publication"/>
                <placeName ref="geo:kerkennah_oulad_kacem"/>
                <lang corresp="..\profiles\vicav_profile_TUN-KNH2.xml"/>
                <cit xml:id="ft_q.fv_0023.ct_0187" type="example">
@@ -3588,7 +3588,7 @@
 
             <wib:featureValueObservation xml:id="ft_q.fv_0022" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#q_q"/>
-               <bibl corresp="zot:Herin2017" type=" publication"/>
+               <bibl corresp="zot:prochazka_2016_3167" type=" publication"/>
                <placeName ref="geo:kerkennah_oulad_bou_ali"/>
                <lang corresp="..\profiles\vicav_profile_TUN-KNH1.xml"/>
                <cit xml:id="ft_q.fv_0022.ct_0247" type="example">
@@ -3601,7 +3601,7 @@
 
             <wib:featureValueObservation xml:id="ft_q.fv_0024" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#q_g"/>
-               <bibl corresp="zot:Herin2017" type=" publication"/>
+               <bibl corresp="zot:prochazka_2016_3167" type=" publication"/>
                <placeName ref="geo:kerkennah_mellita"/>
                <lang corresp="..\profiles\vicav_profile_TUN-KNH3.xml"/>
                <cit xml:id="ft_q.fv_0024.ct_0096" type="example">
@@ -3699,7 +3699,7 @@
 
             <wib:featureValueObservation xml:id="ft_q.fv_0025" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#q_q"/>
-               <bibl corresp="zot:Sellami2019" type=" publication"/>
+               <bibl corresp="zot:sellami_2019_9429" type=" publication"/>
                <placeName ref="geo:sfax"/>
                <lang corresp="..\profiles\vicav_profile_TUN-SFX.xml"/>
                <cit xml:id="ft_q.fv_0025.ct_0121" type="example">
@@ -3967,7 +3967,7 @@
 
             <wib:featureValueObservation xml:id="ft_q.fv_0227" status="done" resp="dmp:TD">
                <name type="featureValue" ref="#q_q"/>
-               <bibl corresp="zot:d'anna_2020_9980" type="publication"/>
+               <bibl corresp="zot:DAnna_2020_8652" type="publication"/>
                <placeName ref="geo:mazara_del_vallo"/>
                <lang corresp="..\profiles\vicav_profile_ITA-MDV.xml"/>
                <cit xml:id="ft_q.fv_0227.ct_0209" type="example">
@@ -3981,7 +3981,7 @@
 
             <wib:featureValueObservation xml:id="ft_q.fv_0380" status="done" resp="dmp:TD">
                <name type="featureValue" ref="#q_g"/>
-               <bibl corresp="zot:d'anna_2020_9980" type="publication"/>
+               <bibl corresp="zot:DAnna_2020_8652" type="publication"/>
                <placeName ref="geo:mazara_del_vallo"/>
                <lang corresp="..\profiles\vicav_profile_ITA-MDV.xml"/>
                <cit xml:id="ft_q.fv_0380.ct_0037" type="example">
@@ -4022,7 +4022,7 @@
 
            <wib:featureValueObservation xml:id="ft_q.fv_0218" status="done" resp="dmp:TD">
                <name type="featureValue" ref="#q_q"/>
-               <bibl corresp="zot:grand'henry_1972_0000" type="publication"/>
+               <bibl corresp="zot:GrandHenry_1972_9692" type="publication"/>
                <placeName ref="geo:cherchell"/>
                <lang corresp="..\profiles\vicav_profile_DZA-CHR.xml"/>
                <cit xml:id="ft_q.fv_0218.ct_0272" type="example">
@@ -4036,7 +4036,7 @@
 
             <wib:featureValueObservation xml:id="ft_q.fv_0221" status="done" resp="dmp:TD">
                <name type="featureValue" ref="#q_g"/>
-               <bibl corresp="zot:grand'henry_1976_0001" type="publication"/>
+               <bibl corresp="zot:GrandHenry_1976_2248" type="publication"/>
                <placeName ref="geo:mzab"/>
                <lang corresp="..\profiles\vicav_profile_DZA-MZB.xml"/>
                <cit xml:id="ft_q.fv_0221.ct_0110" type="example">
