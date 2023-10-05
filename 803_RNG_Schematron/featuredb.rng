@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2023-08-21T15:35:16Z. .
+Schema generated from ODD source 2023-10-02T07:45:18Z. .
 TEI Edition: Version 4.6.0. Last updated on
         4th April 2023, revision f18deffba
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.6.0/
@@ -4786,6 +4786,34 @@ Elements]</a:documentation>
          <zeroOrMore>
             <ref name="tei_note"/>
          </zeroOrMore>
+         <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                 xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
+                 prefix="tei"
+                 uri="http://www.tei-c.org/ns/1.0"/>
+         <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                 xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
+                 prefix="fn"
+                 uri="http://www.w3.org/2005/xpath-function"/>
+         <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                 xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
+                 prefix="wib"
+                 uri="https://wibarab.acdh.oeaw.ac.at/langDesc"/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="featuredb-bibl-bibl-status-constraint-rule-18">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
+                      context="tei:bibl[parent::wib:featureValueObservation][matches(@n,'[a-z]$')]">
+               <sch:report test="not(exists(@status))">@status is required on potentially ambigous bibl elements</sch:report>
+            </sch:rule>
+         </pattern>
          <ref name="tei_att.global.attribute.xmlid"/>
          <ref name="tei_att.global.attribute.xmllang"/>
          <ref name="tei_att.global.attribute.xmlbase"/>
@@ -4802,6 +4830,17 @@ Elements]</a:documentation>
                </oneOrMore>
             </list>
          </attribute>
+         <optional>
+            <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                       name="status"
+                       a:defaultValue="draft">
+               <a:documentation>This attribute is used to indicate references to bibl entries which need to be conrolled. When all references have been controlled, the attrbute can be removed again.
+Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] draft; 6] embargoed; 7] expired; 8] frozen; 9] galley; 10] proposed; 11] published; 12] recommendation; 13] submitted; 14] unfinished; 15] withdrawn</a:documentation>
+               <data type="token">
+                  <param name="pattern">[^\p{C}\p{Z}]+</param>
+               </data>
+            </attribute>
+         </optional>
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -4889,7 +4928,7 @@ Elements]</a:documentation>
             </choice>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-relatedItem-targetorcontent1-constraint-report-15">
+                  id="featuredb-relatedItem-targetorcontent1-constraint-report-16">
             <rule context="tei:relatedItem">
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -4931,7 +4970,7 @@ relatedItem element must be empty</sch:report>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-l-abstractModel-structure-l-in-l-constraint-report-16">
+                  id="featuredb-l-abstractModel-structure-l-in-l-constraint-report-17">
             <rule context="tei:l">
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -4995,7 +5034,7 @@ relatedItem element must be empty</sch:report>
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-lg-abstractModel-structure-lg-in-l-constraint-report-17">
+                  id="featuredb-lg-abstractModel-structure-lg-in-l-constraint-report-18">
             <rule context="tei:lg">
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -6547,7 +6586,7 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</a:doc
             </optional>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-div-abstractModel-structure-div-in-l-or-lg-constraint-report-19">
+                  id="featuredb-div-abstractModel-structure-div-in-l-or-lg-constraint-report-20">
             <rule context="tei:div">
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -6559,7 +6598,7 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</a:doc
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="featuredb-div-abstractModel-structure-div-in-ab-or-p-constraint-report-20">
+                  id="featuredb-div-abstractModel-structure-div-in-ab-or-p-constraint-report-21">
             <rule context="tei:div">
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
