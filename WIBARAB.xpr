@@ -10,6 +10,32 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>802_tei_odd/featuredb.odd</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>4/tei/teip5odd.framework/TEI ODD/TEI ODD to RelaxNG XML</String>
+                                        <String>4/tei/teip5odd.framework/TEI ODD/TEI ODD to XML Schema</String>
+                                        <String>4/tei/teip5odd.framework/TEI ODD/TEI ODD XHTML</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>ANT</String>
+                                        <String>ANT</String>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                        <Byte>2</Byte>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>010_manannot/features/feature_apophonic_passive.xml</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -24,29 +50,6 @@
                                 </field>
                                 <field name="scenarioStorageLocations">
                                     <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>802_tei_odd/featuredb.odd</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>ODD2HTML - 01 - expand ODD</String>
-                                        <String>4/tei/teip5odd.framework/TEI ODD/TEI ODD to RelaxNG XML</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                        <String>ANT</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
                                         <Byte>2</Byte>
                                     </list>
                                 </field>
@@ -435,6 +438,89 @@
                                     <null/>
                                 </field>
                                 <field name="name">
+                                    <String>rewrite zotero IDrefs in fvos</String>
+                                </field>
+                                <field name="baseURL">
+                                    <String></String>
+                                </field>
+                                <field name="footerURL">
+                                    <String></String>
+                                </field>
+                                <field name="fOPMethod">
+                                    <String>pdf</String>
+                                </field>
+                                <field name="fOProcessorName">
+                                    <String>Apache FOP</String>
+                                </field>
+                                <field name="headerURL">
+                                    <String></String>
+                                </field>
+                                <field name="inputXSLURL">
+                                    <String>${pdu}/082_scripts_xsl/update-bibl-refs.xsl</String>
+                                </field>
+                                <field name="inputXMLURL">
+                                    <String>${currentFileURL}</String>
+                                </field>
+                                <field name="defaultScenario">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="isFOPPerforming">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="type">
+                                    <String>XSL</String>
+                                </field>
+                                <field name="saveAs">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="openInBrowser">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="outputResource">
+                                    <String>${currentFileURL}</String>
+                                </field>
+                                <field name="openOtherLocationInBrowser">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="locationToOpenInBrowserURL">
+                                    <null/>
+                                </field>
+                                <field name="openInEditor">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="showInHTMLPane">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="showInXMLPane">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="showInSVGPane">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="showInResultSetPane">
+                                    <Boolean>false</Boolean>
+                                </field>
+                                <field name="useXSLTInput">
+                                    <Boolean>true</Boolean>
+                                </field>
+                                <field name="xsltParams">
+                                    <list/>
+                                </field>
+                                <field name="cascadingStylesheets">
+                                    <String-array/>
+                                </field>
+                                <field name="xslTransformer">
+                                    <String>Saxon-HE</String>
+                                </field>
+                                <field name="extensionURLs">
+                                    <String-array/>
+                                </field>
+                            </scenario>
+                            <scenario>
+                                <field name="advancedOptionsMap">
+                                    <null/>
+                                </field>
+                                <field name="name">
                                     <String>sources</String>
                                 </field>
                                 <field name="baseURL">
@@ -543,7 +629,7 @@
                                     <null/>
                                 </field>
                                 <field name="name">
-                                    <String>rewrite zotero IDrefs in fvos</String>
+                                    <String>fixPIs</String>
                                 </field>
                                 <field name="baseURL">
                                     <String></String>
@@ -561,7 +647,7 @@
                                     <String></String>
                                 </field>
                                 <field name="inputXSLURL">
-                                    <String>${pdu}/082_scripts_xsl/update-bibl-refs.xsl</String>
+                                    <String>${pdu}/082_scripts_xsl/fixPIs.xsl</String>
                                 </field>
                                 <field name="inputXMLURL">
                                     <String>${currentFileURL}</String>
@@ -615,7 +701,7 @@
                                     <String-array/>
                                 </field>
                                 <field name="xslTransformer">
-                                    <String>Saxon-HE</String>
+                                    <String>Saxon-PE</String>
                                 </field>
                                 <field name="extensionURLs">
                                     <String-array/>
@@ -628,11 +714,11 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>010_manannot/features/project-sample.json</String>
+                                    <String>010_manannot/features/feature_raising_a_pretonic_closed_i.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>projectConfig</String>
+                                        <String>features_rng</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -648,11 +734,11 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>010_manannot/features/features_q.xml</String>
+                                    <String>010_manannot/features/</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>features_q</String>
+                                        <String>features_rng</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -708,10 +794,10 @@
                                             <field name="validationEngine">
                                                 <validationEngine>
                                                     <field name="engineType">
-                                                        <String>LIBXML</String>
+                                                        <String>&lt;Default engine></String>
                                                     </field>
                                                     <field name="allowsAutomaticValidation">
-                                                        <Boolean>false</Boolean>
+                                                        <Boolean>true</Boolean>
                                                     </field>
                                                 </validationEngine>
                                             </field>
@@ -730,10 +816,10 @@
                                                         <null/>
                                                     </field>
                                                     <field name="type">
-                                                        <Integer>4</Integer>
+                                                        <Integer>6</Integer>
                                                     </field>
                                                     <field name="uri">
-                                                        <String>file:/Q:/featuredb/featuredb_broken.rng</String>
+                                                        <String>${pdu}/803_RNG_Schematron/featuredb.rng</String>
                                                     </field>
                                                 </validationUnitSchema>
                                             </field>
@@ -747,7 +833,7 @@
                                     <String>Validation_scenario</String>
                                 </field>
                                 <field name="name">
-                                    <String>features_q</String>
+                                    <String>features_rng</String>
                                 </field>
                             </validationScenario>
                             <validationScenario>

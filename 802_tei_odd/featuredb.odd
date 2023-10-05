@@ -639,18 +639,6 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <elementRef key="biblScope" minOccurs="0"/>
                                     <elementRef key="note" maxOccurs="unbounded" minOccurs="0"/>
                                  </content>
-                                 <constraintSpec ident="bibl-status" scheme="schematron">
-                                    <constraint>
-                                       <sch:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>
-                                       <sch:ns prefix="fn" uri="http://www.w3.org/2005/xpath-function"/>
-                                       <sch:ns prefix="wib" uri="https://wibarab.acdh.oeaw.ac.at/langDesc"/>
-                                       <!-- potentially ambiguous @xml:ids need a @status attribute indicating whethter 
-                                            the reference has been controlled or not. -->
-                                       <sch:rule context="tei:bibl[parent::wib:featureValueObservation]">
-                                          <sch:report test="not(exists(@status))">@status is required on bibl elements in FVOs</sch:report>
-                                       </sch:rule>
-                                    </constraint>
-                                 </constraintSpec>
                                  <attList>
                                     <attDef ident="type" mode="replace">
                                        <valList type="closed">
@@ -670,9 +658,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </attDef>
                                     <attDef ident="resp" mode="delete"/>
                                     <attDef ident="status" mode="change">
-                                       <desc>This attribute is used to indicate references to bibl entries which need to be conrolled. When all references have been controlled, the attrbute can be removed again.</desc>
+                                       <desc>This attribute is used to indicate references to bibl entries which need to be conrolled.</desc>
                                        <valList>
-                                          <valItem ident="OK"><desc>The value of @corresp has been checked by the FVO's editor.</desc></valItem>
                                           <valItem ident="CHECKME"><desc>The value of @corresp needs to be confirmed by the FVO's editor.</desc></valItem>
                                        </valList>
                                     </attDef>
@@ -720,7 +707,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                        <sch:rule context="tei:placeName/@ref">
                                           <sch:extends rule="reference"/>
                                        </sch:rule>
-                                       <sch:rule context="tei:bibl/@corresp">
+                                       <sch:rule context="tei:bibl/@corresp[not(.='zot:')]">
                                           <sch:extends rule="reference"/>
                                        </sch:rule>
                                        <sch:rule context="tei:lang/@corresp">

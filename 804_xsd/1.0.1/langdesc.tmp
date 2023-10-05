@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:langdesc="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:tei="http://www.tei-c.org/ns/1.0">
+  <xs:import namespace="http://www.tei-c.org/ns/1.0" schemaLocation="featuredb.xsd.tmp"/>
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.tmp"/>
+  <xs:element name="featureValueObservation">
+    <xs:annotation>
+      <xs:documentation>(feature value observation) contains data gathered by a source about the realisation of a fiven feature</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tei:name"/>
+        <xs:element ref="tei:bibl"/>
+        <xs:element maxOccurs="unbounded" ref="tei:placeName"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:lang"/>
+        <xs:element minOccurs="0" ref="tei:date"/>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="tei:personGrp"/>
+          <xs:element ref="tei:cit"/>
+          <xs:element ref="tei:note"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attributeGroup ref="tei:tei_att.global.attribute.xmllang"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlbase"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attribute.xmlspace"/>
+      <xs:attributeGroup ref="tei:tei_att.global.responsibility.attribute.cert"/>
+      <xs:attributeGroup ref="tei:tei_att.global.responsibility.attribute.resp"/>
+      <xs:attributeGroup ref="tei:tei_att.global.source.attribute.source"/>
+      <xs:attributeGroup ref="tei:tei_att.docStatus.attributes"/>
+      <xs:attribute ref="xml:id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
