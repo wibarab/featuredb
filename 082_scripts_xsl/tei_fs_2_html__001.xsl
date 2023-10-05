@@ -1,4 +1,4 @@
-<xsl:stylesheet xml:space="preserve" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" version="2.0" exclude-result-prefixes="xsl tei">
+<xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" version="2.0" exclude-result-prefixes="xsl tei">
    <xsl:output method="html" indent="no" encoding="UTF-8"/>
    <xsl:strip-space elements="tei:body tei:TEI tei:row tei:cell tei:teiHeader tei:text tei:u tei:hi tei:ref tei:p tei:fileDesc tei:titleStmt tei:publicationStmt tei:editionStmt tei:revisionDesc tei:sourceDesc tei:div"/>
 
@@ -119,7 +119,7 @@
                <td class="tdLeft">Source</td>
                <td class="tdRight">
                   <xsl:variable name="id"><xsl:value-of select="substring(tei:bibl/@corresp,5)"/></xsl:variable>
-                  <xsl:variable name="bibtype">
+                  <xsl:variable name="pre_bibtype">
                      <xsl:value-of>
                       <xsl:choose>
                         <xsl:when test="$zotDoc//tei:biblStruct[@xml:id=$id][not(tei:analytic)][tei:monogr]">mo</xsl:when>
@@ -129,7 +129,7 @@
                       </xsl:choose>
                      </xsl:value-of>
                   </xsl:variable>
-
+                  <xsl:variable name="bibtype"><xsl:value-of select="normalize-space($pre_bibtype)"/></xsl:variable>
 
                   <xsl:choose>
                      <xsl:when test="starts-with(tei:bibl/@corresp,'src')">
@@ -260,7 +260,7 @@
                                     </xsl:if>
                                  </xsl:when>
 
-                                 <xsl:otherwise><span style="color:red">unidentified bibl-rec type</span></xsl:otherwise>
+                                 <xsl:otherwise><span style="color:red">unidentified bibl-rec type: </span> <xsl:value-of select="$bibtype"/> <xsl:value-of select="string-length($bibtype)"/> </xsl:otherwise>
                               </xsl:choose>
 
 <!--                             <xsl:value-of select="$zotDoc//tei:biblStruct[@xml:id=$id]/tei:analytic/tei:author/tei:surname"/>
