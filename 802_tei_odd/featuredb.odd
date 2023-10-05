@@ -8,7 +8,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
       <fileDesc>
          <titleStmt>
             <title>WIBARAB FeatureDB TEI Customization</title>
-            <title type="desc">Version 1.0.0</title>
+            <title type="desc">Version 1.0.1</title>
             <principal><name type="person" xml:id="SP">Stephan Procházka</name></principal>
             <author><name type="person" xml:id="CM">Charly Mörth</name></author>
             <author><name type="person" xml:id="DS">Daniel Schopper</name></author>
@@ -22,7 +22,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </respStmt>
          </titleStmt>
          <editionStmt>
-            <edition n="1.0.0">Version 1.0.0</edition>
+            <edition n="1.0.1">Version 1.0.1</edition>
          </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
@@ -60,6 +60,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
          <change when="2023-02-01" who="dmp:CM">adding more structure</change>
          <change when="2023-02-01" who="dmp:CM">expanding details of FVO element</change>
          <change when="2023-03-16" who="dmp:DS">fixing order in FVO element</change>
+         <change when="2023-10-02" who="dmp:DS">introducing @status on @bibl with ambiguous values in @corresp (temporary)</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -638,6 +639,18 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <elementRef key="biblScope" minOccurs="0"/>
                                     <elementRef key="note" maxOccurs="unbounded" minOccurs="0"/>
                                  </content>
+                                 <constraintSpec ident="bibl-status" scheme="schematron">
+                                    <constraint>
+                                       <sch:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>
+                                       <sch:ns prefix="fn" uri="http://www.w3.org/2005/xpath-function"/>
+                                       <sch:ns prefix="wib" uri="https://wibarab.acdh.oeaw.ac.at/langDesc"/>
+                                       <!-- potentially ambiguous @xml:ids need a @status attribute indicating whethter 
+                                            the reference has been controlled or not. -->
+                                       <sch:rule context="tei:bibl[parent::wib:featureValueObservation]">
+                                          <sch:report test="not(exists(@status))">@status is required on bibl elements in FVOs</sch:report>
+                                       </sch:rule>
+                                    </constraint>
+                                 </constraintSpec>
                                  <attList>
                                     <attDef ident="type" mode="replace">
                                        <valList type="closed">
@@ -656,7 +669,13 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                        </valList>
                                     </attDef>
                                     <attDef ident="resp" mode="delete"/>
-                                    <attDef ident="status" mode="delete"/>
+                                    <attDef ident="status" mode="change">
+                                       <desc>This attribute is used to indicate references to bibl entries which need to be conrolled. When all references have been controlled, the attrbute can be removed again.</desc>
+                                       <valList>
+                                          <valItem ident="OK"><desc>The value of @corresp has been checked by the FVO's editor.</desc></valItem>
+                                          <valItem ident="CHECKME"><desc>The value of @corresp needs to be confirmed by the FVO's editor.</desc></valItem>
+                                       </valList>
+                                    </attDef>
                                     <attDef ident="corresp" mode="change" usage="req"/>
                                  </attList>
                               </elementSpec>
