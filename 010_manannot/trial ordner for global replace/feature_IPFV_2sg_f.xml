@@ -1,0 +1,3500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../082_scripts_xsl/tei_fs_2_html__001.xsl"?>
+<?xslt inPathSegment="\010_manannot\" outPathSegment="\106_html\"?>
+<?snippets fn="snippets_wibarab_001.xml" path="{filePath}\..\..\880_conf\"?>
+<?processor name="saxon" removePreserveFromXML="true" removePreserveFromXSLT="true"?>
+<?attributeAssignments fn="enricher_attributes.xml" path="{filePath}\..\..\880_conf\"?>
+<?shortCuts fn="wibarab_shortCuts" path="{filePath}\..\..\880_conf\"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../../804_xsd/1.0.1/featuredb.xsd" xml:id="ft_ipfv_2sg_f">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Variants of IPFV inflection: 2sg.f in sound verbs</title>
+            <author>Veronika Engler</author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>{publisher}</publisher>
+            <date when="2022-10-03"/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This is the feature-file for IPFV inflection: 2sg.f in sound verbs.</p>
+         </sourceDesc>
+      </fileDesc>
+
+      <encodingDesc>
+
+         <listPrefixDef xml:id="listPrefixDef">
+            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_dmp.xml#$1"/>
+            <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_biblio_tei_zotero.xml#$1"/>
+            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_dialects.xml#$1"/>
+            <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1"/>
+            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"/>
+            <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
+         </listPrefixDef>
+      </encodingDesc>
+
+      <revisionDesc status="draft">
+         <change when="2022-08-17" who="dmp:">c</change>
+         <change when="2022-08-17" who="dmp: "/>
+         <change when="2022-08-17" who="dmp:">For EGY-___ there are no values found</change>
+      <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change><change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change></revisionDesc>
+   </teiHeader>
+
+
+
+   <text>
+      <body>
+
+         <div type="featureDescription">
+            <head>Feature Values</head>
+            <list type="featureValues">
+               <item xml:id="ipfv_2sgf_">
+                  <label>-</label>
+                  <desc/>
+               </item>
+               <item xml:id="ipfv_2sgf_i">
+                  <label>-i</label>
+                  <desc/>
+               </item>
+               <item xml:id="ipfv_2sgf_e">
+                  <label>-e</label>
+                  <desc/>
+               </item>
+               <item xml:id="ipfv_2sgf_iy">
+                  <label>-iy</label>
+                  <desc/>
+               </item>
+               <item xml:id="ipfv_2sgf_ey">
+                  <label>-ey</label>
+                  <desc/>
+               </item>
+               <item xml:id="ipfv_2sgf_ay">
+                  <label>-ay</label>
+                  <desc/>
+               </item>
+               <item xml:id="ipfv_2sgf_ii">
+                  <label>-ī</label>
+                  <desc/>
+               </item>
+               <item xml:id="ipfv_2sgf_iin">
+                  <label>-īn</label>
+                  <desc/>
+               </item>
+               <item xml:id="ipfv_2sgf_een">
+                  <label>-ēn</label>
+                  <desc/>
+               </item>
+               <item xml:id="ipfv_2sgf_in">
+                  <label>-in</label>
+                  <desc/>
+               </item>
+            </list>
+         </div>
+         <div type="description">
+         </div>
+
+         <div xmlns:tei="http://www.tei-c.org/ns/1.0" type="featureValueObservations">
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0050" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="" type="fieldwork"/>
+               <placeName ref="geo:ed_dhayra"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-ARA.xml"/>
+               <personGrp role="tribe" corresp="pgr:aramsha_lebanon"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0063" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="" type="fieldwork"/>
+               <placeName ref="geo:khalde"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-KHA.xml"/>
+               <personGrp role="tribe" corresp="pgr:arab_xalde"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0071" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
+               <placeName ref="geo:naameh"/>
+               <placeName ref="geo:el_karantina"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"/>
+               <personGrp role="tribe" corresp="pgr:arab_maslax"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0071.ct_0092">
+                  <quote>tišrabi</quote>
+                  <cit type="translation">
+                     <quote>you (f.sg) drink</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0020" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#ipfv_2sgf_in"/>
+               <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
+               <placeName ref="geo:el_karantina"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"/>
+               <personGrp role="tribe" corresp="pgr:arab_maslax"/>
+               <personGrp role="ageGroup" corresp="#old"/>
+               <cit xml:id="ft_ipfv_2sg_f.fv_0020.ct_0100" type="example">
+                  <quote>tāxḏīn</quote>
+                  <cit type="translation">
+                     <quote>you (f.sg) take</quote>
+                  </cit>
+               </cit>
+               <note type="constraintNote">Observed only in some speakers from the elderly group (+70), and only in defective and concave verbs in pausal position.</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0053" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:haidar_1979_2969" type="publication"/>
+               <placeName ref="geo:baskinta"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-BAS.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0027" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
+               <placeName ref="geo:jurdeih"/>
+               <lang corresp="..\profiles\vicav_profile_ISR-ARM.xml"/>
+               <personGrp role="tribe" corresp="pgr:aramsha_israel"/>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0026" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:geva_kleinberger_2004_0000" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:haifa"/>
+               <lang corresp="..\profiles\vicav_profile_ISR-HAI.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0026.ct_0103">
+                  <quote>tikətbi</quote>
+                  <cit type="translation">
+                     <quote>you (f.sg) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0035" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:havelová_2000_7442" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:nazareth"/>
+               <lang corresp="..\profiles\vicav_profile_ISR-NAZ.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0074" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:el_hajje_1954_0000" type="publication"/>
+               <placeName ref="geo:tripoli_lebanon"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-TRI.xml"/>
+               <cit xml:id="ft_ipfv_2sg_f.fv_0074.ct_0098" type="example">
+                  <quote>btəkətbi</quote>
+                  <cit type="translation">
+                     <quote>you (f.sg) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0062" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#ipfv_2sgf_e"/>
+               <bibl corresp="zot:féghali_1919_9281" type="publication"/>
+               <placeName ref="geo:kfar_aabida"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-KAB.xml"/>
+               <cit xml:id="ft_ipfv_2sg_f.fv_0062.ct_0099" type="example">
+                  <quote>bteḥmle</quote>
+                  <cit type="translation">
+                     <quote>you (f.sg) carry</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0079" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:fleisch_1947_2645" type="publication"/>
+               <placeName ref="geo:zahle"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-ZAH.xml"/>
+               <cit xml:id="ft_ipfv_2sg_f.fv_0079.ct_0095" type="example">
+                  <quote>btəkətbi</quote>
+                  <cit type="translation">
+                     <quote>you (f.sg) write</quote>
+                  </cit>
+               </cit>
+               <note type="general">-ei when in pausal position.</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0065" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:fleisch_1974_3183" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:kfar_sghab"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-KSG.xml"/>
+               <cit xml:id="ft_ipfv_2sg_f.fv_0065.ct_0096" type="example">
+                  <quote>btəḍərbi</quote>
+                  <cit type="translation">
+                     <quote>you (f.sg) hit</quote>
+                  </cit>
+               </cit>
+               <note type="general">-ai in pausal position.</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0056" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:jiha_1964_0000" type="publication"/>
+               <placeName ref="geo:bishmizzine"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-BIS.xml"/>
+               <cit xml:id="ft_ipfv_2sg_f.fv_0056.ct_0094" type="example">
+                  <quote>btinzli</quote>
+                  <cit type="translation">
+                     <quote>you (f.sg) go down</quote>
+                  </cit>
+               </cit>
+               <cit xml:id="ft_ipfv_2sg_f.fv_0056.ct_0097" type="example">
+                  <quote>btinəzli</quote>
+                  <cit type="translation">
+                     <quote>you (f.sg) go down</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0028" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:rosenhouse_1983_0000" type="publication"/>
+               <placeName ref="geo:yaara"/>
+               <lang corresp="..\profiles\vicav_profile_ISR-ARM.xml"/>
+               <personGrp role="tribe" corresp="pgr:aramsha_israel"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0054" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:schukro_2004_6239" type="publication"/>
+               <placeName ref="geo:beirut"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-BEI.xml"/>
+               <cit xml:id="ft_ipfv_2sg_f.fv_0054.ct_0093" type="example">
+                  <quote>tənzli</quote>
+                  <cit type="translation">
+                     <quote>you (f.sg) go down</quote>
+                  </cit>
+               </cit>
+               <cit xml:id="ft_ipfv_2sg_f.fv_0054.ct_0102" type="example">
+                  <quote>tənəzli</quote>
+                  <cit type="translation">
+                     <quote>you (f.sg) go down</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0052" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:younes_2013_2795" type="publication"/>
+               <placeName ref="geo:wadi_khalid"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-ATI.xml"/>
+               <personGrp role="tribe" corresp="pgr:arab_al_atij"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0045" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:younes_2014_9863" type="publication"/>
+               <placeName ref="geo:haouch_el_nabi"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-ABI.xml"/>
+               <personGrp role="tribe" corresp="pgr:abu_eid"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0048" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:" type="publication"/>
+               <placeName ref="geo:umm_ar_rasas"/>
+               <placeName ref="geo:natl"/>
+               <placeName ref="geo:umm_al_walid"/>
+               <placeName ref="geo:al_muwaqqar"/>
+               <placeName ref="geo:qasr_amrah"/>
+               <placeName ref="geo:rujm_ash_shami_al_gharbi"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-BSX.xml"/>
+               <personGrp role="tribe" corresp="pgr:bani_saxar"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0048.ct_0000">
+                     <quote>tākli</quote>
+                     <cit type="translation">
+                        <quote>you (f.sg)eat</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0083" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:wer_2007_5826" type=" publication"/>
+               <placeName ref="geo:amman"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-AMN.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0083.ct_0000">
+                     <quote>tudrusi</quote>
+                     <cit type="translation">
+                        <quote>you (f.sg) study</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0091" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_ii"/>
+               <bibl corresp="zot:czapkiewicz_1960_8818" type="publication"/>
+               <placeName ref="geo:madaba"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-MDB.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0105" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:twenan"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-MWL.xml"/>
+               <personGrp role="tribe" corresp="pgr:mawali_syria"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0105.ct_0000">
+                     <quote>tinz(i)līn</quote>
+                     <cit type="translation">
+                        <quote>you (f.sg) go down</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0106" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:qasr_ibn_wardan"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-MWL.xml"/>
+               <personGrp role="tribe" corresp="pgr:mawali_syria"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0106.ct_0000">
+                     <quote>tinz(i)līn</quote>
+                     <cit type="translation">
+                        <quote>you (f.sg) go down</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0107" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:zyara"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-MWL.xml"/>
+               <personGrp role="tribe" corresp="pgr:mawali_syria"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0107.ct_0000">
+                     <quote>tinz(i)līn</quote>
+                     <cit type="translation">
+                        <quote>you (f.sg) go down</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0110" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:tell_alu"/>
+               <placeName ref="geo:al_qahtaniyah"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-SMR.xml"/>
+               <personGrp role="tribe" corresp="pgr:shammar_syria"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0110.ct_0000">
+                     <quote>tinz(i)līn</quote>
+                     <cit type="translation">
+                        <quote>you (f.sg) go down</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0099" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_ay"/>
+               <bibl corresp="zot:blanc_1970_4573" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:negev"/>
+               <lang corresp="..\profiles\vicav_profile_NEG-ZLM.xml"/>
+               <personGrp role="tribe" corresp="pgr:zullam"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0099.ct_0000">
+                     <quote>tášṛaḅay</quote>
+                     <cit type="translation">
+                        <quote>you you (f.sg) drink </quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0055" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_iy"/>
+               <bibl corresp="zot:blanc_1970_4573" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:negev"/>
+               <lang corresp="..\profiles\vicav_profile_NEG-ZLM.xml"/>
+               <personGrp role="tribe" corresp="pgr:zullam"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0055.ct_0000">
+                     <quote>tíkitbiy</quote>
+                     <cit type="translation">
+                        <quote> you  (f.sg) write</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0141" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:Cantineau_1936_9708" type="publication" cert="unknown" status="CHECKME"><!--potentially ambiguous references--><!--ambiguous ID reference. Could be either http://zotero.org/groups/2165756/items/TJFGQ7N8 or http://zotero.org/groups/2165756/items/NB2HLKGD--></bibl>
+               <placeName ref="geo:irbid_reg"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-NEM.xml"/>
+               <personGrp role="tribe" corresp="pgr:neem_jordan"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0141.ct_0000">
+                     <quote>tokötbwīn</quote>
+                     <cit type="translation">
+                        <quote> you  (f.sg) write</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0086" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:Cantineau_1936_9708" type="publication" status="CHECKME"><!--potentially ambiguous references--><!--ambiguous ID reference. Could be either http://zotero.org/groups/2165756/items/TJFGQ7N8 or http://zotero.org/groups/2165756/items/NB2HLKGD--></bibl>
+               <placeName ref="geo:rumtha"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-BXD.xml"/>
+               <personGrp role="tribe" corresp="pgr:bani_xaled"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0086.ct_0000">
+                     <quote>tokötbwīn</quote>
+                     <cit type="translation">
+                        <quote> you  (f.sg) write</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0087" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:Cantineau_1936_9708" type="publication" status="CHECKME"><!--potentially ambiguous references--><!--ambiguous ID reference. Could be either http://zotero.org/groups/2165756/items/TJFGQ7N8 or http://zotero.org/groups/2165756/items/NB2HLKGD--></bibl>
+               <placeName ref="geo:muwaysa"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-FDL.xml"/>
+               <personGrp role="tribe" corresp="pgr:fadol"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0087.ct_0000">
+                     <quote>tokötbwīn</quote>
+                     <cit type="translation">
+                        <quote> you  (f.sg) write</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0102" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:Cantineau_1936_9708" type="publication" status="CHECKME"><!--potentially ambiguous references--><!--ambiguous ID reference. Could be either http://zotero.org/groups/2165756/items/TJFGQ7N8 or http://zotero.org/groups/2165756/items/NB2HLKGD--></bibl>
+               <placeName ref="geo:al_qudayr"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-HDD.xml"/>
+               <personGrp role="tribe" corresp="pgr:hadidin"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0102.ct_0000">
+                     <quote>tokötbwīn</quote>
+                     <cit type="translation">
+                        <quote> you  (f.sg) write</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0104" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:Cantineau_1936_9708" type="publication" status="CHECKME"><!--potentially ambiguous references--><!--ambiguous ID reference. Could be either http://zotero.org/groups/2165756/items/TJFGQ7N8 or http://zotero.org/groups/2165756/items/NB2HLKGD--></bibl>
+               <placeName ref="geo:kursi"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-MND.xml"/>
+               <personGrp role="tribe" corresp="pgr:manadre"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0104.ct_0000">
+                     <quote>tokötbwīn</quote>
+                     <cit type="translation">
+                        <quote> you  (f.sg) write</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0108" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:Cantineau_1936_9708" type="publication" status="CHECKME"><!--potentially ambiguous references--><!--ambiguous ID reference. Could be either http://zotero.org/groups/2165756/items/TJFGQ7N8 or http://zotero.org/groups/2165756/items/NB2HLKGD--></bibl>
+               <placeName ref="geo:assal_al_ward"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-OMR.xml"/>
+               <personGrp role="tribe" corresp="pgr:omur"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0108.ct_0000">
+                     <quote>tokötbwīn</quote>
+                     <cit type="translation">
+                        <quote> you  (f.sg) write</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0096" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:Cantineau_1936_9708" type="publication" status="CHECKME"><!--potentially ambiguous references--><!--ambiguous ID reference. Could be either http://zotero.org/groups/2165756/items/TJFGQ7N8 or http://zotero.org/groups/2165756/items/NB2HLKGD--></bibl>
+               <placeName ref="geo:mughayyir_as_sirhan"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-SHN.xml"/>
+               <personGrp role="tribe" corresp="pgr:sirhan"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0096.ct_0000">
+                     <quote>tokötbwīn</quote>
+                     <cit type="translation">
+                        <quote> you  (f.sg) write</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0016" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:Cantineau_1936_9708" type="publication" cert="unknown" status="CHECKME"><!--potentially ambiguous references--><!--ambiguous ID reference. Could be either http://zotero.org/groups/2165756/items/TJFGQ7N8 or http://zotero.org/groups/2165756/items/NB2HLKGD--></bibl>
+               <placeName ref="geo:shahba"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-SLU.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0016.ct_0000">
+                     <quote>tokötbwīn</quote>
+                     <cit type="translation">
+                        <quote> you  (f.sg) write</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0094" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:Cantineau_1936_9708" type="publication" status="CHECKME"><!--potentially ambiguous references--><!--ambiguous ID reference. Could be either http://zotero.org/groups/2165756/items/TJFGQ7N8 or http://zotero.org/groups/2165756/items/NB2HLKGD--></bibl>
+               <placeName ref="geo:al_musayfirah"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-SDY.xml"/>
+               <personGrp role="tribe" corresp="pgr:sardiye"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0094.ct_0000">
+                     <quote>tokötbwīn</quote>
+                     <cit type="translation">
+                        <quote> you  (f.sg) write</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0101" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKME"><!--potentially ambiguous references--><!--ambiguous ID reference. Could be either http://zotero.org/groups/2165756/items/TJFGQ7N8 or http://zotero.org/groups/2165756/items/NB2HLKGD--></bibl>
+               <placeName ref="geo:jabal_shammar"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-SMR.xml"/>
+               <personGrp role="tribe" corresp="pgr:shammar_saudi_arabia"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0101.ct_0000">
+                     <quote>taktbīn</quote>
+                     <cit type="translation">
+                        <quote> you  (f.sg) write</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0319" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:Cantineau_1936_9708" type="publication" cert="unknown" status="CHECKME"><!--potentially ambiguous references--><!--ambiguous ID reference. Could be either http://zotero.org/groups/2165756/items/TJFGQ7N8 or http://zotero.org/groups/2165756/items/NB2HLKGD--></bibl>
+               <placeName ref="geo:ar_rass"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-RSS.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0319.ct_0000">
+                     <quote>tokötbwīn</quote>
+                     <cit type="translation">
+                        <quote> you  (f.sg) write</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0103" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:Cantineau_1936_9708" type="publication" status="CHECKME"><!--potentially ambiguous references--><!--ambiguous ID reference. Could be either http://zotero.org/groups/2165756/items/TJFGQ7N8 or http://zotero.org/groups/2165756/items/NB2HLKGD--></bibl>
+               <placeName ref="geo:rayyan"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-HSN.xml"/>
+               <personGrp role="tribe" corresp="pgr:hsane"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0103.ct_0000">
+                     <quote>tokötbwīn</quote>
+                     <cit type="translation">
+                        <quote> you  (f.sg) write</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0316" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:cantineau_1946_0000" type="publication" cert="unknown"/>
+               <placeName ref="geo:hawraan"/>
+               <placeName ref="geo:jabal_al_druze"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-HRN.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0316.ct_0000">
+                     <quote>ptokōtbi</quote>
+                     <cit type="translation">
+                        <quote> you  (f.sg) write</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0097" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:herin_2010_4638" type="publication"/>
+               <placeName ref="geo:al_salt"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-SLT.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0097.ct_0000">
+                     <quote>tírčabi</quote>
+                     <cit type="translation">
+                        <quote> you  (f.sg)  ride</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0100" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:hazmy_1975_1645" type="publication"/>
+               <placeName ref="geo:hejaz"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-HRB.xml"/>
+               <personGrp role="tribe" corresp="pgr:al_harb"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0100.ct_0000">
+                     <quote>taḏbiḥīn</quote>
+                     <cit type="translation">
+                        <quote> you  (f.sg)  kill</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0084" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_iy"/>
+               <bibl corresp="zot:owens_1984_9854" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:petra"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-BDL.xml"/>
+               <personGrp role="tribe" corresp="pgr:bdul"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0084.ct_0000">
+                     <quote>tuḏurḅiy</quote>
+                     <cit type="translation">
+                        <quote> you  (f.sg) hit</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0037" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_ay"/>
+               <bibl corresp="zot:owens_1984_9854" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:petra"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-BDL.xml"/>
+               <personGrp role="tribe" corresp="pgr:bdul"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0037.ct_0000">
+                     <quote>tašṛabay</quote>
+                     <cit type="translation">
+                        <quote> you  (f.sg) drink</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0081" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:palva_1976_4156" type="publication"/>
+               <placeName ref="geo:sel_hisban"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-AGR.xml"/>
+               <personGrp role="tribe" corresp="pgr:al_agarma"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0085" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:palva_1980_0000" type="publication"/>
+               <placeName ref="geo:umm_ar_rasas"/>
+               <placeName ref="geo:natl"/>
+               <placeName ref="geo:umm_al_walid"/>
+               <placeName ref="geo:al_muwaqqar"/>
+               <placeName ref="geo:qasr_amrah"/>
+               <placeName ref="geo:rujm_ash_shami_al_gharbi"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-BSX.xml"/>
+               <personGrp role="tribe" corresp="pgr:bani_saxar"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0085.ct_0000">
+                     <quote>tašrabīn</quote>
+                     <cit type="translation">
+                        <quote>you (f.sg) drink</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0088" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:palva_1984_86_0000" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:al_jafr"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-HWT.xml"/>
+               <personGrp role="tribe" corresp="pgr:hwetat_jordan"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0088.ct_0000">
+                     <quote>tákitbi / taktibi</quote>
+                     <cit type="translation">
+                        <quote>you (f.sg.) write</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0090" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:palva_1989_0000" type=" publication"/>
+               <placeName ref="geo:al_karak"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-KRK.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0090.ct_0000">
+                     <quote>btiktbi</quote>
+                     <cit type="translation">
+                        <quote>you (f.sg.) write</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0098" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_iy"/>
+               <bibl corresp="zot:shawarbah_2012_3107" type="publication"/>
+               <placeName ref="geo:negev"/>
+               <lang corresp="..\profiles\vicav_profile_NEG-AZM.xml"/>
+               <personGrp role="tribe" corresp="pgr:azazmih"/>
+               <cit type="sourceRepresentation">
+                  <quote>-i(y#)</quote>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0098.ct_0000">
+                     <quote>tinzliy</quote>
+                     <cit type="translation">
+                        <quote>you (f.sg.) come down</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0051" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_ay"/>
+               <bibl corresp="zot:shawarbah_2012_3107" type="publication"/>
+               <placeName ref="geo:negev"/>
+               <lang corresp="..\profiles\vicav_profile_NEG-AZM.xml"/>
+               <personGrp role="tribe" corresp="pgr:azazmih"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0051.ct_0000">
+                     <quote>tašṛabay</quote>
+                     <cit type="translation">
+                        <quote>you (f.sg.) drink</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0111" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:talay_prochazka_2008_0000" type="publication"/>
+               <placeName ref="geo:qamishli"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-TYY.xml"/>
+               <personGrp role="tribe" corresp="pgr:tayyi"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0111.ct_0000">
+                     <quote>tibgīn</quote>
+                     <cit type="translation">
+                        <quote>you (f.sg.) stay</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0047" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:talay_prochazka_2008_0000" type="publication"/>
+               <placeName ref="geo:qamishli"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-TYY.xml"/>
+               <personGrp role="tribe" corresp="pgr:tayyi"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0047.ct_0000">
+                     <quote>tibgi</quote>
+                     <cit type="translation">
+                        <quote>you (f.sg.) stay</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0080" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:torzullo_2022_1999" type="publication"/>
+               <placeName ref="geo:badr_al_jadidah"/>
+               <placeName ref="geo:wadi_as_sir"/>
+               <placeName ref="geo:mahis"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-ABD.xml"/>
+               <personGrp role="tribe" corresp="pgr:bani_abbad"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0080.ct_0000">
+                     <quote>tišrabi</quote>
+                     <cit type="translation">
+                        <quote>you (f.sg.) drink</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0171" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:AbuNahleh_1985_6344" type="publication"/>
+               <placeName ref="geo:ramallah"/>
+               <lang corresp="..\profiles\vicav_profile_PSE-RML.xml"/>
+               <cit type="sourceRepresentation">
+                  <quote>-i</quote>
+               </cit>
+               <note type="general">deducted from example</note>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0171.ct_0016">
+                  <quote>tuṭubxi</quote>
+                  <cit type="translation">
+                     <quote>you cook</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0113" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:haidar_2006_8572" type="publication"/>
+               <placeName ref="geo:baghdad"/>
+               <lang corresp="..\profiles\vicav_profile_IRQ-BGD.xml"/>
+               <cit type="sourceRepresentation">
+                  <quote>-īn</quote>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0158" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:arnold_2004_0000" type="publication"/>
+               <placeName ref="geo:jaffa"/>
+               <lang corresp="..\profiles\vicav_profile_ISR-JFC.xml"/>
+               <cit type="sourceRepresentation">
+                  <quote>-i</quote>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0158.ct_0017">
+                  <quote>tinzili</quote>
+                  <cit type="translation">
+                     <quote>you go down</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0159" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:arnold_2004_0000" type="publication"/>
+               <placeName ref="geo:jaffa"/>
+               <lang corresp="..\profiles\vicav_profile_ISR-JFS.xml"/>
+               <personGrp role="religion" corresp="pgr:samaritans"/>
+               <cit type="sourceRepresentation">
+                  <quote>-i</quote>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0159.ct_0018">
+                  <quote>tinzili</quote>
+                  <cit type="translation">
+                     <quote>you go down</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0169" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:arnold_2004_0000" type="publication"/>
+               <placeName ref="geo:kafr_ana"/>
+               <lang corresp="..\profiles\vicav_profile_PSE-KFN.xml"/>
+               <cit type="sourceRepresentation">
+                  <quote>-i</quote>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0169.ct_0019">
+                  <quote>tinzili</quote>
+                  <cit type="translation">
+                     <quote>you go down</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0117" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication"/>
+               <placeName ref="geo:aleppo"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-ALP.xml"/>
+               <cit type="sourceRepresentation">
+                  <quote>i</quote>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0117.ct_0000">
+                  <quote>tišrabi</quote>
+                  <cit type="translation">
+                     <quote>you drink</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0123" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication"/>
+               <placeName ref="geo:qamishli"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-QAM.xml"/>
+               <cit type="sourceRepresentation">
+                  <quote>-īn</quote>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0123.ct_0001">
+                  <quote>tišṛabīn</quote>
+                  <cit type="translation">
+                     <quote>you drink</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0125" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication"/>
+               <placeName ref="geo:al_sukhna"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-SUK.xml"/>
+               <cit type="sourceRepresentation">
+                  <quote>-īn</quote>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0125.ct_0104">
+                  <quote>tišṛabīn</quote>
+                  <cit type="translation">
+                     <quote>you drink</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0119" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication"/>
+               <placeName ref="geo:deir_ez_zor"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-DZR.xml"/>
+               <cit type="sourceRepresentation">
+                  <quote>-īn</quote>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0119.ct_0002">
+                  <quote>tišṛabīn</quote>
+                  <cit type="translation">
+                     <quote>you drink</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0078" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication"/>
+               <placeName ref="geo:blas"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-NEM.xml"/>
+               <cit type="sourceRepresentation">
+                  <quote>-īn</quote>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0078.ct_0003">
+                  <quote>tišṛabīn</quote>
+                  <cit type="translation">
+                     <quote>you drink</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0122" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication"/>
+               <placeName ref="geo:palmyra"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-PAL.xml"/>
+               <cit type="sourceRepresentation">
+                  <quote>-i</quote>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0122.ct_0004">
+                  <quote>tišṛabi</quote>
+                  <cit type="translation">
+                     <quote>you drink</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0124" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication"/>
+               <placeName ref="geo:ar_raqqa"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-RAQ.xml"/>
+               <cit type="sourceRepresentation">
+                  <quote>-īn</quote>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0124.ct_0005">
+                  <quote>tišṛabīn</quote>
+                  <cit type="translation">
+                     <quote>you drink</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0126" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication"/>
+               <placeName ref="geo:al_suwayda_district"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-SWE.xml"/>
+               <cit type="sourceRepresentation">
+                  <quote>-i</quote>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0126.ct_0006">
+                  <quote>tišṛabi</quote>
+                  <cit type="translation">
+                     <quote>you drink</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0118" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication"/>
+               <placeName ref="geo:damascus"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-DAM.xml"/>
+               <cit type="sourceRepresentation">
+                  <quote>-i</quote>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0118.ct_0007">
+                  <quote>tišṛabi</quote>
+                  <cit type="translation">
+                     <quote>you drink</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0161" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_in"/>
+               <bibl corresp="zot:belinkov_2014_4410" type="publication"/>
+               <placeName ref="geo:jisr_az_zarqa"/>
+               <lang corresp="..\profiles\vicav_profile_ISR-ZRG.xml"/>
+               <cit type="sourceRepresentation">
+                  <quote>-in</quote>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0161.ct_0020">
+                  <quote>tuḏ̣ rubin</quote>
+                  <cit type="translation">
+                     <quote>you hit</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0166" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:cleveland_1967_3075" type="publication"/>
+               <placeName ref="geo:al_dawayima"/>
+               <lang corresp="..\profiles\vicav_profile_PSE-DWY.xml"/>
+               <cit type="sourceRepresentation">
+                  <quote>-i</quote>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0166.ct_0021">
+                  <quote>tuguʕdi</quote>
+                  <cit type="translation">
+                     <quote>you sit down</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0127" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_ii"/>
+               <bibl corresp="zot:fink_2017_3211" type="publication"/>
+               <placeName ref="geo:hasankeyf"/>
+               <lang corresp="..\profiles\vicav_profile_TUR-HAS.xml"/>
+               <cit type="sourceRepresentation">
+                  <quote>-ī</quote>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0127.ct_0009">
+                  <quote>təftaḥi</quote>
+                  <cit type="translation">
+                     <quote>you open</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0129" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:lahdo_2009_1103" type="publication"/>
+               <placeName ref="geo:siirt"/>
+               <lang corresp="..\profiles\vicav_profile_TUR-SII.xml"/>
+               <cit type="sourceRepresentation">
+                  <quote>-i</quote>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0129.ct_0014">
+                  <quote>təxtəli</quote>
+                  <cit type="translation">
+                     <quote>you kill</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0112" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:leitner_2022_2410" type="publication"/>
+               <placeName ref="geo:khuzestan"/>
+               <lang corresp="..\profiles\vicav_profile_IRN-KHU.xml"/>
+               <cit type="sourceRepresentation">
+                  <quote>-īn</quote>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0112.ct_0011">
+                  <quote>ətkətbīn</quote>
+                  <cit type="translation">
+                     <quote>you write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0114" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:mahdi_1985_1985" type="publication"/>
+               <placeName ref="geo:basra"/>
+               <lang corresp="..\profiles\vicav_profile_IRQ-BSR.xml"/>
+               <cit type="sourceRepresentation">
+                  <quote>-i</quote>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0114.ct_0012">
+                  <quote>tfitḥi, itfitḥi, tifitḥi</quote>
+                  <cit type="translation">
+                     <quote>you open</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0057" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:mahdi_1985_1985" type="publication"/>
+               <placeName ref="geo:basra"/>
+               <lang corresp="..\profiles\vicav_profile_IRQ-BSR.xml"/>
+               <cit type="sourceRepresentation">
+                  <quote>-i</quote>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0057.ct_0013">
+                  <quote>tfitḥīn, itfitḥīn, tifitḥīn</quote>
+                  <cit type="translation">
+                     <quote>you open</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0173" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:mousa_2019_9904" type="publication"/>
+               <placeName ref="geo:tulkarm"/>
+               <lang corresp="..\profiles\vicav_profile_PSE-TKM.xml"/>
+               <cit type="sourceRepresentation">
+                  <quote>-i</quote>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0173.ct_0022">
+                  <quote>tiktibi</quote>
+                  <cit type="translation">
+                     <quote>you write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0168" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:rosenhouse_2007_1938" type="publication"/>
+               <placeName ref="geo:jerusalem"/>
+               <lang corresp="..\profiles\vicav_profile_PSE-JRS.xml"/>
+               <cit type="sourceRepresentation">
+                  <quote>-i</quote>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0168.ct_0015">
+                  <quote>tukutbi</quote>
+                  <cit type="translation">
+                     <quote>you write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0157" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:salonen_1979_0000" type="publication"/>
+               <placeName ref="geo:gaza"/>
+               <lang corresp="..\profiles\vicav_profile_PSE-GZA.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0157.ct_0026">
+                  <quote>btiktbi</quote>
+                  <cit type="translation">
+                     <quote>you write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0046" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:salonen_1979_0000" type="publication"/>
+               <placeName ref="geo:gaza"/>
+               <lang corresp="..\profiles\vicav_profile_PSE-GZA.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0046.ct_0028">
+                  <quote>btikitbīn</quote>
+                  <cit type="translation">
+                     <quote>you write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0116" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:salonen_1980_0000" type="publication"/>
+               <placeName ref="geo:al_shirqat"/>
+               <lang corresp="..\profiles\vicav_profile_IRQ-SQT.xml"/>
+               <cit type="sourceRepresentation">
+                  <quote>-īn</quote>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0116.ct_0023">
+                  <quote>tikitbīn</quote>
+                  <cit type="translation">
+                     <quote>you write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0175" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:seeger_1996_3406" type="publication"/>
+               <placeName ref="geo:hebron"/>
+               <lang corresp="..\profiles\vicav_profile_PSE-XLL.xml"/>
+               <cit type="sourceRepresentation">
+                  <quote>-i</quote>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0175.ct_0024">
+                  <quote>tuṭ(u)bxi</quote>
+                  <cit type="translation">
+                     <quote>you cook</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0121" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_"/>
+               <bibl corresp="zot:talay_1999_0001" type="publication"/>
+               <placeName ref="geo:khawetna"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-KHA.xml"/>
+               <personGrp role="tribe" corresp="pgr:khawetna_tribe"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0121.ct_0008">
+                  <quote>təktəb</quote>
+                  <cit type="translation">
+                     <quote>you write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0128" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_ii"/>
+               <bibl corresp="zot:wittrich_2001_0000" type="publication"/>
+               <placeName ref="geo:idil_aazex"/>
+               <lang corresp="..\profiles\vicav_profile_TUR-IDI.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0128.ct_0010">
+                  <quote>təftaḥi</quote>
+                  <cit type="translation">
+                     <quote>you open</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0167" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:yoda_al_wer_2015_0000" type="publication"/>
+               <placeName ref="geo:isawiya"/>
+               <lang corresp="..\profiles\vicav_profile_PSE-ISW.xml"/>
+               <cit type="sourceRepresentation">
+                  <quote>-i</quote>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0167.ct_0025">
+                  <quote>btiktibi</quote>
+                  <cit type="translation">
+                     <quote>you write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0258" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_"/>
+               <bibl corresp="src:PC_RZ" type="personalCommunication"/>
+               <placeName ref="geo:malta"/>
+               <lang corresp="..\profiles\vicav_profile_MLT-MAL.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0258.ct_0064">
+                  <quote>tikteb</quote>
+                  <cit type="translation">
+                     <quote>you (f.) write</quote>
+                  </cit>
+               </cit>
+               <note type="general">This is a communis form</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0334" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:alfaife_2018_9797" type="publication"/>
+               <placeName ref="geo:jabal_fayfa"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-FYF.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0334.ct_0044">
+                  <quote>tašrabīn</quote>
+                  <cit type="translation">
+                     <quote>you (f.) drink</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0228" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_ii"/>
+               <bibl corresp="zot:benkato_2014_2793" type="publication"/>
+               <placeName ref="geo:benghazi"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-BGZ.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0228.ct_0089">
+                  <quote>teð̣ǝrḅī </quote>
+                  <cit type="translation">
+                     <quote>you (f.) hit</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0070" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_ey"/>
+               <bibl corresp="zot:panetta_1943_0000" type="publication"/>
+               <placeName ref="geo:benghazi"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-BGZ.xml"/>
+               <note type="general">Panetta says that this suffix exists alongside ī but no example is provided.</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0229" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_ay"/>
+               <bibl corresp="zot:caubet_2004_3508" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:fezzan"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-FZN.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0229.ct_0090">
+                  <quote>taḏbaḥay</quote>
+                  <cit type="translation">
+                     <quote>you (f.) slaughter</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0003" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:DAnna_2017_4912" type="publication"/>
+               <placeName ref="geo:misrata"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-MSR.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0003.ct_0091">
+                  <quote>tíkәtbi</quote>
+                  <cit type="translation">
+                     <quote>you (f.) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0232" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_ii"/>
+               <bibl corresp="zot:DAnna_2021_9340" type="publication"/>
+               <placeName ref="geo:yefren"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-JYN.xml"/>
+               <personGrp role="religion" corresp="pgr:jews"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0232.ct_0068">
+                  <quote>tʕarfī</quote>
+                  <cit type="translation">
+                     <quote>you (f.) know</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0230" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:harrama_1993_0000" type="publication"/>
+               <placeName ref="geo:al_jabal"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-JBL.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0230.ct_0065">
+                  <quote>tiktibi</quote>
+                  <cit type="translation">
+                     <quote>you (f.) write</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0230.ct_0069">
+                  <quote>tikitbi</quote>
+                  <cit type="translation">
+                     <quote>you (f.) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0320" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:qafisheh_1977_3210" type="publication" cert="unknown"/>
+               <placeName ref="geo:gulf"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-GLF.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0320.ct_0105">
+                  <quote>tadrisíin</quote>
+                  <cit type="translation">
+                     <quote>she studies</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0324" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:holes_2006_0164" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:manama"/>
+               <lang corresp="..\profiles\vicav_profile_BHR-ARB.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0324.ct_0059">
+                  <quote>tikitbīn</quote>
+                  <cit type="translation">
+                     <quote>you (f.) write</quote>
+                  </cit>
+               </cit>
+               <personGrp role="religion" corresp="#sunnis"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0323" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:holes_2006_0164" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:muharraq"/>
+               <lang corresp="..\profiles\vicav_profile_BHR-BHN.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0323.ct_0060">
+                  <quote>tikitbīn</quote>
+                  <cit type="translation">
+                     <quote>you (f.) write</quote>
+                  </cit>
+               </cit>
+               <personGrp role="religion" corresp="#shiites"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0002" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:holes_2007_5886" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:kuwait_city"/>
+               <lang corresp="..\profiles\vicav_profile_KWT-KWC.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0002.ct_0058">
+                  <quote>tikitbīn</quote>
+                  <cit type="translation">
+                     <quote>you (f.) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+
+
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0321" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:ingham_1994_0001" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:najd"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-NJD.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0321.ct_0061">
+                  <quote>taktibīn</quote>
+                  <cit type="translation">
+                     <quote>you (f.) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0335" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_een"/>
+               <bibl corresp="zot:johnstone_1961_0000" type="publication" cert="unknown"/>
+               <placeName ref="geo:kuwait"/>
+               <personGrp role="tribe" corresp="pgr:dawasir"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0335.ct_0106">
+                  <quote>taskinḗn</quote>
+                  <cit type="translation">
+                     <quote>she lives</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0004" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:johnstone_1967_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:doha"/>
+               <lang corresp="..\profiles\vicav_profile_QTR-DHA.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0004.ct_0062">
+                  <quote>taktəbīn</quote>
+                  <cit type="translation">
+                     <quote>you 8f.) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0092" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:omar_1975_0000" type="publication" cert="unknown"/>
+               <placeName ref="geo:hejaz"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-HJZ.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0092.ct_0107">
+                  <quote>tidrusi</quote>
+                  <cit type="translation">
+                     <quote>you (f.) study</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0234" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:pereira_2010_1918" type="publication"/>
+               <placeName ref="geo:tripoli_libya"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-TPL.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0234.ct_0063">
+                  <quote>t́əktbi</quote>
+                  <cit type="translation">
+                     <quote>you (f.) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0005" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:abha"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-ABH.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0005.ct_0050">
+                  <quote>tuktubīn</quote>
+                  <cit type="translation">
+                     <quote>you (f.) write</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0005.ct_0073">
+                  <quote>tuktbīn</quote>
+                  <cit type="translation">
+                     <quote>you (f.) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0061" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_in"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:abha"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-ABH.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0061.ct_0049">
+                  <quote>tiskirin</quote>
+                  <cit type="translation">
+                     <quote>you (f.) break</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0006" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:bisha"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-BSH.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0006.ct_0051">
+                  <quote>taktibīn</quote>
+                  <cit type="translation">
+                     <quote>you (f.) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0009" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_in"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:bilad_ghamid"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-GHA.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0009.ct_0056">
+                  <quote>tiksirin</quote>
+                  <cit type="translation">
+                     <quote>you (f.) break</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0066" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:bilad_ghamid"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-GHA.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0066.ct_0055">
+                  <quote>tuktubīn</quote>
+                  <cit type="translation">
+                     <quote>you (f.) write</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0066.ct_0074">
+                  <quote>tiktubīn</quote>
+                  <cit type="translation">
+                     <quote>you (f.) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0010" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:hofuf"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-HFF.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0010.ct_0057">
+                  <quote>taktbīn</quote>
+                  <cit type="translation">
+                     <quote>you (f.) write</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0010.ct_0075">
+                  <quote>tikitbīn</quote>
+                  <cit type="translation">
+                     <quote>you (f.) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0011" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:hail"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-HYL.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0011.ct_0052">
+                  <quote>taktbīn</quote>
+                  <cit type="translation">
+                     <quote>you (f.) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0013" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:rufaydah"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-RUF.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0013.ct_0053">
+                  <quote>tuktubīn</quote>
+                  <cit type="translation">
+                     <quote>you (f.) write</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0013.ct_0070">
+                  <quote>tuktbīn</quote>
+                  <cit type="translation">
+                     <quote>you (f.) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0064" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_in"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:rufaydah"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-RUF.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0064.ct_0054">
+                  <quote>tiksirin</quote>
+                  <cit type="translation">
+                     <quote>you (f.) break</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0064.ct_0071">
+                  <quote>tiksrin</quote>
+                  <cit type="translation">
+                     <quote>you (f.) break</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0014" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:sirhan"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-RWA.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0014.ct_0045">
+                  <quote>taktbīn</quote>
+                  <cit type="translation">
+                     <quote>you (f.) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0015" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:riyadh"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-RYD.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0015.ct_0046">
+                  <quote>tiktbīn</quote>
+                  <cit type="translation">
+                     <quote>you (f.) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0012" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_in"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:sabt_alalayah"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-QRN.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0012.ct_0048">
+                  <quote>tičsirin</quote>
+                  <cit type="translation">
+                     <quote>you (f.) break</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0012.ct_0072">
+                  <quote>tiksirin</quote>
+                  <cit type="translation">
+                     <quote>you (f.) break</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0060" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:sabt_alalayah"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-QRN.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0060.ct_0047">
+                  <quote>tuktubīn</quote>
+                  <cit type="translation">
+                     <quote>you (f.) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0333" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:wadi_abl"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-AHM.xml"/>
+               <personGrp role="tribe" corresp="pgr:bal_ahmar"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0333.ct_0042">
+                  <quote>tuktubīn</quote>
+                  <cit type="translation">
+                     <quote>you (f.) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0059" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_in"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:wadi_abl"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-AHM.xml"/>
+               <personGrp role="tribe" corresp="pgr:bal_ahmar"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0059.ct_0043">
+                  <quote>tiksirin</quote>
+                  <cit type="translation">
+                     <quote>you (f.) break</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0331" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:bukayriya"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-QSM.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0331.ct_0038">
+                  <quote>taktbīn</quote>
+                  <cit type="translation">
+                     <quote>you (f.) write</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0331.ct_0039">
+                  <quote>takitbīn</quote>
+                  <cit type="translation">
+                     <quote>you (f.) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0332" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:qawz"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-QWZ.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0332.ct_0040">
+                  <quote>tirgudīn</quote>
+                  <cit type="translation">
+                     <quote>you (f.) sleep</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0327" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:tanuma"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-TAN.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0327.ct_0041">
+                  <quote>tuktubīn</quote>
+                  <cit type="translation">
+                     <quote>you (f.) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0058" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_in"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:tanuma"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-TAN.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0058.ct_0108">
+                  <quote>tiksirin</quote>
+                  <cit type="translation">
+                     <quote>you (f.) break</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0231" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:yoda_2005_3130" type="publication"/>
+               <placeName ref="geo:tripoli_libya"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-JTP.xml"/>
+               <personGrp role="religion" corresp="pgr:jews"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0231.ct_0066">
+                  <quote>čkəčbi</quote>
+                  <cit type="translation">
+                     <quote>you (f.) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0067" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_"/>
+               <bibl corresp="zot:yoda_2005_3130" type="publication"/>
+               <placeName ref="geo:tripoli_libya"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-JTP.xml"/>
+               <personGrp role="religion" corresp="pgr:jews"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0068" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#ipfv_2sgf_ay"/>
+               <bibl corresp="zot:yoda_2005_3130" type="publication"/>
+               <placeName ref="geo:tripoli_libya"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-JTP.xml"/>
+               <personGrp role="religion" corresp="pgr:jews"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0068.ct_0067">
+                  <quote>čəbday</quote>
+                  <cit type="translation">
+                     <quote>you (f.) begin</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0001" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_"/>
+               <bibl corresp="zot:corriente_2013_3020" type="publication"/>
+               <placeName ref="geo:andalusia"/>
+               <lang corresp="..\profiles\vicav_profile_ESP-ADL.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0001.ct_0000">
+                     <quote>tašrúb</quote>
+                     <cit type="translation">
+                        <quote>you (c.) drink</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0185" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:dickins_2009_3089" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:khartoum"/>
+               <lang corresp="..\profiles\vicav_profile_SDN-KRT.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0185.ct_0000">
+                     <quote>tadrusi</quote>
+                     <cit type="translation">
+                        <quote>you (f.) study</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0049" status="draft" resp="dmp:SK">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="src:SDN_2023_SK" type="fieldwork"/>
+               <placeName ref="geo:mwees"/>
+               <lang corresp="..\profiles\vicav_profile_SDN-RYD.xml"/>
+               <personGrp role="tribe" corresp="#rashayda_sudan"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0274" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:alexandria"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-ALX.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0275" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:aswan"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-ASW.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0276" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:asyut"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-ASY.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0277" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:al_badari"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-BDR.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0279" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:port_said"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-BSD.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0280" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:bani_suwayf"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-BSW.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0282" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:darawah"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-DRW.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0283" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:luxor"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-LXR.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0284" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:il_minya"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-MNY.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0285" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:al_namasa"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-NMS.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0286" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:qutur"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-QTR.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0287" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:rasid"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-RSD.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0288" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:sinbillawayn"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-SBW.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0289" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:sohag"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-SHG.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0193" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:carbou_1913_0117" type="publication"/>
+               <placeName ref="geo:ouaday"/>
+               <lang corresp="..\profiles\vicav_profile_TCD-ODY.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0193.ct_0126">
+                     <quote>tiktibi</quote>
+                     <cit type="translation">
+                        <quote>you (f.) write</quote>
+                     </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0132" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_iy"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:rumanah"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-AGL.xml"/>
+               <personGrp role="tribe" corresp="pgr:agaylah"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0132.ct_0000">
+                     <quote>tášṛaḅiy</quote>
+                     <cit type="translation">
+                        <quote>you (f.) drink</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0135" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_ay"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:gharif_al_ghuzlan"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-BLL.xml"/>
+               <personGrp role="tribe" corresp="pgr:biliy"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0135.ct_0000">
+                     <quote>tášṛaḅay</quote>
+                     <cit type="translation">
+                        <quote>you (f.) drink</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0022" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_iy"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:gharif_al_ghuzlan"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-BLL.xml"/>
+               <personGrp role="tribe" corresp="pgr:biliy"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0022.ct_0000">
+                     <quote>tímsikiy</quote>
+                     <cit type="translation">
+                        <quote>you (f.) grab/hold</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0137" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:bir_al_abd"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-BYD.xml"/>
+               <personGrp role="tribe" corresp="pgr:biyyadiyah"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0137.ct_0000">
+                     <quote>tišṛábi</quote>
+                     <cit type="translation">
+                        <quote>you (f.) drink</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0139" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:bir_al_abd"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-DWG.xml"/>
+               <personGrp role="tribe" corresp="pgr:dawaghrah"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0139.ct_0000">
+                     <quote>timiskīn</quote>
+                     <cit type="translation">
+                        <quote>you (f.) take</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0146" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_iy"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:al_kuntilla"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-HYW.xml"/>
+               <personGrp role="tribe" corresp="pgr:ahaywat"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0146.ct_0000">
+                     <quote>tímsikiy</quote>
+                     <cit type="translation">
+                        <quote>you (f.) grab/hold</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0024" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_ay"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:al_kuntilla"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-HYW.xml"/>
+               <personGrp role="tribe" corresp="pgr:ahaywat"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0024.ct_0000">
+                     <quote>tášṛaḅay</quote>
+                     <cit type="translation">
+                        <quote>you (f.) drink</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0150" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_iy"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:nakhal_diqla"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-RML.xml"/>
+               <personGrp role="tribe" corresp="pgr:rmelat"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0150.ct_0000">
+                     <quote>tímsikiy</quote>
+                     <cit type="translation">
+                        <quote>you (f.) grab/hold</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0025" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_ay"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:nakhal_diqla"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-RML.xml"/>
+               <personGrp role="tribe" corresp="pgr:rmelat"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0025.ct_0000">
+                     <quote>tášṛaḅay</quote>
+                     <cit type="translation">
+                        <quote>you (f.) drink</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0152" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_iy"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:bir_qatia"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-SMN.xml"/>
+               <personGrp role="tribe" corresp="pgr:samanah"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0152.ct_0000">
+                     <quote>tášṛaḅiy</quote>
+                     <cit type="translation">
+                        <quote>you (f.) drink</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0153" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_iy"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:wadi_al_arish"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-SWR.xml"/>
+               <personGrp role="tribe" corresp="pgr:sawarkah"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0153.ct_0000">
+                     <quote>tímsikiy</quote>
+                     <cit type="translation">
+                        <quote>you (f.) grab/hold</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0023" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_ay"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:wadi_al_arish"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-SWR.xml"/>
+               <personGrp role="tribe" corresp="pgr:sawarkah"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0023.ct_0000">
+                     <quote>tášṛaḅay</quote>
+                     <cit type="translation">
+                        <quote>you (f.) drink</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0156" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:rumanah"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-XRS.xml"/>
+               <personGrp role="tribe" corresp="pgr:axarsah"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0156.ct_0000">
+                     <quote>tišṛábi</quote>
+                     <cit type="translation">
+                        <quote>you (f.) drink</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0278" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:drop_2007_0000" type="publication"/>
+               <placeName ref="geo:mandisha"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-BHR.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0278.ct_0000">
+                     <quote>tibḥati</quote>
+                     <cit type="translation">
+                        <quote>you (f.) dig</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0160" status="draft" resp="dmp:SK">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:geva-kleinberger_2009_3208" type="publication"/>
+               <placeName ref="geo:tiberias"/>
+               <lang corresp="..\profiles\vicav_profile_ISR-TBR.xml"/>
+               <personGrp role="religion" corresp="pgr:jews"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0133" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_iy"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:wadi_sulaf"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-ASD.xml"/>
+               <personGrp role="tribe" corresp="pgr:awlad_said"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0133.ct_0000">
+                     <quote>tagahwiy</quote>
+                     <cit type="translation">
+                        <quote>you (f.) drink coffee/tea</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0134" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_ay"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:ramlat_humayyir"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-BDA.xml"/>
+               <personGrp role="tribe" corresp="pgr:badarah"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0134.ct_0000">
+                     <quote>tášṛabay</quote>
+                     <cit type="translation">
+                        <quote>you (f.) drink</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0032" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_iy"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:ramlat_humayyir"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-BDA.xml"/>
+               <personGrp role="tribe" corresp="pgr:badarah"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0032.ct_0000">
+                     <quote>taḥarṯiy</quote>
+                     <cit type="translation">
+                        <quote>you (f.) plough</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0136" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_iy"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:wadi_al_islah"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-BWS.xml"/>
+               <personGrp role="tribe" corresp="pgr:bani_wasil"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0136.ct_0000">
+                     <quote>tášṛabiy</quote>
+                     <cit type="translation">
+                        <quote>you (f.) drink</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0138" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_iy"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:qalat_al_jindi"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-DBR.xml"/>
+               <personGrp role="tribe" corresp="pgr:dbur"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0138.ct_0000">
+                     <quote>taḥarṯiy</quote>
+                     <cit type="translation">
+                        <quote>you (f.) plough</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0033" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_ay"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:qalat_al_jindi"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-DBR.xml"/>
+               <personGrp role="tribe" corresp="pgr:dbur"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0033.ct_0000">
+                     <quote>tašṛabay</quote>
+                     <cit type="translation">
+                        <quote>you (f.) drink</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0140" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_iy"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:saint_catherine_s_monastery"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-GBL.xml"/>
+               <personGrp role="tribe" corresp="pgr:jbaliyyah"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0140.ct_0000">
+                     <quote>tagahwiy</quote>
+                     <cit type="translation">
+                        <quote>you (f.) drink coffee/tea</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0142" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_iy"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:jabal_al_malbad"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-GRG.xml"/>
+               <personGrp role="tribe" corresp="pgr:jarajrah"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0142.ct_0000">
+                     <quote>taḥárṯiy</quote>
+                     <cit type="translation">
+                        <quote>you (f.) plough</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0030" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_ay"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:jabal_al_malbad"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-GRG.xml"/>
+               <personGrp role="tribe" corresp="pgr:jarajrah"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0030.ct_0000">
+                     <quote>tašṛabay</quote>
+                     <cit type="translation">
+                        <quote>you (f.) drink</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0143" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_iy"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:wahat_fayran"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-GRR.xml"/>
+               <personGrp role="tribe" corresp="pgr:gararshah"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0143.ct_0000">
+                     <quote>tagahwiy</quote>
+                     <cit type="translation">
+                        <quote>you (f.) drink coffee/tea</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0144" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_iy"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:jabal_sarabit_al_khadim"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-HMD.xml"/>
+               <personGrp role="tribe" corresp="pgr:hamadah"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0144.ct_0000">
+                     <quote>tagahwiy</quote>
+                     <cit type="translation">
+                        <quote>you (f.) drink coffee/tea</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0145" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_ay"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:wadi_jiddi"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-HWT.xml"/>
+               <personGrp role="tribe" corresp="pgr:hwetat_egypt"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0145.ct_0000">
+                     <quote>tášṛabay</quote>
+                     <cit type="translation">
+                        <quote>you (f.) drink</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0029" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_iy"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:wadi_jiddi"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-HWT.xml"/>
+               <personGrp role="tribe" corresp="pgr:hwetat_egypt"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0029.ct_0000">
+                     <quote>taḥárṯiy</quote>
+                     <cit type="translation">
+                        <quote>you (f.) plough</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0147" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_iy"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:jabal_sarabit_al_khadim"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-LGT.xml"/>
+               <personGrp role="tribe" corresp="pgr:legat"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0147.ct_0000">
+                     <quote>tagahwiy</quote>
+                     <cit type="translation">
+                        <quote>you (f.) drink coffee/tea</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0148" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_iy"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:al_qusaymah"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-MLH.xml"/>
+               <personGrp role="tribe" corresp="pgr:malalhah"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0148.ct_0000">
+                     <quote>taḥárṯiy</quote>
+                     <cit type="translation">
+                        <quote>you (f.) plough</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0034" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_ay"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:al_qusaymah"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-MLH.xml"/>
+               <personGrp role="tribe" corresp="pgr:malalhah"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0034.ct_0000">
+                     <quote>tašṛabay</quote>
+                     <cit type="translation">
+                        <quote>you (f.) drink</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0149" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_iy"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:dahab"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-MZN.xml"/>
+               <personGrp role="tribe" corresp="pgr:mzenah"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0149.ct_0000">
+                     <quote>tášṛabiy</quote>
+                     <cit type="translation">
+                        <quote>you (f.) drink</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0151" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_iy"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:wahat_fayran"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-SLH.xml"/>
+               <personGrp role="tribe" corresp="pgr:sawalhah"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0151.ct_0000">
+                     <quote>tagahwiy</quote>
+                     <cit type="translation">
+                        <quote>you (f.) drink coffee/tea</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0154" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_iy"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:sudr"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-TRB.xml"/>
+               <personGrp role="tribe" corresp="pgr:tarabin"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0154.ct_0000">
+                     <quote>taḥárṯiy</quote>
+                     <cit type="translation">
+                        <quote>you (f.) plough</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0036" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_ay"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:sudr"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-TRB.xml"/>
+               <personGrp role="tribe" corresp="pgr:tarabin"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0036.ct_0000">
+                     <quote>tašṛabay</quote>
+                     <cit type="translation">
+                        <quote>you (f.) drink</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0155" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_ay"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:jabal_at_tih"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-TYH.xml"/>
+               <personGrp role="tribe" corresp="pgr:tayaha"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0155.ct_0000">
+                     <quote>tašṛabay</quote>
+                     <cit type="translation">
+                        <quote>you (f.) drink</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0031" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_iy"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:jabal_at_tih"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-TYH.xml"/>
+               <personGrp role="tribe" corresp="pgr:tayaha"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0031.ct_0000">
+                     <quote>taḥárṯiy</quote>
+                     <cit type="translation">
+                        <quote>you (f.) plough</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0192" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:owens_1985_0000" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:ndjamena"/>
+               <lang corresp="..\profiles\vicav_profile_TCD-NDJ.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0192.ct_0000">
+                     <quote>tánguli</quote>
+                     <cit type="translation">
+                        <quote>you (f.) move</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0180" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:owens_1993_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:maiduguri"/>
+               <lang corresp="..\profiles\vicav_profile_NGA-NGA.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0180.ct_0000">
+                     <quote>tišárbi</quote>
+                     <cit type="translation">
+                        <quote>you (f.) drink</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">Due to vowel harmony, the suffix -i changes to -e in lower environments, e.g. tábde (you (f.) begin) or tilkállame (you (f.) speak).</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0188" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:reichmuth_1983_0001" type="publication"/>
+               <placeName ref="geo:halfa_al-jadida"/>
+               <lang corresp="..\profiles\vicav_profile_SDN-SKR.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0188.ct_0000">
+                     <quote>tašrabi</quote>
+                     <cit type="translation">
+                        <quote>you (f.) drink</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0182" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:roset_2018_8391" type="publication"/>
+               <placeName ref="geo:darfur"/>
+               <lang corresp="..\profiles\vicav_profile_SDN-DRF.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0182.ct_0000">
+                     <quote>tamsiki</quote>
+                     <cit type="translation">
+                        <quote>you (f.) seize</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">Since all the persons in Darfur-Arabic act as communis, both forms tamsik and tamsiki can be used for both male or female. However, -i is the "original" female ending.</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0189" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:roth_1979_0000" type="publication"/>
+               <placeName ref="geo:abeche"/>
+               <lang corresp="..\profiles\vicav_profile_TCD-ABC.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0189.ct_0000">
+                     <quote>taktibi</quote>
+                     <cit type="translation">
+                        <quote>you (f.) write</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0186" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:trimingham_1946_0000" type="publication"/>
+               <placeName ref="geo:omdurman"/>
+               <lang corresp="..\profiles\vicav_profile_SDN-OMD.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0186.ct_0125">
+                     <quote>tamruqi</quote>
+                     <cit type="translation">
+                        <quote>you (f.) go out</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0281" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:woidich_2006_3203" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:cairo"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-CRO.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0281.ct_0000">
+                     <quote>tiktibi</quote>
+                     <cit type="translation">
+                        <quote>you (f.) write</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0176" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:simeone_senelle_youssi_2002_0000" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:obock"/>
+               <lang corresp="..\profiles\vicav_profile_DJI-OBK.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0176.ct_0101">
+                  <quote>tsággili</quote>
+                  <cit type="translation">
+                     <quote>you (f.) record</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0194" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:zeltner_tourneux_1986_0000" type="publication"/>
+               <placeName ref="geo:salamat"/>
+               <lang corresp="..\profiles\vicav_profile_TCD-ULE.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0194.ct_0000">
+                     <quote>tirkabi</quote>
+                     <cit type="translation">
+                        <quote>you (f.) ride</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0270" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:zarb_2023_0602" type="publication"/>
+               <placeName ref="geo:testour"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-TSR.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0131" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:" type="publication"/>
+               <placeName ref="geo:shanliurfa"/>
+               <lang corresp="..\profiles\vicav_profile_TUR-URF.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0196" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:ruzzaza"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-BGR.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0197" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:busra"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-BSR.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0018" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:soran"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-BTS.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0198" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:al_salhabiye"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-FDL.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0199" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:al_karame"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-FDN.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0200" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:hama"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-HMA.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0201" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:idlib"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-IDL.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0202" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:mhardi"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-MRD.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0204" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:abu_qbes"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-QBS.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0205" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:qanawat"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-QNW.xml"/>
+               <personGrp role="religion" corresp="pgr:druzes"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0206" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:qismin"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-QSM.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0207" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:qalat_al_husn"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-QSN.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0208" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:ras_al_maarra"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-RMR.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0209" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:al_nasriye"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-RWL.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0210" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:sednaya"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-SDY.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0211" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:smecin"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-SMC.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0212" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:tell_burek"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-SRB.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0213" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:tartus"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-TRT.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0214" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:hawayig_ad_dyab"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-UGD.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0260" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_1998_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:guellala"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-DJI.xml"/>
+               <personGrp role="religion" corresp="pgr:ibadis"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0261" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_1998_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:houmt_souk"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-DJJ.xml"/>
+               <personGrp role="religion" corresp="pgr:jews"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0261.ct_0109">
+                  <quote>təkítbi</quote>
+                  <cit type="translation">
+                     <quote/>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0021" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_1998_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:djerba"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-DJM.xml"/>
+               <personGrp role="religion" corresp="pgr:malikites"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0021.ct_0110">
+                  <quote>tíkətbi</quote>
+                  <cit type="translation">
+                     <quote/>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0262" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:cantineau_1951_7557" type="publication"/>
+               <placeName ref="geo:gabes"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-GBS.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0263" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_"/>
+               <bibl corresp="zot:cohen_1975_0000" type="publication"/>
+               <placeName ref="geo:tunis"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-JTS.xml"/>
+               <personGrp role="religion" corresp="pgr:jews"/>
+               <note type="general">communis form</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0019" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:mion_2021_9872" type="publication"/>
+               <placeName ref="geo:bengardane"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-BGN.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0266" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:prinoth_2017_3476" type="publication"/>
+               <placeName ref="geo:sidi_bouzid"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-SBZ.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0265" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:ritt_benmimoun_2014_0000" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:douz"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-MZG.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0271" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:saada_1984_0002" type="publication"/>
+               <placeName ref="geo:tozeur"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-TZR.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0269" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_"/>
+               <bibl corresp="zot:singer_1984_0000" type="publication"/>
+               <placeName ref="geo:tunis"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-TNS.xml"/>
+               <note type="general">communis form</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0267" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#ipfv_2sgf_"/>
+               <bibl corresp="zot:talmoudi_1980_0000" type="publication"/>
+               <placeName ref="geo:sousse"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-SUS.xml"/>
+               <note type="general">communis form</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0216" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:borg_1985_0000" type="publication"/>
+               <placeName ref="geo:cyprus"/>
+               <lang corresp="..\profiles\vicav_profile_CYP-KOR.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0217" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:boucherit_2002_0000" type="publication"/>
+               <placeName ref="geo:algier"/>
+               <lang corresp="..\profiles\vicav_profile_DZA-ALR.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0217.ct_0027">
+                  <quote>təktb-i</quote>
+                  <cit type="translation">
+                     <quote>you (f) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0221" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:GrandHenry_1976_2248" type="publication"/>
+               <placeName ref="geo:mzab"/>
+               <lang corresp="..\profiles\vicav_profile_DZA-MZB.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0221.ct_0029">
+                  <quote>těkətk-i</quote>
+                  <cit type="translation">
+                     <quote>you (f) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0222" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:guerrero_2015_6917" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:oran"/>
+               <lang corresp="..\profiles\vicav_profile_DZA-ORN.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0222.ct_0119">
+                  <quote>təffəṭri</quote>
+                  <cit type="translation">
+                     <quote>you (f) are having breakfast</quote>
+                  </cit>
+               </cit>
+               <note type="general">resauté - first radical geminated</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0239" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#ipfv_2sgf_"/>
+               <bibl corresp="zot:moscoso_garcia_2003_0000" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:chefchaouen"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-CHF.xml"/>
+               <note type="general">the prefix is d-, not t-, no GD (p.65)</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0242" status="draft" resp="dmp:TD">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:" type="publication"/>
+               <placeName ref="geo:fez"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-FES.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0246" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:sanchez_2014_6569" type="publication"/>
+               <placeName ref="geo:marrakesh"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-MRK.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0246.ct_0030">
+                  <quote>tsməʕi</quote>
+                  <cit type="translation">
+                     <quote>you (f) hear</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0252" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#ipfv_2sgf_"/>
+               <bibl corresp="zot:heath_1982_2902" type="publication"/>
+               <placeName ref="geo:tafilalet"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-SMS.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0252.ct_0111">
+                  <quote>ti-t-ʕṛf</quote>
+                  <cit type="translation">
+                     <quote>you know</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0254" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:aguadé_2013_4881" type="publication"/>
+               <placeName ref="geo:settat"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-STT.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0259" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:taine-cheikh_2011_8213" type="publication"/>
+               <placeName ref="geo:mauritania"/>
+               <lang corresp="..\profiles\vicav_profile_MRT-HSS.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0259.ct_0112">
+                  <quote>təkətbi</quote>
+                  <cit type="translation">
+                     <quote>you (f) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0272" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#ipfv_2sgf_in"/>
+               <bibl corresp="zot:chikovani_2009_8399" type="publication"/>
+               <placeName ref="geo:bukhara"/>
+               <lang corresp="..\profiles\vicav_profile_UZB-BXR.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0272.ct_0031">
+                  <quote>tutxulin</quote>
+                  <cit type="translation">
+                     <quote/>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0251" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:aguadé_1995_4799" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:skoura"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-SKR.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0251.ct_0113">
+                  <quote>tkətbi</quote>
+                  <cit type="translation">
+                     <quote>you (f) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0240" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:aguadé_2003_4996" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:casablanca"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-CSB.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0240.ct_0114">
+                  <quote>tšərbi</quote>
+                  <cit type="translation">
+                     <quote>you (f) drink</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0256" status="draft" resp="dmp:TD">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:behnstedt_2002_4379" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:taza"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-TZA.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0315" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_2002_3339" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:oujda"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-OJD.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0315.ct_0115">
+                  <quote>təkkətbi</quote>
+                  <cit type="translation">
+                     <quote>you (f) write</quote>
+                  </cit>
+               </cit>
+               <note type="general">resauté: first radical is geminated</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0273" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:chikovani_2008_7485" type="publication"/>
+               <placeName ref="geo:qashqadaryo_region"/>
+               <lang corresp="..\profiles\vicav_profile_UZB-QDY.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0273.ct_0116">
+                  <quote>tᵘktubīn</quote>
+                  <cit type="translation">
+                     <quote>you (f) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0130" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#ipfv_2sgf_"/>
+               <bibl corresp="zot:colin_1921_3545" type="publication"/>
+               <placeName ref="geo:branes"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-BRA.xml"/>
+               <personGrp role="tribe" corresp="pgr:branes"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0130.ct_0117">
+                  <quote>dəktəb</quote>
+                  <cit type="translation">
+                     <quote>you (f) write</quote>
+                  </cit>
+               </cit>
+               <note type="general">prefix d- not t-</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0237" status="draft" resp="dmp:TD">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:francisco_2019_2407" type="publication"/>
+               <placeName ref="geo:zaouia_akermoud"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-CDM.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0218" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:GrandHenry_1972_9692" type="publication"/>
+               <placeName ref="geo:cherchell"/>
+               <lang corresp="..\profiles\vicav_profile_DZA-CHR.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0218.ct_0118">
+                  <quote>ţěkkěţbi</quote>
+                  <cit type="translation">
+                     <quote>you (f) write</quote>
+                  </cit>
+               </cit>
+               <note type="general">resauté - first radical geminated</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0223" status="draft" resp="dmp:TD">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:GrandHenry_1979_3844" type="publication" status="CHECKME"><!--broken ID has been fixed in Zotero export, please revise--></bibl>
+               <placeName ref="geo:saoura"/>
+               <lang corresp="..\profiles\vicav_profile_DZA-SAO.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0248" status="draft" resp="dmp:TD">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:heath_2002_0001" type="publication"/>
+               <placeName ref="geo:rabat"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-RBJ.xml"/>
+               <personGrp role="religion" corresp="pgr:jews"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0250" status="draft" resp="dmp:TD">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:heath_2002_0001" type="publication"/>
+               <placeName ref="geo:rabat"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-RBT.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0255" status="draft" resp="dmp:TD">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:heath_2002_0001" type="publication"/>
+               <placeName ref="geo:tanger"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-TGR.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0238" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:kampffmeyer_1912_3753" type="publication"/>
+               <placeName ref="geo:casablanca-settat"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-CHA.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0219" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#ipfv_2sgf_"/>
+               <bibl corresp="zot:laraba_1981_5666" type="publication"/>
+               <placeName ref="geo:constantine"/>
+               <lang corresp="..\profiles\vicav_profile_DZA-CON.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0219.ct_0032">
+                  <quote>təlbəs</quote>
+                  <cit type="translation">
+                     <quote>you (f) wear</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0257" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#ipfv_2sgf_"/>
+               <bibl corresp="zot:aguade_1998_4475" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:zaer"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-ZIR.xml"/>
+               <personGrp role="tribe" corresp="pgr:zaer"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0257.ct_0033">
+                  <quote>təlʕəb</quote>
+                  <cit type="translation">
+                     <quote>you play</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0225" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#ipfv_2sgf_"/>
+               <bibl corresp="zot:marcais_1902_3831" type="publication"/>
+               <placeName ref="geo:tlemcen"/>
+               <lang corresp="..\profiles\vicav_profile_DZA-TLM.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0225.ct_0034">
+                  <quote>ţəkţəb</quote>
+                  <cit type="translation">
+                     <quote>you write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0224" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:marcais_1908_3832" type="publication"/>
+               <placeName ref="geo:saida"/>
+               <lang corresp="..\profiles\vicav_profile_DZA-SDA.xml"/>
+               <personGrp role="tribe" corresp="pgr:ulad ibrahim"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0224.ct_0120">
+                  <quote>teggésmi</quote>
+                  <cit type="translation">
+                     <quote>you (f) share</quote>
+                  </cit>
+               </cit>
+               <note type="general">resauté: first radical geminated</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0220" status="draft" resp="dmp:TD">
+               <name type="featureValue" ref="#ipfv_2sgf_"/>
+               <bibl corresp="zot:marcais_1956_0000" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:jijel"/>
+               <lang corresp="..\profiles\vicav_profile_DZA-DJL.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0220.ct_0035">
+                  <quote>těrfěd</quote>
+                  <cit type="translation">
+                     <quote/>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0179" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:marjani_2019_6677" type="publication"/>
+               <placeName ref="geo:rehamna"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-RHA.xml"/>
+               <personGrp role="tribe" corresp="pgr:rhamna"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0179.ct_0036">
+                  <quote>tfəhmi</quote>
+                  <cit type="translation">
+                     <quote>you (f) understand</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0253" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:moscoso_2002_3876" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:souss_massa"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-SOS.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0253.ct_0121">
+                  <quote>tnəzli</quote>
+                  <cit type="translation">
+                     <quote>you (f) come down</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0249" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#ipfv_2sgf_"/>
+               <bibl corresp="zot:stillman_1988_4518" type="publication"/>
+               <placeName ref="geo:sefrou"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-RBS.xml"/>
+               <personGrp role="religion" corresp="pgr:jews"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0249.ct_0122">
+                  <quote>ţserb</quote>
+                  <cit type="translation">
+                     <quote>you drink</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0236" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#ipfv_2sgf_"/>
+               <bibl corresp="zot:vicente_2000_4058" type="publication"/>
+               <placeName ref="geo:anjra"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-ANJ.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0236.ct_0123">
+                  <quote>ţəkţəb</quote>
+                  <cit type="translation">
+                     <quote>you write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0247" status="draft" resp="dmp:TD">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:vicente_2003_0000" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:masmouda"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-MSM.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0243" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#ipfv_2sgf_ey"/>
+               <bibl corresp="zot:zoubid_2011_0000" type="publication"/>
+               <placeName ref="geo:hyayna"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-HYN.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0243.ct_0037">
+                  <quote>tʕežnéy</quote>
+                  <cit type="translation">
+                     <quote>you (f) knead dough</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0300" status="done" resp="dmp:VE">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:saqqaf_1999_1184" type="publication"/>
+               <placeName ref="geo:hadramaut"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-HAD.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0300.ct_0000">
+                     <quote>tuktubīn</quote>
+                     <cit type="translation">
+                        <quote/>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0372" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#ipfv_2sgf_ii"/>
+               <bibl corresp="zot:behnstedt_1987_0003" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:sa_dah"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-SAD.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0301" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:al_hajariyah"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-HUG.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0301.ct_0076">
+                  <quote>tiktubi</quote>
+                  <cit type="translation">
+                     <quote>you (f) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0298" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:al_bayda"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-BAY.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0298.ct_0077">
+                  <quote>tiktubi</quote>
+                  <cit type="translation">
+                     <quote>you (f) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0299" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#ipfv_2sgf_in"/>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:bayt_al_faqih"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-BFQ.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0299.ct_0078">
+                  <quote>tiktubin</quote>
+                  <cit type="translation">
+                     <quote>you (f) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0302" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:mabyan"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-MAB.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0302.ct_0124">
+                  <quote>tiktubi</quote>
+                  <cit type="translation">
+                     <quote>you (f) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0008" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:al_miri"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-MAD.xml"/>
+               <personGrp role="tribe" corresp="pgr:minabbih"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0008.ct_0079">
+                  <quote>tiktubīn</quote>
+                  <cit type="translation">
+                     <quote>you (f) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0305" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:marib"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-MAR.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0305.ct_0080">
+                  <quote>tiktubi</quote>
+                  <cit type="translation">
+                     <quote>you (f) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0306" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:mocha"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-MAX.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0306.ct_0081">
+                  <quote>tiktubi</quote>
+                  <cit type="translation">
+                     <quote>you (f) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0069" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:majzar"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-MGF.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0069.ct_0082">
+                  <quote>tiktubi</quote>
+                  <cit type="translation">
+                     <quote>you (f) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0308" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:al_nazir"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-NDR.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0308.ct_0083">
+                  <quote>tiktubi</quote>
+                  <cit type="translation">
+                     <quote>you (f) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0309" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:rada"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-RAD.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0309.ct_0084">
+                  <quote>tiktubi</quote>
+                  <cit type="translation">
+                     <quote>you (f) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0310" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:sirwah"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-SIR.xml"/>
+               <personGrp role="tribe" corresp="pgr:jahm"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0310.ct_0085">
+                  <quote>tiktubi</quote>
+                  <cit type="translation">
+                     <quote>you (f) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0311" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:al_udayn"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-UDA.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0311.ct_0086">
+                  <quote>tiktubi</quote>
+                  <cit type="translation">
+                     <quote>you (f) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0313" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:zabid"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-ZBD.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0313.ct_0087">
+                  <quote>tiktubi</quote>
+                  <cit type="translation">
+                     <quote>you (f) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0314" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:az_zuhrah"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-ZUH.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0314.ct_0088">
+                  <quote>tiktubīn</quote>
+                  <cit type="translation">
+                     <quote>you (f) write</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0007" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:ghanem_1958_0000" type="publication"/>
+               <placeName ref="geo:aden"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-ADN.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0290" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:grünbichler_2015_2002" type="publication"/>
+               <placeName ref="geo:buraymi"/>
+               <lang corresp="..\profiles\vicav_profile_OMN-BUR.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0295" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:reinhardt_1894_0000" type="publication"/>
+               <placeName ref="geo:al_ristaq"/>
+               <lang corresp="..\profiles\vicav_profile_OMN-RST.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0291" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:rhodokanakis_1908_1911_0000" type="publication"/>
+               <placeName ref="geo:dhofar"/>
+               <lang corresp="..\profiles\vicav_profile_OMN-DHF.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0294" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
+               <bibl corresp="zot:shaaban_1977_7730" type="publication"/>
+               <placeName ref="geo:muscat"/>
+               <lang corresp="..\profiles\vicav_profile_OMN-MSQ.xml"/>
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0294.ct_0000">
+                     <quote>t(i)kitbi</quote>
+                     <cit type="translation">
+                        <quote>you (f.) write</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0312" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="zot:vanhove_1995_0364" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:yafa"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-YAF.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0000" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#ipfv_2sgf_ii"/>
+               <bibl corresp="zot:watson_1993_0000" type="publication"/>
+               <placeName ref="geo:sanaa"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-SAN.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0304" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#ipfv_2sgf_ii"/>
+               <bibl corresp="zot:werbeck_2001_4975" type="publication"/>
+               <placeName ref="geo:manakhah"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-MAN.xml"/>
+            </wib:featureValueObservation>
+
+         </div>
+      </body>
+   </text>
+</TEI>

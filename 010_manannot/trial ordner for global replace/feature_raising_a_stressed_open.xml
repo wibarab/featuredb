@@ -1,0 +1,3364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../082_scripts_xsl/tei_fs_2_html__001.xsl"?>
+<?xslt inPathSegment="\010_manannot\" outPathSegment="\106_html\"?>
+<?snippets fn="snippets_wibarab_001.xml" path="{filePath}\..\..\880_conf\"?>
+<?processor name="saxon" removePreserveFromXML="true" removePreserveFromXSLT="true"?>
+<?attributeAssignments fn="enricher_attributes.xml" path="{filePath}\..\..\880_conf\"?>
+<?shortCuts fn="wibarab_shortCuts" path="{filePath}\..\..\880_conf\"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../../804_xsd/1.0.1/featuredb.xsd" xml:id="ft_rais_a_strss_open">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Variants of Raising of a in stressed open syllable before a - CaCaC</title>
+            <author>Veronika Engler</author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>{publisher}</publisher>
+            <date when="2022-10-03"/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This is the feature-file for Raising of a in stressed open syllable before a - CaCaC.</p>
+         </sourceDesc>
+      </fileDesc>
+
+      <encodingDesc>
+
+         <listPrefixDef xml:id="listPrefixDef">
+            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_dmp.xml#$1"/>
+            <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_biblio_tei_zotero.xml#$1"/>
+            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_dialects.xml#$1"/>
+            <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1"/>
+            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"/>
+            <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
+         </listPrefixDef>
+      </encodingDesc>
+
+      <revisionDesc status="draft">
+         <change when="2022-08-17" who="dmp:">c</change>
+         <change when="2022-08-17" who="dmp: "/>
+
+         <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change><change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change></revisionDesc>
+   </teiHeader>
+
+
+
+   <text>
+      <body>
+
+         <div type="featureDescription">
+            <head>Feature Values</head>
+            <list type="featureValues">
+               <item xml:id="raisinga_so_a_to_i">
+                  <label>a &gt; i	sikat and a &gt; u gumar</label>
+                  <desc/>
+               </item>
+               <item xml:id="raisinga_so_a_to_i1">
+                  <label>a &amp;gt; i	sikat and a &amp;gt; a qamar</label>
+                  <desc/>
+               </item>
+               <item xml:id="raisinga_so_A_to_I2">
+                  <label>A &gt; I   sikát and a&gt;u </label>
+                  <desc/>
+               </item>
+               <item xml:id="raisinga_so_A_to_A1">
+                  <label>A &amp; a sakát</label>
+                  <desc/>
+               </item>
+               <item xml:id="raisinga_so_a_to_a">
+                  <label>a &gt; a   sakat</label>
+                  <desc/>
+               </item>
+               <item xml:id="raisinga_so_a_to_zero">
+                  <label>A &gt; -   skat</label>
+                  <desc/>
+               </item>
+               <item xml:id="raisinga_so_a_to_schwa">
+                  <label>A &gt; ə səkat</label>
+                  <desc/>
+               </item>
+               <item xml:id="raisinga_a_i_become_schwa">
+                  <label>a &gt; a and i become schwa for the Maghreb</label>
+                  <desc>Relevant to the Maghreb only</desc>
+               </item>
+            </list>
+         </div>
+         <div type="description">
+         </div>
+
+         <div xmlns:tei="http://www.tei-c.org/ns/1.0" type="featureValueObservations">
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0050" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="" type="fieldwork"/>
+               <placeName ref="geo:ed_dhayra"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-ARA.xml"/>
+               <personGrp role="tribe" corresp="pgr:aramsha_lebanon"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0063" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="" type="fieldwork"/>
+               <placeName ref="geo:khalde"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-KHA.xml"/>
+               <personGrp role="tribe" corresp="pgr:arab_xalde"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0071" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
+               <placeName ref="geo:naameh"/>
+               <placeName ref="geo:el_karantina"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"/>
+               <personGrp role="tribe" corresp="pgr:arab_maslax"/>
+               <personGrp role="ageGroup" corresp="#old"/>
+               <personGrp role="ageGroup" corresp="#middle"/>
+               <note type="general">Elderly (70+), Old (60-70) and some middle age speakers show consistent raising of short medial a in stressed open syllable.
+                  The quality of the vowel seems to be sensitive to pharyngealization and labiality, thus, in environments combining labial and gutural consonants we find u: guṃar (moon), gufaṣ (cage).
+                  Raising is blocked in instances like saʕal (he asked), ṛagaṣ (he danced). In our data, so far, /h/, /ʕ/ and /x/ as C1 do not seem to systematically block the raising of a in CáCaC / CáCa patterns, while /ʔ/, /ḥ/, /ʕ/ as C2 do seem to systematically block the raising of a</note>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0071.ct_0026">
+                  <quote>sima</quote>
+                  <cit type="translation">
+                     <quote>sky</quote>
+                  </cit>
+               </cit>
+               <cit xml:id="ft_rais_a_strss_open.fv_0071.ct_0027" type="example">
+                  <quote>xida</quote>
+                  <cit type="translation">
+                     <quote>he took</quote>
+                  </cit>
+               </cit>
+               <cit xml:id="ft_rais_a_strss_open.fv_0071.ct_0028" type="example">
+                  <quote>bugar</quote>
+                  <cit type="translation">
+                     <quote>cows</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0071.ct_0030">
+                  <quote>ḍiraḅ</quote>
+                  <cit type="translation">
+                     <quote>he hit</quote>
+                  </cit>
+               </cit>
+               <cit xml:id="ft_rais_a_strss_open.fv_0071.ct_0029" type="example">
+                  <quote>ragaṣ</quote>
+                  <cit type="translation">
+                     <quote>he danced</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0016" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
+               <placeName ref="geo:naameh"/>
+               <placeName ref="geo:el_karantina"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"/>
+               <personGrp role="tribe" corresp="pgr:arab_maslax"/>
+               <personGrp role="ageGroup" corresp="#young"/>
+               <personGrp role="ageGroup" corresp="#middle"/>
+               <note type="general">Young speakers and some middle-aged speakers do not show raising of short medial a in stressed open syllable, unlike Elderly (70+), Old (60-70) and some middle age speakers who do show it.</note>
+               <cit xml:id="ft_rais_a_strss_open.fv_0016.ct_0031" type="example">
+                  <quote>sama</quote>
+                  <cit type="translation">
+                     <quote>sky</quote>
+                  </cit>
+               </cit>
+               <cit xml:id="ft_rais_a_strss_open.fv_0016.ct_0032" type="example">
+                  <quote>katab</quote>
+                  <cit type="translation">
+                     <quote>he wrote</quote>
+                  </cit>
+               </cit>
+               <cit xml:id="ft_rais_a_strss_open.fv_0016.ct_0033" type="example">
+                  <quote>baʔar</quote>
+                  <cit type="translation">
+                     <quote>cows</quote>
+                  </cit>
+               </cit>
+               <cit xml:id="ft_rais_a_strss_open.fv_0016.ct_0034" type="example">
+                  <quote>raʔaṣ</quote>
+                  <cit type="translation">
+                     <quote>he danced</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0053" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:haidar_1979_2969" type="publication"/>
+               <placeName ref="geo:baskinta"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-BAS.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0053.ct_0099">
+                  <quote>žabil</quote>
+                  <cit type="translation">
+                     <quote>mountain</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0027" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
+               <placeName ref="geo:jurdeih"/>
+               <lang corresp="..\profiles\vicav_profile_ISR-ARM.xml"/>
+               <personGrp role="tribe" corresp="pgr:aramsha_israel"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0027.ct_0040">
+                  <quote>biga</quote>
+                  <cit type="translation">
+                     <quote>he remained</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0027.ct_0011">
+                  <quote>sina</quote>
+                  <cit type="translation">
+                     <quote>year</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deducted from examples</note>
+               <note type="general">Behnstedt and Geva-Kleinberger 2019:55 note that: “Raising of *a in *C1aC2aC3 to /i/ or /u/, C1 not being a back consonant such as
+                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak &gt; símač, sabab &gt; síbab, and bagar &gt; búgar.
+                  The phenomenon is well-known in all Bedouin dialects of the peninsula and need not be discussed in detail here. It is absent in ruralite C, G and M dialects.”</note>
+
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0029" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
+               <placeName ref="geo:hajajra"/>
+               <lang corresp="..\profiles\vicav_profile_ISR-GAW.xml"/>
+               <personGrp role="tribe" corresp="pgr:jawamis"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0029.ct_0012" type="example">
+                  <quote>gira</quote>
+                  <cit type="translation">
+                     <quote>he read</quote>
+                  </cit>
+               </cit>
+               <cit xml:id="ft_rais_a_strss_open.fv_0029.ct_0013" type="example">
+                  <quote>sina</quote>
+                  <cit type="translation">
+                     <quote>year</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deducted from examples</note>
+               <note type="general">Behnstedt and Geva-Kleinberger 2019:55 note that: “Raising of *a in *C1aC2aC3 to /i/ or /u/, C1 not being a back consonant such as
+                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak &gt; símač, sabab &gt; síbab, and bagar &gt; búgar.
+                  The phenomenon is well-known in all Bedouin dialects of the peninsula and need not be discussed in detail here. It is absent in ruralite C, G and M dialects.”</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0030" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
+               <placeName ref="geo:hamam"/>
+               <lang corresp="..\profiles\vicav_profile_ISR-GET.xml"/>
+               <personGrp role="tribe" corresp="pgr:getiyya"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0030.ct_0014" type="example">
+                  <quote>biga</quote>
+                  <cit type="translation">
+                     <quote>he remained</quote>
+                  </cit>
+               </cit>
+               <cit xml:id="ft_rais_a_strss_open.fv_0030.ct_0015" type="example">
+                  <quote>sina</quote>
+                  <cit type="translation">
+                     <quote>year</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deducted from examples</note>
+               <note type="general">Behnstedt and Geva-Kleinberger 2019:55 note that: “Raising of *a in *C1aC2aC3 to /i/ or /u/, C1 not being a back consonant such as
+                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak &gt; símač, sabab &gt; síbab, and bagar &gt; búgar.
+                  The phenomenon is well-known in all Bedouin dialects of the peninsula and need not be discussed in detail here. It is absent in ruralite C, G and M dialects.”</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0026" status="draft" resp="dmp:AID">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
+               <placeName ref="geo:haifa"/>
+               <lang corresp="..\profiles\vicav_profile_ISR-HAI.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0031" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
+               <placeName ref="geo:hujeirat_dhara"/>
+               <placeName ref="geo:bir_el_maksur"/>
+               <lang corresp="..\profiles\vicav_profile_ISR-HGE.xml"/>
+               <personGrp role="tribe" corresp="pgr:hjerat"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0031.ct_0016" type="example">
+                  <quote>biga</quote>
+                  <cit type="translation">
+                     <quote>he remained</quote>
+                  </cit>
+               </cit>
+               <cit xml:id="ft_rais_a_strss_open.fv_0031.ct_0039" type="example">
+                  <quote>sina</quote>
+                  <cit type="translation">
+                     <quote>year</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deducted from examples</note>
+               <note type="general">Behnstedt and Geva-Kleinberger 2019:55 note that: “Raising of *a in *C1aC2aC3 to /i/ or /u/, C1 not being a back consonant such as
+                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak &gt; símač, sabab &gt; síbab, and bagar &gt; búgar.
+                  The phenomenon is well-known in all Bedouin dialects of the peninsula and need not be discussed in detail here. It is absent in ruralite C, G and M dialects.”</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0032" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
+               <placeName ref="geo:kaabiyya"/>
+               <lang corresp="..\profiles\vicav_profile_ISR-KAB.xml"/>
+               <personGrp role="tribe" corresp="pgr:kabiyye"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0032.ct_0017" type="example">
+                  <quote>sina</quote>
+                  <cit type="translation">
+                     <quote>year</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deducted from example</note>
+               <note type="general">Behnstedt and Geva-Kleinberger 2019:55 note that: “Raising of *a in *C1aC2aC3 to /i/ or /u/, C1 not being a back consonant such as
+                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak &gt; símač, sabab &gt; síbab, and bagar &gt; búgar.
+                  The phenomenon is well-known in all Bedouin dialects of the peninsula and need not be discussed in detail here. It is absent in ruralite C, G and M dialects.”</note>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0037" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
+               <placeName ref="geo:buayna_nujaydat"/>
+               <lang corresp="..\profiles\vicav_profile_ISR-NGE.xml"/>
+               <personGrp role="tribe" corresp="pgr:njedat"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0037.ct_0018" type="example">
+                  <quote>biga</quote>
+                  <cit type="translation">
+                     <quote>he remained</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deducted from example</note>
+               <note type="general">Behnstedt and Geva-Kleinberger 2019:55 note that: “Raising of *a in *C1aC2aC3 to /i/ or /u/, C1 not being a back consonant such as
+                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak &gt; símač, sabab &gt; síbab, and bagar &gt; búgar.
+                  The phenomenon is well-known in all Bedouin dialects of the peninsula and need not be discussed in detail here. It is absent in ruralite C, G and M dialects.”</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0038" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
+               <placeName ref="geo:umm_el_ghanam"/>
+               <lang corresp="..\profiles\vicav_profile_ISR-SA3.xml"/>
+               <personGrp role="tribe" corresp="pgr:saayda"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0038.ct_0019" type="example">
+                  <quote>biga</quote>
+                  <cit type="translation">
+                     <quote>he remained</quote>
+                  </cit>
+               </cit>
+               <cit xml:id="ft_rais_a_strss_open.fv_0038.ct_0020" type="example">
+                  <quote>gira</quote>
+                  <cit type="translation">
+                     <quote>he read</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deducted from example</note>
+               <note type="general">Behnstedt and Geva-Kleinberger 2019:55 note that: “Raising of *a in *C1aC2aC3 to /i/ or /u/, C1 not being a back consonant such as
+                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak &gt; símač, sabab &gt; síbab, and bagar &gt; búgar.
+                  The phenomenon is well-known in all Bedouin dialects of the peninsula and need not be discussed in detail here. It is absent in ruralite C, G and M dialects.”</note>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0040" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
+               <placeName ref="geo:shibli"/>
+               <lang corresp="..\profiles\vicav_profile_ISR-SHI.xml"/>
+               <personGrp role="tribe" corresp="pgr:shibli"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0040.ct_0024" type="example">
+                  <quote>biga</quote>
+                  <cit type="translation">
+                     <quote>he remained</quote>
+                  </cit>
+               </cit>
+               <cit xml:id="ft_rais_a_strss_open.fv_0040.ct_0025" type="example">
+                  <quote>gira</quote>
+                  <cit type="translation">
+                     <quote>he read</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deducted from example</note>
+               <note type="general">Behnstedt and Geva-Kleinberger 2019:55 note that: “Raising of *a in *C1aC2aC3 to /i/ or /u/, C1 not being a back consonant such as
+                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak &gt; símač, sabab &gt; síbab, and bagar &gt; búgar.
+                  The phenomenon is well-known in all Bedouin dialects of the peninsula and need not be discussed in detail here. It is absent in ruralite C, G and M dialects.”</note>
+
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0042" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
+               <placeName ref="geo:suulam"/>
+               <lang corresp="..\profiles\vicav_profile_ISR-TUR.xml"/>
+               <personGrp role="tribe" corresp="pgr:arab_turkman"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0042.ct_0022" type="example">
+                  <quote>baqa</quote>
+                  <cit type="translation">
+                     <quote>he remained</quote>
+                  </cit>
+               </cit>
+               <cit xml:id="ft_rais_a_strss_open.fv_0042.ct_0023" type="example">
+                  <quote>sani</quote>
+                  <cit type="translation">
+                     <quote>year</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deducted from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0043" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
+               <placeName ref="geo:khawalid"/>
+               <lang corresp="..\profiles\vicav_profile_ISR-XAW.xml"/>
+               <personGrp role="tribe" corresp="pgr:xawalid"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0043.ct_0021" type="example">
+                  <quote>buga</quote>
+                  <cit type="translation">
+                     <quote>he remained</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deducted from example</note>
+               <note type="general">Behnstedt and Geva-Kleinberger 2019:55 note that: “Raising of *a in *C1aC2aC3 to /i/ or /u/, C1 not being a back consonant such as
+                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak &gt; símač, sabab &gt; síbab, and bagar &gt; búgar.
+                  The phenomenon is well-known in all Bedouin dialects of the peninsula and need not be discussed in detail here. It is absent in ruralite C, G and M dialects.”</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0074" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#raisinga_so_a_to_schwa"/>
+               <bibl corresp="zot:el_hajje_1954_0000" type="publication"/>
+               <placeName ref="geo:tripoli_lebanon"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-TRI.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0074.ct_0097">
+                  <quote>bəšeʕ</quote>
+                  <cit type="translation">
+                     <quote>ugly</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0022" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:el_hajje_1954_0000" type="publication"/>
+               <placeName ref="geo:tripoli_lebanon"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-TRI.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0022.ct_0118">
+                  <quote>šažra</quote>
+                  <cit type="translation">
+                     <quote>tree</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0055" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#raisinga_so_a_to_schwa"/>
+               <bibl corresp="zot:el_hajje_1954_0000" type="publication"/>
+               <placeName ref="geo:tripoli_lebanon"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-TRI.xml"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0055.ct_0098" type="example">
+                  <quote>katab</quote>
+                  <cit type="translation">
+                     <quote>he wrote</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0062" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:féghali_1919_9281" type="publication"/>
+               <placeName ref="geo:kfar_aabida"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-KAB.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0062.ct_0132">
+                  <quote>baləḥ</quote>
+                  <cit type="translation">
+                     <quote>dates</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0079" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:fleisch_1947_2645" type="publication"/>
+               <placeName ref="geo:zahle"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-ZAH.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0079.ct_0119">
+                  <quote>žamals</quote>
+                  <cit type="translation">
+                     <quote/>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0065" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:fleisch_1974_3183" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:kfar_sghab"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-KSG.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0065.ct_0120">
+                  <quote>kamaš</quote>
+                  <cit type="translation">
+                     <quote>he grabbed / caught</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0065.ct_0121">
+                  <quote>samak</quote>
+                  <cit type="translation">
+                     <quote>fish</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deducted from example.</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0056" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:jiha_1964_0000" type="publication"/>
+               <placeName ref="geo:bishmizzine"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-BIS.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0056.ct_0122">
+                  <quote>walid</quote>
+                  <cit type="translation">
+                     <quote>kid</quote>
+                  </cit>
+               </cit>
+               <cit xml:id="ft_rais_a_strss_open.fv_0056.ct_0123" type="example">
+                  <quote>samik</quote>
+                  <cit type="translation">
+                     <quote>fish</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0056.ct_0124">
+                  <quote>žamil</quote>
+                  <cit type="translation">
+                     <quote>camel</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deducted from examples.</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0024" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:jiha_1964_0000" type="publication"/>
+               <placeName ref="geo:bishmizzine"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-BIS.xml"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0024.ct_0125" type="example">
+                  <quote>dihib</quote>
+                  <cit type="translation">
+                     <quote>gold</quote>
+                  </cit>
+               </cit>
+
+               <note type="general">Deduced from examples.</note>
+            </wib:featureValueObservation>
+
+
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0054" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:schukro_2004_6239" type="publication"/>
+               <placeName ref="geo:beirut"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-BEI.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0054.ct_0126">
+                  <quote>žabal</quote>
+                  <cit type="translation">
+                     <quote>mountain</quote>
+                  </cit>
+               </cit>
+               <cit xml:id="ft_rais_a_strss_open.fv_0054.ct_0127" type="example">
+                  <quote>žaras</quote>
+                  <cit type="translation">
+                     <quote>bell</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0052" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:younes_2013_2795" type="publication"/>
+               <placeName ref="geo:wadi_khalid"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-ATI.xml"/>
+               <personGrp role="tribe" corresp="pgr:arab_al_atij"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0052.ct_0042">
+                  <quote>čidas</quote>
+                  <cit type="translation">
+                     <quote>he piled up</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0052.ct_0043">
+                  <quote>siwa</quote>
+                  <cit type="translation">
+                     <quote>together</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0045" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:younes_2014_9863" type="publication"/>
+               <placeName ref="geo:haouch_el_nabi"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-ABI.xml"/>
+               <personGrp role="tribe" corresp="pgr:abu_eid"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0045.ct_0000">
+                  <quote>bina</quote>
+                  <cit type="translation">
+                     <quote>he built</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0045.ct_0001">
+                  <quote>nisa</quote>
+                  <cit type="translation">
+                     <quote>he forgot</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0045.ct_0002">
+                  <quote>simač</quote>
+                  <cit type="translation">
+                     <quote>fish (pl)</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0045.ct_0003">
+                  <quote>ḥəlaf</quote>
+                  <cit type="translation">
+                     <quote>he swore</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0045.ct_0004">
+                  <quote>wuṣaf</quote>
+                  <cit type="translation">
+                     <quote>he described</quote>
+                  </cit>
+               </cit>
+               <note type="general">Younes 2014:363 notes that in this case, the raising is blocked mainly when C1 is a guttural or when C2 is either l, r, or n, but with the exception of ḥ and ʕ, which seem to cause only partial raising to ə, while
+                  following labial consonants and the occurrence of m seem to render u instead of i: "En effet, pour ce schème, la règle implique que si C1
+                  correspond à /ʾ/, /ʿ/, /h/, /ḥ/, /ġ/ ou /x/ ou alors si C2 correspond à /l/, /r/ ou /n/  même si dans ce dernier cas la distribution est aléatoire, l’élévation n’a pas lieu. Les
+                  pharyngales /ḥ/ et /ʿ/ pourraient avoir un traitement à part sur certains schèmes ce qui
+                  expliquerait les réalisations enregistrées. Pour ce qu’il en est de la laryngale /ʾ/, la coloration
+                  en /u/ de la voyelle est probablement le résultat de la bilabiale qui suit, en l’occurrence /m/".</note>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0105" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:twenan"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-MWL.xml"/>
+               <personGrp role="tribe" corresp="pgr:mawali_syria"/>
+                <cit type="example" xml:id="ft_rais_a_strss_open.fv_0105.ct_0000">
+                     <quote>bgaṛa</quote>
+                     <cit type="translation">
+                        <quote>cow</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0106" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:qasr_ibn_wardan"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-MWL.xml"/>
+               <personGrp role="tribe" corresp="pgr:mawali_syria"/>
+                <cit type="example" xml:id="ft_rais_a_strss_open.fv_0106.ct_0000">
+                     <quote>bgaṛa</quote>
+                     <cit type="translation">
+                        <quote>cow</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0107" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:zyara"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-MWL.xml"/>
+               <personGrp role="tribe" corresp="pgr:mawali_syria"/>
+                <cit type="example" xml:id="ft_rais_a_strss_open.fv_0107.ct_0000">
+                     <quote>bgaṛa</quote>
+                     <cit type="translation">
+                        <quote>cow</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0110" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:tell_alu"/>
+               <placeName ref="geo:al_qahtaniyah"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-SMR.xml"/>
+               <personGrp role="tribe" corresp="pgr:shammar_syria"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0110.ct_0000">
+                     <quote>bgaṛa</quote>
+                     <cit type="translation">
+                        <quote>cow</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0099" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:blanc_1970_4573" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:negev"/>
+               <lang corresp="..\profiles\vicav_profile_NEG-ZLM.xml"/>
+               <personGrp role="tribe" corresp="pgr:zullam"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0099.ct_0000">
+                     <quote>ǧibál</quote>
+                     <cit type="translation">
+                        <quote>mountain</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ft_rais_a_strss_open.fv_0099.ct_0001">
+                     <quote>wugáf</quote>
+                     <cit type="translation">
+                        <quote>he stood</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0047" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#raisinga_so_a_to_schwa"/>
+               <bibl corresp="zot:Cantineau_1936_9708" type="publication" cert="unknown" status="CHECKME"><!--potentially ambiguous references--><!--ambiguous ID reference. Could be either http://zotero.org/groups/2165756/items/TJFGQ7N8 or http://zotero.org/groups/2165756/items/NB2HLKGD--></bibl>
+               <placeName ref="geo:irbid_reg"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-NEM.xml"/>
+               <personGrp role="tribe" corresp="pgr:neem_jordan"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0047.ct_0009">
+                  <quote>kə'tab (kö'tab)</quote>
+                  <cit type="translation">
+                     <quote>he wrote</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0086" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#raisinga_so_a_to_schwa"/>
+               <bibl corresp="zot:Cantineau_1936_9708" type="publication" status="CHECKME"><!--potentially ambiguous references--><!--ambiguous ID reference. Could be either http://zotero.org/groups/2165756/items/TJFGQ7N8 or http://zotero.org/groups/2165756/items/NB2HLKGD--></bibl>
+               <placeName ref="geo:rumtha"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-BXD.xml"/>
+               <personGrp role="tribe" corresp="pgr:bani_xaled"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0086.ct_0041">
+                  <quote>gə'mal (gö'mal)</quote>
+                  <cit type="translation">
+                     <quote>camel</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0087" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#raisinga_so_a_to_schwa"/>
+               <bibl corresp="zot:Cantineau_1936_9708" type="publication" status="CHECKME"><!--potentially ambiguous references--><!--ambiguous ID reference. Could be either http://zotero.org/groups/2165756/items/TJFGQ7N8 or http://zotero.org/groups/2165756/items/NB2HLKGD--></bibl>
+               <placeName ref="geo:muwaysa"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-FDL.xml"/>
+               <personGrp role="tribe" corresp="pgr:fadol"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0087.ct_0007">
+                  <quote>gə'mal (gö'mal)</quote>
+                  <cit type="translation">
+                     <quote>camel</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0108" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#raisinga_so_a_to_schwa"/>
+               <bibl corresp="zot:Cantineau_1936_9708" type="publication" status="CHECKME"><!--potentially ambiguous references--><!--ambiguous ID reference. Could be either http://zotero.org/groups/2165756/items/TJFGQ7N8 or http://zotero.org/groups/2165756/items/NB2HLKGD--></bibl>
+               <placeName ref="geo:assal_al_ward"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-OMR.xml"/>
+               <personGrp role="tribe" corresp="pgr:omur"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0108.ct_0006">
+                  <quote>gə'mal (gö'mal)</quote>
+                  <cit type="translation">
+                     <quote>camel</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0096" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#raisinga_so_a_to_schwa"/>
+               <bibl corresp="zot:Cantineau_1936_9708" type="publication" status="CHECKME"><!--potentially ambiguous references--><!--ambiguous ID reference. Could be either http://zotero.org/groups/2165756/items/TJFGQ7N8 or http://zotero.org/groups/2165756/items/NB2HLKGD--></bibl>
+               <placeName ref="geo:mughayyir_as_sirhan"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-SHN.xml"/>
+               <personGrp role="tribe" corresp="pgr:sirhan"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0096.ct_0008">
+                  <quote>yə'mal (yö'mal)</quote>
+                  <cit type="translation">
+                     <quote>camel</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0316" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:cantineau_1946_0000" type="publication" cert="unknown"/>
+               <placeName ref="geo:hawraan"/>
+               <placeName ref="geo:jabal_al_druze"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-HRN.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0316.ct_0000">
+                     <quote>xabaṛ</quote>
+                     <cit type="translation">
+                        <quote>news</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0097" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:herin_2010_4638" type="publication"/>
+               <placeName ref="geo:al_salt"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-SLT.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0097.ct_0000">
+                     <quote>šabah</quote>
+                     <cit type="translation">
+                        <quote>ghost</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0084" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:owens_1984_9854" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:petra"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-BDL.xml"/>
+               <personGrp role="tribe" corresp="pgr:bdul"/>
+                <cit type="example" xml:id="ft_rais_a_strss_open.fv_0084.ct_0000">
+                  <quote>ġanam</quote>
+                  <cit type="translation">
+                     <quote>sheep</quote>
+                  </cit>
+               </cit>
+               <note type="exceptionNote">Bani Yasin and Owens (1984:205):
+               Within morphemes, in open syllables one finds /a/ only
+	       after back fricatives, /ġ, x, ʕ, ḥ, h/ and, very occasionally,
+	       in emphatic contexts.</note>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0028" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:shawarbah_2012_3107" type="publication"/>
+               <placeName ref="geo:negev"/>
+               <lang corresp="..\profiles\vicav_profile_NEG-AZM.xml"/>
+               <personGrp role="tribe" corresp="pgr:azazmih"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0028.ct_0000">
+                     <quote>malak</quote>
+                     <cit type="translation">
+                        <quote>angel</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ft_rais_a_strss_open.fv_0028.ct_0001">
+                     <quote>ḏ̣arab</quote>
+                     <cit type="translation">
+                        <quote>he hit</quote>
+                     </cit>
+                     </cit>
+               <note type="general">The bases CaCaC (for both nouns and perfect of Form I), 
+               *C1aC2aC3ah/ih and ,ClaC2āC3(VC) seem to be restricted to cases where a of the initial syllable
+                is phonetically conditioned: a is retained when C1 is emphatic or back and/or C2 is one of 
+                the consonants l or r, in all other cases, it is raised to /i/</note>
+            </wib:featureValueObservation>
+
+             <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0035" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#raisinga_so_a_to_i1"/>
+               <bibl corresp="zot:shawarbah_2012_3107" type="publication"/>
+               <placeName ref="geo:negev"/>
+               <lang corresp="..\profiles\vicav_profile_NEG-AZM.xml"/>
+               <personGrp role="tribe" corresp="pgr:azazmih"/>
+                  <cit type="example" xml:id="ft_rais_a_strss_open.fv_0035.ct_0000">
+                     <quote>ǧimal</quote>
+                     <cit type="translation">
+                        <quote>camel</quote>
+                     </cit>
+                  </cit>
+               <note type="general">The bases CaCaC (for both nouns and perfect of Form I), 
+               *C1aC2aC3ah/ih and ,ClaC2āC3(VC) seem to be restricted to cases where a of the initial syllable
+                is phonetically conditioned: a is retained when C1 is emphatic or back and/or C2 is one of 
+                the consonants l or r, in all other cases, it is raised to /i/</note>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0111" status="draft" resp="dmp:AT">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:talay_prochazka_2008_0000" type="publication"/>
+               <placeName ref="geo:qamishli"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-TYY.xml"/>
+               <personGrp role="tribe" corresp="pgr:tayyi"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0111.ct_0000">
+                     <quote>ṛguba</quote>
+                     <cit type="translation">
+                        <quote>neck</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+          
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0117" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication"/>
+               <placeName ref="geo:aleppo"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-ALP.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0117.ct_0000">
+                     <quote>baʔaṛ</quote>
+                     <cit type="translation">
+                        <quote>cow</quote>
+                     </cit>
+                  </cit>
+               <note type="general">Deducted from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0121" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:talay_1999_0001" type="publication"/>
+               <placeName ref="geo:khawetna"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-KHA.xml"/>
+               <personGrp role="tribe" corresp="pgr:khawetna_tribe"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0121.ct_0000">
+                     <quote>balaʕ</quote>
+                     <cit type="translation">
+                        <quote>he swallowed</quote>
+                     </cit>
+                  </cit>
+               <note type="general">Deducted from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0123" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication"/>
+               <placeName ref="geo:qamishli"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-QAM.xml"/>
+                <cit type="example" xml:id="ft_rais_a_strss_open.fv_0123.ct_0000">
+                     <quote>baqaṛ, baʔaṛ, bagaṛ</quote>
+                     <cit type="translation">
+                        <quote>cow</quote>
+                     </cit>
+                  </cit>
+               <note type="general">Deducted from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0125" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication"/>
+               <placeName ref="geo:al_sukhna"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-SUK.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0125.ct_0000">
+                     <quote>bakaṛ</quote>
+                     <cit type="translation">
+                        <quote>cow</quote>
+                     </cit>
+                  </cit>
+               <note type="general">Deducted from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0127" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:fink_2017_3211" type="publication"/>
+               <placeName ref="geo:hasankeyf"/>
+               <lang corresp="..\profiles\vicav_profile_TUR-HAS.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0127.ct_0000">
+                     <quote>baṣal</quote>
+                     <cit type="translation">
+                        <quote>onion</quote>
+                     </cit>
+                  </cit>
+               <note type="general">Deducted from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0129" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:lahdo_2009_1103" type="publication"/>
+               <placeName ref="geo:siirt"/>
+               <lang corresp="..\profiles\vicav_profile_TUR-SII.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0129.ct_0000">
+                     <quote>qatal</quote>
+                     <cit type="translation">
+                        <quote>he killed</quote>
+                     </cit>
+                  </cit>
+               <note type="general">Deducted from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0157" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#raisinga_so_a_to_schwa"/>
+               <bibl corresp="zot:salonen_1979_0000" type="publication"/>
+               <placeName ref="geo:gaza"/>
+               <lang corresp="..\profiles\vicav_profile_PSE-GZA.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0157.ct_0000">
+                     <quote>sämäk</quote>
+                     <cit type="translation">
+                        <quote>fish</quote>
+                     </cit>
+                  </cit>
+               <note type="general">Deducted from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0168" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#raisinga_so_a_to_schwa"/>
+               <bibl corresp="zot:löhr_1905_1315" type="publication"/>
+               <placeName ref="geo:jerusalem"/>
+               <lang corresp="..\profiles\vicav_profile_PSE-JRS.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0168.ct_0000">
+                     <quote>kätäb</quote>
+                     <cit type="translation">
+                        <quote>he wrote</quote>
+                     </cit>
+                  </cit>
+               <note type="general">Deducted from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0171" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:AbuNahleh_1985_6344" type="publication"/>
+               <placeName ref="geo:ramallah"/>
+               <lang corresp="..\profiles\vicav_profile_PSE-RML.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0171.ct_0000">
+                     <quote>baqaṛ</quote>
+                     <cit type="translation">
+                        <quote>cow</quote>
+                     </cit>
+                  </cit>
+               <note type="general">Deducted from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0113" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:haidar_2006_8572" type="publication"/>
+               <placeName ref="geo:baghdad"/>
+               <lang corresp="..\profiles\vicav_profile_IRQ-BGD.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0113.ct_0000">
+                     <quote>kitab</quote>
+                     <cit type="translation">
+                        <quote>he wrote</quote>
+                     </cit>
+                  </cit>
+               <note type="general">Deducted from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0163" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:amara_2005_0000" type="publication"/>
+               <placeName ref="geo:bethlehem"/>
+               <lang corresp="..\profiles\vicav_profile_PSE-BTL.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0163.ct_0000">
+                     <quote>waraq</quote>
+                     <cit type="translation">
+                        <quote/>
+                     </cit>
+                  </cit>
+               <note type="general">Deducted from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0158" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:arnold_2004_0000" type="publication"/>
+               <placeName ref="geo:jaffa"/>
+               <lang corresp="..\profiles\vicav_profile_ISR-JFC.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0158.ct_0000">
+                     <quote>baʔara</quote>
+                     <cit type="translation">
+                        <quote>cow</quote>
+                     </cit>
+                  </cit>
+               <note type="general">Deducted from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0159" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:arnold_2004_0000" type="publication"/>
+               <placeName ref="geo:jaffa"/>
+               <lang corresp="..\profiles\vicav_profile_ISR-JFS.xml"/>
+               <personGrp role="religion" corresp="pgr:samaritans"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0159.ct_0000">
+                     <quote>baʔara</quote>
+                     <cit type="translation">
+                        <quote>cow</quote>
+                     </cit>
+                  </cit>
+               <note type="general">Deducted from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0119" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication"/>
+               <placeName ref="geo:deir_ez_zor"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-DZR.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0119.ct_0000">
+                     <quote>bugaṛ</quote>
+                     <cit type="translation">
+                        <quote>cow</quote>
+                     </cit>
+                  </cit>
+               <note type="general">Deducted from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0078" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication"/>
+               <placeName ref="geo:blas"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-NEM.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0078.ct_0000">
+                     <quote>bugaṛ</quote>
+                     <cit type="translation">
+                        <quote>cow</quote>
+                     </cit>
+                  </cit>
+               <note type="general">Deducted from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0122" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication"/>
+               <placeName ref="geo:palmyra"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-PAL.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0122.ct_0000">
+                     <quote>baqaṛ , baʔaṛ , bagaṛ</quote>
+                     <cit type="translation">
+                        <quote>cow</quote>
+                     </cit>
+                  </cit>
+               <note type="general">Deducted from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0124" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication"/>
+               <placeName ref="geo:ar_raqqa"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-RAQ.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0124.ct_0000">
+                     <quote>bugaṛ</quote>
+                     <cit type="translation">
+                        <quote>cow</quote>
+                     </cit>
+                  </cit>
+               <note type="general">Deducted from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0126" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication"/>
+               <placeName ref="geo:al_suwayda_district"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-SWE.xml"/>
+                  <cit type="example" xml:id="ft_rais_a_strss_open.fv_0126.ct_0000">
+                     <quote>baqaṛ , baʔaṛ , bagaṛ</quote>
+                     <cit type="translation">
+                        <quote>cow</quote>
+                     </cit>
+                  </cit>
+               <note type="general">Deducted from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0161" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:belinkov_2014_4410" type="publication"/>
+               <placeName ref="geo:jisr_az_zarqa"/>
+               <lang corresp="..\profiles\vicav_profile_ISR-ZRG.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0161.ct_0000">
+                     <quote>samač</quote>
+                     <cit type="translation">
+                        <quote>fish</quote>
+                     </cit>
+                  </cit>
+               <note type="general">Deducted from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0166" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:cleveland_1967_3075" type="publication"/>
+               <placeName ref="geo:al_dawayima"/>
+               <lang corresp="..\profiles\vicav_profile_PSE-DWY.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0166.ct_0000">
+                     <quote>waṭan</quote>
+                     <cit type="translation">
+                        <quote>homeland</quote>
+                     </cit>
+                  </cit>
+               <note type="general">Deducted from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0118" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication"/>
+               <placeName ref="geo:damascus"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-DAM.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0118.ct_0000">
+                     <quote>baʔaṛ</quote>
+                     <cit type="translation">
+                        <quote>cow</quote>
+                     </cit>
+                  </cit>
+               <note type="general">Deducted from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0112" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#raisinga_so_a_to_schwa"/>
+               <bibl corresp="zot:leitner_2022_2410" type="publication"/>
+               <placeName ref="geo:khuzestan"/>
+               <lang corresp="..\profiles\vicav_profile_IRN-KHU.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0112.ct_0000">
+                     <quote>səmač</quote>
+                     <cit type="translation">
+                        <quote>fish</quote>
+                     </cit>
+                  </cit>
+               <note type="general">Deducted from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0114" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:mahdi_1985_1985" type="publication"/>
+               <placeName ref="geo:basra"/>
+               <lang corresp="..\profiles\vicav_profile_IRQ-BSR.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0114.ct_0000">
+                     <quote>kitab</quote>
+                     <cit type="translation">
+                        <quote>he wrote</quote>
+                     </cit>
+                  </cit>
+               <note type="general">Deducted from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0116" status="draft" resp="dmp:CL">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:salonen_1980_0000" type="publication"/>
+               <placeName ref="geo:al_shirqat"/>
+               <lang corresp="..\profiles\vicav_profile_IRQ-SQT.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0175" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:seeger_1996_3406" type="publication"/>
+               <placeName ref="geo:hebron"/>
+               <lang corresp="..\profiles\vicav_profile_PSE-XLL.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0175.ct_0000">
+                     <quote>baʔar</quote>
+                     <cit type="translation">
+                        <quote>cow</quote>
+                     </cit>
+                  </cit>
+               <note type="general">Deducted from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0167" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:yoda_al_wer_2015_0000" type="publication"/>
+               <placeName ref="geo:isawiya"/>
+               <lang corresp="..\profiles\vicav_profile_PSE-ISW.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0167.ct_0000">
+                     <quote>katab</quote>
+                     <cit type="translation">
+                        <quote>he wrote</quote>
+                     </cit>
+                  </cit>
+               <note type="general">Deducted from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0227" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:DAnna_2020_8652" type="publication"/>
+               <placeName ref="geo:mazara_del_vallo"/>
+               <lang corresp="..\profiles\vicav_profile_ITA-MDV.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0227.ct_0062">
+                  <quote>gmar</quote>
+                  <cit type="translation">
+                     <quote>moon</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0258" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="src:PC_RZ" type="personalCommunication"/>
+               <placeName ref="geo:malta"/>
+               <lang corresp="..\profiles\vicav_profile_MLT-MAL.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0258.ct_0060">
+                  <quote>ʔamar</quote>
+                  <cit type="translation">
+                     <quote>moon</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0008" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="src:PC_RZ" type="personalCommunication"/>
+               <placeName ref="geo:malta"/>
+               <lang corresp="..\profiles\vicav_profile_MLT-MAL.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0008.ct_0061">
+                  <quote>kiteb</quote>
+                  <cit type="translation">
+                     <quote>he wrote</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0334" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:alfaife_2018_9797" type="publication"/>
+               <placeName ref="geo:jabal_fayfa"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-FYF.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0334.ct_0053">
+                  <quote>gadam</quote>
+                  <cit type="translation">
+                     <quote>foot</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0322" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:asiri_2009_2501" type="publication" cert="unknown"/>
+               <placeName ref="geo:rijal_alma"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-ALM.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0322.ct_0051">
+                  <quote>bagar</quote>
+                  <cit type="translation">
+                     <quote>cows</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0228" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:benkato_2014_2793" type="publication"/>
+               <placeName ref="geo:benghazi"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-BGZ.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0228.ct_0080">
+                  <quote>kitab</quote>
+                  <cit type="translation">
+                     <quote>he wrote</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0046" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_schwa"/>
+               <bibl corresp="zot:benkato_2014_2793" type="publication"/>
+               <placeName ref="geo:benghazi"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-BGZ.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0046.ct_0081">
+                  <quote>məṭar</quote>
+                  <cit type="translation">
+                     <quote>rain</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0023" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:benkato_2014_2793" type="publication"/>
+               <placeName ref="geo:benghazi"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-BGZ.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0023.ct_0082">
+                  <quote>gmar</quote>
+                  <cit type="translation">
+                     <quote>moon</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0229" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:caubet_2004_3508" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:fezzan"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-FZN.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0229.ct_0078">
+                  <quote>ġanam</quote>
+                  <cit type="translation">
+                     <quote>sheep</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0044" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_schwa"/>
+               <bibl corresp="zot:caubet_2004_3508" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:fezzan"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-FZN.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0044.ct_0079">
+                  <quote>bəgar</quote>
+                  <cit type="translation">
+                     <quote>cows</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0003" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:DAnna_2017_4912" type="publication"/>
+               <placeName ref="geo:misrata"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-MSR.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0003.ct_0064">
+                  <quote>gmaṛ</quote>
+                  <cit type="translation">
+                     <quote>moon</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0009" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_schwa"/>
+               <bibl corresp="zot:DAnna_2017_4912" type="publication"/>
+               <placeName ref="geo:misrata"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-MSR.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0009.ct_0065">
+                  <quote>kətab</quote>
+                  <cit type="translation">
+                     <quote>he wrote</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0033" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:DAnna_2017_4912" type="publication"/>
+               <placeName ref="geo:misrata"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-MSR.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0033.ct_0066">
+                  <quote>dabaḥ</quote>
+                  <cit type="translation">
+                     <quote>he slaughtered</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0034" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:DAnna_2017_4912" type="publication"/>
+               <placeName ref="geo:misrata"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-MSR.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0034.ct_0067">
+                  <quote>ṣubaḥ</quote>
+                  <cit type="translation">
+                     <quote>morning</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0232" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:DAnna_2021_9340" type="publication"/>
+               <placeName ref="geo:yefren"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-JYN.xml"/>
+               <personGrp role="religion" corresp="pgr:jews"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0232.ct_0069">
+                  <quote>žbəl</quote>
+                  <cit type="translation">
+                     <quote>mountain</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0230" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:harrama_1993_0000" type="publication"/>
+               <placeName ref="geo:al_jabal"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-JBL.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0230.ct_0070">
+                  <quote>kasar</quote>
+                  <cit type="translation">
+                     <quote>he broke</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0320" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:holes_1990_0000" type="publication" cert="unknown"/>
+               <placeName ref="geo:gulf"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-GLF.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0320.ct_0057">
+                  <quote>simič</quote>
+                  <cit type="translation">
+                     <quote>fish</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0324" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:holes_2006_0164" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:manama"/>
+               <lang corresp="..\profiles\vicav_profile_BHR-ARB.xml"/>
+               <personGrp role="religion" corresp="#sunnis"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0324.ct_0086">
+                  <quote>barad</quote>
+                  <cit xml:id="ct_0088" type="translation">
+                     <quote>it got cold</quote>
+                  </cit>
+               </cit>
+               <note type="general">'Except in definable phonetic contexts, i (ɪ, ə) occurs to the exclusion of a in open, non-final syllables. a occurs in open syllable (a) in the contiguity of the gutturals or where the following consonant is l, n, or r, when at the same time the vowel of the following syllable is a or ā.' (Johnstone 1967:27)</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0051" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:holes_2006_0164" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:manama"/>
+               <lang corresp="..\profiles\vicav_profile_BHR-ARB.xml"/>
+               <personGrp role="religion" corresp="#sunnis"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0051.ct_0087">
+                  <quote>buṣal</quote>
+                  <cit type="translation">
+                     <quote>onions</quote>
+                  </cit>
+               </cit>
+               <note type="general">'Except in definable phonetic contexts, i (ɪ, ə) occurs to the exclusion of a in open, non-final syllables. a occurs in open syllable (a) in the contiguity of the gutturals or where the following consonant is l, n, or r, when at the same time the vowel of the following syllable is a or ā.' (Johnstone 1967:27)</note>
+               <note type="general">'In the contiguity of the labials the vowel i, and also i&gt;a, tends to become u.' (Johnstone 1967:28)</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0323" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:holes_2006_0164" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:muharraq"/>
+               <lang corresp="..\profiles\vicav_profile_BHR-BHN.xml"/>
+               <personGrp role="religion" corresp="#shiites"/>
+               <note type="general">The Baḥārna dialect does not have the same restrictions on the raising of a as the ʕArab dialect.</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0002" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:holes_2007_5886" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:kuwait_city"/>
+               <lang corresp="..\profiles\vicav_profile_KWT-KWC.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0002.ct_0083">
+                  <quote>daray</quote>
+                  <cit type="translation">
+                     <quote>step</quote>
+                  </cit>
+               </cit>
+               <note type="general">'Except in definable phonetic contexts, i (ɪ, ə) occurs to the exclusion of a in open, non-final syllables. a occurs in open syllable (a) in the contiguity of the gutturals or where the following consonant is l, n, or r, when at the same time the vowel of the following syllable is a or ā.' (Johnstone 1967:27)</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0048" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:holes_2007_5886" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:kuwait_city"/>
+               <lang corresp="..\profiles\vicav_profile_KWT-KWC.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0048.ct_0084">
+                  <quote>kitab</quote>
+                  <cit type="translation">
+                     <quote>he wrote</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0048.ct_0085">
+                  <quote>gumar</quote>
+                  <cit type="translation">
+                     <quote>moon</quote>
+                  </cit>
+               </cit>
+               <note type="general">'Except in definable phonetic contexts, i (ɪ, ə) occurs to the exclusion of a in open, non-final syllables. a occurs in open syllable (a) in the contiguity of the gutturals or where the following consonant is l, n, or r, when at the same time the vowel of the following syllable is a or ā.' (Johnstone 1967:27)</note>
+               <note type="general">'In the contiguity of the labials the vowel i, and also i&gt;a, tends to become u.' (Johnstone 1967:28)</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0325" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:ingham_1979_0000" type="publication" cert="unknown"/>
+               <placeName ref="geo:kuwait"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-MTR.xml"/>
+               <personGrp role="tribe" corresp="pgr:mutayr"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0325.ct_0072">
+                  <quote>x̣aḅar</quote>
+                  <cit type="translation">
+                     <quote>knowledge</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0326" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:ingham_1986_0001" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:summan"/>
+               <placeName ref="geo:shahaniya_reg"/>
+               <placeName ref="geo:doha"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-MUR.xml"/>
+               <personGrp role="tribe" corresp="pgr:al_murra"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0326.ct_0074">
+                  <quote>ḏahab</quote>
+                  <cit type="translation">
+                     <quote>he went</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0321" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:ingham_1994_0001" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:najd"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-NJD.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0321.ct_0075">
+                  <quote>gumar</quote>
+                  <cit type="translation">
+                     <quote>moon</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0321.ct_0076">
+                  <quote>ǧibal</quote>
+                  <cit type="translation">
+                     <quote>hill</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0041" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:ingham_1994_0001" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:najd"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-NJD.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0041.ct_0077">
+                  <quote>balad</quote>
+                  <cit type="translation">
+                     <quote>country</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0335" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:johnstone_1961_0000" type="publication" cert="unknown"/>
+               <placeName ref="geo:kuwait"/>
+               <personGrp role="tribe" corresp="pgr:dawasir"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0335.ct_0058">
+                  <quote>rakab</quote>
+                  <cit type="translation">
+                     <quote>he rode</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0004" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:johnstone_1967_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:doha"/>
+               <lang corresp="..\profiles\vicav_profile_QTR-DHA.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0004.ct_0071">
+                  <quote>liban</quote>
+                  <cit type="translation">
+                     <quote>milk</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0036" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:johnstone_1967_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:doha"/>
+               <lang corresp="..\profiles\vicav_profile_QTR-DHA.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0036.ct_0073">
+                  <quote>xaṭar</quote>
+                  <cit type="translation">
+                     <quote>danger</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0092" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:omar_1975_0000" type="publication" cert="unknown"/>
+               <placeName ref="geo:hejaz"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-HJZ.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0092.ct_0059">
+                  <quote>galam</quote>
+                  <cit type="translation">
+                     <quote>pen</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0234" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:pereira_2010_1918" type="publication"/>
+               <placeName ref="geo:tripoli_libya"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-TPL.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0234.ct_0063">
+                  <quote>ktəb</quote>
+                  <cit type="translation">
+                     <quote>he wrote</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0005" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:abha"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-ABH.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0005.ct_0044">
+                  <quote>ǧamal</quote>
+                  <cit type="translation">
+                     <quote>camel</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0006" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:bisha"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-BSH.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0006.ct_0045">
+                  <quote>sikan</quote>
+                  <cit type="translation">
+                     <quote>to live</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0010" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:hofuf"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-HFF.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0010.ct_0046">
+                  <quote>sikat</quote>
+                  <cit type="translation">
+                     <quote>he was silent</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0011" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:hail"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-HYL.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0011.ct_0047">
+                  <quote>sikat</quote>
+                  <cit type="translation">
+                     <quote>he was silent</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0013" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:rufaydah"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-RUF.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0013.ct_0048">
+                  <quote>yamal</quote>
+                  <cit type="translation">
+                     <quote>camel</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0014" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:sirhan"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-RWA.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0014.ct_0049">
+                  <quote>kitab</quote>
+                  <cit type="translation">
+                     <quote>he wrote</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0015" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:riyadh"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-RYD.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0015.ct_0050">
+                  <quote>sikat</quote>
+                  <cit type="translation">
+                     <quote>he was silent</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0012" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:sabt_alalayah"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-QRN.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0012.ct_0052">
+                  <quote>samač</quote>
+                  <cit type="translation">
+                     <quote>fish</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0328" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:najran"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-NJR.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0328.ct_0054">
+                  <quote>kitab</quote>
+                  <cit type="translation">
+                     <quote>he wrote</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0331" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:bukayriya"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-QSM.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0331.ct_0055">
+                  <quote>sikat</quote>
+                  <cit type="translation">
+                     <quote>he was silent</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0327" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:tanuma"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-TAN.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0327.ct_0056">
+                  <quote>yamal</quote>
+                  <cit type="translation">
+                     <quote>camel</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0231" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:yoda_2005_3130" type="publication"/>
+               <placeName ref="geo:tripoli_libya"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-JTP.xml"/>
+               <personGrp role="religion" corresp="pgr:jews"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0231.ct_0068">
+                  <quote>szər</quote>
+                  <cit type="translation">
+                     <quote>trees</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0178" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:senelle_2002_3236" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:raheita"/>
+               <lang corresp="..\profiles\vicav_profile_ERI-RHY.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0178.ct_0091">
+                  <quote>wálad</quote>
+                  <cit type="translation">
+                     <quote>boy</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0226" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:ferrando_2013_8606" type="publication"/>
+               <placeName ref="geo:toledo"/>
+               <lang corresp="..\profiles\vicav_profile_ESP-TLD.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0226.ct_0000">
+                     <quote>ḏabaḥ</quote>
+                     <cit type="translation">
+                        <quote>he slaughtered</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0183" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:" type="publication"/>
+               <placeName ref="geo:kurdufan"/>
+               <lang corresp="..\profiles\vicav_profile_SDN-KDF.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0183.ct_0000">
+                  <quote>katal</quote>
+                  <cit type="translation">
+                     <quote>to hit</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0185" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:" type="publication"/>
+               <placeName ref="geo:khartoum"/>
+               <lang corresp="..\profiles\vicav_profile_SDN-KRT.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0185.ct_0000">
+                  <quote>daras</quote>
+                  <cit type="translation">
+                     <quote>he studied</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0049" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_A_to_I2"/>
+               <bibl corresp="src:SDN_2023_SK" type="fieldwork"/>
+               <placeName ref="geo:mwees"/>
+               <lang corresp="..\profiles\vicav_profile_SDN-RYD.xml"/>
+               <personGrp role="tribe" corresp="#rashayda_sudan"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0049.ct_0000">
+                     <quote>búṣaḷ</quote>
+                     <cit type="translation">
+                        <quote>onions</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ft_rais_a_strss_open.fv_0049.ct_0001">
+                     <quote>búgar</quote>
+                     <cit type="translation">
+                        <quote>cows</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0001" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_A_to_A1"/>
+               <bibl corresp="src:SDN_2023_SK" type="fieldwork"/>
+               <placeName ref="geo:mwees"/>
+               <lang corresp="..\profiles\vicav_profile_SDN-RYD.xml"/>
+               <personGrp role="tribe" corresp="#rashayda_sudan"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0001.ct_0000">
+                     <quote>xašáb</quote>
+                     <cit type="translation">
+                        <quote>wood</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">Elicited in Reichmuth's data.</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0274" status="draft" resp="dmp:SK">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:alexandria"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-ALX.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0275" status="draft" resp="dmp:SK">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:aswan"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-ASW.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0276" status="draft" resp="dmp:SK">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:asyut"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-ASY.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0277" status="draft" resp="dmp:SK">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:al_badari"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-BDR.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0279" status="draft" resp="dmp:SK">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:port_said"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-BSD.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0280" status="draft" resp="dmp:SK">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:bani_suwayf"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-BSW.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0282" status="draft" resp="dmp:SK">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:darawah"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-DRW.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0283" status="draft" resp="dmp:SK">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:luxor"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-LXR.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0284" status="draft" resp="dmp:SK">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:il_minya"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-MNY.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0285" status="draft" resp="dmp:SK">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:al_namasa"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-NMS.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0286" status="draft" resp="dmp:SK">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:qutur"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-QTR.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0287" status="draft" resp="dmp:SK">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:rasid"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-RSD.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0288" status="draft" resp="dmp:SK">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:sinbillawayn"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-SBW.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0289" status="draft" resp="dmp:SK">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:sohag"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-SHG.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0193" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:carbou_1913_0117" type="publication"/>
+               <placeName ref="geo:ouaday"/>
+               <lang corresp="..\profiles\vicav_profile_TCD-ODY.xml"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0193.ct_0035" type="example">
+                  <quote>gimar</quote>
+                  <cit type="translation">
+                     <quote>moon</quote>
+                  </cit>
+               </cit>
+               <cit type="sourceRepresentation">
+                  <quote>gemar</quote>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0135" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_A_to_I2"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:gharif_al_ghuzlan"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-BLL.xml"/>
+               <personGrp role="tribe" corresp="pgr:biliy"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0135.ct_0000">
+                     <quote>ḏiháb</quote>
+                     <cit type="translation">
+                        <quote>gold</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0139" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_A_to_I2"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:bir_al_abd"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-DWG.xml"/>
+               <personGrp role="tribe" corresp="pgr:dawaghrah"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0139.ct_0000">
+                     <quote>šiháṛ</quote>
+                     <cit type="translation">
+                        <quote>month</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0146" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_A_to_I2"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:al_kuntilla"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-HYW.xml"/>
+               <personGrp role="tribe" corresp="pgr:ahaywat"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0146.ct_0000">
+                     <quote>ḏiháb</quote>
+                     <cit type="translation">
+                        <quote>gold</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0150" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_A_to_I2"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:nakhal_diqla"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-RML.xml"/>
+               <personGrp role="tribe" corresp="pgr:rmelat"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0150.ct_0000">
+                     <quote>ḏiháb</quote>
+                     <cit type="translation">
+                        <quote>gold</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0153" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_A_to_I2"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:wadi_al_arish"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-SWR.xml"/>
+               <personGrp role="tribe" corresp="pgr:sawarkah"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0153.ct_0000">
+                     <quote>ḏiháb</quote>
+                     <cit type="translation">
+                        <quote>gold</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0190" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:décobert_1985_9706" type="publication"/>
+               <placeName ref="geo:massaguet"/>
+               <lang corresp="..\profiles\vicav_profile_TCD-ABK.xml"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0190.ct_0095" type="example">
+                  <quote>Galam</quote>
+                  <cit type="translation">
+                     <quote>pen</quote>
+                  </cit>
+               </cit>
+               <note type="general">/G/ represents the IPA [G], the voiced uvular plosive.</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0191" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:décobert_1985_9706" type="publication"/>
+               <placeName ref="geo:bout_el_fil"/>
+               <lang corresp="..\profiles\vicav_profile_TCD-BBL.xml"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0191.ct_0093" type="example">
+                  <quote>dahar</quote>
+                  <cit type="translation">
+                     <quote>back</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0195" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:décobert_1985_9706" type="publication"/>
+               <placeName ref="geo:djedaa"/>
+               <lang corresp="..\profiles\vicav_profile_TCD-ULR.xml"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0195.ct_0094" type="example">
+                  <quote>ramad</quote>
+                  <cit type="translation">
+                     <quote>ashes</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0278" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:drop_2007_0000" type="publication"/>
+               <placeName ref="geo:mandisha"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-BHR.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0278.ct_0000">
+                     <quote>walad</quote>
+                     <cit type="translation">
+                        <quote>son</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0025" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:drop_2007_0000" type="publication"/>
+               <placeName ref="geo:mandisha"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-BHR.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0025.ct_0000">
+                     <quote>wilad</quote>
+                     <cit type="translation">
+                        <quote>son</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ft_rais_a_strss_open.fv_0025.ct_0001">
+                     <quote>liban</quote>
+                     <cit type="translation">
+                        <quote>milk</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0160" status="draft" resp="dmp:SK">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:geva-kleinberger_2009_3208" type="publication"/>
+               <placeName ref="geo:tiberias"/>
+               <lang corresp="..\profiles\vicav_profile_ISR-TBR.xml"/>
+               <personGrp role="religion" corresp="pgr:jews"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0134" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_A_to_I2"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:ramlat_humayyir"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-BDA.xml"/>
+               <personGrp role="tribe" corresp="pgr:badarah"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0134.ct_0000" type="example">
+                  <quote>ǧimál</quote>
+                  <cit type="translation">
+                     <quote>camel</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0136" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_A_to_I_2"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:wadi_al_islah"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-BWS.xml"/>
+               <personGrp role="tribe" corresp="pgr:bani_wasil"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0136.ct_0089" type="example">
+                  <quote>ǧimál</quote>
+                  <cit type="translation">
+                     <quote>camel</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0138" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_A_to_I2"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:qalat_al_jindi"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-DBR.xml"/>
+               <personGrp role="tribe" corresp="pgr:dbur"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0138.ct_0000" type="example">
+                  <quote>ǧimál</quote>
+                  <cit type="translation">
+                     <quote>camel</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0142" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_A_to_I2"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:jabal_al_malbad"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-GRG.xml"/>
+               <personGrp role="tribe" corresp="pgr:jarajrah"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0142.ct_0000" type="example">
+                  <quote>ǧimál</quote>
+                  <cit type="translation">
+                     <quote>camel</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0145" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_A_to_I2"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:wadi_jiddi"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-HWT.xml"/>
+               <personGrp role="tribe" corresp="pgr:hwetat_egypt"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0145.ct_0000" type="example">
+                  <quote>ǧimál</quote>
+                  <cit type="translation">
+                     <quote>camel</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0147" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_A_to_I2"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:jabal_sarabit_al_khadim"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-LGT.xml"/>
+               <personGrp role="tribe" corresp="pgr:legat"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0147.ct_0000" type="example">
+                  <quote>ǧimál</quote>
+                  <cit type="translation">
+                     <quote>camel</quote>
+                  </cit>
+               </cit>
+               <note type="general">The occurence of this raising is very limited. The "common" realization of this pattern is not noted.</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0148" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_A_to_I2"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:al_qusaymah"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-MLH.xml"/>
+               <personGrp role="tribe" corresp="pgr:malalhah"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0148.ct_0000" type="example">
+                  <quote>ǧimál</quote>
+                  <cit type="translation">
+                     <quote>camel</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0149" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_A_to_I_2"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:dahab"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-MZN.xml"/>
+               <personGrp role="tribe" corresp="pgr:mzenah"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0149.ct_0090" type="example">
+                  <quote>ǧimál</quote>
+                  <cit type="translation">
+                     <quote>camel</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0154" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_A_to_I2"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:sudr"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-TRB.xml"/>
+               <personGrp role="tribe" corresp="pgr:tarabin"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0154.ct_0000" type="example">
+                  <quote>ǧimál</quote>
+                  <cit type="translation">
+                     <quote>camel</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0155" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_A_to_I2"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:jabal_at_tih"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-TYH.xml"/>
+               <personGrp role="tribe" corresp="pgr:tayaha"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0155.ct_0000" type="example">
+                  <quote>ǧimál</quote>
+                  <cit type="translation">
+                     <quote>camel</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0181" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:manfredi_2013_2941" type="publication"/>
+               <placeName ref="geo:kadugli"/>
+               <lang corresp="..\profiles\vicav_profile_SDN-BKD.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0181.ct_0128">
+                  <quote>qanam</quote>
+                  <cit type="translation">
+                     <quote>sheep</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0184" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:manfredi_2013_2941" type="publication"/>
+               <placeName ref="geo:kadugli"/>
+               <lang corresp="..\profiles\vicav_profile_SDN-KDG.xml"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0184.ct_0129" type="example">
+                  <quote>ġaraḍ</quote>
+                  <cit type="translation">
+                     <quote>scope</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0177" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:simeone-senelle_2018_0983" type="publication"/>
+               <placeName ref="geo:dahlak_archipelago"/>
+               <lang corresp="..\profiles\vicav_profile_ERI-DHL.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0177.ct_0092">
+                  <quote>balad</quote>
+                  <cit type="translation">
+                     <quote>country</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0192" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:owens_1985_0000" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:ndjamena"/>
+               <lang corresp="..\profiles\vicav_profile_TCD-NDJ.xml"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0192.ct_0130" type="example">
+                  <quote>šáhar</quote>
+                  <cit type="translation">
+                     <quote>crescent moon</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0180" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:owens_1993_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:maiduguri"/>
+               <lang corresp="..\profiles\vicav_profile_NGA-NGA.xml"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0180.ct_0036" type="example">
+                  <quote>gámar</quote>
+                  <cit type="translation">
+                     <quote>moon</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0188" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:reichmuth_1983_0001" type="publication"/>
+               <placeName ref="geo:halfa_al-jadida"/>
+               <lang corresp="..\profiles\vicav_profile_SDN-SKR.xml"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0188.ct_0038" type="example">
+                  <quote>ġanam</quote>
+                  <cit type="translation">
+                     <quote>small livestock</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0182" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:roset_2018_8391" type="publication"/>
+               <placeName ref="geo:darfur"/>
+               <lang corresp="..\profiles\vicav_profile_SDN-DRF.xml"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0182.ct_0037" type="example">
+                  <quote>bagar</quote>
+                  <cit type="translation">
+                     <quote>cows (coll.)</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0189" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:roth_1979_0000" type="publication"/>
+               <placeName ref="geo:abeche"/>
+               <lang corresp="..\profiles\vicav_profile_TCD-ABC.xml"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0189.ct_0005" type="example">
+                  <quote>xanam</quote>
+                  <cit type="translation">
+                     <quote>sheep, goats</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0186" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:trimingham_1946_0000" type="publication"/>
+               <placeName ref="geo:omdurman"/>
+               <lang corresp="..\profiles\vicav_profile_SDN-OMD.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0186.ct_0096">
+                  <quote>galam</quote>
+                  <cit type="translation">
+                     <quote>pencil</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0281" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:woidich_2006_3203" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:cairo"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-CRO.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0281.ct_0000">
+                     <quote>šanab</quote>
+                     <cit type="translation">
+                        <quote>moustache</quote>
+                     </cit>
+                  </cit>
+                  <note type="exceptionNote">Only word with raising to i is ʕinab (grapes).</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0017" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:young_1996_2001" type="publication"/>
+               <placeName ref="geo:khashm"/>
+               <placeName ref="geo:sawakin"/>
+               <lang corresp="..\profiles\vicav_profile_SDN-RYD.xml"/>
+               <personGrp role="tribe" corresp="#rashayda_sudan"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0017.ct_0000">
+                     <quote>darat</quote>
+                     <cit type="translation">
+                        <quote>season of declining rainfall</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ft_rais_a_strss_open.fv_0017.ct_0001">
+                     <quote>il-yaman</quote>
+                     <cit type="translation">
+                        <quote>south, right</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">The raising a &gt; u as in búšaḷ or gúṃaṛ as in other Rašīdi varieties is likely to occur, too, unfortunately, Young does not provide any examples to this regard.</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0176" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:simeone_senelle_youssi_2002_0000" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:obock"/>
+               <lang corresp="..\profiles\vicav_profile_DJI-OBK.xml"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0176.ct_0131" type="example">
+                  <quote>balad</quote>
+                  <cit type="translation">
+                     <quote>country</quote>
+                  </cit>
+               </cit>
+               <cit type="sourceRepresentation"><quote>béled</quote>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0194" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:zeltner_tourneux_1986_0000" type="publication"/>
+               <placeName ref="geo:salamat"/>
+               <lang corresp="..\profiles\vicav_profile_TCD-ULE.xml"/>
+               <cit xml:id="ft_rais_a_strss_open.fv_0194.ct_0010" type="example">
+                  <quote>sakat</quote>
+                  <cit type="translation">
+                     <quote>to quiet</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0270" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:zarb_2023_0602" type="publication"/>
+               <placeName ref="geo:testour"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-TSR.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0270.ct_0100">
+                  <quote>žbal</quote>
+                  <cit type="translation">
+                     <quote>mountain</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0131" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:" type="publication"/>
+               <placeName ref="geo:shanliurfa"/>
+               <lang corresp="..\profiles\vicav_profile_TUR-URF.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0131.ct_0101">
+                  <quote>kitab</quote>
+                  <cit type="translation">
+                     <quote>he wrote</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0131.ct_0102">
+                  <quote>bəgar</quote>
+                  <cit type="translation">
+                     <quote>cows</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0196" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:ruzzaza"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-BGR.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0196.ct_0103">
+                  <quote>šiǧar</quote>
+                  <cit type="translation">
+                     <quote>trees</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0196.ct_0104">
+                  <quote>bugar</quote>
+                  <cit type="translation">
+                     <quote>cows</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0197" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:busra"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-BSR.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0018" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:soran"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-BTS.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0198" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:al_salhabiye"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-FDL.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0199" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:al_karame"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-FDN.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0200" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:hama"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-HMA.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0201" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:idlib"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-IDL.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0202" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:mhardi"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-MRD.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0204" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:abu_qbes"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-QBS.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0205" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:qanawat"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-QNW.xml"/>
+               <personGrp role="religion" corresp="pgr:druzes"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0206" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:qismin"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-QSM.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0207" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:qalat_al_husn"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-QSN.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0208" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:ras_al_maarra"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-RMR.xml"/>
+               <note type="general">CaCaC becomes CaCiC in non-emphatic/guttural environment: walid son</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0209" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:al_nasriye"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-RWL.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0210" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:sednaya"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-SDY.xml"/>
+               <note type="general">CaCaC becomes CaCiC in non-emphatic/guttural environment: walid son</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0211" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:smecin"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-SMC.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0212" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:tell_burek"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-SRB.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0213" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:tartus"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-TRT.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0214" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:hawayig_ad_dyab"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-UGD.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0260" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:behnstedt_1998_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:guellala"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-DJI.xml"/>
+               <personGrp role="religion" corresp="pgr:ibadis"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0260.ct_0105">
+                  <quote>xdam</quote>
+                  <cit type="translation">
+                     <quote>he worked</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0261" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:behnstedt_1998_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:houmt_souk"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-DJJ.xml"/>
+               <personGrp role="religion" corresp="pgr:jews"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0261.ct_0106">
+                  <quote>dhəb</quote>
+                  <cit type="translation">
+                     <quote>gold</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0021" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:behnstedt_1998_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:djerba"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-DJM.xml"/>
+               <personGrp role="religion" corresp="pgr:malikites"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0021.ct_0107">
+                  <quote>ktab</quote>
+                  <cit type="translation">
+                     <quote>he wrote</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0263" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:cohen_1975_0000" type="publication"/>
+               <placeName ref="geo:tunis"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-JTS.xml"/>
+               <personGrp role="religion" corresp="pgr:jews"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0263.ct_0108">
+                  <quote>qlaq</quote>
+                  <cit type="translation">
+                     <quote>anxiety</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0020" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:DAnna_2020_6708" type="publication"/>
+               <placeName ref="geo:chebba"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-CHB.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0268" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:marçais_1925_6953" type="publication"/>
+               <placeName ref="geo:takrouna"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-TKR.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0268.ct_0109">
+                  <quote>žməl</quote>
+                  <cit type="translation">
+                     <quote>camel</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0019" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_A_to_A_2"/>
+               <bibl corresp="zot:mion_2021_9872" type="publication"/>
+               <placeName ref="geo:bengardane"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-BGN.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0019.ct_0110">
+                  <quote>žamál</quote>
+                  <cit type="translation">
+                     <quote>camel</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0266" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:prinoth_2017_3476" type="publication"/>
+               <placeName ref="geo:sidi_bouzid"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-SBZ.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0266.ct_0111">
+                  <quote>gʕad</quote>
+                  <cit type="translation">
+                     <quote>he sat</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0265" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
+               <bibl corresp="zot:ritt_benmimoun_2014_0000" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:douz"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-MZG.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0265.ct_0112">
+                  <quote>ḏiháb</quote>
+                  <cit type="translation">
+                     <quote>gold</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0271" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:saada_1984_0002" type="publication"/>
+               <placeName ref="geo:tozeur"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-TZR.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0271.ct_0113">
+                  <quote>žmel</quote>
+                  <cit type="translation">
+                     <quote>camel</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0269" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:singer_1984_0000" type="publication"/>
+               <placeName ref="geo:tunis"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-TNS.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0269.ct_0114">
+                  <quote>fras</quote>
+                  <cit type="translation">
+                     <quote>mare</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0267" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:talmoudi_1980_0000" type="publication"/>
+               <placeName ref="geo:sousse"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-SUS.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0267.ct_0115">
+                  <quote>ḏhab</quote>
+                  <cit type="translation">
+                     <quote>gold</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0216" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_i_2"/>
+               <bibl corresp="zot:borg_1985_0000" type="publication"/>
+               <placeName ref="geo:cyprus"/>
+               <lang corresp="..\profiles\vicav_profile_CYP-KOR.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0216.ct_0116">
+                  <quote>lipen</quote>
+                  <cit type="translation">
+                     <quote>yoghourt</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0216.ct_0117">
+                  <quote>kamar</quote>
+                  <cit type="translation">
+                     <quote>moon</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0217" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:boucherit_2002_0000" type="publication"/>
+               <placeName ref="geo:algier"/>
+               <lang corresp="..\profiles\vicav_profile_DZA-ALR.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0217.ct_0000">
+                     <quote>ktəb</quote>
+                     <cit type="translation">
+                        <quote>he wrote</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0221" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:GrandHenry_1976_2248" type="publication"/>
+               <placeName ref="geo:mzab"/>
+               <lang corresp="..\profiles\vicav_profile_DZA-MZB.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0221.ct_0000">
+                     <quote>nḥal</quote>
+                     <cit type="translation">
+                        <quote>palm tree</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0222" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:guerrero_2015_6917" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:oran"/>
+               <lang corresp="..\profiles\vicav_profile_DZA-ORN.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0222.ct_0000">
+                     <quote>žbəl</quote>
+                     <cit type="translation">
+                        <quote>mountain</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0239" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:moscoso_garcia_2003_0000" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:chefchaouen"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-CHF.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0239.ct_0000">
+                     <quote>ʕsəl</quote>
+                     <cit type="translation">
+                        <quote>honey</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0242" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:caubet_1998_3485" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:fez"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-FES.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0242.ct_0000">
+                     <quote>šrəb</quote>
+                     <cit type="translation">
+                        <quote>he drank</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0246" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:sanchez_2014_6569" type="publication"/>
+               <placeName ref="geo:marrakesh"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-MRK.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0246.ct_0000">
+                     <quote>ʕsəl</quote>
+                     <cit type="translation">
+                        <quote>honey</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0252" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:heath_1982_2902" type="publication"/>
+               <placeName ref="geo:tafilalet"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-SMS.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0252.ct_0000">
+                     <quote>zbəl</quote>
+                     <cit type="translation">
+                        <quote>mountain, garbage</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0254" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:aguadé_2013_4881" type="publication"/>
+               <placeName ref="geo:settat"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-STT.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0254.ct_0000">
+                     <quote>žbəl</quote>
+                     <cit type="translation">
+                        <quote>mountain</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0259" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:taine-cheikh_2011_8213" type="publication"/>
+               <placeName ref="geo:mauritania"/>
+               <lang corresp="..\profiles\vicav_profile_MRT-HSS.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0259.ct_0000">
+                     <quote>ktəb</quote>
+                     <cit type="translation">
+                        <quote>he wrote</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0272" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:chikovani_2009_8399" type="publication"/>
+               <placeName ref="geo:bukhara"/>
+               <lang corresp="..\profiles\vicav_profile_UZB-BXR.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0272.ct_0000">
+                     <quote>walad</quote>
+                     <cit type="translation">
+                        <quote>boy</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0251" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:aguadé_1994_0013" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:skoura"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-SKR.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0251.ct_0000">
+                     <quote>žbəl</quote>
+                     <cit type="translation">
+                        <quote>mountain</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0240" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:aguadé_2003_4996" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:casablanca"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-CSB.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0240.ct_0000">
+                     <quote>žbəl</quote>
+                     <cit type="translation">
+                        <quote>mountain</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0315" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:behnstedt_benabbou_2002_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:oujda"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-OJD.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0315.ct_0000">
+                     <quote>ktəb</quote>
+                     <cit type="translation">
+                        <quote>he wrote</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0273" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:chikovani_2008_7485" type="publication"/>
+               <placeName ref="geo:qashqadaryo_region"/>
+               <lang corresp="..\profiles\vicav_profile_UZB-QDY.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0273.ct_0000">
+                     <quote>qamar</quote>
+                     <cit type="translation">
+                        <quote>moon</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0130" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:colin_1921_3545" type="publication"/>
+               <placeName ref="geo:branes"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-BRA.xml"/>
+               <personGrp role="tribe" corresp="pgr:branes"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0130.ct_0000">
+                     <quote>qləm</quote>
+                     <cit type="translation">
+                        <quote>pencil</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0237" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:francisco_2019_2407" type="publication"/>
+               <placeName ref="geo:zaouia_akermoud"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-CDM.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0237.ct_0000">
+                     <quote>ḍṛǝb</quote>
+                     <cit type="translation">
+                        <quote>he hit</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0218" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:GrandHenry_1972_9692" type="publication"/>
+               <placeName ref="geo:cherchell"/>
+               <lang corresp="..\profiles\vicav_profile_DZA-CHR.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0218.ct_0000">
+                     <quote>bṣăl</quote>
+                     <cit type="translation">
+                        <quote>onions</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0223" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:GrandHenry_1979_3844" type="publication" status="CHECKED"><!--broken ID has been fixed in Zotero export, please revise--></bibl>
+               <placeName ref="geo:saoura"/>
+               <lang corresp="..\profiles\vicav_profile_DZA-SAO.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0223.ct_0000">
+                     <quote>žbəl</quote>
+                     <cit type="translation">
+                        <quote>mountain</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0250" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:heath_2002_0001" type="publication"/>
+               <placeName ref="geo:rabat"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-RBT.xml"/>+
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0250.ct_0000">
+                     <quote>ktəb</quote>
+                     <cit type="translation">
+                        <quote>he wrote</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0238" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:kampffmeyer_1912_3753" type="publication"/>
+               <placeName ref="geo:casablanca-settat"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-CHA.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0238.ct_0000">
+                     <quote>žbil</quote>
+                     <cit type="translation">
+                        <quote>mountain</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0219" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:laraba_1981_5666" type="publication"/>
+               <placeName ref="geo:constantine"/>
+               <lang corresp="..\profiles\vicav_profile_DZA-CON.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0219.ct_0000">
+                     <quote>žməl</quote>
+                     <cit type="translation">
+                        <quote>camel</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0257" status="draft" resp="dmp:TD">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:loubignac_1952_3814" type="publication"/>
+               <placeName ref="geo:zaer"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-ZIR.xml"/>
+               <personGrp role="tribe" corresp="pgr:zaer"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0225" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:marcais_1902_3831" type="publication"/>
+               <placeName ref="geo:tlemcen"/>
+               <lang corresp="..\profiles\vicav_profile_DZA-TLM.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0225.ct_0000">
+                     <quote>kţəb</quote>
+                     <cit type="translation">
+                        <quote>he wrote</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0224" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_schwa"/>
+               <bibl corresp="zot:marcais_1908_3832" type="publication"/>
+               <placeName ref="geo:saida"/>
+               <lang corresp="..\profiles\vicav_profile_DZA-SDA.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0224.ct_0000">
+                     <quote>ḏénb</quote>
+                     <cit type="translation">
+                        <quote>tail</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0220" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:marcais_1956_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:jijel"/>
+               <lang corresp="..\profiles\vicav_profile_DZA-DJL.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0220.ct_0000">
+                     <quote>žməl</quote>
+                     <cit type="translation">
+                        <quote>camel</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0179" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:marjani_2019_6677" type="publication"/>
+               <placeName ref="geo:rehamna"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-RHA.xml"/>
+               <personGrp role="tribe" corresp="pgr:rhamna"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0179.ct_0000">
+                     <quote>dxəl</quote>
+                     <cit type="translation">
+                        <quote>he went inside</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0253" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:moscoso_2002_3876" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:souss_massa"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-SOS.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0253.ct_0000">
+                     <quote>žməl</quote>
+                     <cit type="translation">
+                        <quote>camel</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0236" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:vicente_2000_4058" type="publication"/>
+               <placeName ref="geo:anjra"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-ANJ.xml"/><cit type="example" xml:id="ft_rais_a_strss_open.fv_0236.ct_0000">
+                     <quote>wŭld</quote>
+                     <cit type="translation">
+                        <quote>boy</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0247" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:vicente_2003_0000" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:masmouda"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-MSM.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0247.ct_0000">
+                     <quote>ǧbəl</quote>
+                     <cit type="translation">
+                        <quote>mountain</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0243" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#raisinga_so_a_to_zero"/>
+               <bibl corresp="zot:zoubid_2011_0000" type="publication"/>
+               <placeName ref="geo:hyayna"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-HYN.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0243.ct_0000">
+                     <quote>frəg</quote>
+                     <cit type="translation">
+                        <quote>he shared</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0300" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:saqqaf_1999_1184" type="publication"/>
+               <placeName ref="geo:hadramaut"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-HAD.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0300.ct_0000">
+                     <quote>masak</quote>
+                     <cit type="translation">
+                        <quote>to hold</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0372" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:behnstedt_1987_0003" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:sa_dah"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-SAD.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0372.ct_0000">
+                     <quote>sakat</quote>
+                     <cit type="translation">
+                        <quote>to be silent</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">Deduced from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0007" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:ghanem_1958_0000" type="publication"/>
+               <placeName ref="geo:aden"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-ADN.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0007.ct_0000">
+                     <quote>ġalaṭ</quote>
+                     <cit type="translation">
+                        <quote>wrong, error</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">Deduced from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0290" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:grünbichler_2015_2002" type="publication"/>
+               <placeName ref="geo:buraymi"/>
+               <lang corresp="..\profiles\vicav_profile_OMN-BUR.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0290.ct_0000">
+                     <quote>nadar</quote>
+                     <cit type="translation">
+                        <quote>to exit</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">Deduced from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0291" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#raisinga_so_A_to_A1"/>
+               <bibl corresp="zot:rhodokanakis_1908_1911_0000" type="publication"/>
+               <placeName ref="geo:dhofar"/>
+               <lang corresp="..\profiles\vicav_profile_OMN-DHF.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0291.ct_0000">
+                     <quote>ḥarág</quote>
+                     <cit type="translation">
+                        <quote>to burn</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">Deduced from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0000" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
+               <bibl corresp="zot:watson_1993_0000" type="publication"/>
+               <placeName ref="geo:sanaa"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-SAN.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0000.ct_0000">
+                     <quote>ḥanaš</quote>
+                     <cit type="translation">
+                        <quote>snake</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">Deduced from example</note>
+            </wib:featureValueObservation>
+
+
+         </div>
+      </body>
+   </text>
+</TEI>
