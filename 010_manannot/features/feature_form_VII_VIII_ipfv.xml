@@ -37,7 +37,7 @@
          <change when="2022-08-17" who="dmp:">c</change>
          <change when="2022-08-17" who="dmp: "/>
          <change when="2022-08-17" who="dmp:">For EGY-___ there are no values found</change>
-      <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change><change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change></revisionDesc>
+         <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change><change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change></revisionDesc>
    </teiHeader>
 
 
@@ -49,22 +49,28 @@
             <head>Feature Values</head>
             <list type="featureValues">
                <item xml:id="formVII-VIII_ipf_yi_CtiCiC">
-                  <label>yíCtiCiC</label>
+                  <label>yínCiCiC and yíCtiCiC</label>
                </item>
                <item xml:id="formVII-VIII_ipf_yeCtCeC">
-                  <label>yəCtCəC</label>
+                  <label>yənCCəC and yəCtCəC</label>
                </item>
-                <item xml:id="formVII-VIII_ipf_yiCti_CiC">
-                  <label>yiCtíCiC</label>
+               <item xml:id="formVII-VIII_ipf_yiCti_CiC">
+                  <label>yinCíCiC and yiCtíCiC</label>
                </item>
                <item xml:id="formVII-VIII_ipf_yCteCC">
                   <label>yCtəC(ə)C</label>
                </item>
                <item xml:id="formVII-VIII_ipf_yi_CtaCiC">
-                  <label>yíCtaCiC</label>
+                  <label>yínCaCiC and yíCtaCiC</label>
                </item>
                <item xml:id="formVII-VIII_ipf_yiCta_CiC">
-                  <label>yiCtáCiC</label>
+                  <label>yinCáCiC and yiCtáCiC</label>
+               </item>
+                <item xml:id="formVII-VIII_ipf_yiCtaCiC_nostress">
+                  <label>yinCaCiC and yiCtaCiC no stress indicated</label>
+               </item>
+                <item xml:id="formVII-VIII_ipf_yiCtiCiC_nostress">
+                  <label>yinCiCiC and yiCtiCiC no stress indicated</label>
                </item>
             </list>
          </div>
@@ -270,7 +276,7 @@
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0065" status="draft" resp="dmp:AID">
                <name type="featureValue" ref=""/>
-               <bibl corresp="zot:fleisch_1974_3183" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:fleisch_1974_3163" type="publication" status="CHECKME"><!--checked--></bibl>
                <placeName ref="geo:kfar_sghab"/>
                <lang corresp="..\profiles\vicav_profile_LBN-KSG.xml"/>
             </wib:featureValueObservation>
@@ -282,55 +288,185 @@
                <lang corresp="..\profiles\vicav_profile_LBN-BIS.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0047" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0047" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yiCta_CiC"/>
                <bibl corresp="zot:pickett_2005_4567" type="publication"/>
                <placeName ref="geo:rayak"/>
                <lang corresp="..\profiles\vicav_profile_LBN-ABI.xml"/>
                <personGrp role="tribe" corresp="pgr:abu_eid"/>
+               <personGrp role="age" corresp="#young"/>
+               <note type="general"> "The speech of the Lebanese tribes appears to have been affected considerably by the
+                  surrounding sedentary dialects in respect of this feature. For the younger speakers the
+                  stress tends to fall on the second syllable: yišt'aġal (he works), etc., whilst amongst older
+                  speakers it can fall on the same syllable or on the first: y'ištaġal (he works), etc. The first type is clearly the more sedentary variety (Behnstedt 1997:142-143), and, as was noted
+                  above (5.6.2.6.1) the second is more typical of Bedouin dialects." (Pickett 2005: 244).</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0048" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0050"  status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yi_CtaCiC"/>
+               <bibl corresp="zot:pickett_2005_4567" type="publication"/>
+               <placeName ref="geo:rayak"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-ABI.xml"/>
+               <personGrp role="tribe" corresp="pgr:abu_eid"/>
+               <personGrp role="age" corresp="#old"/>
+               <note type="general"> "The speech of the Lebanese tribes appears to have been affected considerably by the
+                  surrounding sedentary dialects in respect of this feature. For the younger speakers the
+                  stress tends to fall on the second syllable: yišt'aġal (he works), etc., whilst amongst older
+                  speakers it can fall on the same syllable or on the first: y'ištaġal (he works), etc. The first type is clearly the more sedentary variety (Behnstedt 1997:142-143), and, as was noted
+                  above (5.6.2.6.1) the second is more typical of Bedouin dialects." (Pickett 2005: 244).</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0048" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yiCta_CiC"/>
                <bibl corresp="zot:pickett_2005_4567" type="publication"/>
                <placeName ref="geo:saadnayel"/>
                <lang corresp="..\profiles\vicav_profile_LBN-AGB.xml"/>
                <personGrp role="tribe" corresp="pgr:abu_jabal"/>
+               <personGrp role="age" corresp="#young"/>
+                <note type="general"> "The speech of the Lebanese tribes appears to have been affected considerably by the
+                  surrounding sedentary dialects in respect of this feature. For the younger speakers the
+                  stress tends to fall on the second syllable: yišt'aġal (he works), etc., whilst amongst older
+                  speakers it can fall on the same syllable or on the first: y'ištaġal (he works), etc. The first type is clearly the more sedentary variety (Behnstedt 1997:142-143), and, as was noted
+                  above (5.6.2.6.1) the second is more typical of Bedouin dialects." (Pickett 2005: 244).</note>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0051"  status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yi_CtaCiC"/>
+               <bibl corresp="zot:pickett_2005_4567" type="publication"/>
+               <placeName ref="geo:saadnayel"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-AGB.xml"/>
+               <personGrp role="tribe" corresp="pgr:abu_jabal"/>
+               <personGrp role="age" corresp="#old"/>
+                <note type="general"> "The speech of the Lebanese tribes appears to have been affected considerably by the
+                  surrounding sedentary dialects in respect of this feature. For the younger speakers the
+                  stress tends to fall on the second syllable: yišt'aġal (he works), etc., whilst amongst older
+                  speakers it can fall on the same syllable or on the first: y'ištaġal (he works), etc. The first type is clearly the more sedentary variety (Behnstedt 1997:142-143), and, as was noted
+                  above (5.6.2.6.1) the second is more typical of Bedouin dialects." (Pickett 2005: 244).</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0058" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
+
+            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0058" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yiCta_CiC"/>
                <bibl corresp="zot:pickett_2005_4567" type="publication"/>
                <placeName ref="geo:el_khiara"/>
                <placeName ref="geo:tall_dunub"/>
                <placeName ref="geo:el_qaa"/>
                <lang corresp="..\profiles\vicav_profile_LBN-EDI.xml"/>
                <personGrp role="tribe" corresp="pgr:edin"/>
+               <personGrp role="age" corresp="#young"/>
+                <note type="general"> "The speech of the Lebanese tribes appears to have been affected considerably by the
+                  surrounding sedentary dialects in respect of this feature. For the younger speakers the
+                  stress tends to fall on the second syllable: yišt'aġal (he works), etc., whilst amongst older
+                  speakers it can fall on the same syllable or on the first: y'ištaġal (he works), etc. The first type is clearly the more sedentary variety (Behnstedt 1997:142-143), and, as was noted
+                  above (5.6.2.6.1) the second is more typical of Bedouin dialects." (Pickett 2005: 244).</note>
+               
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0061" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
+            
+            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0055" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yi_CtaCiC"/>
+               <bibl corresp="zot:pickett_2005_4567" type="publication"/>
+               <placeName ref="geo:el_khiara"/>
+               <placeName ref="geo:tall_dunub"/>
+               <placeName ref="geo:el_qaa"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-EDI.xml"/>
+               <personGrp role="tribe" corresp="pgr:edin"/>
+               <personGrp role="age" corresp="#old"/>
+                <note type="general"> "The speech of the Lebanese tribes appears to have been affected considerably by the
+                  surrounding sedentary dialects in respect of this feature. For the younger speakers the
+                  stress tends to fall on the second syllable: yišt'aġal (he works), etc., whilst amongst older
+                  speakers it can fall on the same syllable or on the first: y'ištaġal (he works), etc. The first type is clearly the more sedentary variety (Behnstedt 1997:142-143), and, as was noted
+                  above (5.6.2.6.1) the second is more typical of Bedouin dialects." (Pickett 2005: 244).</note>
+               
+            </wib:featureValueObservation>
+            
+            
+            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0061" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yiCta_CiC"/>
                <bibl corresp="zot:pickett_2005_4567" type="publication"/>
                <placeName ref="geo:nabaa_el_faaour"/>
                <lang corresp="..\profiles\vicav_profile_LBN-HRK.xml"/>
                <personGrp role="tribe" corresp="pgr:hruk"/>
+               <personGrp role="age" corresp="#young"/>
+                    <note type="general"> "The speech of the Lebanese tribes appears to have been affected considerably by the
+                  surrounding sedentary dialects in respect of this feature. For the younger speakers the
+                  stress tends to fall on the second syllable: yišt'aġal (he works), etc., whilst amongst older
+                  speakers it can fall on the same syllable or on the first: y'ištaġal (he works), etc. The first type is clearly the more sedentary variety (Behnstedt 1997:142-143), and, as was noted
+                  above (5.6.2.6.1) the second is more typical of Bedouin dialects." (Pickett 2005: 244).</note>
+               
+            </wib:featureValueObservation>
+            
+              <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0057" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yi_CtaCiC"/>
+               <bibl corresp="zot:pickett_2005_4567" type="publication"/>
+               <placeName ref="geo:nabaa_el_faaour"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-HRK.xml"/>
+               <personGrp role="tribe" corresp="pgr:hruk"/>
+               <personGrp role="age" corresp="#old"/>
+                    <note type="general"> "The speech of the Lebanese tribes appears to have been affected considerably by the
+                  surrounding sedentary dialects in respect of this feature. For the younger speakers the
+                  stress tends to fall on the second syllable: yišt'aġal (he works), etc., whilst amongst older
+                  speakers it can fall on the same syllable or on the first: y'ištaġal (he works), etc. The first type is clearly the more sedentary variety (Behnstedt 1997:142-143), and, as was noted
+                  above (5.6.2.6.1) the second is more typical of Bedouin dialects." (Pickett 2005: 244).</note>
+               
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0068" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0068" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yiCta_CiC"/>
                <bibl corresp="zot:pickett_2005_4567" type="publication"/>
                <placeName ref="geo:taanayel"/>
                <placeName ref="geo:barr_elias"/>
                <lang corresp="..\profiles\vicav_profile_LBN-LWS.xml"/>
                <personGrp role="tribe" corresp="pgr:lwes"/>
+                 <personGrp role="age" corresp="#young"/>
+                    <note type="general"> "The speech of the Lebanese tribes appears to have been affected considerably by the
+                  surrounding sedentary dialects in respect of this feature. For the younger speakers the
+                  stress tends to fall on the second syllable: yišt'aġal (he works), etc., whilst amongst older
+                  speakers it can fall on the same syllable or on the first: y'ištaġal (he works), etc. The first type is clearly the more sedentary variety (Behnstedt 1997:142-143), and, as was noted
+                  above (5.6.2.6.1) the second is more typical of Bedouin dialects." (Pickett 2005: 244).</note>
+            </wib:featureValueObservation>
+            
+                <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0059" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yi_CtaCiC"/>
+               <bibl corresp="zot:pickett_2005_4567" type="publication"/>
+               <placeName ref="geo:taanayel"/>
+               <placeName ref="geo:barr_elias"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-LWS.xml"/>
+               <personGrp role="tribe" corresp="pgr:lwes"/>
+                 <personGrp role="age" corresp="#old"/>
+                    <note type="general"> "The speech of the Lebanese tribes appears to have been affected considerably by the
+                  surrounding sedentary dialects in respect of this feature. For the younger speakers the
+                  stress tends to fall on the second syllable: yišt'aġal (he works), etc., whilst amongst older
+                  speakers it can fall on the same syllable or on the first: y'ištaġal (he works), etc. The first type is clearly the more sedentary variety (Behnstedt 1997:142-143), and, as was noted
+                  above (5.6.2.6.1) the second is more typical of Bedouin dialects." (Pickett 2005: 244).</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0070" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0070" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yiCta_CiC"/>
                <bibl corresp="zot:pickett_2005_4567" type="publication"/>
                <placeName ref="geo:ain_aanjar"/>
                <lang corresp="..\profiles\vicav_profile_LBN-MAW.xml"/>
                <personGrp role="tribe" corresp="pgr:mawali_lebanon"/>
+                 <personGrp role="age" corresp="#young"/>
+                    <note type="general"> "The speech of the Lebanese tribes appears to have been affected considerably by the
+                  surrounding sedentary dialects in respect of this feature. For the younger speakers the
+                  stress tends to fall on the second syllable: yišt'aġal (he works), etc., whilst amongst older
+                  speakers it can fall on the same syllable or on the first: y'ištaġal (he works), etc. The first type is clearly the more sedentary variety (Behnstedt 1997:142-143), and, as was noted
+                  above (5.6.2.6.1) the second is more typical of Bedouin dialects." (Pickett 2005: 244).</note>
+            </wib:featureValueObservation>
+            
+              <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0060" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yi_CtaCiC"/>
+               <bibl corresp="zot:pickett_2005_4567" type="publication"/>
+               <placeName ref="geo:ain_aanjar"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-MAW.xml"/>
+               <personGrp role="tribe" corresp="pgr:mawali_lebanon"/>
+                 <personGrp role="age" corresp="#old"/>
+                    <note type="general"> "The speech of the Lebanese tribes appears to have been affected considerably by the
+                  surrounding sedentary dialects in respect of this feature. For the younger speakers the
+                  stress tends to fall on the second syllable: yišt'aġal (he works), etc., whilst amongst older
+                  speakers it can fall on the same syllable or on the first: y'ištaġal (he works), etc. The first type is clearly the more sedentary variety (Behnstedt 1997:142-143), and, as was noted
+                  above (5.6.2.6.1) the second is more typical of Bedouin dialects." (Pickett 2005: 244).</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0028" status="draft" resp="dmp:AID">
@@ -341,27 +477,63 @@
                <personGrp role="tribe" corresp="pgr:aramsha_israel"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0054" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0054" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yiCti_CiC"/>
                <bibl corresp="zot:schukro_2004_6239" type="publication"/>
-               <placeName ref="geo:beirut"/>
+               <placeName ref="geo:beirut"/> 
                <lang corresp="..\profiles\vicav_profile_LBN-BEI.xml"/>
+               <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0054.ct_0000">
+                     <quote>byinfiṣil</quote>
+                     <cit type="translation">
+                        <quote>he gets separated, he separates</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0054.ct_0001">
+                     <quote>byištiġil</quote>
+                     <cit type="translation">
+                        <quote>he works</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0052" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0052" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yiCtaCiC_nostress"/>
                <bibl corresp="zot:younes_2013_2795" type="publication"/>
                <placeName ref="geo:wadi_khalid"/>
                <lang corresp="..\profiles\vicav_profile_LBN-ATI.xml"/>
                <personGrp role="tribe" corresp="pgr:arab_al_atij"/>
+                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0052.ct_0000">
+                     <quote>yinḏ̣abiḥ</quote>
+                     <cit type="translation">
+                        <quote>he gets slaughtered</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0052.ct_0001">
+                     <quote>yigtarib</quote>
+                     <cit type="translation">
+                        <quote>he approaches</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0045" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0045" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yiCtaCiC_nostress"/>
                <bibl corresp="zot:younes_2014_9863" type="publication"/>
                <placeName ref="geo:haouch_el_nabi"/>
                <lang corresp="..\profiles\vicav_profile_LBN-ABI.xml"/>
                <personGrp role="tribe" corresp="pgr:abu_eid"/>
+                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0045.ct_0000">
+                     <quote>yingaṭiʕ</quote>
+                     <cit type="translation">
+                        <quote>he is cut, he gets cut</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0045.ct_0001">
+                     <quote>yištaġil</quote>
+                     <cit type="translation">
+                        <quote>he works</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0089" status="draft" resp="dmp:AT">
@@ -1965,11 +2137,11 @@
                <placeName ref="geo:mzab"/>
                <lang corresp="..\profiles\vicav_profile_DZA-MZB.xml"/>
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0221.ct_0000">
-                     <quote>yžtəmʕu</quote>
-                     <cit type="translation">
-                        <quote>they gathered</quote>
-                     </cit>
+                  <quote>yžtəmʕu</quote>
+                  <cit type="translation">
+                     <quote>they gathered</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0239" status="done" resp="dmp:TD">
@@ -1978,11 +2150,11 @@
                <placeName ref="geo:chefchaouen"/>
                <lang corresp="..\profiles\vicav_profile_MAR-CHF.xml"/>
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0239.ct_0000">
-                     <quote>yḥţāram</quote>
-                     <cit type="translation">
-                        <quote>he respects</quote>
-                     </cit>
+                  <quote>yḥţāram</quote>
+                  <cit type="translation">
+                     <quote>he respects</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0242" status="draft" resp="dmp:TD">
@@ -1991,11 +2163,11 @@
                <placeName ref="geo:fez"/>
                <lang corresp="..\profiles\vicav_profile_MAR-FES.xml"/>
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0242.ct_0000">
-                     <quote>nḍəṛṛ</quote>
-                     <cit type="translation">
-                        <quote></quote>
-                     </cit>
+                  <quote>nḍəṛṛ</quote>
+                  <cit type="translation">
+                     <quote></quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0246" status="done" resp="dmp:TD">
@@ -2004,11 +2176,11 @@
                <placeName ref="geo:marrakesh"/>
                <lang corresp="..\profiles\vicav_profile_MAR-MRK.xml"/>
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0246.ct_0000">
-                     <quote>yiʕāṛəf</quote>
-                     <cit type="translation">
-                        <quote>he recognizes</quote>
-                     </cit>
+                  <quote>yiʕāṛəf</quote>
+                  <cit type="translation">
+                     <quote>he recognizes</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0252" status="done" resp="dmp:TD">
@@ -2018,11 +2190,11 @@
                <lang corresp="..\profiles\vicav_profile_MAR-SMS.xml"/>
                <personGrp role="religion" corresp="#jews"/>
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0252.ct_0000">
-                     <quote>yḥtaz</quote>
-                     <cit type="translation">
-                        <quote>ought to</quote>
-                     </cit>
+                  <quote>yḥtaz</quote>
+                  <cit type="translation">
+                     <quote>ought to</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0259" status="done" resp="dmp:TD">
@@ -2031,11 +2203,11 @@
                <placeName ref="geo:mauritania"/>
                <lang corresp="..\profiles\vicav_profile_MRT-HSS.xml"/>
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0259.ct_0000">
-                     <quote>yštaġəl</quote>
-                     <cit type="translation">
-                        <quote>he works</quote>
-                     </cit>
+                  <quote>yštaġəl</quote>
+                  <cit type="translation">
+                     <quote>he works</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0272" status="done" resp="dmp:TD">
@@ -2051,11 +2223,11 @@
                <placeName ref="geo:skoura"/>
                <lang corresp="..\profiles\vicav_profile_MAR-SKR.xml"/>
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0251.ct_0000">
-                     <quote>yxṭaṣr</quote>
-                     <cit type="translation">
-                        <quote>to resume</quote>
-                     </cit>
+                  <quote>yxṭaṣr</quote>
+                  <cit type="translation">
+                     <quote>to resume</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0273" status="done" resp="dmp:TD">
@@ -2079,11 +2251,11 @@
                <placeName ref="geo:jbala"/>
                <lang corresp="..\profiles\vicav_profile_MAR-JBL.xml"/>
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0244.ct_0000">
-                     <quote>yḥtāž</quote>
-                     <cit type="translation">
-                        <quote>to need</quote>
-                     </cit>
+                  <quote>yḥtāž</quote>
+                  <cit type="translation">
+                     <quote>to need</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0218" status="done" resp="dmp:TD">
@@ -2092,11 +2264,11 @@
                <placeName ref="geo:cherchell"/>
                <lang corresp="..\profiles\vicav_profile_DZA-CHR.xml"/>
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0218.ct_0000">
-                     <quote>yəštġəl</quote>
-                     <cit type="translation">
-                        <quote>being occupied with</quote>
-                     </cit>
+                  <quote>yəštġəl</quote>
+                  <cit type="translation">
+                     <quote>being occupied with</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0223" status="done" resp="dmp:TD">
@@ -2105,11 +2277,11 @@
                <placeName ref="geo:saoura"/>
                <lang corresp="..\profiles\vicav_profile_DZA-SAO.xml"/>
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0223.ct_0000">
-                     <quote>yəftṛag</quote>
-                     <cit type="translation">
-                        <quote>being seperated</quote>
-                     </cit>
+                  <quote>yəftṛag</quote>
+                  <cit type="translation">
+                     <quote>being seperated</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0219" status="draft" resp="dmp:TD">
@@ -2133,11 +2305,11 @@
                <placeName ref="geo:tlemcen"/>
                <lang corresp="..\profiles\vicav_profile_DZA-TLM.xml"/>
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0225.ct_0000">
-                     <quote>yəfţrəq</quote>
-                     <cit type="translation">
-                        <quote>he seperates</quote>
-                     </cit>
+                  <quote>yəfţrəq</quote>
+                  <cit type="translation">
+                     <quote>he seperates</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0224" status="done" resp="dmp:TD">
@@ -2146,11 +2318,11 @@
                <placeName ref="geo:saida"/>
                <lang corresp="..\profiles\vicav_profile_DZA-SDA.xml"/>
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0224.ct_0000">
-                     <quote>yəštrək</quote>
-                     <cit type="translation">
-                        <quote>be associated</quote>
-                     </cit>
+                  <quote>yəštrək</quote>
+                  <cit type="translation">
+                     <quote>be associated</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0220" status="done" resp="dmp:TD">
@@ -2159,11 +2331,11 @@
                <placeName ref="geo:jijel"/>
                <lang corresp="..\profiles\vicav_profile_DZA-DJL.xml"/>
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0220.ct_0000">
-                     <quote>yərtaḥ</quote>
-                     <cit type="translation">
-                        <quote>to rest</quote>
-                     </cit>
+                  <quote>yərtaḥ</quote>
+                  <cit type="translation">
+                     <quote>to rest</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0253" status="done" resp="dmp:TD">
@@ -2172,11 +2344,11 @@
                <placeName ref="geo:souss_massa"/>
                <lang corresp="..\profiles\vicav_profile_MAR-SOS.xml"/>
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0253.ct_0000">
-                     <quote>yəḥtāž</quote>
-                     <cit type="translation">
-                        <quote>to need</quote>
-                     </cit>
+                  <quote>yəḥtāž</quote>
+                  <cit type="translation">
+                     <quote>to need</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0249" status="done" resp="dmp:TD">
@@ -2186,11 +2358,11 @@
                <lang corresp="..\profiles\vicav_profile_MAR-RBS.xml"/>
                <personGrp role="religion" corresp="pgr:jews"/>
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0249.ct_0000">
-                     <quote>yəḥtāz</quote>
-                     <cit type="translation">
-                        <quote>to need</quote>
-                     </cit>
+                  <quote>yəḥtāz</quote>
+                  <cit type="translation">
+                     <quote>to need</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0236" status="done" resp="dmp:TD">
@@ -2200,11 +2372,11 @@
                <lang corresp="..\profiles\vicav_profile_MAR-ANJ.xml"/>
             </wib:featureValueObservation>
             <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0236.ct_0000">
-                     <quote>yəxţmar</quote>
-                     <cit type="translation">
-                        <quote>to ferment</quote>
-                     </cit>
-                  </cit>
+               <quote>yəxţmar</quote>
+               <cit type="translation">
+                  <quote>to ferment</quote>
+               </cit>
+            </cit>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0243" status="draft" resp="dmp:TD">
                <name type="featureValue" ref=""/>
@@ -2411,12 +2583,12 @@
                <placeName ref="geo:manakhah"/>
                <lang corresp="..\profiles\vicav_profile_YEM-MAN.xml"/>
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0304.ct_0000">
-                     <quote>aġtasal</quote>
-                     <cit type="translation">
-                        <quote>to wash</quote>
-                     </cit>
+                  <quote>aġtasal</quote>
+                  <cit type="translation">
+                     <quote>to wash</quote>
                   </cit>
-                  <note type="general">Stress not specifically mentioned</note>
+               </cit>
+               <note type="general">Stress not specifically mentioned</note>
             </wib:featureValueObservation>
 
          </div>
