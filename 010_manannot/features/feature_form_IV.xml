@@ -37,7 +37,7 @@
          <change when="2022-08-17" who="dmp:">c</change>
          <change when="2022-08-17" who="dmp: "/>
          <change when="2022-08-17" who="dmp:">For EGY-___ there are no values found</change>
-      <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change><change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change></revisionDesc>
+         <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change><change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change></revisionDesc>
    </teiHeader>
 
 
@@ -51,7 +51,10 @@
                <item xml:id="formIV_yes">
                   <label>yes</label>
                </item>
-                <item xml:id="formIV_no">
+               <item xml:id="formIV_onlyvestigial">
+                  <label>yes but only vestigial forms (this does not include MSA loanwords)</label>
+               </item>
+               <item xml:id="formIV_no">
                   <label>no</label>
                </item>
             </list>
@@ -75,13 +78,46 @@
                <personGrp role="tribe" corresp="pgr:arab_xalde"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_formIV.fv_0071" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_formIV.fv_0071" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#formIV_onlyvestigial"/>
                <bibl corresp="" type="fieldwork"/>
                <placeName ref="geo:naameh"/>
                <placeName ref="geo:el_karantina"/>
                <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"/>
                <personGrp role="tribe" corresp="pgr:arab_maslax"/>
+               <cit type="example" xml:id="ft_formIV.fv_0071.ct_0000">
+                     <quote>ʔanṭa - yinṭi</quote>
+                     <cit type="translation">
+                        <quote>to give</quote>
+                     </cit>
+                  </cit>
+                  <personGrp role="age" corresp="old"/>
+            </wib:featureValueObservation>
+
+               <wib:featureValueObservation xml:id="ft_formIV.fv_0003" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#formIV_yes"/>
+               <bibl corresp="" type="fieldwork"/>
+               <placeName ref="geo:naameh"/>
+               <placeName ref="geo:el_karantina"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"/>
+               <personGrp role="tribe" corresp="pgr:arab_maslax"/>
+               <cit type="example" xml:id="ft_formIV.fv_0003.ct_0000">
+                     <quote>ʔaksam, yiksim</quote>
+                     <cit type="translation">
+                        <quote>to give, to grant</quote>
+                     </cit>
+                  </cit>
+                    <personGrp role="age" corresp="old"/>
+            </wib:featureValueObservation>
+            
+              <wib:featureValueObservation xml:id="ft_formIV.fv_0047" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#formIV_no"/>
+               <bibl corresp="" type="fieldwork"/>
+               <placeName ref="geo:naameh"/>
+               <placeName ref="geo:el_karantina"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"/>
+               <personGrp role="tribe" corresp="pgr:arab_maslax"/>
+                  <personGrp role="age" corresp="#young"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0053" status="draft" resp="dmp:AID">
@@ -270,56 +306,6 @@
                <lang corresp="..\profiles\vicav_profile_LBN-BIS.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_formIV.fv_0047" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:pickett_2005_4567" type="publication"/>
-               <placeName ref="geo:rayak"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-ABI.xml"/>
-               <personGrp role="tribe" corresp="pgr:abu_eid"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_formIV.fv_0048" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:pickett_2005_4567" type="publication"/>
-               <placeName ref="geo:saadnayel"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-AGB.xml"/>
-               <personGrp role="tribe" corresp="pgr:abu_jabal"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_formIV.fv_0058" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:pickett_2005_4567" type="publication"/>
-               <placeName ref="geo:el_khiara"/>
-               <placeName ref="geo:tall_dunub"/>
-               <placeName ref="geo:el_qaa"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-EDI.xml"/>
-               <personGrp role="tribe" corresp="pgr:edin"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_formIV.fv_0061" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:pickett_2005_4567" type="publication"/>
-               <placeName ref="geo:nabaa_el_faaour"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-HRK.xml"/>
-               <personGrp role="tribe" corresp="pgr:hruk"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_formIV.fv_0068" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:pickett_2005_4567" type="publication"/>
-               <placeName ref="geo:taanayel"/>
-               <placeName ref="geo:barr_elias"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-LWS.xml"/>
-               <personGrp role="tribe" corresp="pgr:lwes"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_formIV.fv_0070" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:pickett_2005_4567" type="publication"/>
-               <placeName ref="geo:ain_aanjar"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-MAW.xml"/>
-               <personGrp role="tribe" corresp="pgr:mawali_lebanon"/>
-            </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0028" status="draft" resp="dmp:AID">
                <name type="featureValue" ref=""/>
@@ -329,11 +315,12 @@
                <personGrp role="tribe" corresp="pgr:aramsha_israel"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_formIV.fv_0054" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_formIV.fv_0054" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#formIV_no"/>
                <bibl corresp="zot:schukro_2004_6239" type="publication"/>
                <placeName ref="geo:beirut"/>
                <lang corresp="..\profiles\vicav_profile_LBN-BEI.xml"/>
+               <note type="general">Schukro (2004: 133) notes that Form IV has disappeared and is only present in loans from MSA, having been functionally replaced by form II and I. </note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0052" status="done" resp="dmp:AID">
@@ -343,27 +330,33 @@
                <lang corresp="..\profiles\vicav_profile_LBN-ATI.xml"/>
                <personGrp role="tribe" corresp="pgr:arab_al_atij"/>
                <cit type="example" xml:id="ft_formIV.fv_0052.ct_0000">
-                     <quote>ʔabʕad</quote>
-                     <cit type="translation">
-                        <quote>he moved away, he kept away</quote>
-                     </cit>
+                  <quote>ʔabʕad</quote>
+                  <cit type="translation">
+                     <quote>he moved away, he kept away</quote>
                   </cit>
+               </cit>
                <note type="general"> Form IV has a factitive value. "La valeur générale de la forme IV, comme en arabe standard, est
-factitive" (Younes 2013: 49)</note>
-<note type="general"> Form IV seems to be in the process of being replaced by form II due to the pressure of sedentary dialects: "Toutefois, sous la pression des parlers sédentaires, la fonction
-factitive est aussi largement assurée par le schème C1aC2C2aC3: waggaf-ywaggif «faire cesser», sammaʿ-ysammiʿ «faire
-entendre». On voit en synchronie qu’il existe une concurrence entre les
-formes IV et II dans des verbes tels que ʾabʿad ~ baʿʿad «éloigner», ʾaṭʿam ~
-tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ siga
-«abreuver, irriguer»" (Younes 2013: 49).</note>
+                  factitive" (Younes 2013: 49)</note>
+               <note type="general"> Form IV seems to be in the process of being replaced by form II due to the pressure of sedentary dialects: "Toutefois, sous la pression des parlers sédentaires, la fonction
+                  factitive est aussi largement assurée par le schème C1aC2C2aC3: waggaf-ywaggif «faire cesser», sammaʿ-ysammiʿ «faire
+                  entendre». On voit en synchronie qu’il existe une concurrence entre les
+                  formes IV et II dans des verbes tels que ʾabʿad ~ baʿʿad «éloigner», ʾaṭʿam ~
+                  tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ siga
+                  «abreuver, irriguer»" (Younes 2013: 49).</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_formIV.fv_0045" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_formIV.fv_0045" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#formIV_yes"/>
                <bibl corresp="zot:younes_2014_9863" type="publication"/>
                <placeName ref="geo:haouch_el_nabi"/>
                <lang corresp="..\profiles\vicav_profile_LBN-ABI.xml"/>
                <personGrp role="tribe" corresp="pgr:abu_eid"/>
+               <cit type="example" xml:id="ft_formIV.fv_0045.ct_0000">
+                     <quote>ʔarkab, yirčib</quote>
+                     <cit type="translation">
+                        <quote>to make (someone) ride</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0089" status="draft" resp="dmp:AT">
@@ -737,11 +730,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <placeName ref="geo:jerusalem"/>
                <lang corresp="..\profiles\vicav_profile_PSE-JRS.xml"/>
                <cit type="example" xml:id="ft_formIV.fv_0168.ct_0000">
-                     <quote>arsal</quote>
-                     <cit type="translation">
-                        <quote>to send</quote>
-                     </cit>
+                  <quote>arsal</quote>
+                  <cit type="translation">
+                     <quote>to send</quote>
                   </cit>
+               </cit>
                <note type="general">Löhr (1905:45) notes that stem IV is not used very frequently.</note>
             </wib:featureValueObservation>
 
@@ -932,19 +925,19 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <lang corresp="..\profiles\vicav_profile_PSE-ISW.xml"/>
             </wib:featureValueObservation>
 
-           
+
             <wib:featureValueObservation xml:id="ft_formIV.fv_0258" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#formIV_yes"/>
                <bibl corresp="src:PC_RZ" type="personalCommunication"/>
                <placeName ref="geo:malta"/>
                <lang corresp="..\profiles\vicav_profile_MLT-MAL.xml"/>
                <cit type="example" xml:id="ft_formIV.fv_0258.ct_0000">
-                     <quote>wera</quote>
-                     <cit type="translation">
-                        <quote>he showed</quote>
-                     </cit>
+                  <quote>wera</quote>
+                  <cit type="translation">
+                     <quote>he showed</quote>
                   </cit>
-                  <note type="constraintNote">The fourth form in Maltese is almost non-existent. It is only found in the verb 'wera' he showed.</note>
+               </cit>
+               <note type="constraintNote">The fourth form in Maltese is almost non-existent. It is only found in the verb 'wera' he showed.</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0334" status="done" resp="dmp:RZ">
@@ -953,14 +946,14 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <placeName ref="geo:jabal_fayfa"/>
                <lang corresp="..\profiles\vicav_profile_SAU-FYF.xml"/>
                <cit type="example" xml:id="ft_formIV.fv_0334.ct_0000">
-                     <quote>ʔaxra​ʒa</quote>
-                     <cit type="translation">
-                        <quote>he took something/ he expelled someone from something</quote>
-                     </cit>
+                  <quote>ʔaxra​ʒa</quote>
+                  <cit type="translation">
+                     <quote>he took something/ he expelled someone from something</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
-           
+
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0228" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#formIV_yes"/>
@@ -968,17 +961,17 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <placeName ref="geo:benghazi"/>
                <lang corresp="..\profiles\vicav_profile_LBY-BGZ.xml"/>
                <cit type="example" xml:id="ft_formIV.fv_0228.ct_0000">
-                     <quote>ma-smáḥ-a </quote>
-                     <cit type="translation">
-                        <quote> how beautiful he/it is</quote>
-                     </cit>
+                  <quote>ma-smáḥ-a </quote>
+                  <cit type="translation">
+                     <quote> how beautiful he/it is</quote>
                   </cit>
-                  <note type="general">Form IV has almost completely dissapeared.</note>
+               </cit>
+               <note type="general">Form IV has almost completely dissapeared.</note>
             </wib:featureValueObservation>
 
-            
 
-           
+
+
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0230" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#formIV_no"/>
@@ -994,12 +987,12 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <placeName ref="geo:gulf"/>
                <lang corresp="..\profiles\vicav_profile_SAU-GLF.xml"/>
                <cit type="example" xml:id="ft_formIV.fv_0320.ct_0000">
-                     <quote>ʔalqa</quote>
-                     <cit type="translation">
-                        <quote>he delivered a speech</quote>
-                     </cit>
+                  <quote>ʔalqa</quote>
+                  <cit type="translation">
+                     <quote>he delivered a speech</quote>
                   </cit>
-                  <note type="general">This form exists but "either borrowings from MSA or emulation of the speech of other Arabs. Instead of Class IV verbs, Gulf Arabs use either Class I or Class II verbs. Examples ʕaṭa,  ʕallam" </note>
+               </cit>
+               <note type="general">This form exists but "either borrowings from MSA or emulation of the speech of other Arabs. Instead of Class IV verbs, Gulf Arabs use either Class I or Class II verbs. Examples ʕaṭa,  ʕallam" </note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0324" status="done" resp="dmp:RZ">
@@ -1009,11 +1002,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <lang corresp="..\profiles\vicav_profile_BHR-ARB.xml"/>
                <personGrp role="religion" corresp="#sunnis"/>
                <cit type="example" xml:id="ft_formIV.fv_0324.ct_0000">
-                     <quote>aṣbaḥ</quote>
-                     <cit type="translation">
-                        <quote>to wake up, get up in the morning</quote>
-                     </cit>
+                  <quote>aṣbaḥ</quote>
+                  <cit type="translation">
+                     <quote>to wake up, get up in the morning</quote>
                   </cit>
+               </cit>
                <note type="constraintNote">Form IV in this dialect has mostly dissapeared and was replaced by Form I and II.</note>
             </wib:featureValueObservation>
 
@@ -1024,13 +1017,13 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <lang corresp="..\profiles\vicav_profile_BHR-BHN.xml"/>
                <personGrp role="religion" corresp="#shiites"/>
                <cit type="example" xml:id="ft_formIV.fv_0323.ct_0000">
-                     <quote>aṣbaḥ</quote>
-                     <cit type="translation">
-                        <quote>to wake up, get up in the morning</quote>
-                     </cit>
+                  <quote>aṣbaḥ</quote>
+                  <cit type="translation">
+                     <quote>to wake up, get up in the morning</quote>
                   </cit>
+               </cit>
                <note type="constraintNote">Form IV in this dialect has mostly dissapeared and was replaced by Form I and II.</note>
-               
+
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0002" status="done" resp="dmp:RZ">
@@ -1039,15 +1032,15 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <placeName ref="geo:kuwait_city"/>
                <lang corresp="..\profiles\vicav_profile_KWT-KWC.xml"/>
                <cit type="example" xml:id="ft_formIV.fv_0002.ct_0000">
-                     <quote>aṣbaḥ</quote>
-                     <cit type="translation">
-                        <quote>to wake up, get up in the morning</quote>
-                     </cit>
+                  <quote>aṣbaḥ</quote>
+                  <cit type="translation">
+                     <quote>to wake up, get up in the morning</quote>
                   </cit>
+               </cit>
                <note type="constraintNote">Form IV in this dialect has mostly dissapeared and was replaced by Form  II.</note>
             </wib:featureValueObservation>
 
-            
+
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0008" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#formIV_yes"/>
@@ -1055,15 +1048,15 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <placeName ref="geo:sufayri"/>
                <lang corresp="..\profiles\vicav_profile_SAU-DHF.xml"/>
                <cit type="example" xml:id="ft_formIV.fv_0008.ct_0000">
-                     <quote>arsal</quote>
-                     <cit type="translation">
-                        <quote>he sent</quote>
-                     </cit>
+                  <quote>arsal</quote>
+                  <cit type="translation">
+                     <quote>he sent</quote>
                   </cit>
-                  <note type="general">Deduced from examples</note>
+               </cit>
+               <note type="general">Deduced from examples</note>
             </wib:featureValueObservation>
 
-           
+
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0321" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#formIV_yes"/>
@@ -1071,11 +1064,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <placeName ref="geo:najd"/>
                <lang corresp="..\profiles\vicav_profile_SAU-NJD.xml"/>
                <cit type="example" xml:id="ft_formIV.fv_0321.ct_0000">
-                     <quote>ašmal</quote>
-                     <cit type="translation">
-                        <quote>to go north</quote>
-                     </cit>
+                  <quote>ašmal</quote>
+                  <cit type="translation">
+                     <quote>to go north</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0335" status="done" resp="dmp:RZ">
@@ -1084,12 +1077,12 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <placeName ref="geo:kuwait"/>
                <personGrp role="tribe" corresp="pgr:dawasir"/>
                <cit type="example" xml:id="ft_formIV.fv_0335.ct_0000">
-                     <quote>ʔaxlaf</quote>
-                     <cit type="translation">
-                        <quote>to break one's promise</quote>
-                     </cit>
+                  <quote>ʔaxlaf</quote>
+                  <cit type="translation">
+                     <quote>to break one's promise</quote>
                   </cit>
-                  <note type="general"> Note: "After a word ending in /a/ or /ā/ the initial hanza and vowel of the fourth derived form is elided, e.g. mā-xlaf"</note>
+               </cit>
+               <note type="general"> Note: "After a word ending in /a/ or /ā/ the initial hanza and vowel of the fourth derived form is elided, e.g. mā-xlaf"</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0004" status="done" resp="dmp:RZ">
@@ -1098,14 +1091,14 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <placeName ref="geo:doha"/>
                <lang corresp="..\profiles\vicav_profile_QTR-DHA.xml"/>
                <cit type="example" xml:id="ft_formIV.fv_0004.ct_0000">
-                     <quote>aḏ̣har</quote>
-                     <cit type="translation">
-                        <quote>to bring out</quote>
-                     </cit>
+                  <quote>aḏ̣har</quote>
+                  <cit type="translation">
+                     <quote>to bring out</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
-           
+
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0234" status="draft" resp="dmp:RZ">
                <name type="featureValue" ref=""/>
@@ -1120,11 +1113,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <placeName ref="geo:abha"/>
                <lang corresp="..\profiles\vicav_profile_SAU-ABH.xml"/>
                <cit type="example" xml:id="ft_formIV.fv_0005.ct_0000">
-                     <quote>ʔaflaḥ</quote>
-                     <cit type="translation">
-                        <quote>he left</quote>
-                     </cit>
+                  <quote>ʔaflaḥ</quote>
+                  <cit type="translation">
+                     <quote>he left</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0006" status="done" resp="dmp:RZ">
@@ -1133,11 +1126,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <placeName ref="geo:bisha"/>
                <lang corresp="..\profiles\vicav_profile_SAU-BSH.xml"/>
                <cit type="example" xml:id="ft_formIV.fv_0006.ct_0000">
-                     <quote>ʔagbal</quote>
-                     <cit type="translation">
-                        <quote>he came</quote>
-                     </cit>
+                  <quote>ʔagbal</quote>
+                  <cit type="translation">
+                     <quote>he came</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0009" status="done" resp="dmp:RZ">
@@ -1146,11 +1139,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <placeName ref="geo:bilad_ghamid"/>
                <lang corresp="..\profiles\vicav_profile_SAU-GHA.xml"/>
                <cit type="example" xml:id="ft_formIV.fv_0009.ct_0000">
-                     <quote>ʔaflaḥ</quote>
-                     <cit type="translation">
-                        <quote>he left</quote>
-                     </cit>
+                  <quote>ʔaflaḥ</quote>
+                  <cit type="translation">
+                     <quote>he left</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0010" status="done" resp="dmp:RZ">
@@ -1159,11 +1152,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <placeName ref="geo:hofuf"/>
                <lang corresp="..\profiles\vicav_profile_SAU-HFF.xml"/>
                <cit type="example" xml:id="ft_formIV.fv_0010.ct_0000">
-                     <quote>ʔaflas</quote>
-                     <cit type="translation">
-                        <quote>he became penniless</quote>
-                     </cit>
+                  <quote>ʔaflas</quote>
+                  <cit type="translation">
+                     <quote>he became penniless</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0011" status="done" resp="dmp:RZ">
@@ -1172,11 +1165,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <placeName ref="geo:hail"/>
                <lang corresp="..\profiles\vicav_profile_SAU-HYL.xml"/>
                <cit type="example" xml:id="ft_formIV.fv_0011.ct_0000">
-                     <quote>ʔaflas</quote>
-                     <cit type="translation">
-                        <quote>he became penniless</quote>
-                     </cit>
+                  <quote>ʔaflas</quote>
+                  <cit type="translation">
+                     <quote>he became penniless</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0013" status="done" resp="dmp:RZ">
@@ -1185,11 +1178,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <placeName ref="geo:rufaydah"/>
                <lang corresp="..\profiles\vicav_profile_SAU-RUF.xml"/>
                <cit type="example" xml:id="ft_formIV.fv_0013.ct_0000">
-                     <quote>ʔaflaḥ</quote>
-                     <cit type="translation">
-                        <quote>he left</quote>
-                     </cit>
+                  <quote>ʔaflaḥ</quote>
+                  <cit type="translation">
+                     <quote>he left</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0014" status="done" resp="dmp:RZ">
@@ -1198,11 +1191,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <placeName ref="geo:sirhan"/>
                <lang corresp="..\profiles\vicav_profile_SAU-RWA.xml"/>
                <cit type="example" xml:id="ft_formIV.fv_0014.ct_0000">
-                     <quote>ʔaflas</quote>
-                     <cit type="translation">
-                        <quote>he became penniless</quote>
-                     </cit>
+                  <quote>ʔaflas</quote>
+                  <cit type="translation">
+                     <quote>he became penniless</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0015" status="done" resp="dmp:RZ">
@@ -1211,11 +1204,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <placeName ref="geo:riyadh"/>
                <lang corresp="..\profiles\vicav_profile_SAU-RYD.xml"/>
                <cit type="example" xml:id="ft_formIV.fv_0015.ct_0000">
-                     <quote>ʔaflas</quote>
-                     <cit type="translation">
-                        <quote>he became penniless</quote>
-                     </cit>
+                  <quote>ʔaflas</quote>
+                  <cit type="translation">
+                     <quote>he became penniless</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0012" status="done" resp="dmp:RZ">
@@ -1224,14 +1217,14 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <placeName ref="geo:sabt_alalayah"/>
                <lang corresp="..\profiles\vicav_profile_SAU-QRN.xml"/>
                <cit type="example" xml:id="ft_formIV.fv_0012.ct_0000">
-                     <quote>ʔaflaḥ</quote>
-                     <cit type="translation">
-                        <quote>he left</quote>
-                     </cit>
+                  <quote>ʔaflaḥ</quote>
+                  <cit type="translation">
+                     <quote>he left</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
-           
+
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0329" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#formIV_yes"/>
@@ -1239,11 +1232,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <placeName ref="geo:qahaba"/>
                <lang corresp="..\profiles\vicav_profile_SAU-QHB.xml"/>
                <cit type="example" xml:id="ft_formIV.fv_0329.ct_0000">
-                     <quote>yiǵbil</quote>
-                     <cit type="translation">
-                        <quote>he will arrive</quote>
-                     </cit>
+                  <quote>yiǵbil</quote>
+                  <cit type="translation">
+                     <quote>he will arrive</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0331" status="done" resp="dmp:RZ">
@@ -1252,11 +1245,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <placeName ref="geo:bukayriya"/>
                <lang corresp="..\profiles\vicav_profile_SAU-QSM.xml"/>
                <cit type="example" xml:id="ft_formIV.fv_0331.ct_0000">
-                     <quote>ʔaflas</quote>
-                     <cit type="translation">
-                        <quote>he became penniless</quote>
-                     </cit>
+                  <quote>ʔaflas</quote>
+                  <cit type="translation">
+                     <quote>he became penniless</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0332" status="done" resp="dmp:RZ">
@@ -1265,11 +1258,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <placeName ref="geo:qawz"/>
                <lang corresp="..\profiles\vicav_profile_SAU-QWZ.xml"/>
                <cit type="example" xml:id="ft_formIV.fv_0332.ct_0000">
-                     <quote>ʔaflaḥ</quote>
-                     <cit type="translation">
-                        <quote>he left</quote>
-                     </cit>
+                  <quote>ʔaflaḥ</quote>
+                  <cit type="translation">
+                     <quote>he left</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0327" status="done" resp="dmp:RZ">
@@ -1278,14 +1271,14 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <placeName ref="geo:tanuma"/>
                <lang corresp="..\profiles\vicav_profile_SAU-TAN.xml"/>
                <cit type="example" xml:id="ft_formIV.fv_0327.ct_0000">
-                     <quote>yifliḥ</quote>
-                     <cit type="translation">
-                        <quote>he will go away</quote>
-                     </cit>
+                  <quote>yifliḥ</quote>
+                  <cit type="translation">
+                     <quote>he will go away</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
-            
+
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0231" status="draft" resp="dmp:RZ">
                <name type="featureValue" ref=""/>
@@ -1301,11 +1294,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <placeName ref="geo:andalusia"/>
                <lang corresp="..\profiles\vicav_profile_ESP-ADL.xml"/>
                <cit type="example" xml:id="ft_formIV.fv_0001.ct_0000">
-                     <quote>axṣayt</quote>
-                     <cit type="translation">
-                        <quote>I castrated</quote>
-                     </cit>
+                  <quote>axṣayt</quote>
+                  <cit type="translation">
+                     <quote>I castrated</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0226" status="done" resp="dmp:SK">
@@ -1449,11 +1442,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <lang corresp="..\profiles\vicav_profile_EGY-AGL.xml"/>
                <personGrp role="tribe" corresp="pgr:agaylah"/>
                <cit type="example" xml:id="ft_formIV.fv_0132.ct_0000">
-                     <quote>abʕad, yibʕad</quote>
-                     <cit type="translation">
-                        <quote>go away</quote>
-                     </cit>
+                  <quote>abʕad, yibʕad</quote>
+                  <cit type="translation">
+                     <quote>go away</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0135" status="done" resp="dmp:SK">
@@ -1463,11 +1456,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <lang corresp="..\profiles\vicav_profile_EGY-BLL.xml"/>
                <personGrp role="tribe" corresp="pgr:biliy"/>
                <cit type="example" xml:id="ft_formIV.fv_0135.ct_0000">
-                     <quote>aṭlag, yiṭlig</quote>
-                     <cit type="translation">
-                        <quote>let cover (a she camel)</quote>
-                     </cit>
+                  <quote>aṭlag, yiṭlig</quote>
+                  <cit type="translation">
+                     <quote>let cover (a she camel)</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0137" status="done" resp="dmp:SK">
@@ -1486,11 +1479,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <lang corresp="..\profiles\vicav_profile_EGY-DWG.xml"/>
                <personGrp role="tribe" corresp="pgr:dawaghrah"/>
                <cit type="example" xml:id="ft_formIV.fv_0139.ct_0000">
-                     <quote>arkab, yirkib</quote>
-                     <cit type="translation">
-                        <quote>let (someone) mount</quote>
-                     </cit>
+                  <quote>arkab, yirkib</quote>
+                  <cit type="translation">
+                     <quote>let (someone) mount</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0146" status="done" resp="dmp:SK">
@@ -1500,11 +1493,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <lang corresp="..\profiles\vicav_profile_EGY-HYW.xml"/>
                <personGrp role="tribe" corresp="pgr:ahaywat"/>
                <cit type="example" xml:id="ft_formIV.fv_0146.ct_0000">
-                     <quote>aṭlag, yiṭlig</quote>
-                     <cit type="translation">
-                        <quote>let cover (a she camel)</quote>
-                     </cit>
+                  <quote>aṭlag, yiṭlig</quote>
+                  <cit type="translation">
+                     <quote>let cover (a she camel)</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0150" status="done" resp="dmp:SK">
@@ -1514,11 +1507,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <lang corresp="..\profiles\vicav_profile_EGY-RML.xml"/>
                <personGrp role="tribe" corresp="pgr:rmelat"/>
                <cit type="example" xml:id="ft_formIV.fv_0150.ct_0000">
-                     <quote>aṭlag, yiṭlig</quote>
-                     <cit type="translation">
-                        <quote>let cover (a she camel)</quote>
-                     </cit>
+                  <quote>aṭlag, yiṭlig</quote>
+                  <cit type="translation">
+                     <quote>let cover (a she camel)</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0152" status="done" resp="dmp:SK">
@@ -1528,12 +1521,12 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <lang corresp="..\profiles\vicav_profile_EGY-SMN.xml"/>
                <personGrp role="tribe" corresp="pgr:samanah"/>
                <cit type="example" xml:id="ft_formIV.fv_0152.ct_0000">
-                     <quote>yirkib</quote>
-                     <cit type="translation">
-                        <quote>make mount, ride</quote>
-                     </cit>
+                  <quote>yirkib</quote>
+                  <cit type="translation">
+                     <quote>make mount, ride</quote>
                   </cit>
-                  <note type="general">Although type-4-forms were recorded "there is no real evidence that the fourth measure is productive since perfect forms of the aC1C2aC3-type were not recorded", neither participles.</note>
+               </cit>
+               <note type="general">Although type-4-forms were recorded "there is no real evidence that the fourth measure is productive since perfect forms of the aC1C2aC3-type were not recorded", neither participles.</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0153" status="done" resp="dmp:SK">
@@ -1543,11 +1536,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <lang corresp="..\profiles\vicav_profile_EGY-SWR.xml"/>
                <personGrp role="tribe" corresp="pgr:sawarkah"/>
                <cit type="example" xml:id="ft_formIV.fv_0153.ct_0000">
-                     <quote>aṭlag, yiṭlig</quote>
-                     <cit type="translation">
-                        <quote>let cover (a she camel)</quote>
-                     </cit>
+                  <quote>aṭlag, yiṭlig</quote>
+                  <cit type="translation">
+                     <quote>let cover (a she camel)</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0156" status="done" resp="dmp:SK">
@@ -1557,11 +1550,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <lang corresp="..\profiles\vicav_profile_EGY-XRS.xml"/>
                <personGrp role="tribe" corresp="pgr:axarsah"/>
                <cit type="example" xml:id="ft_formIV.fv_0156.ct_0000">
-                     <quote>aṭligha</quote>
-                     <cit type="translation">
-                        <quote>I let her</quote>
-                     </cit>
+                  <quote>aṭligha</quote>
+                  <cit type="translation">
+                     <quote>I let her</quote>
                   </cit>
+               </cit>
                <note type="general">Occurs in imperfect only</note>
             </wib:featureValueObservation>
 
@@ -1608,11 +1601,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <lang corresp="..\profiles\vicav_profile_EGY-ASD.xml"/>
                <personGrp role="tribe" corresp="pgr:awlad_said"/>
                <cit type="example" xml:id="ft_formIV.fv_0133.ct_0000">
-                     <quote>afṭar, yifṭir</quote>
-                     <cit type="translation">
-                        <quote>having breakfast</quote>
-                     </cit>
+                  <quote>afṭar, yifṭir</quote>
+                  <cit type="translation">
+                     <quote>having breakfast</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0134" status="done" resp="dmp:SK">
@@ -1622,11 +1615,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <lang corresp="..\profiles\vicav_profile_EGY-BDA.xml"/>
                <personGrp role="tribe" corresp="pgr:badarah"/>
                <cit type="example" xml:id="ft_formIV.fv_0134.ct_0000">
-                     <quote>arkab, yirkib</quote>
-                     <cit type="translation">
-                        <quote>cause (someone) to ride</quote>
-                     </cit>
+                  <quote>arkab, yirkib</quote>
+                  <cit type="translation">
+                     <quote>cause (someone) to ride</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0136" status="done" resp="dmp:SK">
@@ -1636,11 +1629,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <lang corresp="..\profiles\vicav_profile_EGY-BWS.xml"/>
                <personGrp role="tribe" corresp="pgr:bani_wasil"/>
                <cit type="example" xml:id="ft_formIV.fv_0136.ct_0000">
-                     <quote>afṭar, yifṭir</quote>
-                     <cit type="translation">
-                        <quote>having breakfast</quote>
-                     </cit>
+                  <quote>afṭar, yifṭir</quote>
+                  <cit type="translation">
+                     <quote>having breakfast</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0138" status="done" resp="dmp:SK">
@@ -1650,11 +1643,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <lang corresp="..\profiles\vicav_profile_EGY-DBR.xml"/>
                <personGrp role="tribe" corresp="pgr:dbur"/>
                <cit type="example" xml:id="ft_formIV.fv_0138.ct_0000">
-                     <quote>arkab, yirkib</quote>
-                     <cit type="translation">
-                        <quote>cause (someone) to ride</quote>
-                     </cit>
+                  <quote>arkab, yirkib</quote>
+                  <cit type="translation">
+                     <quote>cause (someone) to ride</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0140" status="done" resp="dmp:SK">
@@ -1664,11 +1657,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <lang corresp="..\profiles\vicav_profile_EGY-GBL.xml"/>
                <personGrp role="tribe" corresp="pgr:jbaliyyah"/>
                <cit type="example" xml:id="ft_formIV.fv_0140.ct_0000">
-                     <quote>afṭar, yifṭir</quote>
-                     <cit type="translation">
-                        <quote>having breakfast</quote>
-                     </cit>
+                  <quote>afṭar, yifṭir</quote>
+                  <cit type="translation">
+                     <quote>having breakfast</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0142" status="done" resp="dmp:SK">
@@ -1678,11 +1671,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <lang corresp="..\profiles\vicav_profile_EGY-GRG.xml"/>
                <personGrp role="tribe" corresp="pgr:jarajrah"/>
                <cit type="example" xml:id="ft_formIV.fv_0142.ct_0000">
-                     <quote>arkab, yirkib</quote>
-                     <cit type="translation">
-                        <quote>cause (someone) to ride</quote>
-                     </cit>
+                  <quote>arkab, yirkib</quote>
+                  <cit type="translation">
+                     <quote>cause (someone) to ride</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0143" status="done" resp="dmp:SK">
@@ -1692,11 +1685,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <lang corresp="..\profiles\vicav_profile_EGY-GRR.xml"/>
                <personGrp role="tribe" corresp="pgr:gararshah"/>
                <cit type="example" xml:id="ft_formIV.fv_0143.ct_0000">
-                     <quote>afṭar, yifṭir</quote>
-                     <cit type="translation">
-                        <quote>having breakfast</quote>
-                     </cit>
+                  <quote>afṭar, yifṭir</quote>
+                  <cit type="translation">
+                     <quote>having breakfast</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0144" status="done" resp="dmp:SK">
@@ -1706,11 +1699,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <lang corresp="..\profiles\vicav_profile_EGY-HMD.xml"/>
                <personGrp role="tribe" corresp="pgr:hamadah"/>
                <cit type="example" xml:id="ft_formIV.fv_0144.ct_0000">
-                     <quote>afṭar, yifṭir</quote>
-                     <cit type="translation">
-                        <quote>having breakfast</quote>
-                     </cit>
+                  <quote>afṭar, yifṭir</quote>
+                  <cit type="translation">
+                     <quote>having breakfast</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0145" status="done" resp="dmp:SK">
@@ -1720,11 +1713,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <lang corresp="..\profiles\vicav_profile_EGY-HWT.xml"/>
                <personGrp role="tribe" corresp="pgr:hwetat_egypt"/>
                <cit type="example" xml:id="ft_formIV.fv_0145.ct_0000">
-                     <quote>arkab, yirkib</quote>
-                     <cit type="translation">
-                        <quote>cause (someone) to ride</quote>
-                     </cit>
+                  <quote>arkab, yirkib</quote>
+                  <cit type="translation">
+                     <quote>cause (someone) to ride</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0147" status="done" resp="dmp:SK">
@@ -1734,11 +1727,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <lang corresp="..\profiles\vicav_profile_EGY-LGT.xml"/>
                <personGrp role="tribe" corresp="pgr:legat"/>
                <cit type="example" xml:id="ft_formIV.fv_0147.ct_0000">
-                     <quote>afṭar, yifṭir</quote>
-                     <cit type="translation">
-                        <quote>having breakfast</quote>
-                     </cit>
+                  <quote>afṭar, yifṭir</quote>
+                  <cit type="translation">
+                     <quote>having breakfast</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0148" status="done" resp="dmp:SK">
@@ -1748,11 +1741,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <lang corresp="..\profiles\vicav_profile_EGY-MLH.xml"/>
                <personGrp role="tribe" corresp="pgr:malalhah"/>
                <cit type="example" xml:id="ft_formIV.fv_0148.ct_0000">
-                     <quote>arkab, yirkib</quote>
-                     <cit type="translation">
-                        <quote>cause (someone) to ride</quote>
-                     </cit>
+                  <quote>arkab, yirkib</quote>
+                  <cit type="translation">
+                     <quote>cause (someone) to ride</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0149" status="done" resp="dmp:SK">
@@ -1762,11 +1755,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <lang corresp="..\profiles\vicav_profile_EGY-MZN.xml"/>
                <personGrp role="tribe" corresp="pgr:mzenah"/>
                <cit type="example" xml:id="ft_formIV.fv_0149.ct_0000">
-                     <quote>afṭar, yifṭir</quote>
-                     <cit type="translation">
-                        <quote>having breakfast</quote>
-                     </cit>
+                  <quote>afṭar, yifṭir</quote>
+                  <cit type="translation">
+                     <quote>having breakfast</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0151" status="done" resp="dmp:SK">
@@ -1776,11 +1769,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <lang corresp="..\profiles\vicav_profile_EGY-SLH.xml"/>
                <personGrp role="tribe" corresp="pgr:sawalhah"/>
                <cit type="example" xml:id="ft_formIV.fv_0151.ct_0000">
-                     <quote>afṭar, yifṭir</quote>
-                     <cit type="translation">
-                        <quote>having breakfast</quote>
-                     </cit>
+                  <quote>afṭar, yifṭir</quote>
+                  <cit type="translation">
+                     <quote>having breakfast</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0154" status="done" resp="dmp:SK">
@@ -1790,11 +1783,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <lang corresp="..\profiles\vicav_profile_EGY-TRB.xml"/>
                <personGrp role="tribe" corresp="pgr:tarabin"/>
                <cit type="example" xml:id="ft_formIV.fv_0154.ct_0000">
-                     <quote>arkab, yirkib</quote>
-                     <cit type="translation">
-                        <quote>cause (someone) to ride</quote>
-                     </cit>
+                  <quote>arkab, yirkib</quote>
+                  <cit type="translation">
+                     <quote>cause (someone) to ride</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0155" status="done" resp="dmp:SK">
@@ -1804,11 +1797,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <lang corresp="..\profiles\vicav_profile_EGY-TYH.xml"/>
                <personGrp role="tribe" corresp="pgr:tayaha"/>
                <cit type="example" xml:id="ft_formIV.fv_0155.ct_0000">
-                     <quote>arkab, yirkib</quote>
-                     <cit type="translation">
-                        <quote>cause (someone) to ride</quote>
-                     </cit>
+                  <quote>arkab, yirkib</quote>
+                  <cit type="translation">
+                     <quote>cause (someone) to ride</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0184" status="draft" resp="dmp:SK">
@@ -1831,12 +1824,12 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <placeName ref="geo:maiduguri"/>
                <lang corresp="..\profiles\vicav_profile_NGA-NGA.xml"/>
                <cit type="example" xml:id="ft_formIV.fv_0180.ct_0000">
-                     <quote>ársal</quote>
-                     <cit type="translation">
-                        <quote>send</quote>
-                     </cit>
+                  <quote>ársal</quote>
+                  <cit type="translation">
+                     <quote>send</quote>
                   </cit>
-                  <note type="general">Only 4 forms were recorded, ársal, ásbaḥ (spend night), áršad (come of age), ámsa (become night), any only in the perfect. In the imperfect they fall into form-1 shapes.</note>
+               </cit>
+               <note type="general">Only 4 forms were recorded, ársal, ásbaḥ (spend night), áršad (come of age), ámsa (become night), any only in the perfect. In the imperfect they fall into form-1 shapes.</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0188" status="draft" resp="dmp:SK">
@@ -2217,11 +2210,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <lang corresp="..\profiles\vicav_profile_MRT-HSS.xml"/>
                <note type="general">IV with the prefix sa-</note>
                <cit type="example" xml:id="ft_formIV.fv_0259.ct_0000">
-                     <quote>saʕṛab</quote>
-                     <cit type="translation">
-                        <quote>to arabize</quote>
-                     </cit>
+                  <quote>saʕṛab</quote>
+                  <cit type="translation">
+                     <quote>to arabize</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_formIV.fv_0272" status="done" resp="dmp:TD">
@@ -2546,11 +2539,11 @@ tạ ʿʿam «nourrir» mais également entre les formes IV et I dans ʾasga ~ s
                <placeName ref="geo:manakhah"/>
                <lang corresp="..\profiles\vicav_profile_YEM-MAN.xml"/>
                <cit type="example" xml:id="ft_formIV.fv_0304.ct_0000">
-                     <quote>arsal</quote>
-                     <cit type="translation">
-                        <quote>to send</quote>
-                     </cit>
+                  <quote>arsal</quote>
+                  <cit type="translation">
+                     <quote>to send</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
          </div>
