@@ -5,11 +5,11 @@
 <?processor name="saxon" removePreserveFromXML="true" removePreserveFromXSLT="true"?>
 <?attributeAssignments fn="enricher_attributes.xml" path="{filePath}\..\..\880_conf\"?>
 <?shortCuts fn="wibarab_shortCuts" path="{filePath}\..\..\880_conf\"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../../804_xsd/1.0.1/featuredb.xsd" xml:id="ft_template">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../../804_xsd/1.0.1/featuredb.xsd" xml:id="ft_fut_mar">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Variants of 1st person plural communis pronoun</title>
+            <title>Variants of the Future Marker</title>
             <author>Veronika Engler</author>
          </titleStmt>
          <publicationStmt>
@@ -17,7 +17,7 @@
             <date when="2022-10-03"/>
          </publicationStmt>
          <sourceDesc>
-            <p>This is the feature-file for the 1st person plural communis pronoun.</p>
+            <p>his is the feature-file for the Future marker  (e.g. raḥ, ḥ-, b- ...).</p>
          </sourceDesc>
       </fileDesc>
 
@@ -48,11 +48,18 @@
          <div type="featureDescription">
             <head>Feature Values</head>
             <list type="featureValues">
-               <item xml:id="pr_s2f_inti">
-                  <label>inti/enti</label>
+               <item xml:id="fut_mar_b">
+                  <label>b-</label>
                   <desc></desc>
                </item>
-               
+                <item xml:id="fut_mar_rah">
+                  <label>raḥ</label>
+                  <desc></desc>
+               </item>
+                <item xml:id="fut_mar_h">
+                  <label>ḥ-</label>
+                  <desc></desc>
+               </item>
             </list>
          </div>
          <div type="description">
@@ -2111,20 +2118,6 @@
                <placeName ref="geo:qashqadaryo_region"/>
                <lang corresp="..\profiles\vicav_profile_UZB-QDY.xml"/>
             </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_template.fv_0066" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:al-rawi_1990_3236" type="publication"/>
-               <placeName ref="geo:abu_dhabi"/>
-               <lang corresp="..\profiles\vicav_profile_UAE-ABU.xml"/>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_template.fv_0067" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:cheung_leung_2020_5095" type="publication"/>
-               <placeName ref="geo:dubai"/>
-               <lang corresp="..\profiles\vicav_profile_UAE-DUB.xml"/>
-            </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_template.fv_0130" status="draft" resp="dmp:TD">
                <name type="featureValue" ref=""/>
@@ -2439,13 +2432,6 @@
                <bibl corresp="zot:shaaban_1977_7730" type="publication"/>
                <placeName ref="geo:muscat"/>
                <lang corresp="..\profiles\vicav_profile_OMN-MSQ.xml"/>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_template.fv_0064" status="draft" resp="dmp:VE">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:leitnerbettega_2023_0000" type="publication"/>
-               <placeName ref="geo:masira"/>
-               <lang corresp="..\profiles\vicav_profile_OMN-MSR.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_template.fv_0312" status="draft" resp="dmp:VE">
