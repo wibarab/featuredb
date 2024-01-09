@@ -5,11 +5,11 @@
 <?processor name="saxon" removePreserveFromXML="true" removePreserveFromXSLT="true"?>
 <?attributeAssignments fn="enricher_attributes.xml" path="{filePath}\..\..\880_conf\"?>
 <?shortCuts fn="wibarab_shortCuts" path="{filePath}\..\..\880_conf\"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../../804_xsd/1.0.1/featuredb.xsd" xml:id="ft_template">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../../804_xsd/1.0.1/featuredb.xsd" xml:id="ft_verb_neg">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Variants of 1st person plural communis pronoun</title>
+            <title>Variants of the Verbal Negation</title>
             <author>Veronika Engler</author>
          </titleStmt>
          <publicationStmt>
@@ -17,7 +17,7 @@
             <date when="2022-10-03"/>
          </publicationStmt>
          <sourceDesc>
-            <p>This is the feature-file for the 1st person plural communis pronoun.</p>
+            <p>This is the feature-file for the Verbal negation (particle) - ma_verb-š,  ma_verb, verb-š.</p>
          </sourceDesc>
       </fileDesc>
 
@@ -48,11 +48,18 @@
          <div type="featureDescription">
             <head>Feature Values</head>
             <list type="featureValues">
-               <item xml:id="pr_s2f_inti">
-                  <label>inti/enti</label>
+               <item xml:id="verb_neg_verb-sh">
+                  <label>verb-š</label>
                   <desc></desc>
                </item>
-               
+               <item xml:id="verb_neg_ma_verb-sh">
+                  <label>ma verb-š</label>
+                  <desc></desc>
+               </item>
+               <item xml:id="verb_neg_ma_verb">
+                  <label>ma verb</label>
+                  <desc></desc>
+               </item>
             </list>
          </div>
          <div type="description">
