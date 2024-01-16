@@ -60,6 +60,10 @@
                   <label>ma verb</label>
                   <desc></desc>
                </item>
+                <item xml:id="verb_neg_la_verb">
+                  <label>la verb</label>
+                  <desc></desc>
+               </item>
                <item xml:id="verb_neg_moo_verb">
                   <label>mō verb</label>
                   <desc></desc>
@@ -1116,18 +1120,27 @@
                   </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_verb_neg.fv_0230" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:harrama_1993_0000" type="publication"/>
-               <placeName ref="geo:al_jabal"/>
-               <lang corresp="..\profiles\vicav_profile_LBY-JBL.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_verb_neg.fv_0320" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:holes_1990_0000" type="publication" cert="unknown"/>
+            
+            <wib:featureValueObservation xml:id="ft_verb_neg.fv_0320" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#verb_neg_ma_verb"/>
+               <bibl corresp="zot:qafisheh_1977_3210" type="publication" cert="unknown"/>
                <placeName ref="geo:gulf"/>
                <lang corresp="..\profiles\vicav_profile_SAU-GLF.xml"/>
+               <cit type="example" xml:id="ft_verb_neg.fv_0320.ct_0000">
+                     <quote>l-mudīr ma ygaṣṣir</quote>
+                     <cit type="translation">
+                        <quote>The director does his best (towards others)</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_verb_neg.fv_0073" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#verb_neg_la_verb"/>
+               <bibl corresp="zot:qafisheh_1977_3210" type="publication" cert="unknown"/>
+               <placeName ref="geo:gulf"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-GLF.xml"/>
+               <note type="general">This is less frequently attested than ma + verb</note>
+               <note type="general">Only ma + verb can be used with imperfect tense verb that have a sense of passive-potential, e.g. karš ma yintiris 'a belly that cannot be filled' </note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_verb_neg.fv_0324" status="done" resp="dmp:RZ">
