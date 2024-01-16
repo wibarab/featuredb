@@ -68,8 +68,16 @@
                   <label>raḥ</label>
                   <desc></desc>
                </item>
+               <item xml:id="fut_mar_raah">
+                  <label>rāḥ</label>
+                  <desc></desc>
+               </item>
                 <item xml:id="fut_mar_h">
                   <label>ḥ-</label>
+                  <desc></desc>
+               </item>
+               <item xml:id="fut_mar_normalh">
+                  <label>h-</label>
                   <desc></desc>
                </item>
             </list>
@@ -739,11 +747,30 @@
                <lang corresp="..\profiles\vicav_profile_TUR-SII.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0157" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:" type="publication"/>
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0157" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#fut_mar_b"/>
+               <bibl corresp="zot:salonen_1980_0001" type="publication"/>
                <placeName ref="geo:gaza"/>
                <lang corresp="..\profiles\vicav_profile_PSE-GZA.xml"/>
+               <cit type="example" xml:id="ft_fut_mar.fv_0157.ct_0000">
+                     <quote>bnitgābal f-il-dār</quote>
+                     <cit type="translation">
+                        <quote>We will meet in the house.</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0066" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#fut_mar_normalh"/>
+               <bibl corresp="zot:salonen_1980_0001" type="publication"/>
+               <placeName ref="geo:gaza"/>
+               <lang corresp="..\profiles\vicav_profile_PSE-GZA.xml"/>
+               <cit type="example" xml:id="ft_fut_mar.fv_0157.ct_0001">
+                     <quote>humma miš hayttifgū</quote>
+                     <cit type="translation">
+                        <quote>They will not agree.</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_fut_mar.fv_0168" status="draft" resp="dmp:CL">
@@ -852,11 +879,18 @@
                <lang corresp="..\profiles\vicav_profile_SYR-DAM.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0112" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0112" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#fut_mar_raah"/>
                <bibl corresp="zot:leitner_2022_2410" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
                <placeName ref="geo:khuzestan"/>
                <lang corresp="..\profiles\vicav_profile_IRN-KHU.xml"/>
+               <cit type="example" xml:id="ft_fut_mar.fv_0112.ct_0000">
+                     <quote>šlōn rāḥ yṣīṛ əš-šaṭṭ?</quote>
+                     <cit type="translation">
+                        <quote>What will happen with the river?</quote>
+                     </cit>
+                  </cit>
+               <note type="general">The ap form rāyəḥ f rāyḥa is also used to express future intent and occurs once in my corpus (āna rāyḥa (a)sawwī-lak ‘I will make (for) you …’).</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_fut_mar.fv_0114" status="draft" resp="dmp:CL">
@@ -1007,13 +1041,7 @@
                <lang corresp="..\profiles\vicav_profile_LBY-MSR.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0232" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:DAnna_2021_9340" type="publication"/>
-               <placeName ref="geo:yefren"/>
-               <lang corresp="..\profiles\vicav_profile_LBY-JYN.xml"/>
-               <personGrp role="religion" corresp="pgr:jews"/>
-            </wib:featureValueObservation>
+            
 
             <wib:featureValueObservation xml:id="ft_fut_mar.fv_0230" status="draft" resp="dmp:RZ">
                <name type="featureValue" ref=""/>
