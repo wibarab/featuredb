@@ -61,6 +61,10 @@
                   <label>ma</label>
                   <desc></desc>
                </item>
+               <item xml:id="pred_neg_mub">
+                  <label>mub</label>
+                  <desc></desc>
+               </item>
             </list>
             </list>
          </div>
@@ -1034,11 +1038,26 @@
                <personGrp role="religion" corresp="#shiites"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0002" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:holes_2007_5886" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0002" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#pred_neg_muu"/>
+               <bibl corresp="zot:johnstone_1967_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
                <placeName ref="geo:kuwait_city"/>
                <lang corresp="..\profiles\vicav_profile_KWT-KWC.xml"/>
+               <cit type="example" xml:id="ft_pred_neg.fv_0002.ct_0000">
+                     <quote>mu zēn</quote>
+                     <cit type="translation">
+                        <quote>not good, bad</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">"Occasionally this negative varies for gender in the singular: mu (mhu) zeen, mi (mhi) zeena." (Johnstone 1967:148)</note>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0064" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#pred_neg_mub"/>
+               <bibl corresp="zot:johnstone_1967_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:kuwait_city"/>
+               <lang corresp="..\profiles\vicav_profile_KWT-KWC.xml"/>
+                  <note type="general">This is less frequently attested than mu</note>
             </wib:featureValueObservation>
                                     
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0057" status="draft" resp="dmp:RZ">
