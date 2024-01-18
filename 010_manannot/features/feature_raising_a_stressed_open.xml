@@ -49,7 +49,7 @@
             <head>Feature Values</head>
             <list type="featureValues">
                <item xml:id="raisinga_so_a_to_i">
-                  <label>a &gt; i	sikat and a &gt; u gumar</label>
+                  <label>a < i	sikat and a < u gumar</label>
                   <desc/>
                </item>
                <item xml:id="raisinga_so_a_to_i1">
@@ -57,7 +57,7 @@
                   <desc/>
                </item>
                <item xml:id="raisinga_so_A_to_I2">
-                  <label>A &gt; I   sikát and a&gt;u </label>
+                  <label>A < I   sikát and a<u </label>
                   <desc/>
                </item>
                <item xml:id="raisinga_so_A_to_A1">
@@ -65,19 +65,19 @@
                   <desc/>
                </item>
                <item xml:id="raisinga_so_a_to_a">
-                  <label>a &gt; a   sakat</label>
+                  <label>a < a   sakat</label>
                   <desc/>
                </item>
                <item xml:id="raisinga_so_a_to_zero">
-                  <label>A &gt; -   skat</label>
+                  <label>A < -   skat</label>
                   <desc/>
                </item>
                <item xml:id="raisinga_so_a_to_schwa">
-                  <label>A &gt; ə səkat</label>
+                  <label>A < ə səkat</label>
                   <desc/>
                </item>
                <item xml:id="raisinga_a_i_become_schwa">
-                  <label>a &gt; a and i become schwa for the Maghreb</label>
+                  <label>a < a and i become schwa for the Maghreb</label>
                   <desc>Relevant to the Maghreb only</desc>
                </item>
             </list>
@@ -86,23 +86,23 @@
          </div>
 
          <div xmlns:tei="http://www.tei-c.org/ns/1.0" type="featureValueObservations">
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0050" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="" type="fieldwork"/>
-               <placeName ref="geo:ed_dhayra"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-ARA.xml"/>
-               <personGrp role="tribe" corresp="pgr:aramsha_lebanon"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0063" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
+          
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0063" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
                <bibl corresp="" type="fieldwork"/>
                <placeName ref="geo:khalde"/>
                <lang corresp="..\profiles\vicav_profile_LBN-KHA.xml"/>
                <personGrp role="tribe" corresp="pgr:arab_xalde"/>
+               
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0063.ct_0000">
+                     <quote>nizal</quote>
+                     <cit type="translation">
+                        <quote>he went down</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0071" status="draft" resp="dmp:AID">
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0071" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#raisinga_so_a_to_i"/>
                <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
                <placeName ref="geo:naameh"/>
@@ -146,7 +146,7 @@
                </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0016" status="draft" resp="dmp:AID">
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0016" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#raisinga_so_a_to_a"/>
                <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
                <placeName ref="geo:naameh"/>
@@ -215,7 +215,7 @@
                </cit>
                <note type="general">Deducted from examples</note>
                <note type="general">Behnstedt and Geva-Kleinberger 2019:55 note that: “Raising of *a in *C1aC2aC3 to /i/ or /u/, C1 not being a back consonant such as
-                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak &gt; símač, sabab &gt; síbab, and bagar &gt; búgar.
+                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak < símač, sabab < síbab, and bagar < búgar.
                   The phenomenon is well-known in all Bedouin dialects of the peninsula and need not be discussed in detail here. It is absent in ruralite C, G and M dialects.”</note>
 
             </wib:featureValueObservation>
@@ -240,7 +240,7 @@
                </cit>
                <note type="general">Deducted from examples</note>
                <note type="general">Behnstedt and Geva-Kleinberger 2019:55 note that: “Raising of *a in *C1aC2aC3 to /i/ or /u/, C1 not being a back consonant such as
-                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak &gt; símač, sabab &gt; síbab, and bagar &gt; búgar.
+                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak < símač, sabab < síbab, and bagar < búgar.
                   The phenomenon is well-known in all Bedouin dialects of the peninsula and need not be discussed in detail here. It is absent in ruralite C, G and M dialects.”</note>
             </wib:featureValueObservation>
 
@@ -264,15 +264,21 @@
                </cit>
                <note type="general">Deducted from examples</note>
                <note type="general">Behnstedt and Geva-Kleinberger 2019:55 note that: “Raising of *a in *C1aC2aC3 to /i/ or /u/, C1 not being a back consonant such as
-                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak &gt; símač, sabab &gt; síbab, and bagar &gt; búgar.
+                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak < símač, sabab < síbab, and bagar < búgar.
                   The phenomenon is well-known in all Bedouin dialects of the peninsula and need not be discussed in detail here. It is absent in ruralite C, G and M dialects.”</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0026" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0026" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
                <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
                <placeName ref="geo:haifa"/>
                <lang corresp="..\profiles\vicav_profile_ISR-HAI.xml"/>
+               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0026.ct_0000">
+                     <quote>katab</quote>
+                     <cit type="translation">
+                        <quote>he wrote</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0031" status="done" resp="dmp:AID">
@@ -296,7 +302,7 @@
                </cit>
                <note type="general">Deducted from examples</note>
                <note type="general">Behnstedt and Geva-Kleinberger 2019:55 note that: “Raising of *a in *C1aC2aC3 to /i/ or /u/, C1 not being a back consonant such as
-                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak &gt; símač, sabab &gt; síbab, and bagar &gt; búgar.
+                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak < símač, sabab < síbab, and bagar < búgar.
                   The phenomenon is well-known in all Bedouin dialects of the peninsula and need not be discussed in detail here. It is absent in ruralite C, G and M dialects.”</note>
             </wib:featureValueObservation>
 
@@ -314,7 +320,7 @@
                </cit>
                <note type="general">Deducted from example</note>
                <note type="general">Behnstedt and Geva-Kleinberger 2019:55 note that: “Raising of *a in *C1aC2aC3 to /i/ or /u/, C1 not being a back consonant such as
-                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak &gt; símač, sabab &gt; síbab, and bagar &gt; búgar.
+                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak < símač, sabab < síbab, and bagar < búgar.
                   The phenomenon is well-known in all Bedouin dialects of the peninsula and need not be discussed in detail here. It is absent in ruralite C, G and M dialects.”</note>
             </wib:featureValueObservation>
 
@@ -333,7 +339,7 @@
                </cit>
                <note type="general">Deducted from example</note>
                <note type="general">Behnstedt and Geva-Kleinberger 2019:55 note that: “Raising of *a in *C1aC2aC3 to /i/ or /u/, C1 not being a back consonant such as
-                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak &gt; símač, sabab &gt; síbab, and bagar &gt; búgar.
+                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak < símač, sabab < síbab, and bagar < búgar.
                   The phenomenon is well-known in all Bedouin dialects of the peninsula and need not be discussed in detail here. It is absent in ruralite C, G and M dialects.”</note>
             </wib:featureValueObservation>
 
@@ -357,7 +363,7 @@
                </cit>
                <note type="general">Deducted from example</note>
                <note type="general">Behnstedt and Geva-Kleinberger 2019:55 note that: “Raising of *a in *C1aC2aC3 to /i/ or /u/, C1 not being a back consonant such as
-                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak &gt; símač, sabab &gt; síbab, and bagar &gt; búgar.
+                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak < símač, sabab < síbab, and bagar < búgar.
                   The phenomenon is well-known in all Bedouin dialects of the peninsula and need not be discussed in detail here. It is absent in ruralite C, G and M dialects.”</note>
             </wib:featureValueObservation>
 
@@ -382,7 +388,7 @@
                </cit>
                <note type="general">Deducted from example</note>
                <note type="general">Behnstedt and Geva-Kleinberger 2019:55 note that: “Raising of *a in *C1aC2aC3 to /i/ or /u/, C1 not being a back consonant such as
-                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak &gt; símač, sabab &gt; síbab, and bagar &gt; búgar.
+                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak < símač, sabab < síbab, and bagar < búgar.
                   The phenomenon is well-known in all Bedouin dialects of the peninsula and need not be discussed in detail here. It is absent in ruralite C, G and M dialects.”</note>
 
             </wib:featureValueObservation>
@@ -422,7 +428,7 @@
                </cit>
                <note type="general">Deducted from example</note>
                <note type="general">Behnstedt and Geva-Kleinberger 2019:55 note that: “Raising of *a in *C1aC2aC3 to /i/ or /u/, C1 not being a back consonant such as
-                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak &gt; símač, sabab &gt; síbab, and bagar &gt; búgar.
+                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak < símač, sabab < síbab, and bagar < búgar.
                   The phenomenon is well-known in all Bedouin dialects of the peninsula and need not be discussed in detail here. It is absent in ruralite C, G and M dialects.”</note>
             </wib:featureValueObservation>
 
@@ -1520,7 +1526,7 @@
                   </cit>
                </cit>
                <note type="general">'Except in definable phonetic contexts, i (ɪ, ə) occurs to the exclusion of a in open, non-final syllables. a occurs in open syllable (a) in the contiguity of the gutturals or where the following consonant is l, n, or r, when at the same time the vowel of the following syllable is a or ā.' (Johnstone 1967:27)</note>
-               <note type="general">'In the contiguity of the labials the vowel i, and also i&gt;a, tends to become u.' (Johnstone 1967:28)</note>
+               <note type="general">'In the contiguity of the labials the vowel i, and also i<a, tends to become u.' (Johnstone 1967:28)</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0323" status="done" resp="dmp:RZ">
@@ -1564,7 +1570,7 @@
                   </cit>
                </cit>
                <note type="general">'Except in definable phonetic contexts, i (ɪ, ə) occurs to the exclusion of a in open, non-final syllables. a occurs in open syllable (a) in the contiguity of the gutturals or where the following consonant is l, n, or r, when at the same time the vowel of the following syllable is a or ā.' (Johnstone 1967:27)</note>
-               <note type="general">'In the contiguity of the labials the vowel i, and also i&gt;a, tends to become u.' (Johnstone 1967:28)</note>
+               <note type="general">'In the contiguity of the labials the vowel i, and also i<a, tends to become u.' (Johnstone 1967:28)</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0325" status="done" resp="dmp:RZ">
@@ -2510,7 +2516,7 @@
                         <quote>south, right</quote>
                      </cit>
                   </cit>
-                  <note type="general">The raising a &gt; u as in búšaḷ or gúṃaṛ as in other Rašīdi varieties is likely to occur, too, unfortunately, Young does not provide any examples to this regard.</note>
+                  <note type="general">The raising a < u as in búšaḷ or gúṃaṛ as in other Rašīdi varieties is likely to occur, too, unfortunately, Young does not provide any examples to this regard.</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0176" status="done" resp="dmp:SK">
