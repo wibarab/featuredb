@@ -69,6 +69,9 @@
                <item xml:id="formVII-VIII_ipf_yi_CtaCiC">
                   <label>yínCaCiC and yíCtaCiC</label>
                </item>
+                <item xml:id="formVII-VIII_ipf_ya_CtaCiC">
+                  <label>yánCaCiC and yáCtaCiC</label>
+               </item>
                <item xml:id="formVII-VIII_ipf_yi_CtiCaC_only">
                   <label>yínCiCaC only</label>
                </item>
@@ -104,6 +107,15 @@
                </item>
                 <item xml:id="formVII-VIII_no-in-use">
                   <label>VII and VIII not in use</label>
+               </item>
+                 <item xml:id="formVII-VIII_ipf_yi_CtaCaC">
+                  <label>yínCaCaC and yíCtaCaC</label>
+               </item>
+                 <item xml:id="formVII-VIII_ipf_yiCta_CaC">
+                  <label>yinCáCaC and yiCtáCaC</label>
+               </item>
+                <item xml:id="formVII-VIII_ipf_yiCtiCaC_nostress">
+                  <label>yinCiCaC and yiCtiCaC no stress indicated</label>
                </item>
             </list>
          </div>
@@ -145,7 +157,7 @@
                         <quote>she/it.f. is cooked</quote>
                      </cit>
                   </cit>
-                  <personGrp role="age" corresp="#old"/>
+                  <personGrp role="ageGroup" corresp="#old"/>
             </wib:featureValueObservation>
             
               <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0065" status="done" resp="dmp:AID">
@@ -167,7 +179,7 @@
                         <quote>he is broken</quote>
                      </cit>
                   </cit>
-                  <personGrp role="age" corresp="#old"/>
+                  <personGrp role="ageGroup" corresp="#old"/>
             </wib:featureValueObservation>
             
               <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0079" status="done" resp="dmp:AID">
@@ -189,8 +201,8 @@
                         <quote>he is hit</quote>
                      </cit>
                   </cit>
-                  <personGrp role="age" corresp="#young"/>
-                  <personGrp role="age" corresp="#middle"/>
+                  <personGrp role="ageGroup" corresp="#young"/>
+                  <personGrp role="ageGroup" corresp="#middle"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0053" status="done" resp="dmp:AID">
@@ -794,15 +806,15 @@
                      <quote>he disagrees</quote>
                   </cit>
                </cit>
-               <note type="general">Forms VII (the n-prefix) derives the passive and also, in the case of some verbs, denotes
+               <note type="general">"Form VII (the n-prefix) derives the passive and also, in the case of some verbs, denotes
                   acquiescence to an action which was precipitated by others, or by a situation, e.g. nṣaraf/yinṣarif lit.
                   ‘to leave’, but in ʿAmmānī (as in the Levant in general) its meaning is similar to British English ‘to
-                  buzz off’. There is considerable variation in the imperfect of this Form among ʿAmmānīs.</note>
-               <note type="exceptionNote">In the speech of the Jordanians, n- prefixed to Form I (both CaCaC and CiCiC) yields as imperfect either
+                  buzz off’. There is considerable variation in the imperfect of this Form among ʿAmmānīs." (Al-Wer 2007:11)</note>
+               <note type="exceptionNote">"In the speech of the Jordanians, n- prefixed to Form I (both CaCaC and CiCiC) yields as imperfect either
                   yinCaCiC, or yinCaCaC, yinkatib ˜ yinkatab, yinšarib ˜ yinšarab. For some speakers of Palestinian
                   origin, resyllabification occurs, yielding yinCCiC, yinktib, yinšrib. It seems that the (originally)
                   Palestinian yinCCiC is leveled out by the third generation, and that the (originally) Jordanian
-                  yinCaCiC ˜ yinCaCaC is undergoing focusing.</note>
+                  yinCaCiC ˜ yinCaCaC is undergoing focusing." (Al-Wer 2007:11)</note>
             </wib:featureValueObservation>
 
 
@@ -901,30 +913,42 @@
                <note type="exceptionNote">No ex for form VIII</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0099" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:blanc_1970_4573" type="publication" status="CHECKME"><!--checked--></bibl>
+            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0099" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yi_CtiCiC"/>
+               <bibl corresp="zot:blanc_1970_0000" type="publication" status="CHECKME"><!--checked--></bibl>
                <placeName ref="geo:negev"/>
                <lang corresp="..\profiles\vicav_profile_NEG-ZLM.xml"/>
                <personGrp role="tribe" corresp="pgr:zullam"/>
+               <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0099.ct_0002">
+                     <quote>yi'nkitil</quote>
+                     <cit type="translation">
+                        <quote>he will be killed</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0099.ct_0003">
+                     <quote>tištaġliy</quote>
+                     <cit type="translation">
+                        <quote>you (f.s.) work</quote>
+                     </cit>
+                  </cit>
+               <note type="general">"Forms VII and VIII have bases -inqatil- and -iqtatil- respectively, with regular a>i in unstressed 
+               open syllable and elision of i." (Blanc 1970:139)</note>
             </wib:featureValueObservation>
 
 
-
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0101" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:Cantineau_1936_9708" type="publication" status="CHECKME"><!--potentially ambiguous references--><!--ambiguous ID reference. Could be either http://zotero.org/groups/2165756/items/TJFGQ7N8 or http://zotero.org/groups/2165756/items/NB2HLKGD--></bibl>
-               <placeName ref="geo:jabal_shammar"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-SMR.xml"/>
-               <personGrp role="tribe" corresp="pgr:shammar_saudi_arabia"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0316" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0316" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yiCtaCiC_nostress"/>
                <bibl corresp="zot:cantineau_1946_0000" type="publication" cert="unknown"/>
                <placeName ref="geo:hawraan"/>
                <placeName ref="geo:jabal_al_druze"/>
                <lang corresp="..\profiles\vicav_profile_JOR-HRN.xml"/>
+               <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0316.ct_0000">
+                     <quote>yinkaser</quote>
+                     <cit type="translation">
+                        <quote>he was broken</quote>
+                     </cit>
+                  </cit>
+                <note type="general">No example for form VIII</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0097" status="done" resp="dmp:AT">
@@ -946,27 +970,39 @@
                </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0100" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0100" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yiCtiCiC_nostress"/>
                <bibl corresp="zot:hazmy_1975_1645" type="publication"/>
                <placeName ref="geo:hejaz"/>
                <lang corresp="..\profiles\vicav_profile_SAU-HRB.xml"/>
                <personGrp role="tribe" corresp="pgr:al_harb"/>
+               <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0100.ct_0001">
+                     <quote>yinkisir</quote>
+                     <cit type="translation">
+                        <quote>he is defeated</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0100.ct_0000">
+                     <quote>yiʕtiriḏ̣</quote>
+                     <cit type="translation">
+                        <quote>he intercepts</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0084" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:owens_1984_9854" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
-               <placeName ref="geo:petra"/>
-               <lang corresp="..\profiles\vicav_profile_JOR-BDL.xml"/>
-               <personGrp role="tribe" corresp="pgr:bdul"/>
-            </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0095" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""/>
+
+            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0095" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yi_CtiCiC"/>
                <bibl corresp="zot:palva_1974_0000" type="publication"/>
                <placeName ref="geo:safut"/>
                <lang corresp="..\profiles\vicav_profile_JOR-SFT.xml"/>
+               <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0095.ct_0000">
+                     <quote>yíštri</quote>
+                     <cit type="translation">
+                        <quote>he buys</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0081" status="done" resp="dmp:AT">
@@ -984,8 +1020,8 @@
             </wib:featureValueObservation>
 
 
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0085" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0085" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yi_CtiCiC"/>
                <bibl corresp="zot:palva_1980_0000" type="publication"/>
                <placeName ref="geo:umm_ar_rasas"/>
                <placeName ref="geo:natl"/>
@@ -995,29 +1031,92 @@
                <placeName ref="geo:rujm_ash_shami_al_gharbi"/>
                <lang corresp="..\profiles\vicav_profile_JOR-BSX.xml"/>
                <personGrp role="tribe" corresp="pgr:bani_saxar"/>
+               <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0085.ct_0000">
+                     <quote>yínfitiḥ</quote>
+                     <cit type="translation">
+                        <quote>it is opened</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0085.ct_0001">
+                     <quote>yíštiġil</quote>
+                     <cit type="translation">
+                        <quote>he works</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0088" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:palva_1984_86_0000" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0088" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#formVII-VIII_ipf_ya_CtaCiC"/>
+               <bibl corresp="zot:palva_1984_86_0000" type="publication" status="CHECKME"><!--checked--></bibl>
                <placeName ref="geo:al_jafr"/>
                <lang corresp="..\profiles\vicav_profile_JOR-HWT.xml"/>
                <personGrp role="tribe" corresp="pgr:hwetat_jordan"/>
+               <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0088.ct_0000">
+                     <quote>yánfatiḥ</quote>
+                     <cit type="translation">
+                        <quote>he is opened</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0090" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0090" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yi_CtaCiC"/>
                <bibl corresp="zot:palva_1989_0000" type=" publication"/>
                <placeName ref="geo:al_karak"/>
                <lang corresp="..\profiles\vicav_profile_JOR-KRK.xml"/>
+               <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0090.ct_0000">
+                     <quote>bínkasir</quote>
+                     <cit type="translation">
+                        <quote>he breaks</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0090.ct_0001">
+                     <quote>bíštaġil</quote>
+                     <cit type="translation">
+                        <quote>he works</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0022" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yi_CtiCiC"/>
+               <bibl corresp="zot:palva_1989_0000" type=" publication"/>
+               <placeName ref="geo:al_karak"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-KRK.xml"/>
+                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0022.ct_0000">
+                     <quote>bínkisir</quote>
+                     <cit type="translation">
+                        <quote>he breaks</quote>
+                     </cit>
+                  </cit>
+                    <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0022.ct_0001">
+                     <quote>bíštiġil</quote>
+                     <cit type="translation">
+                        <quote>he works</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0098" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0098" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yiCtiCiC_nostress"/>
                <bibl corresp="zot:shawarbah_2012_3107" type="publication"/>
                <placeName ref="geo:negev"/>
                <lang corresp="..\profiles\vicav_profile_NEG-AZM.xml"/>
                <personGrp role="tribe" corresp="pgr:azazmih"/>
+               <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0099.ct_0000">
+                     <quote>yinkisir</quote>
+                     <cit type="translation">
+                        <quote>he gets broken</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0099.ct_0001">
+                     <quote>yiltifit</quote>
+                     <cit type="translation">
+                        <quote>he turns around</quote>
+                     </cit>
+                  </cit>
+               <note type="general">"FORM VII: the imperfect form has the underlying base -inC1aC2iC3- with regular raising of a>i in unstressed open syllable.
+               FORM VIII: the imperfect form has the underlying base -iC1taC2iC3- with regular raising of a>i in unstressed open syllable." (Shawarabah 2012: 242, 244) </note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0111" status="done" resp="dmp:AT">
@@ -1040,15 +1139,7 @@
                </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0080" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:torzullo_2022_1999" type="publication"/>
-               <placeName ref="geo:badr_al_jadidah"/>
-               <placeName ref="geo:wadi_as_sir"/>
-               <placeName ref="geo:mahis"/>
-               <lang corresp="..\profiles\vicav_profile_JOR-ABD.xml"/>
-               <personGrp role="tribe" corresp="pgr:bani_abbad"/>
-            </wib:featureValueObservation>
+          
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0117" status="done" resp="dmp:CL">
                <name type="featureValue" ref="#formVII-VIII_ipf_yiCti_CiC"/>
@@ -1354,7 +1445,7 @@
                </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0258" status="draft" resp="dmp:RZ">
+            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0258" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#formVII-VIII_ipf_yiCti_CiC"/>
                <bibl corresp="src:PC_RZ" type="personalCommunication"/>
                <placeName ref="geo:malta"/>
@@ -1362,12 +1453,12 @@
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0258.ct_0000">
                   <quote>yinkíser</quote>
                   <cit type="translation">
-                     <quote>it is/ gets broken</quote>
+                     <quote>he gets broken</quote>
                   </cit>
                </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0033" status="draft" resp="dmp:RZ">
+            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0033" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#formVII-VIII_ipf_yiCta_CiC"/>
                <bibl corresp="src:PC_RZ" type="personalCommunication"/>
                <placeName ref="geo:malta"/>
@@ -1407,7 +1498,7 @@
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0322.ct_0000">
                   <quote>yiḥtaris</quote>
                   <cit type="translation">
-                     <quote>someone going somewhere in the early morning when it is still dark</quote>
+                     <quote>he goes somewhere in the early morning when it is still dark</quote>
                   </cit>
                </cit>
                <note type="general">No example for Form VII</note>
@@ -1415,17 +1506,50 @@
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0228" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref=""/>
+               <name type="featureValue" ref="#formVII-VIII_ipf_yi_CtiCiC"/>
                <bibl corresp="zot:panetta_1943_0000" type="publication"/>
                <placeName ref="geo:benghazi"/>
                <lang corresp="..\profiles\vicav_profile_LBY-BGZ.xml"/>
+               <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0228.ct_0000">
+                     <quote>yénṭelag</quote>
+                     <cit type="translation">
+                        <quote>he is released</quote>
+                     </cit>
+                  </cit>
+                  <cit type="sourceRepresentation"><quote>yé-nṭěläg</quote></cit>
+                  <note type="general">No example for Form VIII</note>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0024" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yiCta_CaC"/>
+               <bibl corresp="zot:panetta_1943_0000" type="publication"/>
+               <placeName ref="geo:benghazi"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-BGZ.xml"/>
+               <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0024.ct_0000">
+                     <quote>yežtámaʕ</quote>
+                     <cit type="translation">
+                        <quote>to get together</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0229" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:caubet_2004_3508" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0023" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yi_CtiCiC"/>
+               <bibl corresp="zot:caubet_2004_3508" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
                <placeName ref="geo:fezzan"/>
                <lang corresp="..\profiles\vicav_profile_LBY-FZN.xml"/>
+               <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0229.ct_0000">
+                     <quote>yínġọsẹl</quote>
+                     <cit type="translation">
+                        <quote>he washes himself</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0229.ct_0001">
+                     <quote>yíšteġol</quote>
+                     <cit type="translation">
+                        <quote>he works</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0003" status="done" resp="dmp:RZ">
@@ -1434,9 +1558,9 @@
                <placeName ref="geo:misrata"/>
                <lang corresp="..\profiles\vicav_profile_LBY-MSR.xml"/>
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0003.ct_0000">
-                  <quote>yə́</quote>
+                  <quote>yə́nḥasib</quote>
                   <cit type="translation">
-                     <quote></quote>
+                     <quote>top be counted</quote>
                   </cit>
                </cit>
             </wib:featureValueObservation>
@@ -1444,7 +1568,7 @@
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0230" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#formVII-VIII_ipf_yiCtaCiC_nostress"/>
                <bibl corresp="zot:harrama_1993_0000" type="publication"/>
-               <placeName ref="geo:al_jabal"/>
+               <placeName ref="geo:al_jabal_al_gharbi"/>
                <lang corresp="..\profiles\vicav_profile_LBY-JBL.xml"/>
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0230.ct_0000">
                   <quote>yinʕazim</quote>
@@ -1468,7 +1592,7 @@
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0320.ct_0000">
                   <quote>yintiris</quote>
                   <cit type="translation">
-                     <quote>it is filled</quote>
+                     <quote>he is filled</quote>
                   </cit>
                </cit>
                <note type="general">No example for Form VIII</note>
@@ -1482,7 +1606,7 @@
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0073.ct_0000">
                   <quote>yintaris</quote>
                   <cit type="translation">
-                     <quote>it is filled</quote>
+                     <quote>he is filled</quote>
                   </cit>
                </cit>
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0073.ct_0001">
@@ -1503,7 +1627,7 @@
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0324.ct_0001">
                   <quote>yintíris</quote>
                   <cit type="translation">
-                     <quote>it is filled</quote>
+                     <quote>he is filled</quote>
                   </cit>
                </cit>
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0324.ct_0000">
@@ -1526,7 +1650,7 @@
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0064.ct_0000">
                   <quote>yintíris</quote>
                   <cit type="translation">
-                     <quote>it is filled</quote>
+                     <quote>he is filled</quote>
                   </cit>
                </cit>
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0064.ct_0001">
@@ -1548,7 +1672,7 @@
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0067.ct_0000">
                   <quote>yiḥtarim</quote>
                   <cit type="translation">
-                     <quote>he respect, he holds in high esteem</quote>
+                     <quote>he respects, he holds in high esteem</quote>
                   </cit>
                </cit>
                <note type="general">No example for Form VI</note>
@@ -1581,24 +1705,19 @@
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0002.ct_0000">
                   <quote>yingílib</quote>
                   <cit type="translation">
-                     <quote>it is overturned</quote>
+                     <quote>he is overturned</quote>
                   </cit>
                </cit>
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0002.ct_0001">
                   <quote>yixtílif</quote>
                   <cit type="translation">
-                     <quote>it differs</quote>
+                     <quote>he differs</quote>
                   </cit>
                </cit>
             </wib:featureValueObservation>
 
 
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0008" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:ingham_1982_0000" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
-               <placeName ref="geo:sufayri"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-DHF.xml"/>
-            </wib:featureValueObservation>
+
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0326" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#formVII-VIII_ipf_yiCtaCiC_nostress"/>
@@ -1611,18 +1730,31 @@
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0326.ct_0000">
                   <quote>yinḥabil</quote>
                   <cit type="translation">
-                     <quote>it is caught</quote>
+                     <quote>he is caught</quote>
                   </cit>
                </cit>
                <note type="general">No example for Form VIII</note>
                <note type="general">Deduced from examples</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0321" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:ingham_1994_0001" type="publication" cert="unknown" status="CHECKME"><!--potentially ambiguous references--></bibl>
+          <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0321" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yiCtiCaC_nostress"/>
+               <bibl corresp="zot:ingham_2008_7402" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
                <placeName ref="geo:najd"/>
                <lang corresp="..\profiles\vicav_profile_SAU-NJD.xml"/>
+               <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0321.ct_0000">
+                     <quote>yingiṭaʔ</quote>
+                     <cit type="translation">
+                        <quote>to be cut off from something</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0321.ct_0001">
+                     <quote>yintišar</quote>
+                     <cit type="translation">
+                        <quote>to be distributed</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">These values were generated off the perfective values found in the EALL entry titled `Najdi Arabic` </note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0335" status="done" resp="dmp:RZ">
@@ -1633,7 +1765,7 @@
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0335.ct_0000">
                   <quote>yinksar</quote>
                   <cit type="translation">
-                     <quote>it is/ gets broken</quote>
+                     <quote>he gets broken</quote>
                   </cit>
                </cit>
                <note type="general">No example for Form VIII</note>
@@ -1749,7 +1881,7 @@
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0005.ct_0000">
                   <quote>yínfatiḥ</quote>
                   <cit type="translation">
-                     <quote>it opens</quote>
+                     <quote>he opens</quote>
                   </cit>
                </cit>
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0005.ct_0001">
@@ -1768,7 +1900,7 @@
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0006.ct_0000">
                   <quote>yínfitiḥ</quote>
                   <cit type="translation">
-                     <quote>it opens</quote>
+                     <quote>he opens</quote>
                   </cit>
                </cit>
             </wib:featureValueObservation>
@@ -1792,11 +1924,54 @@
                </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0010" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""/>
+           <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0010" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yi_CtiCiC"/>
                <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
                <placeName ref="geo:hofuf"/>
                <lang corresp="..\profiles\vicav_profile_SAU-HFF.xml"/>
+               <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0010.ct_0000">
+                     <quote>yíngilib</quote>
+                     <cit type="translation">
+                        <quote>he turns over</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">No example for Form VIII</note>
+            </wib:featureValueObservation>
+            
+            
+            
+              <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0008" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yiCti_CiC"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:hofuf"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-HFF.xml"/>
+               <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0008.ct_0000">
+                     <quote>yištíġil</quote>
+                     <cit type="translation">
+                        <quote>he works</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0008.ct_0001">
+                     <quote>yingílub</quote>
+                     <cit type="translation">
+                        <quote>he turns over</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            
+              <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0028" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yi_CtaCaC"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:hofuf"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-HFF.xml"/>
+               <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0082.ct_0000">
+                     <quote>yíštaġal</quote>
+                     <cit type="translation">
+                        <quote>he works</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">No example for Form VII</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0011" status="done" resp="dmp:RZ">
@@ -1826,13 +2001,13 @@
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0013.ct_0000">
                   <quote>yínfitiḥ</quote>
                   <cit type="translation">
-                     <quote>it opens</quote>
+                     <quote>he opens</quote>
                   </cit>
                </cit>
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0013.ct_0001">
                   <quote>yíḥtirig</quote>
                   <cit type="translation">
-                     <quote>it will burn down</quote>
+                     <quote>he will burn down</quote>
                   </cit>
                </cit>
             </wib:featureValueObservation>
@@ -1942,7 +2117,7 @@
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0332.ct_0000">
                   <quote>yinfátiḥ</quote>
                   <cit type="translation">
-                     <quote>it opens</quote>
+                     <quote>he opens</quote>
                   </cit>
                </cit>
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0332.ct_0001">
@@ -1972,19 +2147,19 @@
                </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0215" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:ritt-benmimoun_2017_2683" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0215" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yeCtCeC"/>
+               <bibl corresp="zot:ritt-benmimoun_2017_2683" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
                <placeName ref="geo:al_khums"/>
                <lang corresp="..\profiles\vicav_profile_LBY-KMS.xml"/>
                <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0215.ct_0000">
-                  <quote>tanftaḥ</quote>
-                  <cit type="translation">
-                     <quote>she is opened</quote>
+                     <quote>tanftaḥ</quote>
+                     <cit type="translation">
+                        <quote>she is opened</quote>
+                     </cit>
                   </cit>
-               </cit>
-               <note type="general">Deduced from examples</note>
-               <note type="general">No example for Form VIII</note>
+                  <note type="general">Deduced from examples</note>
+                  <note type="general">No example for Form VIII</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0086" status="done" resp="dmp:RZ">
@@ -3099,7 +3274,7 @@
          
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0264" status="draft" resp="dmp:SP">
                <name type="featureValue" ref=""/>
-               <bibl corresp="zot:la_rosa_2021_7694" type="publication"/>
+               <bibl corresp="zot:larosa_2021_1332" type="publication"/>
                <placeName ref="geo:mahdia"/>
                <lang corresp="..\profiles\vicav_profile_TUN-MHD.xml"/>
             </wib:featureValueObservation>
@@ -3419,11 +3594,18 @@
                <lang corresp="..\profiles\vicav_profile_YEM-HAD.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0372" status="draft" resp="dmp:VE">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0372" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#formVII-VIII_ipf_yiCtaCiC_nostress"/>
                <bibl corresp="zot:behnstedt_1987_0003" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
                <placeName ref="geo:sa_dah"/>
                <lang corresp="..\profiles\vicav_profile_YEM-SAD.xml"/>
+               <note type="general">There is no form VII.</note>
+               <cit type="example" xml:id="ft_frmVII-VIIIipfv.fv_0372.ct_0000">
+                     <quote>yittafig</quote>
+                     <cit type="translation">
+                        <quote>he agrees</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_frmVII-VIIIipfv.fv_0301" status="draft" resp="dmp:VE">
