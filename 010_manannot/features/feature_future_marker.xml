@@ -56,6 +56,10 @@
                   <label>baa-</label>
                   <desc></desc>
                </item>
+                <item xml:id="fut_mar_ser">
+                  <label>ser, se, sa</label>
+                  <desc></desc>
+               </item>
                <item xml:id="fut_mar_a">
                   <label>'a-</label>
                   <desc></desc>
@@ -151,6 +155,10 @@
                </item>
                <item xml:id="fut_mar_no">
                   <label>no future marker</label>
+                  <desc></desc>
+               </item>
+               <item xml:id="fut_mar_aad">
+                  <label>għad_maltese</label>
                   <desc></desc>
                </item>
             </list>
@@ -982,14 +990,66 @@
 
            
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0258" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0258" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fut_mar_haa"/>
                <bibl corresp="src:PC_RZ" type="personalCommunication"/>
                <placeName ref="geo:malta"/>
                <lang corresp="..\profiles\vicav_profile_MLT-MAL.xml"/>
+               <cit type="example" xml:id="ft_fut_mar.fv_0258.ct_0000">
+                     <quote>ḥā yikteb ktīb</quote>
+                     <cit type="translation">
+                        <quote>he is going to write a book / he will write a book</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">Maltese orthography: ħa jikteb ktieb</note>
+            </wib:featureValueObservation>
+            
+            
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0258" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fut_mar_aad"/>
+               <bibl corresp="src:PC_RZ" type="personalCommunication"/>
+               <placeName ref="geo:malta"/>
+               <lang corresp="..\profiles\vicav_profile_MLT-MAL.xml"/>
+               <cit type="example" xml:id="ft_fut_mar.fv_0258.ct_0000">
+                     <quote>aad yiǧi lura</quote>
+                     <cit type="translation">
+                        <quote>he will (perhaps) come back</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">Maltese orthography: għad jiġi lura</note>
+                  <note type="general">This adverbial particle denotes the indefinite future</note>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0034" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fut_mar_ser"/>
+               <bibl corresp="src:PC_RZ" type="personalCommunication"/>
+               <placeName ref="geo:malta"/>
+               <lang corresp="..\profiles\vicav_profile_MLT-MAL.xml"/>
+               <cit type="example" xml:id="ft_fut_mar.fv_0034.ct_0000">
+                     <quote>ser yikteb ktīb</quote>
+                     <cit type="translation">
+                        <quote>he is going to write a book / he will write a book</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">Maltese orthography: ser jikteb ktieb</note>
+                  <note type="general">Variants of ser include se and sa</note>
             </wib:featureValueObservation>
 
+
             <wib:featureValueObservation xml:id="ft_fut_mar.fv_0334" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fut_mar_b"/>
+               <bibl corresp="zot:Alfaifi_2016_1493" type="publication"/>
+               <placeName ref="geo:jabal_fayfa"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-FYF.xml"/>
+               <cit type="example" xml:id="ft_fut_mar.fv_0334.ct_0000">
+                     <quote>bi-jbarrihūn im-madrasah massah</quote>
+                     <cit type="translation">
+                        <quote>they will go to school early</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_fut_mar.fv_0035" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#fut_mar_b"/>
                <bibl corresp="zot:Alfaifi_2016_1493" type="publication"/>
                <placeName ref="geo:jabal_fayfa"/>
@@ -1338,11 +1398,17 @@
                <lang corresp="..\profiles\vicav_profile_SAU-TAN.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0215" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:ritt-benmimoun_2017_2683" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0215" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fut_mar_b"/>
+               <bibl corresp="zot:ritt-benmimoun_2017_2683" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
                <placeName ref="geo:al_khums"/>
                <lang corresp="..\profiles\vicav_profile_LBY-KMS.xml"/>
+               <cit type="example" xml:id="ft_fut_mar.fv_0215.ct_0000">
+                     <quote>b-yətbaʕʕəd</quote>
+                     <cit type="translation">
+                        <quote>he will go away</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_fut_mar.fv_0231" status="done" resp="dmp:RZ">
