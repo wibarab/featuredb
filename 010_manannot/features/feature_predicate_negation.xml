@@ -37,7 +37,7 @@
          <change when="2022-08-17" who="dmp:">c</change>
          <change when="2022-08-17" who="dmp: "/>
          <change when="2022-08-17" who="dmp:">For EGY-___ there are no values found</change>
-      <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change><change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change></revisionDesc>
+         <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change><change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change></revisionDesc>
    </teiHeader>
 
 
@@ -76,7 +76,11 @@
                   <label>ma hu / mā hu</label>
                   <desc></desc>
                </item>
-                <item xml:id="pred_neg_muhu">
+               <item xml:id="pred_neg_m_pron">
+                  <label>mūhu / mīhi etc.</label>
+                  <desc></desc>
+               </item>
+               <item xml:id="pred_neg_muhu">
                   <label>muhu</label>
                   <desc></desc>
                </item>
@@ -92,7 +96,7 @@
                   <label>humb</label>
                   <desc></desc>
                </item>
-                
+
                <item xml:id="pred_neg_maww">
                   <label>maww</label>
                   <desc></desc>
@@ -121,8 +125,8 @@
                <lang corresp="..\profiles\vicav_profile_LBN-KHA.xml"/>
                <personGrp role="tribe" corresp="pgr:arab_xalde"/>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0078" status="pre" resp="dmp:AID">
+
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0078" status="pre" resp="dmp:AID">
                <name type="featureValue" ref="#pred_neg_ma"/>
                <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
                <placeName ref="geo:khalde"/>
@@ -138,15 +142,15 @@
                <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"/>
                <personGrp role="tribe" corresp="pgr:arab_maslax"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0071.ct_0000">
-                     <quote>l-yōm əṭ-ṭagəs miš šōb čitīr</quote>
-                     <cit type="translation">
-                        <quote>Today the weather is not very hot</quote>
-                     </cit>
+                  <quote>l-yōm əṭ-ṭagəs miš šōb čitīr</quote>
+                  <cit type="translation">
+                     <quote>Today the weather is not very hot</quote>
                   </cit>
-                  <note type="general">The example is from a 64 year-old male from the Nʕēm tribe, yet the value for predicate negation could be applied to speakers from this community from all sociolinguistic profiles and ages.</note>
+               </cit>
+               <note type="general">The example is from a 64 year-old male from the Nʕēm tribe, yet the value for predicate negation could be applied to speakers from this community from all sociolinguistic profiles and ages.</note>
             </wib:featureValueObservation>
 
-              <wib:featureValueObservation xml:id="ft_pred_neg.fv_0115" status="done" resp="dmp:AID">
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0115" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#pred_neg_ma"/>
                <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
                <placeName ref="geo:naameh"/>
@@ -154,12 +158,12 @@
                <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"/>
                <personGrp role="tribe" corresp="pgr:arab_maslax"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0115.ct_0000">
-                     <quote>ʔani ʕa-ʔaḥki ma fāḍya</quote>
-                     <cit type="translation">
-                        <quote>I am speaking now, I am not free</quote>
-                     </cit>
+                  <quote>ʔani ʕa-ʔaḥki ma fāḍya</quote>
+                  <cit type="translation">
+                     <quote>I am speaking now, I am not free</quote>
                   </cit>
-                  <note type="general">The example is from a 62 year-old female speaker from the Nʕēm tribe. This value for predicate negation could be applied to middle age and old speakers speakers from this community. Generally not as frequent among young speakers.</note>
+               </cit>
+               <note type="general">The example is from a 62 year-old female speaker from the Nʕēm tribe. This value for predicate negation could be applied to middle age and old speakers speakers from this community. Generally not as frequent among young speakers.</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0053" status="done" resp="dmp:AID">
@@ -168,13 +172,13 @@
                <placeName ref="geo:baskinta"/>
                <lang corresp="..\profiles\vicav_profile_LBN-BAS.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0053.ct_0000">
-                     <quote>hāda miš ikitābi</quote>
-                     <cit type="translation">
-                        <quote>This is not my book</quote>
-                     </cit>
+                  <quote>hāda miš ikitābi</quote>
+                  <cit type="translation">
+                     <quote>This is not my book</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0060" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#pred_neg_maww"/>
                <bibl corresp="zot:agbaht_2023_4928" type="publication"/>
@@ -182,39 +186,39 @@
                <lang corresp="..\profiles\vicav_profile_LBN-SXT.xml"/>
                <cit type="sourceRepresentation"><quote>maw</quote></cit>
                <cit type="example" xml:id="ft_pred_neg.fv_0060.ct_0000">
-                     <quote>maw ʕa dawri</quote>
-                     <cit type="translation">
-                        <quote>it (m) is not at my time/era</quote>
-                     </cit>
+                  <quote>maw ʕa dawri</quote>
+                  <cit type="translation">
+                     <quote>it (m) is not at my time/era</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
-              <wib:featureValueObservation xml:id="ft_pred_neg.fv_0028" status="done" resp="dmp:AID">
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0028" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#pred_neg_ma"/>
                <bibl corresp="zot:agbaht_2023_4928" type="publication"/>
                <placeName ref="geo:sheikh_taba"/>
                <lang corresp="..\profiles\vicav_profile_LBN-SXT.xml"/>
                <cit type="sourceRepresentation"><quote>mɔ̄</quote></cit>
                <cit type="example" xml:id="ft_pred_neg.fv_0028.ct_0000">
-                     <quote>lāʔ mɔ̄yām mʕayyan </quote>
-                     <cit type="translation">
-                        <quote>no, it is not a specific day</quote>
-                     </cit>
+                  <quote>lāʔ mɔ̄yām mʕayyan </quote>
+                  <cit type="translation">
+                     <quote>no, it is not a specific day</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0045" status="done" resp="dmp:AID">
+
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0045" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#pred_neg_mayy"/>
                <bibl corresp="zot:agbaht_2023_4928" type="publication"/>
                <placeName ref="geo:sheikh_taba"/>
                <lang corresp="..\profiles\vicav_profile_LBN-SXT.xml"/>
                <cit type="sourceRepresentation"><quote>may</quote></cit>
                <cit type="example" xml:id="ft_pred_neg.fv_0045.ct_0000">
-                     <quote>k̬bīri šway yaʕni may ṣabī may wal[ɛd̥ʰ]</quote>
-                     <cit type="translation">
-                        <quote>Yes, she is a bit old, that’s to say (she is) not a young girl, not a young child</quote>
-                     </cit>
+                  <quote>k̬bīri šway yaʕni may ṣabī may wal[ɛd̥ʰ]</quote>
+                  <cit type="translation">
+                     <quote>Yes, she is a bit old, that’s to say (she is) not a young girl, not a young child</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0079" status="done" resp="dmp:AID">
@@ -232,21 +236,21 @@
                <lang corresp="..\profiles\vicav_profile_LBN-KSG.xml"/>
             </wib:featureValueObservation>
 
-                 <wib:featureValueObservation xml:id="ft_pred_neg.fv_0027" status="done" resp="dmp:AID">
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0027" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#pred_neg_mayy"/>
                <bibl corresp="zot:fleisch_1974_3163" type="publication" status="CHECKED"></bibl>
                <placeName ref="geo:kfar_sghab"/>
                <lang corresp="..\profiles\vicav_profile_LBN-KSG.xml"/>
                <cit type="sourceRepresentation"><quote>mai</quote></cit>
                <cit type="example" xml:id="ft_pred_neg.fv_0027.ct_0000">
-                     <quote>mai mrīḍo</quote>
-                     <cit type="translation">
-                        <quote>she is not sick</quote>
-                     </cit>
+                  <quote>mai mrīḍo</quote>
+                  <cit type="translation">
+                     <quote>she is not sick</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-        
-       
+
+
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0054" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#pred_neg_mish"/>
                <bibl corresp="zot:schukro_2004_6239" type="publication"/>
@@ -254,14 +258,14 @@
                <lang corresp="..\profiles\vicav_profile_LBN-BEI.xml"/>
                <cit type="sourceRepresentation"><quote>məš</quote></cit>
                <cit type="example" xml:id="ft_pred_neg.fv_0054.ct_0000">
-                     <quote>əntu məš aġniya</quote>
-                     <cit type="translation">
-                        <quote>you (pl.) are not rich</quote>
-                     </cit>
+                  <quote>əntu məš aġniya</quote>
+                  <cit type="translation">
+                     <quote>you (pl.) are not rich</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
-               <wib:featureValueObservation xml:id="ft_pred_neg.fv_0026"  status="done" resp="dmp:AID">
+
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0026"  status="done" resp="dmp:AID">
                <name type="featureValue" ref="#pred_neg_muu"/>
                <bibl corresp="zot:younes_2013_2795" type="publication"/>
                <placeName ref="geo:wadi_khalid"/>
@@ -269,11 +273,11 @@
                <personGrp role="tribe" corresp="pgr:arab_al_atij"/>
                <cit type="sourceRepresentation"><quote>mo</quote></cit>
                <cit type="example" xml:id="ft_verb_neg.fv_0052.ct_0000">
-                     <quote>dabčət ʔal-ʔaṛaḅ ʔənd-nä l-aš-šyūx ʔač-čibīrä mo məṯl ad-dabčāt ʔal-ḥd̠̣əriyyä</quote>
-                     <cit type="translation">
-                        <quote>Our dabkes are for big cheikhs, not like the "sedentary" dabkes</quote>
-                     </cit>
+                  <quote>dabčət ʔal-ʔaṛaḅ ʔənd-nä l-aš-šyūx ʔač-čibīrä mo məṯl ad-dabčāt ʔal-ḥd̠̣əriyyä</quote>
+                  <cit type="translation">
+                     <quote>Our dabkes are for big cheikhs, not like the "sedentary" dabkes</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
 
@@ -595,11 +599,11 @@
                <lang corresp="..\profiles\vicav_profile_SYR-KHA.xml"/>
                <personGrp role="tribe" corresp="pgr:khawetna_tribe"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0121.ct_0000">
-                     <quote>mō bʕīd ʕənna</quote>
-                     <cit type="translation">
-                        <quote>it is not far from us</quote>
-                     </cit>
+                  <quote>mō bʕīd ʕənna</quote>
+                  <cit type="translation">
+                     <quote>it is not far from us</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0125" status="draft" resp="dmp:CL">
@@ -615,11 +619,11 @@
                <placeName ref="geo:hasankeyf"/>
                <lang corresp="..\profiles\vicav_profile_TUR-HAS.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0127.ct_0000">
-                     <quote>hāk šəġəl mō ṭayyəb-we</quote>
-                     <cit type="translation">
-                        <quote>this work is not good</quote>
-                     </cit>
+                  <quote>hāk šəġəl mō ṭayyəb-we</quote>
+                  <cit type="translation">
+                     <quote>this work is not good</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0128" status="done" resp="dmp:CL">
@@ -628,11 +632,11 @@
                <placeName ref="geo:idil_aazex"/>
                <lang corresp="..\profiles\vicav_profile_TUR-IDI.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0128.ct_0000">
-                     <quote>mō msēwye</quote>
-                     <cit type="translation">
-                        <quote>not flat</quote>
-                     </cit>
+                  <quote>mō msēwye</quote>
+                  <cit type="translation">
+                     <quote>not flat</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0129" status="done" resp="dmp:CL">
@@ -641,37 +645,37 @@
                <placeName ref="geo:siirt"/>
                <lang corresp="..\profiles\vicav_profile_TUR-SII.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0129.ct_0000">
-                     <quote>hawa iṣṭanbūl əmme maww ṭayyap</quote>
-                     <cit type="translation">
-                        <quote>the weather in Istanbul is not good</quote>
-                     </cit>
+                  <quote>hawa iṣṭanbūl əmme maww ṭayyap</quote>
+                  <cit type="translation">
+                     <quote>the weather in Istanbul is not good</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0076" status="done" resp="dmp:CL">
                <name type="featureValue" ref="#pred_neg_mayy"/>
                <bibl corresp="zot:lahdo_2009_1103" type="publication"/>
                <placeName ref="geo:siirt"/>
                <lang corresp="..\profiles\vicav_profile_TUR-SII.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0076.ct_0001">
-                     <quote>mayy malīḥa</quote>
-                     <cit type="translation">
-                        <quote>she is not good</quote>
-                     </cit>
+                  <quote>mayy malīḥa</quote>
+                  <cit type="translation">
+                     <quote>she is not good</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
-              <wib:featureValueObservation xml:id="ft_pred_neg.fv_0077" status="done" resp="dmp:CL">
+
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0077" status="done" resp="dmp:CL">
                <name type="featureValue" ref="#pred_neg_muu"/>
                <bibl corresp="zot:lahdo_2009_1103" type="publication"/>
                <placeName ref="geo:siirt"/>
                <lang corresp="..\profiles\vicav_profile_TUR-SII.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0077.ct_0000">
-                     <quote>mō sayy šəššāne</quote>
-                     <cit type="translation">
-                        <quote>i do not do anything at all</quote>
-                     </cit>
+                  <quote>mō sayy šəššāne</quote>
+                  <cit type="translation">
+                     <quote>i do not do anything at all</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0157" status="draft" resp="dmp:CL">
@@ -687,11 +691,11 @@
                <placeName ref="geo:jerusalem"/>
                <lang corresp="..\profiles\vicav_profile_PSE-JRS.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0168.ct_0000">
-                     <quote>muš f-il-bēt</quote>
-                     <cit type="translation">
-                        <quote>not at home</quote>
-                     </cit>
+                  <quote>muš f-il-bēt</quote>
+                  <cit type="translation">
+                     <quote>not at home</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0171" status="done" resp="dmp:CL">
@@ -700,11 +704,11 @@
                <placeName ref="geo:ramallah"/>
                <lang corresp="..\profiles\vicav_profile_PSE-RML.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0171.ct_0000">
-                     <quote>miš rāyiḥ</quote>
-                     <cit type="translation">
-                        <quote>not going</quote>
-                     </cit>
+                  <quote>miš rāyiḥ</quote>
+                  <cit type="translation">
+                     <quote>not going</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0113" status="done" resp="dmp:CL">
@@ -713,11 +717,11 @@
                <placeName ref="geo:baghdad"/>
                <lang corresp="..\profiles\vicav_profile_IRQ-BGD.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0113.ct_0000">
-                     <quote>ṃū huwwa hāḏa aṯāri ġēra</quote>
-                     <cit type="translation">
-                        <quote>that is not him, apparently it is someone else</quote>
-                     </cit>
+                  <quote>ṃū huwwa hāḏa aṯāri ġēra</quote>
+                  <cit type="translation">
+                     <quote>that is not him, apparently it is someone else</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0161" status="done" resp="dmp:CL">
@@ -726,11 +730,11 @@
                <placeName ref="geo:jisr_az_zarqa"/>
                <lang corresp="..\profiles\vicav_profile_ISR-ZRG.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0161.ct_0000">
-                     <quote>miš ḥilwa</quote>
-                     <cit type="translation">
-                        <quote>not pretty</quote>
-                     </cit>
+                  <quote>miš ḥilwa</quote>
+                  <cit type="translation">
+                     <quote>not pretty</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0118" status="draft" resp="dmp:CL">
@@ -754,11 +758,11 @@
                <placeName ref="geo:basra"/>
                <lang corresp="..\profiles\vicav_profile_IRQ-BSR.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0114.ct_0000">
-                     <quote>hāḏa mū ktābi</quote>
-                     <cit type="translation">
-                        <quote>this is not my book</quote>
-                     </cit>
+                  <quote>hāḏa mū ktābi</quote>
+                  <cit type="translation">
+                     <quote>this is not my book</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0173" status="done" resp="dmp:CL">
@@ -783,7 +787,7 @@
                <lang corresp="..\profiles\vicav_profile_PSE-XLL.xml"/>
                <cit type="sourceRepresentation"><quote>miš</quote></cit>
             </wib:featureValueObservation>
-                        
+
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0055" status="pre" resp="dmp:RZ">
                <name type="featureValue" ref=""/>
                <bibl corresp="zot:katz_1980_0798" type="publication"/>
@@ -791,7 +795,7 @@
                <lang corresp="..\profiles\vicav_profile_PSE-RSD.xml"/>
             </wib:featureValueObservation>
 
-       
+
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0258" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pred_neg_mish"/>
@@ -799,26 +803,26 @@
                <placeName ref="geo:malta"/>
                <lang corresp="..\profiles\vicav_profile_MLT-MAL.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0258.ct_0000">
-                     <quote>id-dār miš kbīra</quote>
-                     <cit type="translation">
-                        <quote>The house is not big</quote>
-                     </cit>
+                  <quote>id-dār miš kbīra</quote>
+                  <cit type="translation">
+                     <quote>The house is not big</quote>
                   </cit>
-                  <note type="general">Maltese orthography: id-dar mhix kbira</note>
+               </cit>
+               <note type="general">Maltese orthography: id-dar mhix kbira</note>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0029" status="done" resp="dmp:RZ">
+
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0029" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pred_neg_mush"/>
                <bibl corresp="src:PC_RZ" type="personalCommunication"/>
                <placeName ref="geo:malta"/>
                <lang corresp="..\profiles\vicav_profile_MLT-MAL.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0029.ct_0000">
-                     <quote>ir-rāǧel muš ḥelu</quote>
-                     <cit type="translation">
-                        <quote>The man is not handsome</quote>
-                     </cit>
+                  <quote>ir-rāǧel muš ḥelu</quote>
+                  <cit type="translation">
+                     <quote>The man is not handsome</quote>
                   </cit>
-                  <note type="general">Maltese orthography: ir-raġel mhux ħelu</note>
+               </cit>
+               <note type="general">Maltese orthography: ir-raġel mhux ħelu</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0334" status="done" resp="dmp:RZ">
@@ -827,14 +831,14 @@
                <placeName ref="geo:jabal_fayfa"/>
                <lang corresp="..\profiles\vicav_profile_SAU-FYF.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0334.ct_0000">
-                     <quote>mā muḥammad fi-im-bayt </quote>
-                     <cit type="translation">
-                        <quote>Muhammad is not in the house</quote>
-                     </cit>
+                  <quote>mā muḥammad fi-im-bayt </quote>
+                  <cit type="translation">
+                     <quote>Muhammad is not in the house</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
-            
+
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0228" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pred_neg_mish"/>
@@ -842,11 +846,11 @@
                <placeName ref="geo:benghazi"/>
                <lang corresp="..\profiles\vicav_profile_LBY-BGZ.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0228.ct_0000">
-                     <quote>iṭṭīḥ miš šōr-ī </quote>
-                     <cit type="translation">
-                        <quote>If you fall, it's not my problem</quote>
-                     </cit>
+                  <quote>iṭṭīḥ miš šōr-ī </quote>
+                  <cit type="translation">
+                     <quote>If you fall, it's not my problem</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0229" status="done" resp="dmp:RZ">
@@ -855,14 +859,14 @@
                <placeName ref="geo:fezzan"/>
                <lang corresp="..\profiles\vicav_profile_LBY-FZN.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0229.ct_0000">
-                     <quote>mūš mettākel</quote>
-                     <cit type="translation">
-                        <quote>It is not eaten</quote>
-                     </cit>
+                  <quote>mūš mettākel</quote>
+                  <cit type="translation">
+                     <quote>It is not eaten</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
-           
+
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0003" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pred_neg_mush"/>
@@ -870,23 +874,23 @@
                <placeName ref="geo:misrata"/>
                <lang corresp="..\profiles\vicav_profile_LBY-MSR.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0003.ct_0000">
-                     <quote> mūš maʕṛūf giddēš</quote>
-                     <cit type="translation">
-                        <quote>It is not known how much</quote>
-                     </cit>
+                  <quote> mūš maʕṛūf giddēš</quote>
+                  <cit type="translation">
+                     <quote>It is not known how much</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
-             
- 	      <wib:featureValueObservation xml:id="ft_pred_neg.fv_0030" status="done" resp="dmp:RZ">
+
+
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0030" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pred_neg_mish"/>
                <bibl corresp="zot:DAnna_2017_4912" type="publication"/>
                <placeName ref="geo:misrata"/>
                <lang corresp="..\profiles\vicav_profile_LBY-MSR.xml"/>
                <cit type="sourceRepresentation"><quote>məš</quote></cit>
             </wib:featureValueObservation>
-          
-            
+
+
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0320" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pred_neg_muu"/>
@@ -894,25 +898,25 @@
                <placeName ref="geo:gulf"/>
                <lang corresp="..\profiles\vicav_profile_SAU-GLF.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0320.ct_0000">
-                     <quote>huwa mū d-drēwil</quote>
-                     <cit type="translation">
-                        <quote>He is not the driver</quote>
-                     </cit>
+                  <quote>huwa mū d-drēwil</quote>
+                  <cit type="translation">
+                     <quote>He is not the driver</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0075" status="done" resp="dmp:RZ">
+
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0075" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pred_neg_mub"/>
                <bibl corresp="zot:qafisheh_1977_3210" type="publication" cert="unknown"/>
                <placeName ref="geo:gulf"/>
                <lang corresp="..\profiles\vicav_profile_SAU-GLF.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0075.ct_0000">
-                     <quote>mub taḥat, fōg</quote>
-                     <cit type="translation">
-                        <quote>not below, above</quote>
-                     </cit>
+                  <quote>mub taḥat, fōg</quote>
+                  <cit type="translation">
+                     <quote>not below, above</quote>
                   </cit>
-                  <note type="general">mūb is also attested</note>
+               </cit>
+               <note type="general">mūb is also attested</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0324" status="done" resp="dmp:RZ">
@@ -922,55 +926,55 @@
                <lang corresp="..\profiles\vicav_profile_BHR-ARB.xml"/>
                <personGrp role="religion" corresp="#sunnis"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0324.ct_0000">
-                     <quote>bint il-madrasa mub šay</quote>
-                     <cit type="translation">
-                        <quote>Girls who went to school were (considered) worth nothing</quote>
-                     </cit>
+                  <quote>bint il-madrasa mub šay</quote>
+                  <cit type="translation">
+                     <quote>Girls who went to school were (considered) worth nothing</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0069" status="done" resp="dmp:RZ">
+
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0069" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pred_neg_muhub"/>
                <bibl corresp="zot:holes_2016_3174" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
                <placeName ref="geo:manama"/>
                <lang corresp="..\profiles\vicav_profile_BHR-ARB.xml"/>
                <personGrp role="religion" corresp="#sunnis"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0069.ct_0001">
-                     <quote>haḏāk muhub min ḏī l-bēt</quote>
-                     <cit type="translation">
-                        <quote>That part doesn't belong to this house</quote>
-                     </cit>
+                  <quote>haḏāk muhub min ḏī l-bēt</quote>
+                  <cit type="translation">
+                     <quote>That part doesn't belong to this house</quote>
                   </cit>
-                  <note type="general">The feminine form mahīb exists but it is not as productive as the masculine form, which is employed for both genders</note>
+               </cit>
+               <note type="general">The feminine form mahīb exists but it is not as productive as the masculine form, which is employed for both genders</note>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0072" status="done" resp="dmp:RZ">
+
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0072" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pred_neg_hub"/>
                <bibl corresp="zot:holes_2016_3174" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
                <placeName ref="geo:manama"/>
                <lang corresp="..\profiles\vicav_profile_BHR-ARB.xml"/>
                <personGrp role="religion" corresp="#sunnis"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0072.ct_0000">
-                     <quote>il-xaṭaʔ hub min hāḏi</quote>
-                     <cit type="translation">
-                        <quote>The fault was not this man's</quote>
-                     </cit>
+                  <quote>il-xaṭaʔ hub min hāḏi</quote>
+                  <cit type="translation">
+                     <quote>The fault was not this man's</quote>
                   </cit>
-                  <note type="general">The feminine form hīb exists but it is not as productive as the masculine form, which is employed for both genders</note>
+               </cit>
+               <note type="general">The feminine form hīb exists but it is not as productive as the masculine form, which is employed for both genders</note>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0073" status="done" resp="dmp:RZ">
+
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0073" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pred_neg_humb"/>
                <bibl corresp="zot:holes_2016_3174" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
                <placeName ref="geo:manama"/>
                <lang corresp="..\profiles\vicav_profile_BHR-ARB.xml"/>
                <personGrp role="religion" corresp="#sunnis"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0073.ct_0000">
-                     <quote>mā tčūf-ha, killiš mā tčūf-ha, mā tibayyin - humb al-ḥīn</quote>
-                     <cit type="translation">
-                        <quote>You didn't see her, you never saw her, she never appeared - not like now</quote>
-                     </cit>
+                  <quote>mā tčūf-ha, killiš mā tčūf-ha, mā tibayyin - humb al-ḥīn</quote>
+                  <cit type="translation">
+                     <quote>You didn't see her, you never saw her, she never appeared - not like now</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0323" status="done" resp="dmp:RZ">
@@ -980,29 +984,29 @@
                <lang corresp="..\profiles\vicav_profile_BHR-BHN.xml"/>
                <personGrp role="religion" corresp="#shiites"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0323.ct_0000">
-                     <quote>mā hu ani, mā hu inta tirzik-na</quote>
-                     <cit type="translation">
-                        <quote>It's not me, and it's not you, that sustains us</quote>
-                     </cit>
+                  <quote>mā hu ani, mā hu inta tirzik-na</quote>
+                  <cit type="translation">
+                     <quote>It's not me, and it's not you, that sustains us</quote>
                   </cit>
-                  <note type="general">mā hi is the feminine singular counterpart, whereas mā hum is the plural counterpart</note>
+               </cit>
+               <note type="general">mā hi is the feminine singular counterpart, whereas mā hum is the plural counterpart</note>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0066" status="done" resp="dmp:RZ">
+
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0066" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pred_neg_muu"/>
                <bibl corresp="zot:holes_2016_3174" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
                <placeName ref="geo:muharraq"/>
                <lang corresp="..\profiles\vicav_profile_BHR-BHN.xml"/>
                <personGrp role="religion" corresp="#shiites"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0066.ct_0000">
-                     <quote>il-awwal mu miflāt al-ḥīn</quote>
-                     <cit type="translation">
-                        <quote>The old days weren't like now</quote>
-                     </cit>
+                  <quote>il-awwal mu miflāt al-ḥīn</quote>
+                  <cit type="translation">
+                     <quote>The old days weren't like now</quote>
                   </cit>
-                  <note type="general">mi is the feminine singular counterpart. The singular gender distinction no longer exists in the urban Baḥārna dialects, whereas in the village dialects the gender distinction is retained</note>
+               </cit>
+               <note type="general">mi is the feminine singular counterpart. The singular gender distinction no longer exists in the urban Baḥārna dialects, whereas in the village dialects the gender distinction is retained</note>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0067" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pred_neg_muhu"/>
                <bibl corresp="zot:holes_2016_3174" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
@@ -1010,12 +1014,12 @@
                <lang corresp="..\profiles\vicav_profile_BHR-BHN.xml"/>
                <personGrp role="religion" corresp="#shiites"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0067.ct_0000">
-                     <quote>ḥakka al-ʕaǧāyiz, muhum rāḍīn</quote>
-                     <cit type="translation">
-                        <quote>Even the old women won't agree</quote>
-                     </cit>
+                  <quote>ḥakka al-ʕaǧāyiz, muhum rāḍīn</quote>
+                  <cit type="translation">
+                     <quote>Even the old women won't agree</quote>
                   </cit>
-                  <note type="general">mihi is the feminine singular counterpart, whereas muhum/mihim is the plural counterpart</note>
+               </cit>
+               <note type="general">mihi is the feminine singular counterpart, whereas muhum/mihim is the plural counterpart</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0002" status="done" resp="dmp:RZ">
@@ -1024,22 +1028,22 @@
                <placeName ref="geo:kuwait_city"/>
                <lang corresp="..\profiles\vicav_profile_KWT-KWC.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0002.ct_0000">
-                     <quote>mu zēn</quote>
-                     <cit type="translation">
-                        <quote>not good, bad</quote>
-                     </cit>
+                  <quote>mu zēn</quote>
+                  <cit type="translation">
+                     <quote>not good, bad</quote>
                   </cit>
-                  <note type="general">"Occasionally this negative varies for gender in the singular: mu (mhu) zeen, mi (mhi) zeena." (Johnstone 1967:148)</note>
+               </cit>
+               <note type="general">"Occasionally this negative varies for gender in the singular: mu (mhu) zeen, mi (mhi) zeena." (Johnstone 1967:148)</note>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0064" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pred_neg_mub"/>
                <bibl corresp="zot:johnstone_1967_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
                <placeName ref="geo:kuwait_city"/>
                <lang corresp="..\profiles\vicav_profile_KWT-KWC.xml"/>
-                  <note type="general">This is less frequently attested than mu</note>
+               <note type="general">This is less frequently attested than mu</note>
             </wib:featureValueObservation>
-                                    
+
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0057" status="pre" resp="dmp:RZ">
                <name type="featureValue" ref=""/>
                <bibl corresp="src:KUW_2022_GK" type="publication" cert="unknown"/>
@@ -1047,7 +1051,7 @@
                <lang corresp="..\profiles\vicav_profile_KWT-RSD.xml"/>
             </wib:featureValueObservation>
 
-           
+
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0008" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pred_neg_ma"/>
@@ -1055,14 +1059,14 @@
                <placeName ref="geo:sufayri"/>
                <lang corresp="..\profiles\vicav_profile_SAU-DHF.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0008.ct_0000">
-                     <quote>ma ḥinna mtiźahwīn</quote>
-                     <cit type="translation">
-                        <quote>We will not take coffee</quote>
-                     </cit>
+                  <quote>ma ḥinna mtiźahwīn</quote>
+                  <cit type="translation">
+                     <quote>We will not take coffee</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
-            
+
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0321" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pred_neg_ma"/>
@@ -1070,11 +1074,11 @@
                <placeName ref="geo:najd"/>
                <lang corresp="..\profiles\vicav_profile_SAU-NJD.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0321.ct_0000">
-                     <quote>ma ana b-rāyiḥ</quote>
-                     <cit type="translation">
-                        <quote>I am not going</quote>
-                     </cit>
+                  <quote>ma ana b-rāyiḥ</quote>
+                  <cit type="translation">
+                     <quote>I am not going</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0335" status="done" resp="dmp:RZ">
@@ -1083,19 +1087,19 @@
                <placeName ref="geo:kuwait"/>
                <personGrp role="tribe" corresp="pgr:dawasir"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0335.ct_0000">
-                     <quote>ma-bēn-ha farg</quote>
-                     <cit type="translation">
-                        <quote>There is no difference between them</quote>
-                     </cit>
+                  <quote>ma-bēn-ha farg</quote>
+                  <cit type="translation">
+                     <quote>There is no difference between them</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0032" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pred_neg_la"/>
                <bibl corresp="zot:johnstone_1961_0000" type="publication" cert="unknown"/>
                <placeName ref="geo:kuwait"/>
                <personGrp role="tribe" corresp="pgr:dawasir"/>
-	       <note type="general">This is only occasionally employed</note>
+               <note type="general">This is only occasionally employed</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0004" status="done" resp="dmp:RZ">
@@ -1104,24 +1108,24 @@
                <placeName ref="geo:doha"/>
                <lang corresp="..\profiles\vicav_profile_QTR-DHA.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0004.ct_0000">
-                     <quote>hāḏa mu ḥarām?</quote>
-                     <cit type="translation">
-                        <quote>Is this not a bad (forbidden) thing?</quote>
-                     </cit>
+                  <quote>hāḏa mu ḥarām?</quote>
+                  <cit type="translation">
+                     <quote>Is this not a bad (forbidden) thing?</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0031" status="done" resp="dmp:RZ">
+
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0031" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pred_neg_mub"/>
                <bibl corresp="zot:johnstone_1967_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
                <placeName ref="geo:doha"/>
                <lang corresp="..\profiles\vicav_profile_QTR-DHA.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0031.ct_0000">
-                     <quote>mub zēn</quote>
-                     <cit type="translation">
-                        <quote>bad (not good)</quote>
-                     </cit>
+                  <quote>mub zēn</quote>
+                  <cit type="translation">
+                     <quote>bad (not good)</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0092" status="done" resp="dmp:RZ">
@@ -1130,13 +1134,13 @@
                <placeName ref="geo:hejaz"/>
                <lang corresp="..\profiles\vicav_profile_SAU-HJZ.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0092.ct_0000">
-                     <quote>huwwa mū min hina</quote>
-                     <cit type="translation">
-                        <quote>He is not from here</quote>
-                     </cit>
+                  <quote>huwwa mū min hina</quote>
+                  <cit type="translation">
+                     <quote>He is not from here</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0051" status="pre" resp="dmp:RZ">
                <name type="featureValue" ref=""/>
                <bibl corresp="src:SAU_2022_GK" type="publication" cert="unknown"/>
@@ -1153,31 +1157,31 @@
                <placeName ref="geo:tripoli_libya"/>
                <lang corresp="..\profiles\vicav_profile_LBY-TPL.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0234.ct_0000">
-                     <quote>məš bə-nžu l-benġāzi</quote>
-                     <cit type="translation">
-                        <quote>We do not have the intention to come to Benghazi</quote>
-                     </cit>
+                  <quote>məš bə-nžu l-benġāzi</quote>
+                  <cit type="translation">
+                     <quote>We do not have the intention to come to Benghazi</quote>
                   </cit>
-                  <cit type="sourceRepresentation"><quote>məš</quote></cit>
+               </cit>
+               <cit type="sourceRepresentation"><quote>məš</quote></cit>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0005" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pred_neg_mush"/>
                <bibl corresp="zot:pereira_2010_1918" type="publication"/>
                <placeName ref="geo:tripoli_libya"/>
                <lang corresp="..\profiles\vicav_profile_LBY-TPL.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0005.ct_0000">
-                     <quote>mūš ḥā-ykəmməl xədmt-əh</quote>
-                     <cit type="translation">
-                        <quote>He will not finish his work</quote>
-                     </cit>
+                  <quote>mūš ḥā-ykəmməl xədmt-əh</quote>
+                  <cit type="translation">
+                     <quote>He will not finish his work</quote>
                   </cit>
-                  <cit type="sourceRepresentation"><quote>mūš</quote></cit>
+               </cit>
+               <cit type="sourceRepresentation"><quote>mūš</quote></cit>
             </wib:featureValueObservation>
 
-            
 
-          
+
+
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0215" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pred_neg_mish"/>
@@ -1185,12 +1189,12 @@
                <placeName ref="geo:al_khums"/>
                <lang corresp="..\profiles\vicav_profile_LBY-KMS.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0215.ct_0000">
-                     <quote>məš zayy gabl ət-tawra</quote>
-                     <cit type="translation">
-                        <quote>Not like before the revolution</quote>
-                     </cit>
+                  <quote>məš zayy gabl ət-tawra</quote>
+                  <cit type="translation">
+                     <quote>Not like before the revolution</quote>
                   </cit>
-                  <cit type="sourceRepresentation"><quote>məš</quote></cit>
+               </cit>
+               <cit type="sourceRepresentation"><quote>məš</quote></cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0231" status="done" resp="dmp:RZ">
@@ -1200,11 +1204,11 @@
                <lang corresp="..\profiles\vicav_profile_LBY-JTP.xml"/>
                <personGrp role="religion" corresp="pgr:jews"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0231.ct_0000">
-                     <quote>ādi ḥūča mūš bāəya</quote>
-                     <cit type="translation">
-                        <quote>This fish is not good</quote>
-                     </cit>
+                  <quote>ādi ḥūča mūš bāəya</quote>
+                  <cit type="translation">
+                     <quote>This fish is not good</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0178" status="draft" resp="dmp:SK">
@@ -1249,7 +1253,7 @@
                <lang corresp="..\profiles\vicav_profile_SDN-RYD.xml"/>
                <personGrp role="tribe" corresp="#rashayda_sudan"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0046" status="draft" resp="dmp:SK">
                <name type="featureValue" ref=""/>
                <bibl corresp="src:SDN_1974-1978_SR" type="fieldwork"/>
@@ -1692,11 +1696,23 @@
                <lang corresp="..\profiles\vicav_profile_TUN-TSR.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0131" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:" type="publication"/>
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0131" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#pred_neg_m_pron"/>
+               <bibl corresp="src:TUR_2002-2022_SP" type="publication"/>
                <placeName ref="geo:shanliurfa"/>
                <lang corresp="..\profiles\vicav_profile_TUR-URF.xml"/>
+               <cit type="example" xml:id="ft_pred_neg.fv_0131.ct_0000">
+                     <quote>mū-hu Urfalli.</quote>
+                     <cit type="translation">
+                        <quote>He is not from Urfa.</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ft_pred_neg.fv_0131.ct_0001">
+                     <quote>mī-hi Urfalliyye.</quote>
+                     <cit type="translation">
+                        <quote>She is not from Urfa</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0196" status="draft" resp="dmp:SP">
@@ -1863,7 +1879,7 @@
                <placeName ref="geo:gabes"/>
                <lang corresp="..\profiles\vicav_profile_TUN-GBS.xml"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0059" status="draft" resp="dmp:SP">
                <name type="featureValue" ref=""/>
                <bibl corresp="z" type="publication"/>
@@ -2324,11 +2340,11 @@
                <placeName ref="geo:sanaa"/>
                <lang corresp="..\profiles\vicav_profile_YEM-SAN.xml"/>
                <cit type="example" xml:id="ft_pred_neg.fv_0000.ct_0000">
-                     <quote>hii mish zawjatih</quote>
-                     <cit type="translation">
-                        <quote>She is not his wife.</quote>
-                     </cit>
+                  <quote>hii mish zawjatih</quote>
+                  <cit type="translation">
+                     <quote>She is not his wife.</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0297" status="draft" resp="dmp:VE">
@@ -2346,11 +2362,11 @@
                <lang corresp="..\profiles\vicav_profile_YEM-MAN.xml"/>
                <note type="general">Miš or maš</note>
                <cit type="example" xml:id="ft_pred_neg.fv_0304.ct_0000">
-                     <quote>Miš hī ǧamīla</quote>
-                     <cit type="translation">
-                        <quote>She is not beautiful.</quote>
-                     </cit>
+                  <quote>Miš hī ǧamīla</quote>
+                  <cit type="translation">
+                     <quote>She is not beautiful.</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
          </div>
