@@ -64,6 +64,10 @@
                   <label>ka-</label>
                   <desc></desc>
                </item>
+               <item xml:id="prog_mark_a">
+                  <label>ā-</label>
+                  <desc></desc>
+               </item>
                <item xml:id="prog_mark_ta">
                   <label>ta-</label>
                   <desc></desc>
@@ -102,6 +106,10 @@
                </item>
                <item xml:id="prog_mark_3ammaal">
                   <label>ʕammāl</label>
+                  <desc></desc>
+               </item>
+               <item xml:id="prog_mark_nayim">
+                  <label>nāyim + PersPron suffix</label>
                   <desc></desc>
                </item>
                <item xml:id="prog_mark_da">
@@ -1613,12 +1621,11 @@
                <lang corresp="..\profiles\vicav_profile_EGY-SHG.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0193" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#prog_mark_qaa3id"/>
-               <bibl corresp="zot:carbou_1913_0117ot:carbou_1913_0117" type="publication"/>
+            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0193" status="draft" resp="dmp:SK">
+               <name type="featureValue" ref=""/>
+               <bibl corresp="zot:carbou_1913_0117" type="publication"/>
                <placeName ref="geo:ouaday"/>
                <lang corresp="..\profiles\vicav_profile_TCD-ODY.xml"/>
-               <cit type="sourceRepresentation"><quote>gāaʕd (sic!). gāʕad</quote></cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_prg_mar.fv_0132" status="draft" resp="dmp:SK">
@@ -2333,60 +2340,74 @@
                <note type="general">also used as indicative marker and habituel</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0259" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:" type="publication"/>
+            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0259" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#prog_mark_no"/>
+               <bibl corresp="zot:taine-cheikh_2011_8213" type="publication"/>
                <placeName ref="geo:mauritania"/>
                <lang corresp="..\profiles\vicav_profile_MRT-HSS.xml"/>
+               <note type="general">But may be indicated with active participle huwwä tāləʕ əlkədyä 'he is going up the mountain’</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_prg_mar.fv_0272" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:" type="publication"/>
+               <name type="featureValue" ref="#prog_mark_nayim"/>
+               <bibl corresp="zot:zimmermann_2009_5071" type="publication"/>
                <placeName ref="geo:bukhara"/>
                <lang corresp="..\profiles\vicav_profile_UZB-BXR.xml"/>
+               <cit type="example" xml:id="ft_prg_mar.fv_0272.ct_0000">
+                     <quote>nōkul nāymin-ni</quote>
+                     <cit type="translation">
+                        <quote>we are now eating</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">In a similar meaning, the participles qāʿid and wōquf may be used (Fischer 1961:256), 
+                  as well as ġōdi, e.g. miyoġdi ġōdi ‘he was going on’ (Dereli 1997:85).</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0251" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:aguadé_1995_4799" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0251" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#prog_mark_ka"/>
+               <bibl corresp="zot:aguade_1995_0001" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
                <placeName ref="geo:skoura"/>
                <lang corresp="..\profiles\vicav_profile_MAR-SKR.xml"/>
+               <note type="general">also used as indicative and habitual marker</note>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0251" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#prog_mark_ta"/>
+               <bibl corresp="zot:aguade_1995_0001" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:skoura"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-SKR.xml"/>
+                <note type="general">also used as indicative and habitual marker</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0241" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:aguadé_2000_4502" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
-               <placeName ref="geo:oued_draa"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-DRA.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0240" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:aguadé_2003_4996" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0240" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#prog_mark_ka"/>
+               <bibl corresp="zot:aguadé_2003_4996" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
                <placeName ref="geo:casablanca"/>
                <lang corresp="..\profiles\vicav_profile_MAR-CSB.xml"/>
+               <note type="general">also used as indicative and habitual marker</note>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_prg_mar.fv_0240" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#prog_mark_ta"/>
+               <bibl corresp="zot:aguadé_2003_4996" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:casablanca"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-CSB.xml"/>
+               <note type="general">also used as indicative and habitual marker</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0256" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:behnstedt_2002_4379" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
-               <placeName ref="geo:taza"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-TZA.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0315" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:behnstedt_2002_3339" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
-               <placeName ref="geo:oujda"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-OJD.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0273" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:chikovani_2008_7485" type="publication"/>
+            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0273" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#prog_mark_nayim"/>
+               <bibl corresp="zot:zimmermann_2009_5071" type="publication"/>
                <placeName ref="geo:qashqadaryo_region"/>
                <lang corresp="..\profiles\vicav_profile_UZB-QDY.xml"/>
+               <cit type="example" xml:id="ft_prg_mar.fv_0273.ct_0000">
+                     <quote>nōkul nāymin-ni</quote>
+                     <cit type="translation">
+                        <quote>we are now eating</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">In a similar meaning, the participles qāʿid and wōquf may be used (Fischer 1961:256), 
+                  as well as ġōdi, e.g. miyoġdi ġōdi ‘he was going on’ (Dereli 1997:85).</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_prg_mar.fv_0130" status="draft" resp="dmp:TD">
@@ -2397,18 +2418,30 @@
                <personGrp role="tribe" corresp="pgr:branes"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0244" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0244" status="preliminary" resp="dmp:TD">
+               <name type="featureValue" ref="#prog_mark_a"/>
                <bibl corresp="zot:colin_1921_3545" type="publication"/>
                <placeName ref="geo:jbala"/>
                <lang corresp="..\profiles\vicav_profile_MAR-JBL.xml"/>
+               <note type="general">also used as indicative and habitual marker</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0237" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0237" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#prog_mark_ka"/>
                <bibl corresp="zot:francisco_2019_2407" type="publication"/>
                <placeName ref="geo:zaouia_akermoud"/>
                <lang corresp="..\profiles\vicav_profile_MAR-CDM.xml"/>
+               <personGrp role="tribe" corresp="pgr:chiadma"/>
+               <note type="general">also used as indicative and habitual marker</note>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0237" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#prog_mark_no"/>
+               <bibl corresp="zot:francisco_2019_2407" type="publication"/>
+               <placeName ref="geo:zaouia_akermoud"/>
+               <lang corresp="..\profiles\vicav_profile_MAR-CDM.xml"/>
+               <personGrp role="tribe" corresp="pgr:chiadma"/>
+               <note type="general">also used as indicative marker</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_prg_mar.fv_0218" status="draft" resp="dmp:TD">
@@ -2420,42 +2453,28 @@
 
             <wib:featureValueObservation xml:id="ft_prg_mar.fv_0223" status="draft" resp="dmp:TD">
                <name type="featureValue" ref=""/>
-               <bibl corresp="zot:GrandHenry_1979_3844" type="publication" status="CHECKME"><!--broken ID has been fixed in Zotero export, please revise--></bibl>
+               <bibl corresp="zot:GrandHenry_1979_3844" type="publication" status="CHECKED"><!--broken ID has been fixed in Zotero export, please revise--></bibl>
                <placeName ref="geo:saoura"/>
                <lang corresp="..\profiles\vicav_profile_DZA-SAO.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0248" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:heath_2002_0001" type="publication"/>
-               <placeName ref="geo:rabat"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-RBJ.xml"/>
-               <personGrp role="religion" corresp="pgr:jews"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0250" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:heath_2002_0001" type="publication"/>
-               <placeName ref="geo:rabat"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-RBT.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0255" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:heath_2002_0001" type="publication"/>
+            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0255" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#prog_mark_ka"/>
+               <bibl corresp="zot:moscoso_2000-2001_4588" type="publication"/>
                <placeName ref="geo:tanger"/>
                <lang corresp="..\profiles\vicav_profile_MAR-TGR.xml"/>
+               <note type="general">also used as indicative and habitual marker</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0238" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0238" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#prog_mark_no"/>
                <bibl corresp="zot:kampffmeyer_1912_3753" type="publication"/>
                <placeName ref="geo:casablanca-settat"/>
                <lang corresp="..\profiles\vicav_profile_MAR-CHA.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0219" status="draft" resp="dmp:TD">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0219" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#prog_mark_qaa3id"/>
                <bibl corresp="zot:laraba_1981_5666" type="publication"/>
                <placeName ref="geo:constantine"/>
                <lang corresp="..\profiles\vicav_profile_DZA-CON.xml"/>
