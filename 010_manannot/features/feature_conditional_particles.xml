@@ -58,6 +58,10 @@
                   <label>ʔinkān (inčān)</label>
                   <desc></desc>
                </item>
+               <item xml:id="cond_part_kaan">
+                  <label>kān</label>
+                  <desc></desc>
+               </item>
                <item xml:id="cond_part_idha">
                   <label>ʔiḏa</label>
                   <desc></desc>
@@ -2599,11 +2603,18 @@
                <lang corresp="..\profiles\vicav_profile_YEM-HUG.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0293" status="draft" resp="dmp:VE">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0293" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#cond_part_inkaan"></name>
                <bibl corresp="zot:brockett_1985_0000" type="publication"></bibl>
                <placeName ref="geo:al_khaburah"></placeName>
                <lang corresp="..\profiles\vicav_profile_OMN-KHB.xml"></lang>
+               <note type="general">Deduced from glossary.</note>
+               <cit type="example" xml:id="ex_{rn}">
+                  <quote>ʔinkēn sēʕa waḥde inte batsīr, thabbuṭ ṯinayn ṯilēṯ dihdayh dihdayh</quote>
+                  <cit type="translation">
+                     <quote>If you were to go at one o'clock you would sell two or three (bundles of lucerne) immediately.</quote>
+                  </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_cond_part.fv_0115" status="draft" resp="dmp:VE">
@@ -2627,20 +2638,34 @@
                <lang corresp="..\profiles\vicav_profile_YEM-ADN.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0290" status="draft" resp="dmp:VE">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0290" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#cond_part_idha"></name>
                <bibl corresp="zot:grünbichler_2015_2002" type="publication"></bibl>
                <placeName ref="geo:buraymi"></placeName>
                <lang corresp="..\profiles\vicav_profile_OMN-BUR.xml"></lang>
+               <note type="general">In conditionals the b-prefix can occurr. There, it marks a present or past action or an action without reference to an explicit time.</note>
+               <cit type="example" xml:id="ft_cond_part.fv_0290.ct_0000">
+                  <quote>mumkin yuṭbuxūn kull yōm ṭabxa muʕayyina yaʕni mumkin xubәz wa-iḏa mā b-ysawwūn xubәz maṯalan ʕaṣīda.</quote>
+                  <cit type="translation">
+                     <quote>They can cook something specific each day, it can be bread and if they don't make bread they make ʕaṣīda.</quote>
+                  </cit>
+               </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0296" status="draft" resp="dmp:VE">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0296" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#cond_part_idha"></name>
                <bibl corresp="zot:holes_2013_2409" type="publication" status="CHECKED">
                   <!--potentially ambiguous references-->
                </bibl>
                <placeName ref="geo:sur"></placeName>
                <lang corresp="..\profiles\vicav_profile_OMN-SUR.xml"></lang>
+               <note type="general">Deduced from example.</note>
+               <cit type="example" xml:id="ft_cond_part.fv_0296.ct_0000">
+                     <quote>baʕdēn iḏa kān il-xišba rāhiya u guwiyya itsinn fīh </quote>
+                     <cit type="translation">
+                        <quote>If the ship was strong and powerful it would get through it</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_cond_part.fv_0064" status="draft" resp="dmp:VE">
@@ -2650,17 +2675,8 @@
                <lang corresp="..\profiles\vicav_profile_OMN-MSR.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0292" status="draft" resp="dmp:VE">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:lombezzi_2019_1006" type="publication" status="CHECKED">
-                  <!--potentially ambiguous references-->
-               </bibl>
-               <placeName ref="geo:ibri"></placeName>
-               <lang corresp="..\profiles\vicav_profile_OMN-IBR.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0295" status="draft" resp="dmp:VE">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0295" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#cond_part_idha"></name>
                <bibl corresp="zot:reinhardt_1894_0000" type="publication"></bibl>
                <placeName ref="geo:al_ristaq"></placeName>
                <lang corresp="..\profiles\vicav_profile_OMN-RST.xml"></lang>
@@ -2680,13 +2696,6 @@
                <lang corresp="..\profiles\vicav_profile_YEM-HAD.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0294" status="draft" resp="dmp:VE">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:shaaban_1977_7730" type="publication"></bibl>
-               <placeName ref="geo:muscat"></placeName>
-               <lang corresp="..\profiles\vicav_profile_OMN-MSQ.xml"></lang>
-            </wib:featureValueObservation>
-
             <wib:featureValueObservation xml:id="ft_cond_part.fv_0312" status="draft" resp="dmp:VE">
                <name type="featureValue" ref=""></name>
                <bibl corresp="zot:vanhove_1995_0364" type="publication" status="CHECKED">
@@ -2703,12 +2712,19 @@
                <lang corresp="..\profiles\vicav_profile_YEM-SAN.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0297" status="draft" resp="dmp:VE">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0297" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#cond_part_kaan"></name>
                <bibl corresp="zot:webster_1991_0000" type="publication"></bibl>
                <placeName ref="geo:al_wahiba"></placeName>
                <lang corresp="..\profiles\vicav_profile_OMN-WAH.xml"></lang>
                <personGrp role="tribe" corresp="#al_wahiba"></personGrp>
+               <note type="general">Deduced from example.</note>
+               <cit type="example" xml:id="ft_cond_part.fv_0297.ct_0000">
+                     <quote>Kān hī ʕandhā ġanam ʕand ahalhā, man ʕarrasat, yāt b-il-ġanam, u-xallathin bi-firīghā</quote>
+                     <cit type="translation">
+                        <quote>If she has goats among her own family, when she marries, she brings the goats and puts them in her (new) household.</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_cond_part.fv_0304" status="draft" resp="dmp:VE">
