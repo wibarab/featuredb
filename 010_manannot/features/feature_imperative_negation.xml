@@ -80,6 +80,10 @@
                   <label>wala + imperative verb</label>
                   <desc></desc>
                </item>
+                <item xml:id="imp_neg_laad_verb">
+                  <label>lʕād + verb</label>
+                  <desc></desc>
+               </item>
             </list>
          </div>
          <div type="description">
@@ -1613,11 +1617,30 @@
                <lang corresp="..\profiles\vicav_profile_MAR-HYN.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_imp_neg.fv_0300" status="draft" resp="dmp:VE">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_imp_neg.fv_0300" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#imp_neg_laa_verb"/>
                <bibl corresp="zot:saqqaf_1999_1184" type="publication"/>
                <placeName ref="geo:hadramaut"/>
                <lang corresp="..\profiles\vicav_profile_YEM-HAD.xml"/>
+               <cit type="example" xml:id="ft_imp_neg.fv_0300.ct_0000">
+                     <quote>la tilʕab bi-ṭ-ṭīn</quote>
+                     <cit type="translation">
+                        <quote>Don't play with the soil.</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_imp_neg.fv_0015" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#imp_neg_laad_verb"/>
+               <bibl corresp="zot:saqqaf_1999_1184" type="publication"/>
+               <placeName ref="geo:hadramaut"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-HAD.xml"/>
+               <cit type="example" xml:id="ft_imp_neg.fv_0015.ct_0000">
+                     <quote>lʕād tirfaʕ la nafs iṣ-ṣuhun</quote>
+                     <cit type="translation">
+                        <quote>don't repeat the same things you often say</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_imp_neg.fv_0372" status="draft" resp="dmp:VE">
@@ -1626,14 +1649,7 @@
                <placeName ref="geo:sa_dah"/>
                <lang corresp="..\profiles\vicav_profile_YEM-SAD.xml"/>
             </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_imp_neg.fv_0296" status="draft" resp="dmp:VE">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:holes_2013_2409" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
-               <placeName ref="geo:sur"/>
-               <lang corresp="..\profiles\vicav_profile_OMN-SUR.xml"/>
-            </wib:featureValueObservation>
-
+           
             <wib:featureValueObservation xml:id="ft_imp_neg.fv_0295" status="done" resp="dmp:VE">
                <name type="featureValue" ref="#imp_neg_laa_verb"/>
                <bibl corresp="zot:reinhardt_1894_0000" type="publication"/>
