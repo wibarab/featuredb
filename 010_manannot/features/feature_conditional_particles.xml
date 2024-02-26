@@ -58,6 +58,14 @@
                   <label>ʔila</label>
                   <desc></desc>
                </item>
+               <item xml:id="cond_part_kiiku">
+                  <label>kīku (kieku)</label>
+                  <desc></desc>
+               </item>
+               <item xml:id="cond_part_yekk">
+                  <label>yekk (jekk)</label>
+                  <desc></desc>
+               </item>
                <item xml:id="cond_part_inkaan">
                   <label>ʔinkān (inčān)</label>
                   <desc></desc>
@@ -68,6 +76,10 @@
                </item>
                <item xml:id="cond_part_idha">
                   <label>ʔiḏa</label>
+                  <desc></desc>
+               </item>
+                <item xml:id="cond_part_idha_kaan">
+                  <label>ʔiḏa kān</label>
                   <desc></desc>
                </item>
                 <item xml:id="cond_part_leen">
@@ -1387,12 +1399,36 @@
                <lang corresp="..\profiles\vicav_profile_KWT-RSD.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0258" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0258" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#cond_part_kiiku"></name>
                <bibl corresp="src:PC_RZ" type="personalCommunication"></bibl>
                <placeName ref="geo:malta"></placeName>
                <lang corresp="..\profiles\vicav_profile_MLT-MAL.xml"></lang>
+               <cit type="example" xml:id="ft_cond_part.fv_0258.ct_0000">
+                     <quote>kīku mort and it-tabīb il-ǧima l-oḥra, (kīku) diǧa fiʔt</quote>
+                     <cit type="translation">
+                        <quote>if you had gone to the doctor last week, you would already be fit</quote>
+                     </cit>
+                     <note type="general">Maltese orthography: Kieku mort għand it-tabib il-ġimgħa l-oħra, kieku diġa fiqt</note>
+                  </cit>
+                  <note type="general">This particle describes an irrealis conditional sentence</note>
             </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_cond_part.fv_0305" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#cond_part_yekk"></name>
+               <bibl corresp="src:PC_RZ" type="personalCommunication"></bibl>
+               <placeName ref="geo:malta"></placeName>
+               <lang corresp="..\profiles\vicav_profile_MLT-MAL.xml"></lang>
+               <cit type="example" xml:id="ft_cond_part.fv_0258.ct_0000">
+                     <quote>yekk niǧru yāf nilḥʔu tal-linya</quote>
+                     <cit type="translation">
+                        <quote>if we run we might catch the bus</quote>
+                     </cit>
+                     <note type="general">Maltese orthography: Jekk niġru jaf nilħqu tal-linja</note>
+                  </cit>
+                  <note type="general">This particle describes a realis conditional sentence</note>
+            </wib:featureValueObservation>
+            
 
             <wib:featureValueObservation xml:id="ft_cond_part.fv_0051" status="draft" resp="dmp:RZ">
                <name type="featureValue" ref=""></name>
@@ -1421,11 +1457,13 @@
                <personGrp role="tribe" corresp="#rashayda_sudan"></personGrp>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0227" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0227" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#cond_part_idha_kaan"></name>
                <bibl corresp="zot:" type="publication"></bibl>
                <placeName ref="geo:mazara_del_vallo"></placeName>
                <lang corresp="..\profiles\vicav_profile_ITA-MDV.xml"></lang>
+               <cit type="sourceRepresentation"><quote>īḏā-kān</quote></cit>
+               <note type="general">Deduced from examples</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_cond_part.fv_0334" status="draft" resp="dmp:RZ">
@@ -1468,39 +1506,7 @@
                   </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0229" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:caubet_2004_3508" type="publication" status="CHECKME">
-                  <!--potentially ambiguous references-->
-               </bibl>
-               <placeName ref="geo:fezzan"></placeName>
-               <lang corresp="..\profiles\vicav_profile_LBY-FZN.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0233" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:caubet_2004_3508" type="publication" status="CHECKME">
-                  <!--potentially ambiguous references-->
-               </bibl>
-               <placeName ref="geo:murzuq"></placeName>
-               <lang corresp="..\profiles\vicav_profile_LBY-MRQ.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0235" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:caubet_2004_3508" type="publication" status="CHECKME">
-                  <!--potentially ambiguous references-->
-               </bibl>
-               <placeName ref="geo:zintan"></placeName>
-               <lang corresp="..\profiles\vicav_profile_LBY-ZTN.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0003" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:DAnna_2017_4912" type="publication"></bibl>
-               <placeName ref="geo:misrata"></placeName>
-               <lang corresp="..\profiles\vicav_profile_LBY-MSR.xml"></lang>
-            </wib:featureValueObservation>
+         
 
             <wib:featureValueObservation xml:id="ft_cond_part.fv_0232" status="draft" resp="dmp:RZ">
                <name type="featureValue" ref=""></name>
