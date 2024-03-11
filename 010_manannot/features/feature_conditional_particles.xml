@@ -51,7 +51,11 @@
             <head>Feature Values</head>
             <list type="featureValues">
                <item xml:id="cond_part_in">
-                  <label>ʔin</label>
+                  <label>ʔin, ən</label>
+                  <desc></desc>
+                  </item>
+               <item xml:id="cond_part_inn">
+                  <label>inn, ənn</label>
                   <desc></desc>
                </item>
                <item xml:id="cond_part_ila">
@@ -75,7 +79,11 @@
                   <desc></desc>
                </item>
                <item xml:id="cond_part_idha">
-                  <label>ʔiḏa</label>
+                  <label>ʔiḏa, iza</label>
+                  <desc></desc>
+               </item>
+               <item xml:id="cond_part_kuun">
+                  <label>kūn</label>
                   <desc></desc>
                </item>
                 <item xml:id="cond_part_idha_kaan">
@@ -94,6 +102,10 @@
                   <label>law, lō</label>
                   <desc></desc>
                </item>
+               <item xml:id="cond_part_lay">
+                  <label>lay</label>
+                  <desc></desc>
+               </item>
                <item xml:id="cond_part_law_in">
                   <label>law in</label>
                   <desc></desc>
@@ -102,12 +114,32 @@
                   <label>law kān</label>
                   <desc></desc>
                </item>
+               <item xml:id="cond_part_luu_kan">
+                  <label>lūkan</label>
+                  <desc></desc>
+               </item>
                <item xml:id="cond_part_amma">
                   <label>amma / umma</label>
                   <desc></desc>
                </item>
                <item xml:id="cond_part_asyndetic">
                   <label>asyndetic - no conditional particle</label>
+                  <desc></desc>
+               </item>
+               <item xml:id="cond_part_kaa">
+                  <label>kā</label>
+                  <desc></desc>
+               </item>
+               <item xml:id="cond_part_ikuun">
+                  <label>īkūn</label>
+                  <desc></desc>
+               </item>
+               <item xml:id="cond_part_tkuun">
+                  <label>tkūn</label>
+                  <desc></desc>
+               </item>
+               <item xml:id="cond_part_haaga">
+                  <label>hāga</label>
                   <desc></desc>
                </item>
             </list>
@@ -897,14 +929,6 @@
                <lang corresp="..\profiles\vicav_profile_SYR-ALP.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0120" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:" type="publication"></bibl>
-               <placeName ref="geo:homs"></placeName>
-               <lang corresp="..\profiles\vicav_profile_SYR-KDT.xml"></lang>
-               <personGrp role="tribe" corresp="pgr:ugedat"></personGrp>
-            </wib:featureValueObservation>
-
             <wib:featureValueObservation xml:id="ft_cond_part.fv_0121" status="draft" resp="dmp:CL">
                <name type="featureValue" ref=""></name>
                <bibl corresp="zot:" type="publication"></bibl>
@@ -927,11 +951,43 @@
                <lang corresp="..\profiles\vicav_profile_SYR-SUK.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0127" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:" type="publication"></bibl>
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0127" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#cond_part_ikuun"></name>
+               <bibl corresp="zot:fink_2017_3211" type="publication"></bibl>
                <placeName ref="geo:hasankeyf"></placeName>
                <lang corresp="..\profiles\vicav_profile_TUR-HAS.xml"></lang>
+               <cit type="sourceRepresentation"><quote>īkūn</quote></cit>
+               <note type="general">Realis conditional clause is introduced by īkūn, tkūn or hāga (kurdish).</note>
+               <cit type="example" xml:id="ft_cond_part.fv_0127.ct_0000">
+                     <quote>(īkūn) təstaxbərni hawnək aṭyab kān mən hawne.</quote>
+                     <cit type="translation">
+                        <quote>If you ask me, it was better there than here.</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0120" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#cond_part_tkuun"></name>
+               <bibl corresp="zot:fink_2017_3211" type="publication"></bibl>
+               <placeName ref="geo:hasankeyf"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUR-HAS.xml"></lang>
+               <note type="general">Realis conditional clause is introduced by īkūn, tkūn or hāga (kurdish).</note>
+               <cit type="sourceRepresentation"><quote>tkūn</quote></cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0162" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#cond_part_haaga"></name>
+               <bibl corresp="zot:fink_2017_3211" type="publication"></bibl>
+               <placeName ref="geo:hasankeyf"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUR-HAS.xml"></lang>
+               <cit type="sourceRepresentation"><quote>hāga</quote></cit>
+               <note type="general">Realis conditional clause is introduced by īkūn, tkūn or hāga (kurdish).</note>
+               <cit type="example" xml:id="ft_cond_part.fv_0162.ct_0001">
+                     <quote>hāga kallək əxwe hawle īʕēwnūk.</quote>
+                     <cit type="translation">
+                        <quote>if you had brothers, they would help you.</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_cond_part.fv_0128" status="draft" resp="dmp:CL">
@@ -941,11 +997,49 @@
                <lang corresp="..\profiles\vicav_profile_TUR-IDI.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0129" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:" type="publication"></bibl>
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0129" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#cond_part_inn"></name>
+               <bibl corresp="zot:lahdo_2009_1103" type="publication"></bibl>
                <placeName ref="geo:siirt"></placeName>
                <lang corresp="..\profiles\vicav_profile_TUR-SII.xml"></lang>
+               <cit type="sourceRepresentation"><quote>ənn</quote></cit>
+               <note type="general">The protasis in a syndetic realis conditional clause is introduced either by ənn or by lay(Lahdo 2009:183). ənn is also used for irealis.</note>
+               <cit type="example" xml:id="ft_cond_part.fv_0129.ct_0000">
+                     <quote>əs-saḥ ḥäälkən ənn kā-ṣār mali trōḥu t-Təllo əmme təbqaw fī Ṣṭanbūl?</quote>
+                     <cit type="translation">
+                        <quote>If your situation becomes better, will you go (backt) to Tillo?</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0322" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#cond_part_lay"></name>
+               <bibl corresp="zot:lahdo_2009_1103" type="publication"></bibl>
+               <placeName ref="geo:siirt"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUR-SII.xml"></lang>
+               <cit type="sourceRepresentation"><quote>lay</quote></cit>
+               <note type="general">The protasis in a syndetic realis conditional clause is introduced either by ənn or by lay(Lahdo 2009:183).</note>
+               <cit type="example" xml:id="ft_cond_part.fv_0322.ct_0000">
+                     <quote>lay ḍurumna mmēni ysīr malī də-nrō nəḅʔa fət-Təllo.</quote>
+                     <cit type="translation">
+                        <quote>If our (economic) situation is getting better, we will go (back) and stay in Tillo.</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0325" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#cond_cond_part_kaa"></name>
+               <bibl corresp="zot:lahdo_2009_1103" type="publication"></bibl>
+               <placeName ref="geo:siirt"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUR-SII.xml"></lang>
+               <cit type="sourceRepresentation"><quote>kā</quote></cit>
+               <cit type="example" xml:id="ft_cond_part.fv_0325.ct_0000">
+               <note type="general">kā is also used for irealis.</note>
+                     <quote>kā-əbni ǧā bəs-salēme da-anṿərlu mūlet.</quote>
+                     <cit type="translation">
+                        <quote>If my son comes back safe, I will vow a feast for him.</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_cond_part.fv_0157" status="draft" resp="dmp:CL">
@@ -955,11 +1049,37 @@
                <lang corresp="..\profiles\vicav_profile_PSE-GZA.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0168" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:" type="publication"></bibl>
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0168" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#cond_part_kaan"></name>
+               <bibl corresp="zot:rosenhouse_2007_1938" type="publication"></bibl>
                <placeName ref="geo:jerusalem"></placeName>
                <lang corresp="..\profiles\vicav_profile_PSE-JRS.xml"></lang>
+               <cit type="sourceRepresentation"><quote>kān</quote></cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0163" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#cond_part_kuun"></name>
+               <bibl corresp="zot:rosenhouse_2007_1938" type="publication"></bibl>
+               <placeName ref="geo:jerusalem"></placeName>
+               <lang corresp="..\profiles\vicav_profile_PSE-JRS.xml"></lang>
+               <cit type="sourceRepresentation"><quote>kūn</quote></cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0164" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#cond_part_idha"></name>
+               <bibl corresp="zot:rosenhouse_2007_1938" type="publication"></bibl>
+               <placeName ref="geo:jerusalem"></placeName>
+               <lang corresp="..\profiles\vicav_profile_PSE-JRS.xml"></lang>
+               <cit type="sourceRepresentation"><quote>iza</quote></cit>
+            </wib:featureValueObservation>
+             
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0165" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#cond_part_law"></name>
+               <bibl corresp="zot:rosenhouse_2007_1938" type="publication"></bibl>
+               <placeName ref="geo:jerusalem"></placeName>
+               <lang corresp="..\profiles\vicav_profile_PSE-JRS.xml"></lang>
+               <cit type="sourceRepresentation"><quote>law</quote></cit>
+               <note type="general">For unreal conditions, law (irrealis) and lōla (negative irrealis) are used (Rosenhouse 2007).</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_cond_part.fv_0171" status="draft" resp="dmp:CL">
@@ -977,55 +1097,6 @@
                <placeName ref="geo:arabkhane"></placeName>
                <placeName ref="geo:"></placeName>
                <lang corresp="..\profiles\vicav_profile_IRN-KHS.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0162" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:" type="publication"></bibl>
-               <placeName ref="geo:bet_liqya"></placeName>
-               <lang corresp="..\profiles\vicav_profile_PSE-BLQ.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0164" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:" type="publication"></bibl>
-               <placeName ref="geo:birzeit"></placeName>
-               <lang corresp="..\profiles\vicav_profile_PSE-BZT.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0165" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:" type="publication"></bibl>
-               <placeName ref="geo:dar_is_sudan"></placeName>
-               <lang corresp="..\profiles\vicav_profile_PSE-DSN.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0170" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:" type="publication"></bibl>
-               <placeName ref="geo:al_mizra_ish_sharkiyya"></placeName>
-               <lang corresp="..\profiles\vicav_profile_PSE-MKY.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0172" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:" type="publication"></bibl>
-               <placeName ref="geo:silwad"></placeName>
-               <lang corresp="..\profiles\vicav_profile_PSE-SWD.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0174" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:" type="publication"></bibl>
-               <placeName ref="geo:it_tayybe"></placeName>
-               <lang corresp="..\profiles\vicav_profile_PSE-TYB.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0163" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:amara_2005_0000" type="publication"></bibl>
-               <placeName ref="geo:bethlehem"></placeName>
-               <lang corresp="..\profiles\vicav_profile_PSE-BTL.xml"></lang>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_cond_part.fv_0158" status="draft" resp="dmp:CL">
@@ -1115,11 +1186,31 @@
                <lang corresp="..\profiles\vicav_profile_PSE-DWY.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0118" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:cowell_1964_0000" type="publication"></bibl>
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0118" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#cond_part_idha"></name>
+               <bibl corresp="zot:lentin_2006_0000" type="publication"></bibl>
                <placeName ref="geo:damascus"></placeName>
                <lang corresp="..\profiles\vicav_profile_SYR-DAM.xml"></lang>
+               <cit type="sourceRepresentation"><quote>iza</quote></cit>
+               <note type="general">mostly for realis</note>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0170" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#cond_part_idha"></name>
+               <bibl corresp="zot:lentin_2006_0000" type="publication"></bibl>
+               <placeName ref="geo:damascus"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-DAM.xml"></lang>
+               <cit type="sourceRepresentation"><quote>law</quote></cit>
+               <note type="general">mostly for irrealis</note>
+            </wib:featureValueObservation>
+            
+                   <wib:featureValueObservation xml:id="ft_cond_part.fv_0172" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#cond_part_in"></name>
+               <bibl corresp="zot:lentin_2006_0000" type="publication"></bibl>
+               <placeName ref="geo:damascus"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-DAM.xml"></lang>
+               <cit type="sourceRepresentation"><quote>ən</quote></cit>
+               <note type="general">only in proverbs and idioms</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_cond_part.fv_0278" status="draft" resp="dmp:CL">
@@ -1193,7 +1284,7 @@
 
             <wib:featureValueObservation xml:id="ft_cond_part.fv_0281" status="draft" resp="dmp:CL">
                <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:woidich_2006_3203" type="publication" status="CHECKED">
+               <bibl corresp="z" type="publication" status="CHECKED">
                   <!--potentially ambiguous references-->
                </bibl>
                <placeName ref="geo:cairo"></placeName>
@@ -2779,7 +2870,7 @@
                <lang corresp="..\profiles\vicav_profile_DZA-ALR.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0221" status="draft" resp="dmp:TD">
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0221" status="done" resp="dmp:TD">
                <name type="featureValue" ref=""></name>
                <bibl corresp="zot:" type="publication"></bibl>
                <placeName ref="geo:mzab"></placeName>
@@ -3141,8 +3232,15 @@
                <lang corresp="..\profiles\vicav_profile_OMN-RST.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0291" status="draft" resp="dmp:VE">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0291" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#cond_part_in"></name>
+               <bibl corresp="zot:rhodokanakis_1908_1911_0000" type="publication"></bibl>
+               <placeName ref="geo:dhofar"></placeName>
+               <lang corresp="..\profiles\vicav_profile_OMN-DHF.xml"></lang>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0311" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#cond_part_inkaan"></name>
                <bibl corresp="zot:rhodokanakis_1908_1911_0000" type="publication"></bibl>
                <placeName ref="geo:dhofar"></placeName>
                <lang corresp="..\profiles\vicav_profile_OMN-DHF.xml"></lang>
@@ -3200,11 +3298,57 @@
                <lang corresp="..\profiles\vicav_profile_YEM-YAF.xml"></lang>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0000" status="draft" resp="dmp:VE">
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0000" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#cond_part_idha"></name>
+               <bibl corresp="zot:watson_1993_0000" type="publication"></bibl>
+               <placeName ref="geo:sanaa"></placeName>
+               <lang corresp="..\profiles\vicav_profile_YEM-SAN.xml"></lang>
+               <cit type="example" xml:id="ft_cond_part.fv_0000.ct_0000">
+                     <quote>iḏā ġarabat aš-šams lā yuǧūz an yigbar al-mayyit</quote>
+                     <cit type="translation">
+                        <quote>if the sun has set it is not possible to bury the dead.</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0315" status="done" resp="dmp:VE">
                <name type="featureValue" ref=""></name>
                <bibl corresp="zot:watson_1993_0000" type="publication"></bibl>
                <placeName ref="geo:sanaa"></placeName>
                <lang corresp="..\profiles\vicav_profile_YEM-SAN.xml"></lang>
+               <cit type="sourceRepresentation"><quote>(ʔi)lā</quote></cit>
+               <cit type="example" xml:id="ft_cond_part.fv_0315.ct_0000">
+                     <quote>lā šayyib aš-šaybih gaddim lih ṣabiyih</quote>
+                     <cit type="translation">
+                        <quote>when the man grows old, offer him a young girl</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0314" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#cond_part_law"></name>
+               <bibl corresp="zot:watson_1993_0000" type="publication"></bibl>
+               <placeName ref="geo:sanaa"></placeName>
+               <lang corresp="..\profiles\vicav_profile_YEM-SAN.xml"></lang>
+               <cit type="example" xml:id="ft_cond_part.fv_0314.ct_0001">
+                     <quote>law tuḏ̣rub al-māʔ la-mā yiḥmī</quote>
+                     <cit type="translation">
+                        <quote>if you beat water it will not get hot</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0313" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#cond_part_in"></name>
+               <bibl corresp="zot:watson_1993_0000" type="publication"></bibl>
+               <placeName ref="geo:sanaa"></placeName>
+               <lang corresp="..\profiles\vicav_profile_YEM-SAN.xml"></lang>
+               <cit type="example" xml:id="ft_cond_part.fv_0313.ct_0000">
+                     <quote>in yistarū riǧiʕū mā yistarūš aḥtabasū</quote>
+                     <cit type="translation">
+                        <quote>if they (m.) can, they return; if they cannot they are imprisoned</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_cond_part.fv_0297" status="done" resp="dmp:VE">
@@ -3222,8 +3366,8 @@
                   </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0304" status="draft" resp="dmp:VE">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0304" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#cond_part_in"></name>
                <bibl corresp="zot:werbeck_2001_4975" type="publication"></bibl>
                <placeName ref="geo:manakhah"></placeName>
                <lang corresp="..\profiles\vicav_profile_YEM-MAN.xml"></lang>
