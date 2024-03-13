@@ -564,7 +564,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         collected in the fieldwork of WIBARAB.</desc>
                 </elementSpec>
                      <moduleRef key="corpus"/>
-                     <moduleRef key="textstructure" include="TEI back body front div text"/>
+                     <moduleRef key="textstructure" include="TEI back body front div text byline"/>
                      <moduleRef key="namesdates" include="affiliation age birth bloc death
                         district education event faith forename genName geo geogFeat geogName langKnowledge
                         langKnown listEvent listOrg listPerson listPlace location nationality occupation
@@ -806,6 +806,15 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                  </attList>
                               </elementSpec>
                               <elementSpec ident="div" mode="change">
+                                 <constraintSpec ident="div-description" scheme="schematron">
+                                    <constraint>
+                                       <sch:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>
+                                       <sch:rule context="tei:div[@type = 'description']">
+                                       <sch:assert test="child::tei:byline"> 'byline' element is required.</sch:assert>
+                                       <sch:assert test="@resp">'resp' attribute is required.</sch:assert>
+                                       </sch:rule>
+                                    </constraint>
+                                 </constraintSpec>
                                  <attList>
                                     <attDef ident="type" mode="replace" usage="opt">
                                        <valList type="closed">
