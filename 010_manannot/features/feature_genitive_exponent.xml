@@ -54,6 +54,10 @@
                   <label>tabaʕ, tibaʕ, tbaʕ</label>
                   <desc></desc>
                </item>
+                <item xml:id="gen_taa3_inflected">
+                  <label>tāʕ, taʕt-/taʕīt-, taʕūn/taʕīn...</label>
+                  <desc></desc>
+               </item>
                <item xml:id="gen_bitaa3_inflected">
                   <label>btāʕ, bitāʕ, btāʕit, etc.</label>
                   <desc></desc>
@@ -147,7 +151,11 @@
                   <desc></desc>
                </item>
                <item xml:id="gen_taba3_inflected">
-                  <label>tabaʕ, tabaʕat, tabaʕūn</label>
+                  <label>tabaʕ, tabaʕat/tabʕīt/tabʕit, tabaʕūn/tabʕīn</label>
+                  <desc></desc>
+               </item>
+                 <item xml:id="gen_tab3uul_inflected">
+                  <label>tabʕūl-, f. tabʕul(i)t-, pl. tabʕūlēt-</label>
                   <desc></desc>
                </item>
                <item xml:id="gen_haal_invariable">
@@ -170,315 +178,361 @@
                   <label>gaay (sg.m.), gayyīn (pl.m.); gayyit (sg.f.), gayyāt (pl.f.)</label>
                   <desc></desc>
                </item>
+                 <item xml:id="gen_giyy_inflected">
+                  <label>m. giyy, f. gīt-, pl. giyyāt-</label>
+                  <desc></desc>
+               </item>
+                 <item xml:id="gen_shiyy_inflected">
+                  <label>m. šiyy- f. šīt-, pl. šiyyāt-</label>
+                  <desc></desc>
+               </item>
+                <item xml:id="gen_sheel_invariable">
+                  <label>šēl</label>
+                  <desc>Hebrew loanword</desc>
+               </item>
+                 <item xml:id="gen_z_invariable">
+                  <label>z+noun</label>
+                  <desc>ex. z-mayy suxni (of the hot water)</desc>
+               </item>
             </list>
          </div>
          <div type="description">
          </div>
          <div type="featureValueObservations" xmlns:tei="http://www.tei-c.org/ns/1.0">
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0050" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0050" status="pre" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_taba3_inflected"></name>
                <bibl corresp="src:LEB_2022_AID" type="fieldwork"></bibl>
                <placeName ref="geo:ed_dhayra"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBN-ARA.xml"></lang>
                <personGrp role="tribe" corresp="pgr:aramsha_lebanon"></personGrp>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0063" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0063" status="pre" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_taba3_inflected"></name>
                <bibl corresp="src:LEB_2022_AID" type="fieldwork"></bibl>
                <placeName ref="geo:khalde"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBN-KHA.xml"></lang>
                <personGrp role="tribe" corresp="pgr:arab_xalde"></personGrp>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0071" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0071" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_taba3_notinflected"></name>
                <bibl corresp="src:LEB_2022_AID" type="fieldwork"></bibl>
                <placeName ref="geo:naameh"></placeName>
                <placeName ref="geo:el_karantina"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"></lang>
                <personGrp role="tribe" corresp="pgr:arab_maslax"></personGrp>
+               </wib:featureValueObservation>
+               
+               <wib:featureValueObservation xml:id="ft_gen_ex.fv_0048" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_taa3_inflected"></name>
+               <bibl corresp="src:LEB_2022_AID" type="fieldwork"></bibl>
+               <placeName ref="geo:naameh"></placeName>
+               <placeName ref="geo:el_karantina"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:arab_maslax"></personGrp>
+               <note type="general">f. taʕīt, pl. taʕūl, taʕīn</note>
+            
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0060" status="draft" resp="dmp:AID">
+            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0060" status="done" resp="dmp:AID">
                <name type="featureValue" ref=""></name>
                <bibl corresp="zot:agbaht_2023_4928" type="publication"></bibl>
                <placeName ref="geo:sheikh_taba"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBN-SXT.xml"></lang>
+               <note type="general">"The attested forms are tabaʕ, tabʕit, tabʕīt, and tabʕūl" (Agbaht 2023:128).</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0027" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0027" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_giyy"></name>
                <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
                <placeName ref="geo:jurdeih"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-ARM.xml"></lang>
                <personGrp role="tribe" corresp="pgr:aramsha_israel"></personGrp>
+               <note type="general">f. gīt-, pl. giyyāt- (Behnstedt and Geva-Kleinberger 2019:269)</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0029" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
-               <placeName ref="geo:hajajra"></placeName>
-               <lang corresp="..\profiles\vicav_profile_ISR-GAW.xml"></lang>
-               <personGrp role="tribe" corresp="pgr:jawamis"></personGrp>
-            </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0030" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0030" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_taba3_inflected"></name>
                <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
                <placeName ref="geo:hamam"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-GET.xml"></lang>
                <personGrp role="tribe" corresp="pgr:getiyya"></personGrp>
+               <note type="general">f. tabaʕt/tabʕat/tabʕit/tabaʕīt, pl. tabaʕūn/tabʕīn/tabaʕōn. (Behnstedt and Geva-Kleinberger 2019:269)</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0026" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0026" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_taba3_inflected"></name>
                <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
                <placeName ref="geo:haifa"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-HAI.xml"></lang>
+               <note type="general">f. tabaʕt/tabʕat/tabʕit/tabaʕīt, pl. tabaʕūn/tabʕīn/tabaʕōn. (Behnstedt and Geva-Kleinberger 2019:269)</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0031" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0058" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_taba3_inflected"></name>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
+               <placeName ref="geo:haifa"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ISR-HAI.xml"></lang>
+               <note type="general">f. tabaʕt/tabʕat/tabʕit/tabaʕīt, pl. tabaʕūn/tabʕīn/tabaʕōn. (Behnstedt and Geva-Kleinberger 2019:269)</note>
+            </wib:featureValueObservation>
+            
+                <wib:featureValueObservation xml:id="ft_gen_ex.fv_0061" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_shiyy_inflected"></name>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
+               <placeName ref="geo:haifa"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ISR-HAI.xml"></lang>
+               <note type="general"> f. šāt-, pl. šiyyāt-. (Behnstedt and Geva-Kleinberger 2019:269)</note>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_gen_ex.fv_0062" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_sheel_invariable"></name>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
+               <placeName ref="geo:haifa"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ISR-HAI.xml"></lang>
+               <personGrp role="religion" corresp="#jews"/>
+               <note type="general">Šēl is a Hebrew loanword. (Behnstedt and Geva-Kleinberger 2019:269)</note>
+            </wib:featureValueObservation>
+
+              <wib:featureValueObservation xml:id="ft_gen_ex.fv_0065" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_z_invariable"></name>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
+               <placeName ref="geo:haifa"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ISR-HAI.xml"></lang>
+               <personGrp role="religion" corresp="#jews"/>
+               <note type="general">No etymology is indicated, for a discussion see WAD IV, map 472. Might be Syriac. (Behnstedt and Geva-Kleinberger 2019:269)</note>
+            </wib:featureValueObservation>
+
+            
+              <wib:featureValueObservation xml:id="ft_gen_ex.fv_0029" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_taba3_inflected"></name>
                <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
                <placeName ref="geo:hujeirat_dhara"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ISR-HGE.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:hjerat"></personGrp>
+               <note type="general">f. tabaʕt/tabʕat/tabʕit/tabaʕīt, pl. tabaʕūn/tabʕīn/tabaʕōn. (Behnstedt and Geva-Kleinberger 2019:269)</note>
+            </wib:featureValueObservation>
+            
+            
+            
+              <wib:featureValueObservation xml:id="ft_gen_ex.fv_0031" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_giyy_inflected"></name>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
                <placeName ref="geo:bir_el_maksur"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-HGE.xml"></lang>
                <personGrp role="tribe" corresp="pgr:hjerat"></personGrp>
+               <note type="general">f. gīt-, pl. giyyāt- (Behnstedt and Geva-Kleinberger 2019:269)</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0032" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            
+              <wib:featureValueObservation xml:id="ft_gen_ex.fv_0120" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_shiyy_inflected"></name>
                <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
-               <placeName ref="geo:kaabiyya"></placeName>
-               <lang corresp="..\profiles\vicav_profile_ISR-KAB.xml"></lang>
-               <personGrp role="tribe" corresp="pgr:kabiyye"></personGrp>
+               <placeName ref="geo:bir_el_maksur"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ISR-HGE.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:hjerat"></personGrp>
+               <note type="general"> f. šīt-, pl. šiyyāt-. (Behnstedt and Geva-Kleinberger 2019:269)</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0033" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+
+            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0033" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_taba3_inflected"></name>
                <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
                <placeName ref="geo:tuba_zangariya"></placeName>
                <placeName ref="geo:mashhad"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-LHE.xml"></lang>
                <personGrp role="tribe" corresp="pgr:lheb"></personGrp>
+               <note type="general">f. tabaʕt/tabʕat/tabʕit/tabaʕīt, pl. tabaʕūn/tabʕīn/tabaʕōn. (Behnstedt and Geva-Kleinberger 2019:269)</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0034" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0034" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_taba3_inflected"></name>
                <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
                <placeName ref="geo:ibtin"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-MRY.xml"></lang>
                <personGrp role="tribe" corresp="pgr:amiriyya"></personGrp>
+               <note type="general">f. tabaʕt/tabʕat/tabʕit/tabaʕīt, pl. tabaʕūn/tabʕīn/tabaʕōn. (Behnstedt and Geva-Kleinberger 2019:269)</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0035" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0035" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_taa3_inflected"></name>
                <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
                <placeName ref="geo:nazareth"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-NAZ.xml"></lang>
+               <note type="general">f. taʕt- pl.m taʕūn- pl.f. taʕāt-. (Behnstedt and Geva-Kleinberger 2019:269)</note>
             </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0036" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            
+                <wib:featureValueObservation xml:id="ft_gen_ex.fv_0032" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_taba3_inflected"></name>
                <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
-               <placeName ref="geo:basmat_tabun"></placeName>
-               <lang corresp="..\profiles\vicav_profile_ISR-NEM.xml"></lang>
-               <personGrp role="tribe" corresp="pgr:neem_israel"></personGrp>
+               <placeName ref="geo:nazareth"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ISR-NAZ.xml"></lang>
+               <note type="general">f. tabaʕt/tabʕat/tabʕit/tabaʕīt, pl. tabaʕūn/tabʕīn/tabaʕōn. (Behnstedt and Geva-Kleinberger 2019:269)</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0037" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0037" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_taba3_inflected"></name>
                <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
                <placeName ref="geo:buayna_nujaydat"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-NGE.xml"></lang>
                <personGrp role="tribe" corresp="pgr:njedat"></personGrp>
+               <note type="general">f. tabaʕt/tabʕat/tabʕit/tabaʕīt, pl. tabaʕūn/tabʕīn/tabaʕōn. (Behnstedt and Geva-Kleinberger 2019:269)</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0038" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0038" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_taba3_inflected"></name>
                <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
                <placeName ref="geo:umm_el_ghanam"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-SA3.xml"></lang>
                <personGrp role="tribe" corresp="pgr:saayda"></personGrp>
+               <note type="general">f. tabaʕt/tabʕat/tabʕit/tabaʕīt, pl. tabaʕūn/tabʕīn/tabaʕōn. (Behnstedt and Geva-Kleinberger 2019:269)</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0039" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0039" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_giyy_inflected"></name>
                <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
                <placeName ref="geo:kammaana"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-SAW.xml"></lang>
                <personGrp role="tribe" corresp="pgr:sawaid"></personGrp>
+               <note type="general">f. gīt-, pl. giyyāt- (Behnstedt and Geva-Kleinberger 2019:269)</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0040" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0040" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_taba3_inflected"></name>
                <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
                <placeName ref="geo:shibli"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-SHI.xml"></lang>
                <personGrp role="tribe" corresp="pgr:shibli"></personGrp>
+               <note type="general">f. tabaʕt/tabʕat/tabʕit/tabaʕīt, pl. tabaʕūn/tabʕīn/tabaʕōn. (Behnstedt and Geva-Kleinberger 2019:269)</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0041" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0041" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_taba3_inflected"></name>
                <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
                <placeName ref="geo:halaf_tabbash"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-TAB.xml"></lang>
                <personGrp role="tribe" corresp="pgr:tabbash"></personGrp>
+               <note type="general">f. tabaʕt/tabʕat/tabʕit/tabaʕīt, pl. tabaʕūn/tabʕīn/tabaʕōn. (Behnstedt and Geva-Kleinberger 2019:269)</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0042" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0042" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_taa3_inflected"></name>
                <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
                <placeName ref="geo:suulam"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-TUR.xml"></lang>
                <personGrp role="tribe" corresp="pgr:arab_turkman"></personGrp>
+               <note type="general">f. taʕt- pl.m taʕūn- pl.f. taʕāt-. (Behnstedt and Geva-Kleinberger 2019:269)</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0043" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0043" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_taba3_inflected"></name>
                <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
                <placeName ref="geo:khawalid"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-XAW.xml"></lang>
                <personGrp role="tribe" corresp="pgr:xawalid"></personGrp>
+               <note type="general">f. tabaʕt/tabʕat/tabʕit/tabaʕīt, pl. tabaʕūn/tabʕīn/tabaʕōn. (Behnstedt and Geva-Kleinberger 2019:269)</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0044" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0044" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_taba3_inflected"></name>
                <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
                <placeName ref="geo:maloot_tarshiiha"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-ZUN.xml"></lang>
                <personGrp role="tribe" corresp="pgr:zunnar"></personGrp>
+               <note type="general">f. tabaʕt/tabʕat/tabʕit/tabaʕīt, pl. tabaʕūn/tabʕīn/tabaʕōn. (Behnstedt and Geva-Kleinberger 2019:269)</note>
             </wib:featureValueObservation>
+           
 
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0074" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:el_hajje_1954_0000" type="publication"></bibl>
-               <placeName ref="geo:tripoli_lebanon"></placeName>
-               <lang corresp="..\profiles\vicav_profile_LBN-TRI.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0062" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:féghali_1919_9281" type="publication"></bibl>
-               <placeName ref="geo:kfar_aabida"></placeName>
-               <lang corresp="..\profiles\vicav_profile_LBN-KAB.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0079" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:fleisch_1947_2645" type="publication"></bibl>
-               <placeName ref="geo:zahle"></placeName>
-               <lang corresp="..\profiles\vicav_profile_LBN-ZAH.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0065" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:fleisch_1974_3163" type="publication" status="CHECKME">
-                  <!--checked-->
-               </bibl>
-               <placeName ref="geo:kfar_sghab"></placeName>
-               <lang corresp="..\profiles\vicav_profile_LBN-KSG.xml"></lang>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0160" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0160" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_taba3_notinflected"></name>
                <bibl corresp="zot:geva-kleinberger_2009_3208" type="publication"></bibl>
                <placeName ref="geo:tiberias"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-TBR.xml"></lang>
                <personGrp role="religion" corresp="pgr:jews"></personGrp>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0053" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0053" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_taba3_notinflected"></name>
                <bibl corresp="zot:haidar_1979_2969" type="publication"></bibl>
                <placeName ref="geo:baskinta"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBN-BAS.xml"></lang>
+               <note type="general">"Although the particle tabaʕ occurs in Baskinta it is not as common as in other Lebanese dialects. Tabaʕ occurs with inanimate objects
+               only and it is commonly used when referring to possessions such as property." (Haidar 1979:122) </note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0056" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0056" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_taba3_inflected"></name>
                <bibl corresp="zot:jiha_1964_0000" type="publication"></bibl>
                <placeName ref="geo:bishmizzine"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBN-BIS.xml"></lang>
+               <note type="general"> f. tabʕit, pl. tabʕīn or tabʕūn. (Jiha 1964:164)</note>
+               <note type="general">The genitive exponents cannot be used to refer to personal relations or parts of the body (e.g. my eyes, my wife). (Jiha 1964:164) (</note>
+            </wib:featureValueObservation>
+            
+              <wib:featureValueObservation xml:id="ft_gen_ex.fv_0047" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_mtaa_inflected"></name>
+               <bibl corresp="zot:jiha_1964_0000" type="publication"></bibl>
+               <placeName ref="geo:bishmizzine"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-BIS.xml"></lang>
+               <cit type="sourceRepresentation"><quote>mtääʕ</quote></cit>
+               <note type="general"> f. mtääʕit, pl. mtääʕīn. (Jiha 1964:164)</note>
+               <note type="general">The genitive exponents cannot be used to refer to personal relations or parts of the body (e.g. my eyes, my wife). (Jiha 1964:164) (</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0047" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:pickett_2005_4567" type="publication"></bibl>
-               <placeName ref="geo:rayak"></placeName>
-               <lang corresp="..\profiles\vicav_profile_LBN-ABI.xml"></lang>
-               <personGrp role="tribe" corresp="pgr:abu_eid"></personGrp>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0048" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:pickett_2005_4567" type="publication"></bibl>
-               <placeName ref="geo:saadnayel"></placeName>
-               <lang corresp="..\profiles\vicav_profile_LBN-AGB.xml"></lang>
-               <personGrp role="tribe" corresp="pgr:abu_jabal"></personGrp>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0058" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:pickett_2005_4567" type="publication"></bibl>
-               <placeName ref="geo:el_khiara"></placeName>
-               <placeName ref="geo:tall_dunub"></placeName>
-               <placeName ref="geo:el_qaa"></placeName>
-               <lang corresp="..\profiles\vicav_profile_LBN-EDI.xml"></lang>
-               <personGrp role="tribe" corresp="pgr:edin"></personGrp>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0061" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:pickett_2005_4567" type="publication"></bibl>
-               <placeName ref="geo:nabaa_el_faaour"></placeName>
-               <lang corresp="..\profiles\vicav_profile_LBN-HRK.xml"></lang>
-               <personGrp role="tribe" corresp="pgr:hruk"></personGrp>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0068" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:pickett_2005_4567" type="publication"></bibl>
-               <placeName ref="geo:taanayel"></placeName>
-               <placeName ref="geo:barr_elias"></placeName>
-               <lang corresp="..\profiles\vicav_profile_LBN-LWS.xml"></lang>
-               <personGrp role="tribe" corresp="pgr:lwes"></personGrp>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0070" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:pickett_2005_4567" type="publication"></bibl>
-               <placeName ref="geo:ain_aanjar"></placeName>
-               <lang corresp="..\profiles\vicav_profile_LBN-MAW.xml"></lang>
-               <personGrp role="tribe" corresp="pgr:mawali_lebanon"></personGrp>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0028" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0028" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_taba3_inflected"></name>
                <bibl corresp="zot:rosenhouse_1983_0000" type="publication"></bibl>
                <placeName ref="geo:yaara"></placeName>
                <lang corresp="..\profiles\vicav_profile_ISR-ARM.xml"></lang>
                <personGrp role="tribe" corresp="pgr:aramsha_israel"></personGrp>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0054" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0054" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_taba3_inflected"></name>
                <bibl corresp="zot:schukro_2004_6239" type="publication"></bibl>
                <placeName ref="geo:beirut"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBN-BEI.xml"></lang>
+               <note type="general">f.tabʕit, pl. tabʕūn or tabʕīn. (Schukro 2004:96)</note>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_gen_ex.fv_0068" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_mtaa_inflected"></name>
+               <bibl corresp="zot:schukro_2004_6239" type="publication"></bibl>
+               <placeName ref="geo:beirut"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-BEI.xml"></lang>
+               <personGrp role="ageGroup" corresp="#old"/>
+               <note type="general"> Found seldom and only among old speakers. (Schukro 2004:96)</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0052" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+             <wib:featureValueObservation xml:id="ft_gen_ex.fv_0070" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_tab3uul_inflected"></name>
+               <bibl corresp="zot:schukro_2004_6239" type="publication"></bibl>
+               <placeName ref="geo:beirut"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-BEI.xml"></lang>
+               <note type="general">f. tabʕūlt- , pl. tabʕūlēt-.</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0052" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_taba3_notinflected"></name>
                <bibl corresp="zot:younes_2013_2795" type="publication"></bibl>
                <placeName ref="geo:wadi_khalid"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBN-ATI.xml"></lang>
                <personGrp role="tribe" corresp="pgr:arab_al_atij"></personGrp>
+               <cit type="sourceRepresentation"><quote>tbaʕ-</quote></cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0045" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0045" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_giyy_inflected"></name>
+               <bibl corresp="zot:younes_2014_9863" type="publication"></bibl>
+               <placeName ref="geo:haouch_el_nabi"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-ABI.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:abu_eid"></personGrp>
+               <note type="general">f. gīt- </note>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_gen_ex.fv_0036" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#gen_taba3_notinflected"></name>
                <bibl corresp="zot:younes_2014_9863" type="publication"></bibl>
                <placeName ref="geo:haouch_el_nabi"></placeName>
                <lang corresp="..\profiles\vicav_profile_LBN-ABI.xml"></lang>
