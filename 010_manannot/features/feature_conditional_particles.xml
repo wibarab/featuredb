@@ -82,6 +82,10 @@
                   <label>ʔinkān (inčān)</label>
                   <desc></desc>
                </item>
+          <item xml:id="cond_part_in_kaad">
+                  <label>ʔin kād</label>
+                  <desc></desc>
+               </item>
                <item xml:id="cond_part_ilkaan">
                   <label>ilkān</label>
                   <desc></desc>
@@ -123,16 +127,36 @@
                   <label>lā</label>
                   <desc></desc>
                </item>
+               <item xml:id="cond_part_la">
+                  <label>la</label>
+                  <desc></desc>
+               </item>
                <item xml:id="cond_part_leen">
                   <label>lēn</label>
+                  <desc></desc>
+               </item>
+               <item xml:id="cond_part_lin">
+                  <label>lin</label>
                   <desc></desc>
                </item>
                <item xml:id="cond_part_loon">
                   <label>lōn</label>
                   <desc></desc>
                </item>
+               <item xml:id="cond_part_liya">
+                  <label>liya</label>
+                  <desc></desc>
+               </item>
+                <item xml:id="cond_part_ilya">
+                  <label>ʔilya</label>
+                  <desc></desc>
+               </item>
                <item xml:id="cond_part_yeeloon">
                   <label>yēlōn</label>
+                  <desc></desc>
+               </item>
+                <item xml:id="cond_part_yawm">
+                  <label>yawm, yām</label>
                   <desc></desc>
                </item>
                <item xml:id="cond_part_shin">
@@ -157,6 +181,10 @@
                </item>
                <item xml:id="cond_part_lawinn-">
                   <label>lawwin- bound personal pronouns</label>
+                  <desc></desc>
+               </item>
+               <item xml:id="cond_part_walaw">
+                  <label>walaw(inno)</label>
                   <desc></desc>
                </item>
                <item xml:id="cond_part_law_kaan">
@@ -201,8 +229,14 @@
                <item xml:id="cond_part_lamma">
                   <label>lamma</label>
                </item>
+               <item xml:id="cond_part_lama">
+                  <label>lama</label>
+               </item>
                <item xml:id="cond_part_agar">
                   <label>agar, eger</label>
+               </item>
+               <item xml:id="cond_part_umma_walla">
+                  <label>umma_walla</label>
                </item>
             </list>
          </div>
@@ -472,80 +506,321 @@
                <personGrp role="tribe" corresp="pgr:abu_eid"></personGrp>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0105" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED">
-                  <!--potentially ambiguous references-->
-               </bibl>
-               <placeName ref="geo:twenan"></placeName>
-               <lang corresp="..\profiles\vicav_profile_SYR-MWL.xml"></lang>
-               <personGrp role="tribe" corresp="pgr:mawali_syria"></personGrp>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0106" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED">
-                  <!--potentially ambiguous references-->
-               </bibl>
-               <placeName ref="geo:qasr_ibn_wardan"></placeName>
-               <lang corresp="..\profiles\vicav_profile_SYR-MWL.xml"></lang>
-               <personGrp role="tribe" corresp="pgr:mawali_syria"></personGrp>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0107" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED">
-                  <!--potentially ambiguous references-->
-               </bibl>
-               <placeName ref="geo:zyara"></placeName>
-               <lang corresp="..\profiles\vicav_profile_SYR-MWL.xml"></lang>
-               <personGrp role="tribe" corresp="pgr:mawali_syria"></personGrp>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0110" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED">
-                  <!--potentially ambiguous references-->
-               </bibl>
-               <placeName ref="geo:tell_alu"></placeName>
-               <placeName ref="geo:al_qahtaniyah"></placeName>
-               <lang corresp="..\profiles\vicav_profile_SYR-SMR.xml"></lang>
-               <personGrp role="tribe" corresp="pgr:shammar_syria"></personGrp>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0099" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:blanc_1970_4573" type="publication" status="CHECKME">
+      
+            
+             <wib:featureValueObservation xml:id="ft_cond_part.fv_0099" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#cond_part_kaan"></name>
+               <bibl corresp="zot:blanc_1970_0000" type="publication" status="CHECKED">
                   <!--potentially ambiguous references-->
                </bibl>
                <placeName ref="geo:negev"></placeName>
                <lang corresp="..\profiles\vicav_profile_NEG-ZLM.xml"></lang>
                <personGrp role="tribe" corresp="pgr:zullam"></personGrp>
+               <cit type="sourceRepresentation"><quote>kān</quote></cit>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_cond_part.fv_0088" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#cond_part_ila"></name>
+               <bibl corresp="zot:blanc_1970_0000" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:negev"></placeName>
+               <lang corresp="..\profiles\vicav_profile_NEG-ZLM.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:zullam"></personGrp>
+               <cit type="sourceRepresentation"><quote>ila</quote></cit>
+               <note type="general">Rarely used</note>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_cond_part.fv_0105" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#cond_part_laa"></name>
+               <bibl corresp="zot:blanc_1970_0000" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:negev"></placeName>
+               <lang corresp="..\profiles\vicav_profile_NEG-ZLM.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:zullam"></personGrp>
+               <cit type="sourceRepresentation"><quote>lā</quote></cit>
+               <note type="general">Used in poetry</note>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_cond_part.fv_0106" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#cond_part_idha"></name>
+               <bibl corresp="zot:blanc_1970_0000" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:negev"></placeName>
+               <lang corresp="..\profiles\vicav_profile_NEG-ZLM.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:zullam"></personGrp>
+               <cit type="sourceRepresentation"><quote>iḏa</quote></cit>
+               <cit type="sourceRepresentation"><quote>iza</quote></cit>
+               <cit type="sourceRepresentation"><quote>aza</quote></cit>
+               <note type="general">These are considered by the author as K-Forms</note>
+            </wib:featureValueObservation>
+            
+            
+             <wib:featureValueObservation xml:id="ft_cond_part.fv_0107" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#cond_part_asyndetic"></name>
+               <bibl corresp="zot:blanc_1970_0000" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:negev"></placeName>
+               <lang corresp="..\profiles\vicav_profile_NEG-ZLM.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:zullam"></personGrp>
+               <cit type="example" xml:id="ft_cond_part.fv_0107.ct_0000">
+                     <quote>ma ǧibt-hin?</quote>
+                     <cit type="translation">
+                        <quote>and if I do not bring them?</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_cond_part.fv_0110" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#cond_part_lin"></name>
+               <bibl corresp="zot:blanc_1970_0000" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:negev"></placeName>
+               <lang corresp="..\profiles\vicav_profile_NEG-ZLM.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:zullam"></personGrp>
+               <cit type="sourceRepresentation"><quote>lin</quote></cit>
+               <cit type="example" xml:id="ft_cond_part.fv_0110.ct_0000">
+                     <quote>lin ǧīt aṣ-ṣubḥ talganī(h)</quote>
+                     <cit type="translation">
+                        <quote>if you come in the morning you will find me</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+            
+             <wib:featureValueObservation xml:id="ft_cond_part.fv_0167" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#cond_part_in"></name>
+               <bibl corresp="zot:blanc_1970_0000" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:negev"></placeName>
+               <lang corresp="..\profiles\vicav_profile_NEG-ZLM.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:zullam"></personGrp>
+               <cit type="sourceRepresentation"><quote>in</quote></cit>
+               <cit type="example" xml:id="ft_cond_part.fv_0167.ct_0000">
+                     <quote>in ma ḷagaṭṭ ha-ṛ-ṛaḅāḅah ugult,lamzaʕ ṛās-ak</quote>
+                     <cit type="translation">
+                        <quote>if you don´t pick that ṛaḅāḅah and recite, I´ll cut your head off</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0316" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0316" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#cond_part_in"></name>
                <bibl corresp="zot:cantineau_1946_0000" type="publication" cert="unknown"></bibl>
                <placeName ref="geo:hawraan"></placeName>
                <placeName ref="geo:jabal_al_druze"></placeName>
                <lang corresp="..\profiles\vicav_profile_JOR-HRN.xml"></lang>
+               <cit type="sourceRepresentation"><quote>n, en</quote></cit>
+               <cit type="example" xml:id="ft_cond_part.fv_0316.ct_0000">
+                     <quote>en māt wlād-o barṭu</quote>
+                     <cit type="translation">
+                        <quote>when he dies, his sons will inherit</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_cond_part.fv_0171" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#cond_part_kaan"></name>
+               <bibl corresp="zot:cantineau_1946_0000" type="publication" cert="unknown"></bibl>
+               <placeName ref="geo:hawraan"></placeName>
+               <placeName ref="geo:jabal_al_druze"></placeName>
+               <lang corresp="..\profiles\vicav_profile_JOR-HRN.xml"></lang>
+               <cit type="sourceRepresentation"><quote>čān</quote></cit>
+               <cit type="example" xml:id="ft_cond_part.fv_0171.ct_0000">
+                     <quote>čānn-ak ʔeǧīt menrūḥ sawa</quote>
+                     <cit type="translation">
+                        <quote>if you had come, we would have gone together</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_cond_part.fv_0169" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#cond_part_law"></name>
+               <bibl corresp="zot:cantineau_1946_0000" type="publication" cert="unknown"></bibl>
+               <placeName ref="geo:hawraan"></placeName>
+               <placeName ref="geo:jabal_al_druze"></placeName>
+               <lang corresp="..\profiles\vicav_profile_JOR-HRN.xml"></lang>
+               <cit type="sourceRepresentation"><quote>law</quote></cit>
+               <cit type="example" xml:id="ft_cond_part.fv_0169.ct_0000">
+                     <quote>law ʔaʕräf ʔesm-ak sammēt-ak</quote>
+                     <cit type="translation">
+                        <quote>if I knew your name, I would have called you (by it)</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
 
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0100" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0100" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#cond_part_in"></name>
                <bibl corresp="zot:hazmy_1975_1645" type="publication"></bibl>
                <placeName ref="geo:hejaz"></placeName>
                <lang corresp="..\profiles\vicav_profile_SAU-HRB.xml"></lang>
                <personGrp role="tribe" corresp="pgr:al_harb"></personGrp>
+               <cit type="sourceRepresentation"><quote>ʔin</quote></cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0097" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0187" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#cond_part_inkaan"></name>
+               <bibl corresp="zot:hazmy_1975_1645" type="publication"></bibl>
+               <placeName ref="geo:hejaz"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-HRB.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:al_harb"></personGrp>
+               <cit type="sourceRepresentation"><quote>ʔinkān</quote></cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0217" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#cond_part_la"></name>
+               <bibl corresp="zot:hazmy_1975_1645" type="publication"></bibl>
+               <placeName ref="geo:hejaz"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-HRB.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:al_harb"></personGrp>
+               <cit type="sourceRepresentation"><quote>la</quote></cit>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_cond_part.fv_0248" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#cond_part_liya"></name>
+               <bibl corresp="zot:hazmy_1975_1645" type="publication"></bibl>
+               <placeName ref="geo:hejaz"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-HRB.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:al_harb"></personGrp>
+               <cit type="sourceRepresentation"><quote>liya</quote></cit>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_cond_part.fv_0250" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#cond_part_ilya"></name>
+               <bibl corresp="zot:hazmy_1975_1645" type="publication"></bibl>
+               <placeName ref="geo:hejaz"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-HRB.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:al_harb"></personGrp>
+               <cit type="sourceRepresentation"><quote>ʔilya</quote></cit>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_cond_part.fv_0262" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#cond_part_yawm"></name>
+               <bibl corresp="zot:hazmy_1975_1645" type="publication"></bibl>
+               <placeName ref="geo:hejaz"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-HRB.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:al_harb"></personGrp>
+               <cit type="sourceRepresentation"><quote>yawm, yām</quote></cit>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_cond_part.fv_0263" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#cond_part_lama"></name>
+               <bibl corresp="zot:hazmy_1975_1645" type="publication"></bibl>
+               <placeName ref="geo:hejaz"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-HRB.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:al_harb"></personGrp>
+               <cit type="sourceRepresentation"><quote>lama</quote></cit>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_cond_part.fv_0264" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#cond_part_umma_walla"></name>
+               <bibl corresp="zot:hazmy_1975_1645" type="publication"></bibl>
+               <placeName ref="geo:hejaz"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-HRB.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:al_harb"></personGrp>
+               <cit type="sourceRepresentation"><quote>umma-walla</quote></cit>
+            </wib:featureValueObservation>
+            
+            
+       <wib:featureValueObservation xml:id="ft_cond_part.fv_0266" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#cond_part_in_kaad"></name>
+               <bibl corresp="zot:hazmy_1975_1645" type="publication"></bibl>
+               <placeName ref="geo:hejaz"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-HRB.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:al_harb"></personGrp>
+               <cit type="sourceRepresentation"><quote>ʔin kād</quote></cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0097" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#cond_part_in"></name>
                <bibl corresp="zot:herin_2010_4638" type="publication"></bibl>
                <placeName ref="geo:al_salt"></placeName>
                <lang corresp="..\profiles\vicav_profile_JOR-SLT.xml"></lang>
+               <cit type="sourceRepresentation"><quote>(ʔi)n</quote></cit>
+               <note type="general">Used only by the most conservative speakers</note>
+               <cit type="example" xml:id="ft_cond_part.fv_0097.ct_0000">
+                     <quote>in kānu islām aw masīḥiyye tagrīban kull-hum bi n-nisbe la l-qānūn mutasāwiyīn</quote>
+                     <cit type="translation">
+                        <quote>whether they are Muslims or Christians, they are almost all equal before the law</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_cond_part.fv_0272" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#cond_part_law"></name>
+               <bibl corresp="zot:herin_2010_4638" type="publication"></bibl>
+               <placeName ref="geo:al_salt"></placeName>
+               <lang corresp="..\profiles\vicav_profile_JOR-SLT.xml"></lang>
+               <cit type="sourceRepresentation"><quote>law</quote></cit>
+               <cit type="example" xml:id="ft_cond_part.fv_0272.ct_0000">
+                     <quote>law ḏ̣allu ḏabaḥū-hum</quote>
+                     <cit type="translation">
+                        <quote>if they had stayed, they would have killed them</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_cond_part.fv_0273" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#cond_part_idha"></name>
+               <bibl corresp="zot:herin_2010_4638" type="publication"></bibl>
+               <placeName ref="geo:al_salt"></placeName>
+               <lang corresp="..\profiles\vicav_profile_JOR-SLT.xml"></lang>
+               <cit type="sourceRepresentation"><quote>iḏa</quote></cit>
+               <cit type="example" xml:id="ft_cond_part.fv_0273.ct_0000">
+                     <quote>iḏa l-kalb fāt əd-dār, əl-malāika mā bitfūt əl-bēt</quote>
+                     <cit type="translation">
+                        <quote>if a dog comes into the house, the angels don"t come in</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_cond_part.fv_0301" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#cond_part_kaan"></name>
+               <bibl corresp="zot:herin_2010_4638" type="publication"></bibl>
+               <placeName ref="geo:al_salt"></placeName>
+               <lang corresp="..\profiles\vicav_profile_JOR-SLT.xml"></lang>
+               <cit type="sourceRepresentation"><quote>čān</quote></cit>
+               <note type="general">Used only by the most conservative speakers</note>
+               <cit type="example" xml:id="ft_cond_part.fv_0301.ct_0000">
+                     <quote>čānn-o ma fāt-əš, hāḏ̣a ǧamal-ku</quote>
+                     <cit type="translation">
+                        <quote>if the camel doesn"t come in (into the house), it´s because it´s yours</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+              <wib:featureValueObservation xml:id="ft_cond_part.fv_0312" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#cond_part_lawinn-"></name>
+               <bibl corresp="zot:herin_2010_4638" type="publication"></bibl>
+               <placeName ref="geo:al_salt"></placeName>
+               <lang corresp="..\profiles\vicav_profile_JOR-SLT.xml"></lang>
+               <cit type="sourceRepresentation"><quote>lawinno</quote></cit>
+               <cit type="example" xml:id="ft_cond_part.fv_0312.ct_0000">
+                     <quote>lawinno maʕā sayyāra... rrū(ḥ) ʕa sahra l-lēle</quote>
+                     <cit type="translation">
+                        <quote>if he had a car, we'd be going to a party tonight</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+              <wib:featureValueObservation xml:id="ft_cond_part.fv_0317" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#cond_part_walaw"></name>
+               <bibl corresp="zot:herin_2010_4638" type="publication"></bibl>
+               <placeName ref="geo:al_salt"></placeName>
+               <lang corresp="..\profiles\vicav_profile_JOR-SLT.xml"></lang>
+               <cit type="sourceRepresentation"><quote>walaw(inno)</quote></cit>
+               <cit type="example" xml:id="ft_cond_part.fv_0317.ct_0000">
+                     <quote>muš lissa ǧahəl walawinn-hum ʕa l-baṣāṭa</quote>
+                     <cit type="translation">
+                        <quote>They weren´t ignorant even if they were living in a simple way</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_cond_part.fv_0132" status="draft" resp="dmp:AT">
@@ -935,24 +1210,6 @@
                <personGrp role="tribe" corresp="pgr:bani_saxar"></personGrp>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0088" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:palva_1984_86_0000" type="publication" status="CHECKME">
-                  <!--potentially ambiguous references-->
-               </bibl>
-               <placeName ref="geo:al_jafr"></placeName>
-               <lang corresp="..\profiles\vicav_profile_JOR-HWT.xml"></lang>
-               <personGrp role="tribe" corresp="pgr:hwetat_jordan"></personGrp>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0090" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""></name>
-               <bibl corresp="zot:palva_1989_0000" type=" publication"></bibl>
-               <placeName ref="geo:al_karak"></placeName>
-               <lang corresp="..\profiles\vicav_profile_JOR-KRK.xml"></lang>
-            </wib:featureValueObservation>
-
-
 
             <wib:featureValueObservation xml:id="ft_cond_part.fv_0080" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#cond_part_idha"></name>
@@ -1027,15 +1284,34 @@
                <note type="general">It is can be considered as a vestigial feature; this only example was obtained by elicitation</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_cond_part.fv_0083" status="draft" resp="dmp:AT">
-               <name type="featureValue" ref=""></name>
+            <wib:featureValueObservation xml:id="ft_cond_part.fv_0083" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#cond_part_idha"></name>
                <bibl corresp="zot:wer_2007_5826" type=" publication"></bibl>
                <placeName ref="geo:amman"></placeName>
                <lang corresp="..\profiles\vicav_profile_JOR-AMN.xml"></lang>
+               <cit type="sourceRepresentation"><quote>iza, izan</quote></cit>
+               <cit type="example" xml:id="ft_cond_part.fv_0083.ct_0000">
+                     <quote>iza ḥaka maʕik ḥaki bahdilī ʔimsaḥi fī l'arḍ</quote>
+                     <cit type="translation">
+                        <quote>if he as much as talks to you, scold him (lit. wipe off the floor with him)’,</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
 
-
+ <wib:featureValueObservation xml:id="ft_cond_part.fv_0166" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#cond_part_law"></name>
+               <bibl corresp="zot:wer_2007_5826" type=" publication"></bibl>
+               <placeName ref="geo:amman"></placeName>
+               <lang corresp="..\profiles\vicav_profile_JOR-AMN.xml"></lang>
+               <cit type="sourceRepresentation"><quote>law</quote></cit>
+               <cit type="example" xml:id="ft_cond_part.fv_0166.ct_0000">
+                     <quote>alla ysāmḥ-ak law talfanit kān iǧitl-ak ʕala ṭūl</quote>
+                     <cit type="translation">
+                        <quote>God forgive you. If you had called I would have come to you immediately</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_cond_part.fv_0121" status="done" resp="dmp:CL">
                <name type="featureValue" ref="#cond_part_idha"></name>
