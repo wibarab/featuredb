@@ -21,12 +21,28 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
       </fileDesc>
       <encodingDesc>
          <listPrefixDef xml:id="listPrefixDef">
-            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../010_manannot/wibarab-dmp.xml#$1"></prefixDef>
-            <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_biblio_tei_zotero.xml#$1"></prefixDef>
-            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_dialects.xml#$1"></prefixDef>
+            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../010_manannot/wibarab-dmp.xml#$1"/>
+            <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_biblio_tei_zotero.xml#$1"/>
+            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_dialects.xml#$1"/>
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_geodata.xml#$1"/>
-            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../010_manannot/wibarab_tribes.xml#$1"></prefixDef>
+            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../010_manannot/wibarab_tribes.xml#$1"/>
          </listPrefixDef>
+         <!-- taxonomy with feature categories -->
+            <classDecl>
+                <taxonomy>
+                    <!-- EXAMPLE -->
+                    <category xml:id="pronouns">
+                        <catDesc>Pronouns</catDesc>
+                        <category xml:id="bound-pronouns">
+                            <catDesc>Bound Pronouns</catDesc>
+                        </category>
+                        <category xml:id="personal-pronouns">
+                            <catDesc>Personal Pronouns</catDesc>
+                        </category>
+                    </category>
+                    <!-- END OF EXAMPLE -->
+                </taxonomy>
+            </classDecl>
       </encodingDesc>
       <xenoData>
          <structMap ID="sm01" TYPE="LOGICAL" xmlns="http://www.loc.gov/METS/" LABEL="">
@@ -129,19 +145,19 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <person xml:id="JD" role="Pre-MA researcher">
                      <persName>Johanna Doppelbauer</persName>
                      <affiliation ref="#Orientalistik">University of Vienna, Department of Near Eastern Studies</affiliation>
-                     <idno type="URL" subtype="ORCID"></idno>
+                     <idno type="URL" subtype="ORCID"/>
                      <note>collection of data for the database. This includes finding information regarding Bedouin dialects from already published sources and, once the database is operational, feeding it with the information accumulated on the subject, along with the data that will be collected by the other researchers in the course of the project. WP4 </note>
                   </person>
                   <person xml:id="SK" role="Pre-MA researcher">
                      <persName>Stanley Kochem</persName>
                      <affiliation ref="#Orientalistik">University of Vienna, Department of Near Eastern Studies</affiliation>
-                     <idno type="URL" subtype="ORCID"></idno>
+                     <idno type="URL" subtype="ORCID"/>
                      <note>collection of data for the database. This includes finding information regarding Bedouin dialects from already published sources and, once the database is operational, feeding it with the information accumulated on the subject, along with the data that will be collected by the other researchers in the course of the project. WP4 </note>
                   </person>
                   <person xml:id="AID" role="Post-doc researcher">
                      <persName>Ana Iriarte Díez</persName>
                      <affiliation ref="#Orientalistik">University of Vienna, Department of Near Eastern Studies</affiliation>
-                     <idno type="URL" subtype="ORCID"></idno>
+                     <idno type="URL" subtype="ORCID"/>
                      <note>works on language and dialect contact and historical linguistics and language change WP5, WP6</note>
                   </person>
                   <person xml:id="GiK" role="Post-doc researcher">
@@ -152,37 +168,37 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <person xml:id="AT" role="Prae-doc researcher">
                      <persName>Antonella Torzullo</persName>
                      <affiliation ref="#Orientalistik">University of Vienna, Department of Near Eastern Studies</affiliation>
-                     <idno type="URL" subtype="ORCID"></idno>
+                     <idno type="URL" subtype="ORCID"/>
                      <note>works on the Arabic dialect of the Bani Saxar tribe in Jordan WP1</note>
                   </person>
                   <person xml:id="TD" role="Prae-doc researcher">
                      <persName>Terlan Djavadova</persName>
                      <affiliation ref="#Orientalistik">University of Vienna, Department of Near Eastern Studies</affiliation>
-                     <idno type="URL" subtype="ORCID"></idno>
+                     <idno type="URL" subtype="ORCID"/>
                      <note>deals with the Bedouin dialects of the ZAer and Chouia in Morocco and their influence on the Moroccan Koina WP1</note>
                   </person>
                   <person xml:id="CL" role="Prae-doc researcher">
                      <persName>Claudia Laaber</persName>
                      <affiliation ref="#Orientalistik">University of Vienna, Department of Near Eastern Studies</affiliation>
-                     <idno type="URL" subtype="ORCID"></idno>
+                     <idno type="URL" subtype="ORCID"/>
                      <note>works on language attitudes towards Bedouin Arabic WP2</note>
                   </person>
                   <person xml:id="GuK" role="Prae-doc researcher">
                      <persName>Gunda Kinzl</persName>
                      <affiliation ref="#Orientalistik">University of Vienna, Department of Near Eastern Studies</affiliation>
-                     <idno type="URL" subtype="ORCID"></idno>
+                     <idno type="URL" subtype="ORCID"/>
                      <note>works on a grammatical description of the Rashayda Bedouins’ dialect in Saudi Arabia and Sudan WP1</note>
                   </person>
                   <person xml:id="VE" role="Technical Staff">
                      <persName>Veronika Engler</persName>
                      <affiliation ref="#Orientalistik">Austrian Academy of Sciences, ACDH-CH</affiliation>
-                     <idno type="URL" subtype="ORCID"></idno>
+                     <idno type="URL" subtype="ORCID"/>
                      <note>collection of data for the database. This includes finding information regarding Bedouin dialects from already published sources and, once the database is operational, feeding it with the information accumulated on the subject, along with the data that will be collected by the other researchers in the course of the project.</note>
                   </person>
                    <person xml:id="PH" role="Pre-MA researcher">
                      <persName>Philipp Hessabi</persName>
                      <affiliation ref="#Orientalistik">University of Vienna, Department of Near Eastern Studies</affiliation>
-                     <idno type="URL" subtype="ORCID"></idno>
+                     <idno type="URL" subtype="ORCID"/>
                      <note>collection of data for the database. This includes finding information regarding Bedouin dialects from already published sources and, once the database is operational, feeding it with the information accumulated on the subject, along with the data that will be collected by the other researchers in the course of the project. WP4 </note>
                   </person>
                   <person xml:id="CM" role="National Project Partner">
@@ -193,12 +209,12 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <person xml:id="AH" role="Technical Staff">
                      <persName>Angelika Hechtl</persName>
                      <affiliation ref="#ACDH-CH">Austrian Academy of Sciences, ACDH-CH</affiliation>
-                     <idno type="URL" subtype="ORCID"></idno>
+                     <idno type="URL" subtype="ORCID"/>
                   </person>
                      <person xml:id="KS" role="Technical Staff">
                      <persName>Kinga Sramó</persName>
                      <affiliation ref="#ACDH-CH">Austrian Academy of Sciences, ACDH-CH</affiliation>
-                     <idno type="URL" subtype="ORCID"></idno>
+                     <idno type="URL" subtype="ORCID"/>
                      <note>works on transforming the linguistic data from the database into a visual representation (map)</note>
                   </person>
                </listPerson>
@@ -215,7 +231,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                   <person xml:id="MA" role="Technical Consultant">
                      <persName>Maura Zsófia Abraham</persName>
                      <affiliation ref="#ACDH-CH">Austrian Academy of Sciences, ACDH-CH</affiliation>
-                     <idno type="URL" subtype="ORCID"></idno>
+                     <idno type="URL" subtype="ORCID"/>
                      <note>works on the SHAWI and TUNOCENT projects. We try to keep technical developments in all three projects in sync with each other, so she will participate / advise on relevant points. </note>
                   </person>
                   <person xml:id="OS" role="Senior Technical Consultant">
@@ -309,7 +325,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <trait type="format" ref="#teiP5"/>
                      <state type="curationState" ref="#generated"/>
                      <listRelation>
-                        <relation name="generated_by" ref=""></relation>
+                        <relation name="generated_by" ref=""/>
                      </listRelation>
                   </item>
                </list>
