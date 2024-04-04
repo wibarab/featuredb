@@ -28,21 +28,55 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../010_manannot/wibarab_tribes.xml#$1"/>
          </listPrefixDef>
          <!-- taxonomy with feature categories -->
-            <classDecl>
-                <taxonomy>
-                    <!-- EXAMPLE -->
-                    <category xml:id="pronouns">
-                        <catDesc>Pronouns</catDesc>
-                        <category xml:id="bound-pronouns">
-                            <catDesc>Bound Pronouns</catDesc>
-                        </category>
-                        <category xml:id="personal-pronouns">
-                            <catDesc>Personal Pronouns</catDesc>
-                        </category>
-                    </category>
-                    <!-- END OF EXAMPLE -->
-                </taxonomy>
-            </classDecl>
+         <classDecl>
+            <taxonomy>
+               
+               <category xml:id="personal_pronouns">
+                  <catDesc>Personal Pronouns</catDesc>
+                  <category xml:id="bound_pronouns">
+                     <catDesc>Bound Personal Pronouns</catDesc>
+                  </category>
+                  <category xml:id="independent_pronouns">
+                     <catDesc>Independent Personal Pronouns</catDesc>
+                  </category>
+                   <category xml:id="negated_pronouns">
+                     <catDesc>Negated Personal Pronouns</catDesc>
+                  </category>
+               </category>
+              
+               <category xml:id="consonant_phenomena">
+                  <catDesc>Consonantal Phenomena</catDesc>
+               </category>
+
+               <category xml:id="vowel_phenomena">
+                  <catDesc>Vowel Phenomena</catDesc>
+                  <category xml:id="raising_medial_a">
+                     <catDesc>Raising of medial /-a-/</catDesc>
+                  </category>
+                  <category xml:id="raising_final_a">
+                     <catDesc>Raising of final /-a/</catDesc>
+                  </category>
+               </category>
+
+               <category xml:id="phonotactics">
+                  <catDesc>Phonotactics</catDesc>
+                  <category xml:id="gahawa">
+                     <catDesc>Low vowel insertion after gutural (Gahawa Syndrome)</catDesc>
+                  </category>
+                  <category xml:id="resyllabification">
+                     <catDesc>Resyllabification</catDesc>
+                  </category>
+               </category>
+
+               <category xml:id="">
+                  <catDesc></catDesc>
+               </category>
+
+               <category xml:id="">
+                  <catDesc></catDesc>
+               </category>
+            </taxonomy>
+         </classDecl>
       </encodingDesc>
       <xenoData>
          <structMap ID="sm01" TYPE="LOGICAL" xmlns="http://www.loc.gov/METS/" LABEL="">
@@ -195,7 +229,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <idno type="URL" subtype="ORCID"/>
                      <note>collection of data for the database. This includes finding information regarding Bedouin dialects from already published sources and, once the database is operational, feeding it with the information accumulated on the subject, along with the data that will be collected by the other researchers in the course of the project.</note>
                   </person>
-                   <person xml:id="PH" role="Pre-MA researcher">
+                  <person xml:id="PH" role="Pre-MA researcher">
                      <persName>Philipp Hessabi</persName>
                      <affiliation ref="#Orientalistik">University of Vienna, Department of Near Eastern Studies</affiliation>
                      <idno type="URL" subtype="ORCID"/>
@@ -211,7 +245,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <affiliation ref="#ACDH-CH">Austrian Academy of Sciences, ACDH-CH</affiliation>
                      <idno type="URL" subtype="ORCID"/>
                   </person>
-                     <person xml:id="KS" role="Technical Staff">
+                  <person xml:id="KS" role="Technical Staff">
                      <persName>Kinga Sramó</persName>
                      <affiliation ref="#ACDH-CH">Austrian Academy of Sciences, ACDH-CH</affiliation>
                      <idno type="URL" subtype="ORCID"/>
