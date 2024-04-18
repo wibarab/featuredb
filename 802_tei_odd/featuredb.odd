@@ -438,7 +438,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </div>
 
             <div>
-               <head>VICAV Geodata (vicav_biblio_tei_zotero.xml)</head>
+               <head>VICAV Geodata (vicav_geodata.xml)</head>
                <p>The <term><ref type="file" target="\010_manannot\vicav_geodata.xml"
                      >geodata</ref></term> file contains a list of all the referenced places.
                   Wherever possible, the place listed in this document refers to respective entries
@@ -460,11 +460,22 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </div>
 
             <div>
-               <head>VICAV Zotero file (vicav_geodata.xml)</head>
+               <head>VICAV Zotero file (vicav_biblio_tei_zotero.xml)</head>
                <p>The <term>biblio</term> file contains all the sources found in the Zotero library.
                      <ref type="file" target="/010_manannot/vicav_biblio.xml"/> The export from the
                   Zotero database is enriched with geo-locations making use of the above described
-                  geodata file.</p>
+                  geodata file. Furthermore, all publications used in the WIBARAB Feature datatabase 
+                  include information about the period when the data the publication is based on was 
+                  collected; the decade of data collection (doc). Whereever possible, this information 
+                  was extracted from he publications in question and marked with a "level of certainty = high" tag. 
+                  However, in the cases where the publication does not specify the decade of data collection
+                  this information is estimated by the following method: when the when the publication was published
+                  in the first half of a decade, the decade of data collection is estimated to be the previous decade,
+                  e.g. for a publication published in 1994, the decade of data collection is estimated to be the 1980s.
+                  When the publication was published in the second half of a decade, it is estimated that the data was 
+                  collected in the same decade, e.g. for a publication published in 1995, the decade of data collection
+                  is estimated to be the 1990s. In order to let the database users know that this is merely an estimate, 
+                  a "level of certainty = low" tag is added to these entries in Zotero.</p>
             </div>
 
             <div>
