@@ -153,7 +153,7 @@
                   <label>ta- tā</label>
                   <desc></desc>
                </item>
-                <item xml:id="fut_mar_taww">
+               <item xml:id="fut_mar_taww">
                   <label>taww</label>
                   <desc></desc>
                </item>
@@ -214,20 +214,40 @@
          <div type="description">
          </div>
          <div xmlns:tei="http://www.tei-c.org/ns/1.0" type="featureValueObservations">
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0050" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0050" status="pre" resp="dmp:AID">
+               <name type="featureValue" ref="#fut_mar_widd"/>
                <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
                <placeName ref="geo:ed_dhayra"/>
                <lang corresp="..\profiles\vicav_profile_LBN-ARA.xml"/>
                <personGrp role="tribe" corresp="pgr:aramsha_lebanon"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0063" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0063" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fut_mar_bidd"/>
                <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
                <placeName ref="geo:khalde"/>
                <lang corresp="..\profiles\vicav_profile_LBN-KHA.xml"/>
                <personGrp role="tribe" corresp="pgr:arab_xalde"/>
+               <cit type="example" xml:id="ft_fut_mar.fv_0000.ct_0000">
+                  <quote>ma raḥ ʔagdar ʔaži la ʕind-ak bāčir liʔanno badd-i rūḥ ʔazūr wlād bint-i</quote>
+                  <cit type="translation">
+                     <quote>I will not be able to join you after tomorrow because I will visit my daughter's children</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0000" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fut_mar_raah"/>
+               <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
+               <placeName ref="geo:khalde"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-KHA.xml"/>
+               <personGrp role="tribe" corresp="pgr:arab_xalde"/>
+               <cit type="example" xml:id="ft_fut_mar.fv_0000.ct_0000">
+                  <quote>ma raḥ ʔagdar ʔaži la ʕind-ak bāčir liʔanno badd-i rūḥ ʔazūr wlād bint-i</quote>
+                  <cit type="translation">
+                     <quote>I will not be able to join you after tomorrow because I will visit my daughter's children</quote>
+                  </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_fut_mar.fv_0071" status="done" resp="dmp:AID">
@@ -275,12 +295,37 @@
                </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0060" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0060" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fut_mar_badd"/>
                <bibl corresp="zot:agbaht_2023_4928" type="publication"/>
                <placeName ref="geo:sheikh_taba"/>
                <lang corresp="..\profiles\vicav_profile_LBN-SXT.xml"/>
             </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0041" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fut_mar_bidd"/>
+               <bibl corresp="zot:agbaht_2023_4928" type="publication"/>
+               <placeName ref="geo:sheikh_taba"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-SXT.xml"/>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0041" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fut_mar_baa"/>
+               <bibl corresp="zot:agbaht_2023_4928" type="publication"/>
+               <placeName ref="geo:sheikh_taba"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-SXT.xml"/>
+               <cit type="example" xml:id="ft_fut_mar.fv_0041.ct_0000">
+                  <quote>bā-niḥsíbin kam sēʕa ṣāro</quote>
+                  <cit type="translation">
+                     <quote>we will count them, (we will count) how many hours they are</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+            <note type="general">"The pseudo-verb bad(d)- which is used as a pseudo-verb to express
+               ‘to want’ or future tense, is sometimes further shortened and prefixed to a
+               verb. For insance, baddak (2msg) and baddik (2fsg) are reduced to bak-, and
+               badna (1cpl) to bā-" (Agbaht 2023:119)</note>
 
 
             <wib:featureValueObservation xml:id="ft_fut_mar.fv_0026" status="done" resp="dmp:AID">
@@ -2130,11 +2175,11 @@
                <placeName ref="geo:tozeur"/>
                <lang corresp="..\profiles\vicav_profile_TUN-TZR.xml"/>
                <cit type="example" xml:id="ft_fut_mar.fv_0271.ct_0000">
-                     <quote>ʕa naʕṛaf.</quote>
-                     <cit type="translation">
-                        <quote>I will know.</quote>
-                     </cit>
+                  <quote>ʕa naʕṛaf.</quote>
+                  <cit type="translation">
+                     <quote>I will know.</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_fut_mar.fv_0025" status="done" resp="dmp:SP">
@@ -2151,14 +2196,14 @@
                <lang corresp="..\profiles\vicav_profile_TUN-TNS.xml"/>
             </wib:featureValueObservation>
 
-                        <wib:featureValueObservation xml:id="ft_fut_mar.fv_0024" status="done" resp="dmp:SP">
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0024" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#fut_mar_maash"/>
                <bibl corresp="zot:singer_1984_0000" type="publication"/>
                <placeName ref="geo:tunis"/>
                <lang corresp="..\profiles\vicav_profile_TUN-TNS.xml"/>
             </wib:featureValueObservation>
 
-            
+
             <wib:featureValueObservation xml:id="ft_fut_mar.fv_0267" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#fut_mar_baash"/>
                <bibl corresp="zot:talmoudi_1980_0000" type="publication"/>
@@ -2172,12 +2217,12 @@
                <placeName ref="geo:cyprus"/>
                <lang corresp="..\profiles\vicav_profile_CYP-KOR.xml"/>
                <cit type="example" xml:id="ft_fut_mar.fv_0216.ct_0000">
-                     <quote>tta-rkos</quote>
-                     <cit type="translation">
-                        <quote>I shall dance.</quote>
-                     </cit>
+                  <quote>tta-rkos</quote>
+                  <cit type="translation">
+                     <quote>I shall dance.</quote>
                   </cit>
-                  <note type="general">ta- and tta- are allomorphs.</note>
+               </cit>
+               <note type="general">ta- and tta- are allomorphs.</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_fut_mar.fv_0217" status="done" resp="dmp:TD">
@@ -2444,11 +2489,11 @@
                <placeName ref="geo:hadramaut"/>
                <lang corresp="..\profiles\vicav_profile_YEM-HAD.xml"/>
                <cit type="example" xml:id="ft_fut_mar.fv_0300.ct_0000">
-                     <quote>il-msāfrīn bā yṣalūn il-lelih</quote>
-                     <cit type="translation">
-                        <quote>The travellers will arrive tonight</quote>
-                     </cit>
+                  <quote>il-msāfrīn bā yṣalūn il-lelih</quote>
+                  <cit type="translation">
+                     <quote>The travellers will arrive tonight</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_fut_mar.fv_0372" status="done" resp="dmp:VE">
@@ -2570,11 +2615,11 @@
                <placeName ref="geo:al_khaburah"/>
                <lang corresp="..\profiles\vicav_profile_OMN-KHB.xml"/>
                <cit type="example" xml:id="ft_fut_mar.fv_0293.ct_0000">
-                     <quote>fīh wāḥid fī marīḏ̣ bā ymūt</quote>
-                     <cit type="translation">
-                        <quote>there is someone ill who will die</quote>
-                     </cit>
+                  <quote>fīh wāḥid fī marīḏ̣ bā ymūt</quote>
+                  <cit type="translation">
+                     <quote>there is someone ill who will die</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_fut_mar.fv_0007" status="done" resp="dmp:VE">
