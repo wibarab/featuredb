@@ -49,20 +49,36 @@
          <div type="featureDescription">
             <head>Feature Values</head>
             <list type="featureValues">
-               <item xml:id="be_able_to_gdr_bi">
-                  <label>gdr bi</label>
+               <item xml:id="be_able_to_bi_pronoun">
+                  <label>bi + pronoun</label>
                   <desc/>
                </item>
-               <item xml:id="be_able_to_gdr_fi">
-                  <label>gdr fi</label>
+               <item xml:id="be_able_to_fi_pronoun">
+                  <label>fi + pronoun</label>
                   <desc/>
                </item>
                <item xml:id="be_able_to_gdr">
-                  <label>gdr</label>
+                  <label>qadar, qidir, etc.</label>
                   <desc/>
                </item>
-               <item xml:id="be_able_to_sty">
-                  <label>sty</label>
+               <item xml:id="be_able_to_sta">
+                  <label>seta'</label>
+                  <desc/>
+               </item>
+               <item xml:id="be_able_to_taaq">
+                  <label>ṭāq</label>
+                  <desc/>
+               </item>
+                <item xml:id="be_able_to_maa_taa3_negation">
+                  <label>mā-ṭāʕ - only in negation</label>
+                  <desc/>
+               </item>
+                <item xml:id="be_able_to_saggam">
+                  <label>saggam</label>
+                  <desc/>
+               </item>
+               <item xml:id="be_able_to_3rf">
+                  <label>ʕarifa, yāf, etc.</label>
                   <desc/>
                </item>
                </list>
@@ -1371,13 +1387,23 @@
                </wib:featureValueObservation>
 
                <wib:featureValueObservation xml:id="ft_be_able.fv_0258" status="done" resp="dmp:RZ">
-                  <name type="featureValue" ref="#be_able_to_sty"/>
+                  <name type="featureValue" ref="#be_able_to_sta"/>
                   <bibl corresp="src:PC_RZ" type="personalCommunication"/>
                   <placeName ref="geo:malta"/>
                   <lang corresp="..\profiles\vicav_profile_MLT-MAL.xml"/>
                   <cit type="sourceRepresentation"><quote>seta'</quote></cit>
                </wib:featureValueObservation>
 
+               <wib:featureValueObservation xml:id="ft_be_able.fv_0338" status="done" resp="dmp:RZ">
+                  <name type="featureValue" ref="#be_able_to_3rf"/>
+                  <bibl corresp="src:PC_RZ" type="personalCommunication"/>
+                  <placeName ref="geo:malta"/>
+                  <lang corresp="..\profiles\vicav_profile_MLT-MAL.xml"/>
+                  <cit type="sourceRepresentation"><quote>yāf</quote></cit>
+                  <note type="general">yāf may be followed by kīf</note>
+               </wib:featureValueObservation>
+
+               
                <wib:featureValueObservation xml:id="ft_be_able.fv_0051" status="draft" resp="dmp:RZ">
                   <name type="featureValue" ref=""/>
                   <bibl corresp="src:SAU_2022_GK" type="publication"/>
@@ -1427,10 +1453,17 @@
                </wib:featureValueObservation>
 
                <wib:featureValueObservation xml:id="ft_be_able.fv_0228" status="done" resp="dmp:RZ">
-                  <name type="featureValue" ref=""/>
-                  <bibl corresp="zot:benkato_2014_2793" type="publication"/>
-                  <placeName ref="geo:benghazi"/>
+                  <name type="featureValue" ref="#be_able_to_gdr"/>
                   <bibl corresp="zot:behnstedt_2011-2014_3013" type="publication"/>
+                  <placeName ref="geo:benghazi"/>
+                  <cit type="sourceRepresentation"><quote> yəgdar</quote></cit>
+               </wib:featureValueObservation>
+               
+                <wib:featureValueObservation xml:id="ft_be_able.fv_0339" status="done" resp="dmp:RZ">
+                  <name type="featureValue" ref="#be_able_to_3rf"/>
+                  <bibl corresp="zot:behnstedt_2011-2014_3013" type="publication"/>
+                  <placeName ref="geo:benghazi"/>
+                  <cit type="sourceRepresentation"><quote> mā yiʕrifš</quote></cit>
                </wib:featureValueObservation>
 
                <wib:featureValueObservation xml:id="ft_be_able.fv_0229" status="done" resp="dmp:RZ">
@@ -1440,7 +1473,16 @@
                   <lang corresp="..\profiles\vicav_profile_LBY-FZN.xml"/>
                   <cit type="sourceRepresentation"><quote>yigdar</quote></cit>
                </wib:featureValueObservation>
-
+               
+               <wib:featureValueObservation xml:id="ft_be_able.fv_0336" status="done" resp="dmp:RZ">
+                  <name type="featureValue" ref="#be_able_to_taaq"/>
+                  <bibl corresp="zot:behnstedt_2011-2014_3013" type="publication"/>
+                  <placeName ref="geo:fezzan"/>
+                  <lang corresp="..\profiles\vicav_profile_LBY-FZN.xml"/>
+                  <cit type="sourceRepresentation"><quote>ṭeget</quote></cit>
+               </wib:featureValueObservation>
+               
+            
                <wib:featureValueObservation xml:id="ft_be_able.fv_0233" status="draft" resp="dmp:RZ">
                   <name type="featureValue" ref=""/>
                   <bibl corresp="zot:caubet_2004_3508" type="publication" status="CHECKED">
@@ -1474,13 +1516,12 @@
                   <personGrp role="religion" corresp="pgr:jews"/>
                </wib:featureValueObservation>
 
-               <wib:featureValueObservation xml:id="ft_be_able.fv_0185" status="draft" resp="dmp:RZ">
-                  <name type="featureValue" ref=""/>
-                  <bibl corresp="zot:dickins_2009_3089" type="publication" status="CHECKED">
-                     
-                  </bibl>
+               <wib:featureValueObservation xml:id="ft_be_able.fv_0185" status="done" resp="dmp:RZ">
+                  <name type="featureValue" ref="#be_able_to_gdr"/>
+                  <bibl corresp="zot:behnstedt_2011-2014_3013" type="publication"/>
                   <placeName ref="geo:khartoum"/>
                   <lang corresp="..\profiles\vicav_profile_SDN-KRT.xml"/>
+                  <cit type="sourceRepresentation"><quote>yagdir</quote></cit>
                </wib:featureValueObservation>
 
                <wib:featureValueObservation xml:id="ft_be_able.fv_0230" status="draft" resp="dmp:RZ">
@@ -1497,34 +1538,71 @@
                   <lang corresp="..\profiles\vicav_profile_SAU-GLF.xml"/>
                </wib:featureValueObservation>
 
-               <wib:featureValueObservation xml:id="ft_be_able.fv_0324" status="draft" resp="dmp:RZ">
-                  <name type="featureValue" ref=""/>
-                  <bibl corresp="zot:holes_2006_0164" type="publication" status="CHECKED">
-                     
-                  </bibl>
+               <wib:featureValueObservation xml:id="ft_be_able.fv_0324" status="done" resp="dmp:RZ">
+                  <name type="featureValue" ref="#be_able_to_gdr"/>
+                  <bibl corresp="zot:behnstedt_2011-2014_3013" type="publication"/>
                   <placeName ref="geo:manama"/>
                   <lang corresp="..\profiles\vicav_profile_BHR-ARB.xml"/>
                   <personGrp role="religion" corresp="pgr:sunnis"/>
+                  <cit type="sourceRepresentation"><quote>gidar</quote></cit>
+                  <cit type="sourceRepresentation"><quote>kadar</quote></cit>
                </wib:featureValueObservation>
 
-               <wib:featureValueObservation xml:id="ft_be_able.fv_0323" status="draft" resp="dmp:RZ">
-                  <name type="featureValue" ref=""/>
-                  <bibl corresp="zot:holes_2006_0164" type="publication" status="CHECKED">
-                     
-                  </bibl>
+               <wib:featureValueObservation xml:id="ft_be_able.fv_0323" status="done" resp="dmp:RZ">
+                  <name type="featureValue" ref="#be_able_to_gdr"/>
+                  <bibl corresp="zot:behnstedt_2011-2014_3013" type="publication"/>
                   <placeName ref="geo:muharraq"/>
                   <lang corresp="..\profiles\vicav_profile_BHR-BHN.xml"/>
                   <personGrp role="religion" corresp="pgr:shiites"/>
+                  <cit type="sourceRepresentation"><quote>yigdaṛ </quote></cit>
                </wib:featureValueObservation>
 
-               <wib:featureValueObservation xml:id="ft_be_able.fv_0002" status="draft" resp="dmp:RZ">
-                  <name type="featureValue" ref=""/>
-                  <bibl corresp="zot:holes_2007_5886" type="publication" status="CHECKED">
-                     
-                  </bibl>
+                <wib:featureValueObservation xml:id="ft_be_able.fv_0245" status="done" resp="dmp:RZ">
+                  <name type="featureValue" ref="#be_able_to_maa_taa3_negation"/>
+                  <bibl corresp="zot:behnstedt_2011-2014_3013" type="publication"/>
+                  <placeName ref="geo:muharraq"/>
+                  <lang corresp="..\profiles\vicav_profile_BHR-BHN.xml"/>
+                  <personGrp role="religion" corresp="pgr:shiites"/>
+                  <cit type="sourceRepresentation"><quote>mā ṭāʕ </quote></cit>
+                  <note type="general">The source attributes this reflex to Bahrain in general and not specifically to the Baḥārna</note>
+               </wib:featureValueObservation>
+               
+               <wib:featureValueObservation xml:id="ft_be_able.fv_0330" status="done" resp="dmp:RZ">
+                  <name type="featureValue" ref="#be_able_to_taaq"/>
+                  <bibl corresp="zot:behnstedt_2011-2014_3013" type="publication"/>
+                  <placeName ref="geo:muharraq"/>
+                  <lang corresp="..\profiles\vicav_profile_BHR-BHN.xml"/>
+                  <personGrp role="religion" corresp="pgr:shiites"/>
+                  <cit type="sourceRepresentation"><quote>ṭāg</quote></cit>
+                  <note type="general">The source attributes this reflex to Bahrain in general and not specifically to the Baḥārna</note>
+               </wib:featureValueObservation>
+               
+               <wib:featureValueObservation xml:id="ft_be_able.fv_0341" status="done" resp="dmp:RZ">
+                  <name type="featureValue" ref="#be_able_to_3rf"/>
+                  <bibl corresp="zot:behnstedt_2011-2014_3013" type="publication"/>
+                  <placeName ref="geo:muharraq"/>
+                  <lang corresp="..\profiles\vicav_profile_BHR-BHN.xml"/>
+                  <personGrp role="religion" corresp="pgr:shiites"/>
+                  <cit type="sourceRepresentation"><quote>ʕaraf</quote></cit>
+                  <note type="general">The source attributes this reflex to Bahrain in general and not specifically to the Baḥārna</note>
+               </wib:featureValueObservation>
+               
+               <wib:featureValueObservation xml:id="ft_be_able.fv_0002" status="done" resp="dmp:RZ">
+                  <name type="featureValue" ref="#be_able_to_gdr"/>
+                  <bibl corresp="zot:behnstedt_2011-2014_3013" type="publication"/>
                   <placeName ref="geo:kuwait_city"/>
                   <lang corresp="..\profiles\vicav_profile_KWT-KWC.xml"/>
+                  <cit type="sourceRepresentation"><quote>mā yigdərūn</quote></cit>
                </wib:featureValueObservation>
+               
+                <wib:featureValueObservation xml:id="ft_be_able.fv_0340" status="done" resp="dmp:RZ">
+                  <name type="featureValue" ref="#be_able_to_3rf"/>
+                  <bibl corresp="zot:behnstedt_2011-2014_3013" type="publication"/>
+                  <placeName ref="geo:kuwait_city"/>
+                  <lang corresp="..\profiles\vicav_profile_KWT-KWC.xml"/>
+                  <cit type="sourceRepresentation"><quote>iḥna naʕrif</quote></cit>
+               </wib:featureValueObservation>
+
 
                <wib:featureValueObservation xml:id="ft_be_able.fv_0325" status="draft" resp="dmp:RZ">
                   <name type="featureValue" ref=""/>
@@ -1543,25 +1621,33 @@
                   <lang corresp="..\profiles\vicav_profile_SAU-DHF.xml"/>
                </wib:featureValueObservation>
 
-               <wib:featureValueObservation xml:id="ft_be_able.fv_0326" status="draft" resp="dmp:RZ">
-                  <name type="featureValue" ref=""/>
-                  <bibl corresp="zot:ingham_1986_0001" type="publication" status="CHECKED">
-                     
-                  </bibl>
+               <wib:featureValueObservation xml:id="ft_be_able.fv_0326" status="done" resp="dmp:RZ">
+                  <name type="featureValue" ref="#be_able_to_gdr"/>
+                  <bibl corresp="zot:behnstedt_2011-2014_3013" type="publication"/>
                   <placeName ref="geo:summan"/>
                   <placeName ref="geo:shahaniya_reg"/>
                   <placeName ref="geo:doha"/>
                   <lang corresp="..\profiles\vicav_profile_SAU-MUR.xml"/>
                   <personGrp role="tribe" corresp="pgr:al_murra"/>
+                  <cit type="sourceRepresentation"><quote>agdar</quote></cit>
                </wib:featureValueObservation>
 
-               <wib:featureValueObservation xml:id="ft_be_able.fv_0321" status="draft" resp="dmp:RZ">
-                  <name type="featureValue" ref=""/>
-                  <bibl corresp="zot:ingham_1994_0001" type="publication" status="CHECKED">
-                     
-                  </bibl>
+               <wib:featureValueObservation xml:id="ft_be_able.fv_0321" status="done" resp="dmp:RZ">
+                  <name type="featureValue" ref="#be_able_to_gdr"/>
+                  <bibl corresp="zot:behnstedt_2011-2014_3013" type="publication"/>
+         
                   <placeName ref="geo:najd"/>
                   <lang corresp="..\profiles\vicav_profile_SAU-NJD.xml"/>
+                  <cit type="sourceRepresentation"><quote>ǵidir</quote></cit>
+               </wib:featureValueObservation>
+               
+               <wib:featureValueObservation xml:id="ft_be_able.fv_0342" status="done" resp="dmp:RZ">
+                  <name type="featureValue" ref="#be_able_to_gdr"/>
+                  <bibl corresp="zot:behnstedt_2011-2014_3013" type="publication"/>
+         
+                  <placeName ref="geo:najd"/>
+                  <lang corresp="..\profiles\vicav_profile_SAU-NJD.xml"/>
+                  <cit type="sourceRepresentation"><quote>ǵidir</quote></cit>
                </wib:featureValueObservation>
 
                <wib:featureValueObservation xml:id="ft_be_able.fv_0335" status="draft" resp="dmp:RZ">
@@ -1571,13 +1657,12 @@
                   <personGrp role="tribe" corresp="pgr:dawasir"/>
                </wib:featureValueObservation>
 
-               <wib:featureValueObservation xml:id="ft_be_able.fv_0004" status="draft" resp="dmp:RZ">
-                  <name type="featureValue" ref=""/>
-                  <bibl corresp="zot:johnstone_1967_0000" type="publication" status="CHECKED">
-                     
-                  </bibl>
+               <wib:featureValueObservation xml:id="ft_be_able.fv_0004" status="done" resp="dmp:RZ">
+                  <name type="featureValue" ref="#be_able_to_gdr"/>
+                  <bibl corresp="zot:behnstedt_2011-2014_3013" type="publication"/>
                   <placeName ref="geo:doha"/>
                   <lang corresp="..\profiles\vicav_profile_QTR-DHA.xml"/>
+                  <cit type="sourceRepresentation"><quote>tigdar</quote></cit>
                </wib:featureValueObservation>
 
                <wib:featureValueObservation xml:id="ft_be_able.fv_0055" status="draft" resp="dmp:RZ">
@@ -1587,18 +1672,20 @@
                   <lang corresp="..\profiles\vicav_profile_PSE-RSD.xml"/>
                </wib:featureValueObservation>
 
-               <wib:featureValueObservation xml:id="ft_be_able.fv_0183" status="draft" resp="dmp:RZ">
-                  <name type="featureValue" ref=""/>
-                  <bibl corresp="zot:manfredi_2012_3081" type="publication"/>
+               <wib:featureValueObservation xml:id="ft_be_able.fv_0183" status="done" resp="dmp:RZ">
+                  <name type="featureValue" ref="#be_able_to_gdr"/>
+                  <bibl corresp="zot:behnstedt_2011-2014_3013" type="publication"/>
                   <placeName ref="geo:kurdufan"/>
                   <lang corresp="..\profiles\vicav_profile_SDN-KDF.xml"/>
+                  <cit type="sourceRepresentation"><quote>bagdar </quote></cit>
                </wib:featureValueObservation>
 
-               <wib:featureValueObservation xml:id="ft_be_able.fv_0181" status="draft" resp="dmp:RZ">
-                  <name type="featureValue" ref=""/>
-                  <bibl corresp="zot:manfredi_2013_2941" type="publication"/>
+               <wib:featureValueObservation xml:id="ft_be_able.fv_0181" status="done" resp="dmp:RZ">
+                  <name type="featureValue" ref="#be_able_to_gdr"/>
+                  <bibl corresp="zot:behnstedt_2011-2014_3013" type="publication"/>
                   <placeName ref="geo:kadugli"/>
                   <lang corresp="..\profiles\vicav_profile_SDN-BKD.xml"/>
+                  <cit type="sourceRepresentation"><quote>gidir</quote></cit>
                </wib:featureValueObservation>
 
                <wib:featureValueObservation xml:id="ft_be_able.fv_0184" status="draft" resp="dmp:RZ">
@@ -1629,14 +1716,21 @@
                   <lang corresp="..\profiles\vicav_profile_LBY-TPL.xml"/>
                   <cit type="sourceRepresentation"><quote>gdaṛ</quote></cit>
                </wib:featureValueObservation>
+               
+               <wib:featureValueObservation xml:id="ft_be_able.fv_0337" status="done" resp="dmp:RZ">
+                  <name type="featureValue" ref="#be_able_to_saggam"/>
+                  <bibl corresp="zot:behnstedt_2011-2014_3013" type="publication"/>
+                  <placeName ref="geo:tripoli_libya"/>
+                  <lang corresp="..\profiles\vicav_profile_LBY-TPL.xml"/>
+                  <cit type="sourceRepresentation"><quote>saggam, sággum</quote></cit>
+               </wib:featureValueObservation>
 
-               <wib:featureValueObservation xml:id="ft_be_able.fv_0005" status="draft" resp="dmp:RZ">
-                  <name type="featureValue" ref=""/>
-                  <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
-                     
-                  </bibl>
+               <wib:featureValueObservation xml:id="ft_be_able.fv_0005" status="done" resp="dmp:RZ">
+                  <name type="featureValue" ref="#be_able_to_gdr"/>
+                  <bibl corresp="zot:behnstedt_2011-2014_3013" type="publication"/>
                   <placeName ref="geo:abha"/>
                   <lang corresp="..\profiles\vicav_profile_SAU-ABH.xml"/>
+                  <cit type="sourceRepresentation"><quote>ma ʔagdar</quote></cit>
                </wib:featureValueObservation>
 
                <wib:featureValueObservation xml:id="ft_be_able.fv_0006" status="draft" resp="dmp:RZ">
@@ -1648,13 +1742,12 @@
                   <lang corresp="..\profiles\vicav_profile_SAU-BSH.xml"/>
                </wib:featureValueObservation>
 
-               <wib:featureValueObservation xml:id="ft_be_able.fv_0009" status="draft" resp="dmp:RZ">
-                  <name type="featureValue" ref=""/>
-                  <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
-                     
-                  </bibl>
+               <wib:featureValueObservation xml:id="ft_be_able.fv_0009" status="done" resp="dmp:RZ">
+                  <name type="featureValue" ref="#be_able_to_gdr"/>
+                  <bibl corresp="zot:behnstedt_2011-2014_3013" type="publication"/>
                   <placeName ref="geo:bilad_ghamid"/>
                   <lang corresp="..\profiles\vicav_profile_SAU-GHA.xml"/>
+                  <cit type="sourceRepresentation"><quote> mā btigdar</quote></cit>
                </wib:featureValueObservation>
 
                <wib:featureValueObservation xml:id="ft_be_able.fv_0010" status="done" resp="dmp:RZ">
@@ -1724,13 +1817,14 @@
                   <personGrp role="tribe" corresp="pgr:bal_ahmar"/>
                </wib:featureValueObservation>
 
-               <wib:featureValueObservation xml:id="ft_be_able.fv_0328" status="draft" resp="dmp:RZ">
-                  <name type="featureValue" ref=""/>
-                  <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
+               <wib:featureValueObservation xml:id="ft_be_able.fv_0328" status="done" resp="dmp:RZ">
+                  <name type="featureValue" ref="#be_able_to_maa_taa3_negation"/>
+                  <bibl corresp="zot:behnstedt_2011-2014_3013" type="publication" status="CHECKED">
                      
                   </bibl>
                   <placeName ref="geo:najran"/>
                   <lang corresp="..\profiles\vicav_profile_SAU-NJR.xml"/>
+                  <cit type="sourceRepresentation"><quote>mā ṭāʕ </quote></cit>
                </wib:featureValueObservation>
 
                <wib:featureValueObservation xml:id="ft_be_able.fv_0329" status="draft" resp="dmp:RZ">
@@ -1779,11 +1873,12 @@
                   <lang corresp="..\profiles\vicav_profile_LBY-KMS.xml"/>
                </wib:featureValueObservation>
 
-               <wib:featureValueObservation xml:id="ft_be_able.fv_0182" status="draft" resp="dmp:RZ">
-                  <name type="featureValue" ref=""/>
-                  <bibl corresp="zot:roset_2018_8391" type="publication"/>
+               <wib:featureValueObservation xml:id="ft_be_able.fv_0182" status="done" resp="dmp:RZ">
+                  <name type="featureValue" ref="#be_able_to_gdr"/>
+                  <bibl corresp="zot:behnstedt_2011-2014_3013" type="publication"/>
                   <placeName ref="geo:darfur"/>
                   <lang corresp="..\profiles\vicav_profile_SDN-DRF.xml"/>
+                  <cit type="sourceRepresentation"><quote>agdaṛ</quote></cit>
                </wib:featureValueObservation>
 
                <wib:featureValueObservation xml:id="ft_be_able.fv_0186" status="draft" resp="dmp:RZ">
