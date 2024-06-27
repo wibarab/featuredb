@@ -110,6 +110,22 @@
 	       <label>xayyilluh</label>
 	       <desc/>
 	       </item>
+                <item xml:id="pres_ms_ahu_da">
+	       <label>ahu da</label>
+	       <desc/>
+	       </item>
+               <item xml:id="pres_ms_haak">
+	       <label>hāk</label>
+	       <desc/>
+	       </item>
+                <item xml:id="pres_ms_haak_hu">
+	       <label>hāk hu</label>
+	       <desc/>
+	       </item>
+               <item xml:id="pres_tamma_pronoun">
+	       <label>təmma + pronoun</label>
+	       <desc/>
+	       </item>
             </div>
             <div type="description">
             </div>
@@ -1409,7 +1425,7 @@
                   <lang corresp="..\profiles\vicav_profile_TCD-ULE.xml"/>
                </wib:featureValueObservation>
 
-               <wib:featureValueObservation xml:id="ft_presentatives_ms.fv_0057" status="draft" resp="dmp:RZ">
+               <wib:featureValueObservation xml:id="ft_presentatives_ms.fv_0057" status="pre" resp="dmp:RZ">
                   <name type="featureValue" ref=""/>
                   <bibl corresp="src:KUW_2022_GK" type="publication"/>
                   <placeName ref="geo:kuwait_city"/>
@@ -1424,7 +1440,7 @@
                   <cit type="sourceRepresentation"><quote>Maltese orthography: hawn hu</quote></cit>
                </wib:featureValueObservation>
 
-               <wib:featureValueObservation xml:id="ft_presentatives_ms.fv_0051" status="draft" resp="dmp:RZ">
+               <wib:featureValueObservation xml:id="ft_presentatives_ms.fv_0051" status="pre" resp="dmp:RZ">
                   <name type="featureValue" ref=""/>
                   <bibl corresp="src:SAU_2022_GK" type="publication"/>
                   <placeName ref="geo:khaybar"/>
@@ -1434,7 +1450,7 @@
                   <lang corresp="..\profiles\vicav_profile_SAU-RSD.xml"/>
                </wib:featureValueObservation>
 
-               <wib:featureValueObservation xml:id="ft_presentatives_ms.fv_0046" status="draft" resp="dmp:RZ">
+               <wib:featureValueObservation xml:id="ft_presentatives_ms.fv_0046" status="pre" resp="dmp:RZ">
                   <name type="featureValue" ref=""/>
                   <bibl corresp="src:SDN_1974-1978_SR" type="fieldwork"/>
                   <placeName ref="geo:halfa_al-jadida"/>
@@ -1443,7 +1459,7 @@
                   <personGrp role="tribe" corresp="pgr:rashayda_sudan"/>
                </wib:featureValueObservation>
 
-               <wib:featureValueObservation xml:id="ft_presentatives_ms.fv_0049" status="draft" resp="dmp:RZ">
+               <wib:featureValueObservation xml:id="ft_presentatives_ms.fv_0049" status="pre" resp="dmp:RZ">
                   <name type="featureValue" ref=""/>
                   <bibl corresp="src:SDN_2023_SK" type="fieldwork"/>
                   <placeName ref="geo:mwees"/>
@@ -1464,24 +1480,18 @@
                </wib:featureValueObservation>
 
                
-               <wib:featureValueObservation xml:id="ft_presentatives_ms.fv_0232" status="draft" resp="dmp:RZ">
-                  <name type="featureValue" ref=""/>
+               <wib:featureValueObservation xml:id="ft_presentatives_ms.fv_0232" status="done" resp="dmp:RZ">
+                  <name type="featureValue" ref="#pres_tamma_pronoun"/>
                   <bibl corresp="zot:DAnna_2021_9340" type="publication"/>
                   <placeName ref="geo:yefren"/>
                   <lang corresp="..\profiles\vicav_profile_LBY-JYN.xml"/>
                   <personGrp role="religion" corresp="pgr:jews"/>
+                  <note type="general"> təmma is the existential particle, but when followed by a pronoun it has a "presentative nuance"</note>
                </wib:featureValueObservation>
 
                
-              
-
-               <wib:featureValueObservation xml:id="ft_presentatives_ms.fv_0320" status="done" resp="dmp:RZ">
-                  <name type="featureValue" ref="#pres_ms_ha"/>
-                  <bibl corresp="zot:qafisheh_1977_3210" type="publication"/>
-                  <placeName ref="geo:gulf"/>
-                  <lang corresp="..\profiles\vicav_profile_SAU-GLF.xml"/>
-                  <cit type="sourceRepresentation"><quote>ha / hā</quote></cit>
-               </wib:featureValueObservation>
+              ́
+            
 
                <wib:featureValueObservation xml:id="ft_presentatives_ms.fv_0324" status="done" resp="dmp:RZ">
                   <name type="featureValue" ref="#pres_ms_kaa_hu"/>
@@ -1494,14 +1504,15 @@
                   <note type="general">According to Holes (2006), kā- can be prefixed to any pronoun</note>
                </wib:featureValueObservation>
 
-               <wib:featureValueObservation xml:id="ft_presentatives_ms.fv_0323" status="draft" resp="dmp:RZ">
-                  <name type="featureValue" ref=""/>
+               <wib:featureValueObservation xml:id="ft_presentatives_ms.fv_0323" status="done" resp="dmp:RZ">
+                  <name type="featureValue" ref="#pres_ms_haak_hu"/>
                   <bibl corresp="zot:holes_2006_0164" type="publication" status="CHECKED">
                      
                   </bibl>
                   <placeName ref="geo:muharraq"/>
                   <lang corresp="..\profiles\vicav_profile_BHR-BHN.xml"/>
                   <personGrp role="religion" corresp="pgr:shiites"/>
+                  <cit type="sourceRepresentation"><quote>hāk-hu</quote></cit>
                </wib:featureValueObservation>
 
                <wib:featureValueObservation xml:id="ft_presentatives_ms.fv_0002" status="done" resp="dmp:RZ">
@@ -1518,23 +1529,16 @@
 
                
 
-               <wib:featureValueObservation xml:id="ft_presentatives_ms.fv_0321" status="draft" resp="dmp:RZ">
-                  <name type="featureValue" ref=""/>
+               <wib:featureValueObservation xml:id="ft_presentatives_ms.fv_0321" status="done" resp="dmp:RZ">
+                  <name type="featureValue" ref="#pres_ms_haak"/>
                   <bibl corresp="zot:ingham_1994_0001" type="publication" status="CHECKED">
                      
                   </bibl>
                   <placeName ref="geo:najd"/>
                   <lang corresp="..\profiles\vicav_profile_SAU-NJD.xml"/>
+                  <cit type="sourceRepresentation"><quote>hāk</quote></cit>
                </wib:featureValueObservation>
 
-               <wib:featureValueObservation xml:id="ft_presentatives_ms.fv_0335" status="draft" resp="dmp:RZ">
-                  <name type="featureValue" ref=""/>
-                  <bibl corresp="zot:johnstone_1961_0000" type="publication"/>
-                  <placeName ref="geo:kuwait"/>
-                  <personGrp role="tribe" corresp="pgr:dawasir"/>
-               </wib:featureValueObservation>
-
-             
 
                <wib:featureValueObservation xml:id="ft_presentatives_ms.fv_0055" status="draft" resp="dmp:RZ">
                   <name type="featureValue" ref=""/>
@@ -1678,20 +1682,15 @@
                   <cit type="sourceRepresentation"><quote>dā-hu</quote></cit>
                </wib:featureValueObservation>
                
-               <wib:featureValueObservation xml:id="ft_presentatives_ms.fv_0186" status="draft" resp="dmp:RZ">
-                  <name type="featureValue" ref=""/>
+               <wib:featureValueObservation xml:id="ft_presentatives_ms.fv_0186" status="done" resp="dmp:RZ">
+                  <name type="featureValue" ref="#pres_ms_ahu_da"/>
                   <bibl corresp="zot:trimingham_1946_0000" type="publication"/>
                   <placeName ref="geo:omdurman"/>
                   <lang corresp="..\profiles\vicav_profile_SDN-OMD.xml"/>
+                  <cit type="sourceRepresentation"><quote>ahu da</quote></cit>
                </wib:featureValueObservation>
 
-               <wib:featureValueObservation xml:id="ft_presentatives_ms.fv_0231" status="draft" resp="dmp:RZ">
-                  <name type="featureValue" ref=""/>
-                  <bibl corresp="zot:yoda_2005_3130" type="publication"/>
-                  <placeName ref="geo:tripoli_libya"/>
-                  <lang corresp="..\profiles\vicav_profile_LBY-JTP.xml"/>
-                  <personGrp role="religion" corresp="pgr:jews"/>
-               </wib:featureValueObservation>
+               
 
                <wib:featureValueObservation xml:id="ft_presentatives_ms.fv_0017" status="draft" resp="dmp:RZ">
                   <name type="featureValue" ref=""/>
