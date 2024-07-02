@@ -1,0 +1,2968 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../../082_scripts_xsl/tei_fs_2_html__001.xsl"?>
+<?xslt inPathSegment="\010_manannot\" outPathSegment="\106_html\"?>
+<?snippets fn="snippets_wibarab_001.xml" path="{filePath}\..\..\880_conf\"?>
+<?processor name="saxon" removePreserveFromXML="true" removePreserveFromXSLT="true"?>
+<?attributeAssignments fn="enricher_attributes.xml" path="{filePath}\..\..\880_conf\"?>
+<?shortCuts fn="wibarab_shortCuts" path="{filePath}\..\..\880_conf\"?>
+<TEI xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../../804_xsd/1.0.1/featuredb.xsd" xml:id="ft_fem_end" xmlns="http://www.tei-c.org/ns/1.0" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Variants of the feminine ending (final -a) in the environment of emphatic and back consonants.</title>
+            <author>Veronika Engler</author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>{publisher}</publisher>
+            <date when="2022-10-03"></date>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This is the feature-file for Final -a (feminine ending) - In the environment of emphatic and back consonants:Values: -a, -ä, -e, -i. We consider as emphatic:  ṣ - ṭ - ḍ - ḏ̣ - ẓ - ṛ (r after non i)  q  - g - ġ - x - ḥ - ʕ - h - ʔ.  </p>
+         </sourceDesc>
+      </fileDesc>
+
+      <encodingDesc>
+
+         <listPrefixDef xml:id="listPrefixDef">
+            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_dmp.xml#$1"></prefixDef>
+            <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_biblio_tei_zotero.xml#$1"></prefixDef>
+            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_dialects.xml#$1"></prefixDef>
+            <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1"></prefixDef>
+            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"></prefixDef>
+            <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"></prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
+      
+       <profileDesc>
+         <textClass>
+          <catRef target="dmp:raising_final_a"/>
+          </textClass>
+      </profileDesc>
+
+      <revisionDesc status="draft">
+         <change when="2022-08-17" who="dmp:">c</change>
+         <change when="2022-08-17" who="dmp: "></change>
+         <change when="2022-08-17" who="dmp:">For EGY-___ there are no values found</change>
+         <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change>
+         <change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change>
+      </revisionDesc>
+   </teiHeader>
+
+
+
+   <text>
+      <body>
+
+         <div type="featureDescription">
+            <head>Feature Values</head>
+            <list type="featureValues">
+               <item xml:id="fem_end_a">
+                  <label>-a</label>
+                  <desc></desc>
+               </item>
+               <item xml:id="fem_end_at">
+                  <label>-at for definite nouns/ -ah for indefinite</label>
+                  <desc></desc>
+               </item>
+               <item xml:id="fem_end_i">
+                  <label>-i</label>
+                  <desc></desc>
+               </item>
+               <item xml:id="fem_end_i_after_i">
+                  <label>-i after i/ī</label>
+                  <desc></desc>
+               </item>
+               <item xml:id="fem_end_e">
+                  <label>-e</label>
+                  <desc></desc>
+               </item>
+               <item xml:id="fem_end_NO">
+                  <label>NO</label>
+                  <desc></desc>
+               </item>
+                <item xml:id="fem_end_ae">
+                  <label>-ä</label>
+                  <desc></desc>
+               </item>
+            </list>
+         </div>
+         <div type="description">
+         </div>
+         <div type="featureValueObservations" xmlns:tei="http://www.tei-c.org/ns/1.0">
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0050" status="pre" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="src:LEB_2022_AID" type="fieldwork"></bibl>
+               <placeName ref="geo:ed_dhayra"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-ARA.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:aramsha_lebanon"></personGrp>
+               <cit type="example" xml:id="ft_fem_end.fv_0050.ct_0000">
+                     <quote>smiča</quote>
+                     <cit type="translation">
+                        <quote>fish</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0063" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="src:LEB_2022_AID" type="fieldwork"></bibl>
+               <placeName ref="geo:khalde"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-KHA.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:arab_xalde"></personGrp>
+               <cit type="example" xml:id="ft_fem_end.fv_0063.ct_0000">
+                     <quote>ṛāḅṭa</quote>
+                     <cit type="translation">
+                        <quote>bond</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0071" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="src:LEB_2022_AID" type="fieldwork"></bibl>
+               <placeName ref="geo:naameh"></placeName>
+               <placeName ref="geo:el_karantina"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:arab_maslax"></personGrp>
+               <personGrp role="ageGroup" corresp="#middle"/>
+               <personGrp role="ageGroup" corresp="#old"/>
+               <cit type="example" xml:id="ft_fem_end.fv_0071.ct_0000">
+                     <quote>šaʕra</quote>
+                     <cit type="translation">
+                        <quote>a hair</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ft_fem_end.fv_0071.ct_0001">
+                     <quote>mašhūṛa</quote>
+                     <cit type="translation">
+                        <quote>busy (f.sg)</quote>
+                     </cit>
+                  </cit>
+                  </wib:featureValueObservation>
+                  
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0011" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="src:LEB_2022_AID" type="fieldwork"></bibl>
+               <placeName ref="geo:naameh"></placeName>
+               <placeName ref="geo:el_karantina"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:arab_maslax"></personGrp>
+               <personGrp role="ageGroup" corresp="#young"/>
+               <cit type="example" xml:id="ft_fem_end.fv_0011.ct_0000">
+                     <quote>sālga</quote>
+                     <cit type="translation">
+                        <quote>boiling (f.sg)</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0060" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:agbaht_2023_4928" type="publication"></bibl>
+               <placeName ref="geo:sheikh_taba"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-SXT.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0060.ct_0000">
+                     <quote>ʔiṭʕa</quote>
+                     <cit type="translation">
+                        <quote>piece</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ft_fem_end.fv_0060.ct_0001">
+                     <quote>sēmʕa</quote>
+                     <cit type="translation">
+                        <quote>listening (f.sg)</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0029" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
+               <placeName ref="geo:hajajra"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ISR-GAW.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:jawamis"></personGrp>
+               <cit type="example" xml:id="ft_fem_end.fv_0029.ct_0000">
+                     <quote>rguḅa</quote>
+                     <cit type="translation">
+                        <quote>neck</quote>
+                     </cit>
+                  </cit>
+                    <cit type="example" xml:id="ft_fem_end.fv_0029.ct_0001">
+                     <quote>ǧumʕa</quote>
+                     <cit type="translation">
+                        <quote>week</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">Deduced from examples.</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0030" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
+               <placeName ref="geo:hamam"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ISR-GET.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:getiyya"></personGrp>
+                 <cit type="example" xml:id="ft_fem_end.fv_0030.ct_0001">
+                     <quote>ragaḅa</quote>
+                     <cit type="translation">
+                        <quote>neck</quote>
+                     </cit>
+                  </cit>
+                   <cit type="example" xml:id="ft_fem_end.fv_0030.ct_0000">
+                     <quote>ǧumʕa</quote>
+                     <cit type="translation">
+                        <quote>week</quote>
+                     </cit>
+                  </cit>
+                   <note type="general">Deduced from examples.</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0026" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
+               <placeName ref="geo:haifa"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ISR-HAI.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0026.ct_0000">
+                     <quote>ṭayyāra</quote>
+                     <cit type="translation">
+                        <quote>plane</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ft_fem_end.fv_0026.ct_0001">
+                     <quote>mnīḥa</quote>
+                     <cit type="translation">
+                        <quote>good (f.sg.)</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0031" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
+               <placeName ref="geo:hujeirat_dhara"></placeName>
+               <placeName ref="geo:bir_el_maksur"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ISR-HGE.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:hjerat"></personGrp>
+               <cit type="example" xml:id="ft_fem_end.fv_0031.ct_0000">
+                     <quote>rguḅa</quote>
+                     <cit type="translation">
+                        <quote>neck</quote>
+                     </cit>
+                  </cit>
+               
+            </wib:featureValueObservation>
+            
+         
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0032" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
+               <placeName ref="geo:kaabiyya"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ISR-KAB.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:kabiyye"></personGrp>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0034" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
+               <placeName ref="geo:ibtin"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ISR-MRY.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:amiriyya"></personGrp>
+               <cit type="example" xml:id="ft_fem_end.fv_0034.ct_0000">
+                     <quote>rguḅa</quote>
+                     <cit type="translation">
+                        <quote>neck</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0035" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
+               <placeName ref="geo:nazareth"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ISR-NAZ.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0036" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
+               <placeName ref="geo:basmat_tabun"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ISR-NEM.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:neem_israel"></personGrp>
+               <cit type="example" xml:id="ft_fem_end.fv_0036.ct_0000">
+                     <quote>čitīṛa</quote>
+                     <cit type="translation">
+                        <quote>much (f.sg)</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0038" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
+               <placeName ref="geo:umm_el_ghanam"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ISR-SA3.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:saayda"></personGrp>
+              <cit type="example" xml:id="ft_fem_end.fv_0038.ct_0000">
+                     <quote>rguḅa</quote>
+                     <cit type="translation">
+                        <quote>neck</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0039" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
+               <placeName ref="geo:kammaana"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ISR-SAW.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:sawaid"></personGrp>
+                 <cit type="example" xml:id="ft_fem_end.fv_0039.ct_0000">
+                     <quote>rguḅa</quote>
+                     <cit type="translation">
+                        <quote>neck</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0040" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
+               <placeName ref="geo:shibli"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ISR-SHI.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:shibli"></personGrp>
+               <cit type="example" xml:id="ft_fem_end.fv_0040.ct_0000">
+                     <quote>rguḅa</quote>
+                     <cit type="translation">
+                        <quote>neck</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0041" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
+               <placeName ref="geo:halaf_tabbash"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ISR-TAB.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:tabbash"></personGrp>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0043" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
+               <placeName ref="geo:khawalid"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ISR-XAW.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:xawalid"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0044" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:behnstedt_2019_6122" type="publication"></bibl>
+               <placeName ref="geo:maloot_tarshiiha"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ISR-ZUN.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:zunnar"></personGrp>
+                <cit type="example" xml:id="ft_fem_end.fv_0044.ct_0000">
+                     <quote>rguḅa</quote>
+                     <cit type="translation">
+                        <quote>neck</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0074" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:el_hajje_1954_0000" type="publication"></bibl>
+               <placeName ref="geo:tripoli_lebanon"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-TRI.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0062" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:féghali_1919_9281" type="publication"></bibl>
+               <placeName ref="geo:kfar_aabida"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-KAB.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0062.ct_0000">
+                     <quote>zahra</quote>
+                     <cit type="translation">
+                        <quote>flower</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0012" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:fleisch_1947_2645" type="publication"></bibl>
+               <placeName ref="geo:zahle"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-ZAH.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0012.ct_0000">
+                     <quote>fūṭa</quote>
+                     <cit type="translation">
+                        <quote>piece of cloth</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">Generally short a in Zahle is slightly back and round.</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0065" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:fleisch_1974_3163" type="publication" status="CHECKED">
+               </bibl>
+               <placeName ref="geo:kfar_sghab"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-KSG.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0065.ct_0000">
+                     <quote>mrīḍa</quote>
+                     <cit type="translation">
+                        <quote>sick (f.sg)</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">Pausal form is -o (Fleisch 1974:222).</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0160" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:geva-kleinberger_2009_3208" type="publication"></bibl>
+               <placeName ref="geo:tiberias"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ISR-TBR.xml"></lang>
+               <personGrp role="religion" corresp="pgr:jews"></personGrp>
+               <cit type="example" xml:id="ft_fem_end.fv_0160.ct_0000">
+                     <quote>tisʕa</quote>
+                     <cit type="translation">
+                        <quote>nine (f.)</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0053" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:haidar_1979_2969" type="publication"></bibl>
+               <placeName ref="geo:baskinta"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-BAS.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0053.ct_0000">
+                     <quote>ḥarāra</quote>
+                     <cit type="translation">
+                        <quote>fever</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0056" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:jiha_1964_0000" type="publication"></bibl>
+               <placeName ref="geo:bishmizzine"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-BIS.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0056.ct_0000">
+                     <quote>balḥa</quote>
+                     <cit type="translation">
+                        <quote>date</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ft_fem_end.fv_0056.ct_0001">
+                     <quote>būẓa</quote>
+                     <cit type="translation">
+                        <quote>ice cream</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ft_fem_end.fv_0056.ct_0002">
+                     <quote>bazʔa</quote>
+                     <cit type="translation">
+                        <quote>spit</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0047" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:pickett_2005_4567" type="publication"></bibl>
+               <placeName ref="geo:rayak"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-ABI.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:abu_eid"></personGrp>
+                <note type="general"> "There were a very small number of exceptions in which 
+final short imaala was exhibited, namely ǧamīle (when used as a girl's name HR, AG, senne (year),  MW, ED, HR, AI, and also maʕze (goat).
+Variants of these three items when final raising was not exhibited are also found in the data though. Thus, these are very minor 
+exceptions: essentially the Lebanese nomadic dialects do not exhibit final short imaala." (Pickett 2005:227)</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0048" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:pickett_2005_4567" type="publication"></bibl>
+               <placeName ref="geo:saadnayel"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-AGB.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:abu_jabal"></personGrp>
+                <note type="general"> "There were a very small number of exceptions in which 
+final short imaala was exhibited, namely ǧamīle (when used as a girl's name HR, AG, senne (year),  MW, ED, HR, AI, and also maʕze (goat).
+Variants of these three items when final raising was not exhibited are also found in the data though. Thus, these are very minor 
+exceptions: essentially the Lebanese nomadic dialects do not exhibit final short imaala." (Pickett 2005:227)</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0058" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:pickett_2005_4567" type="publication"></bibl>
+               <placeName ref="geo:el_khiara"></placeName>
+               <placeName ref="geo:tall_dunub"></placeName>
+               <placeName ref="geo:el_qaa"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-EDI.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:edin"></personGrp>
+                <note type="general"> "There were a very small number of exceptions in which 
+final short imaala was exhibited, namely ǧamīle (when used as a girl's name HR, AG, senne (year),  MW, ED, HR, AI, and also maʕze (goat).
+Variants of these three items when final raising was not exhibited are also found in the data though. Thus, these are very minor 
+exceptions: essentially the Lebanese nomadic dialects do not exhibit final short imaala." (Pickett 2005:227)</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0061" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:pickett_2005_4567" type="publication"></bibl>
+               <placeName ref="geo:nabaa_el_faaour"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-HRK.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:hruk"></personGrp>
+                <note type="general"> "There were a very small number of exceptions in which 
+final short imaala was exhibited, namely ǧamīle (when used as a girl's name HR, AG, senne (year),  MW, ED, HR, AI, and also maʕze (goat).
+Variants of these three items when final raising was not exhibited are also found in the data though. Thus, these are very minor 
+exceptions: essentially the Lebanese nomadic dialects do not exhibit final short imaala." (Pickett 2005:227)</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0068" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:pickett_2005_4567" type="publication"></bibl>
+               <placeName ref="geo:taanayel"></placeName>
+               <placeName ref="geo:barr_elias"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-LWS.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:lwes"></personGrp>
+                <note type="general"> "There were a very small number of exceptions in which 
+final short imaala was exhibited, namely ǧamīle (when used as a girl's name HR, AG, senne (year),  MW, ED, HR, AI, and also maʕze (goat).
+Variants of these three items when final raising was not exhibited are also found in the data though. Thus, these are very minor 
+exceptions: essentially the Lebanese nomadic dialects do not exhibit final short imaala." (Pickett 2005:227)</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0070" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:pickett_2005_4567" type="publication"></bibl>
+               <placeName ref="geo:ain_aanjar"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-MAW.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:mawali_lebanon"></personGrp>
+                <note type="general"> "There were a very small number of exceptions in which 
+final short imaala was exhibited, namely ǧamīle (when used as a girl's name HR, AG, senne (year),  MW, ED, HR, AI, and also maʕze (goat).
+Variants of these three items when final raising was not exhibited are also found in the data though. Thus, these are very minor 
+exceptions: essentially the Lebanese nomadic dialects do not exhibit final short imaala." (Pickett 2005:227)</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0054" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:schukro_2004_6239" type="publication"></bibl>
+               <placeName ref="geo:beirut"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-BEI.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0054.ct_0000">
+                     <quote>maṛa</quote>
+                     <cit type="translation">
+                        <quote>woman</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0052" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:younes_2013_2795" type="publication"></bibl>
+               <placeName ref="geo:wadi_khalid"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-ATI.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:arab_al_atij"></personGrp>
+               <cit type="example" xml:id="ft_fem_end.fv_0052.ct_0000">
+                     <quote>frēxa</quote>
+                     <cit type="translation">
+                        <quote>little girl</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ft_fem_end.fv_0052.ct_0001">
+                     <quote>ṣabġa</quote>
+                     <cit type="translation">
+                        <quote>dye</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0045" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:younes_2014_9863" type="publication"></bibl>
+               <placeName ref="geo:haouch_el_nabi"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBN-ABI.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:abu_eid"></personGrp>
+               <cit type="example" xml:id="ft_fem_end.fv_0045.ct_0000">
+                     <quote>ǧəmāʕa</quote>
+                     <cit type="translation">
+                        <quote>group</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+            
+            
+            
+            
+            
+            
+            
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0105" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:twenan"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-MWL.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:mawali_syria"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0106" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:qasr_ibn_wardan"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-MWL.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:mawali_syria"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0107" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:zyara"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-MWL.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:mawali_syria"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0110" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:tell_alu"></placeName>
+               <placeName ref="geo:al_qahtaniyah"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-SMR.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:shammar_syria"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0099" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:blanc_1970_0000" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:negev"></placeName>
+               <lang corresp="..\profiles\vicav_profile_NEG-ZLM.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:zullam"></personGrp>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0100" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#fem_end_at"></name>
+               <bibl corresp="zot:hazmy_1975_1645" type="publication"></bibl>
+               <placeName ref="geo:hejaz"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-HRB.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:al_harb"></personGrp>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_fem_end.fv_0016" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:hazmy_1975_1645" type="publication"></bibl>
+               <placeName ref="geo:hejaz"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-HRB.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:al_harb"></personGrp>
+            </wib:featureValueObservation>
+           
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0132" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#fem_end_at"></name>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:rumanah"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-AGL.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:agaylah"></personGrp>
+               <cit type="sourceRepresentation"><quote>ah</quote></cit>
+               <cit type="example" xml:id="ft_fem_end.fv_0132.ct_0000">
+                     <quote>xáḏ̣ṛah</quote>
+                     <cit type="translation">
+                        <quote></quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0135" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKME">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:gharif_al_ghuzlan"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-BLL.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:biliy"></personGrp>
+               <cit type="sourceRepresentation"><quote>aʔ</quote></cit>
+               <cit type="example" xml:id="ft_fem_end.fv_0135.ct_0000">
+                     <quote>ṣafṛáʔ</quote>
+                     <cit type="translation">
+                        <quote>yellow (f.sg.)</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0137" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:bir_al_abd"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-BYD.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:biyyadiyah"></personGrp>
+               <cit type="example" xml:id="ft_fem_end.fv_0137.ct_0000">
+                     <quote>mzaxxixa</quote>
+                     <cit type="translation">
+                        <quote>foul smelling (f.sg.)</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0139" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:bir_al_abd"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-DWG.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:dawaghrah"></personGrp>
+               <cit type="example" xml:id="ft_fem_end.fv_0139.ct_0000">
+                     <quote>zaṛgā́ </quote>
+                     <cit type="translation">
+                        <quote>blue (f.sg.)</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0146" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:al_kuntilla"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-HYW.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:ahaywat"></personGrp>
+               <cit type="sourceRepresentation"><quote>aʔ</quote></cit>
+               <cit type="example" xml:id="ft_fem_end.fv_0146.ct_0000">
+                     <quote>ṣafṛáʔ</quote>
+                     <cit type="translation">
+                        <quote>yellow (f.sg.)</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0150" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:nakhal_diqla"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-RML.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:rmelat"></personGrp>
+               <cit type="sourceRepresentation"><quote>aʔ</quote></cit>
+               <cit type="example" xml:id="ft_fem_end.fv_0150.ct_0000">
+                     <quote>ṣafṛáʔ</quote>
+                     <cit type="translation">
+                        <quote>yellow (f.sg.)</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0152" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#fem_end_at"></name>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:bir_qatia"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-SMN.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:samanah"></personGrp>
+               <cit type="sourceRepresentation"><quote>ah</quote></cit>
+               <cit type="example" xml:id="ft_fem_end.fv_0152.ct_0000">
+                     <quote>xáḏ̣ṛah</quote>
+                     <cit type="translation">
+                        <quote></quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0153" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:wadi_al_arish"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-SWR.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:sawarkah"></personGrp>
+               <cit type="sourceRepresentation"><quote>aʔ</quote></cit>
+               <cit type="example" xml:id="ft_fem_end.fv_0153.ct_0000">
+                     <quote>ṣafṛáʔ</quote>
+                     <cit type="translation">
+                        <quote>yellow (f.sg.)</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0156" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:rumanah"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-XRS.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:axarsah"></personGrp>
+               <cit type="example" xml:id="ft_fem_end.fv_0156.ct_0000">
+                     <quote>mzaxxixa</quote>
+                     <cit type="translation">
+                        <quote>foul smelling (f.sg.)</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0084" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:owens_1984_9854" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:petra"></placeName>
+               <lang corresp="..\profiles\vicav_profile_JOR-BDL.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:bdul"></personGrp>
+            </wib:featureValueObservation>
+
+    
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0081" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:palva_1976_4156" type="publication"></bibl>
+               <placeName ref="geo:sel_hisban"></placeName>
+               <lang corresp="..\profiles\vicav_profile_JOR-AGR.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:al_agarma"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0085" status="pre" resp="dmp:AT">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:palva_1980_0000" type="publication"></bibl>
+               <placeName ref="geo:umm_ar_rasas"></placeName>
+               <placeName ref="geo:natl"></placeName>
+               <placeName ref="geo:umm_al_walid"></placeName>
+               <placeName ref="geo:al_muwaqqar"></placeName>
+               <placeName ref="geo:qasr_amrah"></placeName>
+               <placeName ref="geo:rujm_ash_shami_al_gharbi"></placeName>
+               <lang corresp="..\profiles\vicav_profile_JOR-BSX.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:bani_saxar"></personGrp>
+            </wib:featureValueObservation>
+
+
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0098" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#fem_end_at"></name>
+               <bibl corresp="zot:shawarbah_2012_3107" type="publication"></bibl>
+               <placeName ref="geo:negev"></placeName>
+               <lang corresp="..\profiles\vicav_profile_NEG-AZM.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:azazmih"></personGrp>
+               <cit type="example" xml:id="ft_fem_end.fv_0098.ct_0000">
+                     <quote>bīḏ̣ah</quote>
+                     <cit type="translation">
+                        <quote>egg</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0080" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:torzullo_2018_1765" type="publication"></bibl>
+               <placeName ref="geo:badr_al_jadidah"></placeName>
+               <placeName ref="geo:wadi_as_sir"></placeName>
+               <placeName ref="geo:mahis"></placeName>
+               <lang corresp="..\profiles\vicav_profile_JOR-ABD.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:bani_abbad"></personGrp>
+               <cit type="example" xml:id="ft_fem_end.fv_0080.ct_0000">
+                     <quote>giṣṣa</quote>
+                     <cit type="translation">
+                        <quote>story</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0083" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:wer_2007_5826" type=" publication"></bibl>
+               <placeName ref="geo:amman"></placeName>
+               <lang corresp="..\profiles\vicav_profile_JOR-AMN.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0083.ct_0000">
+                     <quote>lamḥa</quote>
+                     <cit type="translation">
+                        <quote>glance</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+           
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0117" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#fem_end_e"></name>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication"></bibl>
+               <placeName ref="geo:aleppo"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-ALP.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0117.ct_0000">
+                     <quote>bisse</quote>
+                     <cit type="translation">
+                        <quote>cat</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0121" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:talay_1999_0001" type="publication"></bibl>
+               <placeName ref="geo:khawetna"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-KHA.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:khawetna_tribe"></personGrp>
+               <cit type="example" xml:id="ft_fem_end.fv_0121.ct_0000">
+                     <quote>ḥarīqa</quote>
+                     <cit type="translation">
+                        <quote>fire</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0123" status="draft" resp="dmp:CL">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:" type="publication"></bibl>
+               <placeName ref="geo:qamishli"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-QAM.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0125" status="draft" resp="dmp:CL">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:" type="publication"></bibl>
+               <placeName ref="geo:al_sukhna"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-SUK.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0127" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:fink_2017_3211" type="publication"></bibl>
+               <placeName ref="geo:hasankeyf"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUR-HAS.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0127.ct_0000">
+                     <quote>bərqa</quote>
+                     <cit type="translation">
+                        <quote>lightning</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0128" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:wittrich_2001_0000" type="publication"></bibl>
+               <placeName ref="geo:idil_aazex"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUR-IDI.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0128.ct_0000">
+                     <quote>ḥənṭa</quote>
+                     <cit type="translation">
+                        <quote>wheat</quote>
+                     </cit>
+                  </cit>
+               <note type="general">Deduced from example</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0129" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:lahdo_2009_1103" type="publication"></bibl>
+               <placeName ref="geo:siirt"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUR-SII.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0129.ct_0000">
+                     <quote>daqīqa</quote>
+                     <cit type="translation">
+                        <quote>minute</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0157" status="draft" resp="dmp:CL">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:" type="publication"></bibl>
+               <placeName ref="geo:gaza"></placeName>
+               <lang corresp="..\profiles\vicav_profile_PSE-GZA.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0168" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:löhr_1905_1315" type="publication"></bibl>
+               <placeName ref="geo:jerusalem"></placeName>
+               <lang corresp="..\profiles\vicav_profile_PSE-JRS.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0161" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:belinkov_2014_4410" type="publication"></bibl>
+               <placeName ref="geo:jisr_az_zarqa"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ISR-ZRG.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0161.ct_0000">
+                     <quote>mlīḥa</quote>
+                     <cit type="translation">
+                        <quote>good</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0118" status="draft" resp="dmp:CL">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:cowell_1964_0000" type="publication"></bibl>
+               <placeName ref="geo:damascus"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-DAM.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0278" status="draft" resp="dmp:CL">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:drop_2007_0000" type="publication"></bibl>
+               <placeName ref="geo:mandisha"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-BHR.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0113" status="draft" resp="dmp:CL">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:haidar_2006_8572" type="publication"></bibl>
+               <placeName ref="geo:baghdad"></placeName>
+               <lang corresp="..\profiles\vicav_profile_IRQ-BGD.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0112" status="draft" resp="dmp:CL">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:leitner_2022_2410" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:khuzestan"></placeName>
+               <lang corresp="..\profiles\vicav_profile_IRN-KHU.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0114" status="draft" resp="dmp:CL">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:mahdi_1985_1985" type="publication"></bibl>
+               <placeName ref="geo:basra"></placeName>
+               <lang corresp="..\profiles\vicav_profile_IRQ-BSR.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0173" status="draft" resp="dmp:CL">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:mousa_2019_9904" type="publication"></bibl>
+               <placeName ref="geo:tulkarm"></placeName>
+               <lang corresp="..\profiles\vicav_profile_PSE-TKM.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0188" status="draft" resp="dmp:CL">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:reichmuth_1983_0001" type="publication"></bibl>
+               <placeName ref="geo:halfa_al-jadida"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SDN-SKR.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0116" status="draft" resp="dmp:CL">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:salonen_1980_0000" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:al_shirqat"></placeName>
+               <lang corresp="..\profiles\vicav_profile_IRQ-SQT.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0175" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:seeger_1996_3406" type="publication"></bibl>
+               <placeName ref="geo:hebron"></placeName>
+               <lang corresp="..\profiles\vicav_profile_PSE-XLL.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0176" status="draft" resp="dmp:CL">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:simeone_senelle_youssi_2002_0000" type="publication" status="CHECKME">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:obock"></placeName>
+               <lang corresp="..\profiles\vicav_profile_DJI-OBK.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0281" status="draft" resp="dmp:CL">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:woidich_2006_3203" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:cairo"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-CRO.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0274" status="draft" resp="dmp:PH">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:alexandria"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-ALX.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0275" status="draft" resp="dmp:PH">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:aswan"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-ASW.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0276" status="draft" resp="dmp:PH">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:asyut"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-ASY.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0277" status="draft" resp="dmp:PH">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:al_badari"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-BDR.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0279" status="draft" resp="dmp:PH">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:port_said"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-BSD.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0280" status="draft" resp="dmp:PH">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:bani_suwayf"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-BSW.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0282" status="draft" resp="dmp:PH">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:darawah"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-DRW.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0283" status="draft" resp="dmp:PH">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:luxor"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-LXR.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0284" status="draft" resp="dmp:PH">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:il_minya"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-MNY.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0285" status="draft" resp="dmp:PH">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:al_namasa"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-NMS.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0286" status="draft" resp="dmp:PH">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:qutur"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-QTR.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0287" status="draft" resp="dmp:PH">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:rasid"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-RSD.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0288" status="draft" resp="dmp:PH">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:sinbillawayn"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-SBW.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0289" status="draft" resp="dmp:PH">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:sohag"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-SHG.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0193" status="draft" resp="dmp:PH">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:carbou_1913_0117" type="publication"></bibl>
+               <placeName ref="geo:ouaday"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TCD-ODY.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0190" status="draft" resp="dmp:PH">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:décobert_1985_9706" type="publication"></bibl>
+               <placeName ref="geo:massaguet"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TCD-ABK.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0191" status="draft" resp="dmp:PH">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:décobert_1985_9706" type="publication"></bibl>
+               <placeName ref="geo:bout_el_fil"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TCD-BBL.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0195" status="draft" resp="dmp:PH">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:décobert_1985_9706" type="publication"></bibl>
+               <placeName ref="geo:djedaa"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TCD-ULR.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0069" status="draft" resp="dmp:PH">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:jong_youssi_2002_0000" type="publication"></bibl>
+               <placeName ref="geo:barramiya"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-ABB.xml"></lang>
+               <note type="general">only created for the gahawa</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0073" status="draft" resp="dmp:PH">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:matar_1967_3498" type="publication"></bibl>
+               <placeName ref="geo:marsamatruh"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-SMY.xml"></lang>
+               <note type="general">only created for the gahawa</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0192" status="draft" resp="dmp:PH">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:owens_1985_0000" type="publication" status="CHECKME">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:ndjamena"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TCD-NDJ.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0189" status="draft" resp="dmp:PH">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:roth_1979_0000" type="publication"></bibl>
+               <placeName ref="geo:abeche"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TCD-ABC.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0194" status="draft" resp="dmp:PH">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:zeltner_tourneux_1986_0000" type="publication"></bibl>
+               <placeName ref="geo:salamat"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TCD-ULE.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0057" status="pre" resp="dmp:RZ">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="src:KUW_2022_GK" type="publication" cert="unknown"></bibl>
+               <placeName ref="geo:kuwait_city"></placeName>
+               <lang corresp="..\profiles\vicav_profile_KWT-RSD.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0258" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="src:PC_RZ" type="personalCommunication"></bibl>
+               <placeName ref="geo:malta"></placeName>
+               <lang corresp="..\profiles\vicav_profile_MLT-MAL.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0258.ct_0000">
+                     <quote>nebḥa</quote>
+                     <cit type="translation">
+                        <quote>bark</quote>
+                     </cit>
+                     <note type="general">Maltese orthography: nebħa</note>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0051" status="pre" resp="dmp:RZ">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="src:SAU_2022_GK" type="publication" cert="unknown"></bibl>
+               <placeName ref="geo:khaybar"></placeName>
+               <placeName ref="geo:qassim_region"></placeName>
+               <placeName ref="geo:al_hayit"></placeName>
+               <placeName ref="geo:hail_reg"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-RSD.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0046" status="pre" resp="dmp:RZ">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="src:SDN_1974-1978_SR" type="fieldwork"></bibl>
+               <placeName ref="geo:halfa_al-jadida"></placeName>
+               <placeName ref="geo:khartoum"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SDN-RYD.xml"></lang>
+               <personGrp role="tribe" corresp="#rashayda_sudan"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0049" status="pre" resp="dmp:RZ">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="src:SDN_2023_SK" type="fieldwork"></bibl>
+               <placeName ref="geo:mwees"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SDN-RYD.xml"></lang>
+               <personGrp role="tribe" corresp="#rashayda_sudan"></personGrp>
+            </wib:featureValueObservation>
+
+            
+            
+              <wib:featureValueObservation xml:id="ft_fem_end.fv_0311" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:" type="publication"></bibl>
+               <placeName ref="geo:mazara_del_vallo"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ITA-MDV.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0311.ct_0000">
+                     <quote>mṛa</quote>
+                     <cit type="translation">
+                        <quote>woman</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0334" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:alfaifi_2010_2815" type="publication"></bibl>
+               <placeName ref="geo:jabal_fayfa"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-FYF.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0334.ct_0000">
+                     <quote>kalḥah</quote>
+                     <cit type="translation">
+                        <quote>mouth</quote>
+                     </cit>
+                  </cit>
+                  <cit type="sourceRepresentation"><quote>-ah</quote></cit>
+            </wib:featureValueObservation>
+            
+             
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0322" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:asiri_2009_2501" type="publication"></bibl>
+               <placeName ref="geo:rijal_alma"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-ALM.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0322.ct_0000">
+                     <quote>sayyāra</quote>
+                     <cit type="translation">
+                        <quote>car</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0228" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:benkato_2014_2793" type="publication"></bibl>
+               <placeName ref="geo:benghazi"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBY-BGZ.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0228.ct_0000">
+                     <quote>dǝgīga</quote>
+                     <cit type="translation">
+                        <quote>minute</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            
+            
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0330" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:caubet_2004_3508" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:fezzan"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBY-FZN.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0330.ct_0000">
+                     <quote>maṛa</quote>
+                     <cit type="translation">
+                        <quote>woman</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+           
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0003" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:DAnna_2017_4912" type="publication"></bibl>
+               <placeName ref="geo:misrata"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBY-MSR.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0003.ct_0000">
+                     <quote>žmāʕa</quote>
+                     <cit type="translation">
+                        <quote>group</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0232" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:DAnna_2021_9340" type="publication"></bibl>
+               <placeName ref="geo:yefren"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBY-JYN.xml"></lang>
+               <personGrp role="religion" corresp="pgr:jews"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0185" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:dickins_2009_3089" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:khartoum"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SDN-KRT.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0185.ct_0000">
+                     <quote>mara</quote>
+                     <cit type="translation">
+                        <quote>woman</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0230" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:harrama_1993_0000" type="publication"></bibl>
+               <placeName ref="geo:al_jabal_al_gharbi"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBY-JBL.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0320" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:holes_1990_0000" type="publication" cert="unknown"></bibl>
+               <placeName ref="geo:gulf"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-GLF.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0324" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:holes_2006_0164" type="publication" cert="unknown" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:manama"></placeName>
+               <lang corresp="..\profiles\vicav_profile_BHR-ARB.xml"></lang>
+               <personGrp role="religion" corresp="#sunnis"></personGrp>
+               <cit type="example" xml:id="ft_fem_end.fv_0324.ct_0000">
+                     <quote>ramḍa</quote>
+                     <cit type="translation">
+                        <quote>hot ground</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0323" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:holes_2006_0164" type="publication" cert="unknown" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:muharraq"></placeName>
+               <lang corresp="..\profiles\vicav_profile_BHR-BHN.xml"></lang>
+               <personGrp role="religion" corresp="#shiites"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0002" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:johnstone_1967_0000" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:kuwait_city"></placeName>
+               <lang corresp="..\profiles\vicav_profile_KWT-KWC.xml"></lang>
+            </wib:featureValueObservation>
+
+          
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0008" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:ingham_1982_0000" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:sufayri"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-DHF.xml"></lang>
+<cit type="sourceRepresentation"><quote>-ah</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0326" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:ingham_1986_0001" type="publication" cert="unknown" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:summan"></placeName>
+               <placeName ref="geo:shahaniya_reg"></placeName>
+               <placeName ref="geo:doha"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-MUR.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:al_murra"></personGrp>
+               <cit type="example" xml:id="ft_fem_end.fv_0326.ct_0000">
+                     <quote>nāgah</quote>
+                     <cit type="translation">
+                        <quote>she-camel</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0321" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:ingham_1994_0001" type="publication" cert="unknown" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:najd"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-NJD.xml"></lang>
+                  <cit type="sourceRepresentation"><quote>-a, -ah</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0335" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:johnstone_1961_0000" type="publication" cert="unknown"></bibl>
+               <placeName ref="geo:kuwait"></placeName>
+               <personGrp role="tribe" corresp="pgr:dawasir"></personGrp>
+               <cit type="example" xml:id="ft_fem_end.fv_0335.ct_0000">
+                     <quote>marrat</quote>
+                     <cit type="translation">
+                        <quote>time</quote>
+                     </cit>
+                  </cit>
+                  <cit type="example" xml:id="ft_fem_end.fv_0335.ct_0001">
+                     <quote> marra</quote>
+                     <cit type="translation">
+                        <quote>time</quote>
+                     </cit>
+                  </cit>
+                  <cit type="sourceRepresentation"><quote>-a, -at</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0004" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:johnstone_1967_0000" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:doha"></placeName>
+               <lang corresp="..\profiles\vicav_profile_QTR-DHA.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0004.ct_0000">
+                     <quote>nēga</quote>
+                     <cit type="translation">
+                        <quote>red dust</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0055" status="pre" resp="dmp:RZ">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:katz_1980_0798" type="publication"></bibl>
+               <placeName ref="geo:arab_al_rashayida"></placeName>
+               <lang corresp="..\profiles\vicav_profile_PSE-RSD.xml"></lang>
+            </wib:featureValueObservation>
+
+            
+            
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0297" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:manfredi_2012_3081" type="publication"></bibl>
+               <placeName ref="geo:kurdufan"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SDN-KDF.xml"></lang>
+            </wib:featureValueObservation>
+
+            
+            
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0292" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:manfredi_2013_2941" type="publication"></bibl>
+               <placeName ref="geo:kadugli"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SDN-BKD.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0292.ct_0000">
+                     <quote>marra</quote>
+                     <cit type="translation">
+                        <quote>time</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0184" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:manfredi_2013_2941" type="publication"></bibl>
+               <placeName ref="geo:kadugli"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SDN-KDG.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0184.ct_0000">
+                     <quote>al-ḥadāra</quote>
+                     <cit type="translation">
+                        <quote>civilisation</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">Deduced from examples</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0059" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:naddari_2023_2742" type="publication"></bibl>
+               <placeName ref="geo:nefza"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUN-NFZ.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0092" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:omar_1975_0000" type="publication" cert="unknown"></bibl>
+               <placeName ref="geo:hejaz"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-HJZ.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0234" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:pereira_2010_1918" type="publication"></bibl>
+               <placeName ref="geo:tripoli_libya"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBY-TPL.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0234.ct_0001">
+                     <quote>ḥəžṛa</quote>
+                     <cit type="translation">
+                        <quote>stone</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_fem_end.fv_0181" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_e"></name>
+               <bibl corresp="zot:pereira_2010_1918" type="publication"></bibl>
+               <placeName ref="geo:tripoli_libya"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBY-TPL.xml"></lang>
+              <note type="general">Pereira (2011) states that "In Tripoli Arabic, ʾimāla affects final -a (etymological *ā), independently of the consonantal context"</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0005" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:abha"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-ABH.xml"></lang>
+               <note type="general">Prochazka (1988:19) does not explicitly say that this dialect does not have the ʔimāla, however, it is not mentioned with the dialects that have the ʔimāla</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0006" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:bisha"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-BSH.xml"></lang>
+               <note type="general">Prochazka (1988:19) does not explicitly say that this dialect does not have the ʔimāla, however, it is not mentioned with the dialects that have the ʔimāla</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0009" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:bilad_ghamid"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-GHA.xml"></lang>
+               <note type="general">Prochazka (1988:19) does not explicitly say that this dialect does not have the ʔimāla, however, it is not mentioned with the dialects that have the ʔimāla</note>
+            </wib:featureValueObservation>
+
+            
+
+            
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0014" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:sirhan"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-RWA.xml"></lang>
+               <note type="general">Prochazka (1988:19) does not explicitly say that this dialect does not have the ʔimāla, however, it is not mentioned with the dialects that have the ʔimāla</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0015" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:riyadh"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-RYD.xml"></lang>
+               <note type="general">Prochazka (1988:19) does not explicitly say that this dialect does not have the ʔimāla, however, it is not mentioned with the dialects that have the ʔimāla</note>
+            </wib:featureValueObservation>
+
+            
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0333" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:wadi_abl"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-AHM.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:bal_ahmar"></personGrp>
+               <note type="general">Prochazka (1988:19) does not explicitly say that this dialect does not have the ʔimāla, however, it is not mentioned with the dialects that have the ʔimāla</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0328" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:najran"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-NJR.xml"></lang>
+               <note type="general">Prochazka (1988:19) does not explicitly say that this dialect does not have the ʔimāla, however, it is not mentioned with the dialects that have the ʔimāla</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0329" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:qahaba"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-QHB.xml"></lang>
+               <note type="general">Prochazka (1988:19) does not explicitly say that this dialect does not have the ʔimāla, however, it is not mentioned with the dialects that have the ʔimāla</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0331" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_ae"></name>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:bukayriya"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-QSM.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0331.ct_0000">
+                     <quote>flāḥäh</quote>
+                     <cit type="translation">
+                        <quote>field</quote>
+                     </cit>
+                  </cit>
+                  <cit type="sourceRepresentation"><quote>-eh which is actually realised as ə</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0332" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:qawz"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-QWZ.xml"></lang>
+               <note type="general">Prochazka (1988:19) does not explicitly say that this dialect does not have the ʔimāla, however, it is not mentioned with the dialects that have the ʔimāla</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0327" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:tanuma"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SAU-TAN.xml"></lang>
+               <note type="general">Prochazka (1988:19) does not explicitly say that this dialect does not have the ʔimāla, however, it is not mentioned with the dialects that have the ʔimāla</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0215" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:ritt-benmimoun_2017_2683" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:al_khums"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBY-KMS.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0215.ct_0000">
+                     <quote>maṛṛa</quote>
+                     <cit type="translation">
+                        <quote>once</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0010" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_ae"></name>
+               <bibl corresp="zot:ritt-benmimoun_2017_2683" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:al_khums"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBY-KMS.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0010.ct_0000">
+                     <quote>dgīgä</quote>
+                     <cit type="translation">
+                        <quote>minute</quote>
+                     </cit>
+                  </cit>
+                  <cit type="sourceRepresentation"><quote>dgīgɛ</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0182" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:roset_2018_8391" type="publication"></bibl>
+               <placeName ref="geo:darfur"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SDN-DRF.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0182.ct_0000">
+                     <quote>mara</quote>
+                     <cit type="translation">
+                        <quote>woman</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0186" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:trimingham_1946_0000" type="publication"></bibl>
+               <placeName ref="geo:omdurman"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SDN-OMD.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0231" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:yoda_2005_3130" type="publication"></bibl>
+               <placeName ref="geo:tripoli_libya"></placeName>
+               <lang corresp="..\profiles\vicav_profile_LBY-JTP.xml"></lang>
+               <personGrp role="religion" corresp="pgr:jews"></personGrp>
+               <cit type="example" xml:id="ft_fem_end.fv_0231.ct_0000">
+                     <quote>xəḍṛa</quote>
+                     <cit type="translation">
+                        <quote>vegetables</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0017" status="draft" resp="dmp:RZ">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:young_1996_2001" type="publication"></bibl>
+               <placeName ref="geo:khashm"></placeName>
+               <placeName ref="geo:sawakin"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SDN-RYD.xml"></lang>
+               <personGrp role="tribe" corresp="#rashayda_sudan"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0270" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:zarb_2023_0602" type="publication"></bibl>
+               <placeName ref="geo:testour"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUN-TSR.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0270.ct_0000">
+                     <quote>blāṣa</quote>
+                     <cit type="translation">
+                        <quote>place</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0075" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:" type="publication"></bibl>
+               <placeName ref="geo:reyhanli"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUR-SHA.xml"></lang>
+               <personGrp role="tribe" corresp=""></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0131" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:" type="publication"></bibl>
+               <placeName ref="geo:shanliurfa"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUR-URF.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0196" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:ruzzaza"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-BGR.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0197" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:busra"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-BSR.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0018" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:soran"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-BTS.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0198" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:al_salhabiye"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-FDL.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0199" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:al_karame"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-FDN.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0200" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:hama"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-HMA.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0201" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:idlib"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-IDL.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0202" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:mhardi"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-MRD.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0204" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:abu_qbes"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-QBS.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0205" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:qanawat"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-QNW.xml"></lang>
+               <personGrp role="religion" corresp="pgr:druzes"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0206" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:qismin"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-QSM.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0207" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:qalat_al_husn"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-QSN.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0208" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:ras_al_maarra"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-RMR.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0209" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:al_nasriye"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-RWL.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0210" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:sednaya"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-SDY.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0211" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:smecin"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-SMC.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0212" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:tell_burek"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-SRB.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0213" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:tartus"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-TRT.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0214" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:hawayig_ad_dyab"></placeName>
+               <lang corresp="..\profiles\vicav_profile_SYR-UGD.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0260" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_1998_0001" type="publication" status="CHECKME">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:guellala"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUN-DJI.xml"></lang>
+               <personGrp role="religion" corresp="pgr:ibadis"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0261" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_1998_0001" type="publication" status="CHECKME">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:houmt_souk"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUN-DJJ.xml"></lang>
+               <personGrp role="religion" corresp="pgr:jews"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0021" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:behnstedt_1998_0001" type="publication" status="CHECKME">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:djerba"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUN-DJM.xml"></lang>
+               <personGrp role="religion" corresp="pgr:malikites"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0262" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:cantineau_1951_7557" type="publication"></bibl>
+               <placeName ref="geo:gabes"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUN-GBS.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0263" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:cohen_1975_0000" type="publication"></bibl>
+               <placeName ref="geo:tunis"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUN-JTS.xml"></lang>
+               <personGrp role="religion" corresp="pgr:jews"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0020" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:DAnna_2020_6708" type="publication"></bibl>
+               <placeName ref="geo:chebba"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUN-CHB.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0022" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:HerinZammit_2016_3447" type=" publication"></bibl>
+               <placeName ref="geo:kerkennah_oulad_bou_ali"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUN-KNH1.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0023" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:HerinZammit_2016_3447" type=" publication"></bibl>
+               <placeName ref="geo:kerkennah_oulad_kacem"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUN-KNH2.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0024" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:HerinZammit_2016_3447" type=" publication"></bibl>
+               <placeName ref="geo:kerkennah_mellita"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUN-KNH3.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0133" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:jong_2011_8794" type="publication"></bibl>
+               <placeName ref="geo:wadi_sulaf"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-ASD.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:awlad_said"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0134" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:jong_2011_8794" type="publication"></bibl>
+               <placeName ref="geo:ramlat_humayyir"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-BDA.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:badarah"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0136" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:jong_2011_8794" type="publication"></bibl>
+               <placeName ref="geo:wadi_al_islah"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-BWS.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:bani_wasil"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0138" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:jong_2011_8794" type="publication"></bibl>
+               <placeName ref="geo:qalat_al_jindi"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-DBR.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:dbur"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0140" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:jong_2011_8794" type="publication"></bibl>
+               <placeName ref="geo:saint_catherine_s_monastery"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-GBL.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:jbaliyyah"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0142" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:jong_2011_8794" type="publication"></bibl>
+               <placeName ref="geo:jabal_al_malbad"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-GRG.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:jarajrah"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0143" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:jong_2011_8794" type="publication"></bibl>
+               <placeName ref="geo:wahat_fayran"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-GRR.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:gararshah"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0144" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:jong_2011_8794" type="publication"></bibl>
+               <placeName ref="geo:jabal_sarabit_al_khadim"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-HMD.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:hamadah"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0145" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:jong_2011_8794" type="publication"></bibl>
+               <placeName ref="geo:wadi_jiddi"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-HWT.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:hwetat_egypt"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0147" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:jong_2011_8794" type="publication"></bibl>
+               <placeName ref="geo:jabal_sarabit_al_khadim"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-LGT.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:legat"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0148" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:jong_2011_8794" type="publication"></bibl>
+               <placeName ref="geo:al_qusaymah"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-MLH.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:malalhah"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0149" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:jong_2011_8794" type="publication"></bibl>
+               <placeName ref="geo:dahab"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-MZN.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:mzenah"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0151" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:jong_2011_8794" type="publication"></bibl>
+               <placeName ref="geo:wahat_fayran"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-SLH.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:sawalhah"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0154" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:jong_2011_8794" type="publication"></bibl>
+               <placeName ref="geo:sudr"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-TRB.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:tarabin"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0155" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:jong_2011_8794" type="publication"></bibl>
+               <placeName ref="geo:jabal_at_tih"></placeName>
+               <lang corresp="..\profiles\vicav_profile_EGY-TYH.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:tayaha"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0264" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:larosa_2021_1332" type="publication"></bibl>
+               <placeName ref="geo:mahdia"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUN-MHD.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0268" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:marçais_1925_6953" type="publication"></bibl>
+               <placeName ref="geo:takrouna"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUN-TKR.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0019" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:mion_2021_9872" type="publication"></bibl>
+               <placeName ref="geo:bengardane"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUN-BGN.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0266" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:prinoth_2017_3476" type="publication"></bibl>
+               <placeName ref="geo:sidi_bouzid"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUN-SBZ.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0265" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:ritt_benmimoun_2014_0000" type="publication" status="CHECKME">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:douz"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUN-MZG.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0271" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:saada_1984_0002" type="publication"></bibl>
+               <placeName ref="geo:tozeur"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUN-TZR.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0025" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:sellami_2019_9429" type=" publication"></bibl>
+               <placeName ref="geo:sfax"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUN-SFX.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0269" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:singer_1984_0000" type="publication"></bibl>
+               <placeName ref="geo:tunis"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUN-TNS.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0267" status="draft" resp="dmp:SP">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:talmoudi_1980_0000" type="publication"></bibl>
+               <placeName ref="geo:sousse"></placeName>
+               <lang corresp="..\profiles\vicav_profile_TUN-SUS.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0217" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_NO"></name>
+               <bibl corresp="zot:boucherit_2002_0000" type="publication"></bibl>
+               <placeName ref="geo:algier"></placeName>
+               <lang corresp="..\profiles\vicav_profile_DZA-ALR.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0221" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_NO"></name>
+               <bibl corresp="zot:GrandHenry_1976_2248" type="publication"></bibl>
+               <placeName ref="geo:mzab"></placeName>
+               <lang corresp="..\profiles\vicav_profile_DZA-MZB.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0222" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_NO"></name>
+               <bibl corresp="zot:guerrero_2015_6917" type="publication"></bibl>
+               <placeName ref="geo:oran"></placeName>
+               <lang corresp="..\profiles\vicav_profile_DZA-ORN.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0239" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_NO"></name>
+               <bibl corresp="zot:moscoso_garcia_2003_0000" type="publication"></bibl>
+               <placeName ref="geo:chefchaouen"></placeName>
+               <lang corresp="..\profiles\vicav_profile_MAR-CHF.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0242" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_NO"></name>
+               <bibl corresp="zot:caubet_1998_3485" type="publication"></bibl>
+               <placeName ref="geo:fez"></placeName>
+               <lang corresp="..\profiles\vicav_profile_MAR-FES.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0246" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_NO"></name>
+               <bibl corresp="zot:sanchez_2014_6569" type="publication"></bibl>
+               <placeName ref="geo:marrakesh"></placeName>
+               <lang corresp="..\profiles\vicav_profile_MAR-MRK.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0252" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_NO"></name>
+               <bibl corresp="zot:heath_1982_2902" type="publication"></bibl>
+               <placeName ref="geo:tafilalet"></placeName>
+               <lang corresp="..\profiles\vicav_profile_MAR-SMS.xml"></lang>
+               <personGrp role="religion" corresp="#jews"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0254" status="draft" resp="dmp:TD">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:" type="publication"></bibl>
+               <placeName ref="geo:settat"></placeName>
+               <lang corresp="..\profiles\vicav_profile_MAR-STT.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0259" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_ae"></name>
+               <bibl corresp="zot:taine-cheikh_2011_8213" type="publication"></bibl>
+               <placeName ref="geo:mauritania"></placeName>
+               <lang corresp="..\profiles\vicav_profile_MRT-HSS.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0272" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_ae"></name>
+               <bibl corresp="zot:zimmermann_2009_5071" type="publication"></bibl>
+               <placeName ref="geo:bukhara"></placeName>
+               <lang corresp="..\profiles\vicav_profile_UZB-BXR.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0251" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_NO"></name>
+               <bibl corresp="zot:aguadé_1995_4799" type="publication" status="CHECKME">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:skoura"></placeName>
+               <lang corresp="..\profiles\vicav_profile_MAR-SKR.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0240" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_NO"></name>
+               <bibl corresp="zot:aguadé_2003_4996" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:casablanca"></placeName>
+               <lang corresp="..\profiles\vicav_profile_MAR-CSB.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0066" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_i_after_i"></name>
+               <bibl corresp="zot:al-rawi_1990_3236" type="publication"></bibl>
+               <placeName ref="geo:abu_dhabi"></placeName>
+               <lang corresp="..\profiles\vicav_profile_UAE-ABU.xml"></lang>
+               <note type="general">kabīra > kbīri</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0216" status="draft" resp="dmp:TD">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:borg_1985_0000" type="publication"></bibl>
+               <placeName ref="geo:cyprus"></placeName>
+               <lang corresp="..\profiles\vicav_profile_CYP-KOR.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0067" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_NO"></name>
+               <bibl corresp="zot:cheung_leung_2020_5095" type="publication"></bibl>
+               <placeName ref="geo:dubai"></placeName>
+               <lang corresp="..\profiles\vicav_profile_UAE-DUB.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0273" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_ae"></name>
+               <bibl corresp="zot:chikovani_2008_7485" type="publication"></bibl>
+               <placeName ref="geo:qashqadaryo_region"></placeName>
+               <lang corresp="..\profiles\vicav_profile_UZB-QDY.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0244" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_NO"></name>
+               <bibl corresp="zot:colin_1921_3545" type="publication"></bibl>
+               <placeName ref="geo:jbala"></placeName>
+               <lang corresp="..\profiles\vicav_profile_MAR-JBL.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0001" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_e"></name>
+               <bibl corresp="zot:corriente_2013_3020" type="publication"></bibl>
+               <placeName ref="geo:andalusia"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ESP-ADL.xml"></lang>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0013" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_i"></name>
+               <bibl corresp="zot:corriente_2013_3020" type="publication"></bibl>
+               <placeName ref="geo:andalusia"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ESP-ADL.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0226" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_e"></name>
+               <bibl corresp="zot:ferrando_2000_0003" type="publication"></bibl>
+               <placeName ref="geo:toledo"></placeName>
+               <lang corresp="..\profiles\vicav_profile_ESP-TLD.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0237" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_NO"></name>
+               <bibl corresp="zot:francisco_2019_2407" type="publication"></bibl>
+               <placeName ref="geo:zaouia_akermoud"></placeName>
+               <lang corresp="..\profiles\vicav_profile_MAR-CDM.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0218" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_NO"></name>
+               <bibl corresp="zot:GrandHenry_1972_9692" type="publication"></bibl>
+               <placeName ref="geo:cherchell"></placeName>
+               <lang corresp="..\profiles\vicav_profile_DZA-CHR.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0223" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_NO"></name>
+               <bibl corresp="zot:GrandHenry_1979_3844" type="publication" status="CHECKED">
+                  <!--broken ID has been fixed in Zotero export, please revise-->
+               </bibl>
+               <placeName ref="geo:saoura"></placeName>
+               <lang corresp="..\profiles\vicav_profile_DZA-SAO.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0250" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_NO"></name>
+               <bibl corresp="zot:heath_2002_0001" type="publication"></bibl>
+               <placeName ref="geo:rabat"></placeName>
+               <lang corresp="..\profiles\vicav_profile_MAR-RBT.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0255" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_NO"></name>
+               <bibl corresp="zot:heath_2002_0001" type="publication"></bibl>
+               <placeName ref="geo:tanger"></placeName>
+               <lang corresp="..\profiles\vicav_profile_MAR-TGR.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0238" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_NO"></name>
+               <bibl corresp="zot:kampffmeyer_1912_3753" type="publication"></bibl>
+               <placeName ref="geo:casablanca-settat"></placeName>
+               <lang corresp="..\profiles\vicav_profile_MAR-CHA.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0219" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_NO"></name>
+               <bibl corresp="zot:laraba_1981_5666" type="publication"></bibl>
+               <placeName ref="geo:constantine"></placeName>
+               <lang corresp="..\profiles\vicav_profile_DZA-CON.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0257" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_NO"></name>
+               <bibl corresp="zot:loubignac_1952_3814" type="publication"></bibl>
+               <placeName ref="geo:zaer"></placeName>
+               <lang corresp="..\profiles\vicav_profile_MAR-ZIR.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:zaer"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0225" status="done" resp="dmp:TD">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:marcais_1902_3831" type="publication"></bibl>
+               <placeName ref="geo:tlemcen"></placeName>
+               <lang corresp="..\profiles\vicav_profile_DZA-TLM.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0224" status="done" resp="dmp:TD">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:marcais_1908_3832" type="publication"></bibl>
+               <placeName ref="geo:saida"></placeName>
+               <lang corresp="..\profiles\vicav_profile_DZA-SDA.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0220" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_NO"></name>
+               <bibl corresp="zot:marcais_1956_0000" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:jijel"></placeName>
+               <lang corresp="..\profiles\vicav_profile_DZA-DJL.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0179" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_NO"></name>
+               <bibl corresp="zot:marjani_2019_6677" type="publication"></bibl>
+               <placeName ref="geo:rehamna"></placeName>
+               <lang corresp="..\profiles\vicav_profile_MAR-RHA.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:rhamna"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0253" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_NO"></name>
+               <bibl corresp="zot:moscoso_2002_3876" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:souss_massa"></placeName>
+               <lang corresp="..\profiles\vicav_profile_MAR-SOS.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0180" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_i_after_i"></name>
+               <bibl corresp="zot:owens_1993_0001" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:maiduguri"></placeName>
+               <lang corresp="..\profiles\vicav_profile_NGA-NGA.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0249" status="draft" resp="dmp:TD">
+               <name type="featureValue" ref=""></name>
+               <bibl corresp="zot:stillman_1988_4518" type="publication"></bibl>
+               <placeName ref="geo:sefrou"></placeName>
+               <lang corresp="..\profiles\vicav_profile_MAR-RBS.xml"></lang>
+               <personGrp role="religion" corresp="pgr:jews"></personGrp>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0236" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_NO"></name>
+               <bibl corresp="zot:vicente_2000_4058" type="publication"></bibl>
+               <placeName ref="geo:anjra"></placeName>
+               <lang corresp="..\profiles\vicav_profile_MAR-ANJ.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0247" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_NO"></name>
+               <bibl corresp="zot:vicente_2003_0000" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:masmouda"></placeName>
+               <lang corresp="..\profiles\vicav_profile_MAR-MSM.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0243" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#fem_end_NO"></name>
+               <bibl corresp="zot:zoubid_2011_0000" type="publication"></bibl>
+               <placeName ref="geo:hyayna"></placeName>
+               <lang corresp="..\profiles\vicav_profile_MAR-HYN.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0372" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#fem_end_at"></name>
+               <bibl corresp="zot:behnstedt_1987_0003" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:sa_dah"></placeName>
+               <lang corresp="..\profiles\vicav_profile_YEM-SAD.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0372.ct_0000">
+                     <quote>in-kōrat</quote>
+                     <cit type="translation">
+                        <quote>the ball</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0027" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:behnstedt_1987_0003" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:sa_dah"></placeName>
+               <lang corresp="..\profiles\vicav_profile_YEM-SAD.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0027.ct_0000">
+                     <quote>šaxšah</quote>
+                     <cit type="translation">
+                        <quote>beautiful girl</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0301" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#fem_end_e"></name>
+               <bibl corresp="zot:behnstedt_1991_7268" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:al_hajariyah"></placeName>
+               <lang corresp="..\profiles\vicav_profile_YEM-HUG.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0301.ct_0000">
+                     <quote>am-nāqeh</quote>
+                     <cit type="translation">
+                        <quote>the she-camel</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">Deduced from examples.</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0298" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#fem_end_e"></name>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:al_bayda"></placeName>
+               <lang corresp="..\profiles\vicav_profile_YEM-BAY.xml"></lang>
+               <cit type="sourceRepresentation"><quote>-eh</quote></cit>
+               <cit type="example" xml:id="ft_fem_end.fv_0298.ct_0000">
+                     <quote>ǧumʕeh</quote>
+                     <cit type="translation">
+                        <quote>Friday</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0299" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#fem_end_e"></name>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:bayt_al_faqih"></placeName>
+               <lang corresp="..\profiles\vicav_profile_YEM-BFQ.xml"></lang>
+                <cit type="sourceRepresentation"><quote>-eh</quote></cit>
+               <cit type="example" xml:id="ft_fem_end.fv_0299.ct_0000">
+                     <quote>ǧumʕeh</quote>
+                     <cit type="translation">
+                        <quote>Friday</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0302" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:mabyan"></placeName>
+               <lang corresp="..\profiles\vicav_profile_YEM-MAB.xml"></lang>
+                <cit type="sourceRepresentation"><quote>-ah</quote></cit>
+               <cit type="example" xml:id="ft_fem_end.fv_0302.ct_0000">
+                     <quote>ǧumʕah</quote>
+                     <cit type="translation">
+                        <quote>Friday</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0303" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#fem_end_e"></name>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:al_miri"></placeName>
+               <lang corresp="..\profiles\vicav_profile_YEM-MAD.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:minabbih"></personGrp>
+                <cit type="sourceRepresentation"><quote>-eh</quote></cit>
+               <cit type="example" xml:id="ft_fem_end.fv_0303.ct_0000">
+                     <quote>ǧumʕeh</quote>
+                     <cit type="translation">
+                        <quote>Friday</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_fem_end.fv_0203" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#fem_end_i"></name>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:al_miri"></placeName>
+               <lang corresp="..\profiles\vicav_profile_YEM-MAD.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:minabbih"></personGrp>
+                <cit type="sourceRepresentation"><quote>-ih</quote></cit>
+               <cit type="example" xml:id="ft_fem_end.fv_0203.ct_0000">
+                     <quote>ǧumʕih</quote>
+                     <cit type="translation">
+                        <quote>Friday</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0305" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:marib"></placeName>
+               <lang corresp="..\profiles\vicav_profile_YEM-MAR.xml"></lang>
+                <cit type="sourceRepresentation"><quote>-ah</quote></cit>
+               <cit type="example" xml:id="ft_fem_end.fv_0305.ct_0000">
+                     <quote>ǧumʕah</quote>
+                     <cit type="translation">
+                        <quote>Friday</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0306" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:mocha"></placeName>
+               <lang corresp="..\profiles\vicav_profile_YEM-MAX.xml"></lang>
+                <cit type="sourceRepresentation"><quote>-ah</quote></cit>
+               <cit type="example" xml:id="ft_fem_end.fv_0306.ct_0000">
+                     <quote>ǧumʕah</quote>
+                     <cit type="translation">
+                        <quote>Friday</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0307" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:majzar"></placeName>
+               <lang corresp="..\profiles\vicav_profile_YEM-MGF.xml"></lang>
+                <cit type="sourceRepresentation"><quote>-ah</quote></cit>
+               <cit type="example" xml:id="ft_fem_end.fv_0307.ct_0000">
+                     <quote>ǧumʕah</quote>
+                     <cit type="translation">
+                        <quote>Friday</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0308" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:al_nazir"></placeName>
+               <lang corresp="..\profiles\vicav_profile_YEM-NDR.xml"></lang>
+                <cit type="sourceRepresentation"><quote>-ah</quote></cit>
+               <cit type="example" xml:id="ft_fem_end.fv_0308.ct_0000">
+                     <quote>ǧumʕah</quote>
+                     <cit type="translation">
+                        <quote>Friday</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0309" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:rada"></placeName>
+               <lang corresp="..\profiles\vicav_profile_YEM-RAD.xml"></lang>
+                <cit type="sourceRepresentation"><quote>-ah</quote></cit>
+               <cit type="example" xml:id="ft_fem_end.fv_0309.ct_0000">
+                     <quote>ǧumʕah</quote>
+                     <cit type="translation">
+                        <quote>Friday</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0310" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:sirwah"></placeName>
+               <lang corresp="..\profiles\vicav_profile_YEM-SIR.xml"></lang>
+               <personGrp role="tribe" corresp="pgr:jahm"></personGrp>
+                <cit type="sourceRepresentation"><quote>-ah</quote></cit>
+               <cit type="example" xml:id="ft_fem_end.fv_0310.ct_0000">
+                     <quote>ǧumʕah</quote>
+                     <cit type="translation">
+                        <quote>Friday</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0313" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#fem_end_e"></name>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:zabid"></placeName>
+               <lang corresp="..\profiles\vicav_profile_YEM-ZBD.xml"></lang>
+                <cit type="sourceRepresentation"><quote>-eh</quote></cit>
+               <cit type="example" xml:id="ft_fem_end.fv_0313.ct_0000">
+                     <quote>ǧumʕeh</quote>
+                     <cit type="translation">
+                        <quote>Friday</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0314" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:az_zuhrah"></placeName>
+               <lang corresp="..\profiles\vicav_profile_YEM-ZUH.xml"></lang>
+                <cit type="sourceRepresentation"><quote>-ah</quote></cit>
+               <cit type="example" xml:id="ft_fem_end.fv_0314.ct_0000">
+                     <quote>ǧumʕah</quote>
+                     <cit type="translation">
+                        <quote>Friday</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0293" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:brockett_1985_0000" type="publication"></bibl>
+               <placeName ref="geo:al_khaburah"></placeName>
+               <lang corresp="..\profiles\vicav_profile_OMN-KHB.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0007" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:ghanem_1958_0000" type="publication"></bibl>
+               <placeName ref="geo:aden"></placeName>
+               <lang corresp="..\profiles\vicav_profile_YEM-ADN.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0290" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:grünbichler_2015_2002" type="publication"></bibl>
+               <placeName ref="geo:buraymi"></placeName>
+               <lang corresp="..\profiles\vicav_profile_OMN-BUR.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0296" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:holes_2013_2409" type="publication" status="CHECKED">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:sur"></placeName>
+               <lang corresp="..\profiles\vicav_profile_OMN-SUR.xml"></lang>
+               <note type="general">Deduced from examples.</note>
+                  <cit type="example" xml:id="ft_fem_end.fv_0290.ct_0001">
+                     <quote>ərxa</quote>
+                     <cit type="translation">
+                        <quote>prosperity</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0295" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:reinhardt_1894_0000" type="publication"></bibl>
+               <placeName ref="geo:al_ristaq"></placeName>
+               <lang corresp="..\profiles\vicav_profile_OMN-RST.xml"></lang>
+               <note type="general">Deduced from example.</note>
+               <cit type="example" xml:id="ft_fem_end.fv_0295.ct_0000">
+                     <quote>doqqāqa</quote>
+                     <cit type="translation">
+                        <quote>waste, rubbish</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0291" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:rhodokanakis_1908_1911_0000" type="publication"></bibl>
+               <placeName ref="geo:dhofar"></placeName>
+               <lang corresp="..\profiles\vicav_profile_OMN-DHF.xml"></lang>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0300" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:saqqaf_1999_1184" type="publication"></bibl>
+               <placeName ref="geo:hadramaut"></placeName>
+               <lang corresp="..\profiles\vicav_profile_YEM-HAD.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0300.ct_0000">
+                     <quote>qiṣṣah</quote>
+                     <cit type="translation">
+                        <quote>strory</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0294" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:shaaban_1977_7730" type="publication"></bibl>
+               <placeName ref="geo:muscat"></placeName>
+               <lang corresp="..\profiles\vicav_profile_OMN-MSQ.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0294.ct_0000">
+                     <quote>bašʕa</quote>
+                     <cit type="translation">
+                        <quote>ugly (fem.)</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+             <wib:featureValueObservation xml:id="ft_fem_end.fv_0000" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#fem_end_i"/>
+               <bibl corresp="zot:watson_1993_0000" type="publication"/>
+               <placeName ref="geo:sanaa"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-SAN.xml"/>
+               <note type="general">Deduced from example.</note>
+               <cit type="example" xml:id="ft_fem_end.fv_0000.ct_0000">
+                     <quote>guraʕih</quote>
+                     <cit type="translation">
+                        <quote>bag</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_fem_end.fv_0304" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#fem_end_a"></name>
+               <bibl corresp="zot:werbeck_2001_4975" type="publication"></bibl>
+               <placeName ref="geo:manakhah"></placeName>
+               <lang corresp="..\profiles\vicav_profile_YEM-MAN.xml"></lang>
+               <cit type="example" xml:id="ft_fem_end.fv_0304.ct_0000">
+                     <quote>ḥuṣra</quote>
+                     <cit type="translation">
+                        <quote>raffia mat</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+         </div>
+      </body>
+   </text>
+</TEI>
