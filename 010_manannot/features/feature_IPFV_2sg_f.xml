@@ -9,8 +9,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Variants of IPFV inflection: 2sg.f in sound verbs</title>
-            <author>Veronika Engler</author>
+            <title>IPFV 2SG.F sound verbs</title>
          </titleStmt>
          <publicationStmt>
             <publisher>{publisher}</publisher>
@@ -32,6 +31,12 @@
             <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
          </listPrefixDef>
       </encodingDesc>
+         
+      <profileDesc>
+         <textClass>
+          <catRef target="dmp:sound_verbs"/>
+          </textClass>
+      </profileDesc>
 
       <revisionDesc status="done">
          <change when="2022-08-17" who="dmp:">c</change>
@@ -39,8 +44,6 @@
          <change when="2022-08-17" who="dmp:">For EGY-___ there are no values found</change>
       <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change><change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change></revisionDesc>
    </teiHeader>
-
-
 
    <text>
       <body>
@@ -94,20 +97,35 @@
          </div>
 
          <div xmlns:tei="http://www.tei-c.org/ns/1.0" type="featureValueObservations">
-            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0050" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="" type="fieldwork"/>
-               <placeName ref="geo:ed_dhayra"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-ARA.xml"/>
-               <personGrp role="tribe" corresp="pgr:aramsha_lebanon"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0063" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
+            
+            
+            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0063" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#ipfv_2sgf_i"/>
                <bibl corresp="" type="fieldwork"/>
                <placeName ref="geo:khalde"/>
                <lang corresp="..\profiles\vicav_profile_LBN-KHA.xml"/>
                <personGrp role="tribe" corresp="pgr:arab_xalde"/>
+                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0071.ct_0092">
+                  <quote>tišrabi</quote>
+                  <cit type="translation">
+                     <quote>you (f.sg) drink</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0017" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#ipfv_2sgf_iin"/>
+               <bibl corresp="" type="fieldwork"/>
+               <placeName ref="geo:khalde"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-KHA.xml"/>
+               <personGrp role="tribe" corresp="pgr:arab_xalde"/>
+                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0017.ct_0000">
+                  <quote>tsōlfīn</quote>
+                  <cit type="translation">
+                     <quote>you (f.sg) speak</quote>
+                  </cit>
+               </cit>
+               <note type="general">This reflex appeared rarely but in speakers from both middle and old age groups.</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0071" status="done" resp="dmp:AID">
@@ -117,7 +135,7 @@
                <placeName ref="geo:el_karantina"/>
                <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"/>
                <personGrp role="tribe" corresp="pgr:arab_maslax"/>
-               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0071.ct_0092">
+               <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0071.ct_0000">
                   <quote>tišrabi</quote>
                   <cit type="translation">
                      <quote>you (f.sg) drink</quote>
@@ -131,7 +149,7 @@
                <placeName ref="geo:el_karantina"/>
                <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"/>
                <personGrp role="tribe" corresp="pgr:arab_maslax"/>
-               <personGrp role="ageGroup" corresp="#old"/>
+               <personGrp role="ageGroup" corresp="pgr:old"/>
                <cit xml:id="ft_ipfv_2sg_f.fv_0020.ct_0100" type="example">
                   <quote>tāxḏīn</quote>
                   <cit type="translation">
@@ -148,15 +166,7 @@
                <lang corresp="..\profiles\vicav_profile_LBN-BAS.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0027" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:jurdeih"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-ARM.xml"/>
-               <personGrp role="tribe" corresp="pgr:aramsha_israel"/>
-            </wib:featureValueObservation>
-
-
+          
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0026" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
                <bibl corresp="zot:geva_kleinberger_2004_0000" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
@@ -334,7 +344,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0105" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
                <placeName ref="geo:twenan"/>
                <lang corresp="..\profiles\vicav_profile_SYR-MWL.xml"/>
                <personGrp role="tribe" corresp="pgr:mawali_syria"/>
@@ -348,7 +358,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0106" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
                <placeName ref="geo:qasr_ibn_wardan"/>
                <lang corresp="..\profiles\vicav_profile_SYR-MWL.xml"/>
                <personGrp role="tribe" corresp="pgr:mawali_syria"/>
@@ -362,7 +372,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0107" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
                <placeName ref="geo:zyara"/>
                <lang corresp="..\profiles\vicav_profile_SYR-MWL.xml"/>
                <personGrp role="tribe" corresp="pgr:mawali_syria"/>
@@ -376,7 +386,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0110" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
                <placeName ref="geo:tell_alu"/>
                <placeName ref="geo:al_qahtaniyah"/>
                <lang corresp="..\profiles\vicav_profile_SYR-SMR.xml"/>
@@ -1299,7 +1309,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0229" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#ipfv_2sgf_ay"/>
-               <bibl corresp="zot:caubet_2004_3508" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:caubet_2004_3508" type="publication" status="CHECKED"/>
                <placeName ref="geo:fezzan"/>
                <lang corresp="..\profiles\vicav_profile_LBY-FZN.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0229.ct_0090">
@@ -1372,7 +1382,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0324" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:holes_2006_0164" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:holes_2006_0164" type="publication" cert="unknown" status="CHECKED"/>
                <placeName ref="geo:manama"/>
                <lang corresp="..\profiles\vicav_profile_BHR-ARB.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0324.ct_0059">
@@ -1381,12 +1391,12 @@
                      <quote>you (f.sg.) write</quote>
                   </cit>
                </cit>
-               <personGrp role="religion" corresp="#sunnis"/>
+               <personGrp role="religion" corresp="pgr:sunnis"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0323" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:holes_2006_0164" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:holes_2006_0164" type="publication" cert="unknown" status="CHECKED"/>
                <placeName ref="geo:muharraq"/>
                <lang corresp="..\profiles\vicav_profile_BHR-BHN.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0323.ct_0060">
@@ -1395,12 +1405,12 @@
                      <quote>you (f.sg.) write</quote>
                   </cit>
                </cit>
-               <personGrp role="religion" corresp="#shiites"/>
+               <personGrp role="religion" corresp="pgr:shiites"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0002" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:holes_2007_5886" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:holes_2007_5886" type="publication" status="CHECKED"/>
                <placeName ref="geo:kuwait_city"/>
                <lang corresp="..\profiles\vicav_profile_KWT-KWC.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0002.ct_0058">
@@ -1416,7 +1426,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0321" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:ingham_1994_0001" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:ingham_1994_0001" type="publication" cert="unknown" status="CHECKED"/>
                <placeName ref="geo:najd"/>
                <lang corresp="..\profiles\vicav_profile_SAU-NJD.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0321.ct_0061">
@@ -1442,7 +1452,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0004" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:johnstone_1967_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:johnstone_1967_0000" type="publication" status="CHECKED"/>
                <placeName ref="geo:doha"/>
                <lang corresp="..\profiles\vicav_profile_QTR-DHA.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0004.ct_0062">
@@ -1481,7 +1491,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0005" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"/>
                <placeName ref="geo:abha"/>
                <lang corresp="..\profiles\vicav_profile_SAU-ABH.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0005.ct_0050">
@@ -1500,7 +1510,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0061" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#ipfv_2sgf_in"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"/>
                <placeName ref="geo:abha"/>
                <lang corresp="..\profiles\vicav_profile_SAU-ABH.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0061.ct_0049">
@@ -1514,7 +1524,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0006" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"/>
                <placeName ref="geo:bisha"/>
                <lang corresp="..\profiles\vicav_profile_SAU-BSH.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0006.ct_0051">
@@ -1527,7 +1537,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0009" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#ipfv_2sgf_in"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"/>
                <placeName ref="geo:bilad_ghamid"/>
                <lang corresp="..\profiles\vicav_profile_SAU-GHA.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0009.ct_0056">
@@ -1540,7 +1550,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0066" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"/>
                <placeName ref="geo:bilad_ghamid"/>
                <lang corresp="..\profiles\vicav_profile_SAU-GHA.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0066.ct_0055">
@@ -1559,7 +1569,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0010" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"/>
                <placeName ref="geo:hofuf"/>
                <lang corresp="..\profiles\vicav_profile_SAU-HFF.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0010.ct_0057">
@@ -1578,7 +1588,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0011" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"/>
                <placeName ref="geo:hail"/>
                <lang corresp="..\profiles\vicav_profile_SAU-HYL.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0011.ct_0052">
@@ -1591,7 +1601,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0013" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"/>
                <placeName ref="geo:rufaydah"/>
                <lang corresp="..\profiles\vicav_profile_SAU-RUF.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0013.ct_0053">
@@ -1611,7 +1621,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0064" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#ipfv_2sgf_in"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"/>
                <placeName ref="geo:rufaydah"/>
                <lang corresp="..\profiles\vicav_profile_SAU-RUF.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0064.ct_0054">
@@ -1631,7 +1641,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0014" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"/>
                <placeName ref="geo:sirhan"/>
                <lang corresp="..\profiles\vicav_profile_SAU-RWA.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0014.ct_0045">
@@ -1644,7 +1654,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0015" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"/>
                <placeName ref="geo:riyadh"/>
                <lang corresp="..\profiles\vicav_profile_SAU-RYD.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0015.ct_0046">
@@ -1657,7 +1667,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0012" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#ipfv_2sgf_in"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"/>
                <placeName ref="geo:sabt_alalayah"/>
                <lang corresp="..\profiles\vicav_profile_SAU-QRN.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0012.ct_0048">
@@ -1676,7 +1686,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0060" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"/>
                <placeName ref="geo:sabt_alalayah"/>
                <lang corresp="..\profiles\vicav_profile_SAU-QRN.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0060.ct_0047">
@@ -1690,7 +1700,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0333" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED"/>
                <placeName ref="geo:wadi_abl"/>
                <lang corresp="..\profiles\vicav_profile_SAU-AHM.xml"/>
                <personGrp role="tribe" corresp="pgr:bal_ahmar"/>
@@ -1704,7 +1714,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0059" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#ipfv_2sgf_in"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED"/>
                <placeName ref="geo:wadi_abl"/>
                <lang corresp="..\profiles\vicav_profile_SAU-AHM.xml"/>
                <personGrp role="tribe" corresp="pgr:bal_ahmar"/>
@@ -1720,7 +1730,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0331" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED"/>
                <placeName ref="geo:bukayriya"/>
                <lang corresp="..\profiles\vicav_profile_SAU-QSM.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0331.ct_0038">
@@ -1739,7 +1749,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0332" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED"/>
                <placeName ref="geo:qawz"/>
                <lang corresp="..\profiles\vicav_profile_SAU-QWZ.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0332.ct_0040">
@@ -1752,7 +1762,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0327" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED"/>
                <placeName ref="geo:tanuma"/>
                <lang corresp="..\profiles\vicav_profile_SAU-TAN.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0327.ct_0041">
@@ -1765,7 +1775,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0058" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#ipfv_2sgf_in"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED"/>
                <placeName ref="geo:tanuma"/>
                <lang corresp="..\profiles\vicav_profile_SAU-TAN.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0058.ct_0108">
@@ -1836,98 +1846,98 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0274" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
                <placeName ref="geo:alexandria"/>
                <lang corresp="..\profiles\vicav_profile_EGY-ALX.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0275" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
                <placeName ref="geo:aswan"/>
                <lang corresp="..\profiles\vicav_profile_EGY-ASW.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0276" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
                <placeName ref="geo:asyut"/>
                <lang corresp="..\profiles\vicav_profile_EGY-ASY.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0277" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
                <placeName ref="geo:al_badari"/>
                <lang corresp="..\profiles\vicav_profile_EGY-BDR.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0279" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
                <placeName ref="geo:port_said"/>
                <lang corresp="..\profiles\vicav_profile_EGY-BSD.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0280" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
                <placeName ref="geo:bani_suwayf"/>
                <lang corresp="..\profiles\vicav_profile_EGY-BSW.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0282" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
                <placeName ref="geo:darawah"/>
                <lang corresp="..\profiles\vicav_profile_EGY-DRW.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0283" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
                <placeName ref="geo:luxor"/>
                <lang corresp="..\profiles\vicav_profile_EGY-LXR.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0284" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
                <placeName ref="geo:il_minya"/>
                <lang corresp="..\profiles\vicav_profile_EGY-MNY.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0285" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
                <placeName ref="geo:al_namasa"/>
                <lang corresp="..\profiles\vicav_profile_EGY-NMS.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0286" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
                <placeName ref="geo:qutur"/>
                <lang corresp="..\profiles\vicav_profile_EGY-QTR.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0287" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
                <placeName ref="geo:rasid"/>
                <lang corresp="..\profiles\vicav_profile_EGY-RSD.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0288" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
                <placeName ref="geo:sinbillawayn"/>
                <lang corresp="..\profiles\vicav_profile_EGY-SBW.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0289" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
                <placeName ref="geo:sohag"/>
                <lang corresp="..\profiles\vicav_profile_EGY-SHG.xml"/>
             </wib:featureValueObservation>
@@ -2538,7 +2548,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0281" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:woidich_2006_3203" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:woidich_2006_3203" type="publication" status="CHECKED"/>
                <placeName ref="geo:cairo"/>
                <lang corresp="..\profiles\vicav_profile_EGY-CRO.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0281.ct_0000">
@@ -2591,70 +2601,70 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0196" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
                <placeName ref="geo:ruzzaza"/>
                <lang corresp="..\profiles\vicav_profile_SYR-BGR.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0197" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
                <placeName ref="geo:busra"/>
                <lang corresp="..\profiles\vicav_profile_SYR-BSR.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0018" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
                <placeName ref="geo:soran"/>
                <lang corresp="..\profiles\vicav_profile_SYR-BTS.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0198" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
                <placeName ref="geo:al_salhabiye"/>
                <lang corresp="..\profiles\vicav_profile_SYR-FDL.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0199" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
                <placeName ref="geo:al_karame"/>
                <lang corresp="..\profiles\vicav_profile_SYR-FDN.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0200" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
                <placeName ref="geo:hama"/>
                <lang corresp="..\profiles\vicav_profile_SYR-HMA.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0201" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
                <placeName ref="geo:idlib"/>
                <lang corresp="..\profiles\vicav_profile_SYR-IDL.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0202" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
                <placeName ref="geo:mhardi"/>
                <lang corresp="..\profiles\vicav_profile_SYR-MRD.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0204" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
                <placeName ref="geo:abu_qbes"/>
                <lang corresp="..\profiles\vicav_profile_SYR-QBS.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0205" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
                <placeName ref="geo:qanawat"/>
                <lang corresp="..\profiles\vicav_profile_SYR-QNW.xml"/>
                <personGrp role="religion" corresp="pgr:druzes"/>
@@ -2662,63 +2672,63 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0206" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
                <placeName ref="geo:qismin"/>
                <lang corresp="..\profiles\vicav_profile_SYR-QSM.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0207" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
                <placeName ref="geo:qalat_al_husn"/>
                <lang corresp="..\profiles\vicav_profile_SYR-QSN.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0208" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
                <placeName ref="geo:ras_al_maarra"/>
                <lang corresp="..\profiles\vicav_profile_SYR-RMR.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0209" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
                <placeName ref="geo:al_nasriye"/>
                <lang corresp="..\profiles\vicav_profile_SYR-RWL.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0210" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
                <placeName ref="geo:sednaya"/>
                <lang corresp="..\profiles\vicav_profile_SYR-SDY.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0211" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
                <placeName ref="geo:smecin"/>
                <lang corresp="..\profiles\vicav_profile_SYR-SMC.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0212" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
                <placeName ref="geo:tell_burek"/>
                <lang corresp="..\profiles\vicav_profile_SYR-SRB.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0213" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
                <placeName ref="geo:tartus"/>
                <lang corresp="..\profiles\vicav_profile_SYR-TRT.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0214" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
                <placeName ref="geo:hawayig_ad_dyab"/>
                <lang corresp="..\profiles\vicav_profile_SYR-UGD.xml"/>
             </wib:featureValueObservation>
@@ -2854,7 +2864,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0222" status="done" resp="dmp:TD">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:guerrero_2015_6917" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:guerrero_2015_6917" type="publication" status="CHECKED"/>
                <placeName ref="geo:oran"/>
                <lang corresp="..\profiles\vicav_profile_DZA-ORN.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0222.ct_0119">
@@ -2868,7 +2878,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0239" status="done" resp="dmp:TD">
                <name type="featureValue" ref="#ipfv_2sgf_"/>
-               <bibl corresp="zot:moscoso_garcia_2003_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:moscoso_garcia_2003_0000" type="publication" status="CHECKED"/>
                <placeName ref="geo:chefchaouen"/>
                <lang corresp="..\profiles\vicav_profile_MAR-CHF.xml"/>
                <note type="general">the prefix is d-, not t-, no GD (p.65)</note>
@@ -2909,7 +2919,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0259" status="done" resp="dmp:TD">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:taine-cheikh_2011_8213" type="publication"/>
+               <bibl corresp="zot:taine-cheikh_2007_8213" type="publication"/>
                <placeName ref="geo:mauritania"/>
                <lang corresp="..\profiles\vicav_profile_MRT-HSS.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0259.ct_0112">
@@ -2935,7 +2945,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0251" status="done" resp="dmp:TD">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:aguadé_1994_0013" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:aguadé_1994_0013" type="publication" status="CHECKED"/>
                <placeName ref="geo:skoura"/>
                <lang corresp="..\profiles\vicav_profile_MAR-SKR.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0251.ct_0113">
@@ -2948,7 +2958,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0240" status="done" resp="dmp:TD">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:aguadé_2003_4996" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:aguadé_2003_4996" type="publication" status="CHECKED"/>
                <placeName ref="geo:casablanca"/>
                <lang corresp="..\profiles\vicav_profile_MAR-CSB.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0240.ct_0114">
@@ -2961,7 +2971,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0315" status="done" resp="dmp:TD">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_benabbou_2002_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_benabbou_2002_0000" type="publication" status="CHECKED"/>
                <placeName ref="geo:oujda"/>
                <lang corresp="..\profiles\vicav_profile_MAR-OJD.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0315.ct_0115">
@@ -3017,7 +3027,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0223" status="draft" resp="dmp:TD">
                <name type="featureValue" ref="#ipfv_2sgf_"/>
-               <bibl corresp="zot:GrandHenry_1979_3844" type="publication" status="CHECKED"><!--broken ID has been fixed in Zotero export, please revise--></bibl>
+               <bibl corresp="zot:GrandHenry_1979_3844" type="publication" status="CHECKED"/>
                <placeName ref="geo:saoura"/>
                <lang corresp="..\profiles\vicav_profile_DZA-SAO.xml"/>
             </wib:featureValueObservation>
@@ -3044,7 +3054,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0257" status="done" resp="dmp:TD">
                <name type="featureValue" ref="#ipfv_2sgf_"/>
-               <bibl corresp="zot:aguade_1998_4475" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:aguade_1998_4475" type="publication" status="CHECKED"/>
                <placeName ref="geo:zaer"/>
                <lang corresp="..\profiles\vicav_profile_MAR-ZIR.xml"/>
                <personGrp role="tribe" corresp="pgr:zaer"/>
@@ -3086,7 +3096,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0220" status="done" resp="dmp:TD">
                <name type="featureValue" ref="#ipfv_2sgf_"/>
-               <bibl corresp="zot:marcais_1956_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:marcais_1956_0000" type="publication" status="CHECKED"/>
                <placeName ref="geo:jijel"/>
                <lang corresp="..\profiles\vicav_profile_DZA-DJL.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0220.ct_0035">
@@ -3113,7 +3123,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0253" status="done" resp="dmp:TD">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:moscoso_2002_3876" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:moscoso_2002_3876" type="publication" status="CHECKED"/>
                <placeName ref="geo:souss_massa"/>
                <lang corresp="..\profiles\vicav_profile_MAR-SOS.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0253.ct_0121">
@@ -3179,14 +3189,14 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0372" status="done" resp="dmp:VE">
                <name type="featureValue" ref="#ipfv_2sgf_ii"/>
-               <bibl corresp="zot:behnstedt_1987_0003" type="publication" cert="unknown" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_1987_0003" type="publication" cert="unknown" status="CHECKED"/>
                <placeName ref="geo:sa_dah"/>
                <lang corresp="..\profiles\vicav_profile_YEM-SAD.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0301" status="done" resp="dmp:VE">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"/>
                <placeName ref="geo:al_hajariyah"/>
                <lang corresp="..\profiles\vicav_profile_YEM-HUG.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0301.ct_0076">
@@ -3199,7 +3209,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0298" status="done" resp="dmp:VE">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"/>
                <placeName ref="geo:al_bayda"/>
                <lang corresp="..\profiles\vicav_profile_YEM-BAY.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0298.ct_0077">
@@ -3212,7 +3222,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0299" status="done" resp="dmp:VE">
                <name type="featureValue" ref="#ipfv_2sgf_in"/>
-               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"/>
                <placeName ref="geo:bayt_al_faqih"/>
                <lang corresp="..\profiles\vicav_profile_YEM-BFQ.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0299.ct_0078">
@@ -3225,7 +3235,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0302" status="done" resp="dmp:VE">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"/>
                <placeName ref="geo:mabyan"/>
                <lang corresp="..\profiles\vicav_profile_YEM-MAB.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0302.ct_0124">
@@ -3238,7 +3248,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0008" status="done" resp="dmp:VE">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"/>
                <placeName ref="geo:al_miri"/>
                <lang corresp="..\profiles\vicav_profile_YEM-MAD.xml"/>
                <personGrp role="tribe" corresp="pgr:minabbih"/>
@@ -3252,7 +3262,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0305" status="done" resp="dmp:VE">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"/>
                <placeName ref="geo:marib"/>
                <lang corresp="..\profiles\vicav_profile_YEM-MAR.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0305.ct_0080">
@@ -3265,7 +3275,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0306" status="done" resp="dmp:VE">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"/>
                <placeName ref="geo:mocha"/>
                <lang corresp="..\profiles\vicav_profile_YEM-MAX.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0306.ct_0081">
@@ -3278,7 +3288,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0069" status="done" resp="dmp:VE">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"/>
                <placeName ref="geo:majzar"/>
                <lang corresp="..\profiles\vicav_profile_YEM-MGF.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0069.ct_0082">
@@ -3291,7 +3301,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0308" status="done" resp="dmp:VE">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"/>
                <placeName ref="geo:al_nazir"/>
                <lang corresp="..\profiles\vicav_profile_YEM-NDR.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0308.ct_0083">
@@ -3304,7 +3314,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0309" status="done" resp="dmp:VE">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"/>
                <placeName ref="geo:rada"/>
                <lang corresp="..\profiles\vicav_profile_YEM-RAD.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0309.ct_0084">
@@ -3317,7 +3327,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0310" status="done" resp="dmp:VE">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"/>
                <placeName ref="geo:sirwah"/>
                <lang corresp="..\profiles\vicav_profile_YEM-SIR.xml"/>
                <personGrp role="tribe" corresp="pgr:jahm"/>
@@ -3331,7 +3341,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0311" status="done" resp="dmp:VE">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"/>
                <placeName ref="geo:al_udayn"/>
                <lang corresp="..\profiles\vicav_profile_YEM-UDA.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0311.ct_0086">
@@ -3344,7 +3354,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0313" status="done" resp="dmp:VE">
                <name type="featureValue" ref="#ipfv_2sgf_i"/>
-               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"/>
                <placeName ref="geo:zabid"/>
                <lang corresp="..\profiles\vicav_profile_YEM-ZBD.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0313.ct_0087">
@@ -3357,7 +3367,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0314" status="done" resp="dmp:VE">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"/>
                <placeName ref="geo:az_zuhrah"/>
                <lang corresp="..\profiles\vicav_profile_YEM-ZUH.xml"/>
                <cit type="example" xml:id="ft_ipfv_2sg_f.fv_0314.ct_0088">
@@ -3411,7 +3421,7 @@
 
             <wib:featureValueObservation xml:id="ft_ipfv_2sg_f.fv_0312" status="done" resp="dmp:VE">
                <name type="featureValue" ref="#ipfv_2sgf_iin"/>
-               <bibl corresp="zot:vanhove_1995_0364" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <bibl corresp="zot:vanhove_1995_0364" type="publication" status="CHECKED"/>
                <placeName ref="geo:yafa"/>
                <lang corresp="..\profiles\vicav_profile_YEM-YAF.xml"/>
             </wib:featureValueObservation>
