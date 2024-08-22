@@ -9,7 +9,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Variants of the Future Marker</title>
+            <title>Future Marker</title>
          </titleStmt>
          <publicationStmt>
             <publisher>{publisher}</publisher>
@@ -31,6 +31,12 @@
             <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
          </listPrefixDef>
       </encodingDesc>
+
+      <profileDesc>
+         <textClass>
+            <catRef target="dmp:TAM_markers"/>
+         </textClass>
+      </profileDesc>
 
       <revisionDesc status="draft">
          <change when="2022-08-17" who="dmp:">c</change>
@@ -144,8 +150,16 @@
                   <label>h- / ha-</label>
                   <desc/>
                </item>
+               <item xml:id="fut_mar_hiya">
+                  <label>hiya</label>
+                  <desc/>
+               </item>
                <item xml:id="fut_mar_de">
                   <label>də-</label>
+                  <desc/>
+               </item>
+               <item xml:id="fut_mar_dahab">
+                  <label>dahāb-</label>
                   <desc/>
                </item>
                <item xml:id="fut_mar_te">
@@ -432,6 +446,27 @@
                </cit>
             </wib:featureValueObservation>
 
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0160" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#fut_mar_b"/>
+               <bibl corresp="zot:geva-kleinberger_2009_3208" type="publication"/>
+               <placeName ref="geo:tiberias"/>
+               <lang corresp="..\profiles\vicav_profile_ISR-TBR.xml"/>
+               <personGrp role="religion" corresp="pgr:jews"/>
+               <cit type="example" xml:id="ft_fut_mar.fv_0160.ct_0000">
+                  <quote>bebʕátlek (p.74)</quote>
+                  <cit type="translation">
+                     <quote>I will send you</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ft_fut_mar.fv_0160.ct_0001">
+                  <quote>ʔana baḍallni hōn</quote>
+                  <cit type="translation">
+                     <quote>I will stay here</quote>
+                  </cit>
+               </cit>
+               <note type="general">Deduced from example</note>
+            </wib:featureValueObservation>
+
 
             <wib:featureValueObservation xml:id="ft_fut_mar.fv_0083" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#fut_mar_rah"/>
@@ -683,8 +718,8 @@
                <personGrp role="tribe" corresp="pgr:khawetna_tribe"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0125" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0125" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#fut_mar_b"/>
                <bibl corresp="zot:behnstedt_1994_0001" type="publication"/>
                <placeName ref="geo:al_sukhna"/>
                <lang corresp="..\profiles\vicav_profile_SYR-SUK.xml"/>
@@ -975,11 +1010,20 @@
                <note type="general">Deduced from example</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0116" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0116" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#fut_mar_raayih"/>
                <bibl corresp="zot:salonen_1980_0000" type="publication" status="CHECKED"/>
                <placeName ref="geo:al_shirqat"/>
                <lang corresp="..\profiles\vicav_profile_IRQ-SQT.xml"/>
+               <cit type="sourceRepresentation"><quote>rāyiḥ</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0084" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#fut_mar_raah"/>
+               <bibl corresp="zot:salonen_1980_0000" type="publication" status="CHECKED"/>
+               <placeName ref="geo:al_shirqat"/>
+               <lang corresp="..\profiles\vicav_profile_IRQ-SQT.xml"/>
+               <cit type="sourceRepresentation"><quote>rāḥ</quote></cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_fut_mar.fv_0175" status="done" resp="dmp:CL">
@@ -1419,7 +1463,7 @@
                <lang corresp="..\profiles\vicav_profile_ESP-TLD.xml"/>
             </wib:featureValueObservation>
 
-          
+
 
             <wib:featureValueObservation xml:id="ft_fut_mar.fv_0185" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#fut_mar_b"/>
@@ -1427,11 +1471,11 @@
                <placeName ref="geo:khartoum"/>
                <lang corresp="..\profiles\vicav_profile_SDN-KRT.xml"/>
                <cit type="example" xml:id="ft_fut_mar.fv_0185.ct_0000">
-                     <quote>bajīkum bukra</quote>
-                     <cit type="translation">
-                        <quote>I'll come to [see] you [pl. masc.] tomorrow</quote>
-                     </cit>
+                  <quote>bajīkum bukra</quote>
+                  <cit type="translation">
+                     <quote>I'll come to [see] you [pl. masc.] tomorrow</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_fut_mar.fv_0049" status="done" resp="dmp:RZ">
@@ -1498,7 +1542,7 @@
                   </cit>
                </cit>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_fut_mar.fv_0276" status="done" resp="dmp:PH">
                <name type="featureValue" ref="#fut_mar_normalh"/>
                <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
@@ -1676,20 +1720,6 @@
                </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0191" status="draft" resp="dmp:PH">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:décobert_1985_9706" type="publication"/>
-               <placeName ref="geo:bout_el_fil"/>
-               <lang corresp="..\profiles\vicav_profile_TCD-BBL.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0195" status="draft" resp="dmp:PH">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:décobert_1985_9706" type="publication"/>
-               <placeName ref="geo:djedaa"/>
-               <lang corresp="..\profiles\vicav_profile_TCD-ULR.xml"/>
-            </wib:featureValueObservation>
-
             <wib:featureValueObservation xml:id="ft_fut_mar.fv_0278" status="done" resp="dmp:PH">
                <name type="featureValue" ref="#fut_mar_aa"/>
                <bibl corresp="zot:drop_2007_0000" type="publication"/>
@@ -1704,128 +1734,243 @@
                </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0160" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:geva-kleinberger_2009_3208" type="publication"/>
-               <placeName ref="geo:tiberias"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-TBR.xml"/>
-               <personGrp role="religion" corresp="pgr:jews"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0133" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0133" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_bidd"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:wadi_sulaf"/>
                <lang corresp="..\profiles\vicav_profile_EGY-ASD.xml"/>
                <personGrp role="tribe" corresp="pgr:awlad_said"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0134" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0088" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_normalh"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:wadi_sulaf"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-ASD.xml"/>
+               <personGrp role="tribe" corresp="pgr:awlad_said"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0134" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_widd"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:ramlat_humayyir"/>
                <lang corresp="..\profiles\vicav_profile_EGY-BDA.xml"/>
                <personGrp role="tribe" corresp="pgr:badarah"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0136" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0089" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_normalh"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:ramlat_humayyir"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-BDA.xml"/>
+               <personGrp role="tribe" corresp="pgr:badarah"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0136" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_bidd"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:wadi_al_islah"/>
                <lang corresp="..\profiles\vicav_profile_EGY-BWS.xml"/>
                <personGrp role="tribe" corresp="pgr:bani_wasil"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0138" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0090" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_normalh"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:wadi_al_islah"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-BWS.xml"/>
+               <personGrp role="tribe" corresp="pgr:bani_wasil"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0138" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_widd"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:qalat_al_jindi"/>
                <lang corresp="..\profiles\vicav_profile_EGY-DBR.xml"/>
                <personGrp role="tribe" corresp="pgr:dbur"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0140" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0091" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_normalh"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:qalat_al_jindi"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-DBR.xml"/>
+               <personGrp role="tribe" corresp="pgr:dbur"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0140" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_bidd"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:saint_catherine_s_monastery"/>
                <lang corresp="..\profiles\vicav_profile_EGY-GBL.xml"/>
                <personGrp role="tribe" corresp="pgr:jbaliyyah"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0142" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0093" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_normalh"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:saint_catherine_s_monastery"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-GBL.xml"/>
+               <personGrp role="tribe" corresp="pgr:jbaliyyah"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0142" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_widd"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:jabal_al_malbad"/>
                <lang corresp="..\profiles\vicav_profile_EGY-GRG.xml"/>
                <personGrp role="tribe" corresp="pgr:jarajrah"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0143" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0094" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_normalh"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:jabal_al_malbad"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-GRG.xml"/>
+               <personGrp role="tribe" corresp="pgr:jarajrah"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0143" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_bidd"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:wahat_fayran"/>
                <lang corresp="..\profiles\vicav_profile_EGY-GRR.xml"/>
                <personGrp role="tribe" corresp="pgr:gararshah"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0144" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0095" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_normalh"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:wahat_fayran"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-GRR.xml"/>
+               <personGrp role="tribe" corresp="pgr:gararshah"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0144" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_bidd"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:jabal_sarabit_al_khadim"/>
                <lang corresp="..\profiles\vicav_profile_EGY-HMD.xml"/>
                <personGrp role="tribe" corresp="pgr:hamadah"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0145" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0096" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_normalh"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:jabal_sarabit_al_khadim"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-HMD.xml"/>
+               <personGrp role="tribe" corresp="pgr:hamadah"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0145" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_widd"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:wadi_jiddi"/>
                <lang corresp="..\profiles\vicav_profile_EGY-HWT.xml"/>
                <personGrp role="tribe" corresp="pgr:hwetat_egypt"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0147" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0101" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_normalh"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:wadi_jiddi"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-HWT.xml"/>
+               <personGrp role="tribe" corresp="pgr:hwetat_egypt"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0147" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_bidd"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:jabal_sarabit_al_khadim"/>
                <lang corresp="..\profiles\vicav_profile_EGY-LGT.xml"/>
                <personGrp role="tribe" corresp="pgr:legat"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0148" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0102" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_normalh"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:jabal_sarabit_al_khadim"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-LGT.xml"/>
+               <personGrp role="tribe" corresp="pgr:legat"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0148" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_widd"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:al_qusaymah"/>
                <lang corresp="..\profiles\vicav_profile_EGY-MLH.xml"/>
                <personGrp role="tribe" corresp="pgr:malalhah"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0149" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0103" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_normalh"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:al_qusaymah"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-MLH.xml"/>
+               <personGrp role="tribe" corresp="pgr:malalhah"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0149" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_bidd"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:dahab"/>
                <lang corresp="..\profiles\vicav_profile_EGY-MZN.xml"/>
                <personGrp role="tribe" corresp="pgr:mzenah"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0151" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0104" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_normalh"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:dahab"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-MZN.xml"/>
+               <personGrp role="tribe" corresp="pgr:mzenah"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0151" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_bidd"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:wahat_fayran"/>
                <lang corresp="..\profiles\vicav_profile_EGY-SLH.xml"/>
                <personGrp role="tribe" corresp="pgr:sawalhah"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0154" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0108" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_normalh"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:wahat_fayran"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-SLH.xml"/>
+               <personGrp role="tribe" corresp="pgr:sawalhah"/>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0154" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_widd"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:sudr"/>
                <lang corresp="..\profiles\vicav_profile_EGY-TRB.xml"/>
                <personGrp role="tribe" corresp="pgr:tarabin"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0155" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0109" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_normalh"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:sudr"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-TRB.xml"/>
+               <personGrp role="tribe" corresp="pgr:tarabin"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0155" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_widd"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:jabal_at_tih"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-TYH.xml"/>
+               <personGrp role="tribe" corresp="pgr:tayaha"/>
+            </wib:featureValueObservation>
+            
+            
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0111" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#fut_mar_normalh"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:jabal_at_tih"/>
                <lang corresp="..\profiles\vicav_profile_EGY-TYH.xml"/>
@@ -1838,39 +1983,39 @@
                <placeName ref="geo:kadugli"/>
                <lang corresp="..\profiles\vicav_profile_SDN-BKD.xml"/>
                <cit type="example" xml:id="ft_fut_mar.fv_0181.ct_0000">
-                     <quote>hu má-b-i-lgá be suhūla</quote>
-                     <cit type="translation">
-                        <quote>he will not find him effortless </quote>
-                     </cit>
+                  <quote>hu má-b-i-lgá be suhūla</quote>
+                  <cit type="translation">
+                     <quote>he will not find him effortless </quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_fut_mar.fv_0058" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#fut_mar_iji"/>
                <bibl corresp="src:PC_SM" type="publication"/>
                <placeName ref="geo:kadugli"/>
                <lang corresp="..\profiles\vicav_profile_SDN-BKD.xml"/>
                <cit type="example" xml:id="ft_fut_mar.fv_0058.ct_0000">
-                     <quote>itti battan tiǧi rāǧʕe ?</quote>
-                     <cit type="translation">
-                        <quote>will you come back again?</quote>
-                     </cit>
+                  <quote>itti battan tiǧi rāǧʕe ?</quote>
+                  <cit type="translation">
+                     <quote>will you come back again?</quote>
                   </cit>
-                  <note type="general">The future function is observed when iǧi is followed by unmarked prefixed stems of motion verbs</note>
+               </cit>
+               <note type="general">The future function is observed when iǧi is followed by unmarked prefixed stems of motion verbs</note>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_fut_mar.fv_0061" status="done" resp="dmp:RZ">
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0061" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#fut_mar_mashi"/>
                <bibl corresp="src:PC_SM" type="publication"/>
                <placeName ref="geo:kadugli"/>
                <lang corresp="..\profiles\vicav_profile_SDN-BKD.xml"/>
                <cit type="example" xml:id="ft_fut_mar.fv_0061.ct_0000">
-                     <quote>al=waṭá māš-e ti-lgāṣir</quote>
-                     <cit type="translation">
-                        <quote>will you come back again?</quote>
-                     </cit>
+                  <quote>al=waṭá māš-e ti-lgāṣir</quote>
+                  <cit type="translation">
+                     <quote>will you come back again?</quote>
                   </cit>
-                  
+               </cit>
+
             </wib:featureValueObservation>
 
 
@@ -1880,25 +2025,25 @@
                <placeName ref="geo:kadugli"/>
                <lang corresp="..\profiles\vicav_profile_SDN-KDG.xml"/>
                <cit type="example" xml:id="ft_fut_mar.fv_0184.ct_0000">
-                     <quote>inšalla b-adʒi-kum bukra</quote>
-                     <cit type="translation">
-                        <quote>God willing, I will come to visit you tomorrow </quote>
-                     </cit>
+                  <quote>inšalla b-adʒi-kum bukra</quote>
+                  <cit type="translation">
+                     <quote>God willing, I will come to visit you tomorrow </quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
-              <wib:featureValueObservation xml:id="ft_fut_mar.fv_0068" status="done" resp="dmp:RZ">
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0068" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#fut_mar_haa"/>
                <bibl corresp="zot:manfredi_2013_2941" type="publication"/>
                <placeName ref="geo:kadugli"/>
                <lang corresp="..\profiles\vicav_profile_SDN-KDG.xml"/>
                <cit type="example" xml:id="ft_fut_mar.fv_0068.ct_0001">
-                     <quote>bukra h-akūn fi l-bēt</quote>
-                     <cit type="translation">
-                        <quote>tomorrow I will be at home </quote>
-                     </cit>
+                  <quote>bukra h-akūn fi l-bēt</quote>
+                  <cit type="translation">
+                     <quote>tomorrow I will be at home </quote>
                   </cit>
-                  <note type="general">This is observed in the speech of younger speakers</note>
+               </cit>
+               <note type="general">This is observed in the speech of younger speakers</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_fut_mar.fv_0177" status="draft" resp="dmp:TD">
@@ -1922,7 +2067,7 @@
                <lang corresp="..\profiles\vicav_profile_NGA-NGA.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0188" status="draft" resp="dmp:RZ">
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0188" status="draft" resp="dmp:CL">
                <name type="featureValue" ref=""/>
                <bibl corresp="zot:reichmuth_1983_0001" type="publication"/>
                <placeName ref="geo:halfa_al-jadida"/>
@@ -1930,14 +2075,53 @@
             </wib:featureValueObservation>
 
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0189" status="draft" resp="dmp:PH">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0189" status="done" resp="dmp:PH">
+               <name type="featureValue" ref="#fut_mar_dahab"/>
                <bibl corresp="zot:roth_1979_0000" type="publication"/>
                <placeName ref="geo:abeche"/>
                <lang corresp="..\profiles\vicav_profile_TCD-ABC.xml"/>
+               <note type="general">dahāba, either invariable or followed by personal suffixes, denotes an action close in time, past or future (Roth 1979:58f.)</note>
+               <cit type="example" xml:id="ft_fut_mar.fv_0189.ct_0000">
+                  <quote>dahābi māši</quote>
+                  <cit type="translation">
+                     <quote>Both "I just left" and "I will leave"</quote>
+                  </cit>
+               </cit>
             </wib:featureValueObservation>
 
-           
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0086"  status="done" resp="dmp:PH">
+               <name type="featureValue" ref="#fut_mar_hiya"/>
+               <bibl corresp="zot:roth_1979_0000" type="publication"/>
+               <placeName ref="geo:abeche"/>
+               <lang corresp="..\profiles\vicav_profile_TCD-ABC.xml"/>
+               <note type="general">hiya at the beginning of the verbal phrase before a perfective or imperfective verb can express the future (Roth 1979:199)</note>
+               <cit type="example" xml:id="ft_fut_mar.fv_0086.ct_0000">
+                  <quote>hīya mā balgāna</quote>
+                  <cit type="translation">
+                     <quote>He will not find us.</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0087"   status="done" resp="dmp:PH">
+               <name type="featureValue" ref="#fut_mar_mashi"/>
+               <bibl corresp="zot:roth_1979_0000" type="publication"/>
+               <placeName ref="geo:abeche"/>
+               <lang corresp="..\profiles\vicav_profile_TCD-ABC.xml"/>
+               <note type="general">Both the present participle and the inflected imperfective form are used to express close future (Roth 1979:199)</note>
+               <cit type="example" xml:id="ft_fut_mar.fv_0087.ct_0000">
+                  <quote>māši našri</quote>
+                  <cit type="translation">
+                     <quote>I will buy</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ft_fut_mar.fv_0087.ct_0001">
+                  <quote>namšu nahalbu</quote>
+                  <cit type="translation">
+                     <quote>We will milk</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_fut_mar.fv_0281" status="done" resp="dmp:PH">
                <name type="featureValue" ref="#fut_mar_haa"/>
@@ -1946,11 +2130,36 @@
                <lang corresp="..\profiles\vicav_profile_EGY-CRO.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0176" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:simeone_senelle_youssi_2002_0000" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0176" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#fut_mar_baa"/>
+               <bibl corresp="zot:simeone_senelle_youssi_2002_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
                <placeName ref="geo:obock"/>
                <lang corresp="..\profiles\vicav_profile_DJI-OBK.xml"/>
+               <cit type="sourceRepresentation"><quote>bā</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0070" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#fut_mar_a"/>
+               <bibl corresp="zot:simeone_senelle_youssi_2002_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:obock"/>
+               <lang corresp="..\profiles\vicav_profile_DJI-OBK.xml"/>
+               <cit type="sourceRepresentation"><quote>ʔa</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0081" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#fut_mar_haa"/>
+               <bibl corresp="zot:simeone_senelle_youssi_2002_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:obock"/>
+               <lang corresp="..\profiles\vicav_profile_DJI-OBK.xml"/>
+               <cit type="sourceRepresentation"><quote>ha</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0082" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#fut_mar_sh"/>
+               <bibl corresp="zot:simeone_senelle_youssi_2002_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:obock"/>
+               <lang corresp="..\profiles\vicav_profile_DJI-OBK.xml"/>
+               <cit type="sourceRepresentation"><quote>ša</quote></cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_fut_mar.fv_0194" status="done" resp="dmp:SK">
@@ -2156,66 +2365,66 @@
                <lang corresp="..\profiles\vicav_profile_TUN-NFZ.xml"/>
                <note type="general">This is the local variant used by all, but especially old and rural speakers</note>
                <cit type="example" xml:id="ft_fut_mar.fv_0059.ct_0000">
-                     <quote>tā-nžīb zōz bayyāḏa</quote>
-                     <cit type="translation">
-                        <quote> I will bring two painters</quote>
-                     </cit>
+                  <quote>tā-nžīb zōz bayyāḏa</quote>
+                  <cit type="translation">
+                     <quote> I will bring two painters</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
-              <wib:featureValueObservation xml:id="ft_fut_mar.fv_0044" status="done" resp="dmp:RZ">
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0044" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#fut_mar_baash"/>
                <bibl corresp="zot:naddari_2023_2742" type="publication"/>
                <placeName ref="geo:nefza"/>
                <lang corresp="..\profiles\vicav_profile_TUN-NFZ.xml"/>
                <note type="general">This variant is mostly employed by young and urban speakers</note>
                <cit type="example" xml:id="ft_fut_mar.fv_0044.ct_0000">
-                     <quote>bǟš nžū</quote>
-                     <cit type="translation">
-                        <quote>we will come </quote>
-                     </cit>
+                  <quote>bǟš nžū</quote>
+                  <cit type="translation">
+                     <quote>we will come </quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
-              <wib:featureValueObservation xml:id="ft_fut_mar.fv_0047" status="done" resp="dmp:RZ">
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0047" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#fut_mar_sh"/>
                <bibl corresp="zot:naddari_2023_2742" type="publication"/>
                <placeName ref="geo:nefza"/>
                <lang corresp="..\profiles\vicav_profile_TUN-NFZ.xml"/>
                <cit type="example" xml:id="ft_fut_mar.fv_0047.ct_0000">
-                     <quote>ʕandi ḥāžǟt š ngūlhum-lik</quote>
-                     <cit type="translation">
-                        <quote>I have things that I will tell you</quote>
-                     </cit>
+                  <quote>ʕandi ḥāžǟt š ngūlhum-lik</quote>
+                  <cit type="translation">
+                     <quote>I have things that I will tell you</quote>
                   </cit>
+               </cit>
                <note type="general">This is the short form of bāš</note>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_fut_mar.fv_0048" status="done" resp="dmp:RZ">
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0048" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#fut_mar_maash"/>
                <bibl corresp="zot:naddari_2023_2742" type="publication"/>
                <placeName ref="geo:nefza"/>
                <lang corresp="..\profiles\vicav_profile_TUN-NFZ.xml"/>
                <cit type="example" xml:id="ft_fut_mar.fv_0048.ct_0000">
-                     <quote>mǟš taržaʕ</quote>
-                     <cit type="translation">
-                        <quote> she will return</quote>
-                     </cit>
+                  <quote>mǟš taržaʕ</quote>
+                  <cit type="translation">
+                     <quote> she will return</quote>
                   </cit>
+               </cit>
                <note type="general">This is seldom attested, used by old and middle-aged rural speakers</note>
             </wib:featureValueObservation>
-            
-              <wib:featureValueObservation xml:id="ft_fut_mar.fv_0052" status="done" resp="dmp:RZ">
+
+            <wib:featureValueObservation xml:id="ft_fut_mar.fv_0052" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#fut_mar_taww"/>
                <bibl corresp="zot:naddari_2023_2742" type="publication"/>
                <placeName ref="geo:nefza"/>
                <lang corresp="..\profiles\vicav_profile_TUN-NFZ.xml"/>
                <cit type="example" xml:id="ft_fut_mar.fv_0052.ct_0000">
-                     <quote> taww tiḥkī-lik hīya waḥḥadha</quote>
-                     <cit type="translation">
-                        <quote>she will tell you by herself</quote>
-                     </cit>
+                  <quote> taww tiḥkī-lik hīya waḥḥadha</quote>
+                  <cit type="translation">
+                     <quote>she will tell you by herself</quote>
                   </cit>
+               </cit>
                <note type="general">Naddari (2023) also gives the variant (hā)taww</note>
             </wib:featureValueObservation>
 

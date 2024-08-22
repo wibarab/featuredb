@@ -9,7 +9,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Variants of the indicative prefix</title>
+            <title>Indicative prefix</title>
          </titleStmt>
          <publicationStmt>
             <publisher>{publisher}</publisher>
@@ -32,11 +32,17 @@
          </listPrefixDef>
       </encodingDesc>
 
+      <profileDesc>
+         <textClass>
+            <catRef target="dmp:TAM_markers"/>
+         </textClass>
+      </profileDesc>
+
       <revisionDesc status="draft">
          <change when="2022-08-17" who="dmp:">c</change>
          <change when="2022-08-17" who="dmp: "/>
          <change when="2022-08-17" who="dmp:">For EGY-___ there are no values found</change>
-      <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change><change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change></revisionDesc>
+         <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change><change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change></revisionDesc>
    </teiHeader>
 
 
@@ -109,14 +115,14 @@
                <personGrp role="tribe" corresp="pgr:arab_maslax"/>
                <personGrp role="ageGroup" corresp="pgr:old"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0071.ct_0000">
-                     <quote>tiǧi titġadda ha-l-ʕālam</quote>
-                     <cit type="translation">
-                        <quote>People come and have lunch</quote>
-                     </cit>
+                  <quote>tiǧi titġadda ha-l-ʕālam</quote>
+                  <cit type="translation">
+                     <quote>People come and have lunch</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0028" status="done" resp="dmp:AID">
+
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0028" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#indic_pref_b"/>
                <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
                <placeName ref="geo:naameh"/>
@@ -125,11 +131,11 @@
                <personGrp role="tribe" corresp="pgr:arab_maslax"/>
                <personGrp role="ageGroup" corresp="pgr:young"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0028.ct_0000">
-                     <quote>byəḥke ʕāde</quote>
-                     <cit type="translation">
-                        <quote>He speaks normal</quote>
-                     </cit>
+                  <quote>byəḥke ʕāde</quote>
+                  <cit type="translation">
+                     <quote>He speaks normal</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0053" status="done" resp="dmp:AID">
@@ -138,13 +144,13 @@
                <placeName ref="geo:baskinta"/>
                <lang corresp="..\profiles\vicav_profile_LBN-BAS.xml"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0053.ct_0000">
-                     <quote>bāxud zuwwādi</quote>
-                     <cit type="translation">
-                        <quote>I take my food</quote>
-                     </cit>
+                  <quote>bāxud zuwwādi</quote>
+                  <cit type="translation">
+                     <quote>I take my food</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0060" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#indic_pref_b"/>
                <bibl corresp="zot:agbaht_2023_4928" type="publication"/>
@@ -152,155 +158,21 @@
                <lang corresp="..\profiles\vicav_profile_LBN-SXT.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0027" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:jurdeih"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-ARM.xml"/>
-               <personGrp role="tribe" corresp="pgr:aramsha_israel"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0029" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:hajajra"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-GAW.xml"/>
-               <personGrp role="tribe" corresp="pgr:jawamis"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0030" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:hamam"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-GET.xml"/>
-               <personGrp role="tribe" corresp="pgr:getiyya"/>
-            </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0026" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#indic_pref_b"/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
+               <bibl corresp="zot:geva_kleinberger_2004_0000" type="publication"/>
                <placeName ref="geo:haifa"/>
                <lang corresp="..\profiles\vicav_profile_ISR-HAI.xml"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0026.ct_0000">
-                     <quote>barkab</quote>
-                     <cit type="translation">
-                        <quote>I ride</quote>
-                     </cit>
+                  <quote>barkab</quote>
+                  <cit type="translation">
+                     <quote>I ride</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0031" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:hujeirat_dhara"/>
-               <placeName ref="geo:bir_el_maksur"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-HGE.xml"/>
-               <personGrp role="tribe" corresp="pgr:hjerat"/>
-            </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0032" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:kaabiyya"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-KAB.xml"/>
-               <personGrp role="tribe" corresp="pgr:kabiyye"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0033" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:tuba_zangariya"/>
-               <placeName ref="geo:mashhad"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-LHE.xml"/>
-               <personGrp role="tribe" corresp="pgr:lheb"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0034" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:ibtin"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-MRY.xml"/>
-               <personGrp role="tribe" corresp="pgr:amiriyya"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0035" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:nazareth"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-NAZ.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0036" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:basmat_tabun"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-NEM.xml"/>
-               <personGrp role="tribe" corresp="pgr:neem_israel"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0037" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:buayna_nujaydat"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-NGE.xml"/>
-               <personGrp role="tribe" corresp="pgr:njedat"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0038" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:umm_el_ghanam"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-SA3.xml"/>
-               <personGrp role="tribe" corresp="pgr:saayda"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0039" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:kammaana"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-SAW.xml"/>
-               <personGrp role="tribe" corresp="pgr:sawaid"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0040" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:shibli"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-SHI.xml"/>
-               <personGrp role="tribe" corresp="pgr:shibli"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0041" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:halaf_tabbash"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-TAB.xml"/>
-               <personGrp role="tribe" corresp="pgr:tabbash"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0042" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:suulam"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-TUR.xml"/>
-               <personGrp role="tribe" corresp="pgr:arab_turkman"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0043" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:khawalid"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-XAW.xml"/>
-               <personGrp role="tribe" corresp="pgr:xawalid"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0044" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:maloot_tarshiiha"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-ZUN.xml"/>
-               <personGrp role="tribe" corresp="pgr:zunnar"/>
-            </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0074" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#indic_pref_b"/>
@@ -308,11 +180,11 @@
                <placeName ref="geo:tripoli_lebanon"/>
                <lang corresp="..\profiles\vicav_profile_LBN-TRI.xml"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0074.ct_0000">
-                     <quote>ʔahl ṭrōblos biḥəbbu l-ḅaṣṭ</quote>
-                     <cit type="translation">
-                        <quote> People from Tripoli like simplicity</quote>
-                     </cit>
+                  <quote>ʔahl ṭrōblos biḥəbbu l-ḅaṣṭ</quote>
+                  <cit type="translation">
+                     <quote> People from Tripoli like simplicity</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0062" status="done" resp="dmp:AID">
@@ -321,11 +193,11 @@
                <placeName ref="geo:kfar_aabida"/>
                <lang corresp="..\profiles\vicav_profile_LBN-KAB.xml"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0062.ct_0000">
-                     <quote>btääkol</quote>
-                     <cit type="translation">
-                        <quote>She eats</quote>
-                     </cit>
+                  <quote>btääkol</quote>
+                  <cit type="translation">
+                     <quote>She eats</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0079" status="done" resp="dmp:AID">
@@ -334,11 +206,11 @@
                <placeName ref="geo:zahle"/>
                <lang corresp="..\profiles\vicav_profile_LBN-ZAH.xml"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0079.ct_0000">
-                     <quote>bəʔbal</quote>
-                     <cit type="translation">
-                        <quote>I accept</quote>
-                     </cit>
+                  <quote>bəʔbal</quote>
+                  <cit type="translation">
+                     <quote>I accept</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0065" status="done" resp="dmp:AID">
@@ -347,11 +219,11 @@
                <placeName ref="geo:kfar_sghab"/>
                <lang corresp="..\profiles\vicav_profile_LBN-KSG.xml"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0065.ct_0000">
-                     <quote>byəḍərbu</quote>
-                     <cit type="translation">
-                        <quote>They hit</quote>
-                     </cit>
+                  <quote>byəḍərbu</quote>
+                  <cit type="translation">
+                     <quote>They hit</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0056" status="done" resp="dmp:AID">
@@ -360,11 +232,11 @@
                <placeName ref="geo:bishmizzine"/>
                <lang corresp="..\profiles\vicav_profile_LBN-BIS.xml"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0056.ct_0000">
-                     <quote>byišrab</quote>
-                     <cit type="translation">
-                        <quote>he drinks</quote>
-                     </cit>
+                  <quote>byišrab</quote>
+                  <cit type="translation">
+                     <quote>he drinks</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0047" status="done" resp="dmp:AID">
@@ -418,7 +290,7 @@
                <personGrp role="tribe" corresp="pgr:mawali_lebanon"/>
             </wib:featureValueObservation>
 
-         
+
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0054" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#indic_pref_b"/>
@@ -426,11 +298,11 @@
                <placeName ref="geo:beirut"/>
                <lang corresp="..\profiles\vicav_profile_LBN-BEI.xml"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0054.ct_0000">
-                     <quote>bənzal maʕik</quote>
-                     <cit type="translation">
-                        <quote>I go down with you</quote>
-                     </cit>
+                  <quote>bənzal maʕik</quote>
+                  <cit type="translation">
+                     <quote>I go down with you</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0052" status="done" resp="dmp:AID">
@@ -449,7 +321,7 @@
                <personGrp role="tribe" corresp="pgr:abu_eid"/>
             </wib:featureValueObservation>
 
-           
+
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0083" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#indic_pref_b"/>
@@ -637,7 +509,7 @@
                <placeName ref="geo:jabal_al_druze"/>
                <lang corresp="..\profiles\vicav_profile_JOR-HRN.xml"/>
                <note type="general">The b- indicative is used to express habitual actions and future; the indicativve without b- prefix is used as  imperative
-               and in subordinative clauses</note>
+                  and in subordinative clauses</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0097" status="done" resp="dmp:AT">
@@ -647,13 +519,13 @@
                <lang corresp="..\profiles\vicav_profile_JOR-SLT.xml"/>
                <personGrp role="tribe" corresp="pgr:slut"/>
                <note type="general">B- indicative is used with habitual actions, to indicate progressive aspect and future. The indicative is mostly used without
-               b- prefix when it is dependent from another predicate (Herin 2010: 249-250)</note>
+                  b- prefix when it is dependent from another predicate (Herin 2010: 249-250)</note>
                <cit type="example" xml:id="ft_indic_pref.fv_0097.ct_0000">
-                     <quote>biʕrif-il-na šu mniḥči?</quote>
-                     <cit type="translation">
-                        <quote>Does he understand what we say?</quote>
-                     </cit>
+                  <quote>biʕrif-il-na šu mniḥči?</quote>
+                  <cit type="translation">
+                     <quote>Does he understand what we say?</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0100" status="done" resp="dmp:AT">
@@ -671,7 +543,7 @@
                <lang corresp="..\profiles\vicav_profile_JOR-BDL.xml"/>
                <personGrp role="tribe" corresp="pgr:bdul"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0025" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#indic_pref_b"/>
                <bibl corresp="zot:owens_1984_9854" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
@@ -679,15 +551,15 @@
                <lang corresp="..\profiles\vicav_profile_JOR-BDL.xml"/>
                <personGrp role="tribe" corresp="pgr:bdul"/>
                <note type="general">"Indivative with b- prefix was introduced in the last 20/30 years.
-              B- indicative occurs in the following contexts, arranged in terms of increasing frequency:
-	      after coordinate u dependent on verb wudd/widd, subordinate cl. n- we, t- maa (neg.) first sing, third person.
-              (Some of the contexts are not mutually exclusive, e.g., n- we occurs in subordinate clauses, after u and, etc., though we did
-	      not check the combined effect of these variable factors on the distribution of b-.)
-	      What this says is that b- is least likely to occur after u "and" and in a position dependent on a verb or on wudd "want"; it 
-              is a little more common (though not much) in subordinate clauses (adverbial and conditionals constitute the largest sets
-	      of tokens here) and before the person prefix n- we; it occurs occasionally, though still in less than 60 percent of the
-	      tokens, after negative maa and with first person subjects and the subject markers t- (second person, third feminine, cf.2.1).
-              By far its most extensive occurrence is with a third person subject in main, non-negative clause." (Owens 1984:214)</note>
+                  B- indicative occurs in the following contexts, arranged in terms of increasing frequency:
+                  after coordinate u dependent on verb wudd/widd, subordinate cl. n- we, t- maa (neg.) first sing, third person.
+                  (Some of the contexts are not mutually exclusive, e.g., n- we occurs in subordinate clauses, after u and, etc., though we did
+                  not check the combined effect of these variable factors on the distribution of b-.)
+                  What this says is that b- is least likely to occur after u "and" and in a position dependent on a verb or on wudd "want"; it
+                  is a little more common (though not much) in subordinate clauses (adverbial and conditionals constitute the largest sets
+                  of tokens here) and before the person prefix n- we; it occurs occasionally, though still in less than 60 percent of the
+                  tokens, after negative maa and with first person subjects and the subject markers t- (second person, third feminine, cf.2.1).
+                  By far its most extensive occurrence is with a third person subject in main, non-negative clause." (Owens 1984:214)</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0095" status="done" resp="dmp:AT">
@@ -696,8 +568,8 @@
                <placeName ref="geo:safut"/>
                <lang corresp="..\profiles\vicav_profile_JOR-SFT.xml"/>
             </wib:featureValueObservation>
-            
-              <wib:featureValueObservation xml:id="ft_indic_pref.fv_0073" status="done" resp="dmp:AT">
+
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0073" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#indic_pref_b"/>
                <bibl corresp="zot:palva_1974_0000" type="publication"/>
                <placeName ref="geo:safut"/>
@@ -724,8 +596,8 @@
                <lang corresp="..\profiles\vicav_profile_JOR-BSX.xml"/>
                <personGrp role="tribe" corresp="pgr:bani_saxar"/>
             </wib:featureValueObservation>
-            
-                <wib:featureValueObservation xml:id="ft_indic_pref.fv_0076" status="done" resp="dmp:AT">
+
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0076" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#indic_pref_b"/>
                <bibl corresp="zot:palva_1980_0000" type="publication"/>
                <placeName ref="geo:umm_ar_rasas"/>
@@ -738,8 +610,8 @@
                <personGrp role="tribe" corresp="pgr:bani_saxar"/>
                <personGrp role="ageGroup" corresp="pgr:young"/>
             </wib:featureValueObservation>
-            
-            
+
+
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0088" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#indic_pref_no"/>
                <bibl corresp="zot:palva_1984_86_0000" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
@@ -763,14 +635,14 @@
                <personGrp role="tribe" corresp="pgr:azazmih"/>
             </wib:featureValueObservation>
 
-               <wib:featureValueObservation xml:id="ft_indic_pref.fv_0075" status="done" resp="dmp:AT">
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0075" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#indic_pref_b"/>
                <bibl corresp="zot:shawarbah_2012_3107" type="publication"/>
                <placeName ref="geo:negev"/>
                <lang corresp="..\profiles\vicav_profile_NEG-AZM.xml"/>
                <personGrp role="tribe" corresp="pgr:azazmih"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0111" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#indic_pref_no"/>
                <bibl corresp="zot:talay_prochazka_2008_0000" type="publication"/>
@@ -788,8 +660,8 @@
                <lang corresp="..\profiles\vicav_profile_JOR-ABD.xml"/>
                <personGrp role="tribe" corresp="pgr:bani_abbad"/>
             </wib:featureValueObservation>
-            
-            
+
+
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0077" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#indic_pref_b"/>
                <bibl corresp="zot:torzullo_2022_1999" type="publication"/>
@@ -800,11 +672,11 @@
                <personGrp role="tribe" corresp="pgr:bani_abbad"/>
                <personGrp role="ageGroup" corresp="pgr:young"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0075.ct_0000">
-                     <quote>humma bistagbilu aḏ̣-ḏ̣yūf</quote>
-                     <cit type="translation">
-                        <quote>they welcome the guests</quote>
-                     </cit>
+                  <quote>humma bistagbilu aḏ̣-ḏ̣yūf</quote>
+                  <cit type="translation">
+                     <quote>they welcome the guests</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0082" status="done" resp="dmp:AT">
@@ -831,11 +703,11 @@
                <placeName ref="geo:aleppo"/>
                <lang corresp="..\profiles\vicav_profile_SYR-ALP.xml"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0117.ct_0000">
-                     <quote>biktub</quote>
-                     <cit type="translation">
-                        <quote>he writes</quote>
-                     </cit>
+                  <quote>biktub</quote>
+                  <cit type="translation">
+                     <quote>he writes</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0121" status="done" resp="dmp:CL">
@@ -875,9 +747,9 @@
                <lang corresp="..\profiles\vicav_profile_TUR-SII.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0157" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:" type="publication"/>
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0157" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#indic_pref_b"/>
+               <bibl corresp="zot:salonen_1979_0000" type="publication"/>
                <placeName ref="geo:gaza"/>
                <lang corresp="..\profiles\vicav_profile_PSE-GZA.xml"/>
             </wib:featureValueObservation>
@@ -888,11 +760,11 @@
                <placeName ref="geo:jerusalem"/>
                <lang corresp="..\profiles\vicav_profile_PSE-JRS.xml"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0168.ct_0000">
-                     <quote>btuktub</quote>
-                     <cit type="translation">
-                        <quote>you write</quote>
-                     </cit>
+                  <quote>btuktub</quote>
+                  <cit type="translation">
+                     <quote>you write</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0171" status="done" resp="dmp:CL">
@@ -901,11 +773,11 @@
                <placeName ref="geo:ramallah"/>
                <lang corresp="..\profiles\vicav_profile_PSE-RML.xml"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0171.ct_0000">
-                     <quote>btiktib</quote>
-                     <cit type="translation">
-                        <quote>she writes</quote>
-                     </cit>
+                  <quote>btiktib</quote>
+                  <cit type="translation">
+                     <quote>she writes</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0113" status="done" resp="dmp:CL">
@@ -921,11 +793,11 @@
                <placeName ref="geo:palmyra"/>
                <lang corresp="..\profiles\vicav_profile_SYR-PAL.xml"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0122.ct_0000">
-                     <quote>biktub</quote>
-                     <cit type="translation">
-                        <quote>he writes</quote>
-                     </cit>
+                  <quote>biktub</quote>
+                  <cit type="translation">
+                     <quote>he writes</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0126" status="done" resp="dmp:CL">
@@ -934,11 +806,11 @@
                <placeName ref="geo:al_suwayda_district"/>
                <lang corresp="..\profiles\vicav_profile_SYR-SWE.xml"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0126.ct_0000">
-                     <quote>byiktub</quote>
-                     <cit type="translation">
-                        <quote>he writes</quote>
-                     </cit>
+                  <quote>byiktub</quote>
+                  <cit type="translation">
+                     <quote>he writes</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0161" status="done" resp="dmp:CL">
@@ -955,11 +827,11 @@
                <placeName ref="geo:al_dawayima"/>
                <lang corresp="..\profiles\vicav_profile_PSE-DWY.xml"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0166.ct_0000">
-                     <quote>bistamiʕ</quote>
-                     <cit type="translation">
-                        <quote>he is listening</quote>
-                     </cit>
+                  <quote>bistamiʕ</quote>
+                  <cit type="translation">
+                     <quote>he is listening</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0118" status="done" resp="dmp:CL">
@@ -968,11 +840,11 @@
                <placeName ref="geo:damascus"/>
                <lang corresp="..\profiles\vicav_profile_SYR-DAM.xml"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0118.ct_0000">
-                     <quote>byiktub</quote>
-                     <cit type="translation">
-                        <quote>he writes</quote>
-                     </cit>
+                  <quote>byiktub</quote>
+                  <cit type="translation">
+                     <quote>he writes</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0112" status="done" resp="dmp:CL">
@@ -989,15 +861,15 @@
                <lang corresp="..\profiles\vicav_profile_IRQ-BSR.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0173" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0173" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#indic_pref_b"/>
                <bibl corresp="zot:mousa_2019_9904" type="publication"/>
                <placeName ref="geo:tulkarm"/>
                <lang corresp="..\profiles\vicav_profile_PSE-TKM.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0116" status="draft" resp="dmp:CL">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0116" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#indic_pref_no"/>
                <bibl corresp="zot:salonen_1980_0000" type="publication" status="CHECKED"/>
                <placeName ref="geo:al_shirqat"/>
                <lang corresp="..\profiles\vicav_profile_IRQ-SQT.xml"/>
@@ -1009,11 +881,11 @@
                <placeName ref="geo:hebron"/>
                <lang corresp="..\profiles\vicav_profile_PSE-XLL.xml"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0175.ct_0000">
-                     <quote>buṭlub</quote>
-                     <cit type="translation">
-                        <quote>he demands</quote>
-                     </cit>
+                  <quote>buṭlub</quote>
+                  <cit type="translation">
+                     <quote>he demands</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0167" status="done" resp="dmp:CL">
@@ -1022,14 +894,14 @@
                <placeName ref="geo:isawiya"/>
                <lang corresp="..\profiles\vicav_profile_PSE-ISW.xml"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0167.ct_0000">
-                     <quote>biktab</quote>
-                     <cit type="translation">
-                        <quote>he writes</quote>
-                     </cit>
+                  <quote>biktab</quote>
+                  <cit type="translation">
+                     <quote>he writes</quote>
                   </cit>
+               </cit>
                <note type="general">Deduced from example</note>
             </wib:featureValueObservation>
-                        
+
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0055" status="pre" resp="dmp:RZ">
                <name type="featureValue" ref=""/>
                <bibl corresp="zot:katz_1980_0798" type="publication"/>
@@ -1043,11 +915,11 @@
                <placeName ref="geo:mazara_del_vallo"/>
                <lang corresp="..\profiles\vicav_profile_ITA-MDV.xml"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0227.ct_0000">
-                     <quote>təxdəm fī brēša</quote>
-                     <cit type="translation">
-                        <quote>she works in Brescia</quote>
-                     </cit>
+                  <quote>təxdəm fī brēša</quote>
+                  <cit type="translation">
+                     <quote>she works in Brescia</quote>
                   </cit>
+               </cit>
                <note type="general">There is no mention of the indicative prefix by the author</note>
             </wib:featureValueObservation>
 
@@ -1057,12 +929,12 @@
                <placeName ref="geo:malta"/>
                <lang corresp="..\profiles\vicav_profile_MLT-MAL.xml"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0258.ct_0000">
-                     <quote>il-mara taḥsel l-art u t-tifla taʔra</quote>
-                     <cit type="translation">
-                        <quote>The woman washes the floor and the girl reads</quote>
-                     </cit>
+                  <quote>il-mara taḥsel l-art u t-tifla taʔra</quote>
+                  <cit type="translation">
+                     <quote>The woman washes the floor and the girl reads</quote>
                   </cit>
-                  <note type="general">Maltese orthography: il-mara taħsel u t-tifla taqra</note>
+               </cit>
+               <note type="general">Maltese orthography: il-mara taħsel u t-tifla taqra</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0334" status="done" resp="dmp:RZ">
@@ -1089,18 +961,18 @@
                <note type="general">There is no mention of the indicative prefix by the author</note>
             </wib:featureValueObservation>
 
-           
+
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0003" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#indic_pref_no"/>
                <bibl corresp="zot:DAnna_2017_4912" type="publication"/>
                <placeName ref="geo:misrata"/>
                <lang corresp="..\profiles\vicav_profile_LBY-MSR.xml"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0003.ct_0000">
-                     <quote>әl-yōm әt-tāni, ingabbaʕu, әṣ-ṣubaḥ әngaṭṭʕu l-lḥam</quote>
-                     <cit type="translation">
-                        <quote>The second day we stay awake, in the morning we cut the meat</quote>
-                     </cit>
+                  <quote>әl-yōm әt-tāni, ingabbaʕu, әṣ-ṣubaḥ әngaṭṭʕu l-lḥam</quote>
+                  <cit type="translation">
+                     <quote>The second day we stay awake, in the morning we cut the meat</quote>
                   </cit>
+               </cit>
                <note type="general">There is no mention of the indicative prefix by the author</note>
             </wib:featureValueObservation>
 
@@ -1111,11 +983,11 @@
                <lang corresp="..\profiles\vicav_profile_LBY-JYN.xml"/>
                <personGrp role="religion" corresp="pgr:jews"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0232.ct_0000">
-                     <quote>yətġaddāw u-iġannīw u-yašərbū l-ʕarāk</quote>
-                     <cit type="translation">
-                        <quote>They would come, have lunch and sing, drink arak </quote>
-                     </cit>
+                  <quote>yətġaddāw u-iġannīw u-yašərbū l-ʕarāk</quote>
+                  <cit type="translation">
+                     <quote>They would come, have lunch and sing, drink arak </quote>
                   </cit>
+               </cit>
                <note type="general">There is no mention of the indicative prefix by the author</note>
             </wib:featureValueObservation>
 
@@ -1133,12 +1005,12 @@
                <placeName ref="geo:gulf"/>
                <lang corresp="..\profiles\vicav_profile_SAU-GLF.xml"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0320.ct_0000">
-                     <quote>fī waqt il-farāġ nilʕab il-kura iṭ-ṭāʔira</quote>
-                     <cit type="translation">
-                        <quote>In (our) free time we play volleball</quote>
-                     </cit>
+                  <quote>fī waqt il-farāġ nilʕab il-kura iṭ-ṭāʔira</quote>
+                  <cit type="translation">
+                     <quote>In (our) free time we play volleball</quote>
                   </cit>
-                  <note type="general">There is no mention of the indicative prefix by the author</note>
+               </cit>
+               <note type="general">There is no mention of the indicative prefix by the author</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0324" status="done" resp="dmp:RZ">
@@ -1165,14 +1037,14 @@
                <placeName ref="geo:kuwait_city"/>
                <lang corresp="..\profiles\vicav_profile_KWT-KWC.xml"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0002.ct_0000">
-                     <quote>hu yištiġil fi l-ḥafīz māli</quote>
-                     <cit type="translation">
-                        <quote>he works in my office</quote>
-                     </cit>
+                  <quote>hu yištiġil fi l-ḥafīz māli</quote>
+                  <cit type="translation">
+                     <quote>he works in my office</quote>
                   </cit>
+               </cit>
                <note type="general">There is no mention of the indicative prefix by the author</note>
             </wib:featureValueObservation>
-                                    
+
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0057" status="pre" resp="dmp:RZ">
                <name type="featureValue" ref=""/>
                <bibl corresp="src:KUW_2022_GK" type="publication" cert="unknown"/>
@@ -1206,11 +1078,11 @@
                <lang corresp="..\profiles\vicav_profile_SAU-MUR.xml"/>
                <personGrp role="tribe" corresp="pgr:al_murra"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0326.ct_0000">
-                     <quote>hu insānin xabal yalʕab maʕ al-ǧihāl</quote>
-                     <cit type="translation">
-                        <quote>he was mad and played with children</quote>
-                     </cit>
+                  <quote>hu insānin xabal yalʕab maʕ al-ǧihāl</quote>
+                  <cit type="translation">
+                     <quote>he was mad and played with children</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0321" status="done" resp="dmp:RZ">
@@ -1219,11 +1091,11 @@
                <placeName ref="geo:najd"/>
                <lang corresp="..\profiles\vicav_profile_SAU-NJD.xml"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0321.ct_0000">
-                     <quote>kill yōm aktib xaṭṭ l-ixūy</quote>
-                     <cit type="translation">
-                        <quote>Everyday I write to my brother</quote>
-                     </cit>
+                  <quote>kill yōm aktib xaṭṭ l-ixūy</quote>
+                  <cit type="translation">
+                     <quote>Everyday I write to my brother</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0335" status="done" resp="dmp:RZ">
@@ -1232,11 +1104,11 @@
                <placeName ref="geo:kuwait"/>
                <personGrp role="tribe" corresp="pgr:dawasir"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0335.ct_0000">
-                     <quote>yaskinūn-ha badu u yaskinūn-ha l-ḥaḏ̣ar </quote>
-                     <cit type="translation">
-                        <quote>Bedouins and settled people live there</quote>
-                     </cit>
+                  <quote>yaskinūn-ha badu u yaskinūn-ha l-ḥaḏ̣ar </quote>
+                  <cit type="translation">
+                     <quote>Bedouins and settled people live there</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0004" status="done" resp="dmp:RZ">
@@ -1253,7 +1125,7 @@
                <lang corresp="..\profiles\vicav_profile_SAU-HJZ.xml"/>
                <note type="general">There is no mention of the indicative prefix by the author</note>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0051" status="pre" resp="dmp:RZ">
                <name type="featureValue" ref=""/>
                <bibl corresp="src:SAU_2022_GK" type="publication" cert="unknown"/>
@@ -1268,7 +1140,7 @@
                <name type="featureValue" ref="#indic_pref_no"/>
                <bibl corresp="zot:pereira_2010_1918" type="publication"/>
                <placeName ref="geo:tripoli_libya"/>
-               <lang corresp="..\profiles\vicav_profile_LBY-TPL.xml"/>   
+               <lang corresp="..\profiles\vicav_profile_LBY-TPL.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0005" status="done" resp="dmp:RZ">
@@ -1392,7 +1264,7 @@
                <note type="general">There is no mention of the indicative prefix by the author</note>
             </wib:featureValueObservation>
 
-           
+
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0231" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#indic_pref_no"/>
@@ -1424,20 +1296,39 @@
                <lang corresp="..\profiles\vicav_profile_ESP-TLD.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0183" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0183" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#indic_pref_b"/>
                <bibl corresp="zot:manfredi_2012_3081" type="publication"/>
                <placeName ref="geo:kurdufan"/>
                <lang corresp="..\profiles\vicav_profile_SDN-KDF.xml"/>
+                  <cit type="example" xml:id="ft_indic_pref.fv_0183.ct_0001">
+                     <quote>al-banāt b-igru fi l-mádrasa</quote>
+                     <cit type="translation">
+                        <quote>the girls study at school</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0185" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:dickins_2009_3089" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0185" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#indic_pref_no"/>
+               <bibl corresp="zot:dickins_2009_3089" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
                <placeName ref="geo:khartoum"/>
                <lang corresp="..\profiles\vicav_profile_SDN-KRT.xml"/>
             </wib:featureValueObservation>
 
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0027" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#indic_pref_b"/>
+               <bibl corresp="zot:dickins_2009_3089" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
+               <placeName ref="geo:khartoum"/>
+               <lang corresp="..\profiles\vicav_profile_SDN-KRT.xml"/>
+               <cit type="example" xml:id="ft_indic_pref.fv_0027.ct_0000">
+                     <quote>bagūm assāʕa sitta</quote>
+                     <cit type="translation">
+                        <quote>I get up at six o'clock </quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+            
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0049" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#indic_pref_no"/>
                <bibl corresp="src:SDN_2023_SK" type="fieldwork"/>
@@ -1445,7 +1336,7 @@
                <lang corresp="..\profiles\vicav_profile_SDN-RYD.xml"/>
                <personGrp role="tribe" corresp="pgr:rashayda_sudan"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0046" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#indic_pref_no"/>
                <bibl corresp="src:SDN_1974-1978_SR" type="fieldwork"/>
@@ -1668,138 +1559,166 @@
                <personGrp role="religion" corresp="pgr:jews"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0133" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0133" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#indic_pref_b"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:wadi_sulaf"/>
+               <note type="general">The use of the indicative prefix is optional.</note>
                <lang corresp="..\profiles\vicav_profile_EGY-ASD.xml"/>
                <personGrp role="tribe" corresp="pgr:awlad_said"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0134" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0134" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#indic_pref_b"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:ramlat_humayyir"/>
+               <note type="general">The use of the indicative prefix is optional.</note>
                <lang corresp="..\profiles\vicav_profile_EGY-BDA.xml"/>
                <personGrp role="tribe" corresp="pgr:badarah"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0136" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0136" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#indic_pref_b"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:wadi_al_islah"/>
+               <note type="general">The use of the indicative prefix is optional.</note>
                <lang corresp="..\profiles\vicav_profile_EGY-BWS.xml"/>
                <personGrp role="tribe" corresp="pgr:bani_wasil"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0138" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0138" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#indic_pref_b"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:qalat_al_jindi"/>
+               <note type="general">The use of the indicative prefix is optional.</note>
                <lang corresp="..\profiles\vicav_profile_EGY-DBR.xml"/>
                <personGrp role="tribe" corresp="pgr:dbur"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0140" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0140" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#indic_pref_b"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:saint_catherine_s_monastery"/>
+               <note type="general">The use of the indicative prefix is optional.</note>
                <lang corresp="..\profiles\vicav_profile_EGY-GBL.xml"/>
                <personGrp role="tribe" corresp="pgr:jbaliyyah"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0142" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0142" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#indic_pref_b"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:jabal_al_malbad"/>
+               <note type="general">The use of the indicative prefix is optional.</note>
                <lang corresp="..\profiles\vicav_profile_EGY-GRG.xml"/>
                <personGrp role="tribe" corresp="pgr:jarajrah"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0143" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0143" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#indic_pref_b"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:wahat_fayran"/>
+               <note type="general">The use of the indicative prefix is optional.</note>
                <lang corresp="..\profiles\vicav_profile_EGY-GRR.xml"/>
                <personGrp role="tribe" corresp="pgr:gararshah"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0144" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0144" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#indic_pref_b"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:jabal_sarabit_al_khadim"/>
+               <note type="general">The use of the indicative prefix is optional.</note>
                <lang corresp="..\profiles\vicav_profile_EGY-HMD.xml"/>
                <personGrp role="tribe" corresp="pgr:hamadah"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0145" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0145" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#indic_pref_b"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:wadi_jiddi"/>
+               <note type="general">The use of the indicative prefix is optional.</note>
                <lang corresp="..\profiles\vicav_profile_EGY-HWT.xml"/>
                <personGrp role="tribe" corresp="pgr:hwetat_egypt"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0147" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0147" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#indic_pref_b"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:jabal_sarabit_al_khadim"/>
+               <note type="general">The use of the indicative prefix is optional.</note>
                <lang corresp="..\profiles\vicav_profile_EGY-LGT.xml"/>
                <personGrp role="tribe" corresp="pgr:legat"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0148" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0148" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#indic_pref_b"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:al_qusaymah"/>
+               <note type="general">The use of the indicative prefix is optional.</note>
                <lang corresp="..\profiles\vicav_profile_EGY-MLH.xml"/>
                <personGrp role="tribe" corresp="pgr:malalhah"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0149" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0149" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#indic_pref_b"/>
+
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:dahab"/>
+               <note type="general">The use of the indicative prefix is optional.</note>
                <lang corresp="..\profiles\vicav_profile_EGY-MZN.xml"/>
                <personGrp role="tribe" corresp="pgr:mzenah"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0151" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0151" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#indic_pref_b"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:wahat_fayran"/>
+               <note type="general">The use of the indicative prefix is optional.</note>
                <lang corresp="..\profiles\vicav_profile_EGY-SLH.xml"/>
                <personGrp role="tribe" corresp="pgr:sawalhah"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0154" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0154" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#indic_pref_b"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:sudr"/>
+               <note type="general">The use of the indicative prefix is optional.</note>
                <lang corresp="..\profiles\vicav_profile_EGY-TRB.xml"/>
                <personGrp role="tribe" corresp="pgr:tarabin"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0155" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0155" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#indic_pref_b"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:jabal_at_tih"/>
+               <note type="general">The use of the indicative prefix is optional.</note>
                <lang corresp="..\profiles\vicav_profile_EGY-TYH.xml"/>
                <personGrp role="tribe" corresp="pgr:tayaha"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0181" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0181" status="done" resp="dmp:SK">
+               <name type="featureValue" ref="#indic_pref_b"/>
                <bibl corresp="zot:manfredi_2013_2941" type="publication"/>
                <placeName ref="geo:kadugli"/>
                <lang corresp="..\profiles\vicav_profile_SDN-BKD.xml"/>
+               <cit type="example" xml:id="ft_indic_pref.fv_0181.ct_0000">
+                     <quote>b-adirr al-mulāḥ    fōg    al=ʕēš  </quote>
+                     <cit type="translation">
+                        <quote>I pour the sauce on the wheat </quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0184" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0184" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#indic_pref_b"/>
                <bibl corresp="zot:manfredi_2013_2941" type="publication"/>
                <placeName ref="geo:kadugli"/>
                <lang corresp="..\profiles\vicav_profile_SDN-KDG.xml"/>
+               <cit type="example" xml:id="ft_indic_pref.fv_0184.ct_0000">
+                     <quote>yōmi ana b-ašrab dǧabana</quote>
+                     <cit type="translation">
+                        <quote>I drink coffee everyday </quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0177" status="draft" resp="dmp:SK">
@@ -1830,8 +1749,22 @@
                <lang corresp="..\profiles\vicav_profile_SDN-SKR.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0182" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0182" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#indic_pref_b"/>
+               <bibl corresp="zot:roset_2018_8391" type="publication"/>
+               <placeName ref="geo:darfur"/>
+               <lang corresp="..\profiles\vicav_profile_SDN-DRF.xml"/>
+               <cit type="example" xml:id="ft_indic_pref.fv_0182.ct_0000">
+                     <quote>fi nās ba-gūmu saʕa sabʕa</quote>
+                     <cit type="translation">
+                        <quote>There are people who get up at seven</quote>
+                     </cit>
+                  </cit>
+                  <note type="general">The prefix b- is only attached with the 3.p.sg and pl. forms</note>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0029" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#indic_pref_no"/>
                <bibl corresp="zot:roset_2018_8391" type="publication"/>
                <placeName ref="geo:darfur"/>
                <lang corresp="..\profiles\vicav_profile_SDN-DRF.xml"/>
@@ -1844,11 +1777,17 @@
                <lang corresp="..\profiles\vicav_profile_TCD-ABC.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0186" status="draft" resp="dmp:SK">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0186" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#indic_pref_b"/>
                <bibl corresp="zot:trimingham_1946_0000" type="publication"/>
                <placeName ref="geo:omdurman"/>
                <lang corresp="..\profiles\vicav_profile_SDN-OMD.xml"/>
+               <cit type="example" xml:id="ft_indic_pref.fv_0186.ct_0000">
+                     <quote>ana badrus ʕarabi kulla yōm</quote>
+                     <cit type="translation">
+                        <quote>I take a lesson in Arabic every day </quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0281" status="draft" resp="dmp:SK">
@@ -1885,11 +1824,11 @@
                <placeName ref="geo:shanliurfa"/>
                <lang corresp="..\profiles\vicav_profile_TUR-URF.xml"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0131.ct_0000">
-                     <quote>Urfa kull-u b-ᵊrmaḏ̣ān yišrab mayyt as-sūs.</quote>
-                     <cit type="translation">
-                        <quote>The whole of Urfa drinks liquorice syrup in Ramadan.</quote>
-                     </cit>
+                  <quote>Urfa kull-u b-ᵊrmaḏ̣ān yišrab mayyt as-sūs.</quote>
+                  <cit type="translation">
+                     <quote>The whole of Urfa drinks liquorice syrup in Ramadan.</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0196" status="done" resp="dmp:SP">
@@ -2026,7 +1965,7 @@
                <lang corresp="..\profiles\vicav_profile_SYR-UGD.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0260" status="draft" resp="dmp:SP">
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0260" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#indic_pref_no"/>
                <bibl corresp="zot:behnstedt_1998_0001" type="publication" status="CHECKED"/>
                <placeName ref="geo:guellala"/>
@@ -2049,7 +1988,7 @@
                <lang corresp="..\profiles\vicav_profile_TUN-DJM.xml"/>
                <personGrp role="religion" corresp="pgr:malikites"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0059" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#indic_pref_no"/>
                <bibl corresp="zot:naddari_2023_2742" type="publication"/>
@@ -2148,11 +2087,11 @@
                <placeName ref="geo:cyprus"/>
                <lang corresp="..\profiles\vicav_profile_CYP-KOR.xml"/>
                <cit type="example" xml:id="ft_indic_pref.fv_0216.ct_0000">
-                     <quote>p-akol</quote>
-                     <cit type="translation">
-                        <quote>I eat.</quote>
-                     </cit>
+                  <quote>p-akol</quote>
+                  <cit type="translation">
+                     <quote>I eat.</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0217" status="done" resp="dmp:TD">
@@ -2198,7 +2137,7 @@
                <placeName ref="geo:marrakesh"/>
                <lang corresp="..\profiles\vicav_profile_MAR-MRK.xml"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0007" status="done" resp="dmp:TD">
                <name type="featureValue" ref="#indic_pref_ta"/>
                <bibl corresp="zot:sanchez_2014_6569" type="publication"/>
@@ -2220,7 +2159,7 @@
                <placeName ref="geo:settat"/>
                <lang corresp="..\profiles\vicav_profile_MAR-STT.xml"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0017" status="done" resp="dmp:TD">
                <name type="featureValue" ref="#indic_pref_ta"/>
                <bibl corresp="zot:aguadé_2013_4881" type="publication"/>
@@ -2249,7 +2188,7 @@
                <placeName ref="geo:skoura"/>
                <lang corresp="..\profiles\vicav_profile_MAR-SKR.xml"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0066" status="done" resp="dmp:TD">
                <name type="featureValue" ref="#indic_pref_ta"/>
                <bibl corresp="zot:aguade_1995_0001" type="publication" status="CHECKED"/>
@@ -2349,7 +2288,7 @@
                <lang corresp="..\profiles\vicav_profile_MAR-ZIR.xml"/>
                <personGrp role="tribe" corresp="pgr:zaer"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0072" status="done" resp="dmp:TD">
                <name type="featureValue" ref="#indic_pref_ta"/>
                <bibl corresp="src:MOR_2022_TD" type="publication"/>
@@ -2408,7 +2347,7 @@
                <placeName ref="geo:anjra"/>
                <lang corresp="..\profiles\vicav_profile_MAR-ANJ.xml"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0067" status="done" resp="dmp:TD">
                <name type="featureValue" ref="#indic_pref_la"/>
                <bibl corresp="zot:vicente_2000_4058" type="publication"/>
@@ -2422,7 +2361,7 @@
                <placeName ref="geo:masmouda"/>
                <lang corresp="..\profiles\vicav_profile_MAR-MSM.xml"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0069" status="done" resp="dmp:TD">
                <name type="featureValue" ref="#indic_pref_la"/>
                <bibl corresp="zot:vicente_2003_0000" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
@@ -2506,25 +2445,25 @@
                <lang corresp="..\profiles\vicav_profile_YEM-YAF.xml"/>
                <note type="general">Some dialects in the Yāfiʕ area have an indicative prefix and some do not.</note>
                <cit type="example" xml:id="ft_indic_pref.fv_0312.ct_0000">
-                     <quote>baṣal</quote>
-                     <cit type="translation">
-                        <quote>I arrive</quote>
-                     </cit>
+                  <quote>baṣal</quote>
+                  <cit type="translation">
+                     <quote>I arrive</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0064" status="done" resp="dmp:VE">
+
+            <wib:featureValueObservation xml:id="ft_indic_pref.fv_0064" status="done" resp="dmp:VE">
                <name type="featureValue" ref="#indic_pref_no"/>
                <bibl corresp="zot:vanhove_1995_0364" type="publication" status="CHECKED"/>
                <placeName ref="geo:yafa"/>
                <lang corresp="..\profiles\vicav_profile_YEM-YAF.xml"/>
                <note type="general">Some dialects in the Yāfiʕ area have an indicative prefix and some do not.</note>
-            <cit type="example" xml:id="ft_indic_pref.fv_0064.ct_0000">
-                     <quote>ʔaṣal</quote>
-                     <cit type="translation">
-                        <quote>I arrive</quote>
-                     </cit>
+               <cit type="example" xml:id="ft_indic_pref.fv_0064.ct_0000">
+                  <quote>ʔaṣal</quote>
+                  <cit type="translation">
+                     <quote>I arrive</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_indic_pref.fv_0000" status="done" resp="dmp:VE">

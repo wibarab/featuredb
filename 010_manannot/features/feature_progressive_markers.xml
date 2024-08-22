@@ -9,7 +9,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Variants of Progressive markers</title>
+            <title>Progressive markers</title>
          </titleStmt>
          <publicationStmt>
             <publisher>{publisher}</publisher>
@@ -31,6 +31,12 @@
             <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
          </listPrefixDef>
       </encodingDesc>
+      
+       <profileDesc>
+         <textClass>
+          <catRef target="dmp:TAM_markers"/>
+          </textClass>
+      </profileDesc>
 
       <revisionDesc status="draft">
          <change when="2022-08-17" who="dmp:">c</change>
@@ -1559,27 +1565,6 @@
                <personGrp role="tribe" corresp="pgr:axarsah"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0190" status="draft" resp="dmp:PH">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:décobert_1985_9706" type="publication"/>
-               <placeName ref="geo:massaguet"/>
-               <lang corresp="..\profiles\vicav_profile_TCD-ABK.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0191" status="draft" resp="dmp:PH">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:décobert_1985_9706" type="publication"/>
-               <placeName ref="geo:bout_el_fil"/>
-               <lang corresp="..\profiles\vicav_profile_TCD-BBL.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0195" status="draft" resp="dmp:PH">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:décobert_1985_9706" type="publication"/>
-               <placeName ref="geo:djedaa"/>
-               <lang corresp="..\profiles\vicav_profile_TCD-ULR.xml"/>
-            </wib:featureValueObservation>
-
             <wib:featureValueObservation xml:id="ft_prg_mar.fv_0278" status="done" resp="dmp:PH">
                <name type="featureValue" ref="#prog_mark_tann"/>
                <bibl corresp="zot:drop_2007_0000" type="publication"/>
@@ -1596,127 +1581,7 @@
                <personGrp role="religion" corresp="pgr:jews"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0133" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:wadi_sulaf"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-ASD.xml"/>
-               <personGrp role="tribe" corresp="pgr:awlad_said"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0134" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:ramlat_humayyir"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-BDA.xml"/>
-               <personGrp role="tribe" corresp="pgr:badarah"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0136" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:wadi_al_islah"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-BWS.xml"/>
-               <personGrp role="tribe" corresp="pgr:bani_wasil"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0138" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:qalat_al_jindi"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-DBR.xml"/>
-               <personGrp role="tribe" corresp="pgr:dbur"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0140" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:saint_catherine_s_monastery"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-GBL.xml"/>
-               <personGrp role="tribe" corresp="pgr:jbaliyyah"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0142" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:jabal_al_malbad"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-GRG.xml"/>
-               <personGrp role="tribe" corresp="pgr:jarajrah"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0143" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:wahat_fayran"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-GRR.xml"/>
-               <personGrp role="tribe" corresp="pgr:gararshah"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0144" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:jabal_sarabit_al_khadim"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-HMD.xml"/>
-               <personGrp role="tribe" corresp="pgr:hamadah"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0145" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:wadi_jiddi"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-HWT.xml"/>
-               <personGrp role="tribe" corresp="pgr:hwetat_egypt"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0147" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:jabal_sarabit_al_khadim"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-LGT.xml"/>
-               <personGrp role="tribe" corresp="pgr:legat"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0148" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:al_qusaymah"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-MLH.xml"/>
-               <personGrp role="tribe" corresp="pgr:malalhah"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0149" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:dahab"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-MZN.xml"/>
-               <personGrp role="tribe" corresp="pgr:mzenah"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0151" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:wahat_fayran"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-SLH.xml"/>
-               <personGrp role="tribe" corresp="pgr:sawalhah"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0154" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:sudr"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-TRB.xml"/>
-               <personGrp role="tribe" corresp="pgr:tarabin"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0155" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:jabal_at_tih"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-TYH.xml"/>
-               <personGrp role="tribe" corresp="pgr:tayaha"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0181" status="done" resp="dmp:RZ">
+                      <wib:featureValueObservation xml:id="ft_prg_mar.fv_0181" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#prog_mark_bi"/>
                <bibl corresp="src:PC_SM" type="publication"/>
                <placeName ref="geo:kadugli"/>

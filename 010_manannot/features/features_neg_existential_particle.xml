@@ -9,7 +9,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Variants of the negated existential particle</title>
+            <title>Existential particle negated</title>
          </titleStmt>
          <publicationStmt>
             <publisher>{publisher}</publisher>
@@ -31,6 +31,12 @@
             <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
          </listPrefixDef>
       </encodingDesc>
+      
+      <profileDesc>
+         <textClass>
+          <catRef target="dmp:particles"/>
+          </textClass>
+      </profileDesc>
 
       <revisionDesc status="done">
          <change when="2022-08-17" who="dmp:">c</change>
@@ -193,16 +199,24 @@
 
          <div xmlns:tei="http://www.tei-c.org/ns/1.0" type="featureValueObservations">
             
-           <wib:featureValueObservation xml:id="ft_neg_exst_particle.fv_0050" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
+           <wib:featureValueObservation xml:id="ft_neg_exst_particle.fv_0050" status="pre" resp="dmp:AID">
+               <name type="featureValue" ref="#nep_ma_buu"/>
                <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
                <placeName ref="geo:ed_dhayra"/>
                <lang corresp="..\profiles\vicav_profile_LBN-ARA.xml"/>
                <personGrp role="tribe" corresp="pgr:aramsha_lebanon"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_neg_exst_particle.fv_0063" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_neg_exst_particle.fv_0063" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#nep_ma_bii"/>
+               <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
+               <placeName ref="geo:khalde"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-KHA.xml"/>
+               <personGrp role="tribe" corresp="pgr:arab_xalde"/>
+            </wib:featureValueObservation>
+            
+              <wib:featureValueObservation xml:id="ft_neg_exst_particle.fv_0064" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#nep_ma_fii"/>
                <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
                <placeName ref="geo:khalde"/>
                <lang corresp="..\profiles\vicav_profile_LBN-KHA.xml"/>

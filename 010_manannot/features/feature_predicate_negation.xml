@@ -9,7 +9,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Variants of Predicate Negation</title>
+            <title>Predicate Negation</title>
          </titleStmt>
          <publicationStmt>
             <publisher>{publisher}</publisher>
@@ -31,6 +31,12 @@
             <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
          </listPrefixDef>
       </encodingDesc>
+
+      <profileDesc>
+         <textClass>
+            <catRef target="dmp:negation"/>
+         </textClass>
+      </profileDesc>
 
       <revisionDesc status="draft">
          <change when="2022-08-17" who="dmp:">c</change>
@@ -89,6 +95,10 @@
                </item>
                <item xml:id="pred_neg_ma_hu">
                   <label>ma hu / mā hu</label>
+                  <desc/>
+               </item>
+               <item xml:id="pred_neg_maa_huush">
+                  <label>māhūš</label>
                   <desc/>
                </item>
                <item xml:id="pred_neg_m_pron">
@@ -803,11 +813,11 @@
                <lang corresp="..\profiles\vicav_profile_SYR-DAM.xml"/>
                <cit type="sourceRepresentation"><quote>mū</quote></cit>
                <cit type="example" xml:id="ft_pred_neg.fv_0118.ct_0000">
-                     <quote>hayy fəkra mū ʕāṭle.</quote>
-                     <cit type="translation">
-                        <quote>This is not a bad idea.</quote>
-                     </cit>
+                  <quote>hayy fəkra mū ʕāṭle.</quote>
+                  <cit type="translation">
+                     <quote>This is not a bad idea.</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0112" status="done" resp="dmp:CL">
@@ -1291,21 +1301,33 @@
                <lang corresp="..\profiles\vicav_profile_ESP-TLD.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0183" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0183" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#pred_neg_ma"/>
                <bibl corresp="zot:manfredi_2012_3081" type="publication"/>
                <placeName ref="geo:kurdufan"/>
                <lang corresp="..\profiles\vicav_profile_SDN-KDF.xml"/>
+               <cit type="example" xml:id="ft_pred_neg.fv_0183.ct_0000">
+                  <quote>má-ḥāmid</quote>
+                  <cit type="translation">
+                     <quote>It is not sour</quote>
+                  </cit>
+               </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0185" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:dickins_2009_3089" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0185" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#pred_neg_ma"/>
+               <bibl corresp="zot:dickins_2009_3089" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
                <placeName ref="geo:khartoum"/>
                <lang corresp="..\profiles\vicav_profile_SDN-KRT.xml"/>
+               <cit type="example" xml:id="ft_pred_neg.fv_0185.ct_0000">
+                  <quote>inta ma rāǧil/kwēyis</quote>
+                  <cit type="translation">
+                     <quote>you're not a man</quote>
+                  </cit>
+               </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0049" status="draft" resp="dmp:RZ">
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0049" status="pre" resp="dmp:RZ">
                <name type="featureValue" ref=""/>
                <bibl corresp="src:SDN_2023_SK" type="fieldwork"/>
                <placeName ref="geo:mwees"/>
@@ -1313,7 +1335,7 @@
                <personGrp role="tribe" corresp="pgr:rashayda_sudan"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0046" status="draft" resp="dmp:RZ">
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0046" status="pre" resp="dmp:RZ">
                <name type="featureValue" ref=""/>
                <bibl corresp="src:SDN_1974-1978_SR" type="fieldwork"/>
                <placeName ref="geo:halfa_al-jadida"/>
@@ -1322,8 +1344,8 @@
                <personGrp role="tribe" corresp="pgr:rashayda_sudan"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0274" status="draft" resp="dmp:PH">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0274" status="done" resp="dmp:PH">
+               <name type="featureValue" ref="#pred_neg_mish"/>
                <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
                <placeName ref="geo:alexandria"/>
                <lang corresp="..\profiles\vicav_profile_EGY-ALX.xml"/>
@@ -1506,27 +1528,6 @@
                <personGrp role="tribe" corresp="pgr:axarsah"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0190" status="draft" resp="dmp:PH">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:décobert_1985_9706" type="publication"/>
-               <placeName ref="geo:massaguet"/>
-               <lang corresp="..\profiles\vicav_profile_TCD-ABK.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0191" status="draft" resp="dmp:PH">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:décobert_1985_9706" type="publication"/>
-               <placeName ref="geo:bout_el_fil"/>
-               <lang corresp="..\profiles\vicav_profile_TCD-BBL.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0195" status="draft" resp="dmp:PH">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:décobert_1985_9706" type="publication"/>
-               <placeName ref="geo:djedaa"/>
-               <lang corresp="..\profiles\vicav_profile_TCD-ULR.xml"/>
-            </wib:featureValueObservation>
-
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0278" status="done" resp="dmp:PH">
                <name type="featureValue" ref="#pred_neg_mish"/>
                <bibl corresp="zot:drop_2007_0000" type="publication"/>
@@ -1544,139 +1545,6 @@
                <note type="general">Deducted from example</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0133" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:wadi_sulaf"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-ASD.xml"/>
-               <personGrp role="tribe" corresp="pgr:awlad_said"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0134" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:ramlat_humayyir"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-BDA.xml"/>
-               <personGrp role="tribe" corresp="pgr:badarah"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0136" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:wadi_al_islah"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-BWS.xml"/>
-               <personGrp role="tribe" corresp="pgr:bani_wasil"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0138" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:qalat_al_jindi"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-DBR.xml"/>
-               <personGrp role="tribe" corresp="pgr:dbur"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0140" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:saint_catherine_s_monastery"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-GBL.xml"/>
-               <personGrp role="tribe" corresp="pgr:jbaliyyah"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0142" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:jabal_al_malbad"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-GRG.xml"/>
-               <personGrp role="tribe" corresp="pgr:jarajrah"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0143" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:wahat_fayran"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-GRR.xml"/>
-               <personGrp role="tribe" corresp="pgr:gararshah"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0144" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:jabal_sarabit_al_khadim"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-HMD.xml"/>
-               <personGrp role="tribe" corresp="pgr:hamadah"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0145" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:wadi_jiddi"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-HWT.xml"/>
-               <personGrp role="tribe" corresp="pgr:hwetat_egypt"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0147" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:jabal_sarabit_al_khadim"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-LGT.xml"/>
-               <personGrp role="tribe" corresp="pgr:legat"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0148" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:al_qusaymah"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-MLH.xml"/>
-               <personGrp role="tribe" corresp="pgr:malalhah"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0149" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:dahab"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-MZN.xml"/>
-               <personGrp role="tribe" corresp="pgr:mzenah"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0151" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:wahat_fayran"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-SLH.xml"/>
-               <personGrp role="tribe" corresp="pgr:sawalhah"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0154" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:sudr"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-TRB.xml"/>
-               <personGrp role="tribe" corresp="pgr:tarabin"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0155" status="draft" resp="dmp:SP">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:jong_2011_8794" type="publication"/>
-               <placeName ref="geo:jabal_at_tih"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-TYH.xml"/>
-               <personGrp role="tribe" corresp="pgr:tayaha"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0181" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:manfredi_2013_2941" type="publication"/>
-               <placeName ref="geo:kadugli"/>
-               <lang corresp="..\profiles\vicav_profile_SDN-BKD.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0184" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:manfredi_2013_2941" type="publication"/>
-               <placeName ref="geo:kadugli"/>
-               <lang corresp="..\profiles\vicav_profile_SDN-KDG.xml"/>
-            </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0177" status="draft" resp="dmp:TD">
                <name type="featureValue" ref=""/>
@@ -1685,9 +1553,9 @@
                <lang corresp="..\profiles\vicav_profile_ERI-DHL.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0192" status="draft" resp="dmp:PH">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="zot:owens_1985_0000" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0192" status="done" resp="dmp:PH">
+               <name type="featureValue" ref="#pred_neg_ma"/>
+               <bibl corresp="zot:pommerol_1999_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
                <placeName ref="geo:ndjamena"/>
                <lang corresp="..\profiles\vicav_profile_TCD-NDJ.xml"/>
             </wib:featureValueObservation>
@@ -1699,18 +1567,24 @@
                <lang corresp="..\profiles\vicav_profile_NGA-NGA.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0188" status="draft" resp="dmp:RZ">
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0188" status="draft" resp="dmp:CL">
                <name type="featureValue" ref=""/>
                <bibl corresp="zot:reichmuth_1983_0001" type="publication"/>
                <placeName ref="geo:halfa_al-jadida"/>
                <lang corresp="..\profiles\vicav_profile_SDN-SKR.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0182" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0182" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#pred_neg_ma"/>
                <bibl corresp="zot:roset_2018_8391" type="publication"/>
                <placeName ref="geo:darfur"/>
                <lang corresp="..\profiles\vicav_profile_SDN-DRF.xml"/>
+               <cit type="example" xml:id="ft_pred_neg.fv_0182.ct_0000">
+                  <quote>ma simi</quote>
+                  <cit type="translation">
+                     <quote>not good</quote>
+                  </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0189" status="done" resp="dmp:PH">
@@ -1720,11 +1594,17 @@
                <lang corresp="..\profiles\vicav_profile_TCD-ABC.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0186" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""/>
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0186" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#pred_neg_ma"/>
                <bibl corresp="zot:trimingham_1946_0000" type="publication"/>
                <placeName ref="geo:omdurman"/>
                <lang corresp="..\profiles\vicav_profile_SDN-OMD.xml"/>
+               <cit type="example" xml:id="ft_pred_neg.fv_0186.ct_0000">
+                  <quote>mā ʕāli</quote>
+                  <cit type="translation">
+                     <quote>not high </quote>
+                  </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0281" status="done" resp="dmp:PH">
@@ -1734,7 +1614,7 @@
                <lang corresp="..\profiles\vicav_profile_EGY-CRO.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0017" status="draft" resp="dmp:RZ">
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0017" status="pre" resp="dmp:RZ">
                <name type="featureValue" ref=""/>
                <bibl corresp="zot:young_1996_2001" type="publication"/>
                <placeName ref="geo:khashm"/>
@@ -1750,16 +1630,16 @@
                <lang corresp="..\profiles\vicav_profile_DJI-OBK.xml"/>
                <cit type="sourceRepresentation"><quote>mūš</quote></cit>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0037" status="done" resp="dmp:CL">
+
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0037" status="done" resp="dmp:CL">
                <name type="featureValue" ref="#pred_neg_mish"/>
                <bibl corresp="zot:simeone_senelle_youssi_2002_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
                <placeName ref="geo:obock"/>
                <lang corresp="..\profiles\vicav_profile_DJI-OBK.xml"/>
                <cit type="sourceRepresentation"><quote>məš</quote></cit>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0176" status="done" resp="dmp:CL">
+
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0038" status="done" resp="dmp:CL">
                <name type="featureValue" ref="#pred_neg_mash"/>
                <bibl corresp="zot:simeone_senelle_youssi_2002_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--></bibl>
                <placeName ref="geo:obock"/>
@@ -1780,7 +1660,7 @@
                </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0270" status="draft" resp="dmp:RZ">
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0270" status="pre" resp="dmp:RZ">
                <name type="featureValue" ref=""/>
                <bibl corresp="zot:zarb_2023_0602" type="publication"/>
                <placeName ref="geo:testour"/>
@@ -1901,11 +1781,43 @@
                </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0059" status="draft" resp="dmp:RZ">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="z" type="publication"/>
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0059" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#pred_neg_mush"/>
+               <bibl corresp="zot:naddari_2023_2742" type="publication"/>
                <placeName ref="geo:nefza"/>
                <lang corresp="..\profiles\vicav_profile_TUN-NFZ.xml"/>
+               <cit type="example" xml:id="ft_pred_neg.fv_0059.ct_0000">
+                  <quote>Tūnis muš kīf Lībya</quote>
+                  <cit type="translation">
+                     <quote>Tunisia is not like Libya</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0039" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#pred_neg_muush"/>
+               <bibl corresp="zot:naddari_2023_2742" type="publication"/>
+               <placeName ref="geo:nefza"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-NFZ.xml"/>
+               <cit type="example" xml:id="ft_pred_neg.fv_0039.ct_0000">
+                  <quote>nǟya mūš tǟʕba</quote>
+                  <cit type="translation">
+                     <quote>I am not tired (fem.)</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_pred_neg.fv_0040" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#pred_neg_maa_huush"/>
+               <bibl corresp="zot:naddari_2023_2742" type="publication"/>
+               <placeName ref="geo:nefza"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-NFZ.xml"/>
+               <cit type="example" xml:id="ft_pred_neg.fv_0040.ct_0000">
+                  <quote> māhūš in-nǟs il-kull mʕā bʕaḏha</quote>
+                  <cit type="translation">
+                     <quote>not all people are together</quote>
+                  </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pred_neg.fv_0263" status="done" resp="dmp:SP">

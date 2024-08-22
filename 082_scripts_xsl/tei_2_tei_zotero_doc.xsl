@@ -6,9 +6,6 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     exclude-result-prefixes="tei xs">
     
-    <!-- Output method set to XML with indentation -->
-    <xsl:output method="xml" indent="yes" />
-    
     <!-- Identity template to copy everything by default -->
     <xsl:template match="node() | @*">
         <xsl:copy>
