@@ -62,6 +62,10 @@
                 <label>/ǧ/&gt;/g/</label>
                    <desc>/g/ IPA[g] + affricate ǧ IPA[ʤ] in the environment of anterior vowel</desc>
                </item>
+                <item xml:id="q_g_affr3">
+                <label>/ž/&amp;gt;/g/</label>
+                   <desc>/g/ IPA[̣g] + ž IPA[​ʒ] in the environment of anterior vowel</desc>
+               </item>
                <item xml:id="q_hamza">
                    <label>/ʔ/</label>
                     <desc>/ʔ/ IPA[ʔ] only</desc>
@@ -70,9 +74,13 @@
                    <label>/ġ/</label>
                    <desc>/ġ/ IPA[ɣ]</desc>
                </item>
+               <item xml:id="q_gh_excep">
+                   <label>/ġ/ exceptions</label>
+                   <desc>/ġ/ IPA[ɣ] only in specific lexical items</desc>
+               </item>
                <item xml:id="q_q">
                   <label>/q/</label>
-                  <desc>/q/ IPA[ɣ]</desc>
+                  <desc>/q/ IPA[q]</desc>
                </item>
                <item xml:id="q_k_emph">
                   <label>/ḳ/</label>
@@ -80,11 +88,19 @@
                </item>
                <item xml:id="q_k">
                  <label>/k/</label>
-                 <desc>/k/ IPA[kˠ]</desc>
+                 <desc>/k/ IPA[k]</desc>
+               </item>
+                <item xml:id="q_k_excep">
+                 <label>/k/ exceptions</label>
+                 <desc>/k/ IPA[k] only in specific lexical items</desc>
                </item>
                <item xml:id="q_x">
                  <label>/x/</label>
-                 <desc>/x/ IPA[kˠ]</desc>
+                 <desc>/x/ IPA[x]</desc>
+               </item>
+               <item xml:id="q_x_excep">
+                 <label>/x/ exceptions</label>
+                 <desc>/x/ IPA[x] only in specific lexical items</desc>
                </item>
             </list>
          </div>
@@ -338,6 +354,29 @@
                   </cit>
                </cit>
                <note type="general">Affrication of g has only been found to be used rarely by old informants of the Zreyjat tribe and by one 64-year-old man of the Nʕēm tribe when he was imitating the "traditional Bedouin dialect"</note>
+               <note type="constraintNote">This reflex seems to have remained only in some specific lexical items and it does not seem to be used anymore systematically</note>
+            </wib:featureValueObservation>
+            
+             <wib:featureValueObservation xml:id="{docID}.fv_0000"  status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#q_g_affr3"/>
+               <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
+               <placeName ref="geo:el_karantina"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"/>
+               <personGrp role="tribe" corresp="pgr:arab_maslax"/>
+               <personGrp role="ageGroup" corresp="pgr:old"/>
+               <cit xml:id="{precFvoID}.ct_0001" type="example">
+                  <quote>zrēžāt</quote>
+                  <cit type="translation">
+                     <quote>Zuraykat</quote>
+                  </cit>
+               </cit>
+               <cit xml:id="{precFvoID}.ct_0000" type="example">
+                  <quote>ždūra</quote>
+                  <cit type="translation">
+                     <quote>pots</quote>
+                  </cit>
+               </cit>
+               <note type="general">Specially common </note>
                <note type="constraintNote">This reflex seems to have remained only in some specific lexical items and it does not seem to be used anymore systematically</note>
             </wib:featureValueObservation>
             
@@ -1496,7 +1535,7 @@
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_q.fv_0353" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#q_k"/>
+               <name type="featureValue" ref="#q_k_excep"/>
                <bibl corresp="zot:haidar_2006_8572" type="publication"/>
                <placeName ref="geo:baghdad"/>
                <lang corresp="..\profiles\vicav_profile_IRQ-BGD.xml"/>
@@ -1509,7 +1548,7 @@
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_q.fv_0354" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#q_x"/>
+               <name type="featureValue" ref="#q_x_excep"/>
                <bibl corresp="zot:haidar_2006_8572" type="publication"/>
                <placeName ref="geo:baghdad"/>
                <lang corresp="..\profiles\vicav_profile_IRQ-BGD.xml"/>
@@ -1606,7 +1645,7 @@
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_q.fv_0075" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#q_x"/>
+               <name type="featureValue" ref="#q_x_excep"/>
                <bibl corresp="zot:fink_2017_3211" type="publication"/>
                <placeName ref="geo:hasankeyf"/>
                <lang corresp="..\profiles\vicav_profile_TUR-HAS.xml"/>
@@ -1672,7 +1711,7 @@
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_q.fv_0361" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#q_gh"/>
+               <name type="featureValue" ref="#q_gh_excep"/>
                <bibl corresp="zot:lahdo_2009_1103" type="publication" status="CHECKED"/>
                <placeName ref="geo:siirt"/>
                <lang corresp="..\profiles\vicav_profile_TUR-SII.xml"/>
@@ -1686,7 +1725,7 @@
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_q.fv_0360" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#q_x"/>
+               <name type="featureValue" ref="#q_x_excep"/>
                <bibl corresp="zot:lahdo_2009_1103" type="publication" status="CHECKED"/>
                <placeName ref="geo:siirt"/>
                <lang corresp="..\profiles\vicav_profile_TUR-SII.xml"/>
@@ -1713,7 +1752,7 @@
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_q.fv_0336" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#q_gh"/>
+               <name type="featureValue" ref="#q_gh_excep"/>
                <bibl corresp="zot:leitner_2020_8765" type="publication"/>
                <placeName ref="geo:khuzestan"/>
                <lang corresp="..\profiles\vicav_profile_IRN-KHU.xml"/>
@@ -1727,7 +1766,7 @@
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_q.fv_0384" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#q_k"/>
+               <name type="featureValue" ref="#q_k_excep"/>
                <bibl corresp="zot:leitner_2020_8765" type="publication"/>
                <placeName ref="geo:khuzestan"/>
                <lang corresp="..\profiles\vicav_profile_IRN-KHU.xml"/>
@@ -2044,7 +2083,7 @@
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_q.fv_0128" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#q_x"/>
+               <name type="featureValue" ref="#q_x_excep"/>
                <bibl corresp="zot:wittrich_2001_0000" type="publication"/>
                <placeName ref="geo:idil_aazex"/>
                <lang corresp="..\profiles\vicav_profile_TUR-IDI.xml"/>
@@ -3117,7 +3156,7 @@
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_q.fv_0177" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#q_gh"/>
+               <name type="featureValue" ref="#q_gh_excep"/>
                <bibl corresp="zot:manfredi_2018_3887" type="publication" status="CHECKED"/>
                <placeName ref="geo:dahlak_archipelago"/>
                <lang corresp="..\profiles\vicav_profile_ERI-DHL.xml"/>
