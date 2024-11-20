@@ -30,6 +30,19 @@
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"/>
             <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
          </listPrefixDef>
+          <classDecl>
+            <taxonomy>
+               <category xml:id="retention"> 
+                  <catDesc>Kept (Retention)</catDesc>
+               </category>
+               <category xml:id="partRet">
+                  <catDesc>Partially Kept</catDesc>
+               </category>
+                <category xml:id="shift">
+                     <catDesc>Shift</catDesc>
+                  </category>
+            </taxonomy>
+         </classDecl>
       </encodingDesc>
       
       <profileDesc>
@@ -53,28 +66,28 @@
          <div type="featureDescription">
             <head>Feature Values</head>
             <list type="featureValues">
-               <item xml:id="kept">
+               <item xml:id="kept" corresp="#retention">
                   <label>interdentals totally kept</label>
                </item>
-               <item xml:id="partially1">
+               <item xml:id="partially1" corresp="#partRet">
                   <label>Partially kept: ḏ and ṯ kept</label>
                </item>
-               <item xml:id="partially2">
+               <item xml:id="partially2" corresp="#partRet">
                   <label>Partially kept: ḏ and  ḏ̣  kept</label>
                </item>
-               <item xml:id="postdentals">
+               <item xml:id="postdentals" corresp="#shift">
                   <label>Reflected as postdentals</label>
                </item>
-               <item xml:id="postdentals_vestigial_ḏ̣">
+               <item xml:id="postdentals_vestigial_ḏ̣" corresp="#shift">
                   <label>Reflected as postdentals with retention of ḏ̣  in some lexical items</label>
                </item>
-               <item xml:id="labiodentals">
+               <item xml:id="labiodentals" corresp="#shift">
                   <label>Reflected as labiodentals</label>
                </item>
-               <item xml:id="sibilants">
+               <item xml:id="sibilants" corresp="#shift">
                   <label>Reflected as sibilants</label>
                </item>
-               <item xml:id="labiodentals_and_postdentals">
+               <item xml:id="labiodentals_and_postdentals" corresp="#shift">
                   <label>ṯ is reflected as labiodental f but ḏ and ḏ̣ are reflected as postdentals d and ḍ</label>
                </item>
             </list>

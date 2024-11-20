@@ -30,6 +30,19 @@
             <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1"/>
             <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
          </listPrefixDef>
+         <classDecl>
+            <taxonomy>
+               <category xml:id="soundChanges"> 
+                  <catDesc>Sound Changes</catDesc>
+                  <category xml:id="affrication">
+                     <catDesc>Affrication</catDesc>
+                  </category>
+               </category>
+               <category xml:id="exceptionalCases">
+                  <catDesc>Exceptional Cases</catDesc>
+               </category>
+            </taxonomy>
+         </classDecl>
       </encodingDesc>
       
       <profileDesc>
@@ -50,55 +63,55 @@
        <div type="featureDescription">
             <head>Feature Values</head>
             <list type="featureValues">
-               <item xml:id="q_g">
+               <item xml:id="q_g" corresp="#soundChanges">
                    <label>/g/</label>
                     <desc>/g/ IPA[g] only</desc>
                </item>
-               <item xml:id="q_g_affr1">
+               <item xml:id="q_g_affr1" corresp="#affrication">
                   <label>/ǵ/&gt;/g/</label>
                     <desc>/g/ IPA[g] + affricate ǵ IPA[ʣ] in the environment of anterior vowel</desc>
                </item>
-               <item xml:id="q_g_affr2">
+               <item xml:id="q_g_affr2" corresp="#affrication">
                 <label>/ǧ/&gt;/g/</label>
                    <desc>/g/ IPA[g] + affricate ǧ IPA[ʤ] in the environment of anterior vowel</desc>
                </item>
-                <item xml:id="q_g_affr3">
+                <item xml:id="q_g_affr3" corresp="#affrication">
                 <label>/ž/&amp;gt;/g/</label>
                    <desc>/g/ IPA[̣g] + ž IPA[​ʒ] in the environment of anterior vowel</desc>
                </item>
-               <item xml:id="q_hamza">
+               <item xml:id="q_hamza" corresp="#soundChanges">
                    <label>/ʔ/</label>
                     <desc>/ʔ/ IPA[ʔ] only</desc>
                </item>
-               <item xml:id="q_gh">
+               <item xml:id="q_gh" corresp="#soundChanges">
                    <label>/ġ/</label>
                    <desc>/ġ/ IPA[ɣ]</desc>
                </item>
-               <item xml:id="q_gh_excep">
+               <item xml:id="q_gh_excep" corresp="#exceptionalCases">
                    <label>/ġ/ exceptions</label>
                    <desc>/ġ/ IPA[ɣ] only in specific lexical items</desc>
                </item>
-               <item xml:id="q_q">
+               <item xml:id="q_q" corresp="#soundChanges">
                   <label>/q/</label>
                   <desc>/q/ IPA[q]</desc>
                </item>
-               <item xml:id="q_k_emph">
+               <item xml:id="q_k_emph" corresp="#soundChanges">
                   <label>/ḳ/</label>
                    <desc>/ḳ/ IPA[kˠ]</desc>
                </item>
-               <item xml:id="q_k">
+               <item xml:id="q_k" corresp="#soundChanges">
                  <label>/k/</label>
                  <desc>/k/ IPA[k]</desc>
                </item>
-                <item xml:id="q_k_excep">
+                <item xml:id="q_k_excep" corresp="#exceptionalCases">
                  <label>/k/ exceptions</label>
                  <desc>/k/ IPA[k] only in specific lexical items</desc>
                </item>
-               <item xml:id="q_x">
+               <item xml:id="q_x" corresp="#soundChanges">
                  <label>/x/</label>
                  <desc>/x/ IPA[x]</desc>
                </item>
-               <item xml:id="q_x_excep">
+               <item xml:id="q_x_excep" corresp="#exceptionalCases">
                  <label>/x/ exceptions</label>
                  <desc>/x/ IPA[x] only in specific lexical items</desc>
                </item>
