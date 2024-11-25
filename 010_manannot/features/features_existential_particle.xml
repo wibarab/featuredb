@@ -31,6 +31,58 @@
             <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
             <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1"/>
          </listPrefixDef>
+           <classDecl>
+            <taxonomy>
+               <category xml:id="prep_in"> 
+                  <catDesc>Source: Preposition "in"</catDesc>
+                  <category xml:id="bi-">
+                     <catDesc>bi-</catDesc>
+                  </category>
+                  <category xml:id="fi-">
+                     <catDesc>fi-</catDesc>
+                  </category>
+               </category>
+               <category xml:id="adverb_here">
+                  <catDesc>Source: Adverb "here"</catDesc>
+                  <category xml:id="huna">
+                     <catDesc>*hunā</catDesc>
+                  </category>
+               </category>
+                <category xml:id="adverb_there"> 
+                  <catDesc>Source: Adverb "there"</catDesc>
+                  <category xml:id="hunak">
+                     <catDesc>*hunāk</catDesc>
+                  </category>
+                  <category xml:id="tamma">
+                     <catDesc>*ṯamma</catDesc>
+                  </category>
+               </category>
+                <category xml:id="verb_toBe"> 
+                  <catDesc>Source: Verb "to be, to exist"</catDesc>
+                  <category xml:id="kain">
+                     <catDesc>*kāʔin</catDesc>
+                  </category>
+                  <category xml:id="yakun">
+                     <catDesc>*yakūn</catDesc>
+                  </category>
+                   <category xml:id="persian">
+                     <catDesc>Persian</catDesc>
+                  </category>
+               </category>
+               <category xml:id="verb_toCreate">
+                  <catDesc>Source: Verb "to create"</catDesc>
+                  <category xml:id="xaliq">
+                     <catDesc>*xāliq</catDesc>
+                  </category>
+               </category>
+                <category xml:id="noun_thing">
+                  <catDesc>Source: Noun "thing"</catDesc>
+                  <category xml:id="shay">
+                     <catDesc>*šayʔ</catDesc>
+                  </category>
+               </category>
+            </taxonomy>
+         </classDecl>
       </encodingDesc>
       
       <profileDesc>
@@ -55,85 +107,85 @@
          <div type="featureDescription">
             <head>Feature Values</head>
             <list type="featureValues">
-               <item xml:id="ep_fii">
+               <item xml:id="ep_fii" corresp="#fi-">
                   <label>fī</label>
                </item>
-               <item xml:id="ep_fiih">
+               <item xml:id="ep_fiih" corresp="#fi-">
                   <label>fīh</label>
                </item>
-               <item xml:id="ep_bii">
+               <item xml:id="ep_bii" corresp="#bi-">
                   <label>bī</label>
                </item>
-               <item xml:id="ep_bee">
+               <item xml:id="ep_bee" corresp="#bi-">
                   <label>bē</label>
                </item>
-               <item xml:id="ep_ihnaak">
+               <item xml:id="ep_ihnaak" corresp="#hunak">
                   <label>ihnāk</label>
                </item>
-               <item xml:id="ep_beh">
+               <item xml:id="ep_beh" corresp="#bi-">
                   <label>beh</label>
                </item>
-               <item xml:id="ep_bih">
+               <item xml:id="ep_bih" corresp="#bi-">
                   <label>bih</label>
                </item>
-               <item xml:id="ep_kayen">
+               <item xml:id="ep_kayen" corresp="#kain">
                   <label>kāyən, kāyn, kəyn, kayn,kēyn, kān</label>
                </item>
-               <item xml:id="ep_boo">
+               <item xml:id="ep_boo" corresp="#bi-">
                   <label>bō</label>
                </item>
                <item xml:id="ep_ahal_boo">
                   <label>ahal bō</label>
                </item>
-               <item xml:id="ep_buu">
+               <item xml:id="ep_buu" corresp="#bi-">
                   <label>bū / buh</label>
                </item>
-               <item xml:id="ep_xaaleg">
+               <item xml:id="ep_xaaleg" corresp="#xaliq">
                   <label>xāləg</label>
                </item>
-               <item xml:id="ep_bah">
+               <item xml:id="ep_bah" corresp="#bi-">
                   <label>bah</label>
                </item>
-               <item xml:id="ep_buuwa">
+               <item xml:id="ep_buuwa" corresp="#bi-">
                   <label>būwa</label>
                </item>
-               <item xml:id="ep_hna">
+               <item xml:id="ep_hna" corresp="#huna">
                   <label>hna</label>
                </item>
-               <item xml:id="ep_shii">
+               <item xml:id="ep_shii" corresp="#shay">
                   <label>šī/šayy</label>
                </item>
-               <item xml:id="ep_mish">
+               <item xml:id="ep_mish" corresp="#shay">
                   <label>miš</label>
                </item>
-               <item xml:id="ep_thamma">
+               <item xml:id="ep_thamma" corresp="#tamma">
                   <label>ṯamma</label>
                </item>
-               <item xml:id="ep_tamma">
+               <item xml:id="ep_tamma" corresp="#tamma">
                   <label>tamma</label>
                </item>
-               <item xml:id="ep_hast">
+               <item xml:id="ep_hast" corresp="#persian">
                   <label>hast</label>
                </item>
-               <item xml:id="ep_thamm">
+               <item xml:id="ep_thamm" corresp="#tamma">
                   <label>ṯamm</label>
                </item>
-               <item xml:id="ep_famma">
+               <item xml:id="ep_famma" corresp="#tamma">
                   <label>famma</label>
                </item>
-               <item xml:id="ep_aku">
+               <item xml:id="ep_aku" corresp="#yakun">
                   <label>aku</label>
                </item>
-               <item xml:id="ep_kiiku">
+               <item xml:id="ep_kiiku" corresp="#yakun">
                   <label>kīku</label>
                </item>
-               <item xml:id="ep_awn">
+               <item xml:id="ep_awn" corresp="#huna">
                   <label>awn</label>
                </item>
-               <item xml:id="ep_emm">
+               <item xml:id="ep_emm" corresp="#tamma">
                   <label>emm</label>
                </item>
-               <item xml:id="ep_chemma">
+               <item xml:id="ep_chemma" corresp="#tamma">
                   <label>čəmma</label>
                </item>
             </list>
