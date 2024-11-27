@@ -25,8 +25,15 @@
         
         <note type="dataCollection">
             <date type="dataCollection">
-                <xsl:attribute name="cert">
-                    <xsl:value-of select="substring-after(normalize-space($certContent), 'dcert:')"/>
+            <xsl:attribute name="cert">
+                <xsl:choose>
+                    <xsl:when test="normalize-space(substring-after($certContent, 'dcert:')) != ''">
+                        <xsl:value-of select="normalize-space(substring-after($certContent, 'dcert:'))"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:text>unknown</xsl:text>
+                    </xsl:otherwise>
+                </xsl:choose>
                 </xsl:attribute>
                 <xsl:attribute name="notBefore-iso">
                     <xsl:value-of select="$notBefore"/>
