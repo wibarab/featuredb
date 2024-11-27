@@ -30,6 +30,16 @@
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"/>
             <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1"/>
          </listPrefixDef>
+          <classDecl>
+            <taxonomy>
+               <category xml:id="soundChanges"> 
+                  <catDesc>Sound Changes</catDesc>
+               </category>
+               <category xml:id="exceptionalCases">
+                  <catDesc>Exceptional Cases</catDesc>
+               </category>
+            </taxonomy>
+         </classDecl>
       </encodingDesc>
       
        <profileDesc>
@@ -40,7 +50,7 @@
 
       <revisionDesc status="done">
          <change when="2023-02-20" who="dmp:VE">change status to done</change>
-         <change when="2022-08-17" who="dmp: "/>
+         
 
       <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change><change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change></revisionDesc>
    </teiHeader>
@@ -51,44 +61,43 @@
          <div type="featureDescription">
             <head>Feature Values</head>
             <list type="featureValues">
-               <item xml:id="ǧ_ǧ">
+               <item xml:id="ǧ_ǧ" corresp="#soundChanges">
                   <label>ǧ → ǧ</label>
                </item>
-               <item xml:id="ǧ_ž">
+               <item xml:id="ǧ_ž" corresp="#soundChanges">
                   <label>ǧ → ž</label>
                </item>
-               <item xml:id="ǧ_ź">
+               <item xml:id="ǧ_ź" corresp="#soundChanges">
                   <label>ǧ → ź</label>
                </item>
-               <item xml:id="ǧ_ʐ">
+               <item xml:id="ǧ_ʐ" corresp="#soundChanges">
                   <label>ǧ → ʐ (voiced retroflex fricative) /ʐ/~ř</label>
                </item>        
-               <item xml:id="ǧ_j">
+               <item xml:id="ǧ_j" corresp="#soundChanges">
                   <label>ǧ → j (voiced palatal plosive) /ɟ/</label>
                </item>
-               <item xml:id="ǧ_d">
+               <item xml:id="ǧ_d" corresp="#soundChanges">
                   <label>ǧ → d</label>
                </item>
-               <item xml:id="ǧ_y">
+               <item xml:id="ǧ_y" corresp="#soundChanges">
                   <label>ǧ → y</label>
                </item>
-               <item xml:id="ǧ_gy">
+               <item xml:id="ǧ_gy" corresp="#soundChanges">
                   <label>ǧ → gy</label>
                </item>
-               <item xml:id="ǧ_dy_excep">
+               <item xml:id="ǧ_dy_excep" corresp="#exceptionalCases">
                   <label>ǧ → dy</label>
                </item>
-               <item xml:id="ǧ_g">
+               <item xml:id="ǧ_g" corresp="#soundChanges">
                   <label>ǧ → g</label>
                </item>
-               <item xml:id="ǧ_č">
+               <item xml:id="ǧ_č" corresp="#soundChanges">
                   <label>ǧ → č</label>
                </item>
             </list>
          </div>
 
-         <div type="description" resp=""><byline>Edited by [Name]</byline>
-         </div>
+        
 
          <!--TBD: Remove redundant elements-->
 
