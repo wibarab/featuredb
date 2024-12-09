@@ -23,7 +23,9 @@ If you want to use any material in this repository please contact us at [wibarab
 
 This will change at the end of the project.
 
+## Deploy data changes
 
+To deploy changes to this data please follow the [wibarab-data README](https://github.com/wibarab/wibarab-data?tab=readme-ov-file#re-deploy-wibarab-website)
 
 ## Directory Structure
 
