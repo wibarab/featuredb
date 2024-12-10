@@ -75,8 +75,11 @@
                <item xml:id="k_affr4">
                   <label>ḳ + affrication to /č/</label>
                </item>
-               <item xml:id="k_x">
+               <item xml:id="k_x_excep">
                   <label>k → /x/</label>
+               </item>
+                <item xml:id="k_x_postpalatal">
+                  <label>k → x̟</label>
                </item>
         <item xml:id="k_hamza">
                   <label>k → /ʔ/</label>
@@ -2220,20 +2223,20 @@
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_k.fv_0322" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#k_x"/>
+               <name type="featureValue" ref="#k_x_postpalatal"/>
                <bibl corresp="zot:asiri_2009_2501" type="publication" cert="unknown"/>
                <placeName ref="geo:rijal_alma"/>
                <lang corresp="..\profiles\vicav_profile_SAU-ALM.xml"/>
                <cit type="sourceRepresentation">
-                  <quote>x̣, x̣aθirah</quote>
+                  <quote>x̟aθirah</quote>
                </cit>
                <cit xml:id="ft_k.fv_0322.ct_0105" type="example">
-                  <quote>xaṯīra</quote>
+                  <quote>x̟aṯīra</quote>
                   <cit type="translation">
                      <quote>many</quote>
                   </cit>
                </cit>
-               <note type="general">The x̣ describes the "post-palatal", i. e. velar, fricative, quoted as a mixture between the two fricatives š and ḫ. It corresponds to the x of the IPA.</note>
+               <note type="general">The x̟ describes the "post-palatal", i. e. velar, fricative, quoted as a mixture between the two fricatives š and ḫ. According to It corresponds to the x̟ of the IPA.</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_k.fv_0228" status="done" resp="dmp:SK">
@@ -2292,19 +2295,7 @@
                <note type="exceptionNote">The pronominal suffix of the second person singular feminine may be an affricate č (as noted in  Poésies Fezzanaises).</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_k.fv_0010" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#k_ky"/>
-               <bibl corresp="zot:caubet_2004_3508" type="publication" status="CHECKED"/>
-               <placeName ref="geo:fezzan"/>
-               <lang corresp="..\profiles\vicav_profile_LBY-FZN.xml"/>
-               <cit xml:id="ft_k.fv_0010.ct_0167" type="example">
-                  <quote>nāṛāky</quote>
-                  <cit type="translation">
-                     <quote>I see you (f.)</quote>
-                  </cit>
-               </cit>
-               <note type="general">RECHECK</note>
-            </wib:featureValueObservation>
+          
 
             <wib:featureValueObservation xml:id="ft_k.fv_0001" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#k_k"/>
@@ -2817,7 +2808,7 @@
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_k.fv_0029" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#k_x"/>
+               <name type="featureValue" ref="#k_x_excep"/>
                <bibl corresp="zot:senelle_2002_3236" type="publication" status="CHECKED"/>
                <placeName ref="geo:raheita"/>
                <lang corresp="..\profiles\vicav_profile_ERI-RHY.xml"/>
@@ -3348,19 +3339,35 @@
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_k.fv_0216" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#k_x"/>
+               <name type="featureValue" ref="#k_k"/>
                <bibl corresp="zot:borg_1984_0000" type="publication"/>
                <placeName ref="geo:cyprus"/>
                <lang corresp="..\profiles\vicav_profile_CYP-KOR.xml"/>
-               <personGrp role="religion" corresp="pgr:muslims"/>
+               <personGrp role="religion" corresp="#christians"/>
                <cit xml:id="ft_k.fv_0216.ct_0096" type="example">
-                  <quote>xlk</quote>
+                  <quote>kitf</quote>
                   <cit type="translation">
-                     <quote>to be born, to shave</quote>
+                     <quote>shoulder</quote>
                   </cit>
                </cit>
                <note type="general">allophone /k'/ before front and non-front vowels</note>
-               <note type="general">RECHECK</note>
+   
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_k.fv_0010" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#k_x_excep"/>
+               <bibl corresp="zot:borg_1984_0000" type="publication"/>
+               <placeName ref="geo:cyprus"/>
+               <lang corresp="..\profiles\vicav_profile_CYP-KOR.xml"/>
+               <personGrp role="religion" corresp="#christians"/>
+               <cit xml:id="ft_k.fv_0010.ct_0000" type="example">
+                  <quote>xtaf</quote>
+                  <cit type="translation">
+                     <quote>shoulders</quote>
+                  </cit>
+               </cit>
+               <note type="general">Preceding t</note>
+   
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_k.fv_0258" status="done" resp="dmp:TD">
@@ -3496,11 +3503,11 @@
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_k.fv_0255" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#k_x"/>
+               <name type="featureValue" ref="#k_x_excep"/>
                <bibl corresp="zot:heath_2002_0001" type="publication"/>
                <placeName ref="geo:tanger"/>
                <lang corresp="..\profiles\vicav_profile_MAR-TGR.xml"/>
-                <note type="general">RECHECK</note>
+                <note type="general">"There are some cases of spirantization of *k to a fricative x in some northern and Jebli Muslim dialects (Tg, Tn, Ch)" (p.140)</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_k.fv_0252" status="done" resp="dmp:TD">
