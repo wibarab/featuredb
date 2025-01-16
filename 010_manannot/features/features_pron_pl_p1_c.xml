@@ -30,21 +30,68 @@
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"/>
             <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1"/>
          </listPrefixDef>
+         <classDecl>
+            <taxonomy>
+               <category xml:id="N_forms">
+                  <catDesc>N (l ~ r)- forms</catDesc>
+                  <category xml:id="cvhnv">
+                     <catDesc>Cvḥnv(v)</catDesc>
+                  </category>
+                  <category xml:id="nvhvn">
+                     <catDesc>Nvḥvn</catDesc>
+                  </category>
+               </category>
+               <category xml:id="H_forms">
+                  <catDesc>Ḥ-forms</catDesc>
+                  <category xml:id="hvn">
+                     <catDesc>Ḥvn</catDesc>
+                  </category>
+                  <category xml:id="hvn_plus">
+                     <catDesc>Ḥvn+</catDesc>
+                  </category>
+                  <category xml:id="hnv">
+                     <catDesc>Ḥnv</catDesc>
+                  </category>
+                  <category xml:id="hna_plus">
+                     <catDesc>Ḥnā+</catDesc>
+                  </category>
+               </category>
+               <category xml:id="hamza_forms">
+                  <catDesc>ʔ- forms</catDesc>
+                  <category xml:id="hamza_vhnv">
+                     <catDesc>ʔvḥnv</catDesc>
+                  </category>
+                  <category xml:id="hamza_vhvn">
+                     <catDesc>ʔvḥvn</catDesc>
+                  </category>
+                  <category xml:id="hamza_vnhvn">
+                     <catDesc>ʔvnḥvn(/m)</catDesc>
+                  </category>
+                  <category xml:id="an_plus">
+                     <catDesc>ʔan+</catDesc>
+                  </category>
+                  <category xml:id="h-less">
+                     <catDesc>Ḥ-less forms</catDesc>
+                  </category>
+               </category>
+
+            </taxonomy>
+         </classDecl>
       </encodingDesc>
-      
-       <profileDesc>
+
+      <profileDesc>
          <textClass>
-          <catRef target="dmp:independent_pronouns"/>
-          </textClass>
+            <catRef target="dmp:independent_pronouns"/>
+         </textClass>
       </profileDesc>
 
       <revisionDesc status="done">
          <change when="2023-09-04" who="dmp:VE">change document status to done</change>
-      <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change><change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change></revisionDesc>
+         <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change><change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change></revisionDesc>
    </teiHeader>
 
 
-   
+
 
    <text>
       <body>
@@ -53,123 +100,123 @@
          <div type="featureDescription">
             <head>Feature Values</head>
             <list type="featureValues">
-               <item xml:id="pr_p1c_nihna">
+               <item xml:id="pr_p1c_nihna" corresp="#cvhnv">
                   <label>niḥna/nəḥna</label>
                </item>
-               <item xml:id="pr_p1c_ihna">
+               <item xml:id="pr_p1c_ihna" corresp="#hamza_vhnv">
                   <label>iḥna/əḥnä</label>
                </item>
-               <item xml:id="pr_p1c_ihnaa">
+               <item xml:id="pr_p1c_ihnaa" corresp="#hamza_vhnv">
                   <label>iḥnā</label>
                </item>
-               <item xml:id="pr_p1c_hnee">
+               <item xml:id="pr_p1c_hnee" corresp="#hnv">
                   <label>ḥnē / ḥne</label>
                </item>
-               <item xml:id="pr_p1c_nahna">
+               <item xml:id="pr_p1c_nahna" corresp="#cvhnv">
                   <label>naḥna</label>
                </item>
-               <item xml:id="pr_p1c_ahan">
+               <item xml:id="pr_p1c_ahan" corresp="hamza_vhvn">
                   <label>aḥán/aḥín</label>
                </item>
-               <item xml:id="pr_p1c_ahna">
+               <item xml:id="pr_p1c_ahna" corresp="#hamza_vhnv">
                   <label>aḥna</label>
                </item>
-               <item xml:id="pr_p1c_hna">
+               <item xml:id="pr_p1c_hna" corresp="#hnv">
                   <label>ḥna/ḥnā</label>
                </item>
-               <item xml:id="pr_p1c_nahnu">
+               <item xml:id="pr_p1c_nahnu" corresp="#cvhnv" >
                   <label>naḥnu</label>
                </item>
-               <item xml:id="pr_p1c_hnaaya">
+               <item xml:id="pr_p1c_hnaaya" corresp="#hna_plus">
                   <label>ḥnāya</label>
                </item>
-               <item xml:id="pr_p1c_nihin">
+               <item xml:id="pr_p1c_nihin" corresp="#nvhvn">
                   <label>niḥin/niḥən</label>
                </item>
-               <item xml:id="pr_p1c_inhin">
+               <item xml:id="pr_p1c_inhin" corresp="#hamza_vnhvn">
                   <label>inḥin</label>
                </item>
-               <item xml:id="pr_p1c_anhin">
+               <item xml:id="pr_p1c_anhin" corresp="#hamza_vnhvn">
                   <label>anḥin</label>
                </item>
-               <item xml:id="pr_p1c_anhim">
+               <item xml:id="pr_p1c_anhim" corresp="#hamza_vnhvn">
                   <label>anḥim</label>
                </item>
-               <item xml:id="pr_p1c_han">
+               <item xml:id="pr_p1c_han" corresp="#hvn">
                   <label>ḥan</label>
                </item>
-               <item xml:id="pr_p1c_hin">
+               <item xml:id="pr_p1c_hin" corresp="#hvn">
                   <label>ḥin</label>
                </item>
-               <item xml:id="pr_p1c_hinna">
+               <item xml:id="pr_p1c_hinna" corresp="#H_forms">
                   <label>ḥinna/ḥənna</label>
                </item>
-               <item xml:id="pr_p1c_hina">
+               <item xml:id="pr_p1c_hina" corresp="#hvn_plus">
                   <label>ḥina</label>
                </item>
-               <item xml:id="pr_p1c_hinat">
+               <item xml:id="pr_p1c_hinat" corresp="#hvn_plus">
                   <label>ḥínat</label>
                </item>
-               <item xml:id="pr_p1c_nahni">
+               <item xml:id="pr_p1c_nahni" corresp="#cvhnv">
                   <label>naḥni</label>
                </item>
-               <item xml:id="pr_p1c_hnan">
+               <item xml:id="pr_p1c_hnan" corresp="hna_plus">
                   <label>ḥnan/ḥnān</label>
                </item>
-               <item xml:id="pr_p1c_aniina">
+               <item xml:id="pr_p1c_aniina" corresp="#h-less">
                   <label>anīna</label>
                </item>
-               <item xml:id="pr_p1c_an_a">
+               <item xml:id="pr_p1c_an_a" corresp="#h-less">
                   <label>anná</label>
                </item>
-               <item xml:id="pr_p1c_ina">
+               <item xml:id="pr_p1c_ina" corresp="#h-less">
                   <label>ina</label>
                </item>
-               <item xml:id="pr_p1c_aniihna">
+               <item xml:id="pr_p1c_aniihna" corresp="#an_plus">
                   <label>anīḥna</label>
                </item>
-            
-               <item xml:id="pr_p1c_hnaayatha">
+
+               <item xml:id="pr_p1c_hnaayatha" corresp="#hna_plus">
                   <label>ḥnāyatha</label>
                </item>
-               <item xml:id="pr_p1c_anihna">
+               <item xml:id="pr_p1c_anihna" corresp="#an_plus">
                   <label>aniḥna/anaḥna</label>
                </item>
-               <item xml:id="pr_p1c_anhaa">
+               <item xml:id="pr_p1c_anhaa" corresp="#an_plus">
                   <label>anḥā</label>
                </item>
-               <item xml:id="pr_p1c_rahna">
+               <item xml:id="pr_p1c_rahna" corresp="#cvhnv">
                   <label>raḥna</label>
                </item>
-               <item xml:id="pr_p1c_hnu">
+               <item xml:id="pr_p1c_hnu" corresp="#hnv">
                   <label>ḥnu</label>
                </item>
-               <item xml:id="pr_p1c_heene">
+               <item xml:id="pr_p1c_heene" corresp="#H_forms">
                   <label>ḥēne</label>
                </item>
-               <item xml:id="pr_p1c_hene">
+               <item xml:id="pr_p1c_hene" corresp="#hvn_plus">
                   <label>ḥene</label>
                </item>
-               <item xml:id="pr_p1c_nahan">
+               <item xml:id="pr_p1c_nahan" corresp="#nvhvn">
                   <label>naḥan</label>
                </item>
-               <item xml:id="pr_p1c_nihnaa">
+               <item xml:id="pr_p1c_nihnaa" corresp="#cvhnv">
                   <label>niḥnā/nəḥnē</label>
                </item>
-               <item xml:id="pr_p1c_lihne">
+               <item xml:id="pr_p1c_lihne" corresp="#cvhnv">
                   <label>liḥne</label>
                </item>
-               
-                <item xml:id="pr_p1c_lihna">
+
+               <item xml:id="pr_p1c_lihna" corresp="#cvhnv">
                   <label>liḥna</label>
                </item>
-               <item xml:id="pr_p1c_nihne">
+               <item xml:id="pr_p1c_nihne" corresp="#cvhnv">
                   <label>niḥne</label>
                </item>
-               <item xml:id="pr_p1c_ihne">
+               <item xml:id="pr_p1c_ihne" corresp="#hamza_vhnv">
                   <label>iḥne</label>
                </item>
-               <item xml:id="pr_p1c_hnah">
+               <item xml:id="pr_p1c_hnah" corresp="#hnv">
                   <label>hnah</label>
                </item>
             </list>
@@ -408,10 +455,10 @@
                <personGrp role="tribe" corresp="pgr:arab_al_atij"/>
                <cit type="sourceRepresentation"><quote>ḥinnä</quote></cit>
                <note type="general">ḥinnä is the original form according to Younes 2013, while ʔiḥnä is considered to be an influence from sedentary speakers with whom the tribe in question
-               is reckoned to have had contact before, given that the sedentary speakers with whom this tribe is currently in contact show niḥna.</note>
+                  is reckoned to have had contact before, given that the sedentary speakers with whom this tribe is currently in contact show niḥna.</note>
             </wib:featureValueObservation>
-            
-               <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0046" status="done" resp="dmp:AID">
+
+            <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0046" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#pr_p1c_ihna"/>
                <bibl corresp="zot:younes_2013_2795" type="publication"/>
                <placeName ref="geo:wadi_khalid"/>
@@ -419,7 +466,7 @@
                <personGrp role="tribe" corresp="pgr:arab_al_atij"/>
                <cit type="sourceRepresentation"><quote>ʔiḥnä</quote></cit>
                <note type="general">ḥinnä is the original form according to Younes 2013, while ʔiḥnä is considered to be an influence from sedentary speakers with whom the tribe in question
-               is reckoned to have had contact before, given that the sedentary speakers with whom this tribe is currently in contact show niḥna.</note>
+                  is reckoned to have had contact before, given that the sedentary speakers with whom this tribe is currently in contact show niḥna.</note>
             </wib:featureValueObservation>
 
 
@@ -443,7 +490,7 @@
                <placeName ref="geo:beirut"/>
                <lang corresp="..\profiles\vicav_profile_LBN-BEI.xml"/>
                <cit type="sourceRepresentation"><quote>nəḥna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0022" status="done" resp="dmp:AID">
@@ -452,7 +499,7 @@
                <placeName ref="geo:beirut"/>
                <lang corresp="..\profiles\vicav_profile_LBN-BEI.xml"/>
                <cit type="sourceRepresentation"><quote>nəḥn</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0065" status="done" resp="dmp:AID">
@@ -461,7 +508,7 @@
                <placeName ref="geo:kfar_sghab"/>
                <lang corresp="..\profiles\vicav_profile_LBN-KSG.xml"/>
                <cit type="sourceRepresentation"><quote>nəḥna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0062" status="done" resp="dmp:AID">
@@ -470,7 +517,7 @@
                <placeName ref="geo:kfar_aabida"/>
                <lang corresp="..\profiles\vicav_profile_LBN-KAB.xml"/>
                <cit type="sourceRepresentation"><quote>neḥna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0023" status="done" resp="dmp:AID">
@@ -479,7 +526,7 @@
                <placeName ref="geo:kfar_aabida"/>
                <lang corresp="..\profiles\vicav_profile_LBN-KAB.xml"/>
                <cit type="sourceRepresentation"><quote>neḥn</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0052" status="done" resp="dmp:AID">
@@ -495,7 +542,7 @@
                <placeName ref="geo:tripoli_lebanon"/>
                <lang corresp="..\profiles\vicav_profile_LBN-TRI.xml"/>
                <cit type="sourceRepresentation"><quote>nəḥnä</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0079" status="done" resp="dmp:AID">
@@ -504,7 +551,7 @@
                <placeName ref="geo:zahle"/>
                <lang corresp="..\profiles\vicav_profile_LBN-ZAH.xml"/>
                <cit type="sourceRepresentation"><quote>nəḥne</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0058" status="done" resp="dmp:AID">
@@ -532,8 +579,8 @@
                <lang corresp="..\profiles\vicav_profile_LBN-KHA.xml"/>
                <personGrp role="tribe" corresp="pgr:arab_xalde"/>
             </wib:featureValueObservation>
-            
-              <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0075" status="done" resp="dmp:AID">
+
+            <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0075" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#pr_p1c_nihna"/>
                <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
                <placeName ref="geo:khalde"/>
@@ -583,17 +630,17 @@
                <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"/>
                <personGrp role="tribe" corresp="pgr:arab_maslax"/>
                <cit type="sourceRepresentation"><quote>nəḥna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
-            
-              <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0076" status="done" resp="dmp:AID">
+
+            <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0076" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#pr_p1c_lihna"/>
                <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
                <placeName ref="geo:el_karantina"/>
                <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"/>
                <personGrp role="tribe" corresp="pgr:arab_maslax"/>
                <cit type="sourceRepresentation"><quote>nəḥna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0078" status="done" resp="dmp:CL">
@@ -612,9 +659,9 @@
                <lang corresp="..\profiles\vicav_profile_JOR-ABD.xml"/>
                <personGrp role="tribe" corresp="pgr:bani_abbad"/>
                <cit type="sourceRepresentation"><quote>ʔiḥna</quote>
-          </cit>
+               </cit>
                <cit type="sourceRepresentation"><quote>ʔəḥna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0226" status="done" resp="dmp:AT">
@@ -626,7 +673,7 @@
                <lang corresp="..\profiles\vicav_profile_JOR-ABD.xml"/>
                <personGrp role="tribe" corresp="pgr:bani_abbad"/>
                <cit type="sourceRepresentation"><quote>ʔaḥna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0081" status="done" resp="dmp:AT">
@@ -636,7 +683,7 @@
                <lang corresp="..\profiles\vicav_profile_JOR-AGR.xml"/>
                <personGrp role="tribe" corresp="pgr:al_agarma"/>
                <cit type="sourceRepresentation"><quote>ḥənna</quote>
-          </cit>
+               </cit>
                <note type="general">ḥanna is a form phonetically associated with the “gahawah syndrome” typical
                   of the nomadic dialects of Northern Arabia. The semi-nomadic tribes of
                   the area make use of both forms, ḥənna  and ʔəḥna, which are felt to be stylistic variants. Thus,
@@ -651,7 +698,7 @@
                <lang corresp="..\profiles\vicav_profile_JOR-AGR.xml"/>
                <personGrp role="tribe" corresp="pgr:al_agarma"/>
                <cit type="sourceRepresentation"><quote>ʔəḥna</quote>
-          </cit>
+               </cit>
                <note type="general">ʔəḥna is preferred when visiting the tribes having that form</note>
             </wib:featureValueObservation>
 
@@ -662,7 +709,7 @@
                <lang corresp="..\profiles\vicav_profile_JOR-AIS.xml"/>
                <personGrp role="tribe" corresp="pgr:al_isa"/>
                <cit type="sourceRepresentation"><quote>ʔ́əḥna</quote>
-          </cit>
+               </cit>
                <note type="general">Taken from ex in  corpus no specific section about the feature</note>
             </wib:featureValueObservation>
 
@@ -672,7 +719,7 @@
                <placeName ref="geo:amman"/>
                <lang corresp="..\profiles\vicav_profile_JOR-AMN.xml"/>
                <cit type="sourceRepresentation"><quote>niḥna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0245" status="done" resp="dmp:AT">
@@ -681,7 +728,7 @@
                <placeName ref="geo:amman"/>
                <lang corresp="..\profiles\vicav_profile_JOR-AMN.xml"/>
                <cit type="sourceRepresentation"><quote>iḥna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0084" status="done" resp="dmp:AT">
@@ -691,7 +738,7 @@
                <lang corresp="..\profiles\vicav_profile_JOR-BDL.xml"/>
                <personGrp role="tribe" corresp="pgr:bdul"/>
                <cit type="sourceRepresentation"><quote>iḥna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0085" status="done" resp="dmp:AT">
@@ -706,7 +753,7 @@
                <lang corresp="..\profiles\vicav_profile_JOR-BSX.xml"/>
                <personGrp role="tribe" corresp="pgr:bani_saxar"/>
                <cit type="sourceRepresentation"><quote>ḥinna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0086" status="done" resp="dmp:AT">
@@ -716,7 +763,7 @@
                <lang corresp="..\profiles\vicav_profile_JOR-BXD.xml"/>
                <personGrp role="tribe" corresp="pgr:bani_xaled"/>
                <cit type="sourceRepresentation"><quote>ḥ́önna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0087" status="done" resp="dmp:AT">
@@ -726,7 +773,7 @@
                <lang corresp="..\profiles\vicav_profile_JOR-FDL.xml"/>
                <personGrp role="tribe" corresp="pgr:fadol"/>
                <cit type="sourceRepresentation"><quote>ʔ́öḥne</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0316" status="done" resp="dmp:AT">
@@ -736,9 +783,9 @@
                <placeName ref="geo:jabal_al_druze"/>
                <lang corresp="..\profiles\vicav_profile_JOR-HRN.xml"/>
                <cit type="sourceRepresentation"><quote>ʔ́öḥna</quote>
-          </cit>
+               </cit>
                <cit type="sourceRepresentation"><quote>ʔ́öḥne</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0088" status="done" resp="dmp:AT">
@@ -748,7 +795,7 @@
                <lang corresp="..\profiles\vicav_profile_JOR-HWT.xml"/>
                <personGrp role="tribe" corresp="pgr:hwetat_jordan"/>
                <cit type="sourceRepresentation"><quote>ḥinna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0090" status="done" resp="dmp:AT">
@@ -757,7 +804,7 @@
                <placeName ref="geo:al_karak"/>
                <lang corresp="..\profiles\vicav_profile_JOR-KRK.xml"/>
                <cit type="sourceRepresentation"><quote>ʔiḥna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0091" status="done" resp="dmp:AT">
@@ -766,7 +813,7 @@
                <placeName ref="geo:madaba"/>
                <lang corresp="..\profiles\vicav_profile_JOR-MDB.xml"/>
                <cit type="sourceRepresentation"><quote>iḥna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0141" status="done" resp="dmp:AT">
@@ -776,7 +823,7 @@
                <lang corresp="..\profiles\vicav_profile_JOR-NEM.xml"/>
                <personGrp role="tribe" corresp="pgr:neem_jordan"/>
                <cit type="sourceRepresentation"><quote>ʔ́öḥne</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0093" status="done" resp="dmp:AT">
@@ -786,7 +833,7 @@
                <lang corresp="..\profiles\vicav_profile_JOR-NMT.xml"/>
                <personGrp role="tribe" corresp="pgr:an_nemat_of_the_sara_mountains"/>
                <cit type="sourceRepresentation"><quote>ʔiḥna</quote>
-          </cit>
+               </cit>
                <note type="general">value taken from the texts</note>
             </wib:featureValueObservation>
 
@@ -797,7 +844,7 @@
                <lang corresp="..\profiles\vicav_profile_JOR-SDY.xml"/>
                <personGrp role="tribe" corresp="pgr:sardiye"/>
                <cit type="sourceRepresentation"><quote>ḥ́ẹnna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0095" status="done" resp="dmp:AT">
@@ -806,9 +853,9 @@
                <placeName ref="geo:safut"/>
                <lang corresp="..\profiles\vicav_profile_JOR-SFT.xml"/>
                <cit type="sourceRepresentation"><quote>ʔeḥna</quote>
-          </cit>
+               </cit>
                <cit type="sourceRepresentation"><quote>ʔeḥne</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0089" status="done" resp="dmp:AT">
@@ -817,7 +864,7 @@
                <placeName ref="geo:safut"/>
                <lang corresp="..\profiles\vicav_profile_JOR-SFT.xml"/>
                <cit type="sourceRepresentation"><quote>ḥenna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0096" status="done" resp="dmp:AT">
@@ -827,7 +874,7 @@
                <lang corresp="..\profiles\vicav_profile_JOR-SHN.xml"/>
                <personGrp role="tribe" corresp="pgr:sirhan"/>
                <cit type="sourceRepresentation"><quote>ḥ́́enna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0097" status="done" resp="dmp:AT">
@@ -837,7 +884,7 @@
                <lang corresp="..\profiles\vicav_profile_JOR-SLT.xml"/>
                <personGrp role="tribe" corresp="pgr:slut"/>
                <cit type="sourceRepresentation"><quote>iḥna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0016" status="done" resp="dmp:AT">
@@ -846,7 +893,7 @@
                <placeName ref="geo:shahba"/>
                <lang corresp="..\profiles\vicav_profile_JOR-SLU.xml"/>
                <cit type="sourceRepresentation"><quote>ʔ́öḥne</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0098" status="done" resp="dmp:AT">
@@ -856,7 +903,7 @@
                <lang corresp="..\profiles\vicav_profile_NEG-AZM.xml"/>
                <personGrp role="tribe" corresp="pgr:azazmih"/>
                <cit type="sourceRepresentation"><quote>aḥna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0099" status="done" resp="dmp:AT">
@@ -866,16 +913,16 @@
                <lang corresp="..\profiles\vicav_profile_NEG-ZLM.xml"/>
                <personGrp role="tribe" corresp="pgr:zullam"/>
                <cit type="sourceRepresentation"><quote>aḥna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0317" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#pr_p1c_hinna"/>
-              <bibl corresp="zot:cantineau_1937_0000" type="publication" cert="unknown" status="CHECKED"/>
+               <bibl corresp="zot:cantineau_1937_0000" type="publication" cert="unknown" status="CHECKED"/>
                <placeName ref="geo:al_jawf"/>
                <lang corresp="..\profiles\vicav_profile_SAU-GOF.xml"/>
                <cit type="sourceRepresentation"><quote>ḥ́́önna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0100" status="done" resp="dmp:AT">
@@ -885,7 +932,7 @@
                <lang corresp="..\profiles\vicav_profile_SAU-HRB.xml"/>
                <personGrp role="tribe" corresp="pgr:al_harb"/>
                <cit type="sourceRepresentation"><quote>ḥinna</quote>
-          </cit>
+               </cit>
                <note type="general">The iḥna pronoun, however, is occasionally found
                   in the speech of some younger people among the Hijazi group especially
                   those who have been out of their region, and are affected by the
@@ -894,11 +941,11 @@
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0319" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#pr_p1c_hinna"/>
-              <bibl corresp="zot:cantineau_1937_0000" type="publication" cert="unknown" status="CHECKED"/>
+               <bibl corresp="zot:cantineau_1937_0000" type="publication" cert="unknown" status="CHECKED"/>
                <placeName ref="geo:ar_rass"/>
                <lang corresp="..\profiles\vicav_profile_SAU-RSS.xml"/>
                <cit type="sourceRepresentation"><quote>ḥ́́önna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0101" status="done" resp="dmp:AT">
@@ -908,7 +955,7 @@
                <lang corresp="..\profiles\vicav_profile_SAU-SMR.xml"/>
                <personGrp role="tribe" corresp="pgr:shammar_saudi_arabia"/>
                <cit type="sourceRepresentation"><quote>ḥinna</quote>
-          </cit>
+               </cit>
                <note type="general">ḥẹ́nna Cantineau 1937</note>
             </wib:featureValueObservation>
 
@@ -919,7 +966,7 @@
                <lang corresp="..\profiles\vicav_profile_SYR-HDD.xml"/>
                <personGrp role="tribe" corresp="pgr:hadidin"/>
                <cit type="sourceRepresentation"><quote>ʔ́öḥöne</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0103" status="done" resp="dmp:AT">
@@ -929,7 +976,7 @@
                <lang corresp="..\profiles\vicav_profile_SYR-HSN.xml"/>
                <personGrp role="tribe" corresp="pgr:hsane"/>
                <cit type="sourceRepresentation"><quote>ḥ́önna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0104" status="done" resp="dmp:AT">
@@ -939,7 +986,7 @@
                <lang corresp="..\profiles\vicav_profile_SYR-MND.xml"/>
                <personGrp role="tribe" corresp="pgr:manadre"/>
                <cit type="sourceRepresentation"><quote>ʔ́öḥnä</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0105" status="done" resp="dmp:AT">
@@ -949,7 +996,7 @@
                <lang corresp="..\profiles\vicav_profile_SYR-MWL.xml"/>
                <personGrp role="tribe" corresp="pgr:mawali_syria"/>
                <cit type="sourceRepresentation"><quote>iḥna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0106" status="done" resp="dmp:AT">
@@ -959,7 +1006,7 @@
                <lang corresp="..\profiles\vicav_profile_SYR-MWL.xml"/>
                <personGrp role="tribe" corresp="pgr:mawali_syria"/>
                <cit type="sourceRepresentation"><quote>niḥne</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0107" status="done" resp="dmp:AT">
@@ -969,7 +1016,7 @@
                <lang corresp="..\profiles\vicav_profile_SYR-MWL.xml"/>
                <personGrp role="tribe" corresp="pgr:mawali_syria"/>
                <cit type="sourceRepresentation"><quote>iḥna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0108" status="done" resp="dmp:AT">
@@ -979,17 +1026,17 @@
                <lang corresp="..\profiles\vicav_profile_SYR-OMR.xml"/>
                <personGrp role="tribe" corresp="pgr:omur"/>
                <cit type="sourceRepresentation"><quote>ʔ́öḥne</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0109" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#pr_p1c_hinna"/>
-              <bibl corresp="zot:cantineau_1937_0000" type="publication" status="CHECKED"/>
+               <bibl corresp="zot:cantineau_1937_0000" type="publication" status="CHECKED"/>
                <placeName ref="geo:khirbat_ras_al_war"/>
                <lang corresp="..\profiles\vicav_profile_SYR-SBA.xml"/>
                <personGrp role="tribe" corresp="pgr:sbaa"/>
                <cit type="sourceRepresentation"><quote>ḥ́önna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0110" status="done" resp="dmp:AT">
@@ -999,7 +1046,7 @@
                <lang corresp="..\profiles\vicav_profile_SYR-SMR.xml"/>
                <personGrp role="tribe" corresp="pgr:shammar_syria"/>
                <cit type="sourceRepresentation"><quote>ḥinna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0274" status="done" resp="dmp:AT">
@@ -1009,7 +1056,7 @@
                <lang corresp="..\profiles\vicav_profile_SYR-SMR.xml"/>
                <personGrp role="tribe" corresp="pgr:shammar_syria"/>
                <cit type="sourceRepresentation"><quote>aḥna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0111" status="done" resp="dmp:AT">
@@ -1019,7 +1066,7 @@
                <lang corresp="..\profiles\vicav_profile_SYR-TYY.xml"/>
                <personGrp role="tribe" corresp="pgr:tayyi"/>
                <cit type="sourceRepresentation"><quote>iḥna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0187" status="done" resp="dmp:AT">
@@ -1029,7 +1076,7 @@
                <lang corresp="..\profiles\vicav_profile_SYR-WAL.xml"/>
                <personGrp role="tribe" corresp="pgr:weld_ali"/>
                <cit type="sourceRepresentation"><quote>ḥ́önna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0112" status="done" resp="dmp:CL">
@@ -1067,7 +1114,7 @@
                <placeName ref="geo:al_shirqat"/>
                <lang corresp="..\profiles\vicav_profile_IRQ-SQT.xml"/>
                <cit type="sourceRepresentation"><quote>əḥne</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0005" status="done" resp="dmp:CL">
@@ -1105,28 +1152,28 @@
                <lang corresp="..\profiles\vicav_profile_SAU-GHA.xml"/>
                <note type="general">unḥin was also attested</note>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0055" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pr_p1c_ihna"/>
                <bibl corresp="zot:katz_1980_0798" type="publication"/>
                <placeName ref="geo:arab_al_rashayida"/>
                <lang corresp="..\profiles\vicav_profile_PSE-RSD.xml"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0059" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pr_p1c_hinna"/>
                <bibl corresp="src:KUW_2022_GK" type="publication" cert="unknown"/>
                <placeName ref="geo:kuwait_city"/>
                <lang corresp="..\profiles\vicav_profile_KWT-RSD.xml"/>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0064" status="done" resp="dmp:RZ">
+
+            <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0064" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pr_p1c_ahna"/>
                <bibl corresp="src:KUW_2022_GK" type="publication" cert="unknown"/>
                <placeName ref="geo:kuwait_city"/>
                <lang corresp="..\profiles\vicav_profile_KWT-RSD.xml"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0077" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pr_p1c_ihna"/>
                <bibl corresp="src:KUW_2022_GK" type="publication" cert="unknown"/>
@@ -1134,8 +1181,8 @@
                <lang corresp="..\profiles\vicav_profile_KWT-RSD.xml"/>
                <note type="general">This is sparsely attested</note>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0060" status="done" resp="dmp:RZ">
+
+            <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0060" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pr_p1c_hinna"/>
                <bibl corresp="src:SAU_2022_GK" type="publication" cert="unknown"/>
                <placeName ref="geo:khaybar"/>
@@ -1144,8 +1191,8 @@
                <placeName ref="geo:hail_reg"/>
                <lang corresp="..\profiles\vicav_profile_SAU-RSD.xml"/>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0066" status="done" resp="dmp:RZ">
+
+            <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0066" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pr_p1c_ahna"/>
                <bibl corresp="src:SAU_2022_GK" type="publication" cert="unknown"/>
                <placeName ref="geo:khaybar"/>
@@ -1154,7 +1201,7 @@
                <placeName ref="geo:hail_reg"/>
                <lang corresp="..\profiles\vicav_profile_SAU-RSD.xml"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0067" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pr_p1c_ihna"/>
                <bibl corresp="src:SAU_2022_GK" type="publication" cert="unknown"/>
@@ -1164,15 +1211,15 @@
                <placeName ref="geo:hail_reg"/>
                <lang corresp="..\profiles\vicav_profile_SAU-RSD.xml"/>
             </wib:featureValueObservation>
-            
-            
-            
-             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0223" status="done" resp="dmp:RZ">
+
+
+
+            <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0223" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pr_p1c_anhin"/>
                <bibl corresp="zot:toll_1983_0000" type="publication"/>
                <placeName ref="geo:bilad_ghamid"/>
                <lang corresp="..\profiles\vicav_profile_SAU-GHA.xml"/>
-                   </wib:featureValueObservation>
+            </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0329" status="done" resp="dmp:CL">
                <name type="featureValue" ref="#pr_p1c_anhin"/>
@@ -1215,8 +1262,8 @@
                <placeName ref="geo:tanuma"/>
                <lang corresp="..\profiles\vicav_profile_SAU-TAN.xml"/>
             </wib:featureValueObservation>
-            
-            
+
+
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0318" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pr_p1c_hinna"/>
                <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED"/>
@@ -1224,7 +1271,7 @@
                <lang corresp="..\profiles\vicav_profile_SAU-QSM.xml"/>
             </wib:featureValueObservation>
 
-            
+
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0328" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pr_p1c_hinna"/>
                <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"/>
@@ -1295,7 +1342,7 @@
                <placeName ref="geo:khawetna"/>
                <lang corresp="..\profiles\vicav_profile_SYR-KHA.xml"/>
                <cit type="sourceRepresentation"><quote>əḥna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0122" status="done" resp="dmp:CL">
@@ -1311,7 +1358,7 @@
                <placeName ref="geo:qamishli"/>
                <lang corresp="..\profiles\vicav_profile_SYR-QAM.xml"/>
                <cit type="sourceRepresentation"><quote>niḥne</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0124" status="done" resp="dmp:CL">
@@ -1341,7 +1388,7 @@
                <placeName ref="geo:hasankeyf"/>
                <lang corresp="..\profiles\vicav_profile_TUR-HAS.xml"/>
                <cit type="sourceRepresentation"><quote>nəḥne</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0128" status="done" resp="dmp:CL">
@@ -1350,7 +1397,7 @@
                <placeName ref="geo:idil_aazex"/>
                <lang corresp="..\profiles\vicav_profile_TUR-IDI.xml"/>
                <cit type="sourceRepresentation"><quote>nəḥne</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0129" status="done" resp="dmp:CL">
@@ -1359,7 +1406,7 @@
                <placeName ref="geo:siirt"/>
                <lang corresp="..\profiles\vicav_profile_TUR-SII.xml"/>
                <cit type="sourceRepresentation"><quote>nəḥne</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0131" status="done" resp="dmp:CL">
@@ -1408,7 +1455,7 @@
                <lang corresp="..\profiles\vicav_profile_EGY-BWS.xml"/>
                <personGrp role="tribe" corresp="pgr:bani_wasil"/>
                <cit type="sourceRepresentation"><quote>iḥna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0137" status="done" resp="dmp:JD">
@@ -1578,7 +1625,7 @@
                <lang corresp="..\profiles\vicav_profile_ISR-JFS.xml"/>
                <personGrp role="religion" corresp="pgr:samaritans"/>
                <cit type="sourceRepresentation"><quote>iḥne</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0160" status="done" resp="dmp:JD">
@@ -1718,7 +1765,7 @@
                <placeName ref="geo:andalusia"/>
                <lang corresp="..\profiles\vicav_profile_ESP-ADL.xml"/>
                <cit type="sourceRepresentation"><quote>ḥan</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0017" status="done" resp="dmp:SK">
@@ -1727,7 +1774,7 @@
                <placeName ref="geo:andalusia"/>
                <lang corresp="..\profiles\vicav_profile_ESP-ADL.xml"/>
                <cit type="sourceRepresentation"><quote>ḥínat</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0025" status="done" resp="dmp:SK">
@@ -1736,7 +1783,7 @@
                <placeName ref="geo:andalusia"/>
                <lang corresp="..\profiles\vicav_profile_ESP-ADL.xml"/>
                <cit type="sourceRepresentation"><quote>aḥán, aḥín</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0002" status="done" resp="dmp:SK">
@@ -1745,7 +1792,7 @@
                <placeName ref="geo:kuwait_city"/>
                <lang corresp="..\profiles\vicav_profile_KWT-KWC.xml"/>
                <cit type="sourceRepresentation"><quote>iḥna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0057" status="done" resp="dmp:SK">
@@ -1782,7 +1829,7 @@
                <placeName ref="geo:fezzan"/>
                <lang corresp="..\profiles\vicav_profile_LBY-FZN.xml"/>
                <cit type="sourceRepresentation"><quote>ḥenna</quote>
-          </cit>
+               </cit>
                <note type="general">This is based on the sedentary dialects of Ǧdid and Brak</note>
             </wib:featureValueObservation>
 
@@ -1801,14 +1848,14 @@
                <lang corresp="..\profiles\vicav_profile_LBY-FZN.xml"/>
                <note type="general">This is based on the bedouin dialect of Brak</note>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0350" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#pr_p1c_hinna"/>
                <bibl corresp="zot:caubet_2004_3508" type="publication" status="CHECKED"/>
                <placeName ref="geo:fezzan"/>
                <lang corresp="..\profiles\vicav_profile_LBY-FZN.xml"/>
                <cit type="sourceRepresentation"><quote>ḥenna</quote>
-          </cit>
+               </cit>
                <note type="general">This is based on the bedouin dialect of Brak</note>
             </wib:featureValueObservation>
 
@@ -1826,13 +1873,13 @@
                <lang corresp="..\profiles\vicav_profile_LBY-JTP.xml"/>
                <personGrp role="religion" corresp="pgr:jews"/>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0343" status="done" resp="dmp:RZ">
+
+            <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0343" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pr_p1c_hna"/>
                <bibl corresp="zot:caubet_2004_3508" type="publication" status="CHECKED"/>
                <placeName ref="geo:zintan"/>
                <lang corresp="..\profiles\vicav_profile_LBY-ZTN.xml"/>
-             </wib:featureValueObservation>
+            </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0344" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pr_p1c_nahna"/>
@@ -1847,13 +1894,13 @@
                <placeName ref="geo:zintan"/>
                <lang corresp="..\profiles\vicav_profile_LBY-ZTN.xml"/>
             </wib:featureValueObservation>
-            
-              <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0346" status="done" resp="dmp:RZ">
+
+            <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0346" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pr_p1c_hnee"/>
                <bibl corresp="zot:ritt-benmimoun_2017_2683" type="publication" status="CHECKED"/>
                <placeName ref="geo:al_khums"/>
                <lang corresp="..\profiles\vicav_profile_LBY-KMS.xml"/>
-              </wib:featureValueObservation>
+            </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0232" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#pr_p1c_hna"/>
@@ -1862,14 +1909,14 @@
                <lang corresp="..\profiles\vicav_profile_LBY-JYN.xml"/>
                <personGrp role="religion" corresp="pgr:jews"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0215" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pr_p1c_hnee"/>
                <bibl corresp="zot:ritt-benmimoun_2017_2683" type="publication" status="CHECKED"/>
                <placeName ref="geo:al_khums"/>
                <lang corresp="..\profiles\vicav_profile_LBY-KMS.xml"/>
                <cit type="sourceRepresentation"><quote>ḥnē</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0233" status="done" resp="dmp:SK">
@@ -1878,7 +1925,7 @@
                <placeName ref="geo:murzuq"/>
                <lang corresp="..\profiles\vicav_profile_LBY-MRQ.xml"/>
                <cit type="sourceRepresentation"><quote>ḥenna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0195" status="done" resp="dmp:SK">
@@ -1887,8 +1934,8 @@
                <placeName ref="geo:murzuq"/>
                <lang corresp="..\profiles\vicav_profile_LBY-MRQ.xml"/>
             </wib:featureValueObservation>
-            
-            
+
+
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0003" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pr_p1c_ahna"/>
@@ -1896,7 +1943,7 @@
                <placeName ref="geo:misrata"/>
                <lang corresp="..\profiles\vicav_profile_LBY-MSR.xml"/>
                <cit type="sourceRepresentation"><quote>aḥne</quote>
-          </cit>
+               </cit>
                <note type="general">The form nəḥna / nəḥnə also occurs sparingly</note>
             </wib:featureValueObservation>
 
@@ -1920,7 +1967,7 @@
                <placeName ref="geo:maiduguri"/>
                <lang corresp="..\profiles\vicav_profile_NGA-NGA.xml"/>
                <cit type="sourceRepresentation"><quote>aníina</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0322" status="done" resp="dmp:SK">
@@ -1950,7 +1997,7 @@
                <placeName ref="geo:hejaz"/>
                <lang corresp="..\profiles\vicav_profile_SAU-HJZ.xml"/>
                <cit type="sourceRepresentation"><quote>iHna</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0326" status="done" resp="dmp:SK">
@@ -1990,7 +2037,7 @@
                <placeName ref="geo:darfur"/>
                <lang corresp="..\profiles\vicav_profile_SDN-DRF.xml"/>
                <cit type="sourceRepresentation"><quote>an':a</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0262" status="done" resp="dmp:SK">
@@ -1999,7 +2046,7 @@
                <placeName ref="geo:darfur"/>
                <lang corresp="..\profiles\vicav_profile_SDN-DRF.xml"/>
                <cit type="sourceRepresentation"><quote>i.na</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0183" status="done" resp="dmp:SK">
@@ -2029,7 +2076,7 @@
                <placeName ref="geo:omdurman"/>
                <lang corresp="..\profiles\vicav_profile_SDN-OMD.xml"/>
             </wib:featureValueObservation>
-                        
+
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0347" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#pr_p1c_hinna"/>
                <bibl corresp="src:SDN_2023_SK" type="fieldwork"/>
@@ -2237,8 +2284,8 @@
                <placeName ref="geo:bengardane"/>
                <lang corresp="..\profiles\vicav_profile_TUN-BGN.xml"/>
             </wib:featureValueObservation>
-            
-               <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0120" status="done" resp="dmp:RZ">
+
+            <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0120" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pr_p1c_nahna"/>
                <bibl corresp="zot:naddari_2023_2742" type="publication"/>
                <placeName ref="geo:nefza"/>
@@ -2258,14 +2305,14 @@
                <placeName ref="geo:nefza"/>
                <lang corresp="..\profiles\vicav_profile_TUN-NFZ.xml"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0165" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#pr_p1c_ahna"/>
                <bibl corresp="zot:naddari_2023_2742" type="publication"/>
                <placeName ref="geo:nefza"/>
                <lang corresp="..\profiles\vicav_profile_TUN-NFZ.xml"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0020" status="done" resp="dmp:SP">
                <name type="featureValue" ref="#pr_p1c_hnee"/>
                <bibl corresp="zot:DAnna_2020_6708" type="publication"/>
@@ -2448,7 +2495,7 @@
                <placeName ref="geo:oran"/>
                <lang corresp="..\profiles\vicav_profile_DZA-ORN.xml"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0348" status="done" resp="dmp:TD">
                <name type="featureValue" ref="#pr_p1c_hnaaya"/>
                <bibl corresp="zot:guerrero_2015_6917" type="publication" status="CHECKED"/>
@@ -2573,7 +2620,7 @@
                <lang corresp="..\profiles\vicav_profile_MAR-RHA.xml"/>
                <personGrp role="tribe" corresp="pgr:rhamna"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0008" status="done" resp="dmp:TD">
                <name type="featureValue" ref="#pr_p1c_hnaaya"/>
                <bibl corresp="zot:marjani_2019_6677" type="publication"/>
@@ -2716,7 +2763,7 @@
                <placeName ref="geo:dhofar"/>
                <lang corresp="..\profiles\vicav_profile_OMN-DHF.xml"/>
                <cit type="sourceRepresentation"><quote>ḥené</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0292" status="done" resp="dmp:VE">
@@ -2725,7 +2772,7 @@
                <placeName ref="geo:ibri"/>
                <lang corresp="..\profiles\vicav_profile_OMN-IBR.xml"/>
                <cit type="sourceRepresentation"><quote>(nǝ)ḥnah</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0294" status="done" resp="dmp:VE">
@@ -2741,7 +2788,7 @@
                <placeName ref="geo:al_ristaq"/>
                <lang corresp="..\profiles\vicav_profile_OMN-RST.xml"/>
                <cit type="sourceRepresentation"><quote>ḥné</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0015" status="done" resp="dmp:VE">
@@ -2750,7 +2797,7 @@
                <placeName ref="geo:al_ristaq"/>
                <lang corresp="..\profiles\vicav_profile_OMN-RST.xml"/>
                <cit type="sourceRepresentation"><quote>ḥönū</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0115" status="done" resp="dmp:VE">
@@ -2759,7 +2806,7 @@
                <placeName ref="geo:al_ristaq"/>
                <lang corresp="..\profiles\vicav_profile_OMN-RST.xml"/>
                <cit type="sourceRepresentation"><quote>näḥnū</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0007" status="done" resp="dmp:VE">
@@ -2789,7 +2836,7 @@
                <placeName ref="geo:hadramaut"/>
                <lang corresp="..\profiles\vicav_profile_YEM-HAD.xml"/>
                <cit type="sourceRepresentation"><quote>naḥne</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0301" status="done" resp="dmp:VE">
@@ -2862,7 +2909,7 @@
                <placeName ref="geo:sa_dah"/>
                <lang corresp="..\profiles\vicav_profile_YEM-SAD.xml"/>
                <cit type="sourceRepresentation"><quote>aḥnā</quote>
-          </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_pl_p1_c.fv_0010" status="done" resp="dmp:VE">
