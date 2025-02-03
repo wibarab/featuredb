@@ -30,6 +30,46 @@
             <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1"/>
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"/>
          </listPrefixDef>
+         <classDecl>
+            <taxonomy>
+               <category xml:id="vnt_forms"> 
+                  <catDesc>ʔvnt-forms</catDesc>
+                  <category xml:id="vntv">
+                     <catDesc>ʔvntv(v) </catDesc>
+                  </category>
+                   <category xml:id="vntvh">
+                     <catDesc>ʔvntvh </catDesc>
+                  </category>
+                   <category xml:id="vntvn">
+                     <catDesc>ʔvntvn(a) </catDesc>
+                  </category>
+                  <category xml:id="vnt">
+                     <catDesc>ʔvnt</catDesc>
+                  </category>
+               </category>
+               <category xml:id="itta">
+                     <catDesc>ʔitt(a)</catDesc>
+                  </category>
+               <category xml:id="nt_forms">
+                  <catDesc>Nt-forms</catDesc>
+                   <category xml:id="nta">
+                  <catDesc>Nta</catDesc>
+               </category>
+                  <category xml:id="nta_plus">
+                  <catDesc>Nta(+)</catDesc>
+               </category>
+                   <category xml:id="nti_plus">
+                  <catDesc>Nti (+)</catDesc>
+               </category>
+               </category>
+               <category xml:id="h_forms">
+                  <catDesc>H-forms</catDesc>
+               </category>
+               <category xml:id="t_forms">
+                  <catDesc>T-forms</catDesc>
+               </category>
+            </taxonomy>
+         </classDecl>
       </encodingDesc>
       
        <profileDesc>
@@ -53,76 +93,76 @@
          <div type="featureDescription">
             <head>Feature Values</head>
             <list type="featureValues">
-               <item xml:id="pr_s2m_inti">
+               <item xml:id="pr_s2m_inti" corresp="#vntv">
                   <label>inti, ʔinti, ʔenti</label>
                </item>
-               <item xml:id="pr_s2m_inta">
+               <item xml:id="pr_s2m_inta" corresp="#vntv">
                   <label>inta</label>
                </item>
-               <item xml:id="pr_s2m_intaa">
+               <item xml:id="pr_s2m_intaa"corresp="#vntv">
                   <label>intā</label>
                </item>
-               <item xml:id="pr_s2m_inte">
+               <item xml:id="pr_s2m_inte" corresp="#vntv">
                   <label>inte</label>
                </item>
-               <item xml:id="pr_s2m_ntaah">
+               <item xml:id="pr_s2m_ntaah" corresp="#nta_plus">
                   <label>ntāh</label>
                </item>
-               <item xml:id="pr_s2m_nta">
+               <item xml:id="pr_s2m_nta" corresp="#nta">
                   <label>nta</label>
                </item>
-               <item xml:id="pr_s2m_nča">
+               <item xml:id="pr_s2m_nča" corresp="#nta">
                   <label>nča</label>
                </item>
-               <item xml:id="pr_s2m_ntaaya">
+               <item xml:id="pr_s2m_ntaaya" corresp="#nta_plus">
                   <label>ntāya</label>
                </item>
-               <item xml:id="pr_s2m_ntin">
+               <item xml:id="pr_s2m_ntin" corresp="#nt_plus">
                   <label>ntin</label>
                </item>
-               <item xml:id="pr_s2m_entin">
+               <item xml:id="pr_s2m_entin" corresp="#vntvn">
                   <label>entin</label>
                </item>
-               <item xml:id="pr_s2m_int">
+               <item xml:id="pr_s2m_int" corresp="#vnt">
                   <label>int, ʔint, ənt, ʔənt, ʔent</label>
                </item>
-               <item xml:id="pr_s2m_ant">
+               <item xml:id="pr_s2m_ant" corresp="#vnt">
                   <label>ant, ʔant, ʔ́önt</label>
                </item>
-               <item xml:id="pr_s2m_anta">
+               <item xml:id="pr_s2m_anta" corresp="#vntv">
                   <label>anta, ʔanta, ʔ́önta, ʔ́öntä, ʔənta</label>
                </item>
-               <item xml:id="pr_s2m_anti">
+               <item xml:id="pr_s2m_anti" corresp="#vntv">
                   <label>anti, ʔanti, ʔ́önte</label>
                </item>
-               <item xml:id="pr_s2m_hint">
+               <item xml:id="pr_s2m_hint" corresp="#h_forms">
                   <label>hint</label>
                </item>
-               <item xml:id="pr_s2m_intah">
+               <item xml:id="pr_s2m_intah" corresp="#vntvh">
                   <label>intah</label>
                </item>
-               <item xml:id="pr_s2m_intih">
+               <item xml:id="pr_s2m_intih" corresp="#vntvh">
                   <label>intih</label>
                </item>
-               <item xml:id="pr_s2m_itt">
+               <item xml:id="pr_s2m_itt" corresp="#itta">
                   <label>itt</label>
                </item>
-               <item xml:id="pr_s2m_itte">
+               <item xml:id="pr_s2m_itte" corresp="#itta">
                   <label>itte</label>
                </item>
-               <item xml:id="pr_s2m_haate">
+               <item xml:id="pr_s2m_haate" corresp="#h_forms">
                   <label>hāt(e)</label>
                </item>
-               <item xml:id="pr_s2m_tta">
+               <item xml:id="pr_s2m_tta" corresp="#t_forms">
                   <label>tta</label>
                </item>
-               <item xml:id="pr_s2m_taaya">
+               <item xml:id="pr_s2m_taaya" corresp="#t_forms">
                   <label>tāya</label>
                </item>
-               <item xml:id="pr_s2m_ntiyya">
+               <item xml:id="pr_s2m_ntiyya" corresp="#nti_plus">
                   <label>ntiyya</label>
                </item>
-                <item xml:id="pr_s2m_entina">
+                <item xml:id="pr_s2m_entina" corresp="#vntvn">
                   <label>əntina</label>
                </item>
             </list>

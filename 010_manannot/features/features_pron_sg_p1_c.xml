@@ -30,6 +30,37 @@
             <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1"/>
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"/>
          </listPrefixDef>
+         <classDecl>
+            <taxonomy>
+               <category xml:id="hamza_forms"> 
+                  <catDesc>ʔ-forms</catDesc>
+                  <category xml:id="vnv">
+                     <catDesc>ʔvnv</catDesc>
+                  </category>
+                  <category xml:id="vnvv">
+                     <catDesc>ʔvnvv</catDesc>
+                  </category>
+                  <category xml:id="vvnv">
+                     <catDesc>ʔvvnv</catDesc>
+                  </category>
+               </category>
+               <category xml:id="n_forms">
+                  <catDesc>N-forms</catDesc>
+                   <category xml:id="nvv">
+                  <catDesc>nvv</catDesc>
+               </category>
+                   <category xml:id="nvvya">
+                  <catDesc>nvvya</catDesc>
+               </category>
+               </category>
+               <category xml:id="h_forms">
+                  <catDesc>H-forms</catDesc>
+               </category>
+               <category xml:id="y_forms">
+                  <catDesc>Y-forms</catDesc>
+               </category>
+            </taxonomy>
+         </classDecl>
       </encodingDesc>
       
        <profileDesc>
@@ -52,64 +83,64 @@
          <div type="featureDescription">
             <head>Feature Values</head>
             <list type="featureValues">
-               <item xml:id="pr_s1mf_ana_ani">
+               <item xml:id="pr_s1mf_ana_ani" corresp="#vnv">
                   <label>Gender distinction:ana (m)/ani (f)</label>
                </item>
                <item xml:id="pr_s1mf_naa_nii">
                   <label>Gender distinction:nā (m)/nī (f)</label>
                </item>
-               <item xml:id="pr_s1c_ana">
+               <item xml:id="pr_s1c_ana" corresp="#vnv">
                   <label>ana, ʔana</label>
                </item>
-               <item xml:id="pr_s1c_ani">
+               <item xml:id="pr_s1c_ani" corresp="#vnv">
                   <label>ani, ʔani</label>
                </item>
-               <item xml:id="pr_s1c_anii">
+               <item xml:id="pr_s1c_anii" corresp="#vnvv">
                   <label>anī, ʔanī, aní</label>
                </item>
-               <item xml:id="pr_s1c_anaa">
+               <item xml:id="pr_s1c_anaa" corresp="#vnvv">
                   <label>anā, ʔanā</label>
                </item>
-               <item xml:id="pr_s1c_naa">
+               <item xml:id="pr_s1c_naa" corresp="#nvv">
                   <label>nā</label>
                </item>
-               <item xml:id="pr_s1c_naaya">
+               <item xml:id="pr_s1c_naaya" corresp="#nvvya">
                   <label>nāya</label>
                </item>
-               <item xml:id="pr_s1c_aana">
+               <item xml:id="pr_s1c_aana" corresp="#vvnv">
                   <label>āna, ʔāna</label>
                </item>
-               <item xml:id="pr_s1c_aanaaya">
+               <item xml:id="pr_s1c_aanaaya" corresp="#hamza_forms">
                   <label>ānāya</label>
                </item>
-               <item xml:id="pr_s1c_iinaayatha">
+               <item xml:id="pr_s1c_iinaayatha" corresp="#hamza_forms">
                   <label>īnāyatha</label>
                </item>
-               <item xml:id="pr_s1c_yiina">
+               <item xml:id="pr_s1c_yiina" corresp="#y_forms">
                   <label>yīn(a)</label>
                </item>
-                <item xml:id="pr_s1c_yana">
+                <item xml:id="pr_s1c_yana" corresp="#y_forms">
                   <label>yana</label>
                </item>
-               <item xml:id="pr_s1c_aani">
+               <item xml:id="pr_s1c_aani" corresp="#vvnv">
                   <label>āni, ʔāni</label>
                </item>
-               <item xml:id="pr_s1c_eeni">
+               <item xml:id="pr_s1c_eeni" corresp="#vvnv">
                   <label>ēni</label>
                </item>
-               <item xml:id="pr_s1c_eanii">
+               <item xml:id="pr_s1c_eanii" corresp="#vnvv">
                   <label>ənī</label>
                </item>
-               <item xml:id="pr_s1c_ina">
+               <item xml:id="pr_s1c_ina" corresp="#vnv">
                   <label>ina</label>
                </item>
-               <item xml:id="pr_s1c_nii">
+               <item xml:id="pr_s1c_nii" corresp="#nvv">
                   <label>nī</label>
                </item>
-               <item xml:id="pr_s1c_niiya">
+               <item xml:id="pr_s1c_niiya" corresp="#nvvya">
                   <label>nīya</label>
                </item>
-               <item xml:id="pr_s1c_haenae">
+               <item xml:id="pr_s1c_haenae" corresp="#h_forms">
                   <label>hana/hänä</label>
                </item>
             </list>

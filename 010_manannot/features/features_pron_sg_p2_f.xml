@@ -31,6 +31,40 @@
             <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1"/>
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"/>
          </listPrefixDef>
+         <classDecl>
+            <taxonomy>
+               <category xml:id="vnt_forms"> 
+                  <catDesc>ʔvnt-forms</catDesc>
+                  <category xml:id="vntv">
+                     <catDesc>ʔvntv</catDesc>
+                  </category>
+                   <category xml:id="intiin">
+                     <catDesc>ʔintīn(a)</catDesc>
+                  </category>
+                   <category xml:id="vntin">
+                     <catDesc>ʔvntin(a) </catDesc>
+                  </category>
+                  <category xml:id="vntvv">
+                     <catDesc>ʔvntvv</catDesc>
+                  </category>
+               </category>
+               <category xml:id="nt_forms">
+                  <catDesc>Nt-forms</catDesc>
+                  <category xml:id="ntii_plus">
+                  <catDesc>Ntī(+)</catDesc>
+               </category>
+                   <category xml:id="nti_plus">
+                  <catDesc>Nti(+)</catDesc>
+               </category>
+               </category>
+               <category xml:id="h_forms">
+                  <catDesc>H-forms</catDesc>
+               </category>
+               <category xml:id="t_forms">
+                  <catDesc>T-forms</catDesc>
+               </category>
+            </taxonomy>
+         </classDecl>
       </encodingDesc>
       
       <profileDesc>
@@ -55,67 +89,67 @@
          <div type="featureDescription">
             <head>Feature Values</head>
             <list type="featureValues">
-               <item xml:id="pr_s2f_inti">
+               <item xml:id="pr_s2f_inti" corresp="#vntv">
                   <label>inti, ʔinti, enti, ʔenti, ʔənti, ənti</label>
                </item>
-               <item xml:id="pr_s2f_intii">
+               <item xml:id="pr_s2f_intii" corresp="#vntvv">
                   <label>intī, intiy</label>
                </item>
-               <item xml:id="pr_s2f_inte">
+               <item xml:id="pr_s2f_inte" corresp="#vntv">
                   <label>inte, ʔente</label>
                </item>
-               <item xml:id="pr_s2f_ntii">
+               <item xml:id="pr_s2f_ntii" corresp="#ntii_plus">
                   <label>ntī</label>
                </item>
-               <item xml:id="pr_s2f_nchi">
+               <item xml:id="pr_s2f_nchi" corresp="#nti_plus">
                   <label>nči</label>
                </item>
-               <item xml:id="pr_s2f_ntiih">
+               <item xml:id="pr_s2f_ntiih" corresp="#ntii_plus">
                   <label>ntīh</label>
                </item>
-               <item xml:id="pr_s2f_nti">
+               <item xml:id="pr_s2f_nti" corresp="#nti_plus">
                   <label>nti, nty</label>
                </item>
-               <item xml:id="pr_s2f_intay">
+               <item xml:id="pr_s2f_intay" corresp="#vntvv">
                   <label>intay</label>
                </item>
-               <item xml:id="pr_s2f_intiina">
+               <item xml:id="pr_s2f_intiina" corresp="#intiin">
                   <label>intīna</label>
                </item>
-               <item xml:id="pr_s2f_ntiiya">
+               <item xml:id="pr_s2f_ntiiya" corresp="#ntii_plus">
                   <label>ntīya</label>
                </item>
-               <item xml:id="pr_s2f_anti">
+               <item xml:id="pr_s2f_anti" corresp="#vntv">
                   <label>anti, ʔanti, ʔ́önti, ʔ́önthi</label>
                </item>
-               <item xml:id="pr_s2f_antii">
+               <item xml:id="pr_s2f_antii" corresp="#vntvv">
                   <label>antī</label>
                </item>
-               <item xml:id="pr_s2f_hinti">
+               <item xml:id="pr_s2f_hinti" corresp="#h_forms">
                   <label>hinti, hinte</label>
                </item>
-               <item xml:id="pr_s2f_antin">
+               <item xml:id="pr_s2f_antin" corresp="#vntin">
                   <label>antin</label>
                </item>
-               <item xml:id="pr_s2f_haate">
+               <item xml:id="pr_s2f_haate" corresp="#h_forms">
                   <label>hāt(e)</label>
                </item>
-               <item xml:id="pr_s2f_ntina">
+               <item xml:id="pr_s2f_ntina" corresp="#nti_plus">
                   <label>nţīna</label>
                </item>
-               <item xml:id="pr_s2f_intiin">
+               <item xml:id="pr_s2f_intiin" corresp="#intiin">
                   <label>əntīn</label>
                </item>
-               <item xml:id="pr_s2f_entina">
+               <item xml:id="pr_s2f_entina" corresp="#vntin">
                   <label>enţīna</label>
                </item>
-               <item xml:id="pr_s2f_tti">
+               <item xml:id="pr_s2f_tti" corresp="#t_forms">
                   <label>tti</label>
                </item>
-               <item xml:id="pr_s2f_itti">
+               <item xml:id="pr_s2f_itti" corresp="#vnt_forms">
                   <label>itti</label>
                </item>
-               <item xml:id="pr_s2f_tiya">
+               <item xml:id="pr_s2f_tiya" corresp="#t_forms">
                   <label>tiya</label>
                </item>
             </list>
