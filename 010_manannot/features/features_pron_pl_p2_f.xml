@@ -30,6 +30,31 @@
             <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"/>
          </listPrefixDef>
+          <classDecl>
+            <taxonomy>
+               <category xml:id="hamza_vnt_forms"> 
+                  <catDesc>ʔvnt- forms </catDesc>
+                  <category xml:id="vntvn">
+                     <catDesc>ʔvntv(v)n</catDesc>
+                  </category>
+                  <category xml:id="vntvnna">
+                     <catDesc>ʔvntvnna(h)</catDesc>
+                  </category>
+                  <category xml:id="vntvm">
+                     <catDesc>ʔvntvm</catDesc>
+                  </category>
+               </category>
+               <category xml:id="hamza_itt_forms">
+                  <catDesc>ʔitt- forms</catDesc>
+               </category>
+               <category xml:id="nt_forms">
+                  <catDesc>Nt-forms</catDesc>
+               </category>
+               <category xml:id="h_forms">
+                  <catDesc>H-forms</catDesc>
+               </category>
+            </taxonomy>
+         </classDecl>
       </encodingDesc>
       
        <profileDesc>
@@ -54,59 +79,59 @@
          <div type="featureDescription">
             <head>Feature Values</head>
             <list type="featureValues">
-               <item xml:id="pr_p2f_intin">
+               <item xml:id="pr_p2f_intin" corresp="#vntvn">
                   <label>intin, ʔǝntǝn, ʔintin, ʔintən(n), enten</label>
                </item>
-               <item xml:id="pr_p2f_antin">
+               <item xml:id="pr_p2f_antin" corresp="#vntvn">
                   <label>antin, ʔ́öntenn</label>
                </item>
-               <item xml:id="pr_p2f_intinna">
+               <item xml:id="pr_p2f_intinna" corresp="#vntvnna">
                   <label>intinna</label>
                </item>
-               <item xml:id="pr_p2f_antinna">
+               <item xml:id="pr_p2f_antinna" corresp="#vntvnna">
                   <label>antinna</label>
                </item>
-               <item xml:id="pr_p2f_intunnah">
+               <item xml:id="pr_p2f_intunnah" corresp="#vntvnna">
                   <label>intunnah</label>
                </item>
-               <item xml:id="pr_p2f_ntuumaati">
+               <item xml:id="pr_p2f_ntuumaati" corresp="#nt_forms">
                   <label>ntūmāti</label>
                </item>
-               <item xml:id="pr_p2f_antunna">
+               <item xml:id="pr_p2f_antunna" corresp="#vntvnna">
                   <label>antunna</label>
                </item>
                
-               <item xml:id="pr_p2f_antum">
+               <item xml:id="pr_p2f_antum" corresp="#vntvm">
                   <label>antum</label>
                </item>
-               <item xml:id="pr_p2f_intum">
+               <item xml:id="pr_p2f_intum" corresp="#vntvm">
                   <label>intum</label>
                </item>
-               <item xml:id="pr_p2f_antayn">
+               <item xml:id="pr_p2f_antayn" corresp="#vntvn">
                   <label>antayn, ʔanteyn</label>
                </item>
-               <item xml:id="pr_p2f_intayn">
+               <item xml:id="pr_p2f_intayn" corresp="#vntvn">
                   <label>intayn</label>
                </item>
-               <item xml:id="pr_p2f_hintin">
+               <item xml:id="pr_p2f_hintin" corresp="#h_forms">
                   <label>hintin</label>
                </item>
-               <item xml:id="pr_p2f_intan">
+               <item xml:id="pr_p2f_intan" corresp="#vntvn">
                   <label>intan, ʔintan, ʔəntan</label>
                </item>
-               <item xml:id="pr_p2f_antan">
+               <item xml:id="pr_p2f_antan" corresp="#vntvn">
                   <label>antan, ʔöntenn, ʔ́antänn</label>
                </item>
-               <item xml:id="pr_p2f_intən">
+               <item xml:id="pr_p2f_intən" corresp="#vntvn">
                   <label>intən, entən</label>
                </item>
-               <item xml:id="pr_p2f_intni">
+               <item xml:id="pr_p2f_intni" corresp="#hamza_vnt_forms">
                   <label>intni</label>
                </item>
-               <item xml:id="pr_p2f_ittan">
+               <item xml:id="pr_p2f_ittan" corresp="#hamza_itt_forms">
                   <label>ittan</label>
                </item>
-               <item xml:id="pr_p2f_ntan">
+               <item xml:id="pr_p2f_ntan" corresp="#nt_forms">
                   <label>ntan/nten</label>
                </item>
             </list>

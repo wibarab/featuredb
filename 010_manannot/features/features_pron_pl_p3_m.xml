@@ -30,6 +30,42 @@
             <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1"/>
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"/>
          </listPrefixDef>
+         <classDecl>
+            <taxonomy>
+               <category xml:id="m_forms"> 
+                  <catDesc>M-based forms </catDesc>
+                  <category xml:id="hvm">
+                     <catDesc>Hvm</catDesc>
+                  </category>
+                  <category xml:id="hum_plus">
+                     <catDesc>Hum+</catDesc>
+                  </category>
+                  <category xml:id="hummv">
+                     <catDesc>Hummv</catDesc>
+                  </category>
+                  <category xml:id="hvmmv_plus">
+                  <catDesc>Hvmmv+</catDesc>
+               </category>
+                  <category xml:id="vhmv_plus">
+                  <catDesc>ʔvhmv (+) </catDesc>
+               </category>
+                  <category xml:id="hmv_plus">
+                  <catDesc>ʔhmv (+) </catDesc>
+               </category>
+               </category>
+               <category xml:id="n_forms">
+                  <catDesc>N-based forms</catDesc>
+               </category>
+               <category xml:id="w_forms">
+                     <catDesc>W-based forms</catDesc>
+                  </category>
+               
+                  <category xml:id="dem_based">
+                     <catDesc>Demonstrative-based forms</catDesc>
+                  </category>
+                  
+            </taxonomy>
+         </classDecl>
       </encodingDesc>
 
       <profileDesc>
@@ -54,92 +90,92 @@
          <div type="featureDescription">
             <head>Feature Values</head>
             <list type="featureValues">
-               <item xml:id="pr_p3m_hum">
+               <item xml:id="pr_p3m_hum" corresp="#hvm">
                   <label>hum, humm, homm</label>
                   <desc/>
                </item>
-               <item xml:id="pr_p3m_hummah">
+               <item xml:id="pr_p3m_hummah" corresp="#hvmmv_plus">
                   <label>hummah</label>
                   <desc/>
                </item>
-               <item xml:id="pr_p3m_humma">
+               <item xml:id="pr_p3m_humma" corresp="#hummv">
                   <label>humma, huṃṃa, hoṃṃa</label>
                   <desc/>
                </item>
-               <item xml:id="pr_p3m_humme">
+               <item xml:id="pr_p3m_humme" corresp="#hummv">
                   <label>humme</label>
                   <desc/>
                </item>
-               <item xml:id="pr_p3m_himma">
+               <item xml:id="pr_p3m_himma" corresp="#hummv">
                   <label>himma, həmma</label>
                </item>
-               <item xml:id="pr_p3m_hun">
+               <item xml:id="pr_p3m_hun" corresp="#n_forms">
                   <label>hun</label>
                </item>
-               <item xml:id="pr_p3m_hoon">
+               <item xml:id="pr_p3m_hoon" corresp="#n_forms">
                   <label>hōn</label>
                </item>
-               <item xml:id="pr_p3m_ihmah">
+               <item xml:id="pr_p3m_ihmah" corresp="#hmv_plus">
                   <label>ihmah</label>
                </item>
-               <item xml:id="pr_p3m_him">
+               <item xml:id="pr_p3m_him" corresp="#hvm">
                   <label>him</label>
                </item>
-               <item xml:id="pr_p3m_ihim">
+               <item xml:id="pr_p3m_ihim" corresp="#vhmv_plus">
                   <label>ihim</label>
                </item>
-               <item xml:id="pr_p3m_əhma">
+               <item xml:id="pr_p3m_əhma" corresp="#hmv_plus">
                   <label>əhma</label>
                </item>
-               <item xml:id="pr_p3m_əhəma">
+               <item xml:id="pr_p3m_əhəma" corresp="#vhmv_plus">
                   <label>əhəma</label>
                </item>
-               <item xml:id="pr_p3m_uhma">
+               <item xml:id="pr_p3m_uhma" corresp="#hmv_plus">
                   <label>uhma</label>
                </item>
-               <item xml:id="pr_p3m_uhum">
+               <item xml:id="pr_p3m_uhum" corresp="#vhmv_plus">
                   <label>uhum</label>
                </item>
-               <item xml:id="pr_p3m_hummu">
+               <item xml:id="pr_p3m_hummu" corresp="#hummv">
                   <label>hummu</label>
                </item>
-               <item xml:id="pr_p3m_duklo">
+               <item xml:id="pr_p3m_duklo" corresp="#dem_based">
                   <label>duklo</label>
                </item>
-               <item xml:id="pr_p3m_dukola">
+               <item xml:id="pr_p3m_dukola" corresp="#dem_based">
                   <label>dukōla</label>
                </item>
-               <item xml:id="pr_p3m_ziklon">
+               <item xml:id="pr_p3m_ziklon" corresp="#dem_based">
                   <label>ziklōn</label>
                </item>
-               <item xml:id="pr_p3m_ziklonat">
+               <item xml:id="pr_p3m_ziklonat" corresp="#dem_based">
                   <label>ziklōnāt</label>
                </item>
-               <item xml:id="pr_p3m_zokat">
+               <item xml:id="pr_p3m_zokat" corresp="#dem_based">
                   <label>zōkāt</label>
                </item>
-               <item xml:id="pr_p3m_ham">
+               <item xml:id="pr_p3m_ham" corresp="#hvm">
                   <label>ham</label>
                </item>
-               <item xml:id="pr_p3m_huma">
+               <item xml:id="pr_p3m_huma" corresp="#hum_plus">
                   <label>hūma, hūmä</label>
                </item>
-               <item xml:id="pr_p3m_humat">
+               <item xml:id="pr_p3m_humat" corresp="#hum_plus">
                   <label>humat</label>
                </item>
-               <item xml:id="pr_p3m_humman">
+               <item xml:id="pr_p3m_humman" corresp="#hvmmv_plus">
                   <label>humman</label>
                </item>
-               <item xml:id="pr_p3m_humi">
+               <item xml:id="pr_p3m_humi" corresp="#hum_plus">
                   <label>humi</label>
                </item>
-               <item xml:id="pr_p3m_huw">
+               <item xml:id="pr_p3m_huw" corresp="#w_forms">
                   <label>huw</label>
                </item>
-               <item xml:id="pr_p3m_hummwa">
+               <item xml:id="pr_p3m_hummwa" corresp="#hvmmv_plus">
                   <label>huṃṃwa</label>
                </item>
-               <item xml:id="pr_p3m_huwwa">
+               <item xml:id="pr_p3m_huwwa" corresp="#w_forms">
                   <label>huwwa</label>
                </item>
             </list>

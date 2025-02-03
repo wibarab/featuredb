@@ -30,6 +30,37 @@
             <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"/>
          </listPrefixDef>
+         <classDecl>
+            <taxonomy>
+               <category xml:id="hamza_vnt_forms"> 
+                  <catDesc>ʔvnt- forms </catDesc>
+                  <category xml:id="vntv">
+                     <catDesc>ʔvntv</catDesc>
+                  </category>
+                  <category xml:id="intvv">
+                     <catDesc>ʔintvv</catDesc>
+                  </category>
+                  <category xml:id="intvn">
+                     <catDesc>ʔintvn</catDesc>
+                  </category>
+                  <category xml:id="intvm">
+                     <catDesc>ʔintvm</catDesc>
+                  </category>
+                  <category xml:id="entuum_plus">
+                     <catDesc>ʔentūm+</catDesc>
+                  </category>
+               </category>
+               <category xml:id="hamza_vtt_forms">
+                  <catDesc>ʔvtt- forms</catDesc>
+               </category>
+               <category xml:id="nt_forms">
+                  <catDesc>Nt-forms</catDesc>
+               </category>
+               <category xml:id="h_forms">
+                  <catDesc>H-forms</catDesc>
+               </category>
+            </taxonomy>
+         </classDecl>
       </encodingDesc>
       
        <profileDesc>
@@ -55,61 +86,61 @@
             <head>Feature Values</head>
             <list type="featureValues">
               
-               <item xml:id="pr_p2m_intu">
+               <item xml:id="pr_p2m_intu" corresp="#vntv">
                   <label>intu, ʔəntu, ʔintu, ʔənto</label>
                </item>
-               <item xml:id="pr_p2m_intum">
+               <item xml:id="pr_p2m_intum" corresp="#intvm">
                   <label>intum, ʔintum, intuṃ</label>
                </item>
-               <item xml:id="pr_p2m_intəm">
+               <item xml:id="pr_p2m_intəm" corresp="#intvm">
                   <label>intəm, ʔəntəm</label>
                </item>
-               <item xml:id="pr_p2m_antum">
+               <item xml:id="pr_p2m_antum" corresp="#intvm">
                   <label>antum, ʔantum, ʔ́öntom</label>
                </item>
-               <item xml:id="pr_p2m_ntuuma">
+               <item xml:id="pr_p2m_ntuuma" corresp="#nt_forms">
                   <label>ntūma / ntūmä</label>
                </item>
-               <item xml:id="pr_p2m_hintu">
+               <item xml:id="pr_p2m_hintu" corresp="#h_forms">
                   <label>hintu</label>
                </item>
-               <item xml:id="pr_p2m_entum">
+               <item xml:id="pr_p2m_entum" corresp="#intvm">
                   <label>entum</label>
                </item>
-               <item xml:id="pr_p2m_intaw">
+               <item xml:id="pr_p2m_intaw" corresp="#intvv">
                   <label>intaw, əntaw</label>
                </item>
-               <item xml:id="pr_p2m_intuu">
+               <item xml:id="pr_p2m_intuu" corresp="#intvv">
                   <label>intū, intuw</label>
                </item>
-               <item xml:id="pr_p2m_ittu">
+               <item xml:id="pr_p2m_ittu" corresp="#hamza_vtt_forms">
                   <label>ittu</label>
                </item>
-               <item xml:id="pr_p2m_intun">
+               <item xml:id="pr_p2m_intun" corresp="#intvn">
                   <label>intun</label>
                </item>
-               <item xml:id="pr_p2m_intan">
+               <item xml:id="pr_p2m_intan" corresp="#intvn">
                   <label>intan</label>
                </item>
-               <item xml:id="pr_p2m_antu">
+               <item xml:id="pr_p2m_antu" corresp="#vntv">
                   <label>antu, ʔöntou, ʔantū</label>
                </item>
-               <item xml:id="pr_p2m_uttu">
+               <item xml:id="pr_p2m_uttu" corresp="#hamza_vtt_forms">
                   <label>uttu</label>
                </item>
-               <item xml:id="pr_p2m_entuumaha">
+               <item xml:id="pr_p2m_entuumaha" corresp="#entuum_plus">
                   <label>entūmaha</label>
                </item>
-               <item xml:id="pr_p2m_entuumata">
+               <item xml:id="pr_p2m_entuumata" corresp="#entuum_plus">
                   <label>entūmata</label>
                </item>
-               <item xml:id="pr_p2m_intam">
+               <item xml:id="pr_p2m_intam" corresp="#intvm">
                   <label>intam, inṭaṃ, ʔintam, ʔəntam</label>
                </item>
-               <item xml:id="pr_p2m_ntuuh">
+               <item xml:id="pr_p2m_ntuuh" corresp="#nt_forms">
                   <label>ntūh</label>
                </item>
-               <item xml:id="pr_p2m_ntuu">
+               <item xml:id="pr_p2m_ntuu" corresp="#nt_forms">
                   <label>ntū</label>
                </item>
             </list>
