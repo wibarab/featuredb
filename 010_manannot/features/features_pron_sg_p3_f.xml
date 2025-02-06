@@ -30,6 +30,40 @@
             <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1"/>
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"/>
          </listPrefixDef>
+          <classDecl>
+            <taxonomy>
+               <category xml:id="hi_forms"> 
+                  <catDesc>hi-forms</catDesc>
+                  <category xml:id="hiyyv_plus">
+                     <catDesc>hiyyv(+)</catDesc>
+                  </category>
+                  <category xml:id="t_form">
+                     <catDesc>-t forms</catDesc>
+                  </category>
+               </category>
+               <category xml:id="hamza_vh_forms">
+                  <catDesc>ʔvh-forms </catDesc>
+                   <category xml:id="vhvv">
+                  <catDesc>ʔvhv̄</catDesc>
+               </category>
+                   <category xml:id="vhyv">
+                  <catDesc>ʔvhyv</catDesc>
+               </category>
+                   <category xml:id="vhiyya">
+                  <catDesc>ʔvhiyya</catDesc>
+               </category>
+               </category>
+               <category xml:id="h-less_forms">
+                  <catDesc>H-less forms</catDesc>
+                  <category xml:id="iyyv">
+                  <catDesc>ʔiyyv</catDesc>
+               </category>
+               </category>
+               <category xml:id="demonstratives">
+                  <catDesc>demonstrative-based forms</catDesc>
+               </category>
+            </taxonomy>
+         </classDecl>
       </encodingDesc>
 
       <profileDesc>
@@ -54,76 +88,76 @@
          <div type="featureDescription">
             <head>Feature Values</head>
             <list type="featureValues">
-               <item xml:id="pr_s3f_hiyya">
+               <item xml:id="pr_s3f_hiyya" corresp="#hiyyv_plus">
                   <label>hiyya / hīya / hiyyä / hīyä</label>
                </item>
-               <item xml:id="pr_s3f_hiyyi">
+               <item xml:id="pr_s3f_hiyyi" corresp="#hiyyv_plus">
                   <label>hiyyi / hiyye</label>
                </item>
-               <item xml:id="pr_s3f_hiyyeh">
+               <item xml:id="pr_s3f_hiyyeh" corresp="#hiyyv_plus">
                   <label>hiyyeh/hiyyah</label>
                </item>
-               <item xml:id="pr_s3f_ihiyya">
+               <item xml:id="pr_s3f_ihiyya" corresp="#vhiyya">
                   <label>ihiyya</label>
                </item>
-               <item xml:id="pr_s3f_ahiyya">
+               <item xml:id="pr_s3f_ahiyya" corresp="#vhiyya">
                   <label>ahiyya</label>
                </item>
-               <item xml:id="pr_s3f_hii">
+               <item xml:id="pr_s3f_hii" corresp="#hi_forms">
                   <label>hī / hiy</label>
                </item>
-               <item xml:id="pr_s3f_hi">
+               <item xml:id="pr_s3f_hi" corresp="#hi_forms">
                   <label>hi</label>
                </item>
-               <item xml:id="pr_s3f_ii">
+               <item xml:id="pr_s3f_ii" corresp="#h-less_forms">
                   <label>ī</label>
                </item>
-               <item xml:id="pr_s3f_hiya">
+               <item xml:id="pr_s3f_hiya" corresp="#hi_forms">
                   <label>hiya</label>
                </item>
-               <item xml:id="pr_s3f_hiih">
+               <item xml:id="pr_s3f_hiih" corresp="#hi_forms">
                   <label>hīh</label>
                </item>
                <item xml:id="pr_s3f_heiya">
                   <label>heiya</label>
                </item>
-               <item xml:id="pr_s3f_hiyat">
+               <item xml:id="pr_s3f_hiyat" corresp="#t_form">
                   <label>hiyat</label>
                </item>
-               <item xml:id="pr_s3f_iyya">
+               <item xml:id="pr_s3f_iyya" corresp="#iyyv">
                   <label>iyya</label>
                </item>
-               <item xml:id="pr_s3f_ihiy">
+               <item xml:id="pr_s3f_ihiy" corresp="#vhvv">
                   <label>ihiy</label>
                </item>
-               <item xml:id="pr_s3f_iyye">
+               <item xml:id="pr_s3f_iyye" corresp="#iyyv">
                   <label>iyye</label>
                </item>
-               <item xml:id="pr_s3f_ie">
+               <item xml:id="pr_s3f_ie" corresp="#h-less_forms">
                   <label>ie</label>
                </item>
-               <item xml:id="pr_s3f_əhyə">
+               <item xml:id="pr_s3f_əhyə" corresp="#vhyv">
                   <label>əhyə, əhiyyə</label>
                </item>
                <item xml:id="pr_s3f_hay">
                   <label>hay</label>
                </item>
-               <item xml:id="pr_s3f_ziika">
+               <item xml:id="pr_s3f_ziika" corresp="#demonstratives">
                   <label>zīka</label>
                </item>
-               <item xml:id="pr_s3f_diki">
+               <item xml:id="pr_s3f_diki" corresp="#demonstratives">
                   <label>diki</label>
                </item>
-               <item xml:id="pr_s3f_hiite">
+               <item xml:id="pr_s3f_hiite" corresp="#t_form">
                   <label>hīte</label>
                </item>
-               <item xml:id="pr_s3f_ahaa">
+               <item xml:id="pr_s3f_ahaa" corresp="#vhvv">
                   <label>ahǟ</label>
                </item>
-               <item xml:id="pr_s3f_ahii">
+               <item xml:id="pr_s3f_ahii" corresp="#vhvv">
                   <label>ahī</label>
                </item>
-               <item xml:id="pr_s3f_ihya">
+               <item xml:id="pr_s3f_ihya" corresp="#vhyv">
                   <label>ihya, ihyah , əhya, íhya</label>
                </item>
 
