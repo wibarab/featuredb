@@ -30,6 +30,16 @@
             <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"/>
          </listPrefixDef>
+         <classDecl>
+            <taxonomy>
+               <category xml:id="soundChanges"> 
+                  <catDesc>Sound Changes</catDesc>
+               </category>
+               <category xml:id="exceptionalCases">
+                  <catDesc>Exceptional Cases</catDesc>
+               </category>
+            </taxonomy>
+         </classDecl>
       </encodingDesc>
 
       <profileDesc>
@@ -55,31 +65,31 @@
          <div type="featureDescription">
             <head>Feature Values</head>
             <list type="featureValues">
-               <item xml:id="gh_gh">
+               <item xml:id="gh_gh" corresp="#soundChanges">
                   <label>ġ → ġ</label>
                </item>
-               <item xml:id="gh_q">
+               <item xml:id="gh_q" corresp="#soundChanges">
                   <label>ġ → q</label>
                </item>
-               <item xml:id="gh_0">
+               <item xml:id="gh_0" corresp="#soundChanges">
                   <label>ġ → ø</label>
                </item>
-               <item xml:id="gh_g">
+               <item xml:id="gh_g" corresp="#soundChanges">
                   <label>ġ → g</label>
                </item>
-               <item xml:id="gh_x">
+               <item xml:id="gh_x" corresp="#soundChanges">
                   <label>ġ → x</label>
                </item>
-               <item xml:id="gh_x_excep">
+               <item xml:id="gh_x_excep" corresp="#exceptionalCases">
                   <label>ġ → x</label>
                </item>
-               <item xml:id="gh_ayn">
+               <item xml:id="gh_ayn" corresp="#soundChanges">
                   <label>ġ → ʕ</label>
                </item>
-               <item xml:id="gh_g2">
+               <item xml:id="gh_g2" corresp="#soundChanges">
                   <label>ġ → G</label>
                </item>
-               <item xml:id="gh_hamza">
+               <item xml:id="gh_hamza" corresp="#soundChanges">
                   <label>ġ → ʔ</label>
                </item>
             </list>
