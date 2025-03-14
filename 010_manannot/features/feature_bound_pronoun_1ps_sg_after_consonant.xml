@@ -30,6 +30,16 @@
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"/>
             <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
          </listPrefixDef>
+         <classDecl>
+            <taxonomy>
+                <category xml:id="v">
+                     <catDesc>-v(v)</catDesc>
+                  </category>
+               <category xml:id="exceptional">
+                     <catDesc>Exceptional object pronouns (not -ni)</catDesc>
+                  </category>
+            </taxonomy>
+         </classDecl>
       </encodingDesc>
       
       <profileDesc>
@@ -53,20 +63,20 @@
          <div type="featureDescription">
             <head>Feature Values</head>
             <list type="featureValues">
-               <item xml:id="bp_s1c_i">
+               <item xml:id="bp_s1c_i" corresp="'#v">
                   <label>-i/-ī</label>
                </item>
-               <item xml:id="bp_s1c_í">
+               <item xml:id="bp_s1c_í" corresp="'#v">
                   <label>-´ī (stressed)</label>
                </item>
               
-               <item xml:id="bp_s1c_an_object_pronoun">
+               <item xml:id="bp_s1c_an_object_pronoun" corresp="#exceptional">
                   <label>-an (object pronoun)</label>
                </item>
-               <item xml:id="bp_s1c_anyeh_object_pronoun">
+               <item xml:id="bp_s1c_anyeh_object_pronoun" corresp="#exceptional">
                   <label>-anyeh (object pronoun)</label>
                </item>
-               <item xml:id="bp_s1c_ínyah_object_pronoun">
+               <item xml:id="bp_s1c_ínyah_object_pronoun" corresp="#exceptional">
                   <label>-ínyah (object pronoun)</label>
                </item>
                <item xml:id="bp_s1c_ya_yi">
@@ -75,13 +85,13 @@
                <item xml:id="bp_s1c_iyya">
                   <label>-iyya</label>
                </item>
-               <item xml:id="bp_s1c_ey">
+               <item xml:id="bp_s1c_ey" corresp="'#v">
                   <label>-ey</label>
                </item>
-               <item xml:id="bp_s1c_iy">
+               <item xml:id="bp_s1c_iy" corresp="'#v">
                   <label>-i/-iy</label>
                </item>
-               <item xml:id="bp_s1c_e">
+               <item xml:id="bp_s1c_e" corresp="'#v">
                   <label>-e</label>
                </item>
             </list>

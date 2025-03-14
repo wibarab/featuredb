@@ -30,6 +30,16 @@
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"/>
             <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
          </listPrefixDef>
+          <classDecl>
+            <taxonomy>
+               <category xml:id="C">
+                     <catDesc>-C</catDesc>
+                  </category>
+               <category xml:id="Cv">
+                     <catDesc>-Cv</catDesc>
+                  </category>
+            </taxonomy>
+         </classDecl>
       </encodingDesc>
       
       <profileDesc>
@@ -54,29 +64,29 @@
          <div type="featureDescription">
             <head>Feature Values</head>
             <list type="featureValues">
-               <item xml:id="bp_s2fv_k">
+               <item xml:id="bp_s2fv_k" corresp="#C">
                   <label>-k</label>
                </item>
             
                <item xml:id="bp_s2fv_yk">
                   <label>-yk</label>
                </item>
-               <item xml:id="bp_s2fv_sh">
+               <item xml:id="bp_s2fv_sh" corresp="#C">
                   <label>-š</label>
                </item>
-               <item xml:id="bp_s2fv_c">
+               <item xml:id="bp_s2fv_c" corresp="#C">
                   <label>-ć</label>
                </item>
-               <item xml:id="bp_s2fv_ch">
+               <item xml:id="bp_s2fv_ch" corresp="#C">
                   <label>-č</label>
                </item>
-               <item xml:id="bp_s2fv_chi">
+               <item xml:id="bp_s2fv_chi" corresp="#Cv">
                   <label>-či</label>
                </item>
-               <item xml:id="bp_s2fv_ki">
+               <item xml:id="bp_s2fv_ki" corresp="#Cv">
                   <label>-ki</label>
                </item>
-               <item xml:id="bp_s2fv_kiy">
+               <item xml:id="bp_s2fv_kiy" corresp="#Cv">
                   <label>-kiy</label>
                </item>
             </list>

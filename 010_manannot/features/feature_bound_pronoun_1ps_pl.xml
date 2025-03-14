@@ -30,6 +30,13 @@
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"/>
             <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
          </listPrefixDef>
+         <classDecl>
+            <taxonomy>
+                <category xml:id="nv">
+                     <catDesc>-nv(v)</catDesc>
+                  </category>
+            </taxonomy>
+         </classDecl>
       </encodingDesc>
       
       <profileDesc>
@@ -53,19 +60,19 @@
          <div type="featureDescription">
             <head>Feature Values</head>
             <list type="featureValues">
-               <item xml:id="bp_p1_na">
+               <item xml:id="bp_p1_na" corresp="#nv">
                   <label>-na</label>
                </item>
-               <item xml:id="bp_p1_ni">
+               <item xml:id="bp_p1_ni" corresp="#nv">
                   <label>-ni(ʔ)</label>
                </item>
-               <item xml:id="bp_p1_naa">
+               <item xml:id="bp_p1_naa" corresp="#nv">
                   <label>-nā</label>
                </item>
-               <item xml:id="bp_p1_ne">
+               <item xml:id="bp_p1_ne" corresp="#nv">
                   <label>-ne -nä</label>
                </item>
-               <item xml:id="bp_p1_no">
+               <item xml:id="bp_p1_no" corresp="#nv">
                   <label>-nạ</label>
                </item>
                <item xml:id="bp_p1_nihna">
