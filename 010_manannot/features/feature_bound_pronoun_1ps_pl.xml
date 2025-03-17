@@ -30,6 +30,13 @@
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"/>
             <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
          </listPrefixDef>
+         <classDecl>
+            <taxonomy>
+                <category xml:id="nv">
+                     <catDesc>-nv(v)</catDesc>
+                  </category>
+            </taxonomy>
+         </classDecl>
       </encodingDesc>
       
       <profileDesc>
@@ -53,22 +60,19 @@
          <div type="featureDescription">
             <head>Feature Values</head>
             <list type="featureValues">
-               <item xml:id="bp_p1_na">
+               <item xml:id="bp_p1_na" corresp="#nv">
                   <label>-na</label>
                </item>
-               <item xml:id="bp_p1_ni">
+               <item xml:id="bp_p1_ni" corresp="#nv">
                   <label>-ni(ʔ)</label>
                </item>
-               <item xml:id="bp_p1_naa">
+               <item xml:id="bp_p1_naa" corresp="#nv">
                   <label>-nā</label>
                </item>
-               <item xml:id="bp_p1_ne">
+               <item xml:id="bp_p1_ne" corresp="#nv">
                   <label>-ne -nä</label>
                </item>
-                <item xml:id="bp_p1_nae">
-                  <label>-nä</label>
-               </item>
-               <item xml:id="bp_p1_no">
+               <item xml:id="bp_p1_no" corresp="#nv">
                   <label>-nạ</label>
                </item>
                <item xml:id="bp_p1_nihna">
@@ -130,10 +134,11 @@
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_bnd_pr_1ps_pl.fv_0074" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#bp_p1_nae"/>
+               <name type="featureValue" ref="#bp_p1_ne"/>
                <bibl corresp="zot:el_hajje_1954_0000" type="publication"/>
                <placeName ref="geo:tripoli_lebanon"/>
                <lang corresp="..\profiles\vicav_profile_LBN-TRI.xml"/>
+               <cit type="sourceRepresentation"><quote>-nä</quote></cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_bnd_pr_1ps_pl.fv_0062" status="done" resp="dmp:AID">
@@ -144,10 +149,11 @@
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_bnd_pr_1ps_pl.fv_0079" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#bp_p1_nae"/>
+               <name type="featureValue" ref="#bp_p1_ne"/>
                <bibl corresp="zot:fleisch_1947_2645" type="publication"/>
                <placeName ref="geo:zahle"/>
                <lang corresp="..\profiles\vicav_profile_LBN-ZAH.xml"/>
+               <cit type="sourceRepresentation"><quote>-nä</quote></cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_bnd_pr_1ps_pl.fv_0065" status="done" resp="dmp:AID">
@@ -181,7 +187,7 @@
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_bnd_pr_1ps_pl.fv_0052" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#bp_p1_nae"/>
+               <name type="featureValue" ref="#bp_p1_ne"/>
                <bibl corresp="zot:younes_2013_2795" type="publication"/>
                <placeName ref="geo:wadi_khalid"/>
                <lang corresp="..\profiles\vicav_profile_LBN-ATI.xml"/>
