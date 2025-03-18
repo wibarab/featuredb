@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
-schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0">
+schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xml:space="preserve"
+     xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
             <titleStmt>
                 <title>WIBARAB Data Management Plan</title>
-                <author ref="#DS"/>
-                <author ref="#AH"/>
-                <principal ref="#SP"/>
-                <principal ref="#CM"/>
+                <author ref="#DS" />
+                <author ref="#AH" />
+                <principal ref="#SP" />
+                <principal ref="#CM" />
             </titleStmt>
             <publicationStmt>
                 <p>Publication Information</p>
@@ -20,24 +20,34 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <listPrefixDef xml:id="listPrefixDef">
-                <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../010_manannot/wibarab-dmp.xml#$1"/>
-                <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_biblio_tei_zotero.xml#$1"/>
-                <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_dialects.xml#$1"/>
-                <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_geodata.xml#$1"/>
-                <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../010_manannot/wibarab_tribes.xml#$1"/>
+                <prefixDef ident="dmp"
+                           matchPattern="^(.+)$"
+                           replacementPattern="../010_manannot/wibarab-dmp.xml#$1" />
+                <prefixDef ident="zot"
+                           matchPattern="^(.+)$"
+                           replacementPattern="../010_manannot/vicav_biblio_tei_zotero.xml#$1" />
+                <prefixDef ident="dia"
+                           matchPattern="^(.+)$"
+                           replacementPattern="../010_manannot/vicav_dialects.xml#$1" />
+                <prefixDef ident="geo"
+                           matchPattern="^(.+)$"
+                           replacementPattern="../010_manannot/vicav_geodata.xml#$1" />
+                <prefixDef ident="dia"
+                           matchPattern="^(.+)$"
+                           replacementPattern="../010_manannot/wibarab_tribes.xml#$1" />
             </listPrefixDef>
             <!-- taxonomy with feature categories -->
             <classDecl>
                 <taxonomy>
                     <category xml:id="personal_pronouns">
                         <catDesc>Personal Pronouns</catDesc>
-                        <category xml:id="bound_pronouns">
+                        <category xml:id="personal_pronouns.bound_pronouns">
                             <catDesc>Bound Personal Pronouns</catDesc>
                         </category>
-                        <category xml:id="independent_pronouns">
+                        <category xml:id="personal_pronouns.independent_pronouns">
                             <catDesc>Independent Personal Pronouns</catDesc>
                         </category>
-                        <category xml:id="negated_pronouns">
+                        <category xml:id="personal_pronouns.negated_pronouns">
                             <catDesc>Negated Personal Pronouns</catDesc>
                         </category>
                     </category>
@@ -46,49 +56,49 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </category>
                     <category xml:id="vowel_phenomena">
                         <catDesc>Vowel Phenomena</catDesc>
-                        <category xml:id="raising_medial_a">
+                        <category xml:id="vowel_phenomena.raising_medial_a">
                             <catDesc>Raising of medial /-a-/</catDesc>
                         </category>
-                        <category xml:id="raising_final_a">
+                        <category xml:id="vowel_phenomena.raising_final_a">
                             <catDesc>Raising of final /-a/</catDesc>
                         </category>
                     </category>
                     <category xml:id="phonotactics">
                         <catDesc>Phonotactics</catDesc>
-                        <category xml:id="gahawa">
+                        <category xml:id="phonotactics.gahawa">
                             <catDesc>Low vowel insertion after gutural (Gahawa Syndrome)</catDesc>
                         </category>
-                        <category xml:id="resyllabification">
+                        <category xml:id="phonotactics.resyllabification">
                             <catDesc>Resyllabification</catDesc>
                         </category>
                     </category>
                     <category xml:id="verbal_morphology">
                         <catDesc>Verbal Morphology</catDesc>
-                        <category xml:id="sound_verbs">
+                        <category xml:id="verbal_morphology.sound_verbs">
                             <catDesc>Sound Verbs</catDesc>
                         </category>
-                        <category xml:id="weak_verbs">
+                        <category xml:id="verbal_morphology.weak_verbs">
                             <catDesc>Weak Verbs</catDesc>
                         </category>
-                        <category xml:id="derived_forms">
+                        <category xml:id="verbal_morphology.derived_forms">
                             <catDesc>Derived Forms</catDesc>
                         </category>
                     </category>
                     <category xml:id="syntax">
                         <catDesc>Syntax</catDesc>
-                        <category xml:id="TAM_markers">
+                        <category xml:id="syntax.TAM_markers">
                             <catDesc>TAM Markers</catDesc>
                         </category>
-                        <category xml:id="negation">
+                        <category xml:id="syntax.negation">
                             <catDesc>Negation</catDesc>
                         </category>
-                        <category xml:id="particles">
+                        <category xml:id="syntax.particles">
                             <catDesc>Particles</catDesc>
                         </category>
-                        <category xml:id="nominal_syntax">
+                        <category xml:id="syntax.nominal_syntax">
                             <catDesc>Nominal Syntax</catDesc>
                         </category>
-                        <category xml:id="object_marking">
+                        <category xml:id="syntax.object_marking">
                             <catDesc>Object Marking</catDesc>
                         </category>
                     </category>
@@ -97,7 +107,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </category>
                     <category xml:id="lexicon">
                         <catDesc>Lexicon</catDesc>
-                        <category xml:id="verbs">
+                        <category xml:id="lexicon.verbs">
                             <catDesc>Verbs</catDesc>
                         </category>
                     </category>
@@ -105,7 +115,10 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
             </classDecl>
         </encodingDesc>
         <xenoData>
-            <structMap ID="sm01" TYPE="LOGICAL" xmlns="http://www.loc.gov/METS/" LABEL="">
+            <structMap ID="sm01"
+                       TYPE="LOGICAL"
+                       xmlns="http://www.loc.gov/METS/"
+                       LABEL="">
                 <div>
                 </div>
             </structMap>
@@ -117,10 +130,15 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <div xml:id="generalProjectInformation">
                 <head>General Project Information</head>
                 <fs type="projectInformation">
-                    <f n="Project Acronym" name="projectAcronym">WIBARAB</f>
-                    <f n="Project Number" name="projectNumber">OPRI0813</f>
-                    <f n="Start Date" name="startDate">2021-10-01</f>
-                    <f n="End Date" name="endDate" cert="low">2026-09-30</f>
+                    <f n="Project Acronym"
+                       name="projectAcronym">WIBARAB</f>
+                    <f n="Project Number"
+                       name="projectNumber">OPRI0813</f>
+                    <f n="Start Date"
+                       name="startDate">2021-10-01</f>
+                    <f n="End Date"
+                       name="endDate"
+                       cert="low">2026-09-30</f>
                 </fs>
                 <div xml:id="summary">
                     <head>Summary</head>
@@ -160,15 +178,20 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                 <org xml:id="Orientalistik">
                                     <orgName xml:lang="de">Institut für Orientalistik</orgName>
                                     <orgName xml:lang="en">Department of Near Eastern Studies</orgName>
-                                    <idno type="URL" subtype="ARCHE">https://id.acdh.oeaw.ac.at/orientalistik-uni-wien</idno>
-                                    <idno type="URL" subtype="GND">https://d-nb.info/gnd/5321012-8</idno>
-                                    <idno type="URL" subtype="VIAF">https://viaf.org/viaf/125370875</idno>
-                                    <idno type="URL" subtype="ARCHE">https://arche.acdh.oeaw.ac.at/api/41952</idno>
-                                    <ptr target="https://ufind.univie.ac.at/en/pvz_sub.html?id=434"/>
+                                    <idno type="URL"
+                                          subtype="ARCHE">https://id.acdh.oeaw.ac.at/orientalistik-uni-wien</idno>
+                                    <idno type="URL"
+                                          subtype="GND">https://d-nb.info/gnd/5321012-8</idno>
+                                    <idno type="URL"
+                                          subtype="VIAF">https://viaf.org/viaf/125370875</idno>
+                                    <idno type="URL"
+                                          subtype="ARCHE">https://arche.acdh.oeaw.ac.at/api/41952</idno>
+                                    <ptr target="https://ufind.univie.ac.at/en/pvz_sub.html?id=434" />
                                 </org>
                                 <org xml:id="ZID">
                                     <orgName xml:lang="de">Zentraler Informatikdienst</orgName>
-                                    <idno type="URI" subtype="GND">https://d-nb.info/gnd/10114265-1</idno>
+                                    <idno type="URI"
+                                          subtype="GND">https://d-nb.info/gnd/10114265-1</idno>
                                 </org>
                             </listOrg>
                         </org>
@@ -176,11 +199,16 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <orgName>Österreichische Akademie der Wissenschaften</orgName>
                             <listOrg type="subunits">
                                 <org xml:id="ACDH-CH">
-                                    <orgName full="yes" xml:lang="en">Austrian Centre for Digital Humanities and Cultural Heritage</orgName>
-                                    <idno type="URI" subtype="ARCHE"> https://id.acdh.oeaw.ac.at/acdh</idno>
-                                    <idno type="URI" subtype="VIAF">https://viaf.org/viaf/6515148451584915970000</idno>
-                                    <idno type="URI" subtype="ARCHE">https://id.acdh.oeaw.ac.at/acdh-oeaw</idno>
-                                    <idno type="URI" subtype="GND">https://d-nb.info/gnd/1123037736</idno>
+                                    <orgName full="yes"
+                                             xml:lang="en">Austrian Centre for Digital Humanities and Cultural Heritage</orgName>
+                                    <idno type="URI"
+                                          subtype="ARCHE"> https://id.acdh.oeaw.ac.at/acdh</idno>
+                                    <idno type="URI"
+                                          subtype="VIAF">https://viaf.org/viaf/6515148451584915970000</idno>
+                                    <idno type="URI"
+                                          subtype="ARCHE">https://id.acdh.oeaw.ac.at/acdh-oeaw</idno>
+                                    <idno type="URI"
+                                          subtype="GND">https://d-nb.info/gnd/1123037736</idno>
                                     <orgName full="abb">ACDH-CH</orgName>
                                 </org>
                                 <org xml:id="ARZ">
@@ -191,53 +219,66 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </listOrg>
                     <listPerson xml:id="projectTeam">
                         <head>Project Team</head>
-                        <person xml:id="SP" role="Principal investigator">
+                        <person xml:id="SP"
+                                role="Principal investigator">
                             <persName>
                                 <forename>Stephan</forename>
                                 <surname>Procházka</surname>
                             </persName>
                             <affiliation ref="#Orientalistik">University of Vienna, Department of Near Eastern Studies</affiliation>
-                            <idno type="URL" subtype="ORCID">https://orcid.org/0000-0001-9421-1404</idno>
-                            <idno type="URL" subtype="VIAF">https://viaf.org/viaf/5608348</idno>
-                            <idno type="URL" subtype="ARCHE">https://id.acdh.oeaw.ac.at/sprochazka</idno>
+                            <idno type="URL"
+                                  subtype="ORCID">https://orcid.org/0000-0001-9421-1404</idno>
+                            <idno type="URL"
+                                  subtype="VIAF">https://viaf.org/viaf/5608348</idno>
+                            <idno type="URL"
+                                  subtype="ARCHE">https://id.acdh.oeaw.ac.at/sprochazka</idno>
                         </person>
-                        <person xml:id="RZ" role="Prae-doc researcher">
+                        <person xml:id="RZ"
+                                role="Prae-doc researcher">
                             <persName>
                                 <forename>Maria Rebecca</forename>
                                 <surname>Zarb</surname>
                             </persName>
                             <affiliation ref="#Orientalistik">University of Vienna, Department of Near Eastern Studies</affiliation>
-                            <idno type="URL" subtype="ORCID">https://orcid.org/0000-0002-4554-4787</idno>
+                            <idno type="URL"
+                                  subtype="ORCID">https://orcid.org/0000-0002-4554-4787</idno>
                             <note>deals with the dialect of the Rašāyda bedouins namely in Saudi Arabia and Kuwait. WP1 </note>
                         </person>
-                        <person xml:id="JD" role="Pre-MA researcher">
+                        <person xml:id="JD"
+                                role="Pre-MA researcher">
                             <persName>
                                 <forename>Johanna</forename>
                                 <surname>Doppelbauer</surname>
                             </persName>
                             <affiliation ref="#Orientalistik">University of Vienna, Department of Near Eastern Studies</affiliation>
-                            <idno type="URL" subtype="ORCID"/>
+                            <idno type="URL"
+                                  subtype="ORCID" />
                             <note>collection of data for the database. This includes finding information regarding Bedouin dialects from already published sources and, once the database is operational, feeding it with the information accumulated on the subject, along with the data that will be collected by the other researchers in the course of the project. WP4 </note>
                         </person>
-                        <person xml:id="SK" role="Pre-MA researcher">
+                        <person xml:id="SK"
+                                role="Pre-MA researcher">
                             <persName>
                                 <forename>Stanley</forename>
                                 <surname>Kochem</surname>
                             </persName>
                             <affiliation ref="#Orientalistik">University of Vienna, Department of Near Eastern Studies</affiliation>
-                            <idno type="URL" subtype="ORCID"/>
+                            <idno type="URL"
+                                  subtype="ORCID" />
                             <note>collection of data for the database. This includes finding information regarding Bedouin dialects from already published sources and, once the database is operational, feeding it with the information accumulated on the subject, along with the data that will be collected by the other researchers in the course of the project. WP4 </note>
                         </person>
-                        <person xml:id="AID" role="Post-doc researcher">
+                        <person xml:id="AID"
+                                role="Post-doc researcher">
                             <persName>
                                 <forename>Ana</forename>
                                 <surname>Iriarte Díez</surname>
                             </persName>
                             <affiliation ref="#Orientalistik">University of Vienna, Department of Near Eastern Studies</affiliation>
-                            <idno type="URL" subtype="ORCID"/>
+                            <idno type="URL"
+                                  subtype="ORCID" />
                             <note>works on language and dialect contact and historical linguistics and language change WP5, WP6</note>
                         </person>
-                        <person xml:id="GiK" role="Post-doc researcher">
+                        <person xml:id="GiK"
+                                role="Post-doc researcher">
                             <persName>
                                 <forename>Gisela</forename>
                                 <surname>Kitzler</surname>
@@ -245,112 +286,138 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <affiliation ref="#Orientalistik">University of Vienna, Department of Near Eastern Studies</affiliation>
                             <note>works on the perception of bedouin varieties in Egypt with a focus on Sinai, as well as accommodation between bedouin and non-bedouin varieties in tourist areas in South Sinai. In Addition, she is responsible for the coordination of the project WP2</note>
                         </person>
-                        <person xml:id="AT" role="Prae-doc researcher">
+                        <person xml:id="AT"
+                                role="Prae-doc researcher">
                             <persName>
                                 <forename>Antonella</forename>
                                 <surname>Torzullo</surname>
                             </persName>
                             <affiliation ref="#Orientalistik">University of Vienna, Department of Near Eastern Studies</affiliation>
-                            <idno type="URL" subtype="ORCID"/>
+                            <idno type="URL"
+                                  subtype="ORCID" />
                             <note>works on the Arabic dialect of the Bani Saxar tribe in Jordan WP1</note>
                         </person>
-                        <person xml:id="TD" role="Prae-doc researcher">
+                        <person xml:id="TD"
+                                role="Prae-doc researcher">
                             <persName>
                                 <forename>Terlan</forename>
                                 <surname>Djavadova</surname>
                             </persName>
                             <affiliation ref="#Orientalistik">University of Vienna, Department of Near Eastern Studies</affiliation>
-                            <idno type="URL" subtype="ORCID"/>
+                            <idno type="URL"
+                                  subtype="ORCID" />
                             <note>deals with the Bedouin dialects of the ZAer and Chouia in Morocco and their influence on the Moroccan Koina WP1</note>
                         </person>
-                        <person xml:id="CL" role="Prae-doc researcher">
+                        <person xml:id="CL"
+                                role="Prae-doc researcher">
                             <persName>
                                 <forename>Claudia</forename>
                                 <surname>Laaber</surname>
                             </persName>
                             <affiliation ref="#Orientalistik">University of Vienna, Department of Near Eastern Studies</affiliation>
-                            <idno type="URL" subtype="ORCID"/>
+                            <idno type="URL"
+                                  subtype="ORCID" />
                             <note>works on language attitudes towards Bedouin Arabic WP2</note>
                         </person>
-                        <person xml:id="GuK" role="Prae-doc researcher">
+                        <person xml:id="GuK"
+                                role="Prae-doc researcher">
                             <persName>
                                 <forename>Gunda</forename>
                                 <surname>Kinzl</surname>
                             </persName>
                             <affiliation ref="#Orientalistik">University of Vienna, Department of Near Eastern Studies</affiliation>
-                            <idno type="URL" subtype="ORCID"/>
+                            <idno type="URL"
+                                  subtype="ORCID" />
                             <note>works on a grammatical description of the Rashayda Bedouins’ dialect in Saudi Arabia and Sudan WP1</note>
                         </person>
-                        <person xml:id="VE" role="Technical Staff">
+                        <person xml:id="VE"
+                                role="Technical Staff">
                             <persName>
                                 <forename>Veronika</forename>
                                 <surname>Engler</surname>
                             </persName>
                             <affiliation ref="#Orientalistik">Austrian Academy of Sciences, ACDH-CH</affiliation>
-                            <idno type="URL" subtype="ORCID"/>
+                            <idno type="URL"
+                                  subtype="ORCID" />
                             <note>collection of data for the database. This includes finding information regarding Bedouin dialects from already published sources and, once the database is operational, feeding it with the information accumulated on the subject, along with the data that will be collected by the other researchers in the course of the project.</note>
                         </person>
-                        <person xml:id="PH" role="Pre-MA researcher">
+                        <person xml:id="PH"
+                                role="Pre-MA researcher">
                             <persName>
                                 <forename>Philipp</forename>
                                 <surname>Hessabi</surname>
                             </persName>
                             <affiliation ref="#Orientalistik">University of Vienna, Department of Near Eastern Studies</affiliation>
-                            <idno type="URL" subtype="ORCID"/>
+                            <idno type="URL"
+                                  subtype="ORCID" />
                             <note>collection of data for the database. This includes finding information regarding Bedouin dialects from already published sources and, once the database is operational, feeding it with the information accumulated on the subject, along with the data that will be collected by the other researchers in the course of the project. WP4 </note>
                         </person>
-                        <person xml:id="CM" role="National Project Partner">
+                        <person xml:id="CM"
+                                role="National Project Partner">
                             <persName>
                                 <forename>Charly</forename>
                                 <surname>Mörth</surname>
                             </persName>
                             <affiliation ref="#ACDH-CH">Austrian Academy of Sciences, ACDH-CH</affiliation>
-                            <idno type="URL" subtype="ORCID">https://orcid.org/0000-0002-6466-7651</idno>
+                            <idno type="URL"
+                                  subtype="ORCID">https://orcid.org/0000-0002-6466-7651</idno>
                         </person>
-                        <person xml:id="AH" role="Technical Staff">
+                        <person xml:id="AH"
+                                role="Technical Staff">
                             <persName>
                                 <forename>Angelika</forename>
                                 <surname>Hechtl</surname>
                             </persName>
                             <affiliation ref="#ACDH-CH">Austrian Academy of Sciences, ACDH-CH</affiliation>
-                            <idno type="URL" subtype="ORCID"/>
+                            <idno type="URL"
+                                  subtype="ORCID" />
                         </person>
-                        <person xml:id="KS" role="Technical Staff">
+                        <person xml:id="KS"
+                                role="Technical Staff">
                             <persName>
                                 <forename>Kinga</forename>
                                 <surname>Sramó</surname>
                             </persName>
                             <affiliation ref="#ACDH-CH">Austrian Academy of Sciences, ACDH-CH</affiliation>
-                            <idno type="URL" subtype="ORCID"/>
+                            <idno type="URL"
+                                  subtype="ORCID" />
                             <note>works on transforming the linguistic data from the database into a visual representation (map)</note>
                         </person>
-                        <person xml:id="DS" role="Senior Technical Consultant">
+                        <person xml:id="DS"
+                                role="Senior Technical Consultant">
                             <persName>
                                 <forename>Daniel</forename>
                                 <surname>Schopper</surname>
                             </persName>
                             <affiliation ref="#ACDH-CH">Austrian Academy of Sciences, ACDH-CH</affiliation>
-                            <idno type="URL" subtype="ORCID">https://orcid.org/0000-0003-2436-0361</idno>
-                            <idno type="URL" subtype="ARCHE">https://id.acdh.oeaw.ac.at/dschopper</idno>
-                            <idno type="URL" subtype="VIAF">https://viaf.org/viaf/249676043</idno>
+                            <idno type="URL"
+                                  subtype="ORCID">https://orcid.org/0000-0003-2436-0361</idno>
+                            <idno type="URL"
+                                  subtype="ARCHE">https://id.acdh.oeaw.ac.at/dschopper</idno>
+                            <idno type="URL"
+                                  subtype="VIAF">https://viaf.org/viaf/249676043</idno>
                             <note>senior advisor on TEI modelling, head of working group Data@ACDH-CH; MS Teams and sharepoint admin</note>
                         </person>
-                        <person xml:id="MA" role="Technical Consultant">
+                        <person xml:id="MA"
+                                role="Technical Consultant">
                             <persName>
                                 <forename>Maura Zsófia</forename>
                                 <surname>Abraham</surname>
                             </persName>
                             <affiliation ref="#ACDH-CH">Austrian Academy of Sciences, ACDH-CH</affiliation>
-                            <idno type="URL" subtype="ORCID"/>
+                            <idno type="URL"
+                                  subtype="ORCID" />
                             <note>works on the SHAWI and TUNOCENT projects. We try to keep technical developments in all three projects in sync with each other, so she will participate / advise on relevant points. </note>
                         </person>
-                        <person xml:id="OS" role="Senior Technical Consultant">
+                        <person xml:id="OS"
+                                role="Senior Technical Consultant">
                             <persName>
                                 <forename>Omar</forename>
                                 <surname>Siam</surname>
                             </persName>
                             <affiliation ref="#ACDH-CH">Austrian Academy of Sciences, ACDH-CH</affiliation>
-                            <idno type="URL" subtype="ARCHE">https://id.acdh.oeaw.ac.at/osiam</idno>
+                            <idno type="URL"
+                                  subtype="ARCHE">https://id.acdh.oeaw.ac.at/osiam</idno>
                             <note>senior advisor, system administrator at ACDH-CH, technical supervisor for the VICAV infrastructure</note>
                         </person>
                     </listPerson>
@@ -362,7 +429,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <item xml:id="WP1">
                         <label>Work Package 1</label>
                         <listRelation>
-                            <relation name="hasMember" ref="#CM"/>
+                            <relation name="hasMember"
+                                      ref="#CM" />
                         </listRelation>
                     </item>
                 </list>
@@ -375,41 +443,46 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <item xml:id="oeawCloud">
                         <name>ÖAW Cloud</name>
                         <p>The OwnCloud service provide by ARZ. Currently this is not used in WIBARAB.</p>
-                        <ptr target="https://oeawcloud.oeaw.ac.at"/>
+                        <ptr target="https://oeawcloud.oeaw.ac.at" />
                         <listRelation>
-                            <relation name="is_responsible_for" ref="#ARZ"/>
+                            <relation name="is_responsible_for"
+                                      ref="#ARZ" />
                         </listRelation>
                     </item>
                     <item xml:id="wibarabSHARE">
                         <name>Project Share</name>
-                        <ptr target="//share17.univie.ac.at/orientalistik/WIBARAB"/>
+                        <ptr target="//share17.univie.ac.at/orientalistik/WIBARAB" />
                         <listRelation>
-                            <relation name="is_responsible_for" ref="#ZID"/>
+                            <relation name="is_responsible_for"
+                                      ref="#ZID" />
                         </listRelation>
                     </item>
                     <item xml:id="gitlab">
                         <name>SHAWIBARAB Group@gitlab</name>
                         <p>All manually edited primary data should be versioned using git and be uploaded to one of the repositories in the SHAWIBARAB group at gitlab.</p>
-                        <ptr target="https://gitlab.com/acdh-oeaw/shawibarab/"/>
+                        <ptr target="https://gitlab.com/acdh-oeaw/shawibarab/" />
                         <listRelation>
-                            <relation name="is_responsible_for" ref="#DS"/>
+                            <relation name="is_responsible_for"
+                                      ref="#DS" />
                         </listRelation>
                         <note>Data Security: Being a </note>
                     </item>
                     <item xml:id="github">
                         <name>VICAV Project@github</name>
                         <p>Data re-used from the VICAV project is originally located on github</p>
-                        <ptr target="https://github.com/acdh-oeaw/vicav-content"/>
+                        <ptr target="https://github.com/acdh-oeaw/vicav-content" />
                         <listRelation>
-                            <relation name="is_responsible_for" ref="#DS"/>
+                            <relation name="is_responsible_for"
+                                      ref="#DS" />
                         </listRelation>
                     </item>
                     <item xml:id="sharepoint">
                         <name>Shared Documents @ WIBARAB Sharepoint</name>
                         <p>This is the main location for administrative documents and for content that needs to be collaboratively edited in (near-to) real time.</p>
-                        <ptr target="https://oeawacat.sharepoint.com/sites/ACDH-CH_p_WIBARAB_BedoinTypeArabicNomadicSedentaryPeopleMidd/Shared Documents"/>
+                        <ptr target="https://oeawacat.sharepoint.com/sites/ACDH-CH_p_WIBARAB_BedoinTypeArabicNomadicSedentaryPeopleMidd/Shared Documents" />
                         <listRelation>
-                            <relation name="is_responsible_for" ref="#DS"/>
+                            <relation name="is_responsible_for"
+                                      ref="#DS" />
                         </listRelation>
                     </item>
                 </list>
@@ -417,18 +490,23 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <div xml:id="datasets">
                 <head>Datasets</head>
                 <!-- Datasets re-used, produced or edited in this project could be described below here -->
-                <div type="dataset" xml:id="vicavPlaceList">
+                <div type="dataset"
+                     xml:id="vicavPlaceList">
                     <head>VICAV Place List</head>
                     <p>The VICAV Place list is extended in WIBARAB both by volume (more places being added), by </p>
                     <list type="mainfestations">
                         <head>Manifestations</head>
                         <item xml:id="geo_src">
-                            <ptr target="https://github.com/acdh-oeaw/vicav-content/blob/master/vicav_biblio/vicav_geodata.xml"/>
-                            <trait type="format" ref="#teiP5"/>
-                            <state type="curationState" ref="#static"/>
+                            <ptr target="https://github.com/acdh-oeaw/vicav-content/blob/master/vicav_biblio/vicav_geodata.xml" />
+                            <trait type="format"
+                                   ref="#teiP5" />
+                            <state type="curationState"
+                                   ref="#static" />
                             <listRelation>
-                                <relation name="has_responsible_person" ref="#CM #CL"/>
-                                <relation name="is_edited_using" ref="#oxygen"/>
+                                <relation name="has_responsible_person"
+                                          ref="#CM #CL" />
+                                <relation name="is_edited_using"
+                                          ref="#oxygen" />
                             </listRelation>
                             <note>                                
                                 From point of view of the WIBARAB project, the VICAV place list is static as any manual changes
@@ -436,16 +514,20 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             </note>
                         </item>
                         <item xml:id="geo_kml">
-                            <ptr target="https://github.com/acdh-oeaw/vicav-content/blob/master/vicav_biblio/vicav_geodata.xml"/>
-                            <trait type="format" ref="#teiP5"/>
-                            <state type="curationState" ref="#generated"/>
+                            <ptr target="https://github.com/acdh-oeaw/vicav-content/blob/master/vicav_biblio/vicav_geodata.xml" />
+                            <trait type="format"
+                                   ref="#teiP5" />
+                            <state type="curationState"
+                                   ref="#generated" />
                             <listRelation>
-                                <relation name="generated_by" ref=""/>
+                                <relation name="generated_by"
+                                          ref="" />
                             </listRelation>
                         </item>
                     </list>
                 </div>
-                <div type="dataset" xml:id="vicavBibliography">
+                <div type="dataset"
+                     xml:id="vicavBibliography">
                     <head xml:lang="en">VICAV Place List</head>
                 </div>
             </div>
@@ -454,11 +536,11 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <head>Software and Services</head>
                     <item xml:id="oxygen">
                         <label>oXygen XML editor</label>
-                        <ptr target="oxygenxml.com/"/>
+                        <ptr target="oxygenxml.com/" />
                     </item>
                     <item xml:id="tei_enricher">
                         <label>TEI Enricher</label>
-                        <ptr/>
+                        <ptr />
                     </item>
                 </list>
             </div>
@@ -470,7 +552,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <item xml:id="teiP5">
                     <name>TEI/XML</name>
                     <desc type="definition">Any XML document according to a version of the TEI Schema in Version P 5.</desc>
-                    <idno type="URI" subtype="PRONOM">info:pronom/fmt/1476</idno>
+                    <idno type="URI"
+                          subtype="PRONOM">info:pronom/fmt/1476</idno>
                 </item>
             </list>
         </back>
