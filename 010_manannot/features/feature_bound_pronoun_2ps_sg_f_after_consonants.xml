@@ -30,6 +30,19 @@
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"/>
             <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
          </listPrefixDef>
+         <classDecl>
+            <taxonomy>
+                <category xml:id="vC">
+                     <catDesc>-vC</catDesc>
+                  </category>
+               <category xml:id="C">
+                     <catDesc>-C</catDesc>
+                  </category>
+               <category xml:id="Cv">
+                     <catDesc>-Cv</catDesc>
+                  </category>
+            </taxonomy>
+         </classDecl>
       </encodingDesc>
       
       <profileDesc>
@@ -54,56 +67,56 @@
          <div type="featureDescription">
             <head>Feature Values</head>
             <list type="featureValues">
-               <item xml:id="bp_s2fc_ish">
+               <item xml:id="bp_s2fc_ish" corresp="#vC">
                   <label>-iš</label>
                </item>
-               <item xml:id="bp_s2fc_sh">
+               <item xml:id="bp_s2fc_sh" corresp="#C">
                   <label>-š</label>
                </item>
-                <item xml:id="bp_s2fc_ash">
+                <item xml:id="bp_s2fc_ash" corresp="#vC">
                   <label>-aš</label>
                </item>
-               <item xml:id="bp_s2fc_iʨ">
+               <item xml:id="bp_s2fc_iʨ" corresp="#vC">
                   <label>-iʨ</label>
                </item>
-               <item xml:id="bp_s2fc_ic">
+               <item xml:id="bp_s2fc_ic" corresp="#vC">
                   <label>-ić</label>
                </item>
-               <item xml:id="bp_s2fc_ec">
+               <item xml:id="bp_s2fc_ec" corresp="#vC">
                   <label>-eć</label>
                </item>
-                <item xml:id="bp_s2fc_c">
+                <item xml:id="bp_s2fc_c" corresp="#C">
                   <label>-ć</label>
                </item>
-               <item xml:id="bp_s2fc_ik">
+               <item xml:id="bp_s2fc_ik" corresp="#vC">
                   <label>-ik, -ək</label>
                </item>
-                <item xml:id="bp_s2fc_ek">
+                <item xml:id="bp_s2fc_ek" corresp="#vC">
                   <label>-ek</label>
                </item>
-               <item xml:id="bp_s2fc_ech">
+               <item xml:id="bp_s2fc_ech" corresp="#vC">
                   <label>-eč</label>
                </item>
-               <item xml:id="bp_s2fc_ikj">
+               <item xml:id="bp_s2fc_ikj" corresp="#vC">
                   <label>-ik' (palatalised)</label>
                </item>
-               <item xml:id="bp_s2fc_ki">
+               <item xml:id="bp_s2fc_ki" corresp="#Cv">
                   <label>-ki</label>  
                </item>
                
-               <item xml:id="bp_s2fc_k">
+               <item xml:id="bp_s2fc_k" corresp="#C">
                   <label>-k</label>  
                </item>
-            <item xml:id="bp_s2fc_kiy">
+            <item xml:id="bp_s2fc_kiy" corresp="#Cv">
                   <label>-kiy</label>  
                </item>
-               <item xml:id="bp_s2fc_ich">
+               <item xml:id="bp_s2fc_ich" corresp="#vC">
                   <label>-ič, -əč</label>
                </item>
-                <item xml:id="bp_s2fc_ach">
+                <item xml:id="bp_s2fc_ach" corresp="#vC">
                   <label>-ač</label>
                </item>
-               <item xml:id="bp_s2fc_chi">
+               <item xml:id="bp_s2fc_chi" corresp="#Cv">
                   <label>-či</label>
                </item>
             </list>

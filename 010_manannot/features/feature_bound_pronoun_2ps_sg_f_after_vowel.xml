@@ -30,6 +30,16 @@
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"/>
             <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
          </listPrefixDef>
+          <classDecl>
+            <taxonomy>
+               <category xml:id="C">
+                     <catDesc>-C</catDesc>
+                  </category>
+               <category xml:id="Cv">
+                     <catDesc>-Cv</catDesc>
+                  </category>
+            </taxonomy>
+         </classDecl>
       </encodingDesc>
       
       <profileDesc>
@@ -54,34 +64,29 @@
          <div type="featureDescription">
             <head>Feature Values</head>
             <list type="featureValues">
-               <item xml:id="bp_s2fv_k">
+               <item xml:id="bp_s2fv_k" corresp="#C">
                   <label>-k</label>
                </item>
-               <item xml:id="bp_s2fv_kh">
-                  <label>-ḵ</label>
-               </item>
+            
                <item xml:id="bp_s2fv_yk">
                   <label>-yk</label>
                </item>
-               <item xml:id="bp_s2fv_sh">
+               <item xml:id="bp_s2fv_sh" corresp="#C">
                   <label>-š</label>
                </item>
-               <item xml:id="bp_s2fv_c">
+               <item xml:id="bp_s2fv_c" corresp="#C">
                   <label>-ć</label>
                </item>
-               <item xml:id="bp_s2fv_ch">
+               <item xml:id="bp_s2fv_ch" corresp="#C">
                   <label>-č</label>
                </item>
-               <item xml:id="bp_s2fv_chi">
+               <item xml:id="bp_s2fv_chi" corresp="#Cv">
                   <label>-či</label>
                </item>
-               <item xml:id="bp_s2fv_ki">
+               <item xml:id="bp_s2fv_ki" corresp="#Cv">
                   <label>-ki</label>
                </item>
-               <item xml:id="bp_s2fv_ky">
-                  <label>-ky</label>
-               </item>
-               <item xml:id="bp_s2fv_kiy">
+               <item xml:id="bp_s2fv_kiy" corresp="#Cv">
                   <label>-kiy</label>
                </item>
             </list>
@@ -123,7 +128,31 @@
                <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"/>
                <personGrp role="tribe" corresp="pgr:arab_maslax"/>
                <personGrp role="ageGroup" corresp="pgr:old"/>
-               <note type="general"> very old speakers (70+) show -č, old speakers (60-70) show variation between -č and -ki, being the latter much more frequent</note>
+ <cit type="example" xml:id="ft_bnd_pr_2ps_sg_f_after_vow.fv_0071.ct_0000">
+                     <quote>ʔabū-č</quote>
+                     <cit type="translation">
+                        <quote>your.sg.f father</quote>
+                     </cit>
+                  </cit>
+               <note type="general"> very old speakers (70+) show -č, old speakers (60-70) show variation between -č, -či and -ki, being the latter much more frequent</note>
+            </wib:featureValueObservation>
+            
+            
+            <wib:featureValueObservation xml:id="ft_bnd_pr_2ps_sg_f_after_vow.fv_0022" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#bp_s2fv_chi"/>
+               <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
+               <placeName ref="geo:naameh"/>
+               <placeName ref="geo:el_karantina"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"/>
+               <personGrp role="tribe" corresp="pgr:arab_maslax"/>
+               <personGrp role="ageGroup" corresp="pgr:old"/>
+               <cit type="example" xml:id="ft_bnd_pr_2ps_sg_f_after_vow.fv_0022.ct_0000">
+                     <quote>warā-či</quote>
+                     <cit type="translation">
+                        <quote>behind you.sg.f</quote>
+                     </cit>
+                  </cit>
+               
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_bnd_pr_2ps_sg_f_after_vow.fv_0003" status="done" resp="dmp:AID">
@@ -834,7 +863,7 @@
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_bnd_pr_2ps_sg_f_after_vow.fv_0057" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#bp_s2fv_ky"/>
+               <name type="featureValue" ref="#bp_s2fv_ki"/>
                <bibl corresp="zot:caubet_2004_3508" type="publication" status="CHECKED"/>
                <placeName ref="geo:fezzan"/>
                <lang corresp="..\profiles\vicav_profile_LBY-FZN.xml"/>
@@ -1613,7 +1642,7 @@
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_bnd_pr_2ps_sg_f_after_vow.fv_0051" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#bp_s2fv_ky"/>
+               <name type="featureValue" ref="#bp_s2fv_ki"/>
                <bibl corresp="zot:grünbichler_2015_2002" type="publication"/>
                <placeName ref="geo:buraymi"/>
                <lang corresp="..\profiles\vicav_profile_OMN-BUR.xml"/>

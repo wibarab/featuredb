@@ -30,6 +30,34 @@
             <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1"/>
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"/>
          </listPrefixDef>
+         <classDecl>
+            <taxonomy>
+               <category xml:id="vnt_forms"> 
+                  <catDesc>ʔvnt-forms</catDesc>
+                  <category xml:id="vntv">
+                     <catDesc>ʔvntv </catDesc>
+                  </category>
+                  <category xml:id="vnt">
+                     <catDesc>ʔvnt</catDesc>
+                  </category>
+               </category>
+               <category xml:id="atta">
+                     <catDesc>ʔatt(a)</catDesc>
+                  </category>
+               <category xml:id="nt_forms">
+                  <catDesc>Nt-forms</catDesc>
+                   <category xml:id="ntv">
+                  <catDesc>ntv</catDesc>
+               </category>
+                   <category xml:id="ntin_plus">
+                  <catDesc>Ntin (+)</catDesc>
+               </category>
+               </category>
+               <category xml:id="t_forms">
+                  <catDesc>T-forms</catDesc>
+               </category>
+            </taxonomy>
+         </classDecl>
       </encodingDesc>
       
        <profileDesc>
@@ -54,64 +82,55 @@
          <div type="featureDescription">
             <head>Feature Values</head>
             <list type="featureValues">
-               <item xml:id="pr_s2c_inti">
-                  <label>inti/enti</label>
+               <item xml:id="pr_s2c_inti" corresp="#vntv">
+                  <label>inti, ʔinti</label>
                </item>
-               <item xml:id="pr_s2c_int">
+               <item xml:id="pr_s2c_int" corresp="#vnt">
                   <label>int</label>
                </item>
-               <item xml:id="pr_s2c_nta">
+               <item xml:id="pr_s2c_nta" corresp="#ntv">
                   <label>nta</label>
                </item>
-               <item xml:id="pr_s2c_anta">
+               <item xml:id="pr_s2c_anta" corresp="#vntv">
                   <label>anta</label>
                </item>
-               <item xml:id="pr_s2c_anti">
+               <item xml:id="pr_s2c_anti" corresp="#vntv">
                   <label>anti</label>
                </item>
-               <item xml:id="pr_s2c_ntinak">
+               <item xml:id="pr_s2c_ntinak" corresp="#ntin_plus">
                   <label>ntinak</label>
                </item>
-               <item xml:id="pr_s2c_inta">
+               <item xml:id="pr_s2c_inta" corresp="#vntv">
                   <label>inta</label>
                </item>
-               <item xml:id="pr_s2c_inte">
+               <item xml:id="pr_s2c_inte" corresp="#vntv">
                   <label>inte</label>
                </item>
-               <item xml:id="pr_s2c_ant">
+               <item xml:id="pr_s2c_ant" corresp="#vnt">
                   <label>ant</label>
                </item>
-               <item xml:id="pr_s2c_att">
+               <item xml:id="pr_s2c_att" corresp="#atta">
                   <label>att</label>
                </item>
-               <item xml:id="pr_s2c_atta">
+               <item xml:id="pr_s2c_atta" corresp="#atta">
                   <label>atta</label>
                </item>
-               <item xml:id="pr_s2c_haate">
-                  <label>hāt(e)</label>
+               <item xml:id="pr_s2c_ntin" corresp="#ntin_plus">
+                  <label>ntin</label>
                </item>
-               <item xml:id="pr_s2c_ntin">
-                  <label>nţin, ntin</label>
+               <item xml:id="pr_s2c_ntina" corresp="#ntin_plus">
+                  <label>ntina, nţina, əntina</label>
                </item>
-               <item xml:id="pr_s2c_ntuma">
-                  <label>ntuma</label>
-               </item>
-               <item xml:id="pr_s2c_ntina">
-                  <label>nţina</label>
-               </item>
-               <item xml:id="pr_s2c_əntina">
-                  <label>əntina</label>
-               </item>
-               <item xml:id="pr_s2c_ntaya">
+               <item xml:id="pr_s2c_ntaya" corresp="#nt_forms">
                   <label>ntaya</label>
                </item>
-               <item xml:id="pr_s2c_ta">
+               <item xml:id="pr_s2c_ta" corresp="#t_forms">
                   <label>ta</label>
                </item>
-               <item xml:id="pr_s2c_taya">
+               <item xml:id="pr_s2c_taya" corresp="#t_forms">
                   <label>taya</label>
                </item>
-               <item xml:id="pr_s2c_nti">
+               <item xml:id="pr_s2c_nti" corresp="#ntv">
                   <label>nti, nți</label>
                </item>
             </list>
@@ -444,7 +463,7 @@
             </wib:featureValueObservation>
             
              <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0008" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_s2c_əntina"/>
+               <name type="featureValue" ref="#pr_s2c_ntina"/>
                <bibl corresp="zot:marcais_1956_0000" type="publication" status="CHECKED"/>
                <placeName ref="geo:jijel"/>
                <lang corresp="..\profiles\vicav_profile_DZA-DJL.xml"/>

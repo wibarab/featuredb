@@ -30,6 +30,34 @@
             <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1"/>
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"/>
          </listPrefixDef>
+          <classDecl>
+            <taxonomy>
+               <category xml:id="hu_forms"> 
+                  <catDesc>hu-forms</catDesc>
+                  <category xml:id="huww_plus">
+                     <catDesc>huww(+)</catDesc>
+                  </category>
+                  <category xml:id="t_form">
+                     <catDesc>-t forms</catDesc>
+                  </category>
+               </category>
+               <category xml:id="hamza_vh_forms">
+                  <catDesc>ʔvh-forms </catDesc>
+                   <category xml:id="vhvv">
+                  <catDesc>ʔvhv̄</catDesc>
+               </category>
+                   <category xml:id="vhwv">
+                  <catDesc>ʔvhwv</catDesc>
+               </category>
+               </category>
+               <category xml:id="h-less_forms">
+                  <catDesc>H-less forms</catDesc>
+               </category>
+               <category xml:id="demonstratives">
+                  <catDesc>demonstrative-based forms</catDesc>
+               </category>
+            </taxonomy>
+         </classDecl>
       </encodingDesc>
       
        <profileDesc>
@@ -54,76 +82,70 @@
          <div type="featureDescription">
             <head>Feature Values</head>
             <list type="featureValues">
-               <item xml:id="pr_s3m_huwwa">
+               <item xml:id="pr_s3m_huwwa" corresp="#huww_plus">
                   <label>huwwa / hūwa / huwa / huwwä / hōwwa / hóuwạ / huwah</label>
                </item>
-               <item xml:id="pr_s3m_huwwi">
+               <item xml:id="pr_s3m_huwwi" corresp="#huww_plus">
                   <label>huwwi/ huwwe/ hūwi/ hūwe / huwe</label>
                </item>
-               <item xml:id="pr_s3m_huwweh">
+               <item xml:id="pr_s3m_huwweh" corresp="#huww_plus">
                   <label>huwweh/huwwah</label>
                </item>
-               <item xml:id="pr_s3m_uu">
+               <item xml:id="pr_s3m_uu" corresp="#h-less_forms">
                   <label>ū</label>
                </item>
-               <item xml:id="pr_s3m_uwwa">
+               <item xml:id="pr_s3m_uwwa" corresp="#h-less_forms">
                   <label>uwwa</label>
-               </item>
-               <item xml:id="pr_s3m_uuwa">
-                  <label>ūwa/ōwa</label>
                </item>
                <item xml:id="pr_s3m_hiwwa">
                   <label>hiwwa</label>
                </item>
-                <item xml:id="pr_s3m_ahuwwa">
+                <item xml:id="pr_s3m_ahuwwa" corresp="#hamza_vh_forms">
                   <label>ahuwwa</label>
                </item>
-               <item xml:id="pr_s3m_ahā">
+               <item xml:id="pr_s3m_ahaa" corresp="#vhvv">
                   <label>ʔahā</label>
                </item>
-               <item xml:id="pr_s3m_huu">
+               <item xml:id="pr_s3m_huu" corresp="#hu_forms">
                   <label>hū / huw / hūw</label>
                </item>
-               <item xml:id="pr_s3m_hu">
+               <item xml:id="pr_s3m_hu" corresp="#hu_forms">
                   <label>hu</label>
                </item>
-               <item xml:id="pr_s3m_huuh">
+               <item xml:id="pr_s3m_huuh" corresp="#hu_forms">
                   <label>hūh</label>
                </item>
-               <item xml:id="pr_s3m_huwat">
+               <item xml:id="pr_s3m_huwat" corresp="#t_form">
                   <label>húwat</label>
                </item>
                <item xml:id="pr_s3m_haw">
                   <label>haw</label>
                </item>
-               <item xml:id="pr_s3m_zook">
+               <item xml:id="pr_s3m_zook" corresp="#demonstratives">
                   <label>zōk</label>
                </item>
-               <item xml:id="pr_s3m_uo">
+               <item xml:id="pr_s3m_uo" corresp="#h-less_forms">
                   <label>uo</label>
                </item>
-               <item xml:id="pr_s3m_duk">
+               <item xml:id="pr_s3m_duk" corresp="#demonstratives">
                   <label>duk</label>
                </item>
-               <item xml:id="pr_s3m_dük">
+               <item xml:id="pr_s3m_dük" corresp="#demonstratives">
                   <label>dük</label>
                </item>
-               <item xml:id="pr_s3m_huute">
+               <item xml:id="pr_s3m_huute" corresp="#t_form">
                   <label>hūte</label>
                </item>
-               <item xml:id="pr_s3m_huuta">
-                  <label>hūta</label>
-               </item>
-               <item xml:id="pr_s3m_ihwa">
+              <item xml:id="pr_s3m_ihwa" corresp="#vhwv">
                   <label>ihwa, ihwah</label>
                </item>
-               <item xml:id="pr_s3m_uhwa">
+               <item xml:id="pr_s3m_uhwa" corresp="#vhwv">
                   <label>uhwa</label>
                </item>
-               <item xml:id="pr_s3m_uhuw">
+               <item xml:id="pr_s3m_uhuw" corresp="#vhvv">
                   <label>uhuw</label>
                </item>
-               <item xml:id="pr_s3m_əhwə">
+               <item xml:id="pr_s3m_əhwə" corresp="#vhwv">
                   <label>əhwə, əhuwwə</label>
                </item>
             </list>
@@ -1315,7 +1337,7 @@
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_sg_p3_m.fv_0334" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#pr_s3m_ahā"/>
+               <name type="featureValue" ref="#pr_s3m_ahaa"/>
                <bibl corresp="zot:alfaifi_2010_2815" type="publication" cert="unknown" status="CHECKED"/>
                <placeName ref="geo:jabal_fayfa"/>
                <lang corresp="..\profiles\vicav_profile_SAU-FYF.xml"/>
@@ -1918,7 +1940,7 @@
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_sg_p3_m.fv_0172" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#pr_s3m_huuta"/>
+               <name type="featureValue" ref="#pr_s3m_huute"/>
                <bibl corresp="zot:seeger_2013_1032" type="publication"/>
                <placeName ref="geo:silwad"/>
                <lang corresp="..\profiles\vicav_profile_PSE-SWD.xml"/>
@@ -2099,9 +2121,9 @@
           </cit>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_pr_sg_p3_m.fv_0185" status="done" resp="dmp:SK">
+            <wib:featureValueObservation xml:id="ft_pr_sg_p3_m.fv_0185" status="draft" resp="dmp:SK">
                <name type="featureValue" ref="#pr_s3m_hu"/>
-               <bibl corresp="zot:" type="publication"/>
+               <bibl corresp="" type="publication"/>
                <placeName ref="geo:khartoum"/>
                <lang corresp="..\profiles\vicav_profile_SDN-KRT.xml"/>
             </wib:featureValueObservation>
@@ -2286,7 +2308,7 @@
             </wib:featureValueObservation> 
 
             <wib:featureValueObservation xml:id="ft_pr_sg_p3_m.fv_0176" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_s3m_uuwa"/>
+               <name type="featureValue" ref="#pr_s3m_uwwa"/>
                <bibl corresp="zot:youssi_2002_8971" type="publication"/>
                <placeName ref="geo:obock"/>
                <lang corresp="..\profiles\vicav_profile_DJI-OBK.xml"/>
@@ -2938,7 +2960,7 @@
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_pr_sg_p3_m.fv_0303" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#pr_s3m_ahā"/>
+               <name type="featureValue" ref="#pr_s3m_ahaa"/>
                <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"/>
                <placeName ref="geo:al_miri"/>
                <lang corresp="..\profiles\vicav_profile_YEM-MAD.xml"/>
