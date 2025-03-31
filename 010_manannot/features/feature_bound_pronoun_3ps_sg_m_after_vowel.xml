@@ -34,7 +34,7 @@
       
       <profileDesc>
          <textClass>
-          <catRef target="dmp:bound_pronouns"/>
+          <catRef target="dmp:personal_pronouns.bound_pronouns"/>
           </textClass>
       </profileDesc>
 
@@ -465,10 +465,12 @@
 
             <wib:featureValueObservation xml:id="ft_bnd_pr_3ps_sg_m_after_vow.fv_0101" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#bp_s3mv_o"/>
-               <bibl corresp="zot:Cantineau_1936_9708" type="publication" status="CHECKED"><!--potentially ambiguous references--><!--ambiguous ID reference. Could be either http://zotero.org/groups/2165756/items/TJFGQ7N8 or http://zotero.org/groups/2165756/items/NB2HLKGD--></bibl>
+               <bibl corresp="zot:cantineau_1937_0000" type="publication" status="CHECKED"><!--potentially ambiguous references--><!--ambiguous ID reference. Could be either http://zotero.org/groups/2165756/items/TJFGQ7N8 or http://zotero.org/groups/2165756/items/NB2HLKGD--></bibl>
                <placeName ref="geo:jabal_shammar"/>
                <lang corresp="..\profiles\vicav_profile_SAU-SMR.xml"/>
                <personGrp role="tribe" corresp="pgr:shammar_saudi_arabia"/>
+                <note type="exceptionNote">The author proposes that the use of this bound pronoun serves
+                 to prevent ambiguity with the feminine suffix, ex. kaṛāsī-u "his chairs" vs kaṛāsī-h "her chairs" (Cantineau 1937:181).</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_bnd_pr_3ps_sg_m_after_vow.fv_0187" status="done" resp="dmp:AT">
@@ -791,12 +793,6 @@
                <lang corresp="..\profiles\vicav_profile_LBY-TPL.xml"/>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_bnd_pr_3ps_sg_m_after_vow.fv_0177" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#bp_s3mv_hu"/>
-               <bibl corresp="zot:pereira_2010_1918" type="publication"/>
-               <placeName ref="geo:tripoli_libya"/>
-               <lang corresp="..\profiles\vicav_profile_LBY-TPL.xml"/>
-            </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_bnd_pr_3ps_sg_m_after_vow.fv_0322" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#bp_s3mv_hu"/>
@@ -901,6 +897,12 @@
                <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED"/>
                <placeName ref="geo:bukayriya"/>
                <lang corresp="..\profiles\vicav_profile_SAU-QSM.xml"/>
+               <cit type="example" xml:id="ft_bnd_pr_3ps_sg_m_after_vow.fv_0073.ct_0000">
+                     <quote>warā-wh</quote>
+                     <cit type="translation">
+                        <quote>behind him</quote>
+                     </cit>
+                  </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_bnd_pr_3ps_sg_m_after_vow.fv_0332" status="done" resp="dmp:RZ">
@@ -945,25 +947,11 @@
             </wib:featureValueObservation>
             
 
-            <wib:featureValueObservation xml:id="ft_bnd_pr_3ps_sg_m_after_vow.fv_0231" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#bp_s3mv_wu"/>
-               <bibl corresp="zot:yoda_2005_3130" type="publication"/>
-               <placeName ref="geo:tripoli_libya"/>
-               <lang corresp="..\profiles\vicav_profile_LBY-JTP.xml"/>
-               <personGrp role="religion" corresp="pgr:jews"/>
-               <note type="general">After semi-vowel</note>
-            </wib:featureValueObservation>
+            
 
-            <wib:featureValueObservation xml:id="ft_bnd_pr_3ps_sg_m_after_vow.fv_0115" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#bp_s3mv_yi"/>
-               <bibl corresp="zot:yoda_2005_3130" type="publication"/>
-               <placeName ref="geo:tripoli_libya"/>
-               <lang corresp="..\profiles\vicav_profile_LBY-JTP.xml"/>
-               <personGrp role="religion" corresp="pgr:jews"/>
-               <note type="general">After semi-vowel</note>
-            </wib:featureValueObservation>
+            
 
-            <wib:featureValueObservation xml:id="ft_bnd_pr_3ps_sg_m_after_vow.fv_0181" status="done" resp="dmp:RZ">
+            <wib:featureValueObservation xml:id="ft_bnd_pr_3ps_sg_m_after_vow.fv_0181" status="draft" resp="dmp:RZ">
                <name type="featureValue" ref="#bp_s3mv_stress"/>
                <bibl corresp="zot:yoda_2005_3130" type="publication"/>
                <placeName ref="geo:tripoli_libya"/>
@@ -1375,7 +1363,7 @@
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_bnd_pr_3ps_sg_m_after_vow.fv_0206" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#bp_s3mv_stress"/>
+               <name type="featureValue" ref="#bp_s3mv_zero"/>
                <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
                <placeName ref="geo:qismin"/>
                <lang corresp="..\profiles\vicav_profile_SYR-QSM.xml"/>

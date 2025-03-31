@@ -1,1420 +1,2033 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../../082_scripts_xsl/tei_fs_2_html__001.xsl"?>
-<?xslt inPathSegment="\010_manannot\" outPathSegment="\106_html\"?>
-<?snippets fn="snippets_wibarab_001.xml" path="{filePath}\..\..\880_conf\"?>
-<?processor name="saxon" removePreserveFromXML="true" removePreserveFromXSLT="true"?>
-<?attributeAssignments fn="enricher_attributes.xml" path="{filePath}\..\..\880_conf\"?>
-<?shortCuts fn="wibarab_shortCuts" path="{filePath}\..\..\880_conf\"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../../804_xsd/1.0.1/featuredb.xsd" xml:id="ft_pr_pl_p2c">
-   <teiHeader>
-      <fileDesc>
-         <titleStmt>
-            <title>Independent personal pronoun 2PL.C</title>
-         </titleStmt>
-         <publicationStmt>
-            <publisher>{publisher}</publisher>
-            <date when="2022-10-03"/>
-         </publicationStmt>
-         <sourceDesc>
-            <p>his is the feature-file for the 2nd person plural comunis pronoun.</p>
-         </sourceDesc>
-      </fileDesc>
-
-      <encodingDesc>
-
-         <listPrefixDef xml:id="listPrefixDef">
-            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_dmp.xml#$1"/>
-            <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_biblio_tei_zotero.xml#$1"/>
-            <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1"/>
-            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_dialects.xml#$1"/>
-            <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
-            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"/>
-         </listPrefixDef>
-         <classDecl>
-            <taxonomy>
-               <category xml:id="hamza_vnt_forms"> 
-                  <catDesc>ʔvnt- forms </catDesc>
-                  <category xml:id="vntv">
-                     <catDesc>ʔvntv</catDesc>
-                  </category>
-                  <category xml:id="vntvv">
-                     <catDesc>ʔvntvv (+)</catDesc>
-                  </category>
-                  <category xml:id="vntvn">
-                     <catDesc>ʔvntvn</catDesc>
-                  </category>
-                  <category xml:id="vntvm">
-                     <catDesc>ʔvntvm</catDesc>
-                  </category>
-                  <category xml:id="vntvm_plus">
-                     <catDesc>ʔvntvm+</catDesc>
-                  </category>
-               </category>
-               <category xml:id="hamza_vtt_forms">
-                  <catDesc>ʔvtt- forms</catDesc>
-               </category>
-               <category xml:id="nt_forms">
-                  <catDesc>Nt-forms</catDesc>
-                  <category xml:id="ntvm">
-                     <catDesc>ntvm</catDesc>
-                  </category>
-                  <category xml:id="ntum_plus">
-                     <catDesc>ntum+</catDesc>
-                  </category>
-               </category>
-               <category xml:id="h_forms">
-                  <catDesc>H-forms</catDesc>
-               </category>
-            </taxonomy>
-         </classDecl>
-      </encodingDesc>
-      
-       <profileDesc>
-         <textClass>
-          <catRef target="dmp:independent_pronouns"/>
-          </textClass>
-      </profileDesc>
-
-      <revisionDesc status="done">
-         <change when="2022-08-17" who="dmp:">c</change>
-         <change when="2022-08-17" who="dmp: "/>
-         
-      <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change><change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change></revisionDesc>
-   </teiHeader>
-
-
-
-   <text>
-      <body>
-         
-
-         <div type="featureDescription">
-            <head>Feature Values</head>
-            <list type="featureValues">
-               <item xml:id="pr_p2c_intuuma" corresp="#vntvm_plus">
-                  <label>intūma</label>
-               </item>
-               <item xml:id="pr_p2c_intum" corresp="#vntvm">
-                  <label>intum</label>
-               </item>
-               <item xml:id="pr_p2c_entum" corresp="#vntvm">
-                  <label>entum</label>
-               </item>
-               <item xml:id="pr_p2c_entuman" corresp="#vntvm_plus">
-                  <label>entuman</label>
-               </item>
-               <item xml:id="pr_p2c_intuu" corresp="#vntvv">
-                  <label>intū</label>
-               </item>
-               <item xml:id="pr_p2c_antum" corresp="#vntvm">
-                  <label>antum</label>
-               </item>
-               <item xml:id="pr_p2c_antu" corresp="#vntv">
-                  <label>antu</label>
-               </item>
-               <item xml:id="pr_p2c_ittu" corresp="#hamza_vtt_forms">
-                  <label>ittu</label>
-               </item>
-               <item xml:id="pr_p2c_entu" corresp="#vntv">
-                  <label>entu</label>
-               </item>
-               <item xml:id="pr_p2c_hinto" corresp="#h_forms">
-                  <label>hinto</label>
-               </item>
-               <item xml:id="pr_p2c_ntuumaha" corresp="#ntum_plus">
-                  <label>ntūmaha</label>
-               </item>
-               <item xml:id="pr_p2c_untum" corresp="#vntvm">
-                  <label>untum</label>
-               </item>
-               <item xml:id="pr_p2c_antun" corresp="#vntvn">
-                  <label>antun</label>
-               </item>
-               <item xml:id="pr_p2c_intu" corresp="#vntv">
-                  <label>intu, (i)ntu</label>
-               </item>
-               <item xml:id="pr_p2c_intuun" corresp="#hamza_vnt_forms">
-                  <label>intūn</label>
-               </item>
-               <item xml:id="pr_p2c_intom" corresp="#vntvm">
-                  <label>intom</label>
-               </item>
-               <item xml:id="pr_p2c_ntuma" corresp="#ntum_plus">
-                  <label>ntuma, ntūma, nțūma</label>
-               </item>
-               <item xml:id="pr_p2c_ntum" corresp="#ntvm">
-                  <label>ntum, nțum</label>
-               </item>
-               <item xml:id="pr_p2c_intaw" corresp="#vntvv">
-                  <label>intaw</label>
-               </item>
-               <item xml:id="pr_p2c_intem" corresp="#vntvm">
-                  <label>intem</label>
-               </item>
-               <item xml:id="pr_p2c_ntumaan" corresp="#ntum_plus">
-                  <label>ntumān</label>
-               </item>
-              
-                <item xml:id="pr_p2c_intim" corresp="#vntvm">
-                  <label>intim</label>
-               </item>
-               <item xml:id="pr_p2c_ntina" corresp="#nt_forms">
-                  <label>ntina</label>
-               </item>   
-               <item xml:id="pr_p2c_intun" corresp="#vntvn">
-                  <label>intun</label>
-               </item>                
-               <item xml:id="pr_p2c_ənten" corresp="#vntvn">
-                  <label>ənten</label>
-               </item>
-               <item xml:id="pr_p2c_nchem" corresp="#ntvm">
-                  <label>nčəm</label>
-               </item>
-               <item xml:id="pr_p2c_ntumaya" corresp="#ntum_plus">
-                  <label>ntumaya</label>
-               </item>
-               <item xml:id="pr_p2c_ttuma" corresp="#ntvm">
-                  <label>ttuma</label>
-               </item>
-            </list>
-         </div>
-         <div type="description" resp=""><byline>Edited by [Name]</byline>
-         </div>
-
-         <div xmlns:tei="http://www.tei-c.org/ns/1.0" type="featureValueObservations">
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0054" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:schukro_2004_6239" type="publication"/>
-               <placeName ref="geo:beirut"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-BEI.xml"/>
-               <cit type="sourceRepresentation"><quote>əntu</quote>
-          </cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0071" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
-               <placeName ref="geo:naameh"/>
-               <placeName ref="geo:el_karantina"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"/>
-               <personGrp role="tribe" corresp="pgr:arab_maslax"/>
-               <note type="general">Young speakers and most middle-age speakers show the comunis form ʔintu, while some old speakers show gender distinction.</note>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0053" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:haidar_1979_2969" type="publication"/>
-               <placeName ref="geo:baskinta"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-BAS.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0026" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:haifa"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-HAI.xml"/>
-            </wib:featureValueObservation>
-
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0035" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:nazareth"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-NAZ.xml"/>
-               <cit type="sourceRepresentation"><quote>pausal form: into</quote>
-          </cit>
-            </wib:featureValueObservation>
-
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0042" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:suulam"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-TUR.xml"/>
-               <personGrp role="tribe" corresp="pgr:arab_turkman"/>
-            </wib:featureValueObservation>
-
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0074" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:el_hajje_1954_0000" type="publication"/>
-               <placeName ref="geo:tripoli_lebanon"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-TRI.xml"/>
-               <cit type="sourceRepresentation"><quote>ʔənto</quote>
-          </cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0062" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:féghali_1919_9281" type="publication"/>
-               <placeName ref="geo:kfar_aabida"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-KAB.xml"/>
-               <cit type="sourceRepresentation"><quote>ʔənto</quote>
-          </cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0079" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:fleisch_1947_2645" type="publication"/>
-               <placeName ref="geo:zahle"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-ZAH.xml"/>
-               <cit type="sourceRepresentation"><quote>ʔənto</quote>
-          </cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0065" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:fleisch_1974_3163" type="publication" status="CHECKED"/>
-               <placeName ref="geo:kfar_sghab"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-KSG.xml"/>
-               <cit type="sourceRepresentation"><quote>ʔənto</quote>
-          </cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0056" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:jiha_1964_0000" type="publication"/>
-               <placeName ref="geo:bishmizzine"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-BIS.xml"/>
-               <cit type="sourceRepresentation"><quote>ʔənto</quote>
-          </cit>
-            </wib:featureValueObservation>
-
-           <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0009" status="done" resp="dmp:AT">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:wer_2007_5826" type=" publication"/>
-               <placeName ref="geo:amman"/>
-               <lang corresp="..\profiles\vicav_profile_JOR-AMN.xml"/>
-           </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0005" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"/>
-               <placeName ref="geo:abha"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-ABH.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0010" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#pr_p2c_intaw"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"/>
-               <placeName ref="geo:hofuf"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-HFF.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0011" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#pr_p2c_intem"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"/>
-               <placeName ref="geo:hail"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-HYL.xml"/>
-               <cit type="sourceRepresentation"><quote>intam</quote>
-          </cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0013" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#pr_p2c_antu"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"/>
-               <placeName ref="geo:rufaydah"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-RUF.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0014" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#pr_p2c_intum"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"/>
-               <placeName ref="geo:sirhan"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-RWA.xml"/>
-            </wib:featureValueObservation>
-
-             <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0006" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#pr_p2c_intaw"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"/>
-               <placeName ref="geo:sirhan"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-RWA.xml"/>
-             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0004" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#pr_p2c_intem"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"/>
-               <placeName ref="geo:sirhan"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-RWA.xml"/>
-               <cit type="sourceRepresentation"><quote>intam</quote>
-          </cit>
-             </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0015" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"/>
-               <placeName ref="geo:riyadh"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-RYD.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0117" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
-               <placeName ref="geo:aleppo"/>
-               <lang corresp="..\profiles\vicav_profile_SYR-ALP.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0121" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#pr_p2c_intem"/>
-               <bibl corresp="zot:talay_1999_0001" type="publication"/>
-               <placeName ref="geo:khawetna"/>
-               <lang corresp="..\profiles\vicav_profile_SYR-KHA.xml"/>
-               <personGrp role="tribe" corresp="pgr:khawetna_tribe"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0127" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#pr_p2c_intem"/>
-               <bibl corresp="zot:fink_2017_3211" type="publication"/>
-               <placeName ref="geo:hasankeyf"/>
-               <lang corresp="..\profiles\vicav_profile_TUR-HAS.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0128" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#pr_p2c_intem"/>
-               <bibl corresp="zot:wittrich_2001_0000" type="publication"/>
-               <placeName ref="geo:idil_aazex"/>
-               <lang corresp="..\profiles\vicav_profile_TUR-IDI.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0129" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#pr_p2c_intem"/>
-               <bibl corresp="zot:lahdo_2009_1103" type="publication" status="CHECKED"/>
-               <placeName ref="geo:siirt"/>
-               <lang corresp="..\profiles\vicav_profile_TUR-SII.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0012" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"/>
-               <placeName ref="geo:sabt_alalayah"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-QRN.xml"/>
-            </wib:featureValueObservation>
-            
-                        <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0033" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#pr_p2c_antum"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED"/>
-               <placeName ref="geo:qahaba"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-QHB.xml"/>
-                        </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0034" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#pr_p2c_antum"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED"/>
-               <placeName ref="geo:bukayriya"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-QSM.xml"/>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0040" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#pr_p2c_intum"/>
-               <bibl corresp="zot:toll_1983_0000" type="publication"/>
-               <placeName ref="geo:bilad_ghamid"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-GHA.xml"/>
-            </wib:featureValueObservation>
-
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0036" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#pr_p2c_antum"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED"/>
-               <placeName ref="geo:tanuma"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-TAN.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0037" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#pr_p2c_antum"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED"/>
-               <placeName ref="geo:bisha"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-BSH.xml"/>
-            </wib:featureValueObservation>
-
-
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0113" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:haidar_2006_8572" type="publication"/>
-               <placeName ref="geo:baghdad"/>
-               <lang corresp="..\profiles\vicav_profile_IRQ-BGD.xml"/>
-               <cit type="sourceRepresentation"><quote>əntu</quote>
-          </cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0119" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
-               <placeName ref="geo:deir_ez_zor"/>
-               <lang corresp="..\profiles\vicav_profile_SYR-DZR.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0078" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
-               <placeName ref="geo:blas"/>
-               <lang corresp="..\profiles\vicav_profile_SYR-NEM.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0126" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
-               <placeName ref="geo:al_suwayda_district"/>
-               <lang corresp="..\profiles\vicav_profile_SYR-SWE.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0334" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:alfaifi_2010_2815" type="publication" cert="unknown"/>
-               <placeName ref="geo:jabal_fayfa"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-FYF.xml"/>
-               <cit type="sourceRepresentation"><quote>əntu</quote>
-          </cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0118" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:lentin_2006_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:damascus"/>
-               <lang corresp="..\profiles\vicav_profile_SYR-DAM.xml"/>
-               <cit type="sourceRepresentation"><quote>əntu</quote>
-          </cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0335" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:johnstone_1961_0000" type="publication" cert="unknown"/>
-               <placeName ref="geo:kuwait"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-DWS.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0332" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#pr_p2c_intun"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" cert="unknown" status="CHECKED"/>
-               <placeName ref="geo:qawz"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-QWZ.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0168" status="done" resp="dmp:JD">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:durand_1996_0001" type="publication"/>
-               <placeName ref="geo:jerusalem"/>
-               <lang corresp="..\profiles\vicav_profile_PSE-JRS.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0171" status="done" resp="dmp:JD">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:AbuNahleh_1985_6344" type="publication" status="CHECKED"/>
-               <placeName ref="geo:ramallah"/>
-               <lang corresp="..\profiles\vicav_profile_PSE-RML.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0158" status="done" resp="dmp:JD">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:arnold_2004_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:jaffa"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-JFC.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0159" status="done" resp="dmp:JD">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:arnold_2004_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:jaffa"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-JFS.xml"/>
-               <personGrp role="religion" corresp="pgr:samaritans"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0169" status="done" resp="dmp:JD">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:arnold_2004_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:kafr_ana"/>
-               <lang corresp="..\profiles\vicav_profile_PSE-KFN.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0160" status="done" resp="dmp:JD">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:geva-kleinberger_2009_3208" type="publication"/>
-               <placeName ref="geo:tiberias"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-TBR.xml"/>
-               <personGrp role="religion" corresp="pgr:jews"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0175" status="done" resp="dmp:JD">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:seeger_1998_0000" type="publication"/>
-               <placeName ref="geo:hebron"/>
-               <lang corresp="..\profiles\vicav_profile_PSE-XLL.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0178" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_p2c_intun"/>
-               <bibl corresp="zot:senelle_2002_3236" type="publication" status="CHECKED"/>
-               <placeName ref="geo:raheita"/>
-               <lang corresp="..\profiles\vicav_profile_ERI-RHY.xml"/>
-               <cit type="sourceRepresentation"><quote>éntun</quote>
-          </cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0018" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:senelle_2002_3236" type="publication" status="CHECKED"/>
-               <placeName ref="geo:raheita"/>
-               <lang corresp="..\profiles\vicav_profile_ERI-RHY.xml"/>
-               <personGrp role="firstLanguage" corresp="Afar"/>
-               <note type="general">In Afambo only.</note>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0001" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_p2c_antum"/>
-               <bibl corresp="zot:corriente_2013_3020" type="publication"/>
-               <placeName ref="geo:andalusia"/>
-               <lang corresp="..\profiles\vicav_profile_ESP-ADL.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0228" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_p2c_intuu"/>
-               <bibl corresp="zot:benkato_2014_2793" type="publication"/>
-               <placeName ref="geo:benghazi"/>
-               <lang corresp="..\profiles\vicav_profile_LBY-BGZ.xml"/>
-               <cit type="sourceRepresentation"><quote>intū</quote>
-          </cit>
-            </wib:featureValueObservation>
-
-           
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0232" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_p2c_intum"/>
-               <bibl corresp="zot:DAnna_2021_9340" type="publication"/>
-               <placeName ref="geo:yefren"/>
-               <lang corresp="..\profiles\vicav_profile_LBY-JYN.xml"/>
-               <personGrp role="religion" corresp="pgr:jews"/>
-               <cit type="sourceRepresentation"><quote>əntum</quote>
-          </cit>
-            </wib:featureValueObservation>
-
-         
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0038" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:pereira_2010_1918" type="publication"/>
-               <placeName ref="geo:tripoli_libya"/>
-               <lang corresp="..\profiles\vicav_profile_LBY-TPL.xml"/>
-               <cit type="sourceRepresentation"><quote>əntu</quote>
-          </cit>
-            </wib:featureValueObservation>
-
-            
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0322" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_p2c_antu"/>
-               <bibl corresp="zot:asiri_2009_2501" type="publication" cert="unknown"/>
-               <placeName ref="geo:rijal_alma"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-ALM.xml"/>
-            </wib:featureValueObservation>
-
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0092" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:omar_1975_0000" type="publication" cert="unknown"/>
-               <placeName ref="geo:hejaz"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-HJZ.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0185" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:dickins_2009_3089" type="publication"/>
-               <placeName ref="geo:khartoum"/>
-               <lang corresp="..\profiles\vicav_profile_SDN-KRT.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0193" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:carbou_1913_0117" type="publication"/>
-               <placeName ref="geo:ouaday"/>
-               <lang corresp="..\profiles\vicav_profile_TCD-ODY.xml"/>
-               <cit type="sourceRepresentation"><quote>entu, intu</quote>
-          </cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0230" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_p2c_intum"/>
-               <bibl corresp="zot:harrama_1993_0000" type="publication"/>
-               <placeName ref="geo:al_jabal_al_gharbi"/>
-               <lang corresp="..\profiles\vicav_profile_LBY-JBL.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0320" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:holes_1990_0000" type="publication" cert="unknown"/>
-               <placeName ref="geo:gulf"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-GLF.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0324" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:holes_2006_0164" type="publication" cert="unknown" status="CHECKED"/>
-               <placeName ref="geo:manama"/>
-               <lang corresp="..\profiles\vicav_profile_BHR-ARB.xml"/>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0022" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_p2c_intaw"/>
-               <bibl corresp="zot:holes_2006_0164" type="publication" cert="unknown" status="CHECKED"/>
-               <placeName ref="geo:manama"/>
-               <lang corresp="..\profiles\vicav_profile_BHR-ARB.xml"/>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0323" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_p2c_intuun"/>
-               <bibl corresp="zot:holes_2006_0164" type="publication" cert="unknown" status="CHECKED"/>
-               <placeName ref="geo:muharraq"/>
-               <lang corresp="..\profiles\vicav_profile_BHR-BHN.xml"/>
-               <cit type="sourceRepresentation"><quote>intūn(a)</quote>
-          </cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0002" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:holes_2007_5886" type="publication" status="CHECKED"/>
-               <placeName ref="geo:kuwait_city"/>
-               <lang corresp="..\profiles\vicav_profile_KWT-KWC.xml"/>
-               <cit type="sourceRepresentation"><quote>intu</quote>
-          </cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0325" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_p2c_intum"/>
-               <bibl corresp="zot:ingham_1979_0000" type="publication" cert="unknown"/>
-               <placeName ref="geo:kuwait"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-MTR.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0181" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_p2c_intum"/>
-               <bibl corresp="zot:manfredi_2013_2941" type="publication"/>
-               <placeName ref="geo:kadugli"/>
-               <lang corresp="..\profiles\vicav_profile_SDN-BKD.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0184" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_p2c_intum"/>
-               <bibl corresp="zot:manfredi_2013_2941" type="publication"/>
-               <placeName ref="geo:kadugli"/>
-               <lang corresp="..\profiles\vicav_profile_SDN-KDG.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0182" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_p2c_antu"/>
-               <bibl corresp="zot:roset_2018_8391" type="publication"/>
-               <placeName ref="geo:darfur"/>
-               <lang corresp="..\profiles\vicav_profile_SDN-DRF.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0023" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:roset_2018_8391" type="publication"/>
-               <placeName ref="geo:darfur"/>
-               <lang corresp="..\profiles\vicav_profile_SDN-DRF.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0189" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:roth_1979_0000" type="publication"/>
-               <placeName ref="geo:abeche"/>
-               <lang corresp="..\profiles\vicav_profile_TCD-ABC.xml"/>
-               <cit type="sourceRepresentation"><quote>intu</quote>
-          </cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0024" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_p2c_antu"/>
-               <bibl corresp="zot:roth_1979_0000" type="publication"/>
-               <placeName ref="geo:abeche"/>
-               <lang corresp="..\profiles\vicav_profile_TCD-ABC.xml"/>
-            </wib:featureValueObservation>
-
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0025" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_p2c_entu"/>
-               <bibl corresp="zot:roth_1979_0000" type="publication"/>
-               <placeName ref="geo:abeche"/>
-               <lang corresp="..\profiles\vicav_profile_TCD-ABC.xml"/>
-            </wib:featureValueObservation>
-
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0028" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_p2c_ittu"/>
-               <bibl corresp="zot:roth_1979_0000" type="publication"/>
-               <placeName ref="geo:abeche"/>
-               <lang corresp="..\profiles\vicav_profile_TCD-ABC.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0039" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#pr_p2c_nchem"/>
-               <bibl corresp="zot:yoda_2005_3130" type="publication"/>
-               <placeName ref="geo:tripoli_libya"/>
-               <lang corresp="..\profiles\vicav_profile_LBY-JTP.xml"/>
-               <personGrp role="religion" corresp="pgr:jews"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0194" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:zeltner_tourneux_1986_0000" type="publication"/>
-               <placeName ref="geo:salamat"/>
-               <lang corresp="..\profiles\vicav_profile_TCD-ULE.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0270" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:zarb_2023_0602" type="publication"/>
-               <placeName ref="geo:testour"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-TSR.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0016" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_p2c_intuuma"/>
-               <bibl corresp="zot:zarb_2023_0602" type="publication"/>
-               <placeName ref="geo:testour"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-TSR.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0200" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
-               <placeName ref="geo:hama"/>
-               <lang corresp="..\profiles\vicav_profile_SYR-HMA.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0201" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
-               <placeName ref="geo:idlib"/>
-               <lang corresp="..\profiles\vicav_profile_SYR-IDL.xml"/>
-               <cit type="sourceRepresentation"><quote>into</quote>
-          </cit>
-            </wib:featureValueObservation>
-
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0204" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
-               <placeName ref="geo:abu_qbes"/>
-               <lang corresp="..\profiles\vicav_profile_SYR-QBS.xml"/>
-               <cit type="sourceRepresentation"><quote>into</quote>
-          </cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0205" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
-               <placeName ref="geo:qanawat"/>
-               <lang corresp="..\profiles\vicav_profile_SYR-QNW.xml"/>
-               <personGrp role="religion" corresp="pgr:druzes"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0206" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_p2c_hinto"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
-               <placeName ref="geo:qismin"/>
-               <lang corresp="..\profiles\vicav_profile_SYR-QSM.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0207" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
-               <placeName ref="geo:qalat_al_husn"/>
-               <lang corresp="..\profiles\vicav_profile_SYR-QSN.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0208" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
-               <placeName ref="geo:ras_al_maarra"/>
-               <lang corresp="..\profiles\vicav_profile_SYR-RMR.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0210" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
-               <placeName ref="geo:sednaya"/>
-               <lang corresp="..\profiles\vicav_profile_SYR-SDY.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0213" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
-               <placeName ref="geo:tartus"/>
-               <lang corresp="..\profiles\vicav_profile_SYR-TRT.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0260" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_1998_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
-               <placeName ref="geo:guellala"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-DJI.xml"/>
-               <personGrp role="religion" corresp="pgr:ibadis"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0261" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_1998_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
-               <placeName ref="geo:houmt_souk"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-DJJ.xml"/>
-               <personGrp role="religion" corresp="pgr:jews"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0029" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_p2c_intuun"/>
-               <bibl corresp="zot:behnstedt_1998_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
-               <placeName ref="geo:houmt_souk"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-DJJ.xml"/>
-               <personGrp role="religion" corresp="pgr:jews"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0021" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_p2c_intum"/>
-               <bibl corresp="zot:behnstedt_1998_0001" type="publication" status="CHECKME"><!--potentially ambiguous references--></bibl>
-               <placeName ref="geo:djerba"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-DJM.xml"/>
-               <personGrp role="religion" corresp="pgr:malikites"/>
-            </wib:featureValueObservation>
-
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0263" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_p2c_ntumaan"/>
-               <bibl corresp="zot:cohen_1975_0000" type="publication"/>
-               <placeName ref="geo:tunis"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-JTS.xml"/>
-               <personGrp role="religion" corresp="pgr:jews"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0020" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_p2c_ntuma"/>
-               <bibl corresp="zot:DAnna_2020_6708" type="publication"/>
-               <placeName ref="geo:chebba"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-CHB.xml"/>
-            </wib:featureValueObservation>
-
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0268" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_p2c_intum"/>
-               <bibl corresp="zot:marçais_1925_6953" type="publication"/>
-               <placeName ref="geo:takrouna"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-TKR.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0030" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_p2c_intuuma"/>
-               <bibl corresp="zot:marçais_1925_6953" type="publication"/>
-               <placeName ref="geo:takrouna"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-TKR.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0019" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_p2c_untum"/>
-               <bibl corresp="zot:mion_2021_9872" type="publication"/>
-               <placeName ref="geo:bengardane"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-BGN.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0266" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_p2c_intuuma"/>
-               <bibl corresp="zot:prinoth_2017_3476" type="publication"/>
-               <placeName ref="geo:sidi_bouzid"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-SBZ.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0271" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_p2c_antum"/>
-               <bibl corresp="zot:saada_1984_0002" type="publication"/>
-               <placeName ref="geo:tozeur"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-TZR.xml"/>
-               <cit type="sourceRepresentation"><quote>anţom</quote>
-          </cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0031" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_p2c_antu"/>
-               <bibl corresp="zot:saada_1984_0002" type="publication"/>
-               <placeName ref="geo:tozeur"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-TZR.xml"/>
-               <cit type="sourceRepresentation"><quote>anţu</quote>
-          </cit>
-            </wib:featureValueObservation>
-
-             <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0041" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#pr_p2c_intum"/>
-               <bibl corresp="zot:naddari_2023_2742" type="publication"/>
-               <placeName ref="geo:nefza"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-NFZ.xml"/>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0043" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#pr_p2c_intuuma"/>
-               <bibl corresp="zot:naddari_2023_2742" type="publication"/>
-               <placeName ref="geo:nefza"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-NFZ.xml"/>
-               <note type="general">This variant is used by young and urban speakers</note>
-            </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0044" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#pr_p2c_intim"/>
-               <bibl corresp="zot:naddari_2023_2742" type="publication"/>
-               <placeName ref="geo:nefza"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-NFZ.xml"/>
-               <note type="general">This is namely used by a few rural speakers</note>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0269" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_p2c_intuuma"/>
-               <bibl corresp="zot:singer_1984_0000" type="publication"/>
-               <placeName ref="geo:tunis"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-TNS.xml"/>
-               
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0267" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_p2c_intuuma"/>
-               <bibl corresp="zot:talmoudi_1980_0000" type="publication"/>
-               <placeName ref="geo:sousse"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-SUS.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0216" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:borg_1985_0000" type="publication"/>
-               <placeName ref="geo:cyprus"/>
-               <lang corresp="..\profiles\vicav_profile_CYP-KOR.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0217" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_ntuma"/>
-               <bibl corresp="zot:boucherit_2002_0000" type="publication"/>
-               <placeName ref="geo:algier"/>
-               <lang corresp="..\profiles\vicav_profile_DZA-ALR.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0221" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_ntuma"/>
-               <bibl corresp="zot:GrandHenry_1976_2248" type="publication"/>
-               <placeName ref="geo:mzab"/>
-               <lang corresp="..\profiles\vicav_profile_DZA-MZB.xml"/>
-            </wib:featureValueObservation>
-
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0003" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_ntum"/>
-               <bibl corresp="zot:GrandHenry_1976_2248" type="publication"/>
-               <placeName ref="geo:mzab"/>
-               <lang corresp="..\profiles\vicav_profile_DZA-MZB.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0222" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_ntuma"/>
-               <bibl corresp="zot:guerrero_2015_6917" type="publication" status="CHECKED"/>
-               <placeName ref="geo:oran"/>
-               <lang corresp="..\profiles\vicav_profile_DZA-ORN.xml"/>
-            </wib:featureValueObservation>
-
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0239" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_ntum"/>
-               <bibl corresp="zot:moscoso_garcia_2003_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:chefchaouen"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-CHF.xml"/>
-               <note type="general">with affricate t</note>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0017" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_ntuma"/>
-               <bibl corresp="zot:moscoso_garcia_2003_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:chefchaouen"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-CHF.xml"/>
-                <note type="general">with affricate t</note>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0246" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_ntuma"/>
-               <bibl corresp="zot:sanchez_2014_6569" type="publication"/>
-               <placeName ref="geo:marrakesh"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-MRK.xml"/>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0258" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#pr_p2c_intom"/>
-               <bibl corresp="src:PC_RZ" type="personalCommunication"/>
-               <placeName ref="geo:malta"/>
-               <lang corresp="..\profiles\vicav_profile_MLT-MAL.xml"/>
-            </wib:featureValueObservation>
-
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0251" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_ntuma"/>
-               <bibl corresp="zot:aguadé_1994_0013" type="publication" status="CHECKED"/>
-               <placeName ref="geo:skoura"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-SKR.xml"/>
-            </wib:featureValueObservation>
-
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0240" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_ntuma"/>
-               <bibl corresp="zot:aguadé_2003_4996" type="publication" status="CHECKED"/>
-               <placeName ref="geo:casablanca"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-CSB.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0027" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_ntumaya"/>
-               <bibl corresp="zot:aguadé_2003_4996" type="publication" status="CHECKED"/>
-               <placeName ref="geo:casablanca"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-CSB.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0256" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_intuuma"/>
-               <bibl corresp="zot:colin_1921_3545" type="publication"/>
-               <placeName ref="geo:taza"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-TZA.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0130" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_entum"/>
-               <bibl corresp="zot:colin_1921_3545" type="publication"/>
-               <placeName ref="geo:branes"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-BRA.xml"/>
-               <personGrp role="tribe" corresp="pgr:branes"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0218" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_entuman"/>
-               <bibl corresp="zot:GrandHenry_1972_9692" type="publication"/>
-               <placeName ref="geo:cherchell"/>
-               <lang corresp="..\profiles\vicav_profile_DZA-CHR.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0248" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_ntuma"/>
-               <bibl corresp="zot:heath_2002_0001" type="publication"/>
-               <placeName ref="geo:rabat"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-RBJ.xml"/>
-               <personGrp role="religion" corresp="pgr:jews"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0250" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_ntuma"/>
-               <bibl corresp="zot:heath_2002_0001" type="publication"/>
-               <placeName ref="geo:rabat"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-RBT.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0255" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_ntuma"/>
-               <bibl corresp="zot:heath_2002_0001" type="publication"/>
-               <placeName ref="geo:tanger"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-TGR.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0238" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_ntuma"/>
-               <bibl corresp="zot:kampffmeyer_1912_3753" type="publication"/>
-               <placeName ref="geo:casablanca-settat"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-CHA.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0219" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_ntuma"/>
-               <bibl corresp="zot:laraba_1981_5666" type="publication"/>
-               <placeName ref="geo:constantine"/>
-               <lang corresp="..\profiles\vicav_profile_DZA-CON.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0257" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_ntuma"/>
-               <bibl corresp="zot:loubignac_1952_3814" type="publication"/>
-               <placeName ref="geo:zaer"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-ZIR.xml"/>
-               <personGrp role="tribe" corresp="pgr:zaer"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0225" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_ntuma"/>
-               <bibl corresp="zot:marcais_1902_3831" type="publication"/>
-               <placeName ref="geo:tlemcen"/>
-               <lang corresp="..\profiles\vicav_profile_DZA-TLM.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0224" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_intum"/>
-               <bibl corresp="zot:marcais_1908_3832" type="publication"/>
-               <placeName ref="geo:saida"/>
-               <lang corresp="..\profiles\vicav_profile_DZA-SDA.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0220" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_ntuma"/>
-               <bibl corresp="zot:marcais_1956_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:jijel"/>
-               <lang corresp="..\profiles\vicav_profile_DZA-DJL.xml"/>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0032" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_intum"/>
-               <bibl corresp="zot:marcais_1956_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:jijel"/>
-               <lang corresp="..\profiles\vicav_profile_DZA-DJL.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0179" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_ntuma"/>
-               <bibl corresp="zot:marjani_2019_6677" type="publication"/>
-               <placeName ref="geo:rehamna"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-RHA.xml"/>
-               <personGrp role="tribe" corresp="pgr:rhamna"/>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0008" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_ttuma"/>
-               <bibl corresp="zot:marjani_2019_6677" type="publication"/>
-               <placeName ref="geo:rehamna"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-RHA.xml"/>
-               <personGrp role="tribe" corresp="pgr:rhamna"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0253" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_ntuma"/>
-               <bibl corresp="zot:moscoso_2002_3876" type="publication" status="CHECKED"/>
-               <placeName ref="geo:souss_massa"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-SOS.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0249" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_ntina"/>
-               <bibl corresp="zot:stillman_1988_4518" type="publication"/>
-               <placeName ref="geo:sefrou"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-RBS.xml"/>
-               <personGrp role="religion" corresp="pgr:jews"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0243" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_p2c_ntuma"/>
-               <bibl corresp="zot:zoubid_2011_0000" type="publication"/>
-               <placeName ref="geo:hyayna"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-HYN.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0291" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#pr_p2c_antum"/>
-               <bibl corresp="zot:rhodokanakis_1908_1911_0000" type="publication"/>
-               <placeName ref="geo:dhofar"/>
-               <lang corresp="..\profiles\vicav_profile_OMN-DHF.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0300" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="src:PC_SB" type="personalCommunication"/>
-               <placeName ref="geo:hadramaut"/>
-               <lang corresp="..\profiles\vicav_profile_YEM-HAD.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0274" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:alexandria"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-ALX.xml"/>
-               <note type="general">deducted from the source</note>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0275" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:aswan"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-ASW.xml"/>
-               <note type="general">deducted from the source</note>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0276" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:asyut"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-ASY.xml"/>
-               <note type="general">deducted from the source</note>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0277" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:al_badari"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-BDR.xml"/>
-               <note type="general">deducted from the source</note>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0279" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:port_said"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-BSD.xml"/>
-               <note type="general">deducted from the source</note>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0280" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:bani_suwayf"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-BSW.xml"/>
-               <note type="general">deducted from the source</note>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0282" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:darawah"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-DRW.xml"/>
-               <note type="general">deducted from the source</note>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0283" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:luxor"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-LXR.xml"/>
-               <note type="general">deducted from the source</note>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0284" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:il_minya"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-MNY.xml"/>
-               <note type="general">deducted from the source</note>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0285" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:al_namasa"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-NMS.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0286" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:qutur"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-QTR.xml"/>
-               <note type="general">deducted from the source</note>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0287" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:rasid"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-RSD.xml"/>
-               <note type="general">deducted from the source</note>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_template.fv_0057" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#pr_p2c_intum"/>
-               <bibl corresp="src:KUW_2022_GK" type="publication"/>
-               <placeName ref="geo:kuwait_city"/>
-               <lang corresp="..\profiles\vicav_profile_KWT-RSD.xml"/>
-            </wib:featureValueObservation>
-
-          
-
-            <wib:featureValueObservation xml:id="ft_template.fv_0051" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#pr_p2c_antum"/>
-               <bibl corresp="src:SAU_2022_GK" type="publication"/>
-               <placeName ref="geo:khaybar"/>
-               <placeName ref="geo:qassim_region"/>
-               <placeName ref="geo:al_hayit"/>
-               <placeName ref="geo:hail_reg"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-RSD.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0288" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:sinbillawayn"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-SBW.xml"/>
-               <note type="general">deducted from the source</note>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0289" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_woidich_1985_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:sohag"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-SHG.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0372" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:behnstedt_1987_0003" type="publication" status="CHECKED"/>
-               <placeName ref="geo:sa_dah"/>
-               <lang corresp="..\profiles\vicav_profile_YEM-SAD.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0299" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#pr_p2c_antun"/>
-               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"/>
-               <placeName ref="geo:bayt_al_faqih"/>
-               <lang corresp="..\profiles\vicav_profile_YEM-BFQ.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0306" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#pr_p2c_antun"/>
-               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"/>
-               <placeName ref="geo:mocha"/>
-               <lang corresp="..\profiles\vicav_profile_YEM-MAX.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0313" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#pr_p2c_antun"/>
-               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"/>
-               <placeName ref="geo:zabid"/>
-               <lang corresp="..\profiles\vicav_profile_YEM-ZBD.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0314" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#pr_p2c_antun"/>
-               <bibl corresp="zot:behnstedt_2016_3011" type="publication" status="CHECKED"/>
-               <placeName ref="geo:az_zuhrah"/>
-               <lang corresp="..\profiles\vicav_profile_YEM-ZUH.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0007" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#pr_p2c_antu"/>
-               <bibl corresp="zot:ghanem_1958_0000" type="publication"/>
-               <placeName ref="geo:aden"/>
-               <lang corresp="..\profiles\vicav_profile_YEM-ADN.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0278" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:drop_2007_0000" type="publication"/>
-               <placeName ref="geo:mandisha"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-BHR.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0000" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#pr_p2c_intum"/>
-               <bibl corresp="zot:drop_2007_0000" type="publication"/>
-               <placeName ref="geo:mandisha"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-BHR.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0281" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#pr_p2c_intu"/>
-               <bibl corresp="zot:woidich_2006_3203" type="publication" status="CHECKED"/>
-               <placeName ref="geo:cairo"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-CRO.xml"/>
-            </wib:featureValueObservation>
-
-         </div>
-      </body>
-   </text>
+<?xml-stylesheet type="text/xsl" href="../../082_scripts_xsl/tei_fs_2_html__001.xsl"?><?xslt inPathSegment="\010_manannot\" outPathSegment="\106_html\"?><?snippets fn="snippets_wibarab_001.xml" path="{filePath}\..\..\880_conf\"?><?processor name="saxon" removePreserveFromXML="true" removePreserveFromXSLT="true"?><?attributeAssignments fn="enricher_attributes.xml" path="{filePath}\..\..\880_conf\"?><?shortCuts fn="wibarab_shortCuts" path="{filePath}\..\..\880_conf\"?><TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
+     xmlns:xi="http://www.w3.org/2001/XInclude"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xml:space="preserve"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../../804_xsd/1.0.1/featuredb.xsd"
+     xml:id="ft_pr_pl_p2c">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Independent personal pronoun 2PL.C</title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>{publisher}</publisher>
+                <date when="2022-10-03" />
+            </publicationStmt>
+            <sourceDesc>
+                <p>his is the feature-file for the 2nd person plural comunis pronoun.</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <listPrefixDef xml:id="listPrefixDef">
+                <prefixDef ident="dmp"
+                           matchPattern="^(.+)$"
+                           replacementPattern="../../010_manannot/wibarab_dmp.xml#$1" />
+                <prefixDef ident="zot"
+                           matchPattern="^(.+)$"
+                           replacementPattern="../../010_manannot/vicav_biblio_tei_zotero.xml#$1" />
+                <prefixDef ident="src"
+                           matchPattern="^(.+)$"
+                           replacementPattern="../../010_manannot/wibarab_sources.xml#$1" />
+                <prefixDef ident="dia"
+                           matchPattern="^(.+)$"
+                           replacementPattern="../../010_manannot/vicav_dialects.xml#$1" />
+                <prefixDef ident="pgr"
+                           matchPattern="^(.+)$"
+                           replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1" />
+                <prefixDef ident="geo"
+                           matchPattern="^(.+)$"
+                           replacementPattern="../../010_manannot/vicav_geodata.xml#$1" />
+            </listPrefixDef>
+            <classDecl>
+                <taxonomy>
+                    <category xml:id="ft_pr_pl_p2c.hamza_vnt_forms">
+                        <catDesc>ʔvnt- forms </catDesc>
+                        <category xml:id="ft_pr_pl_p2c.hamza_vnt_forms.vntv">
+                            <catDesc>ʔvntv</catDesc>
+                        </category>
+                        <category xml:id="ft_pr_pl_p2c.hamza_vnt_forms.vntvv">
+                            <catDesc>ʔvntvv (+)</catDesc>
+                        </category>
+                        <category xml:id="ft_pr_pl_p2c.hamza_vnt_forms.vntvn">
+                            <catDesc>ʔvntvn</catDesc>
+                        </category>
+                        <category xml:id="ft_pr_pl_p2c.hamza_vnt_forms.vntvm">
+                            <catDesc>ʔvntvm</catDesc>
+                        </category>
+                        <category xml:id="ft_pr_pl_p2c.hamza_vnt_forms.vntvm_plus">
+                            <catDesc>ʔvntvm+</catDesc>
+                        </category>
+                    </category>
+                    <category xml:id="ft_pr_pl_p2c.hamza_vtt_forms">
+                        <catDesc>ʔvtt- forms</catDesc>
+                    </category>
+                    <category xml:id="ft_pr_pl_p2c.nt_forms">
+                        <catDesc>Nt-forms</catDesc>
+                        <category xml:id="ft_pr_pl_p2c.nt_forms.ntvm">
+                            <catDesc>ntvm</catDesc>
+                        </category>
+                        <category xml:id="ft_pr_pl_p2c.nt_forms.ntum_plus">
+                            <catDesc>ntum+</catDesc>
+                        </category>
+                    </category>
+                    <category xml:id="ft_pr_pl_p2c.h_forms">
+                        <catDesc>H-forms</catDesc>
+                    </category>
+                </taxonomy>
+            </classDecl>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <catRef target="dmp:personal_pronouns.independent_pronouns" />
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="done">
+            <change when="2022-08-17"
+                    who="dmp:">c</change>
+            <change when="2022-08-17"
+                    who="dmp: " />
+            <change when="2023-09-06+02:00"
+                    who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change>
+            <change who="dmp:DS"
+                    when="2023-10-05">fixed broken bibl/@corresp references</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="featureDescription">
+                <head>Feature Values</head>
+                <list type="featureValues">
+                    <item xml:id="pr_p2c_intuuma"
+                          corresp="#ft_pr_pl_p2c.hamza_vnt_forms.vntvm_plus">
+                        <label>intūma</label>
+                    </item>
+                    <item xml:id="pr_p2c_intum"
+                          corresp="#ft_pr_pl_p2c.hamza_vnt_forms.vntvm">
+                        <label>intum</label>
+                    </item>
+                    <item xml:id="pr_p2c_entum"
+                          corresp="#ft_pr_pl_p2c.hamza_vnt_forms.vntvm">
+                        <label>entum</label>
+                    </item>
+                    <item xml:id="pr_p2c_entuman"
+                          corresp="#ft_pr_pl_p2c.hamza_vnt_forms.vntvm_plus">
+                        <label>entuman</label>
+                    </item>
+                    <item xml:id="pr_p2c_intuu"
+                          corresp="#ft_pr_pl_p2c.hamza_vnt_forms.vntvv">
+                        <label>intū</label>
+                    </item>
+                    <item xml:id="pr_p2c_antum"
+                          corresp="#ft_pr_pl_p2c.hamza_vnt_forms.vntvm">
+                        <label>antum</label>
+                    </item>
+                    <item xml:id="pr_p2c_antu"
+                          corresp="#ft_pr_pl_p2c.hamza_vnt_forms.vntv">
+                        <label>antu</label>
+                    </item>
+                    <item xml:id="pr_p2c_ittu"
+                          corresp="#ft_pr_pl_p2c.hamza_vtt_forms">
+                        <label>ittu</label>
+                    </item>
+                    <item xml:id="pr_p2c_entu"
+                          corresp="#ft_pr_pl_p2c.hamza_vnt_forms.vntv">
+                        <label>entu</label>
+                    </item>
+                    <item xml:id="pr_p2c_hinto"
+                          corresp="#ft_pr_pl_p2c.h_forms">
+                        <label>hinto</label>
+                    </item>
+                    <item xml:id="pr_p2c_ntuumaha"
+                          corresp="#ft_pr_pl_p2c.nt_forms.ntum_plus">
+                        <label>ntūmaha</label>
+                    </item>
+                    <item xml:id="pr_p2c_untum"
+                          corresp="#ft_pr_pl_p2c.hamza_vnt_forms.vntvm">
+                        <label>untum</label>
+                    </item>
+                    <item xml:id="pr_p2c_antun"
+                          corresp="#ft_pr_pl_p2c.hamza_vnt_forms.vntvn">
+                        <label>antun</label>
+                    </item>
+                    <item xml:id="pr_p2c_intu"
+                          corresp="#ft_pr_pl_p2c.hamza_vnt_forms.vntv">
+                        <label>intu, (i)ntu</label>
+                    </item>
+                    <item xml:id="pr_p2c_intuun"
+                          corresp="#ft_pr_pl_p2c.hamza_vnt_forms">
+                        <label>intūn</label>
+                    </item>
+                    <item xml:id="pr_p2c_intom"
+                          corresp="#ft_pr_pl_p2c.hamza_vnt_forms.vntvm">
+                        <label>intom</label>
+                    </item>
+                    <item xml:id="pr_p2c_ntuma"
+                          corresp="#ft_pr_pl_p2c.nt_forms.ntum_plus">
+                        <label>ntuma, ntūma, nțūma</label>
+                    </item>
+                    <item xml:id="pr_p2c_ntum"
+                          corresp="#ft_pr_pl_p2c.nt_forms.ntvm">
+                        <label>ntum, nțum</label>
+                    </item>
+                    <item xml:id="pr_p2c_intaw"
+                          corresp="#ft_pr_pl_p2c.hamza_vnt_forms.vntvv">
+                        <label>intaw</label>
+                    </item>
+                    <item xml:id="pr_p2c_intem"
+                          corresp="#ft_pr_pl_p2c.hamza_vnt_forms.vntvm">
+                        <label>intem</label>
+                    </item>
+                    <item xml:id="pr_p2c_ntumaan"
+                          corresp="#ft_pr_pl_p2c.nt_forms.ntum_plus">
+                        <label>ntumān</label>
+                    </item>
+                    <item xml:id="pr_p2c_intim"
+                          corresp="#ft_pr_pl_p2c.hamza_vnt_forms.vntvm">
+                        <label>intim</label>
+                    </item>
+                    <item xml:id="pr_p2c_ntina"
+                          corresp="#ft_pr_pl_p2c.nt_forms">
+                        <label>ntina</label>
+                    </item>
+                    <item xml:id="pr_p2c_intun"
+                          corresp="#ft_pr_pl_p2c.hamza_vnt_forms.vntvn">
+                        <label>intun</label>
+                    </item>
+                    <item xml:id="pr_p2c_ənten"
+                          corresp="#ft_pr_pl_p2c.hamza_vnt_forms.vntvn">
+                        <label>ənten</label>
+                    </item>
+                    <item xml:id="pr_p2c_nchem"
+                          corresp="#ft_pr_pl_p2c.nt_forms.ntvm">
+                        <label>nčəm</label>
+                    </item>
+                    <item xml:id="pr_p2c_ntumaya"
+                          corresp="#ft_pr_pl_p2c.nt_forms.ntum_plus">
+                        <label>ntumaya</label>
+                    </item>
+                    <item xml:id="pr_p2c_ttuma"
+                          corresp="#ft_pr_pl_p2c.nt_forms.ntvm">
+                        <label>ttuma</label>
+                    </item>
+                </list>
+            </div>
+            <div type="description"
+                 resp="">
+                <byline>Edited by [Name]</byline>
+            </div>
+            <div xmlns:tei="http://www.tei-c.org/ns/1.0"
+                 type="featureValueObservations">
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0054"
+                                             status="done"
+                                             resp="dmp:AID">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:schukro_2004_6239"
+                          type="publication" />
+                    <placeName ref="geo:beirut" />
+                    <lang corresp="..\profiles\vicav_profile_LBN-BEI.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>əntu</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0071"
+                                             status="done"
+                                             resp="dmp:AID">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="src:LEB_2022_AID"
+                          type="fieldwork" />
+                    <placeName ref="geo:naameh" />
+                    <placeName ref="geo:el_karantina" />
+                    <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml" />
+                    <personGrp role="tribe"
+                               corresp="pgr:arab_maslax" />
+                    <note type="general">Young speakers and most middle-age speakers show the comunis form ʔintu, while some old speakers show gender distinction.</note>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0053"
+                                             status="done"
+                                             resp="dmp:AID">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:haidar_1979_2969"
+                          type="publication" />
+                    <placeName ref="geo:baskinta" />
+                    <lang corresp="..\profiles\vicav_profile_LBN-BAS.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0026"
+                                             status="done"
+                                             resp="dmp:AID">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_2019_6122"
+                          type="publication" />
+                    <placeName ref="geo:haifa" />
+                    <lang corresp="..\profiles\vicav_profile_ISR-HAI.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0035"
+                                             status="done"
+                                             resp="dmp:AID">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_2019_6122"
+                          type="publication" />
+                    <placeName ref="geo:nazareth" />
+                    <lang corresp="..\profiles\vicav_profile_ISR-NAZ.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>pausal form: into</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0042"
+                                             status="done"
+                                             resp="dmp:AID">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_2019_6122"
+                          type="publication" />
+                    <placeName ref="geo:suulam" />
+                    <lang corresp="..\profiles\vicav_profile_ISR-TUR.xml" />
+                    <personGrp role="tribe"
+                               corresp="pgr:arab_turkman" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0074"
+                                             status="done"
+                                             resp="dmp:AID">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:el_hajje_1954_0000"
+                          type="publication" />
+                    <placeName ref="geo:tripoli_lebanon" />
+                    <lang corresp="..\profiles\vicav_profile_LBN-TRI.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>ʔənto</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0062"
+                                             status="done"
+                                             resp="dmp:AID">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:féghali_1919_9281"
+                          type="publication" />
+                    <placeName ref="geo:kfar_aabida" />
+                    <lang corresp="..\profiles\vicav_profile_LBN-KAB.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>ʔənto</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0079"
+                                             status="done"
+                                             resp="dmp:AID">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:fleisch_1947_2645"
+                          type="publication" />
+                    <placeName ref="geo:zahle" />
+                    <lang corresp="..\profiles\vicav_profile_LBN-ZAH.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>ʔənto</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0065"
+                                             status="done"
+                                             resp="dmp:AID">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:fleisch_1974_3163"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:kfar_sghab" />
+                    <lang corresp="..\profiles\vicav_profile_LBN-KSG.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>ʔənto</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0056"
+                                             status="done"
+                                             resp="dmp:AID">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:jiha_1964_0000"
+                          type="publication" />
+                    <placeName ref="geo:bishmizzine" />
+                    <lang corresp="..\profiles\vicav_profile_LBN-BIS.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>ʔənto</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0009"
+                                             status="done"
+                                             resp="dmp:AT">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:wer_2007_5826"
+                          type=" publication" />
+                    <placeName ref="geo:amman" />
+                    <lang corresp="..\profiles\vicav_profile_JOR-AMN.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0005"
+                                             status="done"
+                                             resp="dmp:CL">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:prochazka_1988_0002"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:abha" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-ABH.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0010"
+                                             status="done"
+                                             resp="dmp:CL">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intaw" />
+                    <bibl corresp="zot:prochazka_1988_0002"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:hofuf" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-HFF.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0011"
+                                             status="done"
+                                             resp="dmp:RZ">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intem" />
+                    <bibl corresp="zot:prochazka_1988_0002"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:hail" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-HYL.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>intam</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0013"
+                                             status="done"
+                                             resp="dmp:CL">
+                    <name type="featureValue"
+                          ref="#pr_p2c_antu" />
+                    <bibl corresp="zot:prochazka_1988_0002"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:rufaydah" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-RUF.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0014"
+                                             status="done"
+                                             resp="dmp:CL">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intum" />
+                    <bibl corresp="zot:prochazka_1988_0002"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:sirhan" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-RWA.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0006"
+                                             status="done"
+                                             resp="dmp:CL">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intaw" />
+                    <bibl corresp="zot:prochazka_1988_0002"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:sirhan" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-RWA.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0004"
+                                             status="done"
+                                             resp="dmp:CL">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intem" />
+                    <bibl corresp="zot:prochazka_1988_0002"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:sirhan" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-RWA.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>intam</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0015"
+                                             status="done"
+                                             resp="dmp:CL">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:prochazka_1988_0002"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:riyadh" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-RYD.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0117"
+                                             status="done"
+                                             resp="dmp:CL">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_1997_3187"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:aleppo" />
+                    <lang corresp="..\profiles\vicav_profile_SYR-ALP.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0121"
+                                             status="done"
+                                             resp="dmp:CL">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intem" />
+                    <bibl corresp="zot:talay_1999_0001"
+                          type="publication" />
+                    <placeName ref="geo:khawetna" />
+                    <lang corresp="..\profiles\vicav_profile_SYR-KHA.xml" />
+                    <personGrp role="tribe"
+                               corresp="pgr:khawetna_tribe" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0127"
+                                             status="done"
+                                             resp="dmp:CL">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intem" />
+                    <bibl corresp="zot:fink_2017_3211"
+                          type="publication" />
+                    <placeName ref="geo:hasankeyf" />
+                    <lang corresp="..\profiles\vicav_profile_TUR-HAS.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0128"
+                                             status="done"
+                                             resp="dmp:CL">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intem" />
+                    <bibl corresp="zot:wittrich_2001_0000"
+                          type="publication" />
+                    <placeName ref="geo:idil_aazex" />
+                    <lang corresp="..\profiles\vicav_profile_TUR-IDI.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0129"
+                                             status="done"
+                                             resp="dmp:CL">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intem" />
+                    <bibl corresp="zot:lahdo_2009_1103"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:siirt" />
+                    <lang corresp="..\profiles\vicav_profile_TUR-SII.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0012"
+                                             status="done"
+                                             resp="dmp:CL">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:prochazka_1988_0002"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:sabt_alalayah" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-QRN.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0033"
+                                             status="done"
+                                             resp="dmp:RZ">
+                    <name type="featureValue"
+                          ref="#pr_p2c_antum" />
+                    <bibl corresp="zot:prochazka_1988_0002"
+                          type="publication"
+                          cert="unknown"
+                          status="CHECKED" />
+                    <placeName ref="geo:qahaba" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-QHB.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0034"
+                                             status="done"
+                                             resp="dmp:RZ">
+                    <name type="featureValue"
+                          ref="#pr_p2c_antum" />
+                    <bibl corresp="zot:prochazka_1988_0002"
+                          type="publication"
+                          cert="unknown"
+                          status="CHECKED" />
+                    <placeName ref="geo:bukayriya" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-QSM.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0040"
+                                             status="done"
+                                             resp="dmp:RZ">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intum" />
+                    <bibl corresp="zot:toll_1983_0000"
+                          type="publication" />
+                    <placeName ref="geo:bilad_ghamid" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-GHA.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0036"
+                                             status="done"
+                                             resp="dmp:RZ">
+                    <name type="featureValue"
+                          ref="#pr_p2c_antum" />
+                    <bibl corresp="zot:prochazka_1988_0002"
+                          type="publication"
+                          cert="unknown"
+                          status="CHECKED" />
+                    <placeName ref="geo:tanuma" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-TAN.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0037"
+                                             status="done"
+                                             resp="dmp:RZ">
+                    <name type="featureValue"
+                          ref="#pr_p2c_antum" />
+                    <bibl corresp="zot:prochazka_1988_0002"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:bisha" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-BSH.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0113"
+                                             status="done"
+                                             resp="dmp:CL">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:haidar_2006_8572"
+                          type="publication" />
+                    <placeName ref="geo:baghdad" />
+                    <lang corresp="..\profiles\vicav_profile_IRQ-BGD.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>əntu</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0119"
+                                             status="done"
+                                             resp="dmp:CL">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_1997_3187"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:deir_ez_zor" />
+                    <lang corresp="..\profiles\vicav_profile_SYR-DZR.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0078"
+                                             status="done"
+                                             resp="dmp:CL">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_1997_3187"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:blas" />
+                    <lang corresp="..\profiles\vicav_profile_SYR-NEM.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0126"
+                                             status="done"
+                                             resp="dmp:CL">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_1997_3187"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:al_suwayda_district" />
+                    <lang corresp="..\profiles\vicav_profile_SYR-SWE.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0334"
+                                             status="done"
+                                             resp="dmp:CL">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:alfaifi_2010_2815"
+                          type="publication"
+                          cert="unknown" />
+                    <placeName ref="geo:jabal_fayfa" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-FYF.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>əntu</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0118"
+                                             status="done"
+                                             resp="dmp:CL">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:lentin_2006_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:damascus" />
+                    <lang corresp="..\profiles\vicav_profile_SYR-DAM.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>əntu</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0335"
+                                             status="done"
+                                             resp="dmp:CL">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:johnstone_1961_0000"
+                          type="publication"
+                          cert="unknown" />
+                    <placeName ref="geo:kuwait" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-DWS.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0332"
+                                             status="done"
+                                             resp="dmp:CL">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intun" />
+                    <bibl corresp="zot:prochazka_1988_0002"
+                          type="publication"
+                          cert="unknown"
+                          status="CHECKED" />
+                    <placeName ref="geo:qawz" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-QWZ.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0168"
+                                             status="done"
+                                             resp="dmp:JD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:durand_1996_0001"
+                          type="publication" />
+                    <placeName ref="geo:jerusalem" />
+                    <lang corresp="..\profiles\vicav_profile_PSE-JRS.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0171"
+                                             status="done"
+                                             resp="dmp:JD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:AbuNahleh_1985_6344"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:ramallah" />
+                    <lang corresp="..\profiles\vicav_profile_PSE-RML.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0158"
+                                             status="done"
+                                             resp="dmp:JD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:arnold_2004_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:jaffa" />
+                    <lang corresp="..\profiles\vicav_profile_ISR-JFC.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0159"
+                                             status="done"
+                                             resp="dmp:JD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:arnold_2004_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:jaffa" />
+                    <lang corresp="..\profiles\vicav_profile_ISR-JFS.xml" />
+                    <personGrp role="religion"
+                               corresp="pgr:samaritans" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0169"
+                                             status="done"
+                                             resp="dmp:JD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:arnold_2004_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:kafr_ana" />
+                    <lang corresp="..\profiles\vicav_profile_PSE-KFN.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0160"
+                                             status="done"
+                                             resp="dmp:JD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:geva-kleinberger_2009_3208"
+                          type="publication" />
+                    <placeName ref="geo:tiberias" />
+                    <lang corresp="..\profiles\vicav_profile_ISR-TBR.xml" />
+                    <personGrp role="religion"
+                               corresp="pgr:jews" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0175"
+                                             status="done"
+                                             resp="dmp:JD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:seeger_1998_0000"
+                          type="publication" />
+                    <placeName ref="geo:hebron" />
+                    <lang corresp="..\profiles\vicav_profile_PSE-XLL.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0178"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intun" />
+                    <bibl corresp="zot:senelle_2002_3236"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:raheita" />
+                    <lang corresp="..\profiles\vicav_profile_ERI-RHY.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>éntun</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0018"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:senelle_2002_3236"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:raheita" />
+                    <lang corresp="..\profiles\vicav_profile_ERI-RHY.xml" />
+                    <personGrp role="firstLanguage"
+                               corresp="Afar" />
+                    <note type="general">In Afambo only.</note>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0001"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_p2c_antum" />
+                    <bibl corresp="zot:corriente_2013_3020"
+                          type="publication" />
+                    <placeName ref="geo:andalusia" />
+                    <lang corresp="..\profiles\vicav_profile_ESP-ADL.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0228"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intuu" />
+                    <bibl corresp="zot:benkato_2014_2793"
+                          type="publication" />
+                    <placeName ref="geo:benghazi" />
+                    <lang corresp="..\profiles\vicav_profile_LBY-BGZ.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>intū</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0232"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intum" />
+                    <bibl corresp="zot:DAnna_2021_9340"
+                          type="publication" />
+                    <placeName ref="geo:yefren" />
+                    <lang corresp="..\profiles\vicav_profile_LBY-JYN.xml" />
+                    <personGrp role="religion"
+                               corresp="pgr:jews" />
+                    <cit type="sourceRepresentation">
+                        <quote>əntum</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0038"
+                                             status="done"
+                                             resp="dmp:RZ">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:pereira_2010_1918"
+                          type="publication" />
+                    <placeName ref="geo:tripoli_libya" />
+                    <lang corresp="..\profiles\vicav_profile_LBY-TPL.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>əntu</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0322"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_p2c_antu" />
+                    <bibl corresp="zot:asiri_2009_2501"
+                          type="publication"
+                          cert="unknown" />
+                    <placeName ref="geo:rijal_alma" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-ALM.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0092"
+                                             status="done"
+                                             resp="dmp:RZ">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:omar_1975_0000"
+                          type="publication"
+                          cert="unknown" />
+                    <placeName ref="geo:hejaz" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-HJZ.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0185"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:dickins_2009_3089"
+                          type="publication" />
+                    <placeName ref="geo:khartoum" />
+                    <lang corresp="..\profiles\vicav_profile_SDN-KRT.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0193"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:carbou_1913_0117"
+                          type="publication" />
+                    <placeName ref="geo:ouaday" />
+                    <lang corresp="..\profiles\vicav_profile_TCD-ODY.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>entu, intu</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0230"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intum" />
+                    <bibl corresp="zot:harrama_1993_0000"
+                          type="publication" />
+                    <placeName ref="geo:al_jabal_al_gharbi" />
+                    <lang corresp="..\profiles\vicav_profile_LBY-JBL.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0320"
+                                             status="done"
+                                             resp="dmp:RZ">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:holes_1990_0000"
+                          type="publication"
+                          cert="unknown" />
+                    <placeName ref="geo:gulf" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-GLF.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0324"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:holes_2006_0164"
+                          type="publication"
+                          cert="unknown"
+                          status="CHECKED" />
+                    <placeName ref="geo:manama" />
+                    <lang corresp="..\profiles\vicav_profile_BHR-ARB.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0022"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intaw" />
+                    <bibl corresp="zot:holes_2006_0164"
+                          type="publication"
+                          cert="unknown"
+                          status="CHECKED" />
+                    <placeName ref="geo:manama" />
+                    <lang corresp="..\profiles\vicav_profile_BHR-ARB.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0323"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intuun" />
+                    <bibl corresp="zot:holes_2006_0164"
+                          type="publication"
+                          cert="unknown"
+                          status="CHECKED" />
+                    <placeName ref="geo:muharraq" />
+                    <lang corresp="..\profiles\vicav_profile_BHR-BHN.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>intūn(a)</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0002"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:holes_2007_5886"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:kuwait_city" />
+                    <lang corresp="..\profiles\vicav_profile_KWT-KWC.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>intu</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0325"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intum" />
+                    <bibl corresp="zot:ingham_1979_0000"
+                          type="publication"
+                          cert="unknown" />
+                    <placeName ref="geo:kuwait" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-MTR.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0181"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intum" />
+                    <bibl corresp="zot:manfredi_2013_2941"
+                          type="publication" />
+                    <placeName ref="geo:kadugli" />
+                    <lang corresp="..\profiles\vicav_profile_SDN-BKD.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0184"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intum" />
+                    <bibl corresp="zot:manfredi_2013_2941"
+                          type="publication" />
+                    <placeName ref="geo:kadugli" />
+                    <lang corresp="..\profiles\vicav_profile_SDN-KDG.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0182"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_p2c_antu" />
+                    <bibl corresp="zot:roset_2018_8391"
+                          type="publication" />
+                    <placeName ref="geo:darfur" />
+                    <lang corresp="..\profiles\vicav_profile_SDN-DRF.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0023"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:roset_2018_8391"
+                          type="publication" />
+                    <placeName ref="geo:darfur" />
+                    <lang corresp="..\profiles\vicav_profile_SDN-DRF.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0189"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:roth_1979_0000"
+                          type="publication" />
+                    <placeName ref="geo:abeche" />
+                    <lang corresp="..\profiles\vicav_profile_TCD-ABC.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>intu</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0024"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_p2c_antu" />
+                    <bibl corresp="zot:roth_1979_0000"
+                          type="publication" />
+                    <placeName ref="geo:abeche" />
+                    <lang corresp="..\profiles\vicav_profile_TCD-ABC.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0025"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_p2c_entu" />
+                    <bibl corresp="zot:roth_1979_0000"
+                          type="publication" />
+                    <placeName ref="geo:abeche" />
+                    <lang corresp="..\profiles\vicav_profile_TCD-ABC.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0028"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_p2c_ittu" />
+                    <bibl corresp="zot:roth_1979_0000"
+                          type="publication" />
+                    <placeName ref="geo:abeche" />
+                    <lang corresp="..\profiles\vicav_profile_TCD-ABC.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0039"
+                                             status="done"
+                                             resp="dmp:RZ">
+                    <name type="featureValue"
+                          ref="#pr_p2c_nchem" />
+                    <bibl corresp="zot:yoda_2005_3130"
+                          type="publication" />
+                    <placeName ref="geo:tripoli_libya" />
+                    <lang corresp="..\profiles\vicav_profile_LBY-JTP.xml" />
+                    <personGrp role="religion"
+                               corresp="pgr:jews" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0194"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:zeltner_tourneux_1986_0000"
+                          type="publication" />
+                    <placeName ref="geo:salamat" />
+                    <lang corresp="..\profiles\vicav_profile_TCD-ULE.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0270"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:zarb_2023_0602"
+                          type="publication" />
+                    <placeName ref="geo:testour" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-TSR.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0016"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intuuma" />
+                    <bibl corresp="zot:zarb_2023_0602"
+                          type="publication" />
+                    <placeName ref="geo:testour" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-TSR.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0200"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_1997_3187"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:hama" />
+                    <lang corresp="..\profiles\vicav_profile_SYR-HMA.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0201"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_1997_3187"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:idlib" />
+                    <lang corresp="..\profiles\vicav_profile_SYR-IDL.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>into</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0204"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_1997_3187"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:abu_qbes" />
+                    <lang corresp="..\profiles\vicav_profile_SYR-QBS.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>into</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0205"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_1997_3187"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:qanawat" />
+                    <lang corresp="..\profiles\vicav_profile_SYR-QNW.xml" />
+                    <personGrp role="religion"
+                               corresp="pgr:druzes" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0206"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_p2c_hinto" />
+                    <bibl corresp="zot:behnstedt_1997_3187"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:qismin" />
+                    <lang corresp="..\profiles\vicav_profile_SYR-QSM.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0207"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_1997_3187"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:qalat_al_husn" />
+                    <lang corresp="..\profiles\vicav_profile_SYR-QSN.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0208"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_1997_3187"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:ras_al_maarra" />
+                    <lang corresp="..\profiles\vicav_profile_SYR-RMR.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0210"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_1997_3187"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:sednaya" />
+                    <lang corresp="..\profiles\vicav_profile_SYR-SDY.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0213"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_1997_3187"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:tartus" />
+                    <lang corresp="..\profiles\vicav_profile_SYR-TRT.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0260"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_1998_0001"
+                          type="publication"
+                          status="CHECKME">
+                        <!-- potentially ambiguous references -->
+                    </bibl>
+                    <placeName ref="geo:guellala" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-DJI.xml" />
+                    <personGrp role="religion"
+                               corresp="pgr:ibadis" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0261"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_1998_0001"
+                          type="publication"
+                          status="CHECKME">
+                        <!-- potentially ambiguous references -->
+                    </bibl>
+                    <placeName ref="geo:houmt_souk" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-DJJ.xml" />
+                    <personGrp role="religion"
+                               corresp="pgr:jews" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0029"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intuun" />
+                    <bibl corresp="zot:behnstedt_1998_0001"
+                          type="publication"
+                          status="CHECKME">
+                        <!-- potentially ambiguous references -->
+                    </bibl>
+                    <placeName ref="geo:houmt_souk" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-DJJ.xml" />
+                    <personGrp role="religion"
+                               corresp="pgr:jews" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0021"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intum" />
+                    <bibl corresp="zot:behnstedt_1998_0001"
+                          type="publication"
+                          status="CHECKME">
+                        <!-- potentially ambiguous references -->
+                    </bibl>
+                    <placeName ref="geo:djerba" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-DJM.xml" />
+                    <personGrp role="religion"
+                               corresp="pgr:malikites" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0263"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_p2c_ntumaan" />
+                    <bibl corresp="zot:cohen_1975_0000"
+                          type="publication" />
+                    <placeName ref="geo:tunis" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-JTS.xml" />
+                    <personGrp role="religion"
+                               corresp="pgr:jews" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0020"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_p2c_ntuma" />
+                    <bibl corresp="zot:DAnna_2020_6708"
+                          type="publication" />
+                    <placeName ref="geo:chebba" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-CHB.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0268"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intum" />
+                    <bibl corresp="zot:marçais_1925_6953"
+                          type="publication" />
+                    <placeName ref="geo:takrouna" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-TKR.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0030"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intuuma" />
+                    <bibl corresp="zot:marçais_1925_6953"
+                          type="publication" />
+                    <placeName ref="geo:takrouna" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-TKR.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0019"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_p2c_untum" />
+                    <bibl corresp="zot:mion_2021_9872"
+                          type="publication" />
+                    <placeName ref="geo:bengardane" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-BGN.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0266"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intuuma" />
+                    <bibl corresp="zot:prinoth_2017_3476"
+                          type="publication" />
+                    <placeName ref="geo:sidi_bouzid" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-SBZ.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0271"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_p2c_antum" />
+                    <bibl corresp="zot:saada_1984_0002"
+                          type="publication" />
+                    <placeName ref="geo:tozeur" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-TZR.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>anţom</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0031"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_p2c_antu" />
+                    <bibl corresp="zot:saada_1984_0002"
+                          type="publication" />
+                    <placeName ref="geo:tozeur" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-TZR.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>anţu</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0041"
+                                             status="done"
+                                             resp="dmp:RZ">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intum" />
+                    <bibl corresp="zot:naddari_2023_2742"
+                          type="publication" />
+                    <placeName ref="geo:nefza" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-NFZ.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0043"
+                                             status="done"
+                                             resp="dmp:RZ">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intuuma" />
+                    <bibl corresp="zot:naddari_2023_2742"
+                          type="publication" />
+                    <placeName ref="geo:nefza" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-NFZ.xml" />
+                    <note type="general">This variant is used by young and urban speakers</note>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0044"
+                                             status="done"
+                                             resp="dmp:RZ">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intim" />
+                    <bibl corresp="zot:naddari_2023_2742"
+                          type="publication" />
+                    <placeName ref="geo:nefza" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-NFZ.xml" />
+                    <note type="general">This is namely used by a few rural speakers</note>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0269"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intuuma" />
+                    <bibl corresp="zot:singer_1984_0000"
+                          type="publication" />
+                    <placeName ref="geo:tunis" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-TNS.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0267"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intuuma" />
+                    <bibl corresp="zot:talmoudi_1980_0000"
+                          type="publication" />
+                    <placeName ref="geo:sousse" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-SUS.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0216"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:borg_1985_0000"
+                          type="publication" />
+                    <placeName ref="geo:cyprus" />
+                    <lang corresp="..\profiles\vicav_profile_CYP-KOR.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0217"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_ntuma" />
+                    <bibl corresp="zot:boucherit_2002_0000"
+                          type="publication" />
+                    <placeName ref="geo:algier" />
+                    <lang corresp="..\profiles\vicav_profile_DZA-ALR.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0221"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_ntuma" />
+                    <bibl corresp="zot:GrandHenry_1976_2248"
+                          type="publication" />
+                    <placeName ref="geo:mzab" />
+                    <lang corresp="..\profiles\vicav_profile_DZA-MZB.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0003"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_ntum" />
+                    <bibl corresp="zot:GrandHenry_1976_2248"
+                          type="publication" />
+                    <placeName ref="geo:mzab" />
+                    <lang corresp="..\profiles\vicav_profile_DZA-MZB.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0222"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_ntuma" />
+                    <bibl corresp="zot:guerrero_2015_6917"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:oran" />
+                    <lang corresp="..\profiles\vicav_profile_DZA-ORN.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0239"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_ntum" />
+                    <bibl corresp="zot:moscoso_garcia_2003_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:chefchaouen" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-CHF.xml" />
+                    <note type="general">with affricate t</note>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0017"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_ntuma" />
+                    <bibl corresp="zot:moscoso_garcia_2003_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:chefchaouen" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-CHF.xml" />
+                    <note type="general">with affricate t</note>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0246"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_ntuma" />
+                    <bibl corresp="zot:sanchez_2014_6569"
+                          type="publication" />
+                    <placeName ref="geo:marrakesh" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-MRK.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0258"
+                                             status="done"
+                                             resp="dmp:RZ">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intom" />
+                    <bibl corresp="src:PC_RZ"
+                          type="personalCommunication" />
+                    <placeName ref="geo:malta" />
+                    <lang corresp="..\profiles\vicav_profile_MLT-MAL.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0251"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_ntuma" />
+                    <bibl corresp="zot:aguadé_1994_0013"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:skoura" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-SKR.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0240"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_ntuma" />
+                    <bibl corresp="zot:aguadé_2003_4996"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:casablanca" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-CSB.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0027"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_ntumaya" />
+                    <bibl corresp="zot:aguadé_2003_4996"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:casablanca" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-CSB.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0256"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intuuma" />
+                    <bibl corresp="zot:colin_1921_3545"
+                          type="publication" />
+                    <placeName ref="geo:taza" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-TZA.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0130"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_entum" />
+                    <bibl corresp="zot:colin_1921_3545"
+                          type="publication" />
+                    <placeName ref="geo:branes" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-BRA.xml" />
+                    <personGrp role="tribe"
+                               corresp="pgr:branes" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0218"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_entuman" />
+                    <bibl corresp="zot:GrandHenry_1972_9692"
+                          type="publication" />
+                    <placeName ref="geo:cherchell" />
+                    <lang corresp="..\profiles\vicav_profile_DZA-CHR.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0248"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_ntuma" />
+                    <bibl corresp="zot:heath_2002_0001"
+                          type="publication" />
+                    <placeName ref="geo:rabat" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-RBJ.xml" />
+                    <personGrp role="religion"
+                               corresp="pgr:jews" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0250"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_ntuma" />
+                    <bibl corresp="zot:heath_2002_0001"
+                          type="publication" />
+                    <placeName ref="geo:rabat" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-RBT.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0255"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_ntuma" />
+                    <bibl corresp="zot:heath_2002_0001"
+                          type="publication" />
+                    <placeName ref="geo:tanger" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-TGR.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0238"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_ntuma" />
+                    <bibl corresp="zot:kampffmeyer_1912_3753"
+                          type="publication" />
+                    <placeName ref="geo:casablanca-settat" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-CHA.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0219"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_ntuma" />
+                    <bibl corresp="zot:laraba_1981_5666"
+                          type="publication" />
+                    <placeName ref="geo:constantine" />
+                    <lang corresp="..\profiles\vicav_profile_DZA-CON.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0257"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_ntuma" />
+                    <bibl corresp="zot:loubignac_1952_3814"
+                          type="publication" />
+                    <placeName ref="geo:zaer" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-ZIR.xml" />
+                    <personGrp role="tribe"
+                               corresp="pgr:zaer" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0225"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_ntuma" />
+                    <bibl corresp="zot:marcais_1902_3831"
+                          type="publication" />
+                    <placeName ref="geo:tlemcen" />
+                    <lang corresp="..\profiles\vicav_profile_DZA-TLM.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0224"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intum" />
+                    <bibl corresp="zot:marcais_1908_3832"
+                          type="publication" />
+                    <placeName ref="geo:saida" />
+                    <lang corresp="..\profiles\vicav_profile_DZA-SDA.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0220"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_ntuma" />
+                    <bibl corresp="zot:marcais_1956_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:jijel" />
+                    <lang corresp="..\profiles\vicav_profile_DZA-DJL.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0032"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intum" />
+                    <bibl corresp="zot:marcais_1956_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:jijel" />
+                    <lang corresp="..\profiles\vicav_profile_DZA-DJL.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0179"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_ntuma" />
+                    <bibl corresp="zot:marjani_2019_6677"
+                          type="publication" />
+                    <placeName ref="geo:rehamna" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-RHA.xml" />
+                    <personGrp role="tribe"
+                               corresp="pgr:rhamna" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0008"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_ttuma" />
+                    <bibl corresp="zot:marjani_2019_6677"
+                          type="publication" />
+                    <placeName ref="geo:rehamna" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-RHA.xml" />
+                    <personGrp role="tribe"
+                               corresp="pgr:rhamna" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0253"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_ntuma" />
+                    <bibl corresp="zot:moscoso_2002_3876"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:souss_massa" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-SOS.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0249"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_ntina" />
+                    <bibl corresp="zot:stillman_1988_4518"
+                          type="publication" />
+                    <placeName ref="geo:sefrou" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-RBS.xml" />
+                    <personGrp role="religion"
+                               corresp="pgr:jews" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0243"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_p2c_ntuma" />
+                    <bibl corresp="zot:zoubid_2011_0000"
+                          type="publication" />
+                    <placeName ref="geo:hyayna" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-HYN.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0291"
+                                             status="done"
+                                             resp="dmp:VE">
+                    <name type="featureValue"
+                          ref="#pr_p2c_antum" />
+                    <bibl corresp="zot:rhodokanakis_1908_1911_0000"
+                          type="publication" />
+                    <placeName ref="geo:dhofar" />
+                    <lang corresp="..\profiles\vicav_profile_OMN-DHF.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0300"
+                                             status="done"
+                                             resp="dmp:VE">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="src:PC_SB"
+                          type="personalCommunication" />
+                    <placeName ref="geo:hadramaut" />
+                    <lang corresp="..\profiles\vicav_profile_YEM-HAD.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0274"
+                                             status="done"
+                                             resp="dmp:VE">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_woidich_1985_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:alexandria" />
+                    <lang corresp="..\profiles\vicav_profile_EGY-ALX.xml" />
+                    <note type="general">deducted from the source</note>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0275"
+                                             status="done"
+                                             resp="dmp:VE">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_woidich_1985_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:aswan" />
+                    <lang corresp="..\profiles\vicav_profile_EGY-ASW.xml" />
+                    <note type="general">deducted from the source</note>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0276"
+                                             status="done"
+                                             resp="dmp:VE">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_woidich_1985_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:asyut" />
+                    <lang corresp="..\profiles\vicav_profile_EGY-ASY.xml" />
+                    <note type="general">deducted from the source</note>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0277"
+                                             status="done"
+                                             resp="dmp:VE">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_woidich_1985_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:al_badari" />
+                    <lang corresp="..\profiles\vicav_profile_EGY-BDR.xml" />
+                    <note type="general">deducted from the source</note>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0279"
+                                             status="done"
+                                             resp="dmp:VE">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_woidich_1985_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:port_said" />
+                    <lang corresp="..\profiles\vicav_profile_EGY-BSD.xml" />
+                    <note type="general">deducted from the source</note>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0280"
+                                             status="done"
+                                             resp="dmp:VE">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_woidich_1985_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:bani_suwayf" />
+                    <lang corresp="..\profiles\vicav_profile_EGY-BSW.xml" />
+                    <note type="general">deducted from the source</note>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0282"
+                                             status="done"
+                                             resp="dmp:VE">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_woidich_1985_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:darawah" />
+                    <lang corresp="..\profiles\vicav_profile_EGY-DRW.xml" />
+                    <note type="general">deducted from the source</note>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0283"
+                                             status="done"
+                                             resp="dmp:VE">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_woidich_1985_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:luxor" />
+                    <lang corresp="..\profiles\vicav_profile_EGY-LXR.xml" />
+                    <note type="general">deducted from the source</note>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0284"
+                                             status="done"
+                                             resp="dmp:VE">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_woidich_1985_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:il_minya" />
+                    <lang corresp="..\profiles\vicav_profile_EGY-MNY.xml" />
+                    <note type="general">deducted from the source</note>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0285"
+                                             status="done"
+                                             resp="dmp:VE">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_woidich_1985_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:al_namasa" />
+                    <lang corresp="..\profiles\vicav_profile_EGY-NMS.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0286"
+                                             status="done"
+                                             resp="dmp:VE">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_woidich_1985_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:qutur" />
+                    <lang corresp="..\profiles\vicav_profile_EGY-QTR.xml" />
+                    <note type="general">deducted from the source</note>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0287"
+                                             status="done"
+                                             resp="dmp:VE">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_woidich_1985_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:rasid" />
+                    <lang corresp="..\profiles\vicav_profile_EGY-RSD.xml" />
+                    <note type="general">deducted from the source</note>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_template.fv_0057"
+                                             status="done"
+                                             resp="dmp:RZ">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intum" />
+                    <bibl corresp="src:KUW_2022_GK"
+                          type="publication" />
+                    <placeName ref="geo:kuwait_city" />
+                    <lang corresp="..\profiles\vicav_profile_KWT-RSD.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_template.fv_0051"
+                                             status="done"
+                                             resp="dmp:RZ">
+                    <name type="featureValue"
+                          ref="#pr_p2c_antum" />
+                    <bibl corresp="src:SAU_2022_GK"
+                          type="publication" />
+                    <placeName ref="geo:khaybar" />
+                    <placeName ref="geo:qassim_region" />
+                    <placeName ref="geo:al_hayit" />
+                    <placeName ref="geo:hail_reg" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-RSD.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0288"
+                                             status="done"
+                                             resp="dmp:VE">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_woidich_1985_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:sinbillawayn" />
+                    <lang corresp="..\profiles\vicav_profile_EGY-SBW.xml" />
+                    <note type="general">deducted from the source</note>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0289"
+                                             status="done"
+                                             resp="dmp:VE">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_woidich_1985_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:sohag" />
+                    <lang corresp="..\profiles\vicav_profile_EGY-SHG.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0372"
+                                             status="done"
+                                             resp="dmp:VE">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:behnstedt_1987_0003"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:sa_dah" />
+                    <lang corresp="..\profiles\vicav_profile_YEM-SAD.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0299"
+                                             status="done"
+                                             resp="dmp:VE">
+                    <name type="featureValue"
+                          ref="#pr_p2c_antun" />
+                    <bibl corresp="zot:behnstedt_2016_3011"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:bayt_al_faqih" />
+                    <lang corresp="..\profiles\vicav_profile_YEM-BFQ.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0306"
+                                             status="done"
+                                             resp="dmp:VE">
+                    <name type="featureValue"
+                          ref="#pr_p2c_antun" />
+                    <bibl corresp="zot:behnstedt_2016_3011"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:mocha" />
+                    <lang corresp="..\profiles\vicav_profile_YEM-MAX.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0313"
+                                             status="done"
+                                             resp="dmp:VE">
+                    <name type="featureValue"
+                          ref="#pr_p2c_antun" />
+                    <bibl corresp="zot:behnstedt_2016_3011"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:zabid" />
+                    <lang corresp="..\profiles\vicav_profile_YEM-ZBD.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0314"
+                                             status="done"
+                                             resp="dmp:VE">
+                    <name type="featureValue"
+                          ref="#pr_p2c_antun" />
+                    <bibl corresp="zot:behnstedt_2016_3011"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:az_zuhrah" />
+                    <lang corresp="..\profiles\vicav_profile_YEM-ZUH.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0007"
+                                             status="done"
+                                             resp="dmp:VE">
+                    <name type="featureValue"
+                          ref="#pr_p2c_antu" />
+                    <bibl corresp="zot:ghanem_1958_0000"
+                          type="publication" />
+                    <placeName ref="geo:aden" />
+                    <lang corresp="..\profiles\vicav_profile_YEM-ADN.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0278"
+                                             status="done"
+                                             resp="dmp:VE">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:drop_2007_0000"
+                          type="publication" />
+                    <placeName ref="geo:mandisha" />
+                    <lang corresp="..\profiles\vicav_profile_EGY-BHR.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0000"
+                                             status="done"
+                                             resp="dmp:VE">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intum" />
+                    <bibl corresp="zot:drop_2007_0000"
+                          type="publication" />
+                    <placeName ref="geo:mandisha" />
+                    <lang corresp="..\profiles\vicav_profile_EGY-BHR.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_pl_p2c.fv_0281"
+                                             status="done"
+                                             resp="dmp:VE">
+                    <name type="featureValue"
+                          ref="#pr_p2c_intu" />
+                    <bibl corresp="zot:woidich_2006_3203"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:cairo" />
+                    <lang corresp="..\profiles\vicav_profile_EGY-CRO.xml" />
+                </wib:featureValueObservation>
+            </div>
+        </body>
+    </text>
 </TEI>

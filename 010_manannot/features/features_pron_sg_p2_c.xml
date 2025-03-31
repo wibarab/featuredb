@@ -1,484 +1,666 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../../082_scripts_xsl/tei_fs_2_html__001.xsl"?>
-<?xslt inPathSegment="\010_manannot\" outPathSegment="\106_html\"?>
-<?snippets fn="snippets_wibarab_001.xml" path="{filePath}\..\..\880_conf\"?>
-<?processor name="saxon" removePreserveFromXML="true" removePreserveFromXSLT="true"?>
-<?attributeAssignments fn="enricher_attributes.xml" path="{filePath}\..\..\880_conf\"?>
-<?shortCuts fn="wibarab_shortCuts" path="{filePath}\..\..\880_conf\"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../../804_xsd/1.0.1/featuredb.xsd" xml:id="ft_pr_sg_p2_c">
-   <teiHeader>
-      <fileDesc>
-         <titleStmt>
-            <title>Independent personal pronoun 2SG.C</title>
-         </titleStmt>
-         <publicationStmt>
-            <publisher>{publisher}</publisher>
-            <date when="2022-10-03"/>
-         </publicationStmt>
-         <sourceDesc>
-            <p>his is the feature-file for the 2nd person singular communis pronoun.</p>
-         </sourceDesc>
-      </fileDesc>
-
-      <encodingDesc>
-
-         <listPrefixDef xml:id="listPrefixDef">
-            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_dmp.xml#$1"/>
-            <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_biblio_tei_zotero.xml#$1"/>
-            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_dialects.xml#$1"/>
-            <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
-            <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1"/>
-            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_geodata.xml#$1"/>
-         </listPrefixDef>
-         <classDecl>
-            <taxonomy>
-               <category xml:id="vnt_forms"> 
-                  <catDesc>ʔvnt-forms</catDesc>
-                  <category xml:id="vntv">
-                     <catDesc>ʔvntv </catDesc>
-                  </category>
-                  <category xml:id="vnt">
-                     <catDesc>ʔvnt</catDesc>
-                  </category>
-               </category>
-               <category xml:id="atta">
-                     <catDesc>ʔatt(a)</catDesc>
-                  </category>
-               <category xml:id="nt_forms">
-                  <catDesc>Nt-forms</catDesc>
-                   <category xml:id="ntv">
-                  <catDesc>ntv</catDesc>
-               </category>
-                   <category xml:id="ntin_plus">
-                  <catDesc>Ntin (+)</catDesc>
-               </category>
-               </category>
-               <category xml:id="t_forms">
-                  <catDesc>T-forms</catDesc>
-               </category>
-            </taxonomy>
-         </classDecl>
-      </encodingDesc>
-      
-       <profileDesc>
-         <textClass>
-          <catRef target="dmp:independent_pronouns"/>
-          </textClass>
-      </profileDesc>
-
-      <revisionDesc status="done">
-         <change when="2022-08-17" who="dmp:">c</change>
-         <change when="2022-08-17" who="dmp: "/>
-         <change when="2022-09-07" who="dmp:VE">Change document status to done</change>
-      <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change><change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change></revisionDesc>
-   </teiHeader>
-
-
-
-   <text>
-      <body>
-         
-
-         <div type="featureDescription">
-            <head>Feature Values</head>
-            <list type="featureValues">
-               <item xml:id="pr_s2c_inti" corresp="#vntv">
-                  <label>inti, ʔinti</label>
-               </item>
-               <item xml:id="pr_s2c_int" corresp="#vnt">
-                  <label>int</label>
-               </item>
-               <item xml:id="pr_s2c_nta" corresp="#ntv">
-                  <label>nta</label>
-               </item>
-               <item xml:id="pr_s2c_anta" corresp="#vntv">
-                  <label>anta</label>
-               </item>
-               <item xml:id="pr_s2c_anti" corresp="#vntv">
-                  <label>anti</label>
-               </item>
-               <item xml:id="pr_s2c_ntinak" corresp="#ntin_plus">
-                  <label>ntinak</label>
-               </item>
-               <item xml:id="pr_s2c_inta" corresp="#vntv">
-                  <label>inta</label>
-               </item>
-               <item xml:id="pr_s2c_inte" corresp="#vntv">
-                  <label>inte</label>
-               </item>
-               <item xml:id="pr_s2c_ant" corresp="#vnt">
-                  <label>ant</label>
-               </item>
-               <item xml:id="pr_s2c_att" corresp="#atta">
-                  <label>att</label>
-               </item>
-               <item xml:id="pr_s2c_atta" corresp="#atta">
-                  <label>atta</label>
-               </item>
-               <item xml:id="pr_s2c_ntin" corresp="#ntin_plus">
-                  <label>ntin</label>
-               </item>
-               <item xml:id="pr_s2c_ntina" corresp="#ntin_plus">
-                  <label>ntina, nţina, əntina</label>
-               </item>
-               <item xml:id="pr_s2c_ntaya" corresp="#nt_forms">
-                  <label>ntaya</label>
-               </item>
-               <item xml:id="pr_s2c_ta" corresp="#t_forms">
-                  <label>ta</label>
-               </item>
-               <item xml:id="pr_s2c_taya" corresp="#t_forms">
-                  <label>taya</label>
-               </item>
-               <item xml:id="pr_s2c_nti" corresp="#ntv">
-                  <label>nti, nți</label>
-               </item>
-            </list>
-         </div>
-         <div type="description" resp=""><byline>Edited by [Name]</byline>
-         </div>
-
-         <div xmlns:tei="http://www.tei-c.org/ns/1.0" type="featureValueObservations">
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0026" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#pr_s2c_inti"/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:haifa"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-HAI.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0035" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#pr_s2c_inti"/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:nazareth"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-NAZ.xml"/>
-               
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0065" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#pr_s2c_inti"/>
-               <bibl corresp="zot:féghali_1919_9281" type="publication"/>
-               <placeName ref="geo:kfar_aabida"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-KAB.xml"/>
-               <note type="general">Reflex "inti" is used both for 2sg.m and 2sg.f. However, reflex "int" is used exclusively for 2sg.m, which indicates that despite the existence of a comunis pronoun, there is still gender differentiaton in 2sg independent pronouns</note>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0000" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#pr_s2c_inti"/>
-               <bibl corresp="zot:fleisch_1974_3163" type="publication" status="CHECKME"><!--checked--></bibl>
-               <placeName ref="geo:kfar_sghab"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-KSG.xml"/>
-               <note type="general">Reflex "inti" is used both for 2sg.m and 2sg.f. However, reflex "int" is used exclusively for 2sg.m, which indicates that despite the existence of a comunis pronoun, there is still gender differentiaton in 2sg independent pronouns</note>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0056" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#pr_s2c_inti"/>
-               <bibl corresp="zot:jiha_1964_0000" type="publication"/>
-               <placeName ref="geo:bishmizzine"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-BIS.xml"/>
-            </wib:featureValueObservation>
-            
-     
-
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0160" status="done" resp="dmp:JD">
-               <name type="featureValue" ref="#pr_s2c_inti"/>
-               <bibl corresp="zot:geva-kleinberger_2009_3208" type="publication"/>
-               <placeName ref="geo:tiberias"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-TBR.xml"/>
-               <personGrp role="religion" corresp="pgr:jews"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0173" status="done" resp="dmp:JD">
-               <name type="featureValue" ref="#pr_s2c_inti"/>
-               <bibl corresp="zot:mousa_2019_9904" type="publication"/>
-               <placeName ref="geo:tulkarm"/>
-               <lang corresp="..\profiles\vicav_profile_PSE-TKM.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0178" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_s2c_inta"/>
-               <bibl corresp="zot:senelle_2002_3236" type="publication" status="CHECKED"/>
-               <placeName ref="geo:raheita"/>
-               <lang corresp="..\profiles\vicav_profile_ERI-RHY.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0001" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_s2c_ant"/>
-               <bibl corresp="zot:corriente_2013_3020" type="publication"/>
-               <placeName ref="geo:andalusia"/>
-               <lang corresp="..\profiles\vicav_profile_ESP-ADL.xml"/>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0002" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_s2c_anta"/>
-               <bibl corresp="zot:corriente_2013_3020" type="publication"/>
-               <placeName ref="geo:andalusia"/>
-               <lang corresp="..\profiles\vicav_profile_ESP-ADL.xml"/>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0003" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_s2c_att"/>
-               <bibl corresp="zot:corriente_2013_3020" type="publication"/>
-               <placeName ref="geo:andalusia"/>
-               <lang corresp="..\profiles\vicav_profile_ESP-ADL.xml"/>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0004" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_s2c_atta"/>
-               <bibl corresp="zot:corriente_2013_3020" type="publication"/>
-               <placeName ref="geo:andalusia"/>
-               <lang corresp="..\profiles\vicav_profile_ESP-ADL.xml"/>
-            </wib:featureValueObservation>
-         
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0182" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_s2c_anta"/>
-               <bibl corresp="zot:roset_2018_8391" type="publication"/>
-               <placeName ref="geo:darfur"/>
-               <lang corresp="..\profiles\vicav_profile_SDN-DRF.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0007" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_s2c_anti"/>
-               <bibl corresp="zot:roset_2018_8391" type="publication"/>
-               <placeName ref="geo:darfur"/>
-               <lang corresp="..\profiles\vicav_profile_SDN-DRF.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0010" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_s2c_inti"/>
-               <bibl corresp="zot:roset_2018_8391" type="publication"/>
-               <placeName ref="geo:darfur"/>
-               <lang corresp="..\profiles\vicav_profile_SDN-DRF.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0009" status="done" resp="dmp:SK">
-               <name type="featureValue" ref="#pr_s2c_inta"/>
-               <bibl corresp="zot:roset_2018_8391" type="publication"/>
-               <placeName ref="geo:darfur"/>
-               <lang corresp="..\profiles\vicav_profile_SDN-DRF.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0270" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_s2c_inti"/>
-               <bibl corresp="zot:zarb_2023_0602" type="publication"/>
-               <placeName ref="geo:testour"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-TSR.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0201" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_s2c_inte"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
-               <placeName ref="geo:idlib"/>
-               <lang corresp="..\profiles\vicav_profile_SYR-IDL.xml"/>
-            </wib:featureValueObservation>
-            
-                 <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0213" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_s2c_inte"/>
-               <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
-               <placeName ref="geo:tartus"/>
-               <lang corresp="..\profiles\vicav_profile_SYR-TRT.xml"/>
-                 </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0263" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_s2c_inti"/>
-               <bibl corresp="zot:cohen_1975_0000" type="publication"/>
-               <placeName ref="geo:tunis"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-JTS.xml"/>
-               <personGrp role="religion" corresp="pgr:jews"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0020" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_s2c_inti"/>
-               <bibl corresp="zot:DAnna_2020_6708" type="publication"/>
-               <placeName ref="geo:chebba"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-CHB.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0264" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_s2c_inti"/>
-               <bibl corresp="zot:larosa_2021_1332" type="publication"/>
-               <placeName ref="geo:mahdia"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-MHD.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0268" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_s2c_inti"/>
-               <bibl corresp="zot:marçais_1925_6953" type="publication"/>
-               <placeName ref="geo:takrouna"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-TKR.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0025" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_s2c_inti"/>
-               <bibl corresp="zot:sellami_2019_9429" type=" publication"/>
-               <placeName ref="geo:sfax"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-SFX.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0269" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_s2c_inti"/>
-               <bibl corresp="zot:singer_1984_0000" type="publication"/>
-               <placeName ref="geo:tunis"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-TNS.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0267" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#pr_s2c_inti"/>
-               <bibl corresp="zot:talmoudi_1980_0000" type="publication"/>
-               <placeName ref="geo:sousse"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-SUS.xml"/>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0015" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_s2c_inti"/>
-               <bibl corresp="zot:DAnna_2018_1296" type="publication"/>
-               <placeName ref="geo:mazara_del_vallo"/>
-               <lang corresp="..\profiles\vicav_profile_ITA-MDV.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0227" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#pr_s2c_inti"/>
-               <bibl corresp="zot:DAnna_2018_1296" type="publication"/>
-               <placeName ref="geo:mazara_del_vallo"/>
-               <lang corresp="..\profiles\vicav_profile_ITA-MDV.xml"/>
-               <note type="general">Deduced from examples</note>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0016" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_s2c_ntina"/>
-               <bibl corresp="zot:moscoso_garcia_2003_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:chefchaouen"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-CHF.xml"/>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0005" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_s2c_nti"/>
-               <bibl corresp="zot:moscoso_garcia_2003_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:chefchaouen"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-CHF.xml"/>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0017" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_s2c_ntin"/>
-               <bibl corresp="zot:moscoso_garcia_2003_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:chefchaouen"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-CHF.xml"/>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0236" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_s2c_ntin"/>
-               <bibl corresp="zot:vicente_2000_4058" type="publication"/>
-               <placeName ref="geo:anjra"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-ANJ.xml"/>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0018" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_s2c_ntina"/>
-               <bibl corresp="zot:vicente_2000_4058" type="publication"/>
-               <placeName ref="geo:anjra"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-ANJ.xml"/>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0019" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_s2c_ntinak"/>
-               <bibl corresp="zot:vicente_2000_4058" type="publication"/>
-               <placeName ref="geo:anjra"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-ANJ.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0006" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_s2c_nti"/>
-               <bibl corresp="zot:moscoso_garcia_2003_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:chefchaouen"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-CHF.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0239" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_s2c_ntin"/>
-               <bibl corresp="zot:moscoso_garcia_2003_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:chefchaouen"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-CHF.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0252" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_s2c_nti"/>
-               <bibl corresp="zot:heath_1982_2902" type="publication"/>
-               <placeName ref="geo:tafilalet"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-SMS.xml"/>
-               <personGrp role="religion" corresp="pgr:jews"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0258" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_s2c_int"/>
-               <bibl corresp="src:PC_RZ" type="personalCommunication"/>
-               <placeName ref="geo:malta"/>
-               <lang corresp="..\profiles\vicav_profile_MLT-MAL.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0132" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_s2c_inti"/>
-               <bibl corresp="src:PC_RZ" type="personalCommunication"/>
-               <placeName ref="geo:malta"/>
-               <lang corresp="..\profiles\vicav_profile_MLT-MAL.xml"/>
-            </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0011" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_s2c_nta"/>
-               <bibl corresp="zot:loubignac_1952_3814" type="publication"/>
-               <placeName ref="geo:zaer"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-ZIR.xml"/>
-               <personGrp role="tribe" corresp="pgr:zaer"/>
-            </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0012" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_s2c_ta"/>
-               <bibl corresp="zot:loubignac_1952_3814" type="publication"/>
-               <placeName ref="geo:zaer"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-ZIR.xml"/>
-               <personGrp role="tribe" corresp="pgr:zaer"/>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0013" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_s2c_taya"/>
-               <bibl corresp="zot:loubignac_1952_3814" type="publication"/>
-               <placeName ref="geo:zaer"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-ZIR.xml"/>
-               <personGrp role="tribe" corresp="pgr:zaer"/>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0014" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_s2c_ntaya"/>
-               <bibl corresp="zot:loubignac_1952_3814" type="publication"/>
-               <placeName ref="geo:zaer"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-ZIR.xml"/>
-               <personGrp role="tribe" corresp="pgr:zaer"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0220" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_s2c_nta"/>
-               <bibl corresp="zot:marcais_1956_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:jijel"/>
-               <lang corresp="..\profiles\vicav_profile_DZA-DJL.xml"/>
-            </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0008" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_s2c_ntina"/>
-               <bibl corresp="zot:marcais_1956_0000" type="publication" status="CHECKED"/>
-               <placeName ref="geo:jijel"/>
-               <lang corresp="..\profiles\vicav_profile_DZA-DJL.xml"/>
-             </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0249" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#pr_s2c_ntin"/>
-               <bibl corresp="zot:stillman_1988_4518" type="publication"/>
-               <placeName ref="geo:sefrou"/>
-               <lang corresp="..\profiles\vicav_profile_MAR-RBS.xml"/>
-               <personGrp role="religion" corresp="pgr:jews"/>
-            </wib:featureValueObservation>
-
-
-         </div>
-      </body>
-   </text>
+<?xml-stylesheet type="text/xsl" href="../../082_scripts_xsl/tei_fs_2_html__001.xsl"?><?xslt inPathSegment="\010_manannot\" outPathSegment="\106_html\"?><?snippets fn="snippets_wibarab_001.xml" path="{filePath}\..\..\880_conf\"?><?processor name="saxon" removePreserveFromXML="true" removePreserveFromXSLT="true"?><?attributeAssignments fn="enricher_attributes.xml" path="{filePath}\..\..\880_conf\"?><?shortCuts fn="wibarab_shortCuts" path="{filePath}\..\..\880_conf\"?><TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
+     xmlns:xi="http://www.w3.org/2001/XInclude"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xml:space="preserve"
+     xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../../804_xsd/1.0.1/featuredb.xsd"
+     xml:id="ft_pr_sg_p2_c">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Independent personal pronoun 2SG.C</title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>{publisher}</publisher>
+                <date when="2022-10-03" />
+            </publicationStmt>
+            <sourceDesc>
+                <p>his is the feature-file for the 2nd person singular communis pronoun.</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <listPrefixDef xml:id="listPrefixDef">
+                <prefixDef ident="dmp"
+                           matchPattern="^(.+)$"
+                           replacementPattern="../../010_manannot/wibarab_dmp.xml#$1" />
+                <prefixDef ident="zot"
+                           matchPattern="^(.+)$"
+                           replacementPattern="../../010_manannot/vicav_biblio_tei_zotero.xml#$1" />
+                <prefixDef ident="dia"
+                           matchPattern="^(.+)$"
+                           replacementPattern="../../010_manannot/vicav_dialects.xml#$1" />
+                <prefixDef ident="pgr"
+                           matchPattern="^(.+)$"
+                           replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1" />
+                <prefixDef ident="src"
+                           matchPattern="^(.+)$"
+                           replacementPattern="../../010_manannot/wibarab_sources.xml#$1" />
+                <prefixDef ident="geo"
+                           matchPattern="^(.+)$"
+                           replacementPattern="../../010_manannot/vicav_geodata.xml#$1" />
+            </listPrefixDef>
+            <classDecl>
+                <taxonomy>
+                    <category xml:id="ft_pr_sg_p2_c.vnt_forms">
+                        <catDesc>ʔvnt-forms</catDesc>
+                        <category xml:id="ft_pr_sg_p2_c.vnt_forms.vntv">
+                            <catDesc>ʔvntv </catDesc>
+                        </category>
+                        <category xml:id="ft_pr_sg_p2_c.vnt_forms.vnt">
+                            <catDesc>ʔvnt</catDesc>
+                        </category>
+                    </category>
+                    <category xml:id="ft_pr_sg_p2_c.atta">
+                        <catDesc>ʔatt(a)</catDesc>
+                    </category>
+                    <category xml:id="ft_pr_sg_p2_c.nt_forms">
+                        <catDesc>Nt-forms</catDesc>
+                        <category xml:id="ft_pr_sg_p2_c.nt_forms.ntv">
+                            <catDesc>ntv</catDesc>
+                        </category>
+                        <category xml:id="ft_pr_sg_p2_c.nt_forms.ntin_plus">
+                            <catDesc>Ntin (+)</catDesc>
+                        </category>
+                    </category>
+                    <category xml:id="ft_pr_sg_p2_c.t_forms">
+                        <catDesc>T-forms</catDesc>
+                    </category>
+                </taxonomy>
+            </classDecl>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <catRef target="dmp:personal_pronouns.independent_pronouns" />
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="done">
+            <change when="2022-08-17"
+                    who="dmp:">c</change>
+            <change when="2022-08-17"
+                    who="dmp: " />
+            <change when="2022-09-07"
+                    who="dmp:VE">Change document status to done</change>
+            <change when="2023-09-06+02:00"
+                    who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change>
+            <change who="dmp:DS"
+                    when="2023-10-05">fixed broken bibl/@corresp references</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="featureDescription">
+                <head>Feature Values</head>
+                <list type="featureValues">
+                    <item xml:id="pr_s2c_inti"
+                          corresp="#ft_pr_sg_p2_c.vnt_forms.vntv">
+                        <label>inti, ʔinti</label>
+                    </item>
+                    <item xml:id="pr_s2c_int"
+                          corresp="#ft_pr_sg_p2_c.vnt_forms.vnt">
+                        <label>int</label>
+                    </item>
+                    <item xml:id="pr_s2c_nta"
+                          corresp="#ft_pr_sg_p2_c.nt_forms.ntv">
+                        <label>nta</label>
+                    </item>
+                    <item xml:id="pr_s2c_anta"
+                          corresp="#ft_pr_sg_p2_c.vnt_forms.vntv">
+                        <label>anta</label>
+                    </item>
+                    <item xml:id="pr_s2c_anti"
+                          corresp="#ft_pr_sg_p2_c.vnt_forms.vntv">
+                        <label>anti</label>
+                    </item>
+                    <item xml:id="pr_s2c_ntinak"
+                          corresp="#ft_pr_sg_p2_c.nt_forms.ntvntin_plus">
+                        <label>ntinak</label>
+                    </item>
+                    <item xml:id="pr_s2c_inta"
+                          corresp="#ft_pr_sg_p2_c.vnt_forms.vntv">
+                        <label>inta</label>
+                    </item>
+                    <item xml:id="pr_s2c_inte"
+                          corresp="#ft_pr_sg_p2_c.vnt_forms.vntv">
+                        <label>inte</label>
+                    </item>
+                    <item xml:id="pr_s2c_ant"
+                          corresp="#ft_pr_sg_p2_c.vnt_forms.vnt">
+                        <label>ant</label>
+                    </item>
+                    <item xml:id="pr_s2c_att"
+                          corresp="#ft_pr_sg_p2_c.atta">
+                        <label>att</label>
+                    </item>
+                    <item xml:id="pr_s2c_atta"
+                          corresp="#ft_pr_sg_p2_c.atta">
+                        <label>atta</label>
+                    </item>
+                    <item xml:id="pr_s2c_ntin"
+                          corresp="#ft_pr_sg_p2_c.nt_forms.ntvntin_plus">
+                        <label>ntin</label>
+                    </item>
+                    <item xml:id="pr_s2c_ntina"
+                          corresp="#ft_pr_sg_p2_c.nt_forms.ntvntin_plus">
+                        <label>ntina, nţina, əntina</label>
+                    </item>
+                    <item xml:id="pr_s2c_ntaya"
+                          corresp="#ft_pr_sg_p2_c.nt_forms">
+                        <label>ntaya</label>
+                    </item>
+                    <item xml:id="pr_s2c_ta"
+                          corresp="#ft_pr_sg_p2_c.t_forms">
+                        <label>ta</label>
+                    </item>
+                    <item xml:id="pr_s2c_taya"
+                          corresp="#ft_pr_sg_p2_c.t_forms">
+                        <label>taya</label>
+                    </item>
+                    <item xml:id="pr_s2c_nti"
+                          corresp="#ft_pr_sg_p2_c.nt_forms.ntv">
+                        <label>nti, nți</label>
+                    </item>
+                </list>
+            </div>
+            <div type="description"
+                 resp="">
+                <byline>Edited by [Name]</byline>
+            </div>
+            <div xmlns:tei="http://www.tei-c.org/ns/1.0"
+                 type="featureValueObservations">
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0026"
+                                             status="done"
+                                             resp="dmp:AID">
+                    <name type="featureValue"
+                          ref="#pr_s2c_inti" />
+                    <bibl corresp="zot:behnstedt_2019_6122"
+                          type="publication" />
+                    <placeName ref="geo:haifa" />
+                    <lang corresp="..\profiles\vicav_profile_ISR-HAI.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0035"
+                                             status="done"
+                                             resp="dmp:AID">
+                    <name type="featureValue"
+                          ref="#pr_s2c_inti" />
+                    <bibl corresp="zot:behnstedt_2019_6122"
+                          type="publication" />
+                    <placeName ref="geo:nazareth" />
+                    <lang corresp="..\profiles\vicav_profile_ISR-NAZ.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0065"
+                                             status="done"
+                                             resp="dmp:AID">
+                    <name type="featureValue"
+                          ref="#pr_s2c_inti" />
+                    <bibl corresp="zot:féghali_1919_9281"
+                          type="publication" />
+                    <placeName ref="geo:kfar_aabida" />
+                    <lang corresp="..\profiles\vicav_profile_LBN-KAB.xml" />
+                    <note type="general">Reflex "inti" is used both for 2sg.m and 2sg.f. However, reflex "int" is used exclusively for 2sg.m, which indicates that despite the existence of a comunis pronoun, there is still gender differentiaton in 2sg independent pronouns</note>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0000"
+                                             status="done"
+                                             resp="dmp:AID">
+                    <name type="featureValue"
+                          ref="#pr_s2c_inti" />
+                    <bibl corresp="zot:fleisch_1974_3163"
+                          type="publication"
+                          status="CHECKME">
+                        <!-- checked -->
+                    </bibl>
+                    <placeName ref="geo:kfar_sghab" />
+                    <lang corresp="..\profiles\vicav_profile_LBN-KSG.xml" />
+                    <note type="general">Reflex "inti" is used both for 2sg.m and 2sg.f. However, reflex "int" is used exclusively for 2sg.m, which indicates that despite the existence of a comunis pronoun, there is still gender differentiaton in 2sg independent pronouns</note>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0056"
+                                             status="done"
+                                             resp="dmp:AID">
+                    <name type="featureValue"
+                          ref="#pr_s2c_inti" />
+                    <bibl corresp="zot:jiha_1964_0000"
+                          type="publication" />
+                    <placeName ref="geo:bishmizzine" />
+                    <lang corresp="..\profiles\vicav_profile_LBN-BIS.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0160"
+                                             status="done"
+                                             resp="dmp:JD">
+                    <name type="featureValue"
+                          ref="#pr_s2c_inti" />
+                    <bibl corresp="zot:geva-kleinberger_2009_3208"
+                          type="publication" />
+                    <placeName ref="geo:tiberias" />
+                    <lang corresp="..\profiles\vicav_profile_ISR-TBR.xml" />
+                    <personGrp role="religion"
+                               corresp="pgr:jews" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0173"
+                                             status="done"
+                                             resp="dmp:JD">
+                    <name type="featureValue"
+                          ref="#pr_s2c_inti" />
+                    <bibl corresp="zot:mousa_2019_9904"
+                          type="publication" />
+                    <placeName ref="geo:tulkarm" />
+                    <lang corresp="..\profiles\vicav_profile_PSE-TKM.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0178"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_s2c_inta" />
+                    <bibl corresp="zot:senelle_2002_3236"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:raheita" />
+                    <lang corresp="..\profiles\vicav_profile_ERI-RHY.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0001"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_s2c_ant" />
+                    <bibl corresp="zot:corriente_2013_3020"
+                          type="publication" />
+                    <placeName ref="geo:andalusia" />
+                    <lang corresp="..\profiles\vicav_profile_ESP-ADL.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0002"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_s2c_anta" />
+                    <bibl corresp="zot:corriente_2013_3020"
+                          type="publication" />
+                    <placeName ref="geo:andalusia" />
+                    <lang corresp="..\profiles\vicav_profile_ESP-ADL.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0003"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_s2c_att" />
+                    <bibl corresp="zot:corriente_2013_3020"
+                          type="publication" />
+                    <placeName ref="geo:andalusia" />
+                    <lang corresp="..\profiles\vicav_profile_ESP-ADL.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0004"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_s2c_atta" />
+                    <bibl corresp="zot:corriente_2013_3020"
+                          type="publication" />
+                    <placeName ref="geo:andalusia" />
+                    <lang corresp="..\profiles\vicav_profile_ESP-ADL.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0182"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_s2c_anta" />
+                    <bibl corresp="zot:roset_2018_8391"
+                          type="publication" />
+                    <placeName ref="geo:darfur" />
+                    <lang corresp="..\profiles\vicav_profile_SDN-DRF.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0007"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_s2c_anti" />
+                    <bibl corresp="zot:roset_2018_8391"
+                          type="publication" />
+                    <placeName ref="geo:darfur" />
+                    <lang corresp="..\profiles\vicav_profile_SDN-DRF.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0010"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_s2c_inti" />
+                    <bibl corresp="zot:roset_2018_8391"
+                          type="publication" />
+                    <placeName ref="geo:darfur" />
+                    <lang corresp="..\profiles\vicav_profile_SDN-DRF.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0009"
+                                             status="done"
+                                             resp="dmp:SK">
+                    <name type="featureValue"
+                          ref="#pr_s2c_inta" />
+                    <bibl corresp="zot:roset_2018_8391"
+                          type="publication" />
+                    <placeName ref="geo:darfur" />
+                    <lang corresp="..\profiles\vicav_profile_SDN-DRF.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0270"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_s2c_inti" />
+                    <bibl corresp="zot:zarb_2023_0602"
+                          type="publication" />
+                    <placeName ref="geo:testour" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-TSR.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0201"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_s2c_inte" />
+                    <bibl corresp="zot:behnstedt_1997_3187"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:idlib" />
+                    <lang corresp="..\profiles\vicav_profile_SYR-IDL.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0213"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_s2c_inte" />
+                    <bibl corresp="zot:behnstedt_1997_3187"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:tartus" />
+                    <lang corresp="..\profiles\vicav_profile_SYR-TRT.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0263"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_s2c_inti" />
+                    <bibl corresp="zot:cohen_1975_0000"
+                          type="publication" />
+                    <placeName ref="geo:tunis" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-JTS.xml" />
+                    <personGrp role="religion"
+                               corresp="pgr:jews" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0020"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_s2c_inti" />
+                    <bibl corresp="zot:DAnna_2020_6708"
+                          type="publication" />
+                    <placeName ref="geo:chebba" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-CHB.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0264"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_s2c_inti" />
+                    <bibl corresp="zot:larosa_2021_1332"
+                          type="publication" />
+                    <placeName ref="geo:mahdia" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-MHD.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0268"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_s2c_inti" />
+                    <bibl corresp="zot:marçais_1925_6953"
+                          type="publication" />
+                    <placeName ref="geo:takrouna" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-TKR.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0025"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_s2c_inti" />
+                    <bibl corresp="zot:sellami_2019_9429"
+                          type=" publication" />
+                    <placeName ref="geo:sfax" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-SFX.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0269"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_s2c_inti" />
+                    <bibl corresp="zot:singer_1984_0000"
+                          type="publication" />
+                    <placeName ref="geo:tunis" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-TNS.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0267"
+                                             status="done"
+                                             resp="dmp:SP">
+                    <name type="featureValue"
+                          ref="#pr_s2c_inti" />
+                    <bibl corresp="zot:talmoudi_1980_0000"
+                          type="publication" />
+                    <placeName ref="geo:sousse" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-SUS.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0015"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_s2c_inti" />
+                    <bibl corresp="zot:DAnna_2018_1296"
+                          type="publication" />
+                    <placeName ref="geo:mazara_del_vallo" />
+                    <lang corresp="..\profiles\vicav_profile_ITA-MDV.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0227"
+                                             status="done"
+                                             resp="dmp:RZ">
+                    <name type="featureValue"
+                          ref="#pr_s2c_inti" />
+                    <bibl corresp="zot:DAnna_2018_1296"
+                          type="publication" />
+                    <placeName ref="geo:mazara_del_vallo" />
+                    <lang corresp="..\profiles\vicav_profile_ITA-MDV.xml" />
+                    <note type="general">Deduced from examples</note>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0016"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_s2c_ntina" />
+                    <bibl corresp="zot:moscoso_garcia_2003_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:chefchaouen" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-CHF.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0005"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_s2c_nti" />
+                    <bibl corresp="zot:moscoso_garcia_2003_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:chefchaouen" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-CHF.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0017"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_s2c_ntin" />
+                    <bibl corresp="zot:moscoso_garcia_2003_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:chefchaouen" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-CHF.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0236"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_s2c_ntin" />
+                    <bibl corresp="zot:vicente_2000_4058"
+                          type="publication" />
+                    <placeName ref="geo:anjra" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-ANJ.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0018"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_s2c_ntina" />
+                    <bibl corresp="zot:vicente_2000_4058"
+                          type="publication" />
+                    <placeName ref="geo:anjra" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-ANJ.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0019"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_s2c_ntinak" />
+                    <bibl corresp="zot:vicente_2000_4058"
+                          type="publication" />
+                    <placeName ref="geo:anjra" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-ANJ.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0006"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_s2c_nti" />
+                    <bibl corresp="zot:moscoso_garcia_2003_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:chefchaouen" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-CHF.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0239"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_s2c_ntin" />
+                    <bibl corresp="zot:moscoso_garcia_2003_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:chefchaouen" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-CHF.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0252"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_s2c_nti" />
+                    <bibl corresp="zot:heath_1982_2902"
+                          type="publication" />
+                    <placeName ref="geo:tafilalet" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-SMS.xml" />
+                    <personGrp role="religion"
+                               corresp="pgr:jews" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0258"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_s2c_int" />
+                    <bibl corresp="src:PC_RZ"
+                          type="personalCommunication" />
+                    <placeName ref="geo:malta" />
+                    <lang corresp="..\profiles\vicav_profile_MLT-MAL.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0132"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_s2c_inti" />
+                    <bibl corresp="src:PC_RZ"
+                          type="personalCommunication" />
+                    <placeName ref="geo:malta" />
+                    <lang corresp="..\profiles\vicav_profile_MLT-MAL.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0011"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_s2c_nta" />
+                    <bibl corresp="zot:loubignac_1952_3814"
+                          type="publication" />
+                    <placeName ref="geo:zaer" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-ZIR.xml" />
+                    <personGrp role="tribe"
+                               corresp="pgr:zaer" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0012"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_s2c_ta" />
+                    <bibl corresp="zot:loubignac_1952_3814"
+                          type="publication" />
+                    <placeName ref="geo:zaer" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-ZIR.xml" />
+                    <personGrp role="tribe"
+                               corresp="pgr:zaer" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0013"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_s2c_taya" />
+                    <bibl corresp="zot:loubignac_1952_3814"
+                          type="publication" />
+                    <placeName ref="geo:zaer" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-ZIR.xml" />
+                    <personGrp role="tribe"
+                               corresp="pgr:zaer" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0014"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_s2c_ntaya" />
+                    <bibl corresp="zot:loubignac_1952_3814"
+                          type="publication" />
+                    <placeName ref="geo:zaer" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-ZIR.xml" />
+                    <personGrp role="tribe"
+                               corresp="pgr:zaer" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0220"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_s2c_nta" />
+                    <bibl corresp="zot:marcais_1956_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:jijel" />
+                    <lang corresp="..\profiles\vicav_profile_DZA-DJL.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0008"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_s2c_ntina" />
+                    <bibl corresp="zot:marcais_1956_0000"
+                          type="publication"
+                          status="CHECKED" />
+                    <placeName ref="geo:jijel" />
+                    <lang corresp="..\profiles\vicav_profile_DZA-DJL.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_pr_sg_p2_c.fv_0249"
+                                             status="done"
+                                             resp="dmp:TD">
+                    <name type="featureValue"
+                          ref="#pr_s2c_ntin" />
+                    <bibl corresp="zot:stillman_1988_4518"
+                          type="publication" />
+                    <placeName ref="geo:sefrou" />
+                    <lang corresp="..\profiles\vicav_profile_MAR-RBS.xml" />
+                    <personGrp role="religion"
+                               corresp="pgr:jews" />
+                </wib:featureValueObservation>
+            </div>
+        </body>
+    </text>
 </TEI>
