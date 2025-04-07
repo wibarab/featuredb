@@ -464,18 +464,21 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                <p>The <term>biblio</term> file contains all the sources found in the Zotero library.
                      <ref type="file" target="/010_manannot/vicav_biblio.xml"/> The export from the
                   Zotero database is enriched with geo-locations making use of the above described
-                  geodata file. Furthermore, all publications used in the WIBARAB Feature datatabase 
-                  include information about the period when the data the publication is based on was 
-                  collected; the decade of data collection (doc). Whereever possible, this information 
-                  was extracted from he publications in question and marked with a "level of certainty = high" tag. 
-                  However, in the cases where the publication does not specify the decade of data collection
-                  this information is estimated by the following method: when the when the publication was published
-                  in the first half of a decade, the decade of data collection is estimated to be the previous decade,
-                  e.g. for a publication published in 1994, the decade of data collection is estimated to be the 1980s.
-                  When the publication was published in the second half of a decade, it is estimated that the data was 
-                  collected in the same decade, e.g. for a publication published in 1995, the decade of data collection
-                  is estimated to be the 1990s. In order to let the database users know that this is merely an estimate, 
-                  a "level of certainty = low" tag is added to these entries in Zotero.</p>
+                  geodata file. Furthermore, all publications used in the WIBARAB Feature datatabase
+                  include information about the period when the data the publication is based on was
+                  collected; the decade of data collection (doc). Whereever possible, this
+                  information was extracted from he publications in question and marked with a
+                  "level of certainty = high" tag. However, in the cases where the publication does
+                  not specify the decade of data collection this information is estimated by the
+                  following method: when the when the publication was published in the first half of
+                  a decade, the decade of data collection is estimated to be the previous decade,
+                  e.g. for a publication published in 1994, the decade of data collection is
+                  estimated to be the 1980s. When the publication was published in the second half
+                  of a decade, it is estimated that the data was collected in the same decade, e.g.
+                  for a publication published in 1995, the decade of data collection is estimated to
+                  be the 1990s. In order to let the database users know that this is merely an
+                  estimate, a "level of certainty = low" tag is added to these entries in
+                  Zotero.</p>
             </div>
 
             <div>
@@ -632,16 +635,21 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <!--<sch:rule context="/tei:catRef/@target>
                            <sch:extends rule="reference"/>  
                         </sch:rule>-->
-<sch:rule context="tei:catRef">
+                        <sch:rule context="tei:catRef">
                            <sch:let name="target" value="@target"/>
                            <sch:let name="prefix" value="substring-before($target, ':')"/>
                            <sch:let name="id" value="substring-after($target, ':')"/>
                            <sch:let name="prefixDef" value="root()//tei:prefixDef[@ident = $prefix]"/>
                            <sch:let name="replacementPattern" value="$prefixDef/@replacementPattern"/>
-                           <sch:let name="resolvedTarget" value="replace($replacementPattern, '\$1', $id)"/>
-                           <sch:let name="targetExists" value="doc-available(resolve-uri($resolvedTarget, base-uri($target)))"/>
-                       <sch:assert test="$prefix = 'dmp'">The prefix of the target "<sch:value-of select="$target"/>" should be "dmp"</sch:assert>
-                           <sch:assert test="$targetExists">The target "<sch:value-of select="$target"/>" of pointer "<sch:value-of select="$id"/>" cannot be resolved</sch:assert>
+                           <sch:let name="resolvedTarget"
+                              value="replace($replacementPattern, '\$1', $id)"/>
+                           <sch:let name="targetExists"
+                              value="doc-available(resolve-uri($resolvedTarget, base-uri($target)))"/>
+                           <sch:assert test="$prefix = 'dmp'">The prefix of the target
+                                 "<sch:value-of select="$target"/>" should be "dmp"</sch:assert>
+                           <sch:assert test="$targetExists">The target "<sch:value-of
+                                 select="$target"/>" of pointer "<sch:value-of select="$id"/>"
+                              cannot be resolved</sch:assert>
                         </sch:rule>
                      </constraint>
                   </constraintSpec>
@@ -701,7 +709,13 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                      <attDef ident="corresp" mode="change" usage="req"/>
                   </attList>
                </elementSpec>
-
+               <elementSpec ident="category" mode="change">
+                  <attList>
+                     <attDef ident="n" mode="add" usage="req">
+                        <datatype maxOccurs="1"><dataRef key="teidata.text"/></datatype>
+                     </attDef>
+                  </attList>
+               </elementSpec>
                <elementSpec ident="list" mode="change">
                   <attList>
                      <attDef ident="type" mode="replace" usage="rec">
@@ -833,6 +847,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <valItem ident="ageGroup"/>
                            <valItem ident="gender"/>
                            <valItem ident="firstLanguage"/>
+                           <valItem ident="socio"/>
                         </valList>
                         <exemplum>
                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
