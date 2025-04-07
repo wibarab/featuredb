@@ -47,6 +47,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                replacementPattern="../010_manannot/vicav_dialects.xml#$1"/>
             <prefixDef ident="geo" matchPattern="^(.+)$"
                replacementPattern="../010_manannot/vicav_geodata.xml#$1"/>
+            <prefixDef ident="pgr" matchPattern="^(.+)$"
+               replacementPattern="../010_manannot/wibarab_PersonGroup.xml.xml#$1"/>
          </listPrefixDef>
       </encodingDesc>
 
@@ -765,6 +767,9 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                            <sch:extends rule="reference"/>
                         </sch:rule>
                         <sch:rule context="wib:featureValueObservation/@resp">
+                           <sch:extends rule="reference"/>
+                        </sch:rule>
+                        <sch:rule context="tei:personGrp/@corresp">
                            <sch:extends rule="reference"/>
                         </sch:rule>
                         <sch:rule id="reference" abstract="true">
