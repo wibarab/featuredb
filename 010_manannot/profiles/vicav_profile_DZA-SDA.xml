@@ -3,13 +3,13 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>A machine-readable profile of Saïda (Ulad Brahim) Arabic</title>
-            <author/>
+            <title>A machine-readable profile of Ouled Brahim (Saïda) Arabic</title>
+            <author xml:id="aleksandra">Aleksandra Ercegovčević</author>
          </titleStmt>
          <publicationStmt>
             <publisher>ACDH-OeAW</publisher>
             <pubPlace>Vienna</pubPlace>
-            <date>2018</date>
+            <date>2019</date>
             <availability status="restricted">
                <p>
                   <ref type="license" target="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
@@ -20,54 +20,66 @@
             <p>This is an original digital text</p>
          </sourceDesc>
       </fileDesc>
-
       <encodingDesc>
-         <listPrefixDef>
-            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="wibarab-dmp.xml#$1"/>
-            <prefixDef ident="zotid" matchPattern="^(.+)$" replacementPattern="vicav_biblio_tei_zotero.xml#$1"/>
-            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="vicav_dialects.xml#$1"/>
-            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="vicav_geodata.xml#$1"/>
-         </listPrefixDef>
+         <tagsDecl partial="true">
+            <rendition xml:id="i" scheme="css">font-style:italics;</rendition>
+            <rendition xml:id="u" scheme="css">text-decoration:underline;</rendition>
+            <rendition xml:id="b" scheme="css">font-weight:bold;</rendition>
+         </tagsDecl>
       </encodingDesc>
-
       <revisionDesc>
-         <change status="created" when="2022-07-12" who="dmp:CM">created this document from vicav_dialects.xml, entry by <persName ref="dmp:RZ"/></change>
+         <change status="created" when="2018-11-20T11:50:00Z" who="#aleksandra">created</change>
+         <change status="draft" when="2019-01-03T11:08:00Z" who="#aleksandra">last modified (revision 5)</change>
+         <change status="draft" when="2019-02-19T23:30:29.239+01:00">transformed to TEI-XML</change>
+         <change when="2019-02-19T23:30:30.197+01:00" status="draft"/>
       </revisionDesc>
    </teiHeader>
+
    <text>
       <body>
          <div>
             <head>
-               <label>Name (English)</label>
-               <name type="place" xml:lang="eng">Saïda (Ulad Brahim)</name>
-               <label>Name (MSA)</label>
-               <name xml:lang="ara"></name>
-               <label>Name (MSA, trans.)</label>
-               <name xml:lang="ara-x-DMG"></name>
+               <figure>
+                  <graphic url="saida.jpg"/>
+                  <head type="imgCaption">
+                     <ref target="https://en.wikipedia.org/wiki/Sa%C3%AFda,_Algeria#/media/File:%D8%AD%D9%8A_%D9%82%D8%B5%D8%AF%D9%8A%D8%B1%D9%8A_%D8%A8%D9%85%D8%AD%D8%A7%D8%B0%D8%A7%D8%A9_%D9%88%D8%A7%D8%AF_%D9%85%D9%84%D9%88%D8%AB.jpg">Wikimedia</ref>
+                  </head>
+               </figure>
+               <label>1Name (English)</label>
+               <name type="tribe" xml:lang="eng">Ouled Brahim (Saïda)</name>
+               <label>MSA name</label>
+               <name xml:lang="ara">أولاد براهيم (سعيدة)</name>
+               <label>MSA name (trans.)</label>
+               <name xml:lang="ara-x-DMG">Awlād Brāhīm (Saʕīda)</name>
                <label>Local name (trans.)</label>
-               <name xml:lang="ajp-Latn" type="latLoc"></name>
+               <name xml:lang="ara-Latn" type="latLoc">Ūlād Brāhīm</name>
             </head>
-
             <div type="positioning">
+               <head>Geo location</head>
                <p>
-                  <geo></geo>
-                  <country></country>
+                  <geo>34°49'N 00°09'E</geo>
+                  <country>Algeria</country>
                </p>
             </div>
 
             <div type="typology">
+               <head>Typology (Local)</head>
+               <p rend="typology">West (Maghreb) › Algeria</p>
+               <p>Hilālī-type Bedouin dialect</p>
             </div>
 
             <div type="general">
+               <p>Ouled Brahim (Saïda) is a community of around 19,000 in the Saïda province of the Department of Oran. The Ouled Brahim are not much different from other former Bedouins of Western Algeria: they are both farmers and shepherds. Their dialect is also very similar to other rural dialects of the region.</p>
             </div>
 
             <div type="researchHistory">
+               <p>The only study on the dialect of the Ouled Brahim is
+                  still <rs type="bibl" ref="zotid:3XPRUXZE">W. Marçais (1908)</rs>, which was published in two parts. It includes chapters
+                  on the phonology and morphology of the dialect, occasionally making comparisons with other Algerian dialects.</p>
             </div>
 
             <div type="bibliography">
-            </div>
-
-            <div type="bibliography">
+               <p>To view publications on this variety click <rs type="bibl" ref="bibl:geo:Saida">here</rs>.</p>
             </div>
          </div>
       </body>

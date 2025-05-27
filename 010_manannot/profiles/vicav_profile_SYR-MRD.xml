@@ -1,75 +1,89 @@
 <?xml version="1.0"?>
-<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" xml:id="profile_SYR-MRD_01">
-   <teiHeader>
-      <fileDesc>
-         <titleStmt>
-            <title>A machine-readable profile of Mḥardi Arabic</title>
-            <author/>
-         </titleStmt>
-         <publicationStmt>
-            <publisher>ACDH-OeAW</publisher>
-            <pubPlace>Vienna</pubPlace>
-            <date>2018</date>
-            <availability status="restricted">
-               <p>
-                  <ref type="license" target="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="profile_SYR-MRD_01">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>A machine-readable profile of Mhardeh Arabic</title>
+                <respStmt>
+                    <resp>document preparation</resp>
+                    <name xml:id="charly">Karlheinz Moerth</name>
+                </respStmt>
+                <author xml:id="stephan">Stephan Procházka</author>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>ACDH-OeAW</publisher>
+                <pubPlace>Vienna</pubPlace>
+                <date>2019</date>
+                <availability status="restricted">
+                    <p>
+                        <ref type="license" target="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
+                    </p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>This is an original digital text</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <tagsDecl partial="true">
+                <rendition xml:id="i" scheme="css">font-style:italics;</rendition>
+                <rendition xml:id="u" scheme="css">text-decoration:underline;</rendition>
+                <rendition xml:id="b" scheme="css">font-weight:bold;</rendition>
+            </tagsDecl>
+        </encodingDesc>
+        <revisionDesc>
+            <change status="created" when="2018-12-01T18:30:00Z" who="#stephan">created</change>
+            <change status="draft" when="2019-01-06T17:44:00Z" who="#stephan">last modified (revision 5)</change>
+            <change status="draft" when="2019-02-19T23:30:15.73+01:00">transformed to TEI-XML</change>
+            <change when="2019-02-19T23:30:16.716+01:00" status="draft"/>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <head>
+                    <!--
+               <figure>
+                  <graphic url="mharde.png"/>
+                  <head type="imgCaption" xml:space="preserve">
+                     <ref target="https://syriadirect.org/ar/news/%D8%A3%D9%87%D8%A7%D9%84%D9%8A-%D9%85%D8%AD%D8%B1%D8%AF%D8%A9-%D9%81%D9%8A-%D8%B4%D9%85%D8%A7%D9%84%D9%8A-%D8%AD%D9%85%D8%A7%D8%A9-%D9%8A%D8%B7%D8%A7%D9%84%D8%A8%D9%88%D9%86-%D9%82%D9%88%D8%A7%D8%AA/ ">https://syriadirect.org/ar/news/%D8%A3%D9%87%D8%A7%D9%84%D9%8A-%D9%85%D8%AD%D8%B1%D8%AF%D8%A9-%D9%81%D9%8A-%D8%B4%D9%85%D8%A7%D9%84%D9%8A-%D8%AD%D9%85%D8%A7%D8%A9-%D9%8A%D8%B7%D8%A7%D9%84%D8%A8%D9%88%D9%86-%D9%82%D9%88%D8%A7%D8%AA/ </ref>
+                  </head>
+               </figure>
+                -->
+                    <label>Name (English)</label>
+                    <name type="place" xml:lang="eng">Mhardeh</name>
+                    <label>MSA name</label>
+                    <name xml:lang="ara">محردة</name>
+                    <label>MSA name (trans.)</label>
+                    <name xml:lang="ara-x-DMG">Maḥarda</name>
+                    <label>Local name (trans.)</label>
+                    <name xml:lang="ara-Latn" type="latLoc">Mḥardi</name>
+                </head>
+                <div type="positioning">
+                    <head>Geo location</head>
+                    <p xml:space="preserve">
+                  <geo>35°14'N 36°34'E</geo>
+                  <country>Syria</country>
                </p>
-            </availability>
-         </publicationStmt>
-         <sourceDesc>
-            <p>This is an original digital text</p>
-         </sourceDesc>
-      </fileDesc>
-
-      <encodingDesc>
-         <listPrefixDef>
-            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="wibarab-dmp.xml#$1"/>
-            <prefixDef ident="zotid" matchPattern="^(.+)$" replacementPattern="vicav_biblio_tei_zotero.xml#$1"/>
-            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="vicav_dialects.xml#$1"/>
-            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="vicav_geodata.xml#$1"/>
-         </listPrefixDef>
-      </encodingDesc>
-
-      <revisionDesc>
-         <change status="created" when="2022-07-12" who="dmp:CM">created this document from vicav_dialects.xml, entry by <persName ref="dmp:CL"/></change>
-      </revisionDesc>
-   </teiHeader>
-   <text>
-      <body>
-         <div>
-            <head>
-               <label>Name (English)</label>
-               <name type="place" xml:lang="eng">Mḥardi</name>
-               <label>Name (MSA)</label>
-               <name xml:lang="ara"></name>
-               <label>Name (MSA, trans.)</label>
-               <name xml:lang="ara-x-DMG"></name>
-               <label>Local name (trans.)</label>
-               <name xml:lang="ajp-Latn" type="latLoc"></name>
-            </head>
-
-            <div type="positioning">
-               <p>
-                  <geo></geo>
-                  <country></country>
-               </p>
+                </div>
+                <div type="typology">
+                    <head>Typology (Local)</head>
+                    <p rend="typology" xml:space="preserve">East (Mashreq) › Levant › Syria › Coast</p>
+                    <p xml:space="preserve">Rural sedentary dialect </p>
+                </div>
+                <div type="general">
+                    <p xml:space="preserve">Mhardeh is a small town in central Syria on the Orontes River near the famous castle of Shayzar, some 25 km northwest of Hama. Almost all of its citizens are Christians. </p>
+                </div>
+                <div type="researchHistory">
+                    <p xml:space="preserve">The linguistic atlas of Syria (<rs type="bibl" ref="zotid:Y5WWYMLB">Behnstedt (1997)</rs>) contains 
+               important data on Mhardeh (no 328 on the maps). <rs type="bibl" ref="zotid:5F6AVI45">Yoseph (2012)</rs> is a detailed 
+               description of the dialect, including chapters on phonology, morphology, and syntax as well as thirteen texts in 
+               transcription with German translation. <rs type="bibl" ref="zotid:CDAU9HMK">Hallman (2016)</rs>, a study on superlatives in Syrian Arabic, is mainly based on the dialect of Mhardeh.</p>
+                </div>
+                <div type="bibliography">
+                    <p xml:space="preserve">To view publications on this variety click <rs type="bibl" ref="bibl:geo:Muhradah">here</rs>.</p>
+                </div>
             </div>
-
-            <div type="typology">
-            </div>
-
-            <div type="general">
-            </div>
-
-            <div type="researchHistory">
-            </div>
-
-            <div type="bibliography">
-            </div>
-
-            <div type="bibliography">
-            </div>
-         </div>
-      </body>
-   </text>
+        </body>
+    </text>
 </TEI>

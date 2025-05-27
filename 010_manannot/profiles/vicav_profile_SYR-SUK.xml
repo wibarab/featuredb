@@ -1,75 +1,106 @@
 <?xml version="1.0"?>
-<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" xml:id="profile_SYR-SUK_01">
-   <teiHeader>
-      <fileDesc>
-         <titleStmt>
-            <title>A machine-readable profile of Al-Sukhna Arabic</title>
-            <author/>
-         </titleStmt>
-         <publicationStmt>
-            <publisher>ACDH-OeAW</publisher>
-            <pubPlace>Vienna</pubPlace>
-            <date>2018</date>
-            <availability status="restricted">
-               <p>
-                  <ref type="license" target="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
-               </p>
-            </availability>
-         </publicationStmt>
-         <sourceDesc>
-            <p>This is an original digital text</p>
-         </sourceDesc>
-      </fileDesc>
-
-      <encodingDesc>
-         <listPrefixDef>
-            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="wibarab-dmp.xml#$1"/>
-            <prefixDef ident="zotid" matchPattern="^(.+)$" replacementPattern="vicav_biblio_tei_zotero.xml#$1"/>
-            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="vicav_dialects.xml#$1"/>
-            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="vicav_geodata.xml#$1"/>
-         </listPrefixDef>
-      </encodingDesc>
-
-      <revisionDesc>
-         <change status="created" when="2022-07-12" who="dmp:CM">created this document from vicav_dialects.xml, entry by <persName ref="dmp:CL"/></change>
-      </revisionDesc>
-   </teiHeader>
-   <text>
-      <body>
-         <div>
-            <head>
-               <label>Name (English)</label>
-               <name type="place" xml:lang="eng">Al-Sukhna (u.a. ʕAnaza)</name>
-               <label>Name (MSA)</label>
-               <name xml:lang="ara"></name>
-               <label>Name (MSA, trans.)</label>
-               <name xml:lang="ara-x-DMG"></name>
-               <label>Local name (trans.)</label>
-               <name xml:lang="ajp-Latn" type="latLoc"></name>
-            </head>
-
-            <div type="positioning">
-               <p>
-                  <geo></geo>
-                  <country></country>
-               </p>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="profile_SYR-SUK_01">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>A machine-readable profile of Al-Sukhnah Arabic</title>
+                <author xml:id="julia">Julia Baumgartner</author>
+                <editor xml:id="charly" role="Technical_Editor">Karlheinz Moerth</editor>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>ACDH-OeAW</publisher>
+                <pubPlace>Vienna</pubPlace>
+                <date>2018</date>
+                <availability status="restricted">
+                    <p>
+                        <ref type="license" target="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
+                    </p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>This is an original digital text</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <tagsDecl partial="true">
+                <rendition xml:id="i" scheme="css">font-style:italics;</rendition>
+                <rendition xml:id="u" scheme="css">text-decoration:underline;</rendition>
+                <rendition xml:id="b" scheme="css">font-weight:bold;</rendition>
+            </tagsDecl>
+        </encodingDesc>
+        <revisionDesc>
+            <change status="created" when="2019-02-18" who="#julia">created</change>
+            <change status="draft" when="2019-02-18" who="#julia">last modified (revision 4)</change>
+            <change status="draft" who="#charly" when="2019-02-18">transformed to TEI-XML</change>
+            <change who="#charly" when="2018-10-03" status="released"/>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <head>
+                    <label>Name (English)</label>
+                    <name type="place" xml:lang="eng">Soukhne / Al-Sukhnah</name>
+                    <label>MSA name</label>
+                    <name xml:lang="ara">السخنة</name>
+                    <label>MSA name (trans.)</label>
+                    <name xml:lang="ara">as-Suxna</name>
+                    <label>Local name (trans.)</label>
+                    <name xml:lang="apc-Latn" type="latLoc">Suxni</name>
+                </head>
+                <div type="positioning">
+                    <p xml:space="preserve">
+              <geo>34°53'N 38°52'E</geo>
+              <country>Syria</country>
+            </p>
+                </div>
+                <div type="typology">
+                    <p xml:space="preserve">East (Mashriq) › Levant › Syria › Oases and Steppe
+              Dialects</p>
+                    <p xml:space="preserve">Sedentary dialect with many influences of the surrounding
+              bedouin-type dialects</p>
+                </div>
+                <div type="general">
+                    <p xml:space="preserve">Soukhne is a town located in the Syrian Steppe close to the
+              eastern border of the province of Homs. The importance of the
+              former caravan city increased throughout the centuries, when the
+              town developed into a trade centre. Trade took place mostly
+              between Bedouin tribes, for example the tribal confederation of
+              ˁAnaza, and the local merchants. The town severely suffered from
+              the civil war in Syria, particularly between 2015 and 2017 when it
+              was under control of ISIS forces.</p>
+                    <p xml:space="preserve">Soukhne is described as a town with a dynamic history. Local
+              merchants used to travel to various Syrian regions, but also to
+              Iraq and Turkey and therefore adopted different linguistic
+              elements that contributed to the shaping of the dialect of
+              Soukhne. <rs type="bibl" ref="zotid:EEI7S3N8">Behnstedt
+                (1994)</rs> describes the dialect as a mixture of bedouin and
+              sedentary elements.</p>
+                </div>
+                <div type="researchHistory">
+                    <p xml:space="preserve">The first description of the dialect of this oasis is found in
+                <rs type="bibl" ref="zotid:MZI8DJ3B">Cantineau (1956)</rs>.
+              The most comprehensive study on the dialect spoken in Soukhne is
+              undoubtedly Behnstedt (1994). Consisting of three parts, this work includes a
+              broad variety of ethnographic texts in Part 1 <rs type="bibl" ref="zotid:7TMLL9NZ">(Behnstedt 1994a)</rs> as well as an
+              in-depth investigation of phonology, morphology and syntax in Part
+              2 <rs type="bibl" ref="zotid:EEI7S3N8">(Behnstedt 1994b)</rs>. </p>
+                </div>
+                <div type="dictionaries">
+                    <p xml:space="preserve">A comprehensive glossary is found in <rs type="bibl" ref="zotid:EEI7S3N8">Behnstedt (1994b)</rs>, Part
+              3. It is based on the texts of Part 1 of the same book.</p>
+                </div>
+                <div type="textBooks">
+                    <p xml:space="preserve"/>
+                </div>
+                <div type="audioData">
+                    <head>Audio data</head>
+                    <p>112 audio recordings can be found in<ref target="http://semarch.ub.uni-heidelberg.de">SemArch</ref>.</p>
+                </div>
+                <div type="bibliography">
+                    <p xml:space="preserve">To view publications on this variety click <rs type="bibl" ref="bibl:geo:Al-Sukhna">here</rs>.</p>
+                </div>
             </div>
-
-            <div type="typology">
-            </div>
-
-            <div type="general">
-            </div>
-
-            <div type="researchHistory">
-            </div>
-
-            <div type="bibliography">
-            </div>
-
-            <div type="bibliography">
-            </div>
-         </div>
-      </body>
-   </text>
+        </body>
+    </text>
 </TEI>

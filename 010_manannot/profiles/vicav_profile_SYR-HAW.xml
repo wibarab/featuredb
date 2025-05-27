@@ -3,13 +3,17 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>A machine-readable profile of Hawran Arabic</title>
-            <author/>
+            <title>A machine-readable profile of Hauran Arabic</title>
+            <respStmt>
+               <resp>document preparation</resp>
+               <name xml:id="AE">Aleksandra Ercegovcevic</name>
+            </respStmt>
+            <author xml:id="aleksandra">Aleksandra Ercegovčević</author>
          </titleStmt>
          <publicationStmt>
             <publisher>ACDH-OeAW</publisher>
             <pubPlace>Vienna</pubPlace>
-            <date>2018</date>
+            <date>2019</date>
             <availability status="restricted">
                <p>
                   <ref type="license" target="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
@@ -20,54 +24,64 @@
             <p>This is an original digital text</p>
          </sourceDesc>
       </fileDesc>
-
       <encodingDesc>
-         <listPrefixDef>
-            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="wibarab-dmp.xml#$1"/>
-            <prefixDef ident="zotid" matchPattern="^(.+)$" replacementPattern="vicav_biblio_tei_zotero.xml#$1"/>
-            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="vicav_dialects.xml#$1"/>
-            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="vicav_geodata.xml#$1"/>
-         </listPrefixDef>
+         <tagsDecl partial="true">
+            <rendition xml:id="i" scheme="css">font-style:italics;</rendition>
+            <rendition xml:id="u" scheme="css">text-decoration:underline;</rendition>
+            <rendition xml:id="b" scheme="css">font-weight:bold;</rendition>
+         </tagsDecl>
       </encodingDesc>
-
       <revisionDesc>
-         <change status="created" when="2022-07-12" who="dmp:CM">created this document from vicav_dialects.xml, entry by <persName ref="dmp:CL"/></change>
+         <change status="created" when="2019-01-03T11:17:00Z" who="#aleksandra">created</change>
+         <change status="draft" when="2019-01-03T11:20:00Z" who="#aleksandra">last modified (revision 6)</change>
+         <change status="draft" when="2019-02-19T23:29:35.116+01:00">transformed to TEI-XML</change>
+         <change when="2019-02-19T23:29:35.824+01:00" status="draft"/>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div>
             <head>
+               <figure>
+                  <graphic url="hawran.jpg"/>
+                  <head type="imgCaption">
+                     <ref target="https://ar.wikipedia.org/wiki/%D8%AD%D9%88%D8%B1%D8%A7%D9%86#/media/File:Ummesrareh_Johfiyeh_Jordan_Ahmad_Telfah_04.jpg">Wikimedia</ref>
+                  </head>
+               </figure>
                <label>Name (English)</label>
-               <name type="place" xml:lang="eng">Hawran</name>
-               <label>Name (MSA)</label>
-               <name xml:lang="ara"></name>
-               <label>Name (MSA, trans.)</label>
-               <name xml:lang="ara-x-DMG"></name>
+               <name type="region" xml:lang="eng">Hauran</name>
+               <label>MSA name</label>
+               <name xml:lang="ara">حوران</name>
+               <label>MSA name (trans.)</label>
+               <name xml:lang="ara-x-DMG">Ḥawrān</name>
                <label>Local name (trans.)</label>
-               <name xml:lang="ajp-Latn" type="latLoc"></name>
+               <name xml:lang="ara-Latn" type="latLoc"> Ḥōrān</name>
             </head>
-
             <div type="positioning">
+               <head>Geo location</head>
                <p>
-                  <geo></geo>
-                  <country></country>
+                  <geo>32°43'N 36°22'E</geo>
+                  <country>Syria</country>
                </p>
             </div>
-
             <div type="typology">
+               <head>Typology (Local)</head>
+               <p rend="typology">East (Mashreq) › Levant › Palestine/Syria › Horan dialects</p>
+               <p>These dialects are closely related to Jordanian and Palestinian rural dialects, and thus do not belong to Syrian Arabic proper.</p>
             </div>
-
             <div type="general">
+               <p>Ḥōrān is a basaltic region characterized by volcanic activity. It spans parts of southeastern Syria and northeastern Jordan. Its population is largely Arab but heterogeneous in religion: most inhabitants of the plains are Sunni Muslims belonging to large agrarian clans, while Druze originally from the Lebanese Jabal al-Druze are the majority in the Jabal’s western foothills. There are also significant Greek Orthodox and Greek Catholic Christian minorities. Cantineau 1946 described the dialects of the Ḥōrān mountains as heterogeneous.</p>
             </div>
-
             <div type="researchHistory">
+               <p><rs type="bibl" ref="zotid:HZ8NLVRY">Cantineau (1940)</rs> is an atlas of the dialects of the Horan, with maps of various
+                  linguistic features, including phonologic phenomena like the <hi rendition="#i">tafxīm</hi> of different phonemes and the realization
+                  of <hi rendition="#i">ǧ</hi><hi rendition="#i">īm</hi> and <hi rendition="#i">qāf</hi>, and such morphological items as pronouns and
+                  gender distinction in the plural of the pronoun and verb. The atlas gives lexical equivalents for agricultural tools in the different dialects of the region.</p>
+               <p><rs type="bibl" ref="zotid:97B3P5S9">Cantineau (1946)</rs> is a comprehensive study with chapters on phonology and
+                  morphology, and an introduction to the history and population of the region.</p>
             </div>
-
             <div type="bibliography">
-            </div>
-
-            <div type="bibliography">
+               <p>To view publications on this variety click <rs type="bibl" ref="bibl:reg:Hauran">here</rs>.</p>
             </div>
          </div>
       </body>

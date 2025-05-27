@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<?xml-model href="../tools/802_tei_odd/out/vicav_profiles.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../tools/802_tei_odd/out/vicav_profiles.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" xml:id="profile_ISR-IKS_01">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>A machine-readable profile of Iksal Arabic</title>
+            <author>Claudia Laaber</author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>ACDH-OeAW</publisher>
+            <pubPlace>Vienna</pubPlace>
+            <date>2019</date>
+            <availability status="restricted">
+               <p>
+                  <ref type="license" target="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
+               </p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This is an original digital text</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <tagsDecl partial="true">
+            <rendition xml:id="i" scheme="css">font-style:italics;</rendition>
+            <rendition xml:id="u" scheme="css">text-decoration:underline;</rendition>
+            <rendition xml:id="b" scheme="css">font-weight:bold;</rendition>
+         </tagsDecl>
+      </encodingDesc>
+      <revisionDesc>
+         <change status="created" when="2018-05-02T08:20:00Z" who="#">created</change>
+         <change status="draft" when="2020-03-10T09:29:00Z" who="#">last modified (revision 1)</change>
+         <change status="draft" when="2020-09-24T09:39:42.156+02:00">transformed to TEI-XML</change>
+         <change when="2020-09-24T09:39:42.78+02:00" status="draft"/>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div>
+            <head>
+               <figure>
+                  <graphic url="iksal.jpg"/>
+                  <head type="imgCaption"><ref target="https://commons.wikimedia.org/wiki/File:Iksal_looking_to_the_southwest.jpg">Wikimedia</ref></head>
+               </figure>
+
+               <label>Name (English)</label>
+               <name type="place" xml:lang="eng">Iksal</name>
+               <label>Name (Fuṣḥā, transcription)</label>
+               <name xml:lang="ara">Iksāl</name>
+               <label>Name in local variety (in transcription)</label>
+               <name xml:lang="ara-x-DMG">Iksāl</name>
+               <label>Name (Fuṣḥā, Arabic)</label>
+               <name xml:lang="ajp">إكسال</name>
+            </head>
+
+            <div type="positioning">
+               <head>Geo location</head>
+               <p>
+                  <geo>32°40'N 35°19'E</geo>
+                  <country>Israel</country>
+               </p>
+            </div>
+
+            <div type="typology">
+               <head>Typology (Local)</head>
+               <p rend="typology">East (Mashreq)&gt;Levant&gt;Galilee</p>
+               <p>rural dialect</p>
+            </div>
+
+            <div type="general">
+               <head>General</head>
+               <p>Iksal is a small town in Lower Galilee situated in the Nazareth hills. The majority of its inhabitants are Arab Muslims. Historic evidence for it dates back to the Roman and Byzantine eras. The town inherits the remains of a castle probably built under Mamluk or Crusader rule.</p>
+            </div>
+
+            <div type="researchHistory">
+               <head>Research history</head>
+               <p><rs type="bibl" ref="zotid:8TTHJC3M">Palva (1965)</rs> is an investigation
+               on anaptyctic and prothetic vowels in Lower Galilean Arabic, which also
+               provides information on the dialect of Iksal and contains a collection of sample texts.</p>
+
+               <p><rs type="bibl" ref="zotid:3EPF3B6L">Nevo (2006)</rs> presents a detailed linguistic description of the local Arabic.</p>
+            </div>
+      <div type="bibliography">
+               <p>To view publications on this variety click <rs type="bibl" ref="bibl:geo:Iksal">here</rs>.</p>
+            </div>
+   </div>
+      </body>
+   </text>
+</TEI>
