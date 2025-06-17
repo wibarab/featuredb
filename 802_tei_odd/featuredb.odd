@@ -72,6 +72,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
             elements of @type="description"</change>
          <change when="2024-04-02" who="dmp:KS">introducing profileDesc and textClass to
             classify/group feature documents </change>
+         <change when="2025-06-17" who="dmp:KS">comment out @resp as mandatory for div
+            elements of @type="description" for now, only allow text nodes in byline element</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -898,7 +900,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <sch:rule context="tei:div[@type = 'description']">
                            <sch:assert test="child::tei:byline"> 'byline' element is
                               required.</sch:assert>
-                           <sch:assert test="@resp">'resp' attribute is required.</sch:assert>
+                           <!-- <sch:assert test="@resp">'resp' attribute is required.</sch:assert> -->
                         </sch:rule>
                      </constraint>
                   </constraintSpec>
@@ -911,6 +913,11 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </valList>
                      </attDef>
                   </attList>
+               </elementSpec>
+               <elementSpec ident="byline" mode="change">
+                    <content>
+                     <textNode/>
+                  </content>
                </elementSpec>
                <elementSpec ident="region" mode="change" module="namesdates">
                   <content>
