@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2025-06-17T14:32:15Z. . 
+Schema generated from ODD source 2025-06-25T13:09:28Z. . 
 TEI Edition: P5 Version 4.9.0. Last updated on 24th January 2025, revision f73186978 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/ 
   
@@ -3959,11 +3959,17 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
                         value="if ($localID != '' ) then exists(root()//*[@xml:id = $localID]) else if (matches($idRef,'^(http|https)')) then true() else doc-available(resolve-uri($target, base-uri($idRef)))"/>
                <sch:report test="$target = ''">unexpected target "<sch:value-of select="$idRef"/>" in reference <sch:value-of select="local-name($idRef)"/>
                </sch:report>
-               <sch:assert test="$targetResolves">the target "<sch:value-of select="$target"/>" of pointer "<sch:value-of select="$idRef"/>"
-                              cannot be resolved</sch:assert>
-               <sch:report test="count(tokenize($idRef,' ')) gt 1">pointer
-                                 "<sch:value-of select="$idRef"/>" contains more than one references
-                              (whitespace)</sch:report>
+               <sch:assert test="$targetResolves">the target "<sch:value-of select="$target"/>" of pointer "<sch:value-of select="$idRef"/>
+                                        "
+                                        cannot be resolved
+                                    </sch:assert>
+               <sch:report test="count(tokenize($idRef,' ')) gt 1">
+                                        pointer
+                                        "
+                                    <sch:value-of select="$idRef"/>
+                                        " contains more than one references
+                                        (whitespace)
+                                    </sch:report>
             </sch:rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
@@ -4315,10 +4321,14 @@ Measures]</a:documentation>
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
                       context="tei:item[parent::tei:list/@type = 'featureValues']">
-               <sch:report test="not(exists(@xml:id[.!='']))">missing or empty xml:id on
-                              featureValue item</sch:report>
-               <sch:report test="not(exists(tei:label[. != '']))">missing label or empty
-                              xml:id on featureValue item</sch:report>
+               <sch:report test="not(exists(@xml:id[.!='']))">
+                                            missing or empty xml:id on
+                                            featureValue item
+                                        </sch:report>
+               <sch:report test="not(exists(tei:label[. != '']))">
+                                            missing label or empty
+                                            xml:id on featureValue item
+                                        </sch:report>
             </sch:rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
@@ -4935,7 +4945,7 @@ Elements]</a:documentation>
             <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
                        name="status"
                        a:defaultValue="draft">
-               <a:documentation>This attribute is used to indicate references to bibl entries which need to be conrolled.</a:documentation>
+               <a:documentation>This attribute is used to indicate references to bibl entries which need to be conrolled. </a:documentation>
                <data type="token">
                   <param name="pattern">[^\p{C}\p{Z}]+</param>
                </data>
@@ -4946,11 +4956,11 @@ Elements]</a:documentation>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <choice>
                   <value>publication</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Published written documents, recorded in the VICAV Zotero library</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Published written documents, recorded in the VICAV Zotero library </a:documentation>
                   <value>personalCommunication</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Personal communication with native speakers of the variety or researchers via phone, e-mail or in person.</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Personal communication with native speakers of the variety or researchers via phone, e-mail or in person. </a:documentation>
                   <value>fieldwork</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">data from fieldwork conducted by members of the team indcluding both campaigns conducted within the project and prior to it.</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">data from fieldwork conducted by members of the team indcluding both campaigns conducted within the project and prior to it. </a:documentation>
                </choice>
             </attribute>
          </optional>
@@ -6012,10 +6022,14 @@ Suggested values include: 1] WGS84 (World Geodetic System); 2] MGRS (Military Gr
                <sch:let name="resolvedTarget" value="replace($replacementPattern, '\$1', $id)"/>
                <sch:let name="targetExists"
                         value="doc-available(resolve-uri($resolvedTarget, base-uri($target)))"/>
-               <sch:assert test="$prefix = 'dmp'">The prefix of the target
-                                 "<sch:value-of select="$target"/>" should be "dmp"</sch:assert>
-               <sch:assert test="$targetExists">The target "<sch:value-of select="$target"/>" of pointer "<sch:value-of select="$id"/>"
-                              cannot be resolved</sch:assert>
+               <sch:assert test="$prefix = 'dmp'">
+                                            The prefix of the target
+                                            "
+                                        <sch:value-of select="$target"/>" should be "dmp"</sch:assert>
+               <sch:assert test="$targetExists">The target "<sch:value-of select="$target"/>" of pointer "<sch:value-of select="$id"/>
+                                            "
+                                            cannot be resolved
+                                        </sch:assert>
             </sch:rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
@@ -6368,7 +6382,7 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</a:doc
    </define>
    <define name="tei_TEI">
       <element name="TEI">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(TEI document) In the context of the WIBARAB Feature Database, each TEI feature document contains the description of one feature, the possible ways it can be realised (feature values) in a `&lt;list type="features"&gt;` and documented observations of this specific feature in literature or in the data collected in the fieldwork of WIBARAB.In the context of the WIBARAB Feature Database, each TEI feature document contains the description of one feature, the possible ways it can be realised (feature values) in a `&lt;list type="features"&gt;` and documented observations of this specific feature in literature or in the data collected in the fieldwork of WIBARAB. [4. Default Text Structure 16.1. Varieties of Composite Text]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(TEI document) In the context of the WIBARAB Feature Database, each TEI feature document contains the description of one feature, the possible ways it can be realised ( feature values) in a `&lt;list type="features" &gt;` and documented observations of this specific feature in literature or in the data collected in the fieldwork of WIBARAB.In the context of the WIBARAB Feature Database, each TEI feature document contains the description of one feature, the possible ways it can be realised ( feature values) in a `&lt;list type="features" &gt;` and documented observations of this specific feature in literature or in the data collected in the fieldwork of WIBARAB. [4. Default Text Structure 16.1. Varieties of Composite Text]</a:documentation>
          <group>
             <ref name="tei_teiHeader"/>
             <choice>
@@ -6588,8 +6602,10 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</a:doc
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
                       context="tei:div[@type = 'description']">
-               <sch:assert test="child::tei:byline"> 'byline' element is
-                              required.</sch:assert>
+               <sch:assert test="child::tei:byline">
+                                        'byline' element is
+                                        required.
+                                    </sch:assert>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
@@ -7423,7 +7439,7 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</a:doc
          </choice>
          <ref name="tei_att.global.attributes"/>
          <attribute name="role">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">documents speaker traits that are specified to be relevant sociolinguistically in the sources and therefore may be necessary for the correct and accurate interpretation of cerain featureValueObservations.</a:documentation>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">documents speaker traits that are specified to be relevant sociolinguistically in the sources and therefore may be necessary for the correct and accurate interpretation of cerain featureValueObservations. </a:documentation>
             <choice>
                <value>tribe</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -7639,16 +7655,14 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</a:doc
    <define name="tei_featureValueObservation">
       <element name="featureValueObservation"
                ns="https://wibarab.acdh.oeaw.ac.at/langDesc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(feature value observation) contains data gathered by a source about the realisation of a fiven feature</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(feature value observation) contains data gathered by a source about the realisation of a fiven feature </a:documentation>
          <group>
             <ref name="tei_name"/>
             <ref name="tei_bibl"/>
             <oneOrMore>
                <ref name="tei_placeName"/>
             </oneOrMore>
-            <zeroOrMore>
-               <ref name="tei_lang"/>
-            </zeroOrMore>
+            <ref name="tei_lang"/>
             <optional>
                <ref name="tei_date"/>
             </optional>
@@ -7660,6 +7674,30 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</a:doc
                </choice>
             </zeroOrMore>
          </group>
+         <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                 xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
+                 prefix="tei"
+                 uri="http://www.tei-c.org/ns/1.0"/>
+         <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                 xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
+                 prefix="wib"
+                 uri="https://wibarab.acdh.oeaw.ac.at/langDesc"/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="featuredb-featureValueObservation-one-tribe-per-fvo-constraint-rule-36">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
+                      context="wib:featureValueObservation">
+               <sch:assert test="count(tei:personGrp[@role='tribe']) &lt;= 1">                                                
+                                               There should only be one personGrp element with @role="tribe" per featureValueObservation.
+                                            </sch:assert>
+            </sch:rule>
+         </pattern>
          <ref name="tei_att.global.attribute.xmllang"/>
          <ref name="tei_att.global.attribute.xmlbase"/>
          <ref name="tei_att.global.attribute.xmlspace"/>
