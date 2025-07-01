@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2025-06-25T13:09:28Z. . 
+Schema generated from ODD source 2025-07-01T11:44:02Z. . 
 TEI Edition: P5 Version 4.9.0. Last updated on 24th January 2025, revision f73186978 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.9.0/ 
   
@@ -3475,6 +3475,24 @@ Suggested values include: 1] spoken (spoken); 2] thought (thought); 3] written (
                <ref name="tei_q"/>
             </choice>
          </oneOrMore>
+         <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                 xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
+                 prefix="tei"
+                 uri="http://www.tei-c.org/ns/1.0"/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="featuredb-cit-example-translation-constraint-rule-12">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
+                      context="tei:cit[@type = 'example']">
+               <sch:assert test="tei:cit[@type='translation']">                                                
+                                                An example should have a translation.
+                                            </sch:assert>
+            </sch:rule>
+         </pattern>
          <ref name="tei_att.global.attribute.xmlid"/>
          <ref name="tei_att.global.attribute.xmllang"/>
          <ref name="tei_att.global.attribute.xmlbase"/>
@@ -3536,7 +3554,7 @@ Suggested values include: 1] spoken (spoken); 2] thought (thought); 3] written (
          <ref name="tei_macro.limitedContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="featuredb-desc-deprecationInfo-only-in-deprecated-constraint-rule-12">
+                  id="featuredb-desc-deprecationInfo-only-in-deprecated-constraint-rule-13">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
@@ -3616,7 +3634,7 @@ Suggested values include: 1] spoken (spoken); 2] thought (thought); 3] written (
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="featuredb-rt-target-rt-target-not-span-constraint-rule-13">
+                  id="featuredb-rt-target-rt-target-not-span-constraint-rule-14">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
@@ -3634,7 +3652,7 @@ Suggested values include: 1] spoken (spoken); 2] thought (thought); 3] written (
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="featuredb-rt-from-rt-from-constraint-rule-14">
+                  id="featuredb-rt-from-rt-from-constraint-rule-15">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
@@ -3652,7 +3670,7 @@ Suggested values include: 1] spoken (spoken); 2] thought (thought); 3] written (
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="featuredb-rt-to-rt-to-constraint-rule-15">
+                  id="featuredb-rt-to-rt-to-constraint-rule-16">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
@@ -3876,7 +3894,7 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
                  uri="https://wibarab.acdh.oeaw.ac.at/langDesc"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="featuredb-name-fvo-name-constraint-rule-16">
+                  id="featuredb-name-fvo-name-constraint-rule-17">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
@@ -3959,14 +3977,14 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
                         value="if ($localID != '' ) then exists(root()//*[@xml:id = $localID]) else if (matches($idRef,'^(http|https)')) then true() else doc-available(resolve-uri($target, base-uri($idRef)))"/>
                <sch:report test="$target = ''">unexpected target "<sch:value-of select="$idRef"/>" in reference <sch:value-of select="local-name($idRef)"/>
                </sch:report>
-               <sch:assert test="$targetResolves">the target "<sch:value-of select="$target"/>" of pointer "<sch:value-of select="$idRef"/>
+               <sch:assert test="$targetResolves">the target "<sch:value-of select="$target"/>" of pointer "<sch:value-of select="$idRef"/>                                        
                                         "
                                         cannot be resolved
                                     </sch:assert>
-               <sch:report test="count(tokenize($idRef,' ')) gt 1">
+               <sch:report test="count(tokenize($idRef,' ')) gt 1">                                        
                                         pointer
                                         "
-                                    <sch:value-of select="$idRef"/>
+                                    <sch:value-of select="$idRef"/>                                        
                                         " contains more than one references
                                         (whitespace)
                                     </sch:report>
@@ -4194,7 +4212,7 @@ Measures]</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="featuredb-ptr-ptrAtts-constraint-rule-23">
+                  id="featuredb-ptr-ptrAtts-constraint-rule-24">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
@@ -4217,7 +4235,7 @@ Measures]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="featuredb-ref-refAtts-constraint-rule-24">
+                  id="featuredb-ref-refAtts-constraint-rule-25">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
@@ -4282,7 +4300,7 @@ Measures]</a:documentation>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="featuredb-list-gloss-list-must-have-labels-constraint-rule-25">
+                  id="featuredb-list-gloss-list-must-have-labels-constraint-rule-26">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
@@ -4316,16 +4334,16 @@ Measures]</a:documentation>
                  uri="http://www.tei-c.org/ns/1.0"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="featuredb-item-fv-item-constraint-rule-26">
+                  id="featuredb-item-fv-item-constraint-rule-27">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
                       context="tei:item[parent::tei:list/@type = 'featureValues']">
-               <sch:report test="not(exists(@xml:id[.!='']))">
+               <sch:report test="not(exists(@xml:id[.!='']))">                                            
                                             missing or empty xml:id on
                                             featureValue item
                                         </sch:report>
-               <sch:report test="not(exists(tei:label[. != '']))">
+               <sch:report test="not(exists(tei:label[. != '']))">                                            
                                             missing label or empty
                                             xml:id on featureValue item
                                         </sch:report>
@@ -5038,7 +5056,7 @@ Elements]</a:documentation>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="featuredb-relatedItem-targetorcontent1-constraint-rule-27">
+                  id="featuredb-relatedItem-targetorcontent1-constraint-rule-28">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
@@ -5073,7 +5091,7 @@ Elements]</a:documentation>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="featuredb-l-abstractModel-structure-l-in-l-constraint-rule-28">
+                  id="featuredb-l-abstractModel-structure-l-in-l-constraint-rule-29">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
@@ -5123,7 +5141,7 @@ Elements]</a:documentation>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="featuredb-lg-atleast1oflggapl-constraint-rule-29">
+                  id="featuredb-lg-atleast1oflggapl-constraint-rule-30">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
@@ -5133,7 +5151,7 @@ Elements]</a:documentation>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="featuredb-lg-abstractModel-structure-lg-in-l-constraint-rule-30">
+                  id="featuredb-lg-abstractModel-structure-lg-in-l-constraint-rule-31">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
@@ -6008,7 +6026,7 @@ Suggested values include: 1] WGS84 (World Geodetic System); 2] MGRS (Military Gr
                  uri="http://www.tei-c.org/ns/1.0"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="featuredb-textClass-textClassConstraint-constraint-rule-32">
+                  id="featuredb-textClass-textClassConstraint-constraint-rule-33">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
@@ -6022,11 +6040,11 @@ Suggested values include: 1] WGS84 (World Geodetic System); 2] MGRS (Military Gr
                <sch:let name="resolvedTarget" value="replace($replacementPattern, '\$1', $id)"/>
                <sch:let name="targetExists"
                         value="doc-available(resolve-uri($resolvedTarget, base-uri($target)))"/>
-               <sch:assert test="$prefix = 'dmp'">
+               <sch:assert test="$prefix = 'dmp'">                                            
                                             The prefix of the target
                                             "
                                         <sch:value-of select="$target"/>" should be "dmp"</sch:assert>
-               <sch:assert test="$targetExists">The target "<sch:value-of select="$target"/>" of pointer "<sch:value-of select="$id"/>
+               <sch:assert test="$targetExists">The target "<sch:value-of select="$target"/>" of pointer "<sch:value-of select="$id"/>                                            
                                             "
                                             cannot be resolved
                                         </sch:assert>
@@ -6597,12 +6615,12 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</a:doc
                  uri="http://www.tei-c.org/ns/1.0"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="featuredb-div-div-description-constraint-rule-33">
+                  id="featuredb-div-div-description-constraint-rule-34">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
                       context="tei:div[@type = 'description']">
-               <sch:assert test="child::tei:byline">
+               <sch:assert test="child::tei:byline">                                        
                                         'byline' element is
                                         required.
                                     </sch:assert>
@@ -6610,7 +6628,7 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</a:doc
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="featuredb-div-abstractModel-structure-div-in-l-constraint-rule-34">
+                  id="featuredb-div-abstractModel-structure-div-in-l-constraint-rule-35">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
@@ -6622,7 +6640,7 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</a:doc
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="featuredb-div-abstractModel-structure-div-in-ab-or-p-constraint-rule-35">
+                  id="featuredb-div-abstractModel-structure-div-in-ab-or-p-constraint-rule-36">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
@@ -7688,13 +7706,13 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</a:doc
                  uri="https://wibarab.acdh.oeaw.ac.at/langDesc"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="featuredb-featureValueObservation-one-tribe-per-fvo-constraint-rule-36">
+                  id="featuredb-featureValueObservation-one-tribe-per-fvo-constraint-rule-37">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
                       context="wib:featureValueObservation">
                <sch:assert test="count(tei:personGrp[@role='tribe']) &lt;= 1">                                                
-                                               There should only be one personGrp element with @role="tribe" per featureValueObservation.
+                                                There should only be one personGrp element with @role="tribe" per featureValueObservation.
                                             </sch:assert>
             </sch:rule>
          </pattern>
