@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../tools/802_tei_odd/out/vicav_profiles.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../tools/802_tei_odd/out/vicav_profiles.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="vicav_profile_SYR-DZR">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>A machine-readable profile of Deir ez-Zor Arabic</title>
+            <respStmt>
+               <resp>document preparation</resp>
+               <name xml:id="charly">Karlheinz Moerth</name>
+            </respStmt>
+            <author xml:id="aleksandra">Aleksandra Ercegovčević</author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>ACDH-OeAW</publisher>
+            <pubPlace>Vienna</pubPlace>
+            <date>2019</date>
+            <availability status="restricted">
+               <p>
+                  <ref type="license"
+                       target="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
+               </p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This is an original digital text</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <tagsDecl partial="true">
+            <rendition xml:id="i" scheme="css">font-style:italics;</rendition>
+            <rendition xml:id="u" scheme="css">text-decoration:underline;</rendition>
+            <rendition xml:id="b" scheme="css">font-weight:bold;</rendition>
+         </tagsDecl>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="ar-x-syrdzr">
+               <name type="languageVariety">Deir ez-Zor Arabic</name>
+               <place sameAs="geo:deir_ez_zor"/>
+               <date type="languagePeriod">
+                  <note>Contemporary</note>
+               </date>
+               <channel mode="spoken"/>
+            </language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change status="created" when="2018-05-02T08:20:00Z" who="#aleksandra">created</change>
+         <change status="draft" when="2018-11-20T11:43:00Z" who="#aleksandra">last modified (revision 8)</change>
+         <change status="draft" when="2019-02-19T23:29:19.737+01:00">transformed to TEI-XML</change>
+         <change when="2019-02-19T23:29:20.813+01:00" status="draft"/>
+         <change when="2025-10-07+02:00" who="dmp:KS">Transformed to Lex-0</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div>
+            <head>
+               <figure>
+                  <graphic url="Deir-ez-zor335.jpg"/>
+                  <head type="imgCaption" xml:space="preserve"><ref target="https://ar.wikipedia.org/wiki/%D8%AF%D9%8A%D8%B1_%D8%A7%D9%84%D8%B2%D9%88%D8%B1#/media/File:Deir-ez-zor335.jpg">Wikimedia</ref>
+                  </head>
+               </figure>
+            </head>
+            <div type="positioning">
+               <head/>
+               <p xml:space="preserve">
+                  <geo>35°20'N 40°08'E</geo>
+                  <country>Syria</country>
+               </p>
+            </div>
+            <div type="typology">
+               <head/>
+               <p rend="typology" xml:space="preserve">East (Mashreq) › Mesopotamia › Eastern Syria (qəltu) › Euphrates group</p>
+               <p xml:space="preserve">Sedentary dialect with influences from Bedouin and urban Syrian dialects</p>
+            </div>
+            <div type="general">
+               <p xml:space="preserve">Deir ez-Zor, located on the Euphrates River, is the largest city in eastern Syria and seventh largest in the country. The modern town was founded by the Ottoman Empire in 1867 around a pre-existing settlement. In 1915 the city was a major destination for the Armenians subjected to death marches during the Armenian Genocide.</p>
+            </div>
+            <div type="researchHistory">
+               <p xml:space="preserve">The German scholar Otto Jastrow provides significant data about 
+               the <hi rendition="#i">qǝltu</hi> dialects in general. <rs type="bibl" ref="zotid:SRFWYVSI">Jastrow (1978)</rs> describes 
+               the phonology and morphology of the vernacular of Deir ez-Zor, and <rs type="bibl" ref="zotid:9FAVX7LN">Jastrow (1981)</rs> presents 
+               a brief description and a collection of texts of eleven <hi rendition="#i">qǝltu</hi> dialects, 
+               including seven narratives from the dialect of Deir ez-Zor. <rs type="bibl" ref="zotid:JSXU3KSZ">Herin (2005)</rs> is 
+               a succinct article about the dialect of Deir ez-Zor.</p>
+            </div>
+            <div type="bibliography">
+               <p xml:space="preserve">To view publications on this variety click <rs type="bibl" ref="bibl:geo:Deir ez-Zor">here</rs>.</p>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

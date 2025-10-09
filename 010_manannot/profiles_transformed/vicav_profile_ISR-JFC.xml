@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../tools/802_tei_odd/out/vicav_profiles.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../tools/802_tei_odd/out/vicav_profiles.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:id="vicav_profile_ISR-JFC">
+   <teiHeader><fileDesc>
+         <titleStmt>
+            <title>A machine-readable profile of Jaffa/ Tel Aviv-Jaffa Arabic</title>
+            <author>Claudia Laaber</author>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>ACDH-OeAW</publisher>
+            <pubPlace>Vienna</pubPlace>
+            <date>2019</date>
+            <availability status="restricted">
+               <p>
+                  <ref type="license" target="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
+               </p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This is an original digital text</p>
+         </sourceDesc>
+      </fileDesc><encodingDesc>
+         <tagsDecl partial="true">
+            <rendition xml:id="i" scheme="css">font-style:italics;</rendition>
+            <rendition xml:id="u" scheme="css">text-decoration:underline;</rendition>
+            <rendition xml:id="b" scheme="css">font-weight:bold;</rendition>
+         </tagsDecl>
+      </encodingDesc><profileDesc><langUsage><language ident="ar-x-isrjfc"><name type="languageVariety">Jaffa/ Tel Aviv-Jaffa Arabic</name><place sameAs="geo:jaffa"/><date type="languagePeriod"><note>Contemporary</note></date><channel mode="spoken"/></language></langUsage></profileDesc><revisionDesc>
+         <change status="created" when="2019-12-02T12:35:00Z" who="#">created</change>
+         <change status="draft" when="2020-03-11T11:20:00Z" who="#">last modified (revision 1)</change>
+         <change status="draft" when="2020-09-24T09:40:32.792+02:00">transformed to TEI-XML</change>
+         <change when="2020-09-24T09:40:33.802+02:00" status="draft"/>
+      <change when="2025-10-07+02:00" who="dmp:KS">Transformed to Lex-0</change></revisionDesc></teiHeader>
+   <text>
+      <body>
+         <div>
+            <head><figure>
+                  <graphic url="jaffa.jpg"/>
+                  <head type="imgCaption">Courtesy of Stephan Procházka, 2004</head>
+               </figure></head>
+            <div type="positioning">
+               <head/>
+               <p>
+                  <geo>32°03'N 34°45'E</geo>
+                  <country>Israel</country>
+               </p>
+            </div>
+            <div type="typology">
+               <head/>
+               <p rend="typology">East (Mashreq)&gt;Levant&gt;Palestine</p>
+               <p>sedentary: urban dialect</p>
+            </div>
+            <div type="general">
+               <head/>
+               <p>Because of the city’s location on the Mediterranean coast, Jaffa has played an important role throughout history. Its port was an important strategic stronghold and therefore the city suffered frequent changes in rule.</p>
+               <p>Today it is part of the greater Tel Aviv-Jaffa area. Tel Aviv had been only a suburb of Jaffa; but due to their fast growth, the two towns were united in 1950.</p>
+            </div>
+
+            <div type="researchHistory">
+               <head/>
+               <p>The linguistic investigations of Uri Horesh
+                 mainly deal with phonology. In one of his publications <rs type="bibl" ref="zotid:RLZKWZVZ">(Horesh
+                 2000)</rs> he considers the question of whether or not, based upon
+                 phonemic and phonetic criteria, the city’s variety is a typical urban
+                 Palestinian dialect. In another article, he examines the influence of
+                 Modern Hebrew on the Arabic of Jaffe <rs type="bibl" ref="zotid:48VWC9IQ">(Horesh 2014)</rs>.</p>
+
+               <p><rs type="bibl" ref="zotid:EBJYZ3VH">Arnold (2004)</rs> is
+               a short phonological and morphological overview of the Arabic in Jaffa
+               and surrounding villages. <rs type="bibl" ref="zotid:NPJ679RJ">Arnold (2015)</rs> provides
+               a sample text with English translation.</p>
+
+               <p>Because of the founding of Israel in 1948, the
+               majority of the Arabs living in Jaffa had to flee to the Gaza Strip.
+               <rs type="bibl" ref="profile:profile_gaza_01">The profile of Gaza</rs> provides
+               further information on the dialect contact there.</p>
+            </div>
+
+            <div type="bibliography">
+               <p>To view publications on this variety click <rs type="bibl" ref="bibl:geo:Jaffa">here</rs>.</p>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>
