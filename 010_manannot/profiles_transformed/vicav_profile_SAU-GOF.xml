@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xml:space="preserve"
-     xml:id="vicav_profile_SAU-GOF">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:id="vicav_profile_SAU-GOF">
     <teiHeader>
         <fileDesc>
             <titleStmt>
                 <title>A machine-readable profile of Ǧōf Arabic</title>
-                <author />
+                <author/>
             </titleStmt>
             <publicationStmt>
                 <publisher>ACDH-OeAW</publisher>
@@ -14,8 +12,7 @@
                 <date>2018</date>
                 <availability status="restricted">
                     <p>
-                        <ref type="license"
-                             target="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+                        <ref type="license" target="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
                     </p>
                 </availability>
             </publicationStmt>
@@ -25,45 +22,34 @@
         </fileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="dmp"
-                           matchPattern="^(.+)$"
-                           replacementPattern="wibarab-dmp.xml#$1" />
-                <prefixDef ident="zotid"
-                           matchPattern="^(.+)$"
-                           replacementPattern="vicav_biblio_tei_zotero.xml#$1" />
-                <prefixDef ident="dia"
-                           matchPattern="^(.+)$"
-                           replacementPattern="vicav_dialects.xml#$1" />
-                <prefixDef ident="geo"
-                           matchPattern="^(.+)$"
-                           replacementPattern="vicav_geodata.xml#$1" />
+                <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="wibarab-dmp.xml#$1"/>
+                <prefixDef ident="zotid" matchPattern="^(.+)$" replacementPattern="vicav_biblio_tei_zotero.xml#$1"/>
+                <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="vicav_dialects.xml#$1"/>
+                <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="vicav_geodata.xml#$1"/>
             </listPrefixDef>
         </encodingDesc>
         <profileDesc>
             <langUsage>
                 <language ident="ar-x-saugof">
                     <name type="languageVariety">Ǧōf Arabic</name>
-                    <place sameAs="geo:al_jawf" />
+                    <listPlace><place sameAs="geo:al_jawf"/></listPlace>
                     <date type="languagePeriod">
                         <note>Contemporary</note>
                     </date>
-                    <channel mode="spoken" />
+                    <channel mode="spoken"/>
                 </language>
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change status="created"
-                    when="2022-07-12"
-                    who="dmp:CM">created this document from vicav_dialects.xml, entry by <persName ref="dmp:GuK" />
+            <change status="created" when="2022-07-12" who="dmp:CM">created this document from vicav_dialects.xml, entry by <persName ref="dmp:GuK"/>
         </change>
-        <change when="2025-10-07+02:00"
-                who="dmp:KS">Transformed to Lex-0</change>
+        <change when="2025-10-07+02:00" who="dmp:KS">Transformed to Lex-0</change>
     </revisionDesc>
 </teiHeader>
 <text>
     <body>
         <div>
-            <head />
+            <head/>
         </div>
     </body>
 </text>
