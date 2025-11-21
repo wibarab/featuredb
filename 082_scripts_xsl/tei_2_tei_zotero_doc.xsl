@@ -13,15 +13,22 @@
         </xsl:copy>
     </xsl:template>
     
-    <!-- Template to transform note[type='tag'] elements with content starting with 'doc:' -->
-    <xsl:template match="tei:note[@type='tag'][starts-with(normalize-space(.), 'doc:')]">
+    <!-- Template to transform note[type='tags'] elements with a child note[type='tag'] starting with 'doc:' -->
+    <xsl:template match="tei:note[@type='tags'][tei:note[@type='tag'][starts-with(normalize-space(.), 'doc:')]]">
+        <xsl:copy>
+            <xsl:apply-templates select="@*"/>
+        
+         <!-- Process all children except doc: and dcert: notes -->
+            <xsl:apply-templates select="node()[not(self::tei:note[@type='tag'][starts-with(normalize-space(.), 'doc:') or starts-with(normalize-space(.), 'dcert:')])]"/>
+        <!-- Transform doc: notes last -->
+        <xsl:for-each select="tei:note[@type='tag'][starts-with(normalize-space(.), 'doc:')]">
+
         <xsl:variable name="docContent" select="substring-after(normalize-space(.), 'doc:')"/>
         <xsl:variable name="decade" select="substring-before($docContent, 's')"/>
         <xsl:variable name="decadeInt" select="xs:integer($decade)"/>
         <xsl:variable name="notBefore" select="concat($decade, '-01-01')"/>
         <xsl:variable name="notAfter" select="concat($decadeInt + 9, '-12-31')"/>
-        <xsl:variable name="parent" select="parent::*"/>
-        <xsl:variable name="certContent" select="$parent/tei:note[@type='tag'][starts-with(normalize-space(.), 'dcert:')][1]/text()"/>
+        <xsl:variable name="certContent" select="../tei:note[@type='tag'][starts-with(normalize-space(.), 'dcert:')][1]/text()"/>
         
         <note type="dataCollection">
             <date type="dataCollection">
@@ -44,9 +51,7 @@
                 <xsl:value-of select="$docContent"/>
             </date>
         </note>
-    </xsl:template>
-    
-    <!-- Template to remove note[type='tag'][starts-with(normalize-space(.), 'dcert:')] elements -->
-    <xsl:template match="tei:note[@type='tag'][starts-with(normalize-space(.), 'dcert:')]"/>
-    
+        </xsl:for-each>
+        </xsl:copy>
+    </xsl:template>  
 </xsl:stylesheet>
