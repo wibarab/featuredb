@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>WIBARAB person group list TEI customization</title>
+                <principal>
+                    <name type="person"
+                          ref="dmp:SP">Stephan Procházka</name>
+                </principal>
+                <author>
+                    <name type="person"
+                          ref="dmp:KS">Kinga Sramó</name>
+                </author>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
+                <date>2025</date>
+                <availability>
+                    <licence>CC BY 4.0</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>This is a born digital document.</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <head>Formal Specification</head>
+                <schemaSpec ident="personGroups" start="TEI">
+                    <moduleRef key="tei" />
+                    <moduleRef key="core" />
+                    <moduleRef key="header" />
+                    <moduleRef key="textstructure" />
+                    <moduleRef key="namesdates" />
+                    <elementSpec ident="personGrp"
+                                 mode="change">
+                        <attList>
+                            <attDef ident="role"
+                                    mode="change">
+                                <valList type="closed">
+                                    <valItem ident="ageGroup" />
+                                    <valItem ident="firstLanguage" />
+                                    <valItem ident="gender" />
+                                    <valItem ident="religion" />
+                                    <!-- <valItem ident="socio"/> -->
+                                    <valItem ident="tribe" />
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+                    <!-- Customize placeName to require @ref -->
+                    <elementSpec ident="placeName" mode="change">
+                        <content>
+                            <empty/>
+                        </content>
+                        <attList>
+                            <attDef ident="ref" mode="change" usage="req" />
+                        </attList>
+                    </elementSpec>
+                    <!-- Might need other note types, for now we only have "general" -->
+                    <elementSpec ident="note"
+                                 mode="change">
+                        <attList>
+                            <attDef ident="type"
+                                    mode="change">
+                                <valList type="closed">
+                                    <valItem ident="general" />
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+                    <!-- Define what "tribe" should look like -->
+                    <constraintSpec ident="tribe-residence"
+                                    scheme="schematron">
+                        <constraint>
+                            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                                      context="tei:personGrp[@role='tribe']">
+                                <sch:assert test="tei:residencej">Tribe personGrp elements must contain at least one residence element.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                </schemaSpec>
+            </div>
+        </body>
+    </text>
+</TEI>
