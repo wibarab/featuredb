@@ -3,46 +3,37 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml"
 schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?renderer type="macro" href="{appPath}macros/macro_odd_transform_002.mcr"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0"
-     xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
-     xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
+    xmlns:sch="http://purl.oclc.org/dsdl/schematron">
     <teiHeader>
         <fileDesc>
             <titleStmt>
                 <title>WIBARAB FeatureDB TEI Customization</title>
                 <title type="desc">Version 1.0.1</title>
                 <principal>
-                    <name type="person"
-                          xml:id="SP">Stephan Procházka</name>
+                    <name type="person" xml:id="SP">Stephan Procházka</name>
                 </principal>
                 <author>
-                    <name type="person"
-                          xml:id="CM">Charly Mörth</name>
+                    <name type="person" xml:id="CM">Charly Mörth</name>
                 </author>
                 <author>
-                    <name type="person"
-                          xml:id="DS">Daniel Schopper</name>
+                    <name type="person" xml:id="DS">Daniel Schopper</name>
                 </author>
                 <author>
-                    <name type="person"
-                          ref="dmp:AD">Ana Iriarte Díez</name>
+                    <name type="person" ref="dmp:AD">Ana Iriarte Díez</name>
                 </author>
                 <author>
-                    <name type="person"
-                          ref="dmp:AID">Ana Iriarte Díez</name>
+                    <name type="person" ref="dmp:AID">Ana Iriarte Díez</name>
                 </author>
                 <author>
-                    <name type="person"
-                          ref="dmp:VE">Veronika Engler</name>
+                    <name type="person" ref="dmp:VE">Veronika Engler</name>
                 </author>
                 <author>
-                    <name type="person"
-                          ref="dmp:JD">Johanna Doppelbauer</name>
+                    <name type="person" ref="dmp:JD">Johanna Doppelbauer</name>
                 </author>
                 <respStmt>
                     <resp>contributor</resp>
-                    <name type="person"
-                          ref="dmp:RZ">Maria Rebecca Zarb</name>
+                    <name type="person" ref="dmp:RZ">Maria Rebecca Zarb</name>
                 </respStmt>
             </titleStmt>
             <editionStmt>
@@ -62,1179 +53,855 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
         </fileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="dmp"
-                           matchPattern="^(.+)$"
-                           replacementPattern="../010_manannot/wibarab_dmp.xml#$1" />
-                <prefixDef ident="zotid"
-                           matchPattern="^(.+)$"
-                           replacementPattern="../010_manannot/vicav_biblio_tei_zotero.xml#$1" />
-                <prefixDef ident="dia"
-                           matchPattern="^(.+)$"
-                           replacementPattern="../010_manannot/vicav_dialects.xml#$1" />
-                <prefixDef ident="geo"
-                           matchPattern="^(.+)$"
-                           replacementPattern="../010_manannot/vicav_geodata.xml#$1" />
-                <prefixDef ident="pgr"
-                           matchPattern="^(.+)$"
-                           replacementPattern="../010_manannot/wibarab_PersonGroup.xml.xml#$1" />
+                <prefixDef ident="dmp" matchPattern="^(.+)$"
+                    replacementPattern="../010_manannot/wibarab_dmp.xml#$1"/>
+                <prefixDef ident="zotid" matchPattern="^(.+)$"
+                    replacementPattern="../010_manannot/vicav_biblio_tei_zotero.xml#$1"/>
+                <prefixDef ident="dia" matchPattern="^(.+)$"
+                    replacementPattern="../010_manannot/vicav_dialects.xml#$1"/>
+                <prefixDef ident="geo" matchPattern="^(.+)$"
+                    replacementPattern="../010_manannot/vicav_geodata.xml#$1"/>
+                <prefixDef ident="pgr" matchPattern="^(.+)$"
+                    replacementPattern="../010_manannot/wibarab_PersonGroup.xml.xml#$1"/>
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc status="published">
-            <change who="#DS">                
-                Set up document outline; first draft of Part 1 (functional
-                requirements).
-            </change>
-            <change who="#DS"
-                    when="2022-06-23">finalized beta Version 1</change>
-            <change when="2022-08-12"
-                    who="dmp:DS">releasing version 1.0.0</change>
-            <change when="2022-12-22"
-                    who="dmp:VE">start preliminary description of FVO</change>
-            <change when="2023-01-12"
-                    who="dmp:JD">add status description</change>
-            <change when="2023-01-12"
-                    who="dmp:AD">expanding discussion of FVO element</change>
-            <change when="2023-01-19"
-                    who="dmp:DS">                
-                consolidating ODD: validating; moving long
-                description of FVO from elementSpec to prose section; moving "contributors" to "authors"
-                to teiHeader
-            </change>
-            <change when="2023-02-01"
-                    who="dmp:CM">adding more structure</change>
-            <change when="2023-02-01"
-                    who="dmp:CM">expanding details of FVO element</change>
-            <change when="2023-03-16"
-                    who="dmp:DS">fixing order in FVO element</change>
-            <change when="2023-10-02"
-                    who="dmp:DS">                
-                introducing @status on @bibl with ambiguous values
-                in @corresp (temporary)
-            </change>
-            <change when="2024-03-13"
-                    who="dmp:KS">                
-                adding byline and @resp as mandatory for div
-                elements of @type="description"
-            </change>
-            <change when="2024-04-02"
-                    who="dmp:KS">                
-                introducing profileDesc and textClass to
-                classify/group feature documents
-            </change>
-            <change when="2025-06-17"
-                    who="dmp:KS">                
-                comment out @resp as mandatory for div
-                elements of @type="description" for now, only allow text nodes in byline element
-            </change>
+            <change who="#DS"> Set up document outline; first draft of Part 1 (functional
+                requirements). </change>
+            <change who="#DS" when="2022-06-23">finalized beta Version 1</change>
+            <change when="2022-08-12" who="dmp:DS">releasing version 1.0.0</change>
+            <change when="2022-12-22" who="dmp:VE">start preliminary description of FVO</change>
+            <change when="2023-01-12" who="dmp:JD">add status description</change>
+            <change when="2023-01-12" who="dmp:AD">expanding discussion of FVO element</change>
+            <change when="2023-01-19" who="dmp:DS"> consolidating ODD: validating; moving long
+                description of FVO from elementSpec to prose section; moving "contributors" to
+                "authors" to teiHeader </change>
+            <change when="2023-02-01" who="dmp:CM">adding more structure</change>
+            <change when="2023-02-01" who="dmp:CM">expanding details of FVO element</change>
+            <change when="2023-03-16" who="dmp:DS">fixing order in FVO element</change>
+            <change when="2023-10-02" who="dmp:DS"> introducing @status on @bibl with ambiguous
+                values in @corresp (temporary) </change>
+            <change when="2024-03-13" who="dmp:KS"> adding byline and @resp as mandatory for div
+                elements of @type="description" </change>
+            <change when="2024-04-02" who="dmp:KS"> introducing profileDesc and textClass to
+                classify/group feature documents </change>
+            <change when="2025-06-17" who="dmp:KS"> comment out @resp as mandatory for div elements
+                of @type="description" for now, only allow text nodes in byline element </change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <head>WIBARAB Feature DB: Functional Requirements and Data Specification</head>
-            <p>                
-                The purpose of this TEI customization is to formalise the data structures needed to
-                implement the WIBARAB Feature DB application. Thus, we start with a brief introduction
-                into the most important functionalities which the application is expected to provide in
-                Part I, a discussion of the sources feeding the database in Part II, descriptions of the
-                overall data model in Part III, the organization of the working files in Part IV, giving
-                some details on tools applied in the production of the data in Part V and finally a
-                presentation of the formal TEI customization in Part VI.
-            </p>
+            <p> The purpose of this TEI customization is to formalise the data structures needed to
+                implement the WIBARAB Feature DB application. Thus, we start with a brief
+                introduction into the most important functionalities which the application is
+                expected to provide in Part I, a discussion of the sources feeding the database in
+                Part II, descriptions of the overall data model in Part III, the organization of the
+                working files in Part IV, giving some details on tools applied in the production of
+                the data in Part V and finally a presentation of the formal TEI customization in
+                Part VI. </p>
             <div>
                 <head>Part I: Functional Requirements of <name>WIBARAB Feature DB</name>
-            </head>
-            <p>The <name>WIBARAB Feature DB</name>                
-                should allow researchers to explore and compare
-                the different realizations of particular lingustic features in an array of Arabic
-                vernaculars. Since the main objective of the project is to investigate the linguistic
-                Bedouin-Sedentary split, the
-            <name>WIBARAB Feature DB</name>                
-                focuses on those Arabic
-                varieties spoken by traditionally nomadic communities and on varieties that have been
-                classified as "Bedouin" both by the envolved communities as well as researchers. For
-                comparative purposes, it also includes the better documented sedentary varieties. The
-                database focuses on a set of linguistic features that are considered especially
-                relevant for typological purposes, most of which have been reported on in previously
-                published academic studies to be especially salient of the speech of Bedouin
-                communities.
-            </p>
-            <p>In this way, the <name>WIBARAB Feature DB</name>                
-                represents both a specialized
-                archive gathering linguistic data from a wide range of Arabic varieties, and an
-                analytical research tool. It should enable the WIBARAB team and other researchers to
-                both confirm the existence of common linguistic trends among Bedouin communities
-                across the Arab World, accurately identifying the common features and its respective
-                realizations, and provide sufficient data to reject the currently prevailing
-                Bedouin-Sedentary split hypothesis.
-            </p>
-            <p>The term <term>database</term>                
-                in the name of the described resource has been chosen
-                for pragmatic reasons and has to be understood in a very broad sense as an organized
-                collection of semi-structured data electronically stored and accessible. The entire
-                textual source of
-            <name>WIBARAB Feature DB</name>                
-                is encoded in accordance with the
-            <name>Guidelines of the Text Encoding Initiative</name>. </p>
-        </div>
-        <div>
-            <head>Part II: Sources</head>
-            <p>The data included in the <name>WIBARAB Feature DB</name>                
-                draws on three main types of
-                sources:
-            </p>
-            <list>
-                <item>written academic publications,</item>
-                <item>                    
-                    data from new fieldwork campaigns carried out by the WIBARAB team in the
-                    framework of the
-                <name>WIBARAB project</name>,</item>
-                <item>and, to a lesser degree, data from <term>personal communications</term>                    
-                    with L1
-                    speakers or known experts of specific varieties being investigated in the
-                    project.
-                </item>
-            </list>
-            <p>The research library has been stored in the <name>VICAV Zotero library</name>                
-                the
-                creation of which antedates the project by several years. This library has been
-                built-up mainly by students and researchers of the
-            <name>                
-                Institute of Oriental
-                Studies
-            </name> of the <name>University of Vienna</name>                
-                and has been used as part
-                of the VICAV digital infrastructure by several projects (TUNICO, SHAWI, TUNOCENT,
-                WIBARAB). It brings together research publications in the fields of Arabic
-                dialectology and Arabic linguistics focusing on spoken varieties. All bibliographical
-                items have been provided at least with information on the region dealt with in the
-                publication, however many items also contain further information about content and
-                type of the publication (e.g. dictionary, grammatical description, textbook etc.).
-                Currently, the VICAV library contains more than 5,000 titles.
-            </p>
-            <p>The name <name>VICAV Zotero library</name>                
-                refers to the software that has been used
-                to collect the data, Zotero being a freely available up-to-date bibliographical tool
-                which allows to collaboratively compile bibliographies. It also provides a number of
-                export functions, most conveniently also one producing valid TEI conformant
-                bibliographical records.
-            </p>
-        </div>
-        <div>
-            <head>Part III: Data Model of Feature Documents</head>
-            <p>                
-                The data included in the database is supposed to describe a series of salient
-                linguistic
-            <term>features</term>                
-                . The criteria used for the selection of these
-                features mainly rely on typological considerations and on previously reported high
-                levels of sociolinguistic salience. The feature descriptions are organised in
-                documents grouping together feature value observations pertaining to particular
-                linguistic phenomena, such as e.g. all observations that pertain to the existential
-                particle, observations that pertain the reflexes of Classical Arabic interdentals in
-                the modern varieties etc.
-            </p>
-            <p> Every linguistic feature has a set of <term>feature values</term>                
-                that indicates the
-                different attested realizations of a specific feature in the studied varieties. The
-                documentation of an occurrence of (a) specific feature value(s) in a specific
-                location is accomplished via
-            <term>feature value observations</term>                
-                . Every
-            <term>feature value observation</term>                
-                specifies that one particular feature value
-                occurs in a specific place and is produced by a specific speaker or group of
-                speakers. When information about the speakers and their communities is available, the
-                sociolinguistic profile of the speaker or the community of speakers is indicated via
-                the
-            <term>personGrp</term>                
-                element, which may specify values regarding the speakers'
-                tribal affiliation, religious affiliation, age group, gender, and native language
-                among others. When specific remarks that are not codifiable via previously explained
-                elements are due, they are indicated in prose within the exception notes, constraint
-                notes or general notes.
-            </p>
-            <p>                
-                Some sources may group the combination of realizations of feature values and
-                characterize them as a linguistic variety or dialect. These linguistic varieties may
-                be labelled after the approximate location they are spoken at, and/or the community
-                of speakers that use them. These common groupings or varieties are indicated via
-                language
-            <term>Profiles</term>                
-                and provide additional historical and linguistic
-                information available regarding a specific variety according to one or more
-                sources.
-            </p>
+                </head>
+                <p>The <name>WIBARAB Feature DB</name> should allow researchers to explore and
+                    compare the different realizations of particular lingustic features in an array
+                    of Arabic vernaculars. Since the main objective of the project is to investigate
+                    the linguistic Bedouin-Sedentary split, the <name>WIBARAB Feature DB</name>
+                    focuses on those Arabic varieties spoken by traditionally nomadic communities
+                    and on varieties that have been classified as "Bedouin" both by the envolved
+                    communities as well as researchers. For comparative purposes, it also includes
+                    the better documented sedentary varieties. The database focuses on a set of
+                    linguistic features that are considered especially relevant for typological
+                    purposes, most of which have been reported on in previously published academic
+                    studies to be especially salient of the speech of Bedouin communities. </p>
+                <p>In this way, the <name>WIBARAB Feature DB</name> represents both a specialized
+                    archive gathering linguistic data from a wide range of Arabic varieties, and an
+                    analytical research tool. It should enable the WIBARAB team and other
+                    researchers to both confirm the existence of common linguistic trends among
+                    Bedouin communities across the Arab World, accurately identifying the common
+                    features and its respective realizations, and provide sufficient data to reject
+                    the currently prevailing Bedouin-Sedentary split hypothesis. </p>
+                <p>The term <term>database</term> in the name of the described resource has been
+                    chosen for pragmatic reasons and has to be understood in a very broad sense as
+                    an organized collection of semi-structured data electronically stored and
+                    accessible. The entire textual source of <name>WIBARAB Feature DB</name> is
+                    encoded in accordance with the <name>Guidelines of the Text Encoding
+                        Initiative</name>. </p>
+            </div>
             <div>
-                <head>Header</head>
-                <p>The status of the working document is indicated in the <att>status</att>                    
-                    attribute
-                    of the
-                <gi>revisionDesc</gi>                    
-                    element of the document. It can have the following
-                    values:
+                <head>Part II: Sources</head>
+                <p>The data included in the <name>WIBARAB Feature DB</name> draws on three main
+                    types of sources: </p>
                 <list>
-                    <item>
-                        <term>draft</term> is set when the input of the <term>                            
-                            feature value
-                            observations
-                        </term>                            
-                            is still not complete, data collection is still
-                            ongoing.
-                        </item>
-                        <item>
-                            <term>done</term> is used when the input of the <term>                                
-                                feature value
-                                oservations
-                            </term> is considered as completed by the <term>                                
-                                responsible
-                                person
-                            </term> which is encoded as the <gi>author</gi>                                
-                                of the document,
-                                implying that the major part of data input has been done and the document is
-                                ready to be validated.
-                            </item>
+                    <item>written academic publications,</item>
+                    <item> data from new fieldwork campaigns carried out by the WIBARAB team in the
+                        framework of the <name>WIBARAB project</name>,</item>
+                    <item>and, to a lesser degree, data from <term>personal communications</term>
+                        with L1 speakers or known experts of specific varieties being investigated
+                        in the project. </item>
+                </list>
+                <p>The research library has been stored in the <name>VICAV Zotero library</name> the
+                    creation of which antedates the project by several years. This library has been
+                    built-up mainly by students and researchers of the <name> Institute of Oriental
+                        Studies </name> of the <name>University of Vienna</name> and has been used
+                    as part of the VICAV digital infrastructure by several projects (TUNICO, SHAWI,
+                    TUNOCENT, WIBARAB). It brings together research publications in the fields of
+                    Arabic dialectology and Arabic linguistics focusing on spoken varieties. All
+                    bibliographical items have been provided at least with information on the region
+                    dealt with in the publication, however many items also contain further
+                    information about content and type of the publication (e.g. dictionary,
+                    grammatical description, textbook etc.). Currently, the VICAV library contains
+                    more than 5,000 titles. </p>
+                <p>The name <name>VICAV Zotero library</name> refers to the software that has been
+                    used to collect the data, Zotero being a freely available up-to-date
+                    bibliographical tool which allows to collaboratively compile bibliographies. It
+                    also provides a number of export functions, most conveniently also one producing
+                    valid TEI conformant bibliographical records. </p>
+            </div>
+            <div>
+                <head>Part III: Data Model of Feature Documents</head>
+                <p> The data included in the database is supposed to describe a series of salient
+                    linguistic <term>features</term> . The criteria used for the selection of these
+                    features mainly rely on typological considerations and on previously reported
+                    high levels of sociolinguistic salience. The feature descriptions are organised
+                    in documents grouping together feature value observations pertaining to
+                    particular linguistic phenomena, such as e.g. all observations that pertain to
+                    the existential particle, observations that pertain the reflexes of Classical
+                    Arabic interdentals in the modern varieties etc. </p>
+                <p> Every linguistic feature has a set of <term>feature values</term> that indicates
+                    the different attested realizations of a specific feature in the studied
+                    varieties. The documentation of an occurrence of (a) specific feature value(s)
+                    in a specific location is accomplished via <term>feature value
+                        observations</term> . Every <term>feature value observation</term> specifies
+                    that one particular feature value occurs in a specific place and is produced by
+                    a specific speaker or group of speakers. When information about the speakers and
+                    their communities is available, the sociolinguistic profile of the speaker or
+                    the community of speakers is indicated via the <term>personGrp</term> element,
+                    which may specify values regarding the speakers' tribal affiliation, religious
+                    affiliation, age group, gender, and native language among others. When specific
+                    remarks that are not codifiable via previously explained elements are due, they
+                    are indicated in prose within the exception notes, constraint notes or general
+                    notes. </p>
+                <p> Some sources may group the combination of realizations of feature values and
+                    characterize them as a linguistic variety or dialect. These linguistic varieties
+                    may be labelled after the approximate location they are spoken at, and/or the
+                    community of speakers that use them. These common groupings or varieties are
+                    indicated via language <term>Profiles</term> and provide additional historical
+                    and linguistic information available regarding a specific variety according to
+                    one or more sources. </p>
+                <div>
+                    <head>Header</head>
+                    <p>The status of the working document is indicated in the <att>status</att>
+                        attribute of the <gi>revisionDesc</gi> element of the document. It can have
+                        the following values: <list>
                             <item>
-                                <term>validated</term>                                    
-                                    indicates that the document has been validated and
-                                    no changes are required/the document is valid.
-                                </item>
-                                <item>
-                                    <term>needsRevision</term>                                        
-                                        shows that after the validation the document
-                                        has to be revised and corrected in order to be valid.
-                                    </item>
-                                    <item>
-                                        <term>revised</term>                                            
-                                            indicates that the necessary change have been made
-                                            and the document is ready to be validated again.
-                                        </item>
-                                        <item>
-                                            <term>completed</term>                                                
-                                                indicates that this is the final version of the
-                                                document and the file is ready to be published.
-                                            </item>
-                                        </list>
-                                    </p>
-                                    <p>                                        
-                                        Regarding data input procedures, different geographical areas have been assigned
-                                        to particular members of the team. The individual researchers are then responsible
-                                        for the compilation and encoding of the data of a specific location. The name of
-                                        this
-                                    <term>responsible person</term>                                        
-                                        is codified in 2 or 3 capital letters: ex.
-                                        Johanna Doppelbauer is JD, Ana Iriarte Diez is AID in accordance with the
-                                        information given in
-                                    <name>wibarab_dmp.xml</name> file. </p>
-                                </div>
-                                <div>
-                                    <head>Feature Values</head>
-                                    <p>Every document starts with a list of <term>feature values</term>                                        
-                                        which represents
-                                        one of the results of the research carried out on the particular phenomenon.
-                                    </p>
-                                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                        <head>Feature Values</head>
-                                        <list type="featureValues">
-                                            <item xml:id="pr_p1c_nihna">
-                                                <label>niḥna/nəḥna</label>
-                                            </item>
-                                            <item xml:id="pr_p1c_ihna">
-                                                <label>iḥna/əḥnä</label>
-                                            </item> ... </list>
-                                        </egXML>
-                                    </div>
-                                    <div>
-                                        <head>Feature Value Observation</head>
-                                        <p>                                            
-                                            In their initial experiments, the working group made use of a highly abstracted
-                                            system made up of typefied
-                                        <gi>fs</gi>                                            
-                                            (feature structure) elements. However,
-                                            after extensive discussions and consultations with experts, we remodelled the
-                                            entire structure attempting to make use of more expressive existing TEI elements.
-                                            To come up with a solution fitting our particular goals, we customized the TEI
-                                            Schema attempting to reuse as many TEI elements as possible. So far, we managed to
-                                            do with only one additional new element (
-                                        <gi>featureValueObservation</gi>                                            
-                                            ) which
-                                            had emerged from our discussions and appeared to serve the particular purpose
-                                            best. This element is centre piece of the customisation, all other elements exist
-                                            in the
-                                        <name>Guidelines</name>                                            
-                                            and appear to be applicable without twisting their
-                                            originally intended semantics too much.
-                                        </p>
-                                        <p>The newly introduced <gi>featureValueObservation</gi>                                            
-                                            element contains at least
-                                            three pieces of information:
-                                        <list>
-                                            <item>an indication of the linguistic phenomenon being described,</item>
-                                            <item>information on the location of the phenomenon,</item>
-                                            <item>and the source where the information comes from.</item>
-                                        </list> The specificities of the respective elements are descibed below. </p>
-                                        <p>                                            
-                                            To describe this kind of data we made use of the following mandatory elements.
-                                            Each
-                                        <term>feature value observation</term>                                            
-                                            is based on the occurence of a
-                                            linguistic feature in a specific way, i.e., a
-                                        <term>feature realisation</term>                                            
-                                            .
-                                            These realisations are grouped into a set of
-                                        <term>feature values</term>                                            
-                                            , hence
-                                            the
-                                        <term>feature value observation</term>                                            
-                                            shows how a source attests that a given
-                                            feature is realised by a certain
-                                        <term>Feature Value</term>                                            
-                                            at a specific
-                                            location. The
-                                        <term>feature value observation</term>                                            
-                                            can additionally include
-                                            information on the person group for which this particular
-                                        <term>                                            
-                                            Feature
-                                            Realisation
-                                        </term>                                            
-                                            is attested and it is linked to the language profile of the
-                                            variety to which it is customarily assigned.
-                                        </p>
-                                        <p>                                            
-                                            The occurrence of multiple values or of multiple sources for a specific place or
-                                            variety will then result in the creation of additional
-                                        <gi>featureValueObservation</gi>                                            
-                                            elements. Each
-                                        <gi>featureValueObservation</gi> is identifiable by a unique <att>xml:id</att>                                            
-                                            attribute.
-                                        </p>
-                                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                            <wib:featureValueObservation xml:id="fv_0048"
-                                                                         status="done"
-                                                                         resp="dmp:AID">
-                                                <name type="featureValue"
-                                                      ref="#q_q" />
-                                                <bibl corresp="zot:Younes2013"
-                                                      type="publication" />
-                                                <placeName ref="geo:wadi_khalid" />
-                                                <lang target="..\profiles\vicav_profile_LBN-ATI.xml" />
-                                                <personGrp role="tribe"
-                                                           corresp="pgr:arab_al_atij" />
-                                                <personGrp role="age"
-                                                           corresp="pgr:young" />
-                                                <cit xml:id="ct_0028"
-                                                     type="example">
-                                                    <quote>qalīl</quote>
-                                                    <cit type="translation">
-                                                        <quote>a little</quote>
-                                                    </cit>
-                                                </cit>
-                                                <note type="general">                                                    
-                                                    Young speakers often use q in words realized with /g/ or
-                                                    /ǧ/ by older speakers, ex.
-                                                <foreign>gilīl</foreign>                                                    
-                                                    or
-                                                <foreign>ǧilīl</foreign> - <foreign>qalīl</foreign> «few, little»</note>
-                                            </wib:featureValueObservation>
-                                        </egXML>
-                                        <div>
-                                            <head>Mandatory Elements</head>
-                                            <div>
-                                                <head>Feature Name</head>
-                                                <p>                                                    
-                                                    The feature description at the beginning of each document contains a list of
-                                                    feature values that allow to neatly group the observed linguistic phenomena
-                                                    under clearly identifiable labels. This information is referred to in each
-                                                <gi>featureValueObservation</gi> in a <gi>name</gi>                                                    
-                                                    element with a
-                                                <att>ref</att>                                                    
-                                                    attributing pointing to particular items of the list of
-                                                    feature names.
-                                                </p>
-                                            </div>
-                                            <div>
-                                                <head>Place</head>
-                                                <p>                                                    
-                                                    Locations to anchor particular phenomena geographically are indicated via
-                                                <gi>placeName</gi> elements and a <att>ref</att>                                                    
-                                                    attribute pointing to
-                                                    the
-                                                <name>VICAV Geodata File</name>.</p>
-                                            </div>
-                                            <div>
-                                                <head>Source</head>
-                                                <p>Each <gi>featureValueObservation</gi>                                                    
-                                                    element needs to have at least one
-                                                    source indicating where the information comes from. The most common case is
-                                                <tag>bibl type="publication"</tag>                                                    
-                                                    , the reference to the bibliography
-                                                    (Zotero file) being put in a
-                                                <att>corresp</att>                                                    
-                                                    attribute. However, as
-                                                    mentioned above the
-                                                <gi>bibl</gi>                                                    
-                                                    element can also contain a reference to a
-                                                    fieldwork campaign or personal communication (source file).
-                                                </p>
-                                                <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                                    <wib:featureValueObservation xml:id="fv_0027"
-                                                                                 status="done"
-                                                                                 resp="dmp:AID">
-                                                        <name type="featureValue"
-                                                              ref="#pr_p1c_ihna" />
-                                                        <bibl corresp="zot:Behnstedt2019"
-                                                              type="publication" />
-                                                        <placeName ref="geo:jurdeih" /> ... </wib:featureValueObservation>
-                                                    </egXML>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <head>Optional Elements</head>
-                                                <p>Additionally, a <gi>featureValueObservation</gi>                                                    
-                                                    may contain a number of
-                                                    optional elements outlined below.
-                                                </p>
-                                                <div>
-                                                    <head>Person Group</head>
-                                                    <p>
-                                                        <term>Person Group</term>                                                            
-                                                            describes any specific discernable group of people
-                                                            that have the realization of a feature in common such as tribal affiliation,
-                                                            religious affiliation, age group, gender, native language, etc. To encode
-                                                            this kind of informatin, we make use
-                                                        <term>persGroup</term>                                                            
-                                                            element(s) which
-                                                            are furnished with
-                                                        <att>role</att>                                                            
-                                                            attributes that specify tribe, age,
-                                                            religion, sociolinguistic perception and native language) that further
-                                                            specifies information about the speakers from whom the realization of a
-                                                            feature value has been observed or documented in the source.
-                                                        </p>
-                                                    </div>
-                                                    <div>
-                                                        <head>Variety</head>
-                                                        <p>                                                            
-                                                            Information on a particular linguistic variety can be specified in a
-                                                        <name>VICAV language profile</name>. A <gi>lang</gi>                                                            
-                                                            element contains a
-                                                            link to a VICAV profile. The
-                                                        <term>language profile</term>                                                            
-                                                            is a file which
-                                                            contains any extra information collected about the variety and the place
-                                                            where it is spoken. These Profiles are named after our internal naming
-                                                            System with a 3 letter countrycode, dash, variety code. Some Profiles have
-                                                            been generated from pre-existing data from VICAV. For varieties that do not
-                                                            have a profile, stubs have been created.
-                                                        </p>
-                                                    </div>
-                                                    <div>
-                                                        <head>Source Representation</head>
-                                                        <p>                                                            
-                                                            In contrast to the normalized transciptions of the feature values,
-                                                        <term>source representations</term>                                                            
-                                                            allow the encoders to give the
-                                                            original representation as found in the sources, reflecting the literal
-                                                            information from the source quoted in its original form, i.e. in the
-                                                            source's transcription system.
-                                                        </p>
-                                                        <p>This information is encoded making use of <code lang="XPath">cit[@type="sourceRepresentation"]/quote</code> constructs.</p>
-                                                    </div>
-                                                    <div>
-                                                        <head>Examples</head>
-                                                        <p>                                                            
-                                                            Examples can be used to illustrate a feature value. They are taken from
-                                                            original source and furnished with English translations. They are encoded
-                                                            with
-                                                        <code lang="XPath">cit[@type="example"]/quote</code>                                                            
-                                                            constructs which
-                                                            have been chosen in analogy to common lexicographic procedures.
-                                                        </p>
-                                                    </div>
-                                                    <div>
-                                                        <head>Notes</head>
-                                                        <p>                                                            
-                                                            Notes can be used to clarify specificities of a particular phenomenon,
-                                                            especially exceptions and constraints concerning the realization of a
-                                                            feature value.
-                                                        </p>
-                                                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                                            <note type="general">                                                                
-                                                                Rosenhouse (1984: 17) notes similar
-                                                            <foreign>ʔəḥna</foreign> and <foreign>ʔaḥna</foreign>                                                                
-                                                                forms of this
-                                                                pronoun for the north Israeli Bedouin without further specification
-                                                            </note>
-                                                        </egXML>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <head>Discussion Section</head>
-                                                <p>Each feature document can contain a section (<tag>div type="description"</tag>                                                    
-                                                    )
-                                                    with a description of the linguistic feature it describes, which is located right
-                                                    after the feature value list.
-                                                </p>
-                                                <p>                                                    
-                                                    In order to include a copy of the feature value list in the description, one may
-                                                    use the
-                                                <gi>divGen</gi> element with an <att>type</att>                                                    
-                                                    attribute with the value
-                                                <val>featureValues</val>.</p>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <head>Part IV: Working Files</head>
-                                            <p>                                                
-                                                The information described in Part II and III above is organized and stored in
-                                                different types of documents. The document type describing the linguistic features
-                                                has an open number of representations. This category of files comprises the feature
-                                                files and the language profiles. However, the feature files contain numerous links to
-                                                reusable data stored in five external files. These `background´ files are used to
-                                                compile the linguistic features and to document the sources:
-                                            <list>
-                                                <item>vicav_biblio_tei_zotero.xml</item>
-                                                <item>vicav_geodata.xml</item>
-                                                <item>wibarab_dmp.xml</item>
-                                                <item>wibarab_sources.xml</item>
-                                                <item>wibarab_PersonGroup.xml</item>
-                                            </list>
-                                        </p>
-                                        <div>
-                                            <head>The Feature Files</head>
-                                            <p>The <term>feature files</term> each describe one linguistic feature. <ref type="file"
-                                                 target="\010_manannot\features\" />
-                                        </p>
-                                        <p>The <term>feature value observations</term>                                            
-                                            are stored according to different
-                                            features in what has been dubbed in the project's internal nomenclature
-                                        <term>feature files</term>                                            
-                                            . These files have names that consist in the prefix
-                                        <hi>features_</hi>                                            
-                                            and a concise title describing the contents of the
-                                            documents. Document names must not contain special characters or whitespace.
-                                            Hence, there is one file for every feature where the
-                                        <term>                                            
-                                            feature value
-                                            observations
-                                        </term>                                            
-                                            of that particular feature are stored together. At the
-                                            beginning of every feature file there is a prose description of the phenomenon at
-                                            hand followed by an explanation of the feature values and its symbolic
-                                            representation in the map.
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <head>The Language Profiles</head>
-                                        <p>The <term>profiles</term> each describe an arabic variety. <ref type="file"
-                                             target="\010_manannot\profiles\" />
-                                    </p>
-                                </div>
-                                <div>
-                                    <head>VICAV Geodata (vicav_geodata.xml)</head>
-                                    <p>The <term>
-                                        <ref type="file"
-                                             target="\010_manannot\vicav_geodata.xml">geodata</ref>
-                                    </term>                                        
-                                        file contains a list of all the referenced places.
-                                        Wherever possible, the place listed in this document refers to respective entries
-                                        in the
-                                    <name>GeoNames</name> geographical database.</p>
-                                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                        <place type="geo"
-                                               xml:id="aaouade">
-                                            <placeName>Aaouade</placeName>
-                                            <location>
-                                                <geo decls="#dms">34°37'34"N 36°22'38"E</geo>
-                                                <geo decls="#dd">34.62611 36.37722</geo>
-                                                <country key="LB">Lebanon</country>
-                                                <country />
-                                            </location>
-                                            <idno type="geoNames">2266310</idno>
-                                            <note>Location for the ʕAṛaḅ al-ʕAtīǧ</note>
-                                        </place>
-                                    </egXML>
-                                </div>
-                                <div>
-                                    <head>VICAV Zotero file (vicav_biblio_tei_zotero.xml)</head>
-                                    <p>The <term>biblio</term>                                        
-                                        file contains all the sources found in the Zotero library.
-                                    <ref type="file"
-                                         target="/010_manannot/vicav_biblio.xml" />                                        
-                                        The export from the
-                                        Zotero database is enriched with geo-locations making use of the above described
-                                        geodata file. Furthermore, all publications used in the WIBARAB Feature datatabase
-                                        include information about the period when the data the publication is based on was
-                                        collected; the decade of data collection (doc). Whereever possible, this
-                                        information was extracted from he publications in question and marked with a
-                                        "level of certainty = high" tag. However, in the cases where the publication does
-                                        not specify the decade of data collection this information is estimated by the
-                                        following method: when the when the publication was published in the first half of
-                                        a decade, the decade of data collection is estimated to be the previous decade,
-                                        e.g. for a publication published in 1994, the decade of data collection is
-                                        estimated to be the 1980s. When the publication was published in the second half
-                                        of a decade, it is estimated that the data was collected in the same decade, e.g.
-                                        for a publication published in 1995, the decade of data collection is estimated to
-                                        be the 1990s. In order to let the database users know that this is merely an
-                                        estimate, a "level of certainty = low" tag is added to these entries in
-                                        Zotero.
-                                    </p>
-                                </div>
-                                <div>
-                                    <head>WIBARAB Individual Contributors (wibarab_dmp.xml)</head>
-                                    <p>The <term>Data Management Plan</term>                                        
-                                        contains a description of the project
-                                        including information about the researchers who contribute to the database. The
-                                    <term>Responsible Person</term> attribute links to this list. <ref type="file"
-                                         target="\featuredb\010_manannot\wibarab_dmp.xml" />
-                                </p>
-                            </div>
-                            <div>
-                                <head>WIBARAB Campaigns (wibarab_sources.xml)</head>
-                                <p>The <term>sources</term>                                    
-                                    file contains all sources that are not from Zotero, i.e.,
-                                    fieldwork campains and personal communications.
-                                <ref type="file"
-                                     target="featuredb\010_manannot\wibarab_sources.xml" />
+                                <term>draft</term> is set when the input of the <term> feature value
+                                    observations </term> is still not complete, data collection is
+                                still ongoing. </item>
+                            <item>
+                                <term>done</term> is used when the input of the <term> feature value
+                                    oservations </term> is considered as completed by the <term>
+                                    responsible person </term> which is encoded as the
+                                    <gi>author</gi> of the document, implying that the major part of
+                                data input has been done and the document is ready to be validated. </item>
+                            <item>
+                                <term>validated</term> indicates that the document has been
+                                validated and no changes are required/the document is valid. </item>
+                            <item>
+                                <term>needsRevision</term> shows that after the validation the
+                                document has to be revised and corrected in order to be valid. </item>
+                            <item>
+                                <term>revised</term> indicates that the necessary change have been
+                                made and the document is ready to be validated again. </item>
+                            <item>
+                                <term>completed</term> indicates that this is the final version of
+                                the document and the file is ready to be published. </item>
+                        </list>
+                    </p>
+                    <p> Regarding data input procedures, different geographical areas have been
+                        assigned to particular members of the team. The individual researchers are
+                        then responsible for the compilation and encoding of the data of a specific
+                        location. The name of this <term>responsible person</term> is codified in 2
+                        or 3 capital letters: ex. Johanna Doppelbauer is JD, Ana Iriarte Diez is AID
+                        in accordance with the information given in <name>wibarab_dmp.xml</name>
+                        file. </p>
+                </div>
+                <div>
+                    <head>Feature Values</head>
+                    <p>Every document starts with a list of <term>feature values</term> which
+                        represents one of the results of the research carried out on the particular
+                        phenomenon. </p>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <head>Feature Values</head>
+                        <list type="featureValues">
+                            <item xml:id="pr_p1c_nihna">
+                                <label>niḥna/nəḥna</label>
+                            </item>
+                            <item xml:id="pr_p1c_ihna">
+                                <label>iḥna/əḥnä</label>
+                            </item> ... </list>
+                    </egXML>
+                </div>
+                <div>
+                    <head>Feature Value Observation</head>
+                    <p> In their initial experiments, the working group made use of a highly
+                        abstracted system made up of typefied <gi>fs</gi> (feature structure)
+                        elements. However, after extensive discussions and consultations with
+                        experts, we remodelled the entire structure attempting to make use of more
+                        expressive existing TEI elements. To come up with a solution fitting our
+                        particular goals, we customized the TEI Schema attempting to reuse as many
+                        TEI elements as possible. So far, we managed to do with only one additional
+                        new element ( <gi>featureValueObservation</gi> ) which had emerged from our
+                        discussions and appeared to serve the particular purpose best. This element
+                        is centre piece of the customisation, all other elements exist in the
+                            <name>Guidelines</name> and appear to be applicable without twisting
+                        their originally intended semantics too much. </p>
+                    <p>The newly introduced <gi>featureValueObservation</gi> element contains at
+                        least three pieces of information: <list>
+                            <item>an indication of the linguistic phenomenon being described,</item>
+                            <item>information on the location of the phenomenon,</item>
+                            <item>and the source where the information comes from.</item>
+                        </list> The specificities of the respective elements are descibed below. </p>
+                    <p> To describe this kind of data we made use of the following mandatory
+                        elements. Each <term>feature value observation</term> is based on the
+                        occurence of a linguistic feature in a specific way, i.e., a <term>feature
+                            realisation</term> . These realisations are grouped into a set of
+                            <term>feature values</term> , hence the <term>feature value
+                            observation</term> shows how a source attests that a given feature is
+                        realised by a certain <term>Feature Value</term> at a specific location. The
+                            <term>feature value observation</term> can additionally include
+                        information on the person group for which this particular <term> Feature
+                            Realisation </term> is attested and it is linked to the language profile
+                        of the variety to which it is customarily assigned. </p>
+                    <p> The occurrence of multiple values or of multiple sources for a specific
+                        place or variety will then result in the creation of additional
+                            <gi>featureValueObservation</gi> elements. Each
+                            <gi>featureValueObservation</gi> is identifiable by a unique
+                            <att>xml:id</att> attribute. </p>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <wib:featureValueObservation xml:id="fv_0048" status="done" resp="dmp:AID">
+                            <name type="featureValue" ref="#q_q"/>
+                            <bibl corresp="zot:Younes2013" type="publication"/>
+                            <placeName ref="geo:wadi_khalid"/>
+                            <lang target="..\profiles\vicav_profile_LBN-ATI.xml"/>
+                            <personGrp role="tribe" corresp="pgr:arab_al_atij"/>
+                            <personGrp role="age" corresp="pgr:young"/>
+                            <cit xml:id="ct_0028" type="example">
+                                <quote>qalīl</quote>
+                                <cit type="translation">
+                                    <quote>a little</quote>
+                                </cit>
+                            </cit>
+                            <note type="general"> Young speakers often use q in words realized with
+                                /g/ or /ǧ/ by older speakers, ex. <foreign>gilīl</foreign> or
+                                    <foreign>ǧilīl</foreign> - <foreign>qalīl</foreign> «few,
+                                little»</note>
+                        </wib:featureValueObservation>
+                    </egXML>
+                    <div>
+                        <head>Mandatory Elements</head>
+                        <div>
+                            <head>Feature Name</head>
+                            <p> The feature description at the beginning of each document contains a
+                                list of feature values that allow to neatly group the observed
+                                linguistic phenomena under clearly identifiable labels. This
+                                information is referred to in each <gi>featureValueObservation</gi>
+                                in a <gi>name</gi> element with a <att>ref</att> attributing
+                                pointing to particular items of the list of feature names. </p>
+                        </div>
+                        <div>
+                            <head>Place</head>
+                            <p> Locations to anchor particular phenomena geographically are
+                                indicated via <gi>placeName</gi> elements and a <att>ref</att>
+                                attribute pointing to the <name>VICAV Geodata File</name>.</p>
+                        </div>
+                        <div>
+                            <head>Source</head>
+                            <p>Each <gi>featureValueObservation</gi> element needs to have at least
+                                one source indicating where the information comes from. The most
+                                common case is <tag>bibl type="publication"</tag> , the reference to
+                                the bibliography (Zotero file) being put in a <att>corresp</att>
+                                attribute. However, as mentioned above the <gi>bibl</gi> element can
+                                also contain a reference to a fieldwork campaign or personal
+                                communication (source file). </p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <wib:featureValueObservation xml:id="fv_0027" status="done"
+                                    resp="dmp:AID">
+                                    <name type="featureValue" ref="#pr_p1c_ihna"/>
+                                    <bibl corresp="zot:Behnstedt2019" type="publication"/>
+                                    <placeName ref="geo:jurdeih"/> ...
+                                </wib:featureValueObservation>
+                            </egXML>
+                        </div>
+                        <div>
+                            <head>Variety</head>
+                            <p>                                                            
+                                Information on a particular linguistic variety can be specified in a
+                                <name>VICAV language profile</name>. A <gi>lang</gi>                                                            
+                                element contains a
+                                link to a VICAV profile. The
+                                <term>language profile</term>                                                            
+                                is a file which
+                                contains any extra information collected about the variety and the place
+                                where it is spoken. These Profiles are named after our internal naming
+                                System with a 3 letter countrycode, dash, variety code. Some Profiles have
+                                been generated from pre-existing data from VICAV. For varieties that do not
+                                have a profile, stubs have been created.
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <head>Optional Elements</head>
+                        <p>Additionally, a <gi>featureValueObservation</gi> may contain a number of
+                            optional elements outlined below. </p>
+                        <div>
+                            <head>Person Group</head>
+                            <p>
+                                <term>Person Group</term> describes any specific discernable group
+                                of people that have the realization of a feature in common such as
+                                tribal affiliation, religious affiliation, age group, gender, native
+                                language, etc. To encode this kind of informatin, we make use
+                                    <term>persGroup</term> element(s) which are furnished with
+                                    <att>role</att> attributes that specify tribe, age, religion,
+                                sociolinguistic perception and native language) that further
+                                specifies information about the speakers from whom the realization
+                                of a feature value has been observed or documented in the source.
                             </p>
                         </div>
                         <div>
-                            <head>WIBARAB Person Groups (wibarab_PersonGroup.xml)</head>
-                            <p>The <term>PersonGroup</term>                                
-                                list contains different person groups, such as
-                                religion, age, gender, native language, sociolinguistics and affiliation to a
-                                tribe.
-                            <ref type="file"
-                                 target="\010_manannot\wibarab_PersonGroup.xml" />
-                        </p>
+                            <head>Variety</head>
+                            <p> Information on a particular linguistic variety can be specified in a
+                                    <name>VICAV language profile</name>. A <gi>lang</gi> element
+                                contains a link to a VICAV profile. The <term>language
+                                    profile</term> is a file which contains any extra information
+                                collected about the variety and the place where it is spoken. These
+                                Profiles are named after our internal naming System with a 3 letter
+                                countrycode, dash, variety code. Some Profiles have been generated
+                                from pre-existing data from VICAV. For varieties that do not have a
+                                profile, stubs have been created. </p>
+                        </div>
+                        <div>
+                            <head>Source Representation</head>
+                            <p> In contrast to the normalized transciptions of the feature values,
+                                    <term>source representations</term> allow the encoders to give
+                                the original representation as found in the sources, reflecting the
+                                literal information from the source quoted in its original form,
+                                i.e. in the source's transcription system. </p>
+                            <p>This information is encoded making use of <code lang="XPath"
+                                    >cit[@type="sourceRepresentation"]/quote</code> constructs.</p>
+                        </div>
+                        <div>
+                            <head>Examples</head>
+                            <p> Examples can be used to illustrate a feature value. They are taken
+                                from original source and furnished with English translations. They
+                                are encoded with <code lang="XPath"
+                                    >cit[@type="example"]/quote</code> constructs which have been
+                                chosen in analogy to common lexicographic procedures. </p>
+                        </div>
+                        <div>
+                            <head>Notes</head>
+                            <p> Notes can be used to clarify specificities of a particular
+                                phenomenon, especially exceptions and constraints concerning the
+                                realization of a feature value. </p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <note type="general"> Rosenhouse (1984: 17) notes similar
+                                        <foreign>ʔəḥna</foreign> and <foreign>ʔaḥna</foreign> forms
+                                    of this pronoun for the north Israeli Bedouin without further
+                                    specification </note>
+                            </egXML>
+                        </div>
                     </div>
                 </div>
                 <div>
-                    <head>Part V: Other Components of the Infrastructure</head>
-                    <p>The Schema of the customisation ... ; namespace wib:</p>
-                    <p>                        
-                        The TEI data has for the most part been created making use of ˂TEI˃Enricher, a freely
-                        available XML editor that has been developed at the ACDH-CH. This tool is geared to
-                        the use with TEI conformant data in research contexts.
+                    <head>Discussion Section</head>
+                    <p>Each feature document can contain a section (<tag>div
+                            type="description"</tag> ) with a description of the linguistic feature
+                        it describes, which is located right after the feature value list. </p>
+                    <p> In order to include a copy of the feature value list in the description, one
+                        may use the <gi>divGen</gi> element with an <att>type</att> attribute with
+                        the value <val>featureValues</val>.</p>
+                </div>
+            </div>
+            <div>
+                <head>Part IV: Working Files</head>
+                <p> The information described in Part II and III above is organized and stored in
+                    different types of documents. The document type describing the linguistic
+                    features has an open number of representations. This category of files comprises
+                    the feature files and the language profiles. However, the feature files contain
+                    numerous links to reusable data stored in five external files. These
+                    `background´ files are used to compile the linguistic features and to document
+                    the sources: <list>
+                        <item>vicav_biblio_tei_zotero.xml</item>
+                        <item>vicav_geodata.xml</item>
+                        <item>wibarab_dmp.xml</item>
+                        <item>wibarab_sources.xml</item>
+                        <item>wibarab_PersonGroup.xml</item>
+                    </list>
+                </p>
+                <div>
+                    <head>The Feature Files</head>
+                    <p>The <term>feature files</term> each describe one linguistic feature. <ref
+                            type="file" target="\010_manannot\features\"/>
                     </p>
-                    <p>                        
-                        Data visualisation during the editing process is accomplished through an XSL file
-                    <name>tei_fs_2_html__001.xsl</name>                        
-                        which has also been used to integrate the data
-                        stored in the various files described in Part IV.
+                    <p>The <term>feature value observations</term> are stored according to different
+                        features in what has been dubbed in the project's internal nomenclature
+                            <term>feature files</term> . These files have names that consist in the
+                        prefix <hi>features_</hi> and a concise title describing the contents of the
+                        documents. Document names must not contain special characters or whitespace.
+                        Hence, there is one file for every feature where the <term> feature value
+                            observations </term> of that particular feature are stored together. At
+                        the beginning of every feature file there is a prose description of the
+                        phenomenon at hand followed by an explanation of the feature values and its
+                        symbolic representation in the map. </p>
+                </div>
+                <div>
+                    <head>The Language Profiles</head>
+                    <p>The <term>profiles</term> each describe an arabic variety. <ref type="file"
+                            target="\010_manannot\profiles\"/>
                     </p>
                 </div>
                 <div>
-                    <head>Part VI: Formal Specification</head>
-                    <schemaSpec ident="featuredb"
-                                prefix="tei_"
-                                start="TEI"
-                                xml:lang="en"
-                                defaultExceptions="https://id.acdh.oeaw.ac.at/langDesc http://www.tei-c.org/ns/1.0
+                    <head>VICAV Geodata (vicav_geodata.xml)</head>
+                    <p>The <term>
+                            <ref type="file" target="\010_manannot\vicav_geodata.xml">geodata</ref>
+                        </term> file contains a list of all the referenced places. Wherever
+                        possible, the place listed in this document refers to respective entries in
+                        the <name>GeoNames</name> geographical database.</p>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <place type="geo" xml:id="aaouade">
+                            <placeName>Aaouade</placeName>
+                            <location>
+                                <geo decls="#dms">34°37'34"N 36°22'38"E</geo>
+                                <geo decls="#dd">34.62611 36.37722</geo>
+                                <country key="LB">Lebanon</country>
+                                <country/>
+                            </location>
+                            <idno type="geoNames">2266310</idno>
+                            <note>Location for the ʕAṛaḅ al-ʕAtīǧ</note>
+                        </place>
+                    </egXML>
+                </div>
+                <div>
+                    <head>VICAV Zotero file (vicav_biblio_tei_zotero.xml)</head>
+                    <p>The <term>biblio</term> file contains all the sources found in the Zotero
+                        library. <ref type="file" target="/010_manannot/vicav_biblio.xml"/> The
+                        export from the Zotero database is enriched with geo-locations making use of
+                        the above described geodata file. Furthermore, all publications used in the
+                        WIBARAB Feature datatabase include information about the period when the
+                        data the publication is based on was collected; the decade of data
+                        collection (doc). Whereever possible, this information was extracted from he
+                        publications in question and marked with a "level of certainty = high" tag.
+                        However, in the cases where the publication does not specify the decade of
+                        data collection this information is estimated by the following method: when
+                        the when the publication was published in the first half of a decade, the
+                        decade of data collection is estimated to be the previous decade, e.g. for a
+                        publication published in 1994, the decade of data collection is estimated to
+                        be the 1980s. When the publication was published in the second half of a
+                        decade, it is estimated that the data was collected in the same decade, e.g.
+                        for a publication published in 1995, the decade of data collection is
+                        estimated to be the 1990s. In order to let the database users know that this
+                        is merely an estimate, a "level of certainty = low" tag is added to these
+                        entries in Zotero. </p>
+                </div>
+                <div>
+                    <head>WIBARAB Individual Contributors (wibarab_dmp.xml)</head>
+                    <p>The <term>Data Management Plan</term> contains a description of the project
+                        including information about the researchers who contribute to the database.
+                        The <term>Responsible Person</term> attribute links to this list. <ref
+                            type="file" target="\featuredb\010_manannot\wibarab_dmp.xml"/>
+                    </p>
+                </div>
+                <div>
+                    <head>WIBARAB Campaigns (wibarab_sources.xml)</head>
+                    <p>The <term>sources</term> file contains all sources that are not from Zotero,
+                        i.e., fieldwork campains and personal communications. <ref type="file"
+                            target="featuredb\010_manannot\wibarab_sources.xml"/>
+                    </p>
+                </div>
+                <div>
+                    <head>WIBARAB Person Groups (wibarab_PersonGroup.xml)</head>
+                    <p>The <term>PersonGroup</term> list contains different person groups, such as
+                        religion, age, gender, native language, sociolinguistics and affiliation to
+                        a tribe. <ref type="file" target="\010_manannot\wibarab_PersonGroup.xml"/>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <head>Part V: Other Components of the Infrastructure</head>
+                <p>The Schema of the customisation ... ; namespace wib:</p>
+                <p> The TEI data has for the most part been created making use of ˂TEI˃Enricher, a
+                    freely available XML editor that has been developed at the ACDH-CH. This tool is
+                    geared to the use with TEI conformant data in research contexts. </p>
+                <p> Data visualisation during the editing process is accomplished through an XSL
+                    file <name>tei_fs_2_html__001.xsl</name> which has also been used to integrate
+                    the data stored in the various files described in Part IV. </p>
+            </div>
+            <div>
+                <head>Part VI: Formal Specification</head>
+                <schemaSpec ident="featuredb" prefix="tei_" start="TEI" xml:lang="en"
+                    defaultExceptions="https://id.acdh.oeaw.ac.at/langDesc http://www.tei-c.org/ns/1.0
 &#xA;&#xA;&#xA;               teix:egXML">
-                        <moduleRef key="core"
-                                   exclude="abbr add addrLine address author analytic divGen
+                    <moduleRef key="core" exclude="abbr add addrLine address author analytic divGen
 &#xA;&#xA;&#xA;                  editor email gap head imprint item label list listBibl measure measureGrp mentioned
 &#xA;&#xA;&#xA;                  monogr note num pb postBox postCode ptr pubPlace publisher ref resp respStmt
-&#xA;&#xA;&#xA;                  rs series street term title unclear unit" />
-                        <elementSpec ident="TEI"
-                                     mode="change"
-                                     module="textstructure">
-                            <desc xml:lang="en">                                
-                                In the context of the WIBARAB Feature Database, each TEI
-                                feature document contains the description of one feature, the possible ways it
-                                can be realised (
-                            <soCalled>feature values</soCalled>) in a <tag>                                
-                                list
-                                type="features"
-                            </tag>                                
-                                and documented observations of this specific feature
-                                in literature or in the data collected in the fieldwork of WIBARAB.
-                            </desc>
-                            <!-- DS 2023-04-21 removing xsi:schemaLocation attribute (added for the RNG schema) because it should not be re-defined in the XSD output -->
-                            <!-- <attList>
+&#xA;&#xA;&#xA;                  rs series street term title unclear unit"/>
+                    <elementSpec ident="TEI" mode="change" module="textstructure">
+                        <desc xml:lang="en"> In the context of the WIBARAB Feature Database, each
+                            TEI feature document contains the description of one feature, the
+                            possible ways it can be realised ( <soCalled>feature values</soCalled>)
+                            in a <tag> list type="features" </tag> and documented observations of
+                            this specific feature in literature or in the data collected in the
+                            fieldwork of WIBARAB. </desc>
+                        <!-- DS 2023-04-21 removing xsi:schemaLocation attribute (added for the RNG schema) because it should not be re-defined in the XSD output -->
+                        <!-- <attList>
                        <attDef ns="http://www.w3.org/2001/XMLSchema-instance" ident="schemaLocation" mode="add">
                           <datatype minOccurs="1" maxOccurs="2">
                              <dataRef key="teidata.pointer"/>
                           </datatype>
                        </attDef>
                        </attList> -->
-                        </elementSpec>
-                        <moduleRef key="tei" />
-                        <moduleRef key="dictionaries"
-                                   include="lang" />
-                        <moduleRef key="header"
-                                   include="abstract appInfo application availability
+                    </elementSpec>
+                    <moduleRef key="tei"/>
+                    <moduleRef key="dictionaries" include="lang"/>
+                    <moduleRef key="header" include="abstract appInfo application availability
 &#xA;&#xA;&#xA;                     catDesc catRef category change classCode classDecl correspAction correspContext correspDesc
 &#xA;&#xA;&#xA;                     creation distributor edition editionStmt encodingDesc extent fileDesc funder geoDecl
 &#xA;&#xA;&#xA;                     hyphenation keywords langUsage language licence listChange listPrefixDef namespace
 &#xA;&#xA;&#xA;                     normalization notesStmt prefixDef principal profileDesc projectDesc publicationStmt
 &#xA;&#xA;&#xA;                     punctuation quotation ref revisionDesc samplingDecl seriesStmt sourceDesc sponsor
-&#xA;&#xA;&#xA;                     stdVals taxonomy teiHeader textClass titleStmt unitDecl unitDef" />
-                        <elementSpec ident="TEI"
-                                     mode="change"
-                                     module="textstructure">
-                            <desc xml:lang="en">                                
-                                In the context of the WIBARAB Feature Database, each TEI
-                                feature document contains the description of one feature, the possible ways it
-                                can be realised (
-                            <soCalled>feature values</soCalled>) in a <tag>                                
-                                list
-                                type="features"
-                            </tag>                                
-                                and documented observations of this specific feature
-                                in literature or in the data collected in the fieldwork of WIBARAB.
-                            </desc>
-                        </elementSpec>
-                        <moduleRef key="corpus" />
-                        <moduleRef key="textstructure"
-                                   include="TEI back body front div text byline" />
-                        <moduleRef key="namesdates"
-                                   include="affiliation age birth bloc death
+&#xA;&#xA;&#xA;                     stdVals taxonomy teiHeader textClass titleStmt unitDecl unitDef"/>
+                    <elementSpec ident="TEI" mode="change" module="textstructure">
+                        <desc xml:lang="en"> In the context of the WIBARAB Feature Database, each
+                            TEI feature document contains the description of one feature, the
+                            possible ways it can be realised ( <soCalled>feature values</soCalled>)
+                            in a <tag> list type="features" </tag> and documented observations of
+                            this specific feature in literature or in the data collected in the
+                            fieldwork of WIBARAB. </desc>
+                    </elementSpec>
+                    <moduleRef key="corpus"/>
+                    <moduleRef key="textstructure" include="TEI back body front div text byline"/>
+                    <moduleRef key="namesdates" include="affiliation age birth bloc death
 &#xA;&#xA;&#xA;                        district education event faith forename genName geo geogFeat geogName langKnowledge
 &#xA;&#xA;&#xA;                        langKnown listEvent listOrg listPerson listPlace location nationality occupation
 &#xA;&#xA;&#xA;                        org orgName persName person personGrp place placeName population region residence
-&#xA;&#xA;&#xA;                        settlement socecStatus surename" />
-                        <moduleRef key="linking"
-                                   include="seg" />
-                        <!-- DS 2022-06-23 removing analysis module as long as we don't have
+&#xA;&#xA;&#xA;                        settlement socecStatus surename"/>
+                    <moduleRef key="linking" include="seg"/>
+                    <!-- DS 2022-06-23 removing analysis module as long as we don't have
                         any encoded examples in the data. -->
-                        <!-- <moduleRef key="analysis" include=""/>
+                    <!-- <moduleRef key="analysis" include=""/>
                         att.global.analytic should be probably deleted and @ana be re-defined
                         only on <w> and certain other elements -->
-                        <classSpec type="atts"
-                                   ident="att.global"
-                                   mode="change">
-                            <attList>
-                                <attDef ident="n"
-                                        mode="delete" />
-                            </attList>
-                        </classSpec>
-                        <classSpec type="atts"
-                                   ident="att.editLike"
-                                   mode="delete" />
-                        <classSpec type="atts"
-                                   ident="att.dimensions"
-                                   mode="delete" />
-                        <classSpec type="atts"
-                                   ident="att.ranging"
-                                   mode="delete" />
-                        <classSpec type="atts"
-                                   ident="att.canonical"
-                                   mode="change">
-                            <attList>
-                                <attDef ident="key"
-                                        mode="delete" />
-                            </attList>
-                        </classSpec>
-                        <classSpec type="atts"
-                                   ident="att.global.rendition"
-                                   mode="delete" />
-                        <classSpec type="atts"
-                                   ident="att.global.linking"
-                                   mode="change">
-                            <attList>
-                                <attDef ident="synch"
-                                        mode="delete" />
-                                <attDef ident="sameAs"
-                                        mode="delete" />
-                                <attDef ident="copyOf"
-                                        mode="delete" />
-                                <attDef ident="next"
-                                        mode="delete" />
-                                <attDef ident="prev"
-                                        mode="delete" />
-                                <attDef ident="exclude"
-                                        mode="delete" />
-                                <attDef ident="select"
-                                        mode="delete" />
-                            </attList>
-                        </classSpec>
-                        <elementSpec ident="ptr"
-                                     mode="change">
-                            <desc>pointer to one featureValue in the list of featureValues</desc>
-                        </elementSpec>
-                        <classSpec type="atts"
-                                   ident="att.global.facs"
-                                   mode="delete" />
-                        <classSpec type="atts"
-                                   ident="att.global.change"
-                                   mode="delete" />
-                        <classSpec type="atts"
-                                   ident="att.sortable"
-                                   mode="delete" />
-                        <classSpec type="atts"
-                                   ident="att.typed"
-                                   mode="delete" />
-                        <classSpec type="atts"
-                                   ident="att.declarable"
-                                   mode="delete" />
-                        <classSpec type="atts"
-                                   ident="att.datable.custom"
-                                   mode="delete" />
-                        <classSpec type="atts"
-                                   ident="att.datable.iso"
-                                   mode="delete" />
-                        <classSpec type="atts"
-                                   ident="att.datable.w3c"
-                                   mode="change">
-                            <attList>
-                                <attDef ident="from"
-                                        mode="delete" />
-                                <attDef ident="to"
-                                        mode="delete" />
-                            </attList>
-                        </classSpec>
-                        <elementSpec ident="teiHeader"
-                                     mode="change">
-                            <content>
-                                <sequence>
-                                    <elementRef key="fileDesc" />
-                                    <elementRef key="encodingDesc" />
-                                    <elementRef key="profileDesc"
-                                                minOccurs="1"
-                                                maxOccurs="1" />
-                                    <elementRef key="revisionDesc" />
-                                </sequence>
-                            </content>
-                        </elementSpec>
-                        <elementSpec ident="profileDesc"
-                                     mode="change">
-                            <content>
-                                <elementRef key="textClass"
-                                            minOccurs="1"
-                                            maxOccurs="1" />
-                            </content>
-                        </elementSpec>
-                        <elementSpec ident="textClass"
-                                     mode="change">
-                            <constraintSpec ident="textClassConstraint"
-                                            scheme="schematron">
-                                <constraint>
-                                    <sch:ns prefix="tei"
-                                            uri="http://www.tei-c.org/ns/1.0" />
-                                    <!-- <sch:rule context="/tei:catRef/@target>
+                    <classSpec type="atts" ident="att.global" mode="change">
+                        <attList>
+                            <attDef ident="n" mode="delete"/>
+                        </attList>
+                    </classSpec>
+                    <classSpec type="atts" ident="att.editLike" mode="delete"/>
+                    <classSpec type="atts" ident="att.dimensions" mode="delete"/>
+                    <classSpec type="atts" ident="att.ranging" mode="delete"/>
+                    <classSpec type="atts" ident="att.canonical" mode="change">
+                        <attList>
+                            <attDef ident="key" mode="delete"/>
+                        </attList>
+                    </classSpec>
+                    <classSpec type="atts" ident="att.global.rendition" mode="delete"/>
+                    <classSpec type="atts" ident="att.global.linking" mode="change">
+                        <attList>
+                            <attDef ident="synch" mode="delete"/>
+                            <attDef ident="sameAs" mode="delete"/>
+                            <attDef ident="copyOf" mode="delete"/>
+                            <attDef ident="next" mode="delete"/>
+                            <attDef ident="prev" mode="delete"/>
+                            <attDef ident="exclude" mode="delete"/>
+                            <attDef ident="select" mode="delete"/>
+                        </attList>
+                    </classSpec>
+                    <elementSpec ident="ptr" mode="change">
+                        <desc>pointer to one featureValue in the list of featureValues</desc>
+                    </elementSpec>
+                    <classSpec type="atts" ident="att.global.facs" mode="delete"/>
+                    <classSpec type="atts" ident="att.global.change" mode="delete"/>
+                    <classSpec type="atts" ident="att.sortable" mode="delete"/>
+                    <classSpec type="atts" ident="att.typed" mode="delete"/>
+                    <classSpec type="atts" ident="att.declarable" mode="delete"/>
+                    <classSpec type="atts" ident="att.datable.custom" mode="delete"/>
+                    <classSpec type="atts" ident="att.datable.iso" mode="delete"/>
+                    <classSpec type="atts" ident="att.datable.w3c" mode="change">
+                        <attList>
+                            <attDef ident="from" mode="delete"/>
+                            <attDef ident="to" mode="delete"/>
+                        </attList>
+                    </classSpec>
+                    <elementSpec ident="teiHeader" mode="change">
+                        <content>
+                            <sequence>
+                                <elementRef key="fileDesc"/>
+                                <elementRef key="encodingDesc"/>
+                                <elementRef key="profileDesc" minOccurs="1" maxOccurs="1"/>
+                                <elementRef key="revisionDesc"/>
+                            </sequence>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="profileDesc" mode="change">
+                        <content>
+                            <elementRef key="textClass" minOccurs="1" maxOccurs="1"/>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="textClass" mode="change">
+                        <constraintSpec ident="textClassConstraint" scheme="schematron">
+                            <constraint>
+                                <sch:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>
+                                <!-- <sch:rule context="/tei:catRef/@target>
                            <sch:extends rule="reference"/>  
                         </sch:rule> -->
-                                    <sch:rule context="tei:catRef">
-                                        <sch:let name="target"
-                                                 value="@target" />
-                                        <sch:let name="prefix"
-                                                 value="substring-before($target, ':')" />
-                                        <sch:let name="id"
-                                                 value="substring-after($target, ':')" />
-                                        <sch:let name="prefixDef"
-                                                 value="root()//tei:prefixDef[@ident = $prefix]" />
-                                        <sch:let name="replacementPattern"
-                                                 value="$prefixDef/@replacementPattern" />
-                                        <sch:let name="resolvedTarget"
-                                                 value="replace($replacementPattern, '\$1', $id)" />
-                                        <sch:let name="targetExists"
-                                                 value="doc-available(resolve-uri($resolvedTarget, base-uri($target)))" />
-                                        <sch:assert test="$prefix = 'dmp'">                                            
-                                            The prefix of the target
-                                            "
-                                        <sch:value-of select="$target" />" should be "dmp"</sch:assert>
-                                        <sch:assert test="$targetExists">The target "<sch:value-of select="$target" />" of pointer "<sch:value-of select="$id" />                                            
-                                            "
-                                            cannot be resolved
-                                        </sch:assert>
-                                    </sch:rule>
-                                </constraint>
-                            </constraintSpec>
-                        </elementSpec>
-                        <elementSpec ident="divGen"
-                                     mode="change">
-                            <attList>
-                                <attDef ident="type"
-                                        mode="replace"
-                                        usage="req">
-                                    <valList type="closed">
-                                        <valItem ident="featureValues">
-                                            <desc>list of feature values</desc>
-                                        </valItem>
-                                    </valList>
-                                </attDef>
-                            </attList>
-                        </elementSpec>
-                        <!-- TODO add schematron rules
+                                <sch:rule context="tei:catRef">
+                                    <sch:let name="target" value="@target"/>
+                                    <sch:let name="prefix" value="substring-before($target, ':')"/>
+                                    <sch:let name="id" value="substring-after($target, ':')"/>
+                                    <sch:let name="prefixDef"
+                                        value="root()//tei:prefixDef[@ident = $prefix]"/>
+                                    <sch:let name="replacementPattern"
+                                        value="$prefixDef/@replacementPattern"/>
+                                    <sch:let name="resolvedTarget"
+                                        value="replace($replacementPattern, '\$1', $id)"/>
+                                    <sch:let name="targetExists"
+                                        value="doc-available(resolve-uri($resolvedTarget, base-uri($target)))"/>
+                                    <sch:assert test="$prefix = 'dmp'"> The prefix of the target "
+                                            <sch:value-of select="$target"/>" should be
+                                        "dmp"</sch:assert>
+                                    <sch:assert test="$targetExists">The target "<sch:value-of
+                                            select="$target"/>" of pointer "<sch:value-of
+                                            select="$id"/> " cannot be resolved </sch:assert>
+                                </sch:rule>
+                            </constraint>
+                        </constraintSpec>
+                    </elementSpec>
+                    <elementSpec ident="divGen" mode="change">
+                        <attList>
+                            <attDef ident="type" mode="replace" usage="req">
+                                <valList type="closed">
+                                    <valItem ident="featureValues">
+                                        <desc>list of feature values</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+                    <!-- TODO add schematron rules
 
                            * check existence of <biblScope> when @type = "publication" -->
-                        <elementSpec ident="bibl"
-                                     mode="change">
-                            <content>
-                                <sequence>
-                                    <elementRef key="title"
-                                                minOccurs="0" />
-                                    <elementRef key="biblScope"
-                                                minOccurs="0" />
-                                    <elementRef key="note"
-                                                maxOccurs="unbounded"
-                                                minOccurs="0" />
-                                </sequence>
-                            </content>
-                            <attList>
-                                <attDef ident="type"
-                                        mode="replace">
-                                    <valList type="closed">
-                                        <valItem ident="publication">
-                                            <desc>                                                
-                                                Published written documents, recorded in the VICAV Zotero
-                                                library
-                                            </desc>
-                                        </valItem>
-                                        <valItem ident="personalCommunication">
-                                            <desc>                                                
-                                                Personal communication with native speakers of the variety or
-                                                researchers via phone, e-mail or in person.
-                                            </desc>
-                                        </valItem>
-                                        <valItem ident="fieldwork">
-                                            <desc>                                                
-                                                data from fieldwork conducted by members of the team indcluding
-                                                both campaigns conducted within the project and prior to it.
-                                            </desc>
-                                        </valItem>
-                                    </valList>
-                                </attDef>
-                                <attDef ident="resp"
-                                        mode="delete" />
-                                <attDef ident="status"
-                                        mode="change">
-                                    <desc>                                        
-                                        This attribute is used to indicate references to bibl entries which
-                                        need to be conrolled.
-                                    </desc>
-                                    <valList>
-                                        <valItem ident="CHECKME">
-                                            <desc>                                                
-                                                The value of @corresp needs to be confirmed by the FVO's
-                                                editor.
-                                            </desc>
-                                        </valItem>
-                                    </valList>
-                                </attDef>
-                                <attDef ident="corresp"
-                                        mode="change"
-                                        usage="req" />
-                            </attList>
-                        </elementSpec>
-                        <elementSpec ident="category"
-                                     mode="change">
-                            <attList>
-                                <attDef ident="n"
-                                        mode="add"
-                                        usage="req">
-                                    <datatype maxOccurs="1">
-                                        <dataRef key="teidata.text" />
-                                    </datatype>
-                                </attDef>
-                            </attList>
-                        </elementSpec>
-                        <elementSpec ident="list"
-                                     mode="change">
-                            <attList>
-                                <attDef ident="type"
-                                        mode="replace"
-                                        usage="rec">
-                                    <valList type="closed">
-                                        <valItem ident="featureValues">
-                                            <desc>Feature Values</desc>
-                                        </valItem>
-                                    </valList>
-                                </attDef>
-                            </attList>
-                        </elementSpec>
-                        <elementSpec ident="item"
-                                     mode="change">
-                            <constraintSpec ident="fv-item"
-                                            scheme="schematron">
-                                <constraint>
-                                    <sch:ns prefix="tei"
-                                            uri="http://www.tei-c.org/ns/1.0" />
-                                    <sch:rule context="tei:item[parent::tei:list/@type = 'featureValues']">
-                                        <sch:report test="not(exists(@xml:id[.!='']))">                                            
-                                            missing or empty xml:id on
-                                            featureValue item
-                                        </sch:report>
-                                        <sch:report test="not(exists(tei:label[. != '']))">                                            
-                                            missing label or empty
-                                            xml:id on featureValue item
-                                        </sch:report>
-                                    </sch:rule>
-                                </constraint>
-                            </constraintSpec>
-                            <attList>
-                                <attDef ident="rend"
-                                        mode="change"
-                                        usage="rec">
-                                    <desc>                                        
-                                        in the context of featureValue lists: indicates how the item should be
-                                        represented visually (e.g. on a map)
-                                    </desc>
-                                </attDef>
-                            </attList>
-                        </elementSpec>
-                        <elementSpec ident="name"
-                                     mode="change">
-                            <constraintSpec ident="fvo-name"
-                                            scheme="schematron">
-                                <constraint>
-                                    <sch:ns prefix="tei"
-                                            uri="http://www.tei-c.org/ns/1.0" />
-                                    <sch:ns prefix="fn"
-                                            uri="http://www.w3.org/2005/xpath-function" />
-                                    <sch:ns prefix="wib"
-                                            uri="https://wibarab.acdh.oeaw.ac.at/langDesc" />
-                                    <sch:rule context="tei:name[@type = 'featureValue']/@ref">
-                                        <sch:extends rule="reference" />
-                                    </sch:rule>
-                                    <sch:rule context="tei:placeName/@ref">
-                                        <sch:extends rule="reference" />
-                                    </sch:rule>
-                                    <sch:rule context="tei:bibl/@corresp[not(.='zot:')]">
-                                        <sch:extends rule="reference" />
-                                    </sch:rule>
-                                    <sch:rule context="tei:lang/@corresp">
-                                        <sch:extends rule="reference" />
-                                    </sch:rule>
-                                    <sch:rule context="wib:featureValueObservation/@resp">
-                                        <sch:extends rule="reference" />
-                                    </sch:rule>
-                                    <sch:rule context="tei:personGrp/@corresp">
-                                        <sch:extends rule="reference" />
-                                    </sch:rule>
-                                    <sch:rule id="reference"
-                                              abstract="true">
-                                        <sch:let name="idRef"
-                                                 value="." />
-                                        <sch:let name="localID"
-                                                 value="if (matches($idRef,'^#')) then substring-after($idRef,'#') else ()" />
-                                        <sch:let name="prefixDefs"
-                                                 value="root()//tei:prefixDef" />
-                                        <sch:let name="prefixRegex"
-                                                 value="concat('^(',string-join($prefixDefs/@ident,'|'),'):(.+)$')" />
-                                        <sch:let name="prefixMatch"
-                                                 value="if (exists($prefixDefs)) then analyze-string($idRef, $prefixRegex)//*:group[1] else ()" />
-                                        <sch:let name="referenceMatch"
-                                                 value="if (exists($prefixDefs)) then analyze-string($idRef, $prefixRegex)//*:group[2] else ()" />
-                                        <sch:let name="prefixDef"
-                                                 value="if (exists($prefixMatch)) then $prefixDefs[@ident = $prefixMatch] else ()" />
-                                        <sch:let name="prefixGroups"
-                                                 value="if (exists($prefixMatch)) then analyze-string($referenceMatch, $prefixDef/@matchPattern)//*:group else ()" />
-                                        <sch:let name="grpr1"
-                                                 value="if (exists($prefixGroups[@nr = '1'])) then replace($prefixDef/@replacementPattern,'\$1', $prefixGroups[@nr = '1']) else $prefixDef/@replacementPattern" />
-                                        <sch:let name="grpr2"
-                                                 value="if (exists($prefixGroups[@nr = '2'])) then replace($grpr1,'\$2', $prefixGroups[@nr = '2']) else $grpr1" />
-                                        <sch:let name="grpr3"
-                                                 value="if (exists($prefixGroups[@nr = '3'])) then replace($grpr2,'\$3', $prefixGroups[@nr = '3']) else $grpr2" />
-                                        <sch:let name="grpr4"
-                                                 value="if (exists($prefixGroups[@nr = '4'])) then replace($grpr3,'\$4', $prefixGroups[@nr = '4']) else $grpr3" />
-                                        <sch:let name="grpr5"
-                                                 value="if (exists($prefixGroups[@nr = '5'])) then replace($grpr4,'\$5', $prefixGroups[@nr = '5']) else $grpr4" />
-                                        <sch:let name="grpr6"
-                                                 value="if (exists($prefixGroups[@nr = '6'])) then replace($grpr5,'\$6', $prefixGroups[@nr = '6']) else $grpr5" />
-                                        <sch:let name="grpr7"
-                                                 value="if (exists($prefixGroups[@nr = '7'])) then replace($grpr6,'\$7', $prefixGroups[@nr = '7']) else $grpr6" />
-                                        <sch:let name="grpr8"
-                                                 value="if (exists($prefixGroups[@nr = '8'])) then replace($grpr7,'\$8', $prefixGroups[@nr = '8']) else $grpr7" />
-                                        <sch:let name="grpr9"
-                                                 value="if (exists($prefixGroups[@nr = '9'])) then replace($grpr8,'\$9', $prefixGroups[@nr = '9']) else $grpr8" />
-                                        <sch:let name="grpr10"
-                                                 value="if (exists($prefixGroups[@nr = '10'])) then replace($grpr9,'\$10', $prefixGroups[@nr = '10']) else $grpr9" />
-                                        <sch:let name="targetRaw"
-                                                 value="if ($localID != '') then $idRef else if (exists($prefixDef)) then $grpr10 else $idRef" />
-                                        <sch:let name="target"
-                                                 value="translate($targetRaw,'\','/')" />
-                                        <sch:let name="targetResolves"
-                                                 value="if ($localID != '' ) then exists(root()//*[@xml:id = $localID]) else if (matches($idRef,'^(http|https)')) then true() else doc-available(resolve-uri($target, base-uri($idRef)))" />
-                                        <sch:report test="$target = ''">unexpected target "<sch:value-of select="$idRef" />" in reference <sch:value-of select="local-name($idRef)" />
-                                    </sch:report>
-                                    <sch:assert test="$targetResolves">the target "<sch:value-of select="$target" />" of pointer "<sch:value-of select="$idRef" />                                        
-                                        "
-                                        cannot be resolved
-                                    </sch:assert>
-                                    <sch:report test="count(tokenize($idRef,' ')) gt 1">                                        
-                                        pointer
-                                        "
-                                    <sch:value-of select="$idRef" />                                        
-                                        " contains more than one references
-                                        (whitespace)
-                                    </sch:report>
+                    <elementSpec ident="bibl" mode="change">
+                        <content>
+                            <sequence>
+                                <elementRef key="title" minOccurs="0"/>
+                                <elementRef key="biblScope" minOccurs="0"/>
+                                <elementRef key="note" maxOccurs="unbounded" minOccurs="0"/>
+                            </sequence>
+                        </content>
+                        <attList>
+                            <attDef ident="type" mode="replace">
+                                <valList type="closed">
+                                    <valItem ident="publication">
+                                        <desc> Published written documents, recorded in the VICAV
+                                            Zotero library </desc>
+                                    </valItem>
+                                    <valItem ident="personalCommunication">
+                                        <desc> Personal communication with native speakers of the
+                                            variety or researchers via phone, e-mail or in person.
+                                        </desc>
+                                    </valItem>
+                                    <valItem ident="fieldwork">
+                                        <desc> data from fieldwork conducted by members of the team
+                                            indcluding both campaigns conducted within the project
+                                            and prior to it. </desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                            <attDef ident="resp" mode="delete"/>
+                            <attDef ident="status" mode="change">
+                                <desc> This attribute is used to indicate references to bibl entries
+                                    which need to be conrolled. </desc>
+                                <valList>
+                                    <valItem ident="CHECKME">
+                                        <desc> The value of @corresp needs to be confirmed by the
+                                            FVO's editor. </desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                            <attDef ident="corresp" mode="change" usage="req"/>
+                        </attList>
+                    </elementSpec>
+                    <elementSpec ident="category" mode="change">
+                        <attList>
+                            <attDef ident="n" mode="add" usage="req">
+                                <datatype maxOccurs="1">
+                                    <dataRef key="teidata.text"/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+                    <elementSpec ident="list" mode="change">
+                        <attList>
+                            <attDef ident="type" mode="replace" usage="rec">
+                                <valList type="closed">
+                                    <valItem ident="featureValues">
+                                        <desc>Feature Values</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+                    <elementSpec ident="item" mode="change">
+                        <constraintSpec ident="fv-item" scheme="schematron">
+                            <constraint>
+                                <sch:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>
+                                <sch:rule
+                                    context="tei:item[parent::tei:list/@type = 'featureValues']">
+                                    <sch:report test="not(exists(@xml:id[.!='']))"> missing or empty
+                                        xml:id on featureValue item </sch:report>
+                                    <sch:report test="not(exists(tei:label[. != '']))"> missing
+                                        label or empty xml:id on featureValue item </sch:report>
                                 </sch:rule>
                             </constraint>
                         </constraintSpec>
                         <attList>
-                            <attDef ident="type"
-                                    mode="replace"
-                                    usage="rec">
+                            <attDef ident="rend" mode="change" usage="rec">
+                                <desc> in the context of featureValue lists: indicates how the item
+                                    should be represented visually (e.g. on a map) </desc>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+                    <elementSpec ident="name" mode="change">
+                        <constraintSpec ident="fvo-name" scheme="schematron">
+                            <constraint>
+                                <sch:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>
+                                <sch:ns prefix="fn" uri="http://www.w3.org/2005/xpath-function"/>
+                                <sch:ns prefix="wib" uri="https://wibarab.acdh.oeaw.ac.at/langDesc"/>
+                                <sch:rule context="tei:name[@type = 'featureValue']/@ref">
+                                    <sch:extends rule="reference"/>
+                                </sch:rule>
+                                <sch:rule context="tei:placeName/@ref">
+                                    <sch:extends rule="reference"/>
+                                </sch:rule>
+                                <sch:rule context="tei:bibl/@corresp[not(.='zot:')]">
+                                    <sch:extends rule="reference"/>
+                                </sch:rule>
+                                <sch:rule context="tei:lang/@corresp">
+                                    <sch:extends rule="reference"/>
+                                </sch:rule>
+                                <sch:rule context="wib:featureValueObservation/@resp">
+                                    <sch:extends rule="reference"/>
+                                </sch:rule>
+                                <sch:rule context="tei:personGrp/@corresp">
+                                    <sch:extends rule="reference"/>
+                                </sch:rule>
+                                <sch:rule id="reference" abstract="true">
+                                    <sch:let name="idRef" value="."/>
+                                    <sch:let name="localID"
+                                        value="if (matches($idRef,'^#')) then substring-after($idRef,'#') else ()"/>
+                                    <sch:let name="prefixDefs" value="root()//tei:prefixDef"/>
+                                    <sch:let name="prefixRegex"
+                                        value="concat('^(',string-join($prefixDefs/@ident,'|'),'):(.+)$')"/>
+                                    <sch:let name="prefixMatch"
+                                        value="if (exists($prefixDefs)) then analyze-string($idRef, $prefixRegex)//*:group[1] else ()"/>
+                                    <sch:let name="referenceMatch"
+                                        value="if (exists($prefixDefs)) then analyze-string($idRef, $prefixRegex)//*:group[2] else ()"/>
+                                    <sch:let name="prefixDef"
+                                        value="if (exists($prefixMatch)) then $prefixDefs[@ident = $prefixMatch] else ()"/>
+                                    <sch:let name="prefixGroups"
+                                        value="if (exists($prefixMatch)) then analyze-string($referenceMatch, $prefixDef/@matchPattern)//*:group else ()"/>
+                                    <sch:let name="grpr1"
+                                        value="if (exists($prefixGroups[@nr = '1'])) then replace($prefixDef/@replacementPattern,'\$1', $prefixGroups[@nr = '1']) else $prefixDef/@replacementPattern"/>
+                                    <sch:let name="grpr2"
+                                        value="if (exists($prefixGroups[@nr = '2'])) then replace($grpr1,'\$2', $prefixGroups[@nr = '2']) else $grpr1"/>
+                                    <sch:let name="grpr3"
+                                        value="if (exists($prefixGroups[@nr = '3'])) then replace($grpr2,'\$3', $prefixGroups[@nr = '3']) else $grpr2"/>
+                                    <sch:let name="grpr4"
+                                        value="if (exists($prefixGroups[@nr = '4'])) then replace($grpr3,'\$4', $prefixGroups[@nr = '4']) else $grpr3"/>
+                                    <sch:let name="grpr5"
+                                        value="if (exists($prefixGroups[@nr = '5'])) then replace($grpr4,'\$5', $prefixGroups[@nr = '5']) else $grpr4"/>
+                                    <sch:let name="grpr6"
+                                        value="if (exists($prefixGroups[@nr = '6'])) then replace($grpr5,'\$6', $prefixGroups[@nr = '6']) else $grpr5"/>
+                                    <sch:let name="grpr7"
+                                        value="if (exists($prefixGroups[@nr = '7'])) then replace($grpr6,'\$7', $prefixGroups[@nr = '7']) else $grpr6"/>
+                                    <sch:let name="grpr8"
+                                        value="if (exists($prefixGroups[@nr = '8'])) then replace($grpr7,'\$8', $prefixGroups[@nr = '8']) else $grpr7"/>
+                                    <sch:let name="grpr9"
+                                        value="if (exists($prefixGroups[@nr = '9'])) then replace($grpr8,'\$9', $prefixGroups[@nr = '9']) else $grpr8"/>
+                                    <sch:let name="grpr10"
+                                        value="if (exists($prefixGroups[@nr = '10'])) then replace($grpr9,'\$10', $prefixGroups[@nr = '10']) else $grpr9"/>
+                                    <sch:let name="targetRaw"
+                                        value="if ($localID != '') then $idRef else if (exists($prefixDef)) then $grpr10 else $idRef"/>
+                                    <sch:let name="target" value="translate($targetRaw,'\','/')"/>
+                                    <sch:let name="targetResolves"
+                                        value="if ($localID != '' ) then exists(root()//*[@xml:id = $localID]) else if (matches($idRef,'^(http|https)')) then true() else doc-available(resolve-uri($target, base-uri($idRef)))"/>
+                                    <sch:report test="$target = ''">unexpected target "<sch:value-of
+                                            select="$idRef"/>" in reference <sch:value-of
+                                            select="local-name($idRef)"/>
+                                    </sch:report>
+                                    <sch:assert test="$targetResolves">the target "<sch:value-of
+                                            select="$target"/>" of pointer "<sch:value-of
+                                            select="$idRef"/> " cannot be resolved </sch:assert>
+                                    <sch:report test="count(tokenize($idRef,' ')) gt 1"> pointer "
+                                            <sch:value-of select="$idRef"/> " contains more than one
+                                        references (whitespace) </sch:report>
+                                </sch:rule>
+                            </constraint>
+                        </constraintSpec>
+                        <attList>
+                            <attDef ident="type" mode="replace" usage="rec">
                                 <valList type="closed">
-                                    <valItem ident="variety" />
-                                    <valItem ident="tribe" />
-                                    <valItem ident="person" />
-                                    <valItem ident="feature" />
-                                    <valItem ident="featureValue" />
+                                    <valItem ident="variety"/>
+                                    <valItem ident="tribe"/>
+                                    <valItem ident="person"/>
+                                    <valItem ident="feature"/>
+                                    <valItem ident="featureValue"/>
                                 </valList>
                             </attDef>
                         </attList>
                         <!-- TODO add Schematron rule to enforce @source on name[@type="dialect"] -->
                     </elementSpec>
-                    <elementSpec ident="personGrp"
-                                 mode="change">
+                    <elementSpec ident="personGrp" mode="change">
                         <attList>
-                            <attDef ident="role"
-                                    usage="req"
-                                    mode="replace">
-                                <desc>                                    
-                                    documents speaker traits that are specified to be relevant
-                                    sociolinguistically in the sources and therefore may be necessary for the
-                                    correct and accurate interpretation of cerain
-                                    featureValueObservations.
-                                </desc>
+                            <attDef ident="role" usage="req" mode="replace">
+                                <desc> documents speaker traits that are specified to be relevant
+                                    sociolinguistically in the sources and therefore may be
+                                    necessary for the correct and accurate interpretation of cerain
+                                    featureValueObservations. </desc>
                                 <valList type="closed">
-                                    <valItem ident="tribe" />
-                                    <valItem ident="religion" />
-                                    <valItem ident="ageGroup" />
-                                    <valItem ident="gender" />
-                                    <valItem ident="firstLanguage" />
-                                    <valItem ident="socio" />
+                                    <valItem ident="tribe"/>
+                                    <valItem ident="religion"/>
+                                    <valItem ident="ageGroup"/>
+                                    <valItem ident="gender"/>
+                                    <valItem ident="firstLanguage"/>
+                                    <valItem ident="socio"/>
                                 </valList>
                                 <exemplum>
                                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                                        <name type="featureValue"
-                                              ref="#q_g_affr2" />
-                                        <personGrp role="tribe"
-                                                   corresp="pgr:arab_maslax" />
-                                        <personGrp role="age"
-                                                   corresp="pgr:old" />
-                                        <personGrp role="gender"
-                                                   corresp="pgr:male" />
+                                        <name type="featureValue" ref="#q_g_affr2"/>
+                                        <personGrp role="tribe" corresp="pgr:arab_maslax"/>
+                                        <personGrp role="age" corresp="pgr:old"/>
+                                        <personGrp role="gender" corresp="pgr:male"/>
                                     </egXML>
-                                    <p>                                        
-                                        For instance, in the example above the featureValue #q_g_affr2 has
-                                        only been documented amongst old men that belong to the Arab Maslax
-                                        tribe, which would exclude all the women of this tribe, as well as all
-                                        the middle-age and young male speakers.
-                                    </p>
+                                    <p> For instance, in the example above the featureValue
+                                        #q_g_affr2 has only been documented amongst old men that
+                                        belong to the Arab Maslax tribe, which would exclude all the
+                                        women of this tribe, as well as all the middle-age and young
+                                        male speakers. </p>
                                 </exemplum>
                                 <remarks versionDate="2023-02-24">
-                                    <p>The coexistence of several <gi>personGrp</gi>                                        
-                                        elements should be
-                                        interpreted as a conjunction, i.e. combined by a logical "AND", this
-                                        is, it should be interpreted as the combination of these two or more
-                                        roles, and would therefore exclusive of all the other roles.
-                                    </p>
-                                    <p>                                        
-                                        This attribute is (mis-)used as a ad-hoc short-cut for a more verbose
-                                        markup construct using
-                                    <gi>trait</gi> and <gi>desc</gi>.</p>
-                                    <p>In a final version, all <gi>personGrp</gi>                                        
-                                        elements within a
-                                    <gi>featureValueObservation</gi>                                        
-                                        will be merged into one, with
-                                        their content being transformed into
-                                    <gi>trait</gi> elements.</p>
+                                    <p>The coexistence of several <gi>personGrp</gi> elements should
+                                        be interpreted as a conjunction, i.e. combined by a logical
+                                        "AND", this is, it should be interpreted as the combination
+                                        of these two or more roles, and would therefore exclusive of
+                                        all the other roles. </p>
+                                    <p> This attribute is (mis-)used as a ad-hoc short-cut for a
+                                        more verbose markup construct using <gi>trait</gi> and
+                                            <gi>desc</gi>.</p>
+                                    <p>In a final version, all <gi>personGrp</gi> elements within a
+                                            <gi>featureValueObservation</gi> will be merged into
+                                        one, with their content being transformed into
+                                            <gi>trait</gi> elements.</p>
                                 </remarks>
                             </attDef>
                             <!-- <attDef ident="corresp" usage="req" mode="add">                                                   
@@ -1242,272 +909,194 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     </attDef> -->
                         </attList>
                     </elementSpec>
-                    <elementSpec ident="settlement"
-                                 mode="change"
-                                 module="namesdates">
+                    <elementSpec ident="settlement" mode="change" module="namesdates">
                         <attList>
-                            <attDef ident="ref"
-                                    usage="req"
-                                    mode="change" />
+                            <attDef ident="ref" usage="req" mode="change"/>
                         </attList>
                     </elementSpec>
-                    <elementSpec ident="div"
-                                 mode="change">
-                        <constraintSpec ident="div-description"
-                                        scheme="schematron">
+                    <elementSpec ident="div" mode="change">
+                        <constraintSpec ident="div-description" scheme="schematron">
                             <constraint>
-                                <sch:ns prefix="tei"
-                                        uri="http://www.tei-c.org/ns/1.0" />
+                                <sch:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>
                                 <sch:rule context="tei:div[@type = 'description']">
-                                    <sch:assert test="child::tei:byline">                                        
-                                        'byline' element is
-                                        required.
-                                    </sch:assert>
+                                    <sch:assert test="child::tei:byline"> 'byline' element is
+                                        required. </sch:assert>
                                     <!-- <sch:assert test="@resp">'resp' attribute is required.</sch:assert> -->
                                 </sch:rule>
                             </constraint>
                         </constraintSpec>
                         <attList>
-                            <attDef ident="type"
-                                    mode="replace"
-                                    usage="opt">
+                            <attDef ident="type" mode="replace" usage="opt">
                                 <valList type="closed">
-                                    <valItem ident="description" />
-                                    <valItem ident="featureDescription" />
-                                    <valItem ident="featureValueObservations" />
+                                    <valItem ident="description"/>
+                                    <valItem ident="featureDescription"/>
+                                    <valItem ident="featureValueObservations"/>
                                 </valList>
                             </attDef>
                         </attList>
                     </elementSpec>
-                    <elementSpec ident="byline"
-                                 mode="change">
+                    <elementSpec ident="byline" mode="change">
                         <content>
-                            <textNode />
+                            <textNode/>
                         </content>
                     </elementSpec>
-                    <elementSpec ident="region"
-                                 mode="change"
-                                 module="namesdates">
+                    <elementSpec ident="region" mode="change" module="namesdates">
                         <content>
-                            <textNode />
+                            <textNode/>
                         </content>
                         <attList>
-                            <attDef ident="ref"
-                                    mode="change"
-                                    usage="req" />
+                            <attDef ident="ref" mode="change" usage="req"/>
                         </attList>
                     </elementSpec>
-                    <elementSpec ident="language"
-                                 mode="change">
+                    <elementSpec ident="language" mode="change">
                         <attList>
                             <attDef ident="ana">
                                 <valList type="closed">
-                                    <valItem ident="#bedouin" />
-                                    <valItem ident="#sedentary" />
-                                    <valItem ident="#mixed" />
+                                    <valItem ident="#bedouin"/>
+                                    <valItem ident="#sedentary"/>
+                                    <valItem ident="#mixed"/>
                                 </valList>
                             </attDef>
                         </attList>
                     </elementSpec>
-                    <elementSpec ident="note"
-                                 mode="change">
+                    <elementSpec ident="note" mode="change">
                         <attList>
                             <attDef ident="type">
                                 <valList type="closed">
-                                    <valItem ident="constraintNote" />
-                                    <valItem ident="exceptionNote" />
-                                    <valItem ident="general" />
+                                    <valItem ident="constraintNote"/>
+                                    <valItem ident="exceptionNote"/>
+                                    <valItem ident="general"/>
                                 </valList>
                             </attDef>
-                            <attDef ident="source"
-                                    mode="replace"
-                                    usage="opt">
+                            <attDef ident="source" mode="replace" usage="opt">
                                 <desc>
-                                    <att>source</att> on <tag>cit type="example"</tag>                                        
-                                        documents the
-                                        source an example is taken from. In case the value of it points to a
-                                    <gi>person</gi>                                        
-                                        element, that means that the example is provided by an
-                                        informant. When it's absent, the example is drawn from source indicated
-                                        by the
-                                    <gi>bibl</gi>                                        
-                                        element in the parent
-                                    <gi>featureValueObservation</gi>.</desc>
-                                    <datatype minOccurs="1"
-                                              maxOccurs="1">
-                                        <dataRef key="teidata.pointer" />
-                                    </datatype>
-                                </attDef>
-                            </attList>
-                        </elementSpec>
-                        <elementSpec ident="title"
-                                     mode="change">
-                            <attList>
-                                <attDef ident="calendar"
-                                        mode="delete" />
-                                <attDef ident="corresp"
-                                        mode="delete" />
-                                <attDef ident="notAfter"
-                                        mode="delete" />
-                                <attDef ident="notBefore"
-                                        mode="delete" />
-                                <attDef ident="when"
-                                        mode="delete" />
-                                <attDef ident="ref"
-                                        mode="delete" />
-                                <attDef ident="resp"
-                                        mode="delete" />
-                                <attDef ident="type"
-                                        mode="add">
-                                    <valList type="closed">
-                                        <valItem ident="main" />
-                                        <valItem ident="sub" />
-                                        <valItem ident="short" />
-                                    </valList>
-                                </attDef>
-                            </attList>
-                        </elementSpec>
-                        <elementSpec ident="date"
-                                     mode="change">
-                            <attList>
-                                <attDef ident="corresp"
-                                        mode="delete" />
-                                <attDef ident="unit"
-                                        mode="delete" />
-                                <attDef ident="ref"
-                                        mode="delete" />
-                                <attDef ident="resp"
-                                        mode="delete" />
-                                <attDef ident="confidence"
-                                        mode="delete" />
-                                <attDef ident="min"
-                                        mode="delete" />
-                                <attDef ident="quantity"
-                                        mode="delete" />
-                                <attDef ident="period"
-                                        mode="delete" />
-                                <attDef ident="scope"
-                                        mode="delete" />
-                            </attList>
-                        </elementSpec>
-                        <elementSpec ident="cit"
-                                     mode="change">
-                            <attList>
-                                <attDef ident="type"
-                                        mode="add">
-                                    <valList type="closed">
-                                        <valItem ident="example" />
-                                        <valItem ident="sourceRepresentation" />
-                                        <valItem ident="translation" />
-                                    </valList>
-                                </attDef>
-                                <attDef ident="source"
-                                        mode="replace"
-                                        usage="opt">
-                                    <desc>
-                                        <att>source</att> on <tag>cit type="example"</tag>                                            
-                                            documents the
-                                            source an example is taken from. In case the value of it points to a
-                                        <gi>person</gi>                                            
-                                            element, that means that the example is provided by an
-                                            informant. When it's absent, the example is drawn from source indicated
-                                            by the
-                                        <gi>bibl</gi>                                            
-                                            element in the parent
+                                    <att>source</att> on <tag>cit type="example"</tag> documents the
+                                    source an example is taken from. In case the value of it points
+                                    to a <gi>person</gi> element, that means that the example is
+                                    provided by an informant. When it's absent, the example is drawn
+                                    from source indicated by the <gi>bibl</gi> element in the parent
                                         <gi>featureValueObservation</gi>.</desc>
-                                        <datatype minOccurs="1"
-                                                  maxOccurs="1">
-                                            <dataRef key="teidata.pointer" />
-                                        </datatype>
-                                    </attDef>
-                                </attList>
-                                <constraintSpec ident="example-translation"
-                                                scheme="schematron">
-                                    <constraint>
-                                        <sch:ns prefix="tei"
-                                                uri="http://www.tei-c.org/ns/1.0" />
-                                        <sch:rule context="tei:cit[@type = 'example']">
-                                            <sch:assert test="tei:cit[@type='translation']">                                                
-                                                An example should have a translation.
-                                            </sch:assert>
-                                        </sch:rule>
-                                    </constraint>
-                                </constraintSpec>
-                            </elementSpec>
-                            <elementSpec ident="featureValueObservation"
-                                         mode="add"
-                                         ns="https://wibarab.acdh.oeaw.ac.at/langDesc">
-                                <gloss>feature value observation</gloss>
-                                <desc>                                    
-                                    contains data gathered by a source about the realisation of a fiven
-                                    feature
-                                </desc>
-                                <classes>
-                                    <memberOf key="model.divPart" />
-                                    <memberOf key="att.global" />
-                                    <!-- <memberOf key="att.global.responsibility"/> -->
-                                    <memberOf key="att.docStatus" />
-                                </classes>
-                                <content>
-                                    <sequence>
-                                        <elementRef key="name"
-                                                    maxOccurs="1"
-                                                    minOccurs="1" />
-                                        <elementRef key="bibl"
-                                                    minOccurs="1"
-                                                    maxOccurs="1" />
-                                        <elementRef key="placeName"
-                                                    maxOccurs="unbounded"
-                                                    minOccurs="1" />
-                                        <elementRef key="lang"
-                                                    minOccurs="1"
-                                                    maxOccurs="1" />
-                                        <elementRef key="date"
-                                                    minOccurs="0"
-                                                    maxOccurs="1" />
-                                        <alternate minOccurs="0"
-                                                   maxOccurs="unbounded">
-                                            <elementRef key="personGrp" />
-                                            <elementRef key="cit" />
-                                            <elementRef key="note" />
-                                        </alternate>
-                                    </sequence>
-                                </content>
-                                <constraintSpec ident="one-tribe-per-fvo"
-                                                scheme="schematron">
-                                    <constraint>
-                                        <sch:ns prefix="tei"
-                                                uri="http://www.tei-c.org/ns/1.0" />
-                                        <sch:ns prefix="wib"
-                                                uri="https://wibarab.acdh.oeaw.ac.at/langDesc" />
-                                        <sch:rule context="wib:featureValueObservation">
-                                            <sch:assert test="count(tei:personGrp[@role='tribe']) &lt;= 1">                                                
-                                                There should only be one personGrp element with @role="tribe" per featureValueObservation.
-                                            </sch:assert>
-                                        </sch:rule>
-                                    </constraint>
-                                </constraintSpec>
-                                <attList>
-                                    <attDef ident="xml:id"
-                                            mode="change"
-                                            usage="req" />
-                                    <attDef ident="corresp"
-                                            mode="delete" />
-                                </attList>
-                            </elementSpec>
-                            <elementSpec ident="seg"
-                                         mode="change">
-                                <attList>
-                                    <attDef ident="type"
-                                            mode="add">
-                                        <valList type="closed">
-                                            <valItem ident="morph" />
-                                        </valList>
-                                    </attDef>
-                                </attList>
-                            </elementSpec>
-                        </schemaSpec>
-                    </div>
-                </body>
-            </text>
-        </TEI>
+                                <datatype minOccurs="1" maxOccurs="1">
+                                    <dataRef key="teidata.pointer"/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+                    <elementSpec ident="title" mode="change">
+                        <attList>
+                            <attDef ident="calendar" mode="delete"/>
+                            <attDef ident="corresp" mode="delete"/>
+                            <attDef ident="notAfter" mode="delete"/>
+                            <attDef ident="notBefore" mode="delete"/>
+                            <attDef ident="when" mode="delete"/>
+                            <attDef ident="ref" mode="delete"/>
+                            <attDef ident="resp" mode="delete"/>
+                            <attDef ident="type" mode="add">
+                                <valList type="closed">
+                                    <valItem ident="main"/>
+                                    <valItem ident="sub"/>
+                                    <valItem ident="short"/>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+                    <elementSpec ident="date" mode="change">
+                        <attList>
+                            <attDef ident="corresp" mode="delete"/>
+                            <attDef ident="unit" mode="delete"/>
+                            <attDef ident="ref" mode="delete"/>
+                            <attDef ident="resp" mode="delete"/>
+                            <attDef ident="confidence" mode="delete"/>
+                            <attDef ident="min" mode="delete"/>
+                            <attDef ident="quantity" mode="delete"/>
+                            <attDef ident="period" mode="delete"/>
+                            <attDef ident="scope" mode="delete"/>
+                        </attList>
+                    </elementSpec>
+                    <elementSpec ident="cit" mode="change">
+                        <attList>
+                            <attDef ident="type" mode="add">
+                                <valList type="closed">
+                                    <valItem ident="example"/>
+                                    <valItem ident="sourceRepresentation"/>
+                                    <valItem ident="translation"/>
+                                </valList>
+                            </attDef>
+                            <attDef ident="source" mode="replace" usage="opt">
+                                <desc>
+                                    <att>source</att> on <tag>cit type="example"</tag> documents the
+                                    source an example is taken from. In case the value of it points
+                                    to a <gi>person</gi> element, that means that the example is
+                                    provided by an informant. When it's absent, the example is drawn
+                                    from source indicated by the <gi>bibl</gi> element in the parent
+                                        <gi>featureValueObservation</gi>.</desc>
+                                <datatype minOccurs="1" maxOccurs="1">
+                                    <dataRef key="teidata.pointer"/>
+                                </datatype>
+                            </attDef>
+                        </attList>
+                        <constraintSpec ident="example-translation" scheme="schematron">
+                            <constraint>
+                                <sch:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>
+                                <sch:rule context="tei:cit[@type = 'example']">
+                                    <sch:assert test="tei:cit[@type='translation']"> An example
+                                        should have a translation. </sch:assert>
+                                </sch:rule>
+                            </constraint>
+                        </constraintSpec>
+                    </elementSpec>
+                    <elementSpec ident="featureValueObservation" mode="add"
+                        ns="https://wibarab.acdh.oeaw.ac.at/langDesc">
+                        <gloss>feature value observation</gloss>
+                        <desc> contains data gathered by a source about the realisation of a fiven
+                            feature </desc>
+                        <classes>
+                            <memberOf key="model.divPart"/>
+                            <memberOf key="att.global"/>
+                            <!-- <memberOf key="att.global.responsibility"/> -->
+                            <memberOf key="att.docStatus"/>
+                        </classes>
+                        <content>
+                            <sequence>
+                                <elementRef key="name" maxOccurs="1" minOccurs="1"/>
+                                <elementRef key="bibl" minOccurs="1" maxOccurs="1"/>
+                                <elementRef key="placeName" maxOccurs="unbounded" minOccurs="1"/>
+                                <elementRef key="lang" minOccurs="1" maxOccurs="1"/>
+                                <elementRef key="date" minOccurs="0" maxOccurs="1"/>
+                                <alternate minOccurs="0" maxOccurs="unbounded">
+                                    <elementRef key="personGrp"/>
+                                    <elementRef key="cit"/>
+                                    <elementRef key="note"/>
+                                </alternate>
+                            </sequence>
+                        </content>
+                        <constraintSpec ident="one-tribe-per-fvo" scheme="schematron">
+                            <constraint>
+                                <sch:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>
+                                <sch:ns prefix="wib" uri="https://wibarab.acdh.oeaw.ac.at/langDesc"/>
+                                <sch:rule context="wib:featureValueObservation">
+                                    <sch:assert test="count(tei:personGrp[@role='tribe']) &lt;= 1">
+                                        There should only be one personGrp element with
+                                        @role="tribe" per featureValueObservation. </sch:assert>
+                                </sch:rule>
+                            </constraint>
+                        </constraintSpec>
+                        <attList>
+                            <attDef ident="xml:id" mode="change" usage="req"/>
+                            <attDef ident="corresp" mode="delete"/>
+                        </attList>
+                    </elementSpec>
+                    <elementSpec ident="seg" mode="change">
+                        <attList>
+                            <attDef ident="type" mode="add">
+                                <valList type="closed">
+                                    <valItem ident="morph"/>
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+                </schemaSpec>
+            </div>
+        </body>
+    </text>
+</TEI>
