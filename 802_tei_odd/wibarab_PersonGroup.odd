@@ -75,13 +75,13 @@
                             </attDef>
                         </attList>
                     </elementSpec>
-                    <!-- Define what "tribe" should look like -->
+                    <!-- "tribe" specific constraints -->
                     <constraintSpec ident="tribe-residence"
                                     scheme="schematron">
                         <constraint>
                             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                                       context="tei:personGrp[@role='tribe']">
-                                <sch:assert test="tei:residencej">Tribe personGrp elements must contain at least one residence element.</sch:assert>
+                                <sch:assert test="tei:residence">Tribe personGrp elements must contain at least one residence element.</sch:assert>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>

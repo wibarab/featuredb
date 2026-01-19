@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>VICAV Geolocations TEI customization</title>
+                <principal>
+                    <name type="person"
+                          ref="dmp:SP">Stephan Procházka</name>
+                </principal>
+                <author>
+                    <name type="person"
+                          ref="dmp:KS">Kinga Sramó</name>
+                </author>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
+                <date>2025</date>
+                <availability>
+                    <licence>CC BY 4.0</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>This is a born digital document.</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <head>Formal Specification</head>
+                <schemaSpec ident="vicav-geodata"
+                            start="TEI">
+                    <!-- Include basic TEI modules -->
+                    <moduleRef key="tei" />
+                    <moduleRef key="header"
+                               include="teiHeader fileDesc titleStmt publicationStmt sourceDesc" />
+                    <moduleRef key="core"
+                               include="TEI text body note" />
+                    <moduleRef key="namesdates"
+                               include="listPlace place placeName location country" />
+                    <!-- Element specifications -->
+                    <elementSpec ident="place"
+                                 mode="change">
+                        <attList>
+                            <attDef ident="type"
+                                    mode="replace"
+                                    usage="req">
+                                <valList type="closed">
+                                    <valItem ident="geo">
+                                        <desc>Geographical location, point</desc>
+                                    </valItem>
+                                    <valItem ident="reg">
+                                        <desc>Region</desc>
+                                    </valItem>
+                                    <valItem ident="diaGroup">
+                                        <desc>Dialect group area</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                            <attDef ident="xml:id" mode="add" usage="req">
+                                <datatype>
+                                    <dataRef key="teidata.name" />
+                                </datatype>
+                            </attDef>
+                        </attList>
+                        <content>
+                            <sequence>
+                                <elementRef key="placeName"
+                                            minOccurs="1"
+                                            maxOccurs="unbounded" />
+                                <elementRef key="location"
+                                            minOccurs="0"
+                                            maxOccurs="1" />
+                                <elementRef key="idno"
+                                            minOccurs="0"
+                                            maxOccurs="1" />
+                                <elementRef key="note"
+                                            minOccurs="0"
+                                            maxOccurs="unbounded" />
+                            </sequence>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="placeName"
+                                 mode="change">
+                        <attList>
+                            <attDef ident="xml:lang" mode="add" usage="opt">
+                                <!-- do we want to allow other languages? -->
+                                <valList type="semi">
+                                    <valItem ident="ar" />
+                                    <valItem ident="ar-Latn" />
+                                </valList>
+                            </attDef>
+                            <attDef ident="type"
+                                    mode="add"
+                                    usage="opt">
+                                <!-- add a type for the label?-->
+                                <valList type="closed">
+                                    <valItem ident="standard" />
+                                    <valItem ident="local" />
+                                    <valItem ident="altSpell" />
+                                </valList>
+                            </attDef>
+                        </attList>
+                    </elementSpec>
+                    <!-- Our location elements always have two geo elements (dms and dd) and one country element, but do we want to specify/restrict this in the ODD? -->
+                    <elementSpec ident="location" mode="change">
+                        <content>
+                            <sequence>
+                                <elementRef key="geo" minOccurs="2" maxOccurs="2" />
+                                <elementRef key="country" minOccurs="1" maxOccurs="1" />
+                            </sequence>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="geo" mode="change">
+                        <attList>
+                            <attDef ident="decls" mode="add" usage="req">
+                                <valList type="closed">
+                                    <valItem ident="#dms">
+                                        <desc>Degrees, minutes, seconds</desc>
+                                    </valItem>
+                                    <valItem ident="#dd">
+                                        <desc>Decimal degrees</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                        </attList>
+                        <content>
+                            <textNode />
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="country"
+                                 mode="change">
+                        <attList>
+                            <attDef ident="key"
+                                    mode="add"
+                                    usage="req">
+                                <datatype>
+                                    <dataRef key="teidata.text" />
+                                </datatype>
+                                <desc>ISO country code</desc>
+                            </attDef>
+                        </attList>
+                        <content>
+                            <textNode />
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="idno"
+                                 mode="change">
+                        <attList>
+                            <attDef ident="type"
+                                    mode="add"
+                                    usage="req">
+                                <valList type="closed">
+                                    <valItem ident="geoNames">
+                                        <desc>GeoNames identifier</desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                        </attList>
+                        <content>
+                            <textNode />
+                        </content>
+                    </elementSpec>
+                </schemaSpec>
+            </div>
+        </body>
+    </text>
+</TEI>
