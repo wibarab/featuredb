@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:id="vicav_profile_ESP-ADL">
-   <teiHeader><fileDesc>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="vicav_profile_ESP-ADL">
+   <teiHeader>
+      <fileDesc>
          <titleStmt>
             <title>A machine-readable profile of Andalusi Arabic</title>
             <author/>
@@ -18,32 +19,49 @@
          <sourceDesc>
             <p>This is an original digital text</p>
          </sourceDesc>
-      </fileDesc><encodingDesc>
+      </fileDesc>
+      <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="wibarab-dmp.xml#$1"/>
-            <prefixDef ident="zotid" matchPattern="^(.+)$" replacementPattern="vicav_biblio_tei_zotero.xml#$1"/>
+            <prefixDef ident="zotid" matchPattern="^(.+)$"
+               replacementPattern="vicav_biblio_tei_zotero.xml#$1"/>
             <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="vicav_dialects.xml#$1"/>
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="vicav_geodata.xml#$1"/>
          </listPrefixDef>
-      </encodingDesc><profileDesc><langUsage><language role="objectLanguage" ident="ar-x-espadl"><name type="languageVariety">Andalusi Arabic</name><listPlace><place sameAs="geo:andalusia"/></listPlace><date type="languagePeriod"><note>Contemporary</note></date><channel mode="s">spoken</channel></language></langUsage></profileDesc><revisionDesc>
-         <change status="created" when="2022-08-30" who="dmp:RZ">created this document by copying the VICAV file of TCD-BBL, entry by <persName ref="dmp:RZ"/></change>
-      <change when="2025-10-07+02:00" who="dmp:KS">Transformed to Lex-0</change></revisionDesc></teiHeader>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language role="objectLanguage" ident="ar-x-espadl"><name type="languageVariety"
+                  >Andalusi Arabic</name><settingDesc>
+                  <listPlace>
+                     <place sameAs="geo:andalusia"/>
+                  </listPlace>
+               </settingDesc><date type="languagePeriod"><note>Contemporary</note></date><channel
+                  mode="s">spoken</channel></language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change status="created" when="2022-08-30" who="dmp:RZ">created this document by copying
+            the VICAV file of TCD-BBL, entry by <persName ref="dmp:RZ"/></change>
+         <change when="2025-10-07+02:00" who="dmp:KS">Transformed to Lex-0</change>
+      </revisionDesc>
+   </teiHeader>
    <text>
       <body>
          <div>
             <head/>
 
-            
 
-            
 
-            
 
-            
 
-            
 
-            
+
+
+
+
+
+
          </div>
       </body>
    </text>

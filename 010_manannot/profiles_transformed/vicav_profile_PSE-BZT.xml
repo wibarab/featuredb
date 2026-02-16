@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../tools/802_tei_odd/out/vicav_profiles.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../tools/802_tei_odd/out/vicav_profiles.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:id="vicav_profile_PSE-BZT">
-   <teiHeader><fileDesc>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="vicav_profile_PSE-BZT">
+   <teiHeader>
+      <fileDesc>
          <titleStmt>
             <title>A machine-readable profile of Birzeit Arabic</title>
             <author>Claudia Laaber</author>
@@ -20,7 +21,8 @@
          <sourceDesc>
             <p>This is an original digital text</p>
          </sourceDesc>
-      </fileDesc><encodingDesc>
+      </fileDesc>
+      <encodingDesc>
          <tagsDecl partial="true">
             <rendition xml:id="i" scheme="css">font-style:italics;</rendition>
             <rendition xml:id="u" scheme="css">text-decoration:underline;</rendition>
@@ -29,11 +31,14 @@
       </encodingDesc>
       <profileDesc>
          <langUsage>
-            <language role="objectLanguage" ident="ar-x-psebzt" ana="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16837">
+            <language role="objectLanguage" ident="ar-x-psebzt"
+               ana="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16837">
                <name type="languageVariety">Birzeit Arabic</name>
-               <listPlace>
-                  <place sameAs="geo:birzeit"/>
-               </listPlace>
+               <settingDesc>
+                  <listPlace>
+                     <place sameAs="geo:birzeit"/>
+                  </listPlace>
+               </settingDesc>
                <date type="languagePeriod">
                   <note>Contemporary</note>
                </date>
@@ -43,17 +48,25 @@
       </profileDesc>
       <revisionDesc>
          <change status="created" when="2018-05-02T08:20:00Z" who="#">created</change>
-         <change status="draft" when="2020-03-10T09:53:00Z" who="#">last modified (revision 1)</change>
+         <change status="draft" when="2020-03-10T09:53:00Z" who="#">last modified (revision
+            1)</change>
          <change status="draft" when="2020-09-24T09:36:59.735+02:00">transformed to TEI-XML</change>
          <change when="2020-09-24T09:37:00.582+02:00" status="draft"/>
-      <change when="2025-10-07+02:00" who="dmp:KS">Transformed to Lex-0</change></revisionDesc></teiHeader>
+         <change when="2025-10-07+02:00" who="dmp:KS">Transformed to Lex-0</change>
+      </revisionDesc>
+   </teiHeader>
    <text>
       <body>
          <div>
-            <head><figure>
+            <head>
+               <figure>
                   <graphic url="birzeit.jpg"/>
-                  <head type="imgCaption"><ref target="https://commons.wikimedia.org/wiki/File:BirZeit273.JPG">Wikimedia</ref></head>
-               </figure></head>
+                  <head type="imgCaption">
+                     <ref target="https://commons.wikimedia.org/wiki/File:BirZeit273.JPG"
+                        >Wikimedia</ref>
+                  </head>
+               </figure>
+            </head>
 
             <div type="typology">
                <head/>
@@ -62,44 +75,51 @@
             </div>
             <div type="general">
                <head/>
-               <p>Birzeit is a small town located in olive groves slightly north of Ramallah.
-               Its inhabitants were originally mostly Arab Christians, with a Muslim minority.
-               Due to internal migration, the majority of the population today is Muslim.</p>
-               <p>Birzeit is well known for its university, which is considered the most
-               important in the West Bank. It was founded at the beginning of the 20th
-               century officially as a small school for girls from the surrounding villages.
-               During the past decades it has been a focus for Palestinian resistance and
-               has had to endure closures and the arrest and detention of employees and students.</p>
+               <p>Birzeit is a small town located in olive groves slightly north of Ramallah. Its
+                  inhabitants were originally mostly Arab Christians, with a Muslim minority. Due to
+                  internal migration, the majority of the population today is Muslim.</p>
+               <p>Birzeit is well known for its university, which is considered the most important
+                  in the West Bank. It was founded at the beginning of the 20th century officially
+                  as a small school for girls from the surrounding villages. During the past decades
+                  it has been a focus for Palestinian resistance and has had to endure closures and
+                  the arrest and detention of employees and students.</p>
             </div>
 
             <div type="researchHistory">
                <head/>
-               <p><rs type="bibl" ref="zotid:AZF8HN7F">Blau (1960)</rs> is a detailed
-               study on the syntax of the dialect spoken in Birzeit. This work is
-               based on the large collection of folktales published in <hi rendition="#i">Volkserzählungen aus Palästina</hi> by
-               <rs type="bibl" ref="zotid:QIAMW758">Schmidt and Kahle (1918/30)</rs>, which
-               includes transcribed and translated texts collected in Birzeit.</p>
+               <p><rs type="bibl" ref="zotid:AZF8HN7F">Blau (1960)</rs> is a detailed study on the
+                  syntax of the dialect spoken in Birzeit. This work is based on the large
+                  collection of folktales published in <hi rendition="#i">Volkserzählungen aus
+                     Palästina</hi> by <rs type="bibl" ref="zotid:QIAMW758">Schmidt and Kahle
+                     (1918/30)</rs>, which includes transcribed and translated texts collected in
+                  Birzeit.</p>
 
-               <p><rs type="bibl" ref="zotid:DFAEW2X9">Seeger’s (2009a</rs>, <rs type="bibl" ref="zotid:5222DV7M">2009b</rs>, <rs type="bibl" ref="zotid:D36F8BBN">2013)</rs>
-               investigations on the dialects spoken in the villages around Ramallah
-               also contains information about the dialect of Birzeit: <rs type="bibl" ref="zotid:DFAEW2X9">Seeger (2009a)</rs> has
-               text samples with German translations; and <rs type="bibl" ref="zotid:D36F8BBN">Seeger (2013)</rs> is a detailed
-               grammatical sketch and survey of the grammatical features
-               characteristic of the region, though it is not explicitly noted where they are used exactly.</p>
+               <p><rs type="bibl" ref="zotid:DFAEW2X9">Seeger’s (2009a</rs>, <rs type="bibl"
+                     ref="zotid:5222DV7M">2009b</rs>, <rs type="bibl" ref="zotid:D36F8BBN"
+                     >2013)</rs> investigations on the dialects spoken in the villages around
+                  Ramallah also contains information about the dialect of Birzeit: <rs type="bibl"
+                     ref="zotid:DFAEW2X9">Seeger (2009a)</rs> has text samples with German
+                  translations; and <rs type="bibl" ref="zotid:D36F8BBN">Seeger (2013)</rs> is a
+                  detailed grammatical sketch and survey of the grammatical features characteristic
+                  of the region, though it is not explicitly noted where they are used exactly.</p>
             </div>
 
             <div type="dictionaries">
                <head/>
-               <p><rs type="bibl" ref="zotid:CS5IE6NW">Seeger (2017)</rs> is very useful for the dialect of Birzeit.</p>
+               <p><rs type="bibl" ref="zotid:CS5IE6NW">Seeger (2017)</rs> is very useful for the
+                  dialect of Birzeit.</p>
             </div>
             <div type="audioData">
                <head/>
-               <p>8 audio recordings from Birzeit are found in SemArch (<ref target="http://semarch.ub.uni-heidelberg.de">SemArch</ref>):
-               Ramallah 032 Bīr Zēt 1, Ramallah 033 Bīr Zēt 2, Schmidt / Kahle Nr. 22, Schmidt / Kahle Nr. 24, Schmidt / Kahle Nr. 33,
-                 Schmidt / Kahle Nr. 37, Schmidt / Kahle Nr. 80 and Schmidt / Kahle Nr. 81.</p>
+               <p>8 audio recordings from Birzeit are found in SemArch (<ref
+                     target="http://semarch.ub.uni-heidelberg.de">SemArch</ref>): Ramallah 032 Bīr
+                  Zēt 1, Ramallah 033 Bīr Zēt 2, Schmidt / Kahle Nr. 22, Schmidt / Kahle Nr. 24,
+                  Schmidt / Kahle Nr. 33, Schmidt / Kahle Nr. 37, Schmidt / Kahle Nr. 80 and Schmidt
+                  / Kahle Nr. 81.</p>
             </div>
             <div type="bibliography">
-               <p>To view publications on this variety click <rs type="bibl" ref="bibl:geo:Birzeit">here</rs>.</p>
+               <p>To view publications on this variety click <rs type="bibl" ref="bibl:geo:Birzeit"
+                     >here</rs>.</p>
             </div>
          </div>
       </body>

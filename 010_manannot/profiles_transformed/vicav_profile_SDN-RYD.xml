@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:id="vicav_profile_SDN-RYD">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="vicav_profile_SDN-RYD">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -12,7 +12,8 @@
                 <date>2018</date>
                 <availability status="restricted">
                     <p>
-                        <ref type="license" target="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
+                        <ref type="license"
+                            target="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
                     </p>
                 </availability>
             </publicationStmt>
@@ -23,20 +24,27 @@
         <encodingDesc>
             <listPrefixDef>
                 <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="wibarab-dmp.xml#$1"/>
-                <prefixDef ident="zotid" matchPattern="^(.+)$" replacementPattern="vicav_biblio_tei_zotero.xml#$1"/>
-                <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="vicav_dialects.xml#$1"/>
-                <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="vicav_geodata.xml#$1"/>
+                <prefixDef ident="zotid" matchPattern="^(.+)$"
+                    replacementPattern="vicav_biblio_tei_zotero.xml#$1"/>
+                <prefixDef ident="dia" matchPattern="^(.+)$"
+                    replacementPattern="vicav_dialects.xml#$1"/>
+                <prefixDef ident="geo" matchPattern="^(.+)$"
+                    replacementPattern="vicav_geodata.xml#$1"/>
             </listPrefixDef>
         </encodingDesc>
         <profileDesc>
             <langUsage>
                 <language role="objectLanguage" ident="ar-x-sdnryd">
                     <name type="languageVariety">the Arabic of the Rashayda (E Sudan)</name>
-                    <listPlace><place sameAs="geo:mwees"/><place sameAs="geo:halfa_al-jadida"/><place sameAs="geo:khartoum"/><place sameAs="geo:khashm"/><place sameAs="geo:sawakin"/></listPlace>
-                    
-                    
-                     
-                     
+                    <settingDesc>
+                        <listPlace>
+                            <place sameAs="geo:mwees"/>
+                            <place sameAs="geo:halfa_al-jadida"/>
+                            <place sameAs="geo:khartoum"/>
+                            <place sameAs="geo:khashm"/>
+                            <place sameAs="geo:sawakin"/>
+                        </listPlace>
+                    </settingDesc>
                     <date type="languagePeriod">
                         <note>Contemporary</note>
                     </date>
@@ -46,16 +54,17 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change status="created" when="2022-07-12" who="dmp:CM">created this document from vicav_dialects.xml, entry by <persName ref="dmp:GuK"/>
-        </change>
-        <change when="2025-10-07+02:00" who="dmp:KS">Transformed to Lex-0</change>
-    </revisionDesc>
-</teiHeader>
-<text>
-    <body>
-        <div>
-            <head/>
-        </div>
-    </body>
-</text>
+            <change status="created" when="2022-07-12" who="dmp:CM">created this document from
+                vicav_dialects.xml, entry by <persName ref="dmp:GuK"/>
+            </change>
+            <change when="2025-10-07+02:00" who="dmp:KS">Transformed to Lex-0</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <head/>
+            </div>
+        </body>
+    </text>
 </TEI>

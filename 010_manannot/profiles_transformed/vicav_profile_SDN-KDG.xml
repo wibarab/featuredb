@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:id="vicav_profile_SDN-KDG">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="vicav_profile_SDN-KDG">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -12,7 +12,8 @@
                 <date>2022</date>
                 <availability status="restricted">
                     <p>
-                        <ref type="license" target="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
+                        <ref type="license"
+                            target="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
                     </p>
                 </availability>
             </publicationStmt>
@@ -23,16 +24,23 @@
         <encodingDesc>
             <listPrefixDef>
                 <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="wibarab-dmp.xml#$1"/>
-                <prefixDef ident="zotid" matchPattern="^(.+)$" replacementPattern="vicav_biblio_tei_zotero.xml#$1"/>
-                <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="vicav_dialects.xml#$1"/>
-                <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="vicav_geodata.xml#$1"/>
+                <prefixDef ident="zotid" matchPattern="^(.+)$"
+                    replacementPattern="vicav_biblio_tei_zotero.xml#$1"/>
+                <prefixDef ident="dia" matchPattern="^(.+)$"
+                    replacementPattern="vicav_dialects.xml#$1"/>
+                <prefixDef ident="geo" matchPattern="^(.+)$"
+                    replacementPattern="vicav_geodata.xml#$1"/>
             </listPrefixDef>
         </encodingDesc>
         <profileDesc>
             <langUsage>
                 <language role="objectLanguage" ident="ar-x-sdnkdg">
                     <name type="languageVariety">Kadugli Arabic</name>
-                    <listPlace><place sameAs="geo:kadugli"/></listPlace>
+                    <settingDesc>
+                        <listPlace>
+                            <place sameAs="geo:kadugli"/>
+                        </listPlace>
+                    </settingDesc>
                     <date type="languagePeriod">
                         <note>Contemporary</note>
                     </date>
@@ -41,16 +49,17 @@
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change status="created" when="2022-08-30" who="dmp:RZ">created this document by copying the VICAV file of TCD-BBL, entry by <persName ref="dmp:RZ"/>
-        </change>
-        <change when="2025-10-07+02:00" who="dmp:KS">Transformed to Lex-0</change>
-    </revisionDesc>
-</teiHeader>
-<text>
-    <body>
-        <div>
-            <head/>
-        </div>
-    </body>
-</text>
+            <change status="created" when="2022-08-30" who="dmp:RZ">created this document by copying
+                the VICAV file of TCD-BBL, entry by <persName ref="dmp:RZ"/>
+            </change>
+            <change when="2025-10-07+02:00" who="dmp:KS">Transformed to Lex-0</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <head/>
+            </div>
+        </body>
+    </text>
 </TEI>
