@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../tools/802_tei_odd/out/vicav_profiles.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../tools/802_tei_odd/out/vicav_profiles.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:id="vicav_profile_PSE-XLL">
-   <teiHeader><fileDesc>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="vicav_profile_PSE-XLL">
+   <teiHeader>
+      <fileDesc>
          <titleStmt>
             <title>A machine-readable profile of Hebron Arabic</title>
             <respStmt>
@@ -23,7 +24,8 @@
          <sourceDesc>
             <p>This is an original digital text</p>
          </sourceDesc>
-      </fileDesc><encodingDesc>
+      </fileDesc>
+      <encodingDesc>
          <tagsDecl partial="true">
             <rendition xml:id="i" scheme="css">font-style:italics;</rendition>
             <rendition xml:id="u" scheme="css">text-decoration:underline;</rendition>
@@ -32,11 +34,14 @@
       </encodingDesc>
       <profileDesc>
          <langUsage>
-            <language role="objectLanguage" ident="ar-x-psexll" ana="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16838">
+            <language role="objectLanguage" ident="ar-x-psexll"
+               ana="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16838">
                <name type="languageVariety">Hebron Arabic</name>
-               <listPlace>
-                  <place sameAs="geo:hebron"/>
-               </listPlace>
+               <settingDesc>
+                  <listPlace>
+                     <place sameAs="geo:hebron"/>
+                  </listPlace>
+               </settingDesc>
                <date type="languagePeriod">
                   <note>Contemporary</note>
                </date>
@@ -46,10 +51,13 @@
       </profileDesc>
       <revisionDesc>
          <change status="created" when="2018-05-02T08:20:00Z" who="#">created</change>
-         <change status="draft" when="2020-03-10T09:26:00Z" who="#">last modified (revision 1)</change>
+         <change status="draft" when="2020-03-10T09:26:00Z" who="#">last modified (revision
+            1)</change>
          <change status="draft" when="2020-09-24T09:39:58.794+02:00">transformed to TEI-XML</change>
          <change when="2020-09-24T09:39:59.835+02:00" status="draft"/>
-      <change when="2025-10-07+02:00" who="dmp:KS">Transformed to Lex-0</change></revisionDesc></teiHeader>
+         <change when="2025-10-07+02:00" who="dmp:KS">Transformed to Lex-0</change>
+      </revisionDesc>
+   </teiHeader>
 
    <text>
       <body>
@@ -63,33 +71,46 @@
 
             <div type="general">
                <head/>
-               <p>The city of Hebron, located in the Judean mountains, is among the oldest continuously inhabited settlements in the world. It is in the rainiest part of the West Bank and therefore an important agricultural region.</p>
-               <p>Hebron has the Cave of the Patriarchs, a significant religious site for all the Abrahamic religions. Legends states that the Cave contains the graves of Abraham, Sarah, Isaak, Rebecca, Jacob, and Leah. Consequently Hebron is a highly contested city in the Israeli-Palestinian conflict.</p>
-               <p>Hebron is famous for its glass blowing industry in the Old City. The practice of this handicraft in this region dates back past the Romans to the Phoenicians. </p>
+               <p>The city of Hebron, located in the Judean mountains, is among the oldest
+                  continuously inhabited settlements in the world. It is in the rainiest part of the
+                  West Bank and therefore an important agricultural region.</p>
+               <p>Hebron has the Cave of the Patriarchs, a significant religious site for all the
+                  Abrahamic religions. Legends states that the Cave contains the graves of Abraham,
+                  Sarah, Isaak, Rebecca, Jacob, and Leah. Consequently Hebron is a highly contested
+                  city in the Israeli-Palestinian conflict.</p>
+               <p>Hebron is famous for its glass blowing industry in the Old City. The practice of
+                  this handicraft in this region dates back past the Romans to the Phoenicians. </p>
             </div>
 
             <div type="researchHistory">
                <head/>
-               <p>Research on the dialect of Hebron has not been abundant yet. The
-                  linguistic atlas of <rs type="bibl" ref="zotid:S2N4A7KD">Bergsträsser (1915)</rs> provides
-                  some data.</p>
+               <p>Research on the dialect of Hebron has not been abundant yet. The linguistic atlas
+                  of <rs type="bibl" ref="zotid:S2N4A7KD">Bergsträsser (1915)</rs> provides some
+                  data.</p>
 
-               <p><rs type="bibl" ref="zotid:M6GPSEHW">Seeger (1998)</rs> focused
-                  on Hebron Arabic, providing a short linguistic sketch and a collection of texts with German translations. His Master's thesis is
-                  a more detailled sketch containing transcribed texts as well and is available <ref target="https://www.uni-heidelberg.de/fakultaeten/philosophie/ori/semitistik/seeger_xalil_en.html">here</ref>.</p>
+               <p><rs type="bibl" ref="zotid:M6GPSEHW">Seeger (1998)</rs> focused on Hebron Arabic,
+                  providing a short linguistic sketch and a collection of texts with German
+                  translations. His Master's thesis is a more detailled sketch containing
+                  transcribed texts as well and is available <ref
+                     target="https://www.uni-heidelberg.de/fakultaeten/philosophie/ori/semitistik/seeger_xalil_en.html"
+                     >here</ref>.</p>
             </div>
 
             <div type="dictionaries">
                <head/>
-               <p><rs type="bibl" ref="zotid:TZMIRC4K">Denizeau (1960)</rs> is a useful source
-                  for the Palestinian varieties of Arabic. </p>
-               <p><rs type="bibl" ref="zotid:CS5IE6NW">Seeger (2021 forthcoming)</rs> is
-                  a Palestinian Arabic-German dictionary with recent data collected by
-                  Seeger himself as well as older vocabulary taken from earlier research. The University of Heidelberg provides a reading sample on their <ref target="https://www.uni-heidelberg.de/fakultaeten/philosophie/ori/semitistik/seeger_woerterbuch.html">homepage</ref>.</p>
+               <p><rs type="bibl" ref="zotid:TZMIRC4K">Denizeau (1960)</rs> is a useful source for
+                  the Palestinian varieties of Arabic. </p>
+               <p><rs type="bibl" ref="zotid:CS5IE6NW">Seeger (2021 forthcoming)</rs> is a
+                  Palestinian Arabic-German dictionary with recent data collected by Seeger himself
+                  as well as older vocabulary taken from earlier research. The University of
+                  Heidelberg provides a reading sample on their <ref
+                     target="https://www.uni-heidelberg.de/fakultaeten/philosophie/ori/semitistik/seeger_woerterbuch.html"
+                     >homepage</ref>.</p>
             </div>
             <div type="audioData">
                <head/>
-               <p><ref target="http://semarch.ub.uni-heidelberg.de/">SemArch</ref> holds the following items:</p>
+               <p><ref target="http://semarch.ub.uni-heidelberg.de/">SemArch</ref> holds the
+                  following items:</p>
                <list>
                   <item>Xalīl 01 Hast du heute Nacht gut geschlafen?</item>
                   <item>Xalīl 02 Bis auf die Unterhosen</item>
@@ -130,7 +151,8 @@
             </div>
 
             <div type="bibliography">
-               <p>To view publications on this variety click <rs type="bibl" ref="bibl:geo:Hebron">here</rs>.</p>
+               <p>To view publications on this variety click <rs type="bibl" ref="bibl:geo:Hebron"
+                     >here</rs>.</p>
             </div>
          </div>
       </body>

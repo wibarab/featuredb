@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../tools/802_tei_odd/out/vicav_profiles.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../tools/802_tei_odd/out/vicav_profiles.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:id="vicav_profile_JOR-KRK">
-   <teiHeader><fileDesc>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="vicav_profile_JOR-KRK">
+   <teiHeader>
+      <fileDesc>
          <titleStmt>
             <title>A machine-readable profile of Kerak Arabic</title>
             <author>Claudia Laaber</author>
@@ -20,25 +21,31 @@
          <sourceDesc>
             <p>This is an original digital text</p>
          </sourceDesc>
-      </fileDesc><encodingDesc>
+      </fileDesc>
+      <encodingDesc>
          <tagsDecl partial="true">
             <rendition xml:id="i" scheme="css">font-style:italics;</rendition>
             <rendition xml:id="u" scheme="css">text-decoration:underline;</rendition>
             <rendition xml:id="b" scheme="css">font-weight:bold;</rendition>
          </tagsDecl>
          <listPrefixDef>
-            <prefixDef ident="zotid" matchPattern="([a-z]+)" replacementPattern="https://www.zotero.org/groups/2165756/vicav/items/itemKey/#$1">
-               <p>Private URIs with the prefix "zotid" point to the respective bibliographic record in the VICAV Zotero library and/or to a local copy of it.</p>
+            <prefixDef ident="zotid" matchPattern="([a-z]+)"
+               replacementPattern="https://www.zotero.org/groups/2165756/vicav/items/itemKey/#$1">
+               <p>Private URIs with the prefix "zotid" point to the respective bibliographic record
+                  in the VICAV Zotero library and/or to a local copy of it.</p>
             </prefixDef>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
          <langUsage>
-            <language role="objectLanguage" ident="ar-x-jorkrk" ana="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16843">
+            <language role="objectLanguage" ident="ar-x-jorkrk"
+               ana="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16843">
                <name type="languageVariety">Kerak Arabic</name>
-               <listPlace>
-                  <place sameAs="geo:al_karak"/>
-               </listPlace>
+               <settingDesc>
+                  <listPlace>
+                     <place sameAs="geo:al_karak"/>
+                  </listPlace>
+               </settingDesc>
                <date type="languagePeriod">
                   <note>Contemporary</note>
                </date>
@@ -48,18 +55,23 @@
       </profileDesc>
       <revisionDesc>
          <change status="created" when="2019-12-03T09:34:00Z" who="#">created</change>
-         <change status="draft" when="2020-03-07T11:01:00Z" who="#">last modified (revision 1)</change>
+         <change status="draft" when="2020-03-07T11:01:00Z" who="#">last modified (revision
+            1)</change>
          <change status="draft" when="2020-09-24T13:02:37.654+02:00">transformed to TEI-XML</change>
          <change when="2020-09-24T13:02:38.543+02:00" status="draft"/>
-      <change when="2025-10-07+02:00" who="dmp:KS">Transformed to Lex-0</change></revisionDesc></teiHeader>
+         <change when="2025-10-07+02:00" who="dmp:KS">Transformed to Lex-0</change>
+      </revisionDesc>
+   </teiHeader>
 
    <text>
       <body>
          <div>
-            <head><figure>
+            <head>
+               <figure>
                   <graphic url="al_karak.jpg"/>
                   <head type="imgCaption">Stephan Procházka 2011</head>
-               </figure></head>
+               </figure>
+            </head>
             <div type="typology">
                <head/>
                <p rend="typology">East (Mashreq) &gt; Levant &gt; Jordan &gt; South</p>
@@ -67,18 +79,29 @@
             </div>
             <div type="general">
                <head/>
-               <p>The city of Kerak is located in the Moabite Hills just southeast of the Dead Sea basin and is famous for its old crusader castle, the town’s chief landmark. Kerak is the administrative centre of the identically named governorate.</p>
+               <p>The city of Kerak is located in the Moabite Hills just southeast of the Dead Sea
+                  basin and is famous for its old crusader castle, the town’s chief landmark. Kerak
+                  is the administrative centre of the identically named governorate.</p>
             </div>
             <div type="researchHistory">
                <head/>
-               <p>Like many other Jordanian cities, Kerak has been neglected in dialectological research.</p>
-               <p><rs type="bibl" ref="zotid:S2N4A7KD">Bergsträsser’s dialectological atlas (1915)</rs> does give some old data on the dialect there.</p>
-               <p><rs type="bibl" ref="zotid:JPUJDDQR">Palva (1989)</rs> provided a linguistic sketch of the city’s dialect, mainly dealing with its phonology and morphology. Appended to it are various transcribed texts with English translation.</p>
-               <p><rs type="bibl" ref="zotid:22WA4M38">Palva (1992)</rs> discussed the problems encountered in attempting to classify Jordanian Arabic dialects.</p>
-               <p><rs type="bibl" ref="zotid:GA588AQ8">Palva (2008)</rs> contains lists of sedentary and Bedouin elements, including comments on their distribution in Palestine and Jordan as well as a provisional diachronic and synchronic classification of the dialects spoken in Kerak and Salt.</p>
+               <p>Like many other Jordanian cities, Kerak has been neglected in dialectological
+                  research.</p>
+               <p><rs type="bibl" ref="zotid:S2N4A7KD">Bergsträsser’s dialectological atlas
+                     (1915)</rs> does give some old data on the dialect there.</p>
+               <p><rs type="bibl" ref="zotid:JPUJDDQR">Palva (1989)</rs> provided a linguistic
+                  sketch of the city’s dialect, mainly dealing with its phonology and morphology.
+                  Appended to it are various transcribed texts with English translation.</p>
+               <p><rs type="bibl" ref="zotid:22WA4M38">Palva (1992)</rs> discussed the problems
+                  encountered in attempting to classify Jordanian Arabic dialects.</p>
+               <p><rs type="bibl" ref="zotid:GA588AQ8">Palva (2008)</rs> contains lists of sedentary
+                  and Bedouin elements, including comments on their distribution in Palestine and
+                  Jordan as well as a provisional diachronic and synchronic classification of the
+                  dialects spoken in Kerak and Salt.</p>
             </div>
             <div type="bibliography">
-               <p>To view publications on this variety click <rs type="bibl" ref="bibl:geo:Al-Karak">here</rs>.</p>
+               <p>To view publications on this variety click <rs type="bibl" ref="bibl:geo:Al-Karak"
+                     >here</rs>.</p>
             </div>
          </div>
       </body>
