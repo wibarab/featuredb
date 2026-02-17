@@ -88,25 +88,23 @@
                                  mode="change">
                         <attList>
                             <attDef ident="xml:lang" mode="add" usage="opt">
-                                <!-- do we want to allow other languages? -->
-                                <valList type="semi">
+                                <valList type="closed">
                                     <valItem ident="ar" />
                                     <valItem ident="ar-Latn" />
                                 </valList>
                             </attDef>
                             <attDef ident="type"
                                     mode="add"
-                                    usage="opt">
-                                <!-- add a type for the label?-->
+                                    usage="req">
                                 <valList type="closed">
                                     <valItem ident="standard" />
                                     <valItem ident="local" />
-                                    <valItem ident="altSpell" />
+                                    <valItem ident="prefLabel"/>
+                                    <valItem ident="altLabel" />
                                 </valList>
                             </attDef>
                         </attList>
                     </elementSpec>
-                    <!-- Our location elements always have two geo elements (dms and dd) and one country element, but do we want to specify/restrict this in the ODD? -->
                     <elementSpec ident="location" mode="change">
                         <content>
                             <sequence>

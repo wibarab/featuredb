@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../tools/802_tei_odd/out/vicav_profiles.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../tools/802_tei_odd/out/vicav_profiles.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:id="vicav_profile_PSE-BTL">
-   <teiHeader><fileDesc>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="vicav_profile_PSE-BTL">
+   <teiHeader>
+      <fileDesc>
          <titleStmt>
             <title>A machine-readable profile of Bethlehem Arabic</title>
             <author>Claudia Laaber</author>
@@ -20,7 +21,8 @@
          <sourceDesc>
             <p>This is an original digital text</p>
          </sourceDesc>
-      </fileDesc><encodingDesc>
+      </fileDesc>
+      <encodingDesc>
          <tagsDecl partial="true">
             <rendition xml:id="i" scheme="css">font-style:italics;</rendition>
             <rendition xml:id="u" scheme="css">text-decoration:underline;</rendition>
@@ -29,30 +31,39 @@
       </encodingDesc>
       <profileDesc>
          <langUsage>
-            <language role="objectLanguage" ident="ar-x-psebtl" ana="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16837">
+            <language role="objectLanguage" ident="ar-x-psebtl"
+               ana="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16837">
                <name type="languageVariety">Bethlehem Arabic</name>
-               <listPlace>
-                  <place sameAs="geo:bethlehem"/>
-               </listPlace><date type="languagePeriod">
+               <settingDesc>
+                  <listPlace>
+                     <place sameAs="geo:bethlehem"/>
+                  </listPlace>
+               </settingDesc>
+               <date type="languagePeriod">
                   <note>Contemporary</note>
                </date>
                <channel mode="s">spoken</channel>
-      </language>
-      </langUsage>
+            </language>
+         </langUsage>
       </profileDesc>
       <revisionDesc>
          <change status="created" when="2019-12-03T09:44:00Z" who="#">created</change>
-         <change status="draft" when="2020-03-07T12:46:00Z" who="#">last modified (revision 1)</change>
+         <change status="draft" when="2020-03-07T12:46:00Z" who="#">last modified (revision
+            1)</change>
          <change status="draft" when="2020-09-24T09:36:39.071+02:00">transformed to TEI-XML</change>
          <change when="2020-09-24T09:36:40.018+02:00" status="draft"/>
-      <change when="2025-10-07+02:00" who="dmp:KS">Transformed to Lex-0</change></revisionDesc></teiHeader>
+         <change when="2025-10-07+02:00" who="dmp:KS">Transformed to Lex-0</change>
+      </revisionDesc>
+   </teiHeader>
    <text>
       <body>
          <div>
-            <head><figure>
+            <head>
+               <figure>
                   <graphic url="betlehem.jpg"/>
                   <head type="imgCaption">Courtesy Stephan Procházka, 2003</head>
-               </figure></head>
+               </figure>
+            </head>
             <div type="typology">
                <head/>
                <p rend="typology">East (Mashreq)&gt; Levant&gt;Palestine&gt;Central Palestine</p>
@@ -60,39 +71,55 @@
             </div>
             <div type="general">
                <head/>
-               <p>The historic city of Bethlehem, located in the West Bank directly south of Jerusalem, was inhabited in the 19th century mostly by Christians; but due to Christian emigration during the 20th century, the result of Hashemite rule and then the immigration of Muslims seeking refuge after the foundation of Israel, the majority of the city’s inhabitants are now Muslims.</p>
-               <p>Tourism is one of the most important economic factors in Bethlehem, especially around Christmas, when pilgrims visit the Church of Nativity. Bethlehem is now also known for graffiti and street art, mainly along the Israeli West Bank wall. This includes pieces by Banksy, an English artist internationally recognised for his socio-critical work.</p>
+               <p>The historic city of Bethlehem, located in the West Bank directly south of
+                  Jerusalem, was inhabited in the 19th century mostly by Christians; but due to
+                  Christian emigration during the 20th century, the result of Hashemite rule and
+                  then the immigration of Muslims seeking refuge after the foundation of Israel, the
+                  majority of the city’s inhabitants are now Muslims.</p>
+               <p>Tourism is one of the most important economic factors in Bethlehem, especially
+                  around Christmas, when pilgrims visit the Church of Nativity. Bethlehem is now
+                  also known for graffiti and street art, mainly along the Israeli West Bank wall.
+                  This includes pieces by Banksy, an English artist internationally recognised for
+                  his socio-critical work.</p>
             </div>
             <div type="researchHistory">
                <head/>
-               <p>Until now, the Arabic spoken in Bethlehem did not receive much attention.
-               Two recent studies on it focus on sociophonetics. <rs type="bibl" ref="zotid:JUKDF3KF">Amara, Spolsky and Tushyeh (1999)</rs> is
-               an investigation on the pronunciation of various consonants as a function
-               of level of education, gender, and religion. <rs type="bibl" ref="zotid:CL33L3JS">Amara (2005)</rs> describes
-               the influence of urbanization and migration on the Arabic spoken in the town.</p>
+               <p>Until now, the Arabic spoken in Bethlehem did not receive much attention. Two
+                  recent studies on it focus on sociophonetics. <rs type="bibl" ref="zotid:JUKDF3KF"
+                     >Amara, Spolsky and Tushyeh (1999)</rs> is an investigation on the
+                  pronunciation of various consonants as a function of level of education, gender,
+                  and religion. <rs type="bibl" ref="zotid:CL33L3JS">Amara (2005)</rs> describes the
+                  influence of urbanization and migration on the Arabic spoken in the town.</p>
 
-               <p><rs type="bibl" ref="zotid:DBVEXYIT">Shachmon (2013)</rs> deals with
-               the formation, distribution and functions of extended pronouns in Palestinian Arabic.</p>
+               <p><rs type="bibl" ref="zotid:DBVEXYIT">Shachmon (2013)</rs> deals with the
+                  formation, distribution and functions of extended pronouns in Palestinian
+                  Arabic.</p>
             </div>
 
             <div type="dictionaries">
                <head/>
-               <p><rs type="bibl" ref="zotid:N56VQEHN">Halloun (2000)</rs> and <rs type="bibl" ref="zotid:NGFE3X6J">Elihai (2004)</rs> are
-               dictionaries with example sentences and phrases.</p>
-               <p><rs type="bibl" ref="zotid:6XVCYDUK">Barthélemy’s (1935)</rs> and <rs type="bibl" ref="zotid:TZMIRC4K">Denizeau’s (1960)</rs> Levantine
-               Arabic dictionaries are also very useful for the study of the Arabic of Bethlehem. </p>
+               <p><rs type="bibl" ref="zotid:N56VQEHN">Halloun (2000)</rs> and <rs type="bibl"
+                     ref="zotid:NGFE3X6J">Elihai (2004)</rs> are dictionaries with example sentences
+                  and phrases.</p>
+               <p><rs type="bibl" ref="zotid:6XVCYDUK">Barthélemy’s (1935)</rs> and <rs type="bibl"
+                     ref="zotid:TZMIRC4K">Denizeau’s (1960)</rs> Levantine Arabic dictionaries are
+                  also very useful for the study of the Arabic of Bethlehem. </p>
             </div>
 
             <div type="textBooks">
                <head/>
-               <p><rs type="bibl" ref="zotero:XKFCJ32J">Halloun (1988)</rs> is a collection of verb conjugations with a small glossary.
-               <rs type="bibl" ref="zotid:4EF8WEPI">Halloun (1989</rs>, <rs type="bibl" ref="zotid:FBB8EIQK">1991)</rs> and his other series <rs type="bibl" ref="zotid:PZE96FG5">(2001</rs>,
-               <rs type="bibl" ref="zotid:PI8ZCGB5">2006)</rs> are textbooks with various exercises, vocabulary lists, and sample texts. </p>
+               <p><rs type="bibl" ref="zotero:XKFCJ32J">Halloun (1988)</rs> is a collection of verb
+                  conjugations with a small glossary. <rs type="bibl" ref="zotid:4EF8WEPI">Halloun
+                     (1989</rs>, <rs type="bibl" ref="zotid:FBB8EIQK">1991)</rs> and his other
+                  series <rs type="bibl" ref="zotid:PZE96FG5">(2001</rs>, <rs type="bibl"
+                     ref="zotid:PI8ZCGB5">2006)</rs> are textbooks with various exercises,
+                  vocabulary lists, and sample texts. </p>
             </div>
-      <div type="bibliography">
-               <p>To view publications on this variety click <rs type="bibl" ref="bibl:geo:Bethlehem">here</rs>.</p>
+            <div type="bibliography">
+               <p>To view publications on this variety click <rs type="bibl"
+                     ref="bibl:geo:Bethlehem">here</rs>.</p>
             </div>
-               </div>
+         </div>
       </body>
    </text>
 </TEI>

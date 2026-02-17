@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../tools/802_tei_odd/out/vicav_profiles.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../tools/802_tei_odd/out/vicav_profiles.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:id="vicav_profile_PSE-GZA">
-   <teiHeader><fileDesc>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="vicav_profile_PSE-GZA">
+   <teiHeader>
+      <fileDesc>
          <titleStmt>
             <title>A machine-readable profile of Gaza Arabic</title>
             <author>Claudia Laaber</author>
@@ -20,7 +21,8 @@
          <sourceDesc>
             <p>This is an original digital text</p>
          </sourceDesc>
-      </fileDesc><encodingDesc>
+      </fileDesc>
+      <encodingDesc>
          <tagsDecl partial="true">
             <rendition xml:id="i" scheme="css">font-style:italics;</rendition>
             <rendition xml:id="u" scheme="css">text-decoration:underline;</rendition>
@@ -29,11 +31,14 @@
       </encodingDesc>
       <profileDesc>
          <langUsage>
-            <language role="objectLanguage" ident="ar-x-psegza" ana="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16838">
+            <language role="objectLanguage" ident="ar-x-psegza"
+               ana="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16838">
                <name type="languageVariety">Gaza Arabic</name>
-               <listPlace>
-                  <place sameAs="geo:gaza"/>
-               </listPlace>
+               <settingDesc>
+                  <listPlace>
+                     <place sameAs="geo:gaza"/>
+                  </listPlace>
+               </settingDesc>
                <date type="languagePeriod">
                   <note>Contemporary</note>
                </date>
@@ -43,19 +48,26 @@
       </profileDesc>
       <revisionDesc>
          <change status="created" when="2019-12-02T12:38:00Z" who="#">created</change>
-         <change status="draft" when="2020-01-28T15:13:00Z" who="#">last modified (revision 1)</change>
+         <change status="draft" when="2020-01-28T15:13:00Z" who="#">last modified (revision
+            1)</change>
          <change status="draft" when="2020-09-24T09:38:10.376+02:00">transformed to TEI-XML</change>
          <change when="2020-09-24T09:38:11.068+02:00" status="draft"/>
-      <change when="2025-10-07+02:00" who="dmp:KS">Transformed to Lex-0</change></revisionDesc></teiHeader>
+         <change when="2025-10-07+02:00" who="dmp:KS">Transformed to Lex-0</change>
+      </revisionDesc>
+   </teiHeader>
    <text>
       <body>
          <div>
-            <head><figure>
+            <head>
+               <figure>
                   <graphic url="gaza.jpg"/>
                   <head type="imgCaption">
-                     <ref target="https://commons.wikimedia.org/wiki/Gaza/media/File:Gaza_by_Mujaddara_-_panoramio_(1496).jpg">Wikimedia</ref>
+                     <ref
+                        target="https://commons.wikimedia.org/wiki/Gaza/media/File:Gaza_by_Mujaddara_-_panoramio_(1496).jpg"
+                        >Wikimedia</ref>
                   </head>
-               </figure></head>
+               </figure>
+            </head>
             <div type="typology">
                <head/>
                <p rend="typology">East (Mashreq) &gt; Levant &gt; Palestine &gt; South Palestine</p>
@@ -63,55 +75,56 @@
             </div>
             <div type="general">
                <head/>
-               <p>The Gaza Strip, bordering on Egypt, Israel, and the Mediterranean Sea,
-               belongs to the Palestinian territories. Gaza City is the largest urban
-               centre in this region. After the foundation of Israel in 1948 and the
-               subsequent waves of migration, Gaza became one of the most densely
-               populated areas of the world. An estimated 70% of its population are
-               refugees originating from the areas north and east of Gaza now under Israeli rule.</p>
+               <p>The Gaza Strip, bordering on Egypt, Israel, and the Mediterranean Sea, belongs to
+                  the Palestinian territories. Gaza City is the largest urban centre in this region.
+                  After the foundation of Israel in 1948 and the subsequent waves of migration, Gaza
+                  became one of the most densely populated areas of the world. An estimated 70% of
+                  its population are refugees originating from the areas north and east of Gaza now
+                  under Israeli rule.</p>
 
-               <p>Due to these migration movements, Gaza became an area of language
-               contact between various Palestinian dialects. Although the Gaza Strip
-               has been closely studied from a political science perspective,
-               linguistic research has been rare and focuses on sociolinguistic phenomena.</p>
+               <p>Due to these migration movements, Gaza became an area of language contact between
+                  various Palestinian dialects. Although the Gaza Strip has been closely studied
+                  from a political science perspective, linguistic research has been rare and
+                  focuses on sociolinguistic phenomena.</p>
             </div>
 
             <div type="researchHistory">
                <head/>
-               <p><rs type="bibl" ref="zotid:N9473IMR">Salonen (1979)</rs> provided a first
-               detailed grammatical sketch. The <rs type="bibl" ref="zotid:G2EETVWL">second
-               volume (1980)</rs> contains various transcribed texts as well as notes
-               on specific grammatical features. Another concise linguistic sketch on
-               Palestinian Arabic, including notes on the Arabic in Gaza, can be
-               found in the <rs type="bibl" ref="zotid:QPHTGYNG">EALL (Shahin 2011)</rs>.</p>
-               <p><rs type="bibl" ref="zotid:NYWCAYSK">Horesh and Cotter (2011)</rs> give
-               an overview of the sociolinguistics of Palestinian Arabic, focusing
-               on the influence of the Israeli occupation, migration movements, and
-               the resulting language contacts. <rs type="bibl" ref="zotid:YKBP2A5X">Cotter (2017)</rs> is
-               a survey of the evolution of sociolinguistic studies on Arabic in
-               general, and includes notes on Gaza.</p>
+               <p><rs type="bibl" ref="zotid:N9473IMR">Salonen (1979)</rs> provided a first detailed
+                  grammatical sketch. The <rs type="bibl" ref="zotid:G2EETVWL">second volume
+                     (1980)</rs> contains various transcribed texts as well as notes on specific
+                  grammatical features. Another concise linguistic sketch on Palestinian Arabic,
+                  including notes on the Arabic in Gaza, can be found in the <rs type="bibl"
+                     ref="zotid:QPHTGYNG">EALL (Shahin 2011)</rs>.</p>
+               <p><rs type="bibl" ref="zotid:NYWCAYSK">Horesh and Cotter (2011)</rs> give an
+                  overview of the sociolinguistics of Palestinian Arabic, focusing on the influence
+                  of the Israeli occupation, migration movements, and the resulting language
+                  contacts. <rs type="bibl" ref="zotid:YKBP2A5X">Cotter (2017)</rs> is a survey of
+                  the evolution of sociolinguistic studies on Arabic in general, and includes notes
+                  on Gaza.</p>
 
-               <p>There are also a few investigations on sociophonetics in Gazan
-               Arabic: <rs type="bibl" ref="zotid:9SPZYEAI">Cotter and Horesh (2015)</rs> is
-               a study on how refugees from Jaffa adapted their language to Gaza’s dialect.
-               <rs type="bibl" ref="zotid:EN55PMI6">Cotter (2016a)</rs> discusses [q]
-               as a sociolinguistic variable due to the dialect contact between
-               the residents of Gaza City and refugees from Jaffa. <rs type="bibl" ref="zotid:LYFERR5R">Cotter (2016b)</rs> is
-               an investigation on the realization of interdental fricatives in Gaza City.</p>
-               <p><rs type="bibl" ref="zotid:IEUQEMKM">Werner (2008)</rs> is a text sample of the Arabic outside Gaza City by
-               a speaker from, with a German translation. </p>
+               <p>There are also a few investigations on sociophonetics in Gazan Arabic: <rs
+                     type="bibl" ref="zotid:9SPZYEAI">Cotter and Horesh (2015)</rs> is a study on
+                  how refugees from Jaffa adapted their language to Gaza’s dialect. <rs type="bibl"
+                     ref="zotid:EN55PMI6">Cotter (2016a)</rs> discusses [q] as a sociolinguistic
+                  variable due to the dialect contact between the residents of Gaza City and
+                  refugees from Jaffa. <rs type="bibl" ref="zotid:LYFERR5R">Cotter (2016b)</rs> is
+                  an investigation on the realization of interdental fricatives in Gaza City.</p>
+               <p><rs type="bibl" ref="zotid:IEUQEMKM">Werner (2008)</rs> is a text sample of the
+                  Arabic outside Gaza City by a speaker from, with a German translation. </p>
             </div>
-               <div type="dictionaries">
-                  <head/>
-               <p>There are no specifically Gazan Arabic dictionaries; however
-               <rs type="bibl" ref="zotid:6XVCYDUK">Barthélemy’s (1935)</rs> and
-               <rs type="bibl" ref="zotid:TZMIRC4K">Denizeau (1960)</rs>, both
-               dictionaries of Levantine Arabic, are useful.
-               And <rs type="bibl" ref="zotid:N56VQEHN">Halloun (2000)</rs> and
-               <rs type="bibl" ref="zotid:NGFE3X6J">Elihai (2004)</rs> are dictionaries of Palestinian Arabic with example sentences and phrases.</p>
+            <div type="dictionaries">
+               <head/>
+               <p>There are no specifically Gazan Arabic dictionaries; however <rs type="bibl"
+                     ref="zotid:6XVCYDUK">Barthélemy’s (1935)</rs> and <rs type="bibl"
+                     ref="zotid:TZMIRC4K">Denizeau (1960)</rs>, both dictionaries of Levantine
+                  Arabic, are useful. And <rs type="bibl" ref="zotid:N56VQEHN">Halloun (2000)</rs>
+                  and <rs type="bibl" ref="zotid:NGFE3X6J">Elihai (2004)</rs> are dictionaries of
+                  Palestinian Arabic with example sentences and phrases.</p>
             </div>
             <div type="bibliography">
-                <p>To view publications on this variety click <rs type="bibl" ref="bibl:geo:Gaza">here</rs>.</p>
+               <p>To view publications on this variety click <rs type="bibl" ref="bibl:geo:Gaza"
+                     >here</rs>.</p>
             </div>
 
          </div>

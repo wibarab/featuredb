@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../tools/802_tei_odd/out/vicav_profiles.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../tools/802_tei_odd/out/vicav_profiles.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:space="preserve" xml:id="vicav_profile_PSE-JRS">
-   <teiHeader><fileDesc>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="vicav_profile_PSE-JRS">
+   <teiHeader>
+      <fileDesc>
          <titleStmt>
             <title>A machine-readable profile of Jerusalem Arabic</title>
             <author>Claudia Laaber</author>
@@ -20,7 +21,8 @@
          <sourceDesc>
             <p>This is an original digital text</p>
          </sourceDesc>
-      </fileDesc><encodingDesc>
+      </fileDesc>
+      <encodingDesc>
          <tagsDecl partial="true">
             <rendition xml:id="i" scheme="css">font-style:italics;</rendition>
             <rendition xml:id="u" scheme="css">text-decoration:underline;</rendition>
@@ -29,105 +31,121 @@
       </encodingDesc>
       <profileDesc>
          <langUsage>
-            <language role="objectLanguage" ident="ar-x-psejrs" ana="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16837">
+            <language role="objectLanguage" ident="ar-x-psejrs"
+               ana="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16837">
                <name type="languageVariety">Jerusalem Arabic</name>
-               <listPlace>
-                  <place sameAs="geo:jerusalem"/>
-               </listPlace>
+               <settingDesc>
+                  <listPlace>
+                     <place sameAs="geo:jerusalem"/>
+                  </listPlace>
+               </settingDesc>
                <date type="languagePeriod">
                   <note>Contemporary</note>
                </date>
                <channel mode="s">spoken</channel>
             </language>
          </langUsage>
-     </profileDesc>
+      </profileDesc>
       <revisionDesc>
          <change status="created" when="2019-12-02T12:41:00Z" who="#">created</change>
-         <change status="draft" when="2020-01-29T08:38:00Z" who="#">last modified (revision 1)</change>
+         <change status="draft" when="2020-01-29T08:38:00Z" who="#">last modified (revision
+            1)</change>
          <change status="draft" when="2020-09-24T09:41:04.114+02:00">transformed to TEI-XML</change>
          <change when="2020-09-24T09:41:04.759+02:00" status="draft"/>
-      <change when="2025-10-07+02:00" who="dmp:KS">Transformed to Lex-0</change></revisionDesc></teiHeader>
+         <change when="2025-10-07+02:00" who="dmp:KS">Transformed to Lex-0</change>
+      </revisionDesc>
+   </teiHeader>
    <text>
       <body>
          <div>
-            <head><figure>
+            <head>
+               <figure>
                   <graphic url="jerusalem.jpg"/>
                   <head type="imgCaption">Claudia Laaber ©2019</head>
-               </figure></head>
+               </figure>
+            </head>
             <div type="typology">
                <head/>
-               <p rend="typology">East (Mashreq) &gt; Levante&gt; Palestine &gt; Central Palestine</p>
+               <p rend="typology">East (Mashreq) &gt; Levante&gt; Palestine &gt; Central
+                  Palestine</p>
                <p>sedentary: urban </p>
             </div>
             <div type="general">
                <head/>
-               <p>Historically Jerusalem has been an important cultural nexus and
-                  is a holy city for three major Abrahamic faiths: Islam, Judaism
-                  and Christianity. </p>
-               <p>Its historic and labyrinthine Old Town, divided into Muslim,
-                  Jewish, Arab Christian, and Armenian quarters, includes, on its
-                  southeast edge, Temple Mount, one of the most contentious religious
-                  sites in the world.</p>
-               <p>From a linguistic viewpoint, Jerusalem offers interesting studies
-                  in Arabic and Modern Hebrew.</p>
+               <p>Historically Jerusalem has been an important cultural nexus and is a holy city for
+                  three major Abrahamic faiths: Islam, Judaism and Christianity. </p>
+               <p>Its historic and labyrinthine Old Town, divided into Muslim, Jewish, Arab
+                  Christian, and Armenian quarters, includes, on its southeast edge, Temple Mount,
+                  one of the most contentious religious sites in the world.</p>
+               <p>From a linguistic viewpoint, Jerusalem offers interesting studies in Arabic and
+                  Modern Hebrew.</p>
             </div>
             <div type="researchHistory">
                <head/>
-               <p>The first description of Jerusalem Arabic dates back to the beginning of
-                  the 20th century. <rs type="bibl" ref="zotid:3XKI4UKX">Löhr (1905)</rs>, who
-                  worked at the German Protestant Institute for Archaeology in Jerusalem,
-                  wrote a detailed grammar with a collection of riddles, poems and a small glossary.</p>
+               <p>The first description of Jerusalem Arabic dates back to the beginning of the 20th
+                  century. <rs type="bibl" ref="zotid:3XKI4UKX">Löhr (1905)</rs>, who worked at the
+                  German Protestant Institute for Archaeology in Jerusalem, wrote a detailed grammar
+                  with a collection of riddles, poems and a small glossary.</p>
                <p>The manual for self-instruction by <rs type="bibl" ref="zotid:STQ6FWPU">Nasrallah
-                     and Spoer (1909)</rs> is a short guide for learners containing a
-                  glossary, proverbs and a collection of example sentences (The full
-                  text is available on <ref target="https://archive.org/details/manualofpalestin00spoeuoft_201701/page/n7">archive</ref>).
-                  <rs type="bibl" ref="zotid:SAWTZEGV">Bauer (1910)</rs> is a description of urban and rural Palestinian Arabic with a
-                  chrestomathy and practice exercises.</p>
-               <p>Moshe Piamenta published an essay on the syntax of Jerusalem Arabic (<rs type="bibl" ref="zotero:S58627P7">Piamenta 1966</rs>),
-                  an article about the dialects’ lexicon (<rs type="bibl" ref="zotero:BIXXPTJZ">Piamenta 1979</rs>), and
-                  a study on its conditional sentences <rs type="bibl" ref="zotid:28E4TE55">(Piamente 1991)</rs>.
-                     <rs type="bibl" ref="zotid:PAN48K6J">Piamenta (2000)</rs> is an
-                     impressive study on Judeo-Jerusalem Arabic, its replacement
-                     by Modern Hebrew, and its close ties to non-Jewish Jerusalem Arabic.</p>
+                     and Spoer (1909)</rs> is a short guide for learners containing a glossary,
+                  proverbs and a collection of example sentences (The full text is available on <ref
+                     target="https://archive.org/details/manualofpalestin00spoeuoft_201701/page/n7"
+                     >archive</ref>). <rs type="bibl" ref="zotid:SAWTZEGV">Bauer (1910)</rs> is a
+                  description of urban and rural Palestinian Arabic with a chrestomathy and practice
+                  exercises.</p>
+               <p>Moshe Piamenta published an essay on the syntax of Jerusalem Arabic (<rs
+                     type="bibl" ref="zotero:S58627P7">Piamenta 1966</rs>), an article about the
+                  dialects’ lexicon (<rs type="bibl" ref="zotero:BIXXPTJZ">Piamenta 1979</rs>), and
+                  a study on its conditional sentences <rs type="bibl" ref="zotid:28E4TE55"
+                     >(Piamente 1991)</rs>. <rs type="bibl" ref="zotid:PAN48K6J">Piamenta
+                     (2000)</rs> is an impressive study on Judeo-Jerusalem Arabic, its replacement
+                  by Modern Hebrew, and its close ties to non-Jewish Jerusalem Arabic.</p>
 
-                  <p><rs type="bibl" ref="zotid:JW8Q93U2">Spolsky and Cooper (1991)</rs> is
-                     a diachronic and synchronic sociolinguistic survey of the multilingual
-                     situation in Jerusalem. </p>
-                  <p>A concise linguistic sketch can be found in the <rs type="bibl" ref="zotero:2RMTHHG6">EALL (Rosenhouse 2011</rs>).</p>
-                  <p><rs type="bibl" ref="zotid:QK3T353M">Shawarbah (2010)</rs> is a
-                     collection of text samples with a glossary in the end.</p>
-               </div>
-               <div type="dictionaries">
-                  <head/>
-                  <p><rs type="bibl" ref="zotid:6XVCYDUK">Barthélemy (1935)</rs> is
-                     a French- Arabic dictionary for varieties spoken in the Levant.
-                     Although the data for this dictionary was mostly collected in Aleppo,
-                     it can be considered a useful source for Jerusalem Arabic. </p>
-
-                  <p>The same applies to <rs type="bibl" ref="zotid:TZMIRC4K">Denizeau (1960)</rs>.</p>
-                  <p><rs type="bibl" ref="zotid:N56VQEHN">Halloun’s (2000)</rs> practical
-                     English-Arabic dictionary for Palestinian Arabic includes various examples.</p>
-                  <p><rs type="bibl" ref="zotid:NGFE3X6J">Elihai (2004)</rs> is an
-                     Arabic-English dictionary of urban Palestinian Arabic with example
-                     phrases and sentences. It states if a word is used only in specific
-                     cities, and inclues an English-Arabic glossary at the end.</p>
-               </div>
-               <div type="textBooks">
-                  <head/>
-                  <p>Moïn Halloun wrote textbooks focused on Jerusalem Arabic. <rs type="bibl" ref="zotero:XKFCJ32J">Halloun 1988</rs> offers
-                     numerous transcribed verb conjugations and a small glossary at the end.
-                     <rs type="bibl" ref="zotid:4EF8WEPI">Halloun (1989</rs>,<rs type="bibl" ref="zotid:FBB8EIQK">1991)</rs> is a two-volume textbook with various exercises and transcribed texts. <rs type="bilb" ref="zotid:PZE96FG5">Halloun (2001</rs>,<rs type="bibl" ref="zotid:PI8ZCGB5">2006)</rs> has a small collection of texts in Arabic script plus a large collection of transcribed ones.</p>
-                  <p>A few textbooks on Palestinian Arabic, though not necessarily
-                     focusing on Jerusalem Arabic, are available: <rs type="bibl" ref="zotid:3H34X7YQ">Elihai
-                        (2011)</rs> is a complete package on Urban Palestinian Arabic,
-                     including textbooks and CDs. <rs type="bibl" ref="zotid:LVW7FXE3">Tiedemann (2015)</rs> is
-                     a phraseological textbook with 101 verbs. For each verb, he provides
-                     numerous example sentences in Arabic script and recorded on CD.</p>
-               </div>
-               <div type="bibliography">
-                  <p>To view publications on this variety click <rs type="bibl" ref="bibl:geo:Jerusalem">here</rs>.</p>
-               </div>
+               <p><rs type="bibl" ref="zotid:JW8Q93U2">Spolsky and Cooper (1991)</rs> is a
+                  diachronic and synchronic sociolinguistic survey of the multilingual situation in
+                  Jerusalem. </p>
+               <p>A concise linguistic sketch can be found in the <rs type="bibl"
+                     ref="zotero:2RMTHHG6">EALL (Rosenhouse 2011</rs>).</p>
+               <p><rs type="bibl" ref="zotid:QK3T353M">Shawarbah (2010)</rs> is a collection of text
+                  samples with a glossary in the end.</p>
             </div>
-         </body>
-      </text>
-   </TEI>
+            <div type="dictionaries">
+               <head/>
+               <p><rs type="bibl" ref="zotid:6XVCYDUK">Barthélemy (1935)</rs> is a French- Arabic
+                  dictionary for varieties spoken in the Levant. Although the data for this
+                  dictionary was mostly collected in Aleppo, it can be considered a useful source
+                  for Jerusalem Arabic. </p>
+
+               <p>The same applies to <rs type="bibl" ref="zotid:TZMIRC4K">Denizeau (1960)</rs>.</p>
+               <p><rs type="bibl" ref="zotid:N56VQEHN">Halloun’s (2000)</rs> practical
+                  English-Arabic dictionary for Palestinian Arabic includes various examples.</p>
+               <p><rs type="bibl" ref="zotid:NGFE3X6J">Elihai (2004)</rs> is an Arabic-English
+                  dictionary of urban Palestinian Arabic with example phrases and sentences. It
+                  states if a word is used only in specific cities, and inclues an English-Arabic
+                  glossary at the end.</p>
+            </div>
+            <div type="textBooks">
+               <head/>
+               <p>Moïn Halloun wrote textbooks focused on Jerusalem Arabic. <rs type="bibl"
+                     ref="zotero:XKFCJ32J">Halloun 1988</rs> offers numerous transcribed verb
+                  conjugations and a small glossary at the end. <rs type="bibl" ref="zotid:4EF8WEPI"
+                     >Halloun (1989</rs>,<rs type="bibl" ref="zotid:FBB8EIQK">1991)</rs> is a
+                  two-volume textbook with various exercises and transcribed texts. <rs type="bilb"
+                     ref="zotid:PZE96FG5">Halloun (2001</rs>,<rs type="bibl" ref="zotid:PI8ZCGB5"
+                     >2006)</rs> has a small collection of texts in Arabic script plus a large
+                  collection of transcribed ones.</p>
+               <p>A few textbooks on Palestinian Arabic, though not necessarily focusing on
+                  Jerusalem Arabic, are available: <rs type="bibl" ref="zotid:3H34X7YQ">Elihai
+                     (2011)</rs> is a complete package on Urban Palestinian Arabic, including
+                  textbooks and CDs. <rs type="bibl" ref="zotid:LVW7FXE3">Tiedemann (2015)</rs> is a
+                  phraseological textbook with 101 verbs. For each verb, he provides numerous
+                  example sentences in Arabic script and recorded on CD.</p>
+            </div>
+            <div type="bibliography">
+               <p>To view publications on this variety click <rs type="bibl"
+                     ref="bibl:geo:Jerusalem">here</rs>.</p>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>
