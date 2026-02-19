@@ -118,7 +118,7 @@
             <tr>
                <td class="tdLeft">Source</td>
                <td class="tdRight">
-                  <xsl:variable name="id"><xsl:value-of select="substring(tei:bibl/@corresp,5)"/></xsl:variable>
+                  <xsl:variable name="id"><xsl:value-of select="substring-after(tei:bibl/@corresp,'#$1')"/></xsl:variable>
                   <xsl:variable name="pre_bibtype">
                      <xsl:value-of>
                       <xsl:choose>
