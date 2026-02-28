@@ -1,11 +1,9 @@
 # WIBARAB feature database
 
 ## About WIBARAB
+From Iran to Mauretania, countless spoken varieties of Arabic are in use, and more than 350 million people speak Arabic in settings characterised by a high degree of diglossia. In this context, the ERC-funded WIBARAB project focusses on the language of the Bedouins that spread with the Arab expansion in the Middle East and North Africa since the 7th century. The aim is to better understand the nature of the linguistic dichotomy between sedentary and nomadic varieties. Consisting of various regional sub-projects (four PhD projects), the project establishes the first set of linguistic phenomena that characterise the Bedouin-sedentary split. In addition to phonological and morphological features, the project also studies a range of other aspects, from syntax to the influence of intra-dialect contacts and historical migrations. 
 
-WIBARAB is a very nice project in the field of Arabic dialectology. It consists of various regional sub-projects (four PhD projects) and a large database about bedouin-type dialects of Arabic.
-
-The *Feature Database* will be the main point of integrating the results of the sub-projects. In this repository we collect the primary data of the database in TEI/XML.
-
+The *WIBARAB Database of Linguistic Features* will be the main point of integrating the results of all sub-projects. In this repository we collect the primary data of the database in TEI/XML.
 
 Principal Investigator: Stephan Procházka (University of Vienna)     
 National Cooperation Partner: Charly Mörth (Austrian Academy of Sciences)     
