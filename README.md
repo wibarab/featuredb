@@ -1,4 +1,4 @@
-# WIBARAB feature database
+# WIBARAB Database of Linguistic Features
 
 ## About WIBARAB
 From Iran to Mauretania, countless spoken varieties of Arabic are in use, and more than 350 million people speak Arabic in settings characterised by a high degree of diglossia. In this context, the ERC-funded WIBARAB project focusses on the language of the Bedouins that spread with the Arab expansion in the Middle East and North Africa since the 7th century. The aim is to better understand the nature of the linguistic dichotomy between sedentary and nomadic varieties. Consisting of various regional sub-projects (four PhD projects), the project establishes the first set of linguistic phenomena that characterise the Bedouin-sedentary split. In addition to phonological and morphological features, the project also studies a range of other aspects, from syntax to the influence of intra-dialect contacts and historical migrations. 
