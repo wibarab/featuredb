@@ -1,5 +1,5 @@
-<?xml version="1.0"?>
-<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" xml:id="profile_ESP-TLD_01">
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="vicav_profile_ESP-TLD">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -20,55 +20,48 @@
             <p>This is an original digital text</p>
          </sourceDesc>
       </fileDesc>
-
       <encodingDesc>
          <listPrefixDef>
             <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="wibarab-dmp.xml#$1"/>
-            <prefixDef ident="zotid" matchPattern="^(.+)$" replacementPattern="vicav_biblio_tei_zotero.xml#$1"/>
+            <prefixDef ident="zotid" matchPattern="^(.+)$"
+               replacementPattern="vicav_biblio_tei_zotero.xml#$1"/>
             <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="vicav_dialects.xml#$1"/>
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="vicav_geodata.xml#$1"/>
          </listPrefixDef>
       </encodingDesc>
-
+      <profileDesc>
+         <langUsage>
+            <language role="objectLanguage" ident="ar-x-esptld"><name type="languageVariety">the
+                  Arabic of the Mozarabs of Toledo</name><settingDesc>
+                  <listPlace>
+                     <place sameAs="geo:toledo"/>
+                  </listPlace>
+               </settingDesc><date type="languagePeriod"><note>Contemporary</note></date><channel
+                  mode="s">spoken</channel></language>
+         </langUsage>
+      </profileDesc>
       <revisionDesc>
-         <change status="created" when="2022-08-30" who="dmp:RZ">created this document by copying the VICAV file of TCD-BBL, entry by <persName ref="dmp:RZ"/></change>
+         <change status="created" when="2022-08-30" who="dmp:RZ">created this document by copying
+            the VICAV file of TCD-BBL, entry by <persName ref="dmp:RZ"/></change>
+         <change when="2025-10-07+02:00" who="dmp:KS">Transformed to Lex-0</change>
       </revisionDesc>
    </teiHeader>
    <text>
       <body>
          <div>
-            <head>
-               <label>Name (English)</label>
-               <name type="place" xml:lang="eng">Toledo</name>
-               <label>Name (MSA)</label>
-               <name xml:lang="ara"></name>
-               <label>Name (MSA, trans.)</label>
-               <name xml:lang="ara-x-DMG"></name>
-               <label>Local name (trans.)</label>
-               <name xml:lang="ajp-Latn" type="latLoc"></name>
-            </head>
+            <head/>
 
-            <div type="positioning">
-               <p>
-                  <geo></geo>
-                  <country></country>
-               </p>
-            </div>
 
-            <div type="typology">
-            </div>
 
-            <div type="general">
-            </div>
 
-            <div type="researchHistory">
-            </div>
 
-            <div type="bibliography">
-            </div>
 
-            <div type="bibliography">
-            </div>
+
+
+
+
+
+
          </div>
       </body>
    </text>
