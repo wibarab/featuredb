@@ -38,10 +38,14 @@ To deploy changes to this data please follow the [wibarab-data README](https://g
 | `850_docs`            | Documentation              | Further data documentation, encoding guidelines etc.  |
 
 
+## Data Model
+
+For more information on the the data model of the WIBARAB Feature Database, refer to https://wibarab.github.io/featuredb/featuredb.html 
+
 
 ## Schema Development 
 
-At this point, the model of the *WIBARAB Feature Database* schema is still evolving to a certain extent while new data is being curated, existing data being curated etc. In order to make sure that transitioning from one version of the schema to the next happens in a structured manner, we set up the following rules:
+At this point, the model of the *WIBARAB Feature Database* schema is still evolving to a certain extent while new data is being added, existing data being curated etc. In order to make sure that transitioning from one version of the schema to the next happens in a structured manner, we set up the following rules:
 
 * Any development of the schema is done in `802_tei_odd/featuredb.odd`. This file might also contain unpublished, unfinished, backwards-incompatible changes not reflected in any derived schema or documentation.
 * **Naming conventions:** We follow the [Semantic Versioning Best Practices 2.0.0](https://semver.org/) which - applied to our case - boil down to the following principles:
@@ -69,11 +73,3 @@ When a new version of the schema is to be released:
 * Apply the conversion script to the files in `010_manannot`. They should be output to `102_derived_TEI`
 * Commit all changes to git and add a `tag` named after the schema version number.
 * Curators have to check the converted TEI documents and move them from `102_derived_TEI` to `010_manannot` to approve the change.
-
-
-
-## About this file
-
-This README file has a long-wound and dark history of editing. If you dare, you can check it out [here](https://github.com/wibarab/featuredb/commits/e5d4a768a1702403e8772a0085a3ac2c66c0cf3f/README.md).
-
-
