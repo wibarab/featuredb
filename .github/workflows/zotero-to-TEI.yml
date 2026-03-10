@@ -9,11 +9,11 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: checkout
-        uses: actions/checkout@v3
-      - name: get python 3.11
-        uses: actions/setup-python@v4
+        uses: actions/checkout@v6
+      - name: get python 3.13
+        uses: actions/setup-python@v6
         with:
-          python-version: '3.11'
+          python-version: '3.13'
           cache: "pipenv"
       - name: download from Zotero and convert to TEI      
         env:
