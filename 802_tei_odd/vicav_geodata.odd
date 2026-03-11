@@ -8,12 +8,10 @@
             <titleStmt>
                 <title>VICAV Geolocations TEI customization</title>
                 <principal>
-                    <name type="person"
-                          ref="dmp:SP">Stephan Procházka</name>
+                    <name type="person" ref="dmp:SP">Stephan Procházka</name>
                 </principal>
                 <author>
-                    <name type="person"
-                          ref="dmp:KS">Kinga Sramó</name>
+                    <name type="person" ref="dmp:KS">Kinga Sramó</name>
                 </author>
             </titleStmt>
             <publicationStmt>
@@ -32,23 +30,24 @@
         <body>
             <div>
                 <head>Formal Specification</head>
-                <schemaSpec ident="vicav-geodata"
-                            start="TEI">
-                    <!-- Include basic TEI modules -->
-                    <moduleRef key="tei" />
-                    <moduleRef key="header"
-                               include="teiHeader fileDesc titleStmt publicationStmt sourceDesc" />
-                    <moduleRef key="core"
-                               include="TEI text body note" />
-                    <moduleRef key="namesdates"
-                               include="listPlace place placeName location country" />
-                    <!-- Element specifications -->
-                    <elementSpec ident="place"
-                                 mode="change">
+                <schemaSpec ident="vicav-geodata" start="TEI">
+                    <moduleRef key="tei"/>
+                    <moduleRef key="header" include="teiHeader fileDesc titleStmt publicationStmt geoDecl listPrefixDef prefixDef sourceDesc encodingDesc revisionDesc change idno"/>
+                    <moduleRef key="textstructure" include="TEI text body"/>
+                    <moduleRef key="core" include="p note title author respStmt resp name"/>
+                    <moduleRef key="namesdates" include="listPlace place placeName location country region geo"/>
+                   
+                    <elementSpec ident="place" mode="change">
+                        <content>
+                            <sequence>
+                                <elementRef key="placeName" minOccurs="1" maxOccurs="unbounded"/>
+                                <elementRef key="location" minOccurs="1" maxOccurs="1"/>
+                                <elementRef key="idno" minOccurs="0" maxOccurs="1"/>
+                                <elementRef key="note" minOccurs="0" maxOccurs="unbounded"/>
+                            </sequence>
+                        </content>
                         <attList>
-                            <attDef ident="type"
-                                    mode="replace"
-                                    usage="req">
+                            <attDef ident="type" mode="replace" usage="req">
                                 <valList type="closed">
                                     <valItem ident="geo">
                                         <desc>Geographical location, point</desc>
@@ -61,46 +60,23 @@
                                     </valItem>
                                 </valList>
                             </attDef>
-                            <attDef ident="xml:id" mode="add" usage="req">
-                                <datatype>
-                                    <dataRef key="teidata.name" />
-                                </datatype>
-                            </attDef>
+                            <attDef ident="xml:id" mode="change" usage="req"/>
                         </attList>
-                        <content>
-                            <sequence>
-                                <elementRef key="placeName"
-                                            minOccurs="1"
-                                            maxOccurs="unbounded" />
-                                <elementRef key="location"
-                                            minOccurs="0"
-                                            maxOccurs="1" />
-                                <elementRef key="idno"
-                                            minOccurs="0"
-                                            maxOccurs="1" />
-                                <elementRef key="note"
-                                            minOccurs="0"
-                                            maxOccurs="unbounded" />
-                            </sequence>
-                        </content>
                     </elementSpec>
-                    <elementSpec ident="placeName"
-                                 mode="change">
+                    <elementSpec ident="placeName" mode="change">
                         <attList>
-                            <attDef ident="xml:lang" mode="add" usage="opt">
+                            <attDef ident="xml:lang" mode="replace" usage="opt">
                                 <valList type="closed">
-                                    <valItem ident="ar" />
-                                    <valItem ident="ar-Latn" />
+                                    <valItem ident="ar"/>
+                                    <valItem ident="ar-Latn"/>
                                 </valList>
                             </attDef>
-                            <attDef ident="type"
-                                    mode="add"
-                                    usage="req">
+                            <attDef ident="type" mode="replace" usage="req">
                                 <valList type="closed">
-                                    <valItem ident="standard" />
-                                    <valItem ident="local" />
+                                    <valItem ident="standard"/>
+                                    <valItem ident="local"/>
                                     <valItem ident="prefLabel"/>
-                                    <valItem ident="altLabel" />
+                                    <valItem ident="altLabel"/>
                                 </valList>
                             </attDef>
                         </attList>
@@ -108,14 +84,15 @@
                     <elementSpec ident="location" mode="change">
                         <content>
                             <sequence>
-                                <elementRef key="geo" minOccurs="2" maxOccurs="2" />
-                                <elementRef key="country" minOccurs="1" maxOccurs="1" />
+                                <elementRef key="geo" minOccurs="2" maxOccurs="2"/>
+                                <elementRef key="region" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="country" minOccurs="1" maxOccurs="1"/>
                             </sequence>
                         </content>
                     </elementSpec>
                     <elementSpec ident="geo" mode="change">
                         <attList>
-                            <attDef ident="decls" mode="add" usage="req">
+                            <attDef ident="decls" mode="replace" usage="req">
                                 <valList type="closed">
                                     <valItem ident="#dms">
                                         <desc>Degrees, minutes, seconds</desc>
@@ -126,32 +103,15 @@
                                 </valList>
                             </attDef>
                         </attList>
-                        <content>
-                            <textNode />
-                        </content>
                     </elementSpec>
-                    <elementSpec ident="country"
-                                 mode="change">
+                    <elementSpec ident="country" mode="change">
                         <attList>
-                            <attDef ident="key"
-                                    mode="add"
-                                    usage="req">
-                                <datatype>
-                                    <dataRef key="teidata.text" />
-                                </datatype>
-                                <desc>ISO country code</desc>
-                            </attDef>
+                            <attDef ident="key" mode="change" usage="req"/> 
                         </attList>
-                        <content>
-                            <textNode />
-                        </content>
                     </elementSpec>
-                    <elementSpec ident="idno"
-                                 mode="change">
+                    <elementSpec ident="idno" mode="change">
                         <attList>
-                            <attDef ident="type"
-                                    mode="add"
-                                    usage="req">
+                            <attDef ident="type" mode="replace" usage="req">
                                 <valList type="closed">
                                     <valItem ident="geoNames">
                                         <desc>GeoNames identifier</desc>
@@ -159,9 +119,6 @@
                                 </valList>
                             </attDef>
                         </attList>
-                        <content>
-                            <textNode />
-                        </content>
                     </elementSpec>
                 </schemaSpec>
             </div>
