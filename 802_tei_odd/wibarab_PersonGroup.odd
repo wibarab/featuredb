@@ -8,12 +8,10 @@
             <titleStmt>
                 <title>WIBARAB person group list TEI customization</title>
                 <principal>
-                    <name type="person"
-                          ref="dmp:SP">Stephan Procházka</name>
+                    <name type="person" ref="dmp:SP">Stephan Procházka</name>
                 </principal>
                 <author>
-                    <name type="person"
-                          ref="dmp:KS">Kinga Sramó</name>
+                    <name type="person" ref="dmp:KS">Kinga Sramó</name>
                 </author>
             </titleStmt>
             <publicationStmt>
@@ -33,55 +31,65 @@
             <div>
                 <head>Formal Specification</head>
                 <schemaSpec ident="personGroups" start="TEI">
-                    <moduleRef key="tei" />
-                    <moduleRef key="core" />
-                    <moduleRef key="header" />
-                    <moduleRef key="textstructure" />
-                    <moduleRef key="namesdates" />
-                    <elementSpec ident="personGrp"
-                                 mode="change">
+                    <moduleRef key="tei"/>
+                    <moduleRef key="core"/>
+                    <moduleRef key="header"/>
+                    <moduleRef key="textstructure"/>
+                    <moduleRef key="namesdates"/>
+                    <elementSpec ident="personGrp" mode="change">
                         <attList>
-                            <attDef ident="role"
-                                    mode="change">
+                            <attDef ident="role" mode="change">
                                 <valList type="closed">
-                                    <valItem ident="ageGroup" />
-                                    <valItem ident="firstLanguage" />
-                                    <valItem ident="gender" />
-                                    <valItem ident="religion" />
-                                    <!-- <valItem ident="socio"/> -->
-                                    <valItem ident="tribe" />
+                                    <valItem ident="ageGroup"/>
+                                    <valItem ident="firstLanguage"/>
+                                    <valItem ident="gender"/>
+                                    <valItem ident="religion"/>
+                                    <valItem ident="tribe"/>
                                 </valList>
                             </attDef>
                         </attList>
                     </elementSpec>
-                    <!-- Customize placeName to require @ref -->
                     <elementSpec ident="placeName" mode="change">
                         <content>
                             <empty/>
                         </content>
                         <attList>
-                            <attDef ident="ref" mode="change" usage="req" />
+                            <attDef ident="ref" mode="change" usage="req"/>
                         </attList>
                     </elementSpec>
                     <!-- Might need other note types, for now we only have "general" -->
-                    <elementSpec ident="note"
-                                 mode="change">
+                    <elementSpec ident="note" mode="change">
                         <attList>
-                            <attDef ident="type"
-                                    mode="change">
+                            <attDef ident="type" mode="change">
                                 <valList type="closed">
-                                    <valItem ident="general" />
+                                    <valItem ident="general"/>
                                 </valList>
                             </attDef>
                         </attList>
                     </elementSpec>
                     <!-- "tribe" specific constraints -->
-                    <constraintSpec ident="tribe-residence"
-                                    scheme="schematron">
+                    <constraintSpec ident="tribe-residence" scheme="schematron">
                         <constraint>
                             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                                      context="tei:personGrp[@role='tribe']">
-                                <sch:assert test="tei:residence">Tribe personGrp elements must contain at least one residence element.</sch:assert>
+                                context="tei:personGrp[@role='tribe']">
+                                <sch:assert test="tei:residence">Tribe personGrp elements must
+                                    contain at least one residence element.</sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+
+                    <constraintSpec ident="placeName-ref-resolves" scheme="schematron">
+                        <constraint>
+                            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                                context="tei:placeName[@ref[starts-with(., 'geo:')]]">
+                                <sch:let name="geoId" value="substring-after(@ref, 'geo:')"/>
+                                <sch:let name="geoDoc"
+                                    value="resolve-uri('vicav_geodata.xml', base-uri(/))"/>
+                                <sch:assert
+                                    test="doc-available($geoDoc) and exists(id($geoId, doc($geoDoc)))"
+                                    > The reference '<sch:value-of select="@ref"/>' does not
+                                    resolve: no place with xml:id='<sch:value-of select="$geoId"/>'
+                                    found in vicav_geodata.xml. </sch:assert>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
