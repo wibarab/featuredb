@@ -73,3 +73,12 @@ When a new version of the schema is to be released:
 * Apply the conversion script to the files in `010_manannot`. They should be output to `102_derived_TEI`
 * Commit all changes to git and add a `tag` named after the schema version number.
 * Curators have to check the converted TEI documents and move them from `102_derived_TEI` to `010_manannot` to approve the change.
+
+## Dependencies
+
+This content repository uses `vicav-library`. In this repository we keep data common to more than one VICAV projects.
+
+### Updatest to the vicav-library`
+
+Note that `vicav-library` is a submodule that references a revision of that data repoitory by hash. Updates need to be done explicitly by pulling the current
+vicav-library main branch and then committing the new revision in this repository.
