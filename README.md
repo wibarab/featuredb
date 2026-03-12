@@ -80,5 +80,12 @@ This content repository uses `vicav-library`. In this repository we keep data co
 
 ### Updatest to the vicav-library`
 
-Note that `vicav-library` is a submodule that references a revision of that data repoitory by hash. Updates need to be done explicitly by pulling the current
-vicav-library main branch and then committing the new revision in this repository.
+Note that `vicav-library` is a submodule that references a revision (commit) of that data repoitory by hash. Updates need to be done explicitly by pulling the current
+vicav-library main branch and then committing the new revision in this repository. After having committed and pushed changes to vicav-library do the following steps:
+
+* change to the project data repository
+* `git submodule update --remote`: This fetches the updated version of vicav-library
+* `git add vicav-library`: set the submodule to the latest commit of vicav-library
+* `git commit -m 'updating vicav-library' and `git push` 
+
+If you have cloned this repository and `vicav-library` is empty, you have to first initialize the submodule by calling `git submodule init vicav-library/` and then pull the current data with `git submodule update` 
