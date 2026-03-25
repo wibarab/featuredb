@@ -31,11 +31,11 @@
             <div>
                 <head>Formal Specification</head>
                 <schemaSpec ident="personGroups" start="TEI">
-                    <moduleRef key="tei"/>
-                    <moduleRef key="core" include="author bibl date head name note p publisher resp respStmt title"/>
-                    <moduleRef key="header" include="availability change encodingDesc fileDesc geoDecl licence listPrefixDef prefixDef publicationStmt revisionDesc sourceDesc teiHeader titleStmt"/>
+                    <moduleRef key="header" include="teiHeader fileDesc titleStmt publicationStmt sourceDesc encodingDesc revisionDesc change listPrefixDef prefixDef"/>
+                    <moduleRef key="core" include="author p title note name head respStmt resp desc"/>
                     <moduleRef key="textstructure" include="TEI body text"/>
-                    <moduleRef key="namesdates" include="listPerson personGrp placeName residence"/>
+                    <moduleRef key="tei"/>
+                    <moduleRef key="namesdates" include="personGrp listPerson residence placeName relation"/>
                     <elementSpec ident="personGrp" mode="change">
                         <content>
                             <sequence>
@@ -67,6 +67,12 @@
                     </elementSpec>
                     <!-- Might need other note types, for now we only have "general" -->
                     <elementSpec ident="note" mode="change">
+                        <content>
+                            <alternate minOccurs="0" maxOccurs="unbounded">
+                                <textNode/>
+                                <classRef key="model.phrase"/>
+                            </alternate>
+                        </content>
                         <attList>
                             <attDef ident="type" mode="change">
                                 <valList type="closed">
@@ -74,6 +80,17 @@
                                 </valList>
                             </attDef>
                         </attList>
+                    </elementSpec>
+                    <elementSpec ident="listPerson" mode="change">
+                        <content>
+                            <sequence>
+                                <elementRef key="head"/>
+                                <alternate minOccurs="1" maxOccurs="unbounded">
+                                    <elementRef key="personGrp"/>
+                                    <elementRef key="relation"/>
+                                </alternate>
+                            </sequence>
+                        </content>
                     </elementSpec>
                     <!-- "tribe" specific constraints -->
                     <constraintSpec ident="tribe-residence" scheme="schematron">
