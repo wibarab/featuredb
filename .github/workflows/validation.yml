@@ -10,11 +10,12 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
         with:
           path: main
+          submodules: 'true'
       - name: Checkout gh_pages
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
         with:
           ref: gh_pages
           path: gh_pages
