@@ -8,7 +8,7 @@
     <xsl:variable name="profiles" as="document-node()+"
         select="collection('../profiles/?select=*.xml')"/>
 
-    <xsl:variable name="geolist" select="document('../010_manannot/vicav_geodata.xml')"/>
+    <xsl:variable name="geolist" select="document('../vicav-library/vicav_geo/vicav_geodata.xml')"/>
     <xsl:variable name="persGrpList" select="document('../010_manannot/wibarab_PersonGroup.xml')"/>
     <xsl:variable name="fileId"
         select="replace(tokenize(document-uri(/), '/')[last()], '\.xml$', '')"/>
