@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2026-03-24T15:29:32Z. . 
+Schema generated from ODD source 2026-03-26T10:19:10Z. . 
 TEI Edition: P5 Version 4.11.0. Last updated on 18th February 2026, revision 358d2e48e 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.11.0/ 
   
@@ -2934,15 +2934,22 @@ Sample values include: 1] primary; 2] secondary; 3] temporary; 4] permanent</a:d
       </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-            id="personGroups-placeName-ref-resolves-constraint-rule-15">
+            id="personGroups-placeName-ref-constraint-rule-15">
       <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                context="tei:placeName[@ref[starts-with(., 'geo:')]]">
-         <sch:let name="geoId" value="substring-after(@ref, 'geo:')"/>
-         <sch:let name="geoDoc" value="resolve-uri('vicav_geodata.xml', base-uri(/))"/>
-         <sch:assert test="doc-available($geoDoc) and exists(id($geoId, doc($geoDoc)))"> The reference '<sch:value-of select="@ref"/>' does not
-                                    resolve: no place with xml:id='<sch:value-of select="$geoId"/>'
-                                    found in vicav_geodata.xml. </sch:assert>
+                context="tei:placeName">
+         <sch:let name="ref" value="@ref"/>
+         <sch:let name="prefix" value="substring-before($ref, ':')"/>
+         <sch:let name="id" value="substring-after($ref, ':')"/>
+         <sch:let name="prefixDef" value="root()//tei:prefixDef[@ident = $prefix]"/>
+         <sch:let name="replacementPattern" value="$prefixDef/@replacementPattern"/>
+         <sch:let name="resolvedRef" value="replace($replacementPattern, '\$1', $id)"/>
+         <sch:let name="refExists"
+                  value="doc-available(resolve-uri($resolvedRef, base-uri($ref)))"/>
+         <sch:assert test="$prefix = 'geo'"> The prefix of the ref "
+                                            <sch:value-of select="$ref"/>" should be
+                                        "geo"</sch:assert>
+         <sch:assert test="$refExists"> Problem with ref"<sch:value-of select="$ref"/>": No place with the id "<sch:value-of select="$id"/> " could be found in geolist </sch:assert>
       </sch:rule>
    </pattern>
 </grammar>
