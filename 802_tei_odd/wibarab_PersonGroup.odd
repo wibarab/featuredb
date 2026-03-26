@@ -25,6 +25,12 @@
                 <p>This is a born digital document.</p>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+            <listPrefixDef>
+                <prefixDef ident="geo" matchPattern="^(.+)$"
+                    replacementPattern="../vicav-library/vicav_geo/vicav_geodata.xml#$1"/>
+            </listPrefixDef>
+        </encodingDesc>
     </teiHeader>
     <text>
         <body>
@@ -103,19 +109,27 @@
                         </constraint>
                     </constraintSpec>
 
-                    <constraintSpec ident="placeName-ref-resolves" scheme="schematron">
+                    <constraintSpec ident="placeName-ref" scheme="schematron">
                         <constraint>
-                            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                                context="tei:placeName[@ref[starts-with(., 'geo:')]]">
-                                <sch:let name="geoId" value="substring-after(@ref, 'geo:')"/>
-                                <sch:let name="geoDoc"
-                                    value="resolve-uri('vicav_geodata.xml', base-uri(/))"/>
-                                <sch:assert
-                                    test="doc-available($geoDoc) and exists(id($geoId, doc($geoDoc)))"
-                                    > The reference '<sch:value-of select="@ref"/>' does not
-                                    resolve: no place with xml:id='<sch:value-of select="$geoId"/>'
-                                    found in vicav_geodata.xml. </sch:assert>
-                            </sch:rule>
+                            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:placeName">
+                                    <sch:let name="ref" value="@ref"/>
+                                    <sch:let name="prefix" value="substring-before($ref, ':')"/>
+                                    <sch:let name="id" value="substring-after($ref, ':')"/>
+                                    <sch:let name="prefixDef"
+                                        value="root()//tei:prefixDef[@ident = $prefix]"/>
+                                    <sch:let name="replacementPattern"
+                                        value="$prefixDef/@replacementPattern"/>
+                                    <sch:let name="resolvedRef"
+                                        value="replace($replacementPattern, '\$1', $id)"/>
+                                    <sch:let name="refExists"
+                                        value="doc-available(resolve-uri($resolvedRef, base-uri($ref)))"/>
+                                    <sch:assert test="$prefix = 'geo'"> The prefix of the ref "
+                                            <sch:value-of select="$ref"/>" should be
+                                        "geo"</sch:assert>
+                                    <sch:assert test="$refExists"> Problem with ref"<sch:value-of
+                                            select="$ref"/>": No place with the id "<sch:value-of
+                                            select="$id"/> " could be found in geolist </sch:assert>
+                                </sch:rule>
                         </constraint>
                     </constraintSpec>
                 </schemaSpec>
