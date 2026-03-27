@@ -125,8 +125,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     chosen for pragmatic reasons and has to be understood in a very broad sense as
                     an organized collection of semi-structured data electronically stored and
                     accessible. The entire textual source of <name>WIBARAB Feature DB</name> is
-                    encoded in accordance with the <name>Guidelines of the Text Encoding
-                        Initiative</name>. </p>
+                    encoded in accordance with the <name> Guidelines of the Text Encoding Initiative
+                    </name>. </p>
             </div>
             <div>
                 <head>Part II: Sources</head>
@@ -171,10 +171,10 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <p> Every linguistic feature has a set of <term>feature values</term> that indicates
                     the different attested realizations of a specific feature in the studied
                     varieties. The documentation of an occurrence of (a) specific feature value(s)
-                    in a specific location is accomplished via <term>feature value
-                        observations</term> . Every <term>feature value observation</term> specifies
-                    that one particular feature value occurs in a specific place and is produced by
-                    a specific speaker or group of speakers. When information about the speakers and
+                    in a specific location is accomplished via <term> feature value observations
+                    </term> . Every <term>feature value observation</term> specifies that one
+                    particular feature value occurs in a specific place and is produced by a
+                    specific speaker or group of speakers. When information about the speakers and
                     their communities is available, the sociolinguistic profile of the speaker or
                     the community of speakers is indicated via the <term>personGrp</term> element,
                     which may specify values regarding the speakers' tribal affiliation, religious
@@ -264,15 +264,15 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </list> The specificities of the respective elements are descibed below. </p>
                     <p> To describe this kind of data we made use of the following mandatory
                         elements. Each <term>feature value observation</term> is based on the
-                        occurence of a linguistic feature in a specific way, i.e., a <term>feature
-                            realisation</term> . These realisations are grouped into a set of
-                            <term>feature values</term> , hence the <term>feature value
-                            observation</term> shows how a source attests that a given feature is
-                        realised by a certain <term>Feature Value</term> at a specific location. The
-                            <term>feature value observation</term> can additionally include
-                        information on the person group for which this particular <term> Feature
-                            Realisation </term> is attested and it is linked to the language profile
-                        of the variety to which it is customarily assigned. </p>
+                        occurence of a linguistic feature in a specific way, i.e., a <term> feature
+                            realisation </term> . These realisations are grouped into a set of
+                            <term>feature values</term> , hence the <term> feature value observation
+                        </term> shows how a source attests that a given feature is realised by a
+                        certain <term>Feature Value</term> at a specific location. The <term>feature
+                            value observation</term> can additionally include information on the
+                        person group for which this particular <term> Feature Realisation </term> is
+                        attested and it is linked to the language profile of the variety to which it
+                        is customarily assigned. </p>
                     <p> The occurrence of multiple values or of multiple sources for a specific
                         place or variety will then result in the creation of additional
                             <gi>featureValueObservation</gi> elements. Each
@@ -295,7 +295,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <note type="general"> Young speakers often use q in words realized with
                                 /g/ or /ǧ/ by older speakers, ex. <foreign>gilīl</foreign> or
                                     <foreign>ǧilīl</foreign> - <foreign>qalīl</foreign> «few,
-                                little»</note>
+                                little» </note>
                         </wib:featureValueObservation>
                     </egXML>
                     <div>
@@ -335,19 +335,15 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         </div>
                         <div>
                             <head>Variety</head>
-                            <p>                                                            
-                                Information on a particular linguistic variety can be specified in a
-                                <name>VICAV language profile</name>. A <gi>lang</gi>                                                            
-                                element contains a
-                                link to a VICAV profile. The
-                                <term>language profile</term>                                                            
-                                is a file which
-                                contains any extra information collected about the variety and the place
-                                where it is spoken. These Profiles are named after our internal naming
-                                System with a 3 letter countrycode, dash, variety code. Some Profiles have
-                                been generated from pre-existing data from VICAV. For varieties that do not
-                                have a profile, stubs have been created.
-                            </p>
+                            <p> Information on a particular linguistic variety can be specified in a
+                                    <name>VICAV language profile</name>. A <gi>lang</gi> element
+                                contains a link to a VICAV profile. The <term>language
+                                    profile</term> is a file which contains any extra information
+                                collected about the variety and the place where it is spoken. These
+                                Profiles are named after our internal naming System with a 3 letter
+                                countrycode, dash, variety code. Some Profiles have been generated
+                                from pre-existing data from VICAV. For varieties that do not have a
+                                profile, stubs have been created. </p>
                         </div>
                     </div>
                     <div>
@@ -402,9 +398,9 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 </div>
                 <div>
                     <head>Discussion Section</head>
-                    <p>Each feature document can contain a section (<tag>div
-                            type="description"</tag> ) with a description of the linguistic feature
-                        it describes, which is located right after the feature value list. </p>
+                    <p>Each feature document can contain a section (<tag> div type="description"
+                        </tag> ) with a description of the linguistic feature it describes, which is
+                        located right after the feature value list. </p>
                     <p> In order to include a copy of the feature value list in the description, one
                         may use the <gi>divGen</gi> element with an <att>type</att> attribute with
                         the value <val>featureValues</val>.</p>
@@ -528,15 +524,15 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <head>Part VI: Formal Specification</head>
                 <schemaSpec ident="featuredb" prefix="tei_" start="TEI" xml:lang="en"
                     defaultExceptions="https://id.acdh.oeaw.ac.at/langDesc http://www.tei-c.org/ns/1.0
-&#xA;&#xA;&#xA;               teix:egXML">
+&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;               teix:egXML">
                     <moduleRef key="core" exclude="abbr add addrLine address author analytic divGen
-&#xA;&#xA;&#xA;                  editor email gap head imprint item label list listBibl measure measureGrp mentioned
-&#xA;&#xA;&#xA;                  monogr note num pb postBox postCode ptr pubPlace publisher ref resp respStmt
-&#xA;&#xA;&#xA;                  rs series street term title unclear unit"/>
+&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;                  editor email gap head imprint item label list listBibl measure measureGrp mentioned
+&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;                  monogr note num pb postBox postCode ptr pubPlace publisher ref resp respStmt
+&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;                  rs series street term title unclear unit"/>
                     <elementSpec ident="TEI" mode="change" module="textstructure">
                         <desc xml:lang="en"> In the context of the WIBARAB Feature Database, each
                             TEI feature document contains the description of one feature, the
-                            possible ways it can be realised ( <soCalled>feature values</soCalled>)
+                            possible ways it can be realised ( <soCalled>feature values</soCalled> )
                             in a <tag> list type="features" </tag> and documented observations of
                             this specific feature in literature or in the data collected in the
                             fieldwork of WIBARAB. </desc>
@@ -552,16 +548,16 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <moduleRef key="tei"/>
                     <moduleRef key="dictionaries" include="lang"/>
                     <moduleRef key="header" include="abstract appInfo application availability
-&#xA;&#xA;&#xA;                     catDesc catRef category change classCode classDecl correspAction correspContext correspDesc
-&#xA;&#xA;&#xA;                     creation distributor edition editionStmt encodingDesc extent fileDesc funder geoDecl
-&#xA;&#xA;&#xA;                     hyphenation keywords langUsage language licence listChange listPrefixDef namespace
-&#xA;&#xA;&#xA;                     normalization notesStmt prefixDef principal profileDesc projectDesc publicationStmt
-&#xA;&#xA;&#xA;                     punctuation quotation ref revisionDesc samplingDecl seriesStmt sourceDesc sponsor
-&#xA;&#xA;&#xA;                     stdVals taxonomy teiHeader textClass titleStmt unitDecl unitDef"/>
+&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;                     catDesc catRef category change classCode classDecl correspAction correspContext correspDesc
+&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;                     creation distributor edition editionStmt encodingDesc extent fileDesc funder geoDecl
+&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;                     hyphenation keywords langUsage language licence listChange listPrefixDef namespace
+&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;                     normalization notesStmt prefixDef principal profileDesc projectDesc publicationStmt
+&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;                     punctuation quotation ref revisionDesc samplingDecl seriesStmt sourceDesc sponsor
+&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;                     stdVals taxonomy teiHeader textClass titleStmt unitDecl unitDef"/>
                     <elementSpec ident="TEI" mode="change" module="textstructure">
                         <desc xml:lang="en"> In the context of the WIBARAB Feature Database, each
                             TEI feature document contains the description of one feature, the
-                            possible ways it can be realised ( <soCalled>feature values</soCalled>)
+                            possible ways it can be realised ( <soCalled>feature values</soCalled> )
                             in a <tag> list type="features" </tag> and documented observations of
                             this specific feature in literature or in the data collected in the
                             fieldwork of WIBARAB. </desc>
@@ -569,10 +565,10 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     <moduleRef key="corpus"/>
                     <moduleRef key="textstructure" include="TEI back body front div text byline"/>
                     <moduleRef key="namesdates" include="affiliation age birth bloc death
-&#xA;&#xA;&#xA;                        district education event faith forename genName geo geogFeat geogName langKnowledge
-&#xA;&#xA;&#xA;                        langKnown listEvent listOrg listPerson listPlace location nationality occupation
-&#xA;&#xA;&#xA;                        org orgName persName person personGrp place placeName population region residence
-&#xA;&#xA;&#xA;                        settlement socecStatus surename"/>
+&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;                        district education event faith forename genName geo geogFeat geogName langKnowledge
+&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;                        langKnown listEvent listOrg listPerson listPlace location nationality occupation
+&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;                        org orgName persName person personGrp place placeName population region residence
+&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;                        settlement socecStatus surename"/>
                     <moduleRef key="linking" include="seg"/>
                     <!-- DS 2022-06-23 removing analysis module as long as we don't have
                         any encoded examples in the data. -->
@@ -655,8 +651,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <sch:let name="targetExists"
                                         value="doc-available(resolve-uri($resolvedTarget, base-uri($target)))"/>
                                     <sch:assert test="$prefix = 'dmp'"> The prefix of the target "
-                                            <sch:value-of select="$target"/>" should be
-                                        "dmp"</sch:assert>
+                                            <sch:value-of select="$target"/> " should be "dmp" </sch:assert>
                                     <sch:assert test="$targetExists">The target "<sch:value-of
                                             select="$target"/>" of pointer "<sch:value-of
                                             select="$id"/> " cannot be resolved </sch:assert>
@@ -708,7 +703,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             <attDef ident="resp" mode="delete"/>
                             <attDef ident="status" mode="change">
                                 <desc> This attribute is used to indicate references to bibl entries
-                                    which need to be conrolled. </desc>
+                                    which need to be controlled. </desc>
                                 <valList>
                                     <valItem ident="CHECKME">
                                         <desc> The value of @corresp needs to be confirmed by the
@@ -862,7 +857,6 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <valItem ident="ageGroup"/>
                                     <valItem ident="gender"/>
                                     <valItem ident="firstLanguage"/>
-                                    <valItem ident="socio"/>
                                 </valList>
                                 <exemplum>
                                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -1066,6 +1060,31 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <sch:assert test="count(tei:personGrp[@role='tribe']) &lt;= 1">
                                         There should only be one personGrp element with
                                         @role="tribe" per featureValueObservation. </sch:assert>
+                                </sch:rule>
+                            </constraint>
+                        </constraintSpec>
+                        <constraintSpec ident="fvo-place-in-profile" scheme="schematron">
+                            <constraint>
+                                <sch:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>
+                                <sch:ns prefix="wib" uri="https://wibarab.acdh.oeaw.ac.at/langDesc"/>
+                                <sch:rule context="wib:featureValueObservation[tei:lang/@corresp]">
+                                    <sch:let name="langPath"
+                                        value="translate(tei:lang/@corresp, '\', '/')"/>
+                                    <sch:let name="langURI"
+                                        value="resolve-uri($langPath, base-uri(.))"/>
+                                    <sch:let name="profileDoc"
+                                        value="if (doc-available($langURI)) then doc($langURI) else ()"/>
+                                    <sch:let name="profilePlaces"
+                                        value="$profileDoc//tei:place/@sameAs"/>
+                                    <sch:let name="fvoPlace" value="tei:placeName/@ref"/>
+                                    <sch:assert
+                                        test="empty($profileDoc) or ($fvoPlace = $profilePlaces)">
+                                        placeName ref <sch:value-of select="$fvoPlace"/> is not
+                                        listed in the profile <sch:value-of
+                                            select="tei:lang/@corresp"/>. Expected one of:
+                                            <sch:value-of select="string-join($profilePlaces, ', ')"
+                                        />
+                                    </sch:assert>
                                 </sch:rule>
                             </constraint>
                         </constraintSpec>
