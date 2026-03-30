@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2026-03-27T15:48:10Z. . 
+Schema generated from ODD source 2026-03-30T12:16:19Z. . 
 TEI Edition: P5 Version 4.11.0. Last updated on 18th February 2026, revision 358d2e48e 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.11.0/ 
   
@@ -3482,8 +3482,10 @@ Suggested values include: 1] spoken (spoken); 2] thought (thought); 3] written (
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
                       context="tei:cit[@type = 'example']">
-               <sch:assert test="tei:cit[@type='translation']"> An example
-                                        should have a translation. </sch:assert>
+               <sch:assert test="tei:cit[@type='translation']">                                                
+                                                An example
+                                                should have a translation.
+                                            </sch:assert>
             </sch:rule>
          </pattern>
          <ref name="tei_att.global.attribute.xmlid"/>
@@ -3971,9 +3973,12 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
                <sch:report test="$target = ''">unexpected target "<sch:value-of select="$idRef"/>" in reference <sch:value-of select="local-name($idRef)"/>
                </sch:report>
                <sch:assert test="$targetResolves">the target "<sch:value-of select="$target"/>" of pointer "<sch:value-of select="$idRef"/> " cannot be resolved </sch:assert>
-               <sch:report test="count(tokenize($idRef,' ')) gt 1"> pointer "
-                                            <sch:value-of select="$idRef"/> " contains more than one
-                                        references (whitespace) </sch:report>
+               <sch:report test="count(tokenize($idRef,' ')) gt 1">                                        
+                                        pointer "
+                                    <sch:value-of select="$idRef"/>                                        
+                                        " contains more than one
+                                        references (whitespace)
+                                    </sch:report>
             </sch:rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
@@ -4339,10 +4344,14 @@ Measures]</a:documentation>
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
                       context="tei:item[parent::tei:list/@type = 'featureValues']">
-               <sch:report test="not(exists(@xml:id[.!='']))"> missing or empty
-                                        xml:id on featureValue item </sch:report>
-               <sch:report test="not(exists(tei:label[. != '']))"> missing
-                                        label or empty xml:id on featureValue item </sch:report>
+               <sch:report test="not(exists(@xml:id[.!='']))">                                            
+                                            missing or empty
+                                            xml:id on featureValue item
+                                        </sch:report>
+               <sch:report test="not(exists(tei:label[. != '']))">                                            
+                                            missing
+                                            label or empty xml:id on featureValue item
+                                        </sch:report>
             </sch:rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
@@ -6020,8 +6029,9 @@ Suggested values include: 1] WGS84 (World Geodetic System); 2] MGRS (Military Gr
                <sch:let name="resolvedTarget" value="replace($replacementPattern, '\$1', $id)"/>
                <sch:let name="targetExists"
                         value="doc-available(resolve-uri($resolvedTarget, base-uri($target)))"/>
-               <sch:assert test="$prefix = 'dmp'"> The prefix of the target "
-                                            <sch:value-of select="$target"/> " should be "dmp" </sch:assert>
+               <sch:assert test="$prefix = 'dmp'">                                            
+                                            The prefix of the target "
+                                        <sch:value-of select="$target"/> " should be "dmp" </sch:assert>
                <sch:assert test="$targetExists">The target "<sch:value-of select="$target"/>" of pointer "<sch:value-of select="$id"/> " cannot be resolved </sch:assert>
             </sch:rule>
          </pattern>
@@ -6595,8 +6605,10 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</a:doc
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
                       context="tei:div[@type = 'description']">
-               <sch:assert test="child::tei:byline"> 'byline' element is
-                                        required. </sch:assert>
+               <sch:assert test="child::tei:byline">                                        
+                                        'byline' element is
+                                        required.
+                                    </sch:assert>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
@@ -7682,9 +7694,10 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</a:doc
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
                       context="wib:featureValueObservation">
-               <sch:assert test="count(tei:personGrp[@role='tribe']) &lt;= 1">
-                                        There should only be one personGrp element with
-                                        @role="tribe" per featureValueObservation. </sch:assert>
+               <sch:assert test="count(tei:personGrp[@role='tribe']) &lt;= 1">                                                
+                                                There should only be one personGrp element with
+                                                @role="tribe" per featureValueObservation.
+                                            </sch:assert>
             </sch:rule>
          </pattern>
          <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
@@ -7701,7 +7714,7 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</a:doc
                  uri="https://wibarab.acdh.oeaw.ac.at/langDesc"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="featuredb-featureValueObservation-fvo-place-in-profile-constraint-rule-37">
+                  id="featuredb-featureValueObservation-fvo-profile-crosscheck-constraint-rule-37">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
@@ -7712,10 +7725,14 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</a:doc
                         value="if (doc-available($langURI)) then doc($langURI) else ()"/>
                <sch:let name="profilePlaces" value="$profileDoc//tei:place/@sameAs"/>
                <sch:let name="fvoPlace" value="tei:placeName/@ref"/>
-               <sch:assert test="empty($profileDoc) or ($fvoPlace = $profilePlaces)">
-                                        placeName ref <sch:value-of select="$fvoPlace"/> is not
-                                        listed in the profile <sch:value-of select="tei:lang/@corresp"/>. Expected one of:
-                                            <sch:value-of select="string-join($profilePlaces, ', ')"/>
+               <sch:assert test="empty($profileDoc) or ($fvoPlace = $profilePlaces)">placeName ref <sch:value-of select="$fvoPlace"/> is not listed in the profile <sch:value-of select="tei:lang/@corresp"/>. Expected one of: <sch:value-of select="string-join($profilePlaces, ', ')"/>
+               </sch:assert>
+               <sch:let name="profilePersonGrps"
+                        value="$profileDoc//tei:personGrp[@role='religion']/@corresp"/>
+               <sch:let name="fvoPersonGrps" value="tei:personGrp[@role='religion']/@corresp"/>
+               <sch:assert test="empty($profileDoc) or empty($profilePersonGrps) or ($profilePersonGrps = $fvoPersonGrps)">                                            
+                                            Profile
+                                        <sch:value-of select="tei:lang/@corresp"/> requires personGrp role="religion" with corresp="<sch:value-of select="$profilePersonGrps"/>", but FVO is missing it or has wrong value: <sch:value-of select="string-join($fvoPersonGrps, ', ')"/>
                </sch:assert>
             </sch:rule>
          </pattern>
