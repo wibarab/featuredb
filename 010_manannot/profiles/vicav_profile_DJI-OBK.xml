@@ -4,7 +4,7 @@
         <fileDesc>
             <titleStmt>
                 <title>A machine-readable profile of Obock Arabic</title>
-                <author/>
+                <author />
             </titleStmt>
             <publicationStmt>
                 <publisher>ACDH-OeAW</publisher>
@@ -12,24 +12,23 @@
                 <date>2022</date>
                 <availability status="restricted">
                     <p>
-                        <ref type="license"
-                            target="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
+                        <ref type="license" target="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
                     </p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p>This is an original digital text</p>
+                <listBibl>
+                    <bibl corresp="zot:youssi_2002_8971" type="publication" />
+                    <bibl corresp="zot:simeone_senelle_youssi_2002_0000" type="publication" />
+                </listBibl>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="wibarab-dmp.xml#$1"/>
-                <prefixDef ident="zotid" matchPattern="^(.+)$"
-                    replacementPattern="vicav_biblio_tei_zotero.xml#$1"/>
-                <prefixDef ident="dia" matchPattern="^(.+)$"
-                    replacementPattern="vicav_dialects.xml#$1"/>
-                <prefixDef ident="geo" matchPattern="^(.+)$"
-                    replacementPattern="vicav_geodata.xml#$1"/>
+                <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="wibarab-dmp.xml#$1" />
+                <prefixDef ident="zotid" matchPattern="^(.+)$" replacementPattern="vicav_biblio_tei_zotero.xml#$1" />
+                <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="vicav_dialects.xml#$1" />
+                <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="vicav_geodata.xml#$1" />
             </listPrefixDef>
         </encodingDesc>
         <profileDesc>
@@ -38,7 +37,7 @@
                     <name type="languageVariety">Obock Arabic</name>
                     <settingDesc>
                         <listPlace>
-                            <place sameAs="geo:obock"/>
+                            <place sameAs="geo:obock" />
                         </listPlace>
                     </settingDesc>
                     <date type="languagePeriod">
@@ -50,16 +49,17 @@
         </profileDesc>
         <revisionDesc>
             <change status="created" when="2022-08-30" who="dmp:RZ">created this document by copying
-                the VICAV file of TCD-BBL, entry by <persName ref="dmp:RZ"/>
-            </change>
-            <change when="2025-10-07+02:00" who="dmp:KS">Transformed to Lex-0</change>
-        </revisionDesc>
-    </teiHeader>
-    <text>
-        <body>
-            <div>
-                <head/>
-            </div>
-        </body>
-    </text>
+                the VICAV file of TCD-BBL, entry by <persName ref="dmp:RZ" />
+        </change>
+        <change when="2025-10-07+02:00" who="dmp:KS">Transformed to Lex-0</change>
+        <change when="2026-03-30" who="dmp:KS">Added sources from feature value observations.</change>
+    </revisionDesc>
+</teiHeader>
+<text>
+    <body>
+        <div>
+            <head />
+        </div>
+    </body>
+</text>
 </TEI>

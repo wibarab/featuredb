@@ -17,13 +17,15 @@
                 <date>2019</date>
                 <availability status="restricted">
                     <p>
-                        <ref type="license"
-                            target="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
+                        <ref type="license" target="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
                     </p>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p>This is an original digital text</p>
+                <listBibl>
+                    <bibl corresp="zot:behnstedt_2010_9999" type="publication" />
+                    <bibl corresp="zot:rhodokanakis_1908_1911_0000" type="publication" />
+                </listBibl>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -33,8 +35,7 @@
                 <rendition xml:id="b" scheme="css">font-weight:bold;</rendition>
             </tagsDecl>
             <listPrefixDef>
-                <prefixDef ident="zotid" matchPattern="([a-z]+)"
-                    replacementPattern="https://www.zotero.org/groups/2165756/vicav/items/itemKey/#$1">
+                <prefixDef ident="zotid" matchPattern="([a-z]+)" replacementPattern="https://www.zotero.org/groups/2165756/vicav/items/itemKey/#$1">
                     <p>Private URIs with the prefix "zotid" point to the respective bibliographic
                         record in the VICAV Zotero library and/or to a local copy of it.</p>
                 </prefixDef>
@@ -46,7 +47,7 @@
                     <name type="languageVariety">Dhofar Arabic</name>
                     <settingDesc>
                         <listPlace>
-                            <place sameAs="geo:dhofar"/>
+                            <place sameAs="geo:dhofar" />
                         </listPlace>
                     </settingDesc>
                     <date type="languagePeriod">
@@ -62,8 +63,9 @@
                 2)</change>
             <change status="draft" when="2020-10-13T19:41:17.831+02:00">transformed to
                 TEI-XML</change>
-            <change when="2020-10-13T19:41:18.842+02:00" status="draft"/>
+            <change when="2020-10-13T19:41:18.842+02:00" status="draft" />
             <change when="2025-10-07+02:00" who="dmp:KS">Transformed to Lex-0</change>
+            <change when="2026-03-30" who="dmp:KS">Added sources from feature value observations.</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -71,7 +73,7 @@
             <div>
                 <head>
                     <figure>
-                        <graphic url="zufar_sp_2011.jpg" type="thumbnail"/>
+                        <graphic url="zufar_sp_2011.jpg" type="thumbnail" />
                         <head type="imgCaption">Courtesy of Stephan Procházka, 2011</head>
                     </figure>
                 </head>
@@ -92,15 +94,13 @@
                         dialect date back to the 1904. His study on the dialect is in two volumes:
                             <rs type="bibl" ref="zotid:AAT7E6EK">Rhodokanakis (1908)</rs> is a
                         collection of 17 narratives and 112 poems with German translation, with an
-                        appendix of adages in the dialect of the Dhofar region; and <rs type="bibl"
-                            ref="zotid:EXE63L7R">Rhodokanakis (1911)</rs> includes a glossary and a
+                        appendix of adages in the dialect of the Dhofar region; and <rs type="bibl" ref="zotid:EXE63L7R">Rhodokanakis (1911)</rs> includes a glossary and a
                         grammatical discussion of the dialect’s phonology and morphology, with some
                         remarks on the syntax. The introduction to the second volume includes notes
                         on the rhythmic form of the poems of the first volume. </p>
                     <p>After a long research break, Richard J. Davey investigated the dialect of the
                         region again. <rs type="bibl" ref="zotid:ES75YM4H">Davey (2015)</rs>
-                        examines analytical genitive constructions in coastal Dhofari Arabic. <rs
-                            type="bibl" ref="zotid:H7Q9AEZ2">Davey (2016)</rs> is a rather
+                        examines analytical genitive constructions in coastal Dhofari Arabic. <rs type="bibl" ref="zotid:H7Q9AEZ2">Davey (2016)</rs> is a rather
                         comprehensive grammatical study presenting the key phonological and
                         morpho-syntactic features of Dhofar’s coastal dialect. It includes a basic
                         lexicon and four sample texts.</p>
@@ -108,14 +108,12 @@
                 <div type="dictionaries">
                     <p>
                         <rs type="bibl" ref="zotid:EXE63L7R">Rhodokanakis (1911)</rs> has a 66-page
-                        Arabic-German glossary. The lexicon in <rs type="bibl" ref="zotid:H7Q9AEZ2"
-                            >Davey (2016)</rs> has 17 pages of lexical items from 21 categories.</p>
+                        Arabic-German glossary. The lexicon in <rs type="bibl" ref="zotid:H7Q9AEZ2">Davey (2016)</rs> has 17 pages of lexical items from 21 categories.</p>
+                    </div>
+                    <div type="bibliography">
+                        <p>To view publications on this variety click <rs type="bibl" ref="bibl:reg:Dhofar">here</rs>.</p>
+                    </div>
                 </div>
-                <div type="bibliography">
-                    <p>To view publications on this variety click <rs type="bibl"
-                            ref="bibl:reg:Dhofar">here</rs>.</p>
-                </div>
-            </div>
-        </body>
-    </text>
-</TEI>
+            </body>
+        </text>
+    </TEI>
