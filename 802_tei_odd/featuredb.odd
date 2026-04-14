@@ -53,10 +53,11 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <encodingDesc>
             <listPrefixDef>
                 <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../010_manannot/wibarab_dmp.xml#$1" />
-                <prefixDef ident="zotid" matchPattern="^(.+)$" replacementPattern="../vicav-library/vicav_biblio/vicav_biblio_tei_zotero.xml#$1" />
+                <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../vicav-library/vicav_biblio/vicav_biblio_tei_zotero.xml#$1" />
                 <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../010_manannot/vicav_dialects.xml#$1" />
                 <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../vicav-library/vicav_geo/vicav_geodata.xml#$1" />
                 <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../010_manannot/wibarab_PersonGroup.xml.xml#$1" />
+                <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1" />
             </listPrefixDef>
         </encodingDesc>
         <revisionDesc status="published">
@@ -699,11 +700,11 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <div>
                     <head>Part VI: Formal Specification</head>
                     <schemaSpec ident="featuredb" prefix="tei_" start="TEI" xml:lang="en" defaultExceptions="https://id.acdh.oeaw.ac.at/langDesc http://www.tei-c.org/ns/1.0
-&#xA;&#xA;               teix:egXML">
+&#xA;&#xA;&#xA;               teix:egXML">
                         <moduleRef key="core" exclude="abbr add addrLine address author analytic divGen
-&#xA;&#xA;                  editor email gap head imprint item label list listBibl measure measureGrp mentioned
-&#xA;&#xA;                  monogr note num pb postBox postCode ptr pubPlace publisher ref resp respStmt
-&#xA;&#xA;                  rs series street term title unclear unit" />
+&#xA;&#xA;&#xA;                  editor email gap head imprint item label list listBibl measure measureGrp mentioned
+&#xA;&#xA;&#xA;                  monogr note num pb postBox postCode ptr pubPlace publisher ref resp respStmt
+&#xA;&#xA;&#xA;                  rs series street term title unclear unit" />
                         <elementSpec ident="TEI" mode="change" module="textstructure">
                             <desc xml:lang="en">                                
                                 In the context of the WIBARAB Feature Database, each
@@ -729,12 +730,12 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <moduleRef key="tei" />
                         <moduleRef key="dictionaries" include="lang" />
                         <moduleRef key="header" include="abstract appInfo application availability
-&#xA;&#xA;                     catDesc catRef category change classCode classDecl correspAction correspContext correspDesc
-&#xA;&#xA;                     creation distributor edition editionStmt encodingDesc extent fileDesc funder geoDecl
-&#xA;&#xA;                     hyphenation keywords langUsage language licence listChange listPrefixDef namespace
-&#xA;&#xA;                     normalization notesStmt prefixDef principal profileDesc projectDesc publicationStmt
-&#xA;&#xA;                     punctuation quotation ref revisionDesc samplingDecl seriesStmt sourceDesc sponsor
-&#xA;&#xA;                     stdVals taxonomy teiHeader textClass titleStmt unitDecl unitDef" />
+&#xA;&#xA;&#xA;                     catDesc catRef category change classCode classDecl correspAction correspContext correspDesc
+&#xA;&#xA;&#xA;                     creation distributor edition editionStmt encodingDesc extent fileDesc funder geoDecl
+&#xA;&#xA;&#xA;                     hyphenation keywords langUsage language licence listChange listPrefixDef namespace
+&#xA;&#xA;&#xA;                     normalization notesStmt prefixDef principal profileDesc projectDesc publicationStmt
+&#xA;&#xA;&#xA;                     punctuation quotation ref revisionDesc samplingDecl seriesStmt sourceDesc sponsor
+&#xA;&#xA;&#xA;                     stdVals taxonomy teiHeader textClass titleStmt unitDecl unitDef" />
                         <elementSpec ident="TEI" mode="change" module="textstructure">
                             <desc xml:lang="en">                                
                                 In the context of the WIBARAB Feature Database, each
@@ -1251,6 +1252,16 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         </alternate>
                                     </sequence>
                                 </content>
+                                <constraintSpec ident="lang-check" scheme="schematron">
+                                    <constraint>
+                                        <sch:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0" />
+                                        <sch:rule context="wib:featureValueObservation">
+                                            <sch:assert test="exists(tei:lang/@corresp)">                                                
+                                                Missing required reference to a language profile via tei:lang/@corresp.
+                                            </sch:assert>
+                                        </sch:rule>
+                                    </constraint>
+                                </constraintSpec>
                                 <constraintSpec ident="one-tribe-per-fvo" scheme="schematron">
                                     <constraint>
                                         <sch:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0" />

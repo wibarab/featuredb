@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2026-03-30T12:16:19Z. . 
+Schema generated from ODD source 2026-04-14T09:26:48Z. . 
 TEI Edition: P5 Version 4.11.0. Last updated on 18th February 2026, revision 358d2e48e 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.11.0/ 
   
@@ -7681,6 +7681,24 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</a:doc
                  xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
                  prefix="tei"
                  uri="http://www.tei-c.org/ns/1.0"/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="featuredb-featureValueObservation-lang-check-constraint-rule-36">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
+                      context="wib:featureValueObservation">
+               <sch:assert test="exists(tei:lang/@corresp)">                                                
+                                                Missing required reference to a language profile via tei:lang/@corresp.
+                                            </sch:assert>
+            </sch:rule>
+         </pattern>
+         <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                 xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
+                 prefix="tei"
+                 uri="http://www.tei-c.org/ns/1.0"/>
          <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
                  xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -7689,7 +7707,7 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</a:doc
                  uri="https://wibarab.acdh.oeaw.ac.at/langDesc"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="featuredb-featureValueObservation-one-tribe-per-fvo-constraint-rule-36">
+                  id="featuredb-featureValueObservation-one-tribe-per-fvo-constraint-rule-37">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
@@ -7714,7 +7732,7 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</a:doc
                  uri="https://wibarab.acdh.oeaw.ac.at/langDesc"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="featuredb-featureValueObservation-fvo-profile-crosscheck-constraint-rule-37">
+                  id="featuredb-featureValueObservation-fvo-profile-crosscheck-constraint-rule-38">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
