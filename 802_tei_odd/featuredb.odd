@@ -700,11 +700,11 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                 <div>
                     <head>Part VI: Formal Specification</head>
                     <schemaSpec ident="featuredb" prefix="tei_" start="TEI" xml:lang="en" defaultExceptions="https://id.acdh.oeaw.ac.at/langDesc http://www.tei-c.org/ns/1.0
-&#xA;&#xA;&#xA;               teix:egXML">
+&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;               teix:egXML">
                         <moduleRef key="core" exclude="abbr add addrLine address author analytic divGen
-&#xA;&#xA;&#xA;                  editor email gap head imprint item label list listBibl measure measureGrp mentioned
-&#xA;&#xA;&#xA;                  monogr note num pb postBox postCode ptr pubPlace publisher ref resp respStmt
-&#xA;&#xA;&#xA;                  rs series street term title unclear unit" />
+&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;                  editor email gap head imprint item label list listBibl measure measureGrp mentioned
+&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;                  monogr note num pb postBox postCode ptr pubPlace publisher ref resp respStmt
+&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;                  rs series street term title unclear unit" />
                         <elementSpec ident="TEI" mode="change" module="textstructure">
                             <desc xml:lang="en">                                
                                 In the context of the WIBARAB Feature Database, each
@@ -730,12 +730,12 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                         <moduleRef key="tei" />
                         <moduleRef key="dictionaries" include="lang" />
                         <moduleRef key="header" include="abstract appInfo application availability
-&#xA;&#xA;&#xA;                     catDesc catRef category change classCode classDecl correspAction correspContext correspDesc
-&#xA;&#xA;&#xA;                     creation distributor edition editionStmt encodingDesc extent fileDesc funder geoDecl
-&#xA;&#xA;&#xA;                     hyphenation keywords langUsage language licence listChange listPrefixDef namespace
-&#xA;&#xA;&#xA;                     normalization notesStmt prefixDef principal profileDesc projectDesc publicationStmt
-&#xA;&#xA;&#xA;                     punctuation quotation ref revisionDesc samplingDecl seriesStmt sourceDesc sponsor
-&#xA;&#xA;&#xA;                     stdVals taxonomy teiHeader textClass titleStmt unitDecl unitDef" />
+&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;                     catDesc catRef category change classCode classDecl correspAction correspContext correspDesc
+&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;                     creation distributor edition editionStmt encodingDesc extent fileDesc funder geoDecl
+&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;                     hyphenation keywords langUsage language licence listChange listPrefixDef namespace
+&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;                     normalization notesStmt prefixDef principal profileDesc projectDesc publicationStmt
+&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;                     punctuation quotation ref revisionDesc samplingDecl seriesStmt sourceDesc sponsor
+&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;                     stdVals taxonomy teiHeader textClass titleStmt unitDecl unitDef" />
                         <elementSpec ident="TEI" mode="change" module="textstructure">
                             <desc xml:lang="en">                                
                                 In the context of the WIBARAB Feature Database, each
@@ -1188,6 +1188,17 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                             </attList>
                         </elementSpec>
                         <elementSpec ident="cit" mode="change">
+                            <constraintSpec ident="example-translation" scheme="schematron">
+                                <constraint>
+                                    <sch:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0" />
+                                    <sch:rule context="tei:cit[@type = 'example']">
+                                        <sch:assert test="tei:cit[@type='translation']">                                                
+                                            An example
+                                            should have a translation.
+                                        </sch:assert>
+                                    </sch:rule>
+                                </constraint>
+                            </constraintSpec>
                             <attList>
                                 <attDef ident="type" mode="add">
                                     <valList type="closed">
@@ -1214,17 +1225,6 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                         </datatype>
                                     </attDef>
                                 </attList>
-                                <constraintSpec ident="example-translation" scheme="schematron">
-                                    <constraint>
-                                        <sch:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0" />
-                                        <sch:rule context="tei:cit[@type = 'example']">
-                                            <sch:assert test="tei:cit[@type='translation']">                                                
-                                                An example
-                                                should have a translation.
-                                            </sch:assert>
-                                        </sch:rule>
-                                    </constraint>
-                                </constraintSpec>
                             </elementSpec>
                             <elementSpec ident="featureValueObservation" mode="add" ns="https://wibarab.acdh.oeaw.ac.at/langDesc">
                                 <gloss>feature value observation</gloss>
@@ -1256,7 +1256,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <constraint>
                                         <sch:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0" />
                                         <sch:rule context="wib:featureValueObservation">
-                                            <sch:assert test="exists(tei:lang/@corresp)">                                                
+                                            <sch:assert test="tei:lang/@corresp != ''">                                                
                                                 Missing required reference to a language profile via tei:lang/@corresp.
                                             </sch:assert>
                                         </sch:rule>
@@ -1278,7 +1278,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                                     <constraint>
                                         <sch:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0" />
                                         <sch:ns prefix="wib" uri="https://wibarab.acdh.oeaw.ac.at/langDesc" />
-                                        <sch:rule context="wib:featureValueObservation[tei:lang/@corresp]">
+                                        <sch:rule context="wib:featureValueObservation[tei:lang/@corresp != '']">
                                             <sch:let name="langPath" value="translate(tei:lang/@corresp, '\', '/')" />
                                             <sch:let name="langURI" value="resolve-uri($langPath, base-uri(.))" />
                                             <sch:let name="profileDoc" value="if (doc-available($langURI)) then doc($langURI) else ()" />

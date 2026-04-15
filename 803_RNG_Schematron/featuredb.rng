@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2026-04-14T09:26:48Z. . 
+Schema generated from ODD source 2026-04-15T10:00:53Z. . 
 TEI Edition: P5 Version 4.11.0. Last updated on 18th February 2026, revision 358d2e48e 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.11.0/ 
   
@@ -3483,9 +3483,9 @@ Suggested values include: 1] spoken (spoken); 2] thought (thought); 3] written (
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
                       context="tei:cit[@type = 'example']">
                <sch:assert test="tei:cit[@type='translation']">                                                
-                                                An example
-                                                should have a translation.
-                                            </sch:assert>
+                                            An example
+                                            should have a translation.
+                                        </sch:assert>
             </sch:rule>
          </pattern>
          <ref name="tei_att.global.attribute.xmlid"/>
@@ -7688,7 +7688,7 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</a:doc
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
                       context="wib:featureValueObservation">
-               <sch:assert test="exists(tei:lang/@corresp)">                                                
+               <sch:assert test="tei:lang/@corresp != ''">                                                
                                                 Missing required reference to a language profile via tei:lang/@corresp.
                                             </sch:assert>
             </sch:rule>
@@ -7736,7 +7736,7 @@ Suggested values include: 1] self; 2] single; 3] many; 4] group; 5] world</a:doc
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc"
-                      context="wib:featureValueObservation[tei:lang/@corresp]">
+                      context="wib:featureValueObservation[tei:lang/@corresp != '']">
                <sch:let name="langPath" value="translate(tei:lang/@corresp, '\', '/')"/>
                <sch:let name="langURI" value="resolve-uri($langPath, base-uri(.))"/>
                <sch:let name="profileDoc"
