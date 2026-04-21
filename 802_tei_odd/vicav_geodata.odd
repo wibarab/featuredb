@@ -12,6 +12,7 @@
                 </principal>
                 <author>
                     <name type="person" ref="dmp:KS">Kinga Sramó</name>
+                    <name type="person">Daniel Schopper</name>
                 </author>
             </titleStmt>
             <publicationStmt>
@@ -25,9 +26,86 @@
                 <p>This is a born digital document.</p>
             </sourceDesc>
         </fileDesc>
+        <revisionDesc>
+            <change who="#DS" when="2026-04-17">added first draft of documentation part</change>
+        </revisionDesc>
     </teiHeader>
     <text>
         <body>
+            <div>
+                <head>Documentation</head>
+                <p>This document describes the schema of the VICAV geolocations list, which serves
+                    as the central gazetteer of all datasets included in VICAV and is referenced
+                    from other data types (e.g. profiles or corpus documents).</p>
+                <div>
+                    <head>Types of entries</head>
+                    <p>Each entry in the gazetteer represents either a specific location – e.g.
+                        city, village, settlement etc. (encoded as <tag>place type="geo"</tag>) or a
+                        broader region – e.g. a valley or district (encoded as <tag>place
+                            type="reg"</tag>). A third category called "dialect group area" ...</p>
+                </div>
+                <div>
+                    <head>Names</head>
+                    <p>Each entry MUST have exactly one "prefered label" encoded as <tag>placeName
+                            type="prefLabel"</tag> which is usually (however not always) an English
+                        name for the place. As there can be exceptions to this rule of thumb, we do
+                        not claim that this label is in a specific language and thus do not enforce
+                        the presence of <att>xml:lang</att>. Usuall name is usually drawn from the
+                        English version of Wikipedia.</p>
+                    <p>Next to this, an entry can have one or more "alternative labels" where the
+                        same logical applies.</p>
+                    <p>In most cases, the gazetteer also provides place names in MSA in Arbaic
+                        script (<tag>placeName xml:lang="ar" type="standard"</tag>) and/or Latin
+                        script (<tag>placeName xml:lang="ar-Ltn" type="standard"</tag>) next to the
+                        local vernacular names (<att>type</att> with <val>local</val>), also in
+                        Latin or Arabic script.</p>
+                </div>
+                <div>
+                    <head>Geographic Hierarchy</head>
+                    <p>Both the geographic superordinate units as well as the geocoordinates of an
+                        entry are encoded within a <gi>location</gi> element which is a direct child
+                        of <gi>place</gi>.</p>
+                    <p>Where needed, entries may contain exactly one <gi>region</gi> element within
+                            <gi>location</gi> which represents any kind of a higher-level geographic
+                        unit named in English. Usually, these regions are larger administrative
+                        units (e.g. governorates), but since the gazetteer has to cover a wide range
+                        of diverse countries and their specific administrative sub-structures, there
+                        is no claim which kind of unit this should be. If needed, an optional
+                            <att>type</att> attribute with a suitable value can be used to make this
+                        explicit, however this is neither enforced nor used. These regions are used
+                        to structure place lists in the VICAV application, where needed. In case
+                        this region is also represented by a "region entry" in the gazetteer, this
+                        relation can be expressed using the <att>ref</att> attribute pointing to the
+                        respective entry via its <att>xml:id</att>. (NB: Both <att>type</att> nor
+                            <att>ref</att> are exploited by the VICAV application.)</p>
+                    <p>Each place entry must feature one <gi>country</gi> element within
+                            <gi>location</gi> which contains the English name of the sovereign state
+                        the place is part of. The mandatory <att>key</att> attribute must provide a
+                        two-letter code from <ref
+                            target="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166</ref>
+                        ("Codes for the representation of names of countries and their
+                        subdivisions").</p>
+                    <p>Two geo elements must provide geographical points both in decimal notation
+                            (<tag>geo decls="#dd"</tag>) and degrees/minutes/seconds (<tag>geo
+                            decls="#dms"</tag>).</p>
+                </div>
+                <div>
+                    <head>Location</head>
+                    <p>We try to provide coordinates for all places in the gazetteer. Due the
+                        absence of data which would allow to draw clear isoglosses we also represent
+                        regions as points which are chosen by the editors. Provided the different
+                            <att>type</att> attribute, such locations can be rendered differently on
+                        a map, even if there are no shapes available.</p>
+                </div>
+                <div>
+                    <head>External Identifiers</head>
+                    <p>Currently, the VICAV gazetteer only provides identifiers from the "geonames"
+                        database (<tag>idno type="geoNames"</tag>.</p>
+                </div>
+                <div>
+                    <head>Notes</head>
+                </div>
+            </div>
             <div>
                 <head>Formal Specification</head>
                 <schemaSpec ident="vicav-geodata" start="TEI">
@@ -106,7 +184,7 @@
                     </elementSpec>
                     <elementSpec ident="country" mode="change">
                         <attList>
-                            <attDef ident="key" mode="change" usage="req"/> 
+                            <attDef ident="key" mode="change" usage="req"/>
                         </attList>
                     </elementSpec>
                     <elementSpec ident="idno" mode="change">
