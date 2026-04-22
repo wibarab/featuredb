@@ -27,8 +27,7 @@
         </fileDesc>
         <encodingDesc>
             <listPrefixDef>
-                <prefixDef ident="geo" matchPattern="^(.+)$"
-                    replacementPattern="../vicav-library/vicav_geo/vicav_geodata.xml#$1"/>
+                <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../vicav-library/vicav_geo/vicav_geodata.xml#$1" />
             </listPrefixDef>
         </encodingDesc>
     </teiHeader>
@@ -37,52 +36,52 @@
             <div>
                 <head>Formal Specification</head>
                 <schemaSpec ident="personGroups" start="TEI">
-                    <moduleRef key="header" include="teiHeader fileDesc titleStmt publicationStmt sourceDesc encodingDesc revisionDesc change listPrefixDef prefixDef"/>
-                    <moduleRef key="core" include="author p title note name head respStmt resp desc"/>
-                    <moduleRef key="textstructure" include="TEI body text"/>
-                    <moduleRef key="tei"/>
-                    <moduleRef key="namesdates" include="personGrp listPerson residence placeName relation"/>
+                    <moduleRef key="header" include="teiHeader fileDesc titleStmt publicationStmt sourceDesc encodingDesc revisionDesc change listPrefixDef prefixDef" />
+                    <moduleRef key="core" include="author p title note name head respStmt resp desc" />
+                    <moduleRef key="textstructure" include="TEI body text" />
+                    <moduleRef key="tei" />
+                    <moduleRef key="namesdates" include="personGrp listPerson residence placeName relation" />
                     <elementSpec ident="personGrp" mode="change">
                         <content>
                             <sequence>
-                                <elementRef key="name" minOccurs="1" maxOccurs="unbounded"/>
-                                <elementRef key="residence" minOccurs="0" maxOccurs="1"/>
-                                <elementRef key="note" minOccurs="0" maxOccurs="unbounded"/>
+                                <elementRef key="name" minOccurs="1" maxOccurs="unbounded" />
+                                <elementRef key="residence" minOccurs="0" maxOccurs="1" />
+                                <elementRef key="note" minOccurs="0" maxOccurs="unbounded" />
                             </sequence>
                         </content>
                         <attList>
                             <attDef ident="role" mode="change">
                                 <valList type="closed">
-                                    <valItem ident="ageGroup"/>
-                                    <valItem ident="firstLanguage"/>
-                                    <valItem ident="gender"/>
-                                    <valItem ident="religion"/>
-                                    <valItem ident="tribe"/>
-                                    <valItem ident="confederation"/>
+                                    <valItem ident="ageGroup" />
+                                    <valItem ident="firstLanguage" />
+                                    <valItem ident="gender" />
+                                    <valItem ident="religion" />
+                                    <valItem ident="tribe" />
+                                    <valItem ident="confederation" />
                                 </valList>
                             </attDef>
                         </attList>
                     </elementSpec>
                     <elementSpec ident="placeName" mode="change">
                         <content>
-                            <empty/>
+                            <empty />
                         </content>
                         <attList>
-                            <attDef ident="ref" mode="change" usage="req"/>
+                            <attDef ident="ref" mode="change" usage="req" />
                         </attList>
                     </elementSpec>
                     <!-- Might need other note types, for now we only have "general" -->
                     <elementSpec ident="note" mode="change">
                         <content>
                             <alternate minOccurs="0" maxOccurs="unbounded">
-                                <textNode/>
-                                <classRef key="model.phrase"/>
+                                <textNode />
+                                <classRef key="model.phrase" />
                             </alternate>
                         </content>
                         <attList>
                             <attDef ident="type" mode="change">
                                 <valList type="closed">
-                                    <valItem ident="general"/>
+                                    <valItem ident="general" />
                                 </valList>
                             </attDef>
                         </attList>
@@ -90,46 +89,53 @@
                     <elementSpec ident="listPerson" mode="change">
                         <content>
                             <sequence>
-                                <elementRef key="head"/>
+                                <elementRef key="head" />
                                 <alternate minOccurs="1" maxOccurs="unbounded">
-                                    <elementRef key="personGrp"/>
-                                    <elementRef key="relation"/>
+                                    <elementRef key="personGrp" />
+                                    <elementRef key="relation" />
                                 </alternate>
                             </sequence>
                         </content>
                     </elementSpec>
-                    <!-- "tribe" specific constraints -->
-                    <constraintSpec ident="tribe-residence" scheme="schematron">
+                    <constraintSpec ident="personGrp-name-type" scheme="schematron">
                         <constraint>
-                            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                                context="tei:personGrp[@role='tribe']">
-                                <sch:assert test="tei:residence">Tribe personGrp elements must
-                                    contain a residence element.</sch:assert>
+                            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:personGrp/tei:name">
+                                <sch:assert test="not(@type) or @type = ('prefLabel', 'altLabel')">                                    
+                                    name elements inside personGrp may only have @type
+                                    "prefLabel" or "altLabel".
+                                </sch:assert>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
-
+                    <!-- "tribe" specific constraints -->
+                    <constraintSpec ident="tribe-residence" scheme="schematron">
+                        <constraint>
+                            <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:personGrp[@role='tribe']">
+                                <sch:assert test="tei:residence">                                    
+                                    Tribe personGrp elements must
+                                    contain a residence element.
+                                </sch:assert>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
                     <constraintSpec ident="placeName-ref" scheme="schematron">
                         <constraint>
                             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:placeName">
-                                    <sch:let name="ref" value="@ref"/>
-                                    <sch:let name="prefix" value="substring-before($ref, ':')"/>
-                                    <sch:let name="id" value="substring-after($ref, ':')"/>
-                                    <sch:let name="prefixDef"
-                                        value="root()//tei:prefixDef[@ident = $prefix]"/>
-                                    <sch:let name="replacementPattern"
-                                        value="$prefixDef/@replacementPattern"/>
-                                    <sch:let name="resolvedRef"
-                                        value="replace($replacementPattern, '\$1', $id)"/>
-                                    <sch:let name="refExists"
-                                        value="doc-available(resolve-uri($resolvedRef, base-uri($ref)))"/>
-                                    <sch:assert test="$prefix = 'geo'"> The prefix of the ref "
-                                            <sch:value-of select="$ref"/>" should be
-                                        "geo"</sch:assert>
-                                    <sch:assert test="$refExists"> Problem with ref"<sch:value-of
-                                            select="$ref"/>": No place with the id "<sch:value-of
-                                            select="$id"/> " could be found in geolist </sch:assert>
-                                </sch:rule>
+                                <sch:let name="ref" value="@ref" />
+                                <sch:let name="prefix" value="substring-before($ref, ':')" />
+                                <sch:let name="id" value="substring-after($ref, ':')" />
+                                <sch:let name="prefixDef" value="root()//tei:prefixDef[@ident = $prefix]" />
+                                <sch:let name="replacementPattern" value="$prefixDef/@replacementPattern" />
+                                <sch:let name="resolvedRef" value="replace($replacementPattern, '\$1', $id)" />
+                                <sch:let name="refExists" value="doc-available(resolve-uri($resolvedRef, base-uri($ref)))" />
+                                <sch:assert test="$prefix = 'geo'">                                    
+                                    The prefix of the ref "
+                                <sch:value-of select="$ref" />                                    
+                                    " should be
+                                    "geo"
+                                </sch:assert>
+                                <sch:assert test="$refExists"> Problem with ref"<sch:value-of select="$ref" />": No place with the id "<sch:value-of select="$id" /> " could be found in geolist </sch:assert>
+                            </sch:rule>
                         </constraint>
                     </constraintSpec>
                 </schemaSpec>
