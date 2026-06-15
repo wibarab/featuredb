@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../../082_scripts_xsl/tei_fs_2_html__001.xsl"?>
 <?xslt inPathSegment="\010_manannot\" outPathSegment="\106_html\"?>
 <?snippets fn="snippets_wibarab_001.xml" path="{filePath}\..\..\880_conf\"?>
@@ -191,13 +191,12 @@
          </div>
          <div xmlns:tei="http://www.tei-c.org/ns/1.0" type="featureValueObservations">
             <wib:featureValueObservation xml:id="ft_prg_mar.fv_0050" status="draft" resp="dmp:AID">
-               <name type="featureValue" ref="prog_mark_ga3ad"/>
+               <name type="featureValue" ref=""/>
                <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
                <placeName ref="geo:ed_dhayra"/>
                <lang corresp="..\profiles\vicav_profile_LBN-ARA.xml"/>
                <personGrp role="tribe" corresp="pgr:aramsha_lebanon"/>
             </wib:featureValueObservation>
-
 
             <wib:featureValueObservation xml:id="ft_prg_mar.fv_0063" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#prog_mark_3a"/>
@@ -422,7 +421,7 @@
                <name type="featureValue" ref="#prog_mark_3a"/>
                <bibl corresp="zot:Magno_2021_2837" type="publication"/>
                <placeName ref="geo:mosul"/>
-               <personGrp role="religion" corresp="pgr:muslims"/>
+               <personGrp role="religion" corresp="#muslims"/>
                <lang corresp="..\profiles\vicav_profile_IRQ-MOS.xml"/>
             <cit type="example" xml:id="ft_prg_mar.fv_0087.ct_0000">
                   <quote>ʕad-aḥāwəl</quote>
@@ -449,7 +448,7 @@
                <name type="featureValue" ref="#prog_mark_ka"/>
                <bibl corresp="zot:Magno_2021_2837" type="publication"/>
                <placeName ref="geo:mosul"/>
-               <personGrp role="religion" corresp="pgr:christians"/>
+               <personGrp role="religion" corresp="#christians"/>
                <lang corresp="..\profiles\vicav_profile_IRQ-MOS.xml"/>
                <note type="general">In addition to this, the allomorph kad- also expresses an ongoing action, when followed by the imperfect</note>
             </wib:featureValueObservation>
@@ -953,9 +952,9 @@
             </wib:featureValueObservation>
 
 
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0085" status="done" resp="dmp:AT">
-               <name type="featureValue" ref="#prog_mark_qaa3id"/>
-               <bibl corresp="src:JOR_2023_AT" type="publication"/>
+            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0085" status="pre" resp="dmp:AT">
+               <name type="featureValue" ref="#prog_mark_3am"/>
+               <bibl corresp="zot:palva_1980_0000" type="publication"/>
                <placeName ref="geo:umm_ar_rasas"/>
                <placeName ref="geo:natl"/>
                <placeName ref="geo:umm_al_walid"/>
@@ -1857,7 +1856,7 @@
                <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
                <placeName ref="geo:abu_qbes"/>
                <lang corresp="..\profiles\vicav_profile_SYR-QBS.xml"/>
-               <personGrp role="religion" corresp="pgr:alawis"/>
+               <personGrp role="religion" corresp="pgr:alawis" />
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_prg_mar.fv_0205" status="done" resp="dmp:SP">
@@ -1873,7 +1872,7 @@
                <bibl corresp="zot:behnstedt_1997_3187" type="publication" status="CHECKED"/>
                <placeName ref="geo:qismin"/>
                <lang corresp="..\profiles\vicav_profile_SYR-QSM.xml"/>
-               <personGrp role="religion" corresp="pgr:alawis"/>
+               <personGrp role="religion" corresp="pgr:alawis" />
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_prg_mar.fv_0207" status="done" resp="dmp:SP">
@@ -2045,18 +2044,21 @@
                   <note type="general">Identical marker is used for the habitual aspect.</note>
             </wib:featureValueObservation>
 
-            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0217" status="done" resp="dmp:TD">
+            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0217" status="pre" resp="dmp:TD">
                <name type="featureValue" ref="#prog_mark_ra"/>
                <bibl corresp="zot:boucherit_2002_0000" type="publication"/>
                <placeName ref="geo:algier"/>
                <lang corresp="..\profiles\vicav_profile_DZA-ALR.xml"/>
-               <cit type="example" xml:id="ft_prg_mar.fv_0217.ct_0000">
-                     <quote>ra-h ixaus aʕlī-k</quote>
-                     <cit type="translation">
-                        <quote>He is looking for you.</quote>
-                     </cit>
-                  </cit>
-               <note type="general">Cf. Boucherit 2002, p.61. Also used as habituel and indicative marker</note>
+               <note type="general">Also used as habituel and indicative marker</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_prg_mar.fv_0005" status="pre" resp="dmp:TD">
+               <name type="featureValue" ref="#prog_mark_qaa3id"/>
+               <bibl corresp="zot:boucherit_2002_0000" type="publication"/>
+               <placeName ref="geo:algier"/>
+               <lang corresp="..\profiles\vicav_profile_DZA-ALR.xml"/>
+               <note type="general">In its predicative uses the active participle (inflected for masc., fem., and pl.) expresses an ongoing process: qaʿdat… ʿiša mʿa ixwaha ‘she used to stay… living with her brothers’.
+                  When combined with ra- it keeps the same function and meaning and the particle plays the role of a copula: ra-ni xaddəm ‘I am busy working’(EALL: Algiers Arabic).</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_prg_mar.fv_0221" status="done" resp="dmp:TD">
@@ -2473,7 +2475,7 @@
 
             <wib:featureValueObservation xml:id="ft_prg_mar.fv_0296" status="done" resp="dmp:VE">
                <name type="featureValue" ref="#prog_mark_no"/>
-               <bibl corresp="zot:de_jong_2013_5357" type="publication" status="CHECKED"/>
+               <bibl corresp="zot:holes_2013_2409" type="publication" status="CHECKED"/>
                <placeName ref="geo:sur"/>
                <lang corresp="..\profiles\vicav_profile_OMN-SUR.xml"/>
                <note type="general">Deduced from example text.</note>
