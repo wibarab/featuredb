@@ -31,16 +31,16 @@
             <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
          </listPrefixDef>
       </encodingDesc>
-      
+
       <profileDesc>
          <textClass>
-          <catRef target="dmp:personal_pronouns.bound_pronouns"/>
-          </textClass>
+            <catRef target="dmp:personal_pronouns.bound_pronouns"/>
+         </textClass>
       </profileDesc>
 
       <revisionDesc status="done">
-         
-         
+
+
          <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change><change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change></revisionDesc>
    </teiHeader>
 
@@ -55,42 +55,42 @@
             <list type="featureValues">
                <item xml:id="bp_p2m_kum">
                   <label>-kum, -kom</label>
-               <desc/></item>
+                  <desc/></item>
 
                <item xml:id="bp_p2m_ḳuṃ">
                   <label>-ḳuṃ</label>
-               <desc/></item>
+                  <desc/></item>
                <item xml:id="bp_p2m_ḳom">
                   <label>-ḳom </label>
-               <desc/></item>
+                  <desc/></item>
                <item xml:id="bp_p2m_ḳuw">
                   <label>-ḳuw</label>
-               <desc/></item>
+                  <desc/></item>
                <item xml:id="bp_p2m_ku">
                   <label>-ku</label>
-               <desc/></item>
+                  <desc/></item>
                <item xml:id="bp_p2m_kuw">
                   <label>-kuw</label>
-               <desc/></item>
+                  <desc/></item>
                <item xml:id="bp_p2m_kam">
                   <label>-kam</label>
-               <desc/></item>
+                  <desc/></item>
                <item xml:id="bp_p2m_ḳam">
                   <label>-ḳam</label>
-               <desc/></item>
+                  <desc/></item>
                <item xml:id="bp_p2m_kəm">
                   <label>-kəm</label>
-               <desc/></item>
+                  <desc/></item>
                <item xml:id="bp_p2m_kun">
                   <label>-kun</label>
-               <desc/></item>
-              
+                  <desc/></item>
+
                <item xml:id="bp_p2m_chum">
                   <label>-čum</label>
-               <desc/></item>
+                  <desc/></item>
                <item xml:id="bp_p2m_chim">
                   <label>-čim</label>
-               <desc/></item>
+                  <desc/></item>
             </list>
          </div>
          <div type="description"><byline>Edited by [Name]</byline>
@@ -238,12 +238,26 @@
                <lang corresp="..\profiles\vicav_profile_LBN-ABI.xml"/>
                <personGrp role="tribe" corresp="pgr:abu_eid"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_bnd_pr_2ps_pl_m.fv_0019" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#bp_p2m_kam"/>
                <bibl corresp="zot:owens_1984_0000" type="publication"/>
                <placeName ref="geo:sulug"/>
                <lang corresp="..\profiles\vicav_profile_LBY-SLG.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_bnd_pr_2ps_pl_m.fv_0021" status="done" resp="dmp:AKM">
+               <name type="featureValue" ref="#bp_p2m_kam"/>
+               <bibl corresp="zot:alshammiry_2007_7737" type="publication"/>
+               <placeName ref="geo:turaif"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-TUR.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_bnd_pr_2ps_pl_m.fv_0022" status="done" resp="dmp:AKM">
+               <name type="featureValue" ref="#bp_p2m_kum"/>
+               <bibl corresp="zot:alzahrani_2015_8272" type="publication"/>
+               <placeName ref="geo:zahran"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-ZAH.xml"/>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_bnd_pr_2ps_pl_m.fv_0141" status="done" resp="dmp:AT">
@@ -328,7 +342,7 @@
 
             <wib:featureValueObservation xml:id="ft_bnd_pr_2ps_pl_m.fv_0086" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#bp_p2m_ḳom"/>
-              <bibl corresp="zot:cantineau_1937_0000" type="publication" status="CHECKED"/>
+               <bibl corresp="zot:cantineau_1937_0000" type="publication" status="CHECKED"/>
                <placeName ref="geo:rumtha"/>
                <lang corresp="..\profiles\vicav_profile_JOR-BXD.xml"/>
                <personGrp role="tribe" corresp="pgr:bani_xaled"/>
@@ -395,7 +409,7 @@
 
             <wib:featureValueObservation xml:id="ft_bnd_pr_2ps_pl_m.fv_0094" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#bp_p2m_kam"/>
-                 <bibl corresp="zot:cantineau_1937_0000" type="publication" status="CHECKED"/>
+               <bibl corresp="zot:cantineau_1937_0000" type="publication" status="CHECKED"/>
                <placeName ref="geo:al_musayfirah"/>
                <lang corresp="..\profiles\vicav_profile_JOR-SDY.xml"/>
                <personGrp role="tribe" corresp="pgr:sardiye"/>
@@ -412,7 +426,7 @@
 
             <wib:featureValueObservation xml:id="ft_bnd_pr_2ps_pl_m.fv_0187" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#bp_p2m_ḳom"/>
-                  <bibl corresp="zot:cantineau_1937_0000" type="publication" cert="unknown" status="CHECKED"/>
+               <bibl corresp="zot:cantineau_1937_0000" type="publication" cert="unknown" status="CHECKED"/>
                <placeName ref="geo:al_nuaymah"/>
                <lang corresp="..\profiles\vicav_profile_SYR-WAL.xml"/>
                <personGrp role="tribe" corresp="pgr:weld_ali"/>
@@ -429,8 +443,8 @@
                <personGrp role="tribe" corresp="pgr:sbaa"/>
                <note type="general">the form -kam is also attested</note>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_bnd_pr_2ps_pl_m.fv_0113" status="done" resp="dmp:AT">
+
+            <wib:featureValueObservation xml:id="ft_bnd_pr_2ps_pl_m.fv_0113" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#bp_p2m_kam"/>
                <bibl corresp="zot:cantineau_1937_0000" type="publication" status="CHECKED"/>
                <placeName ref="geo:khirbat_ras_al_war"/>
@@ -965,8 +979,8 @@
                <cit type="sourceRepresentation"><quote>-ḳuw</quote>
                </cit>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_bnd_pr_2ps_pl_m.fv_9752" status="done" resp="dmp:SK">
+
+            <wib:featureValueObservation xml:id="ft_bnd_pr_2ps_pl_m.fv_9752" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#bp_p2m_kuw"/>
                <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKED"/>
                <placeName ref="geo:rumanah"/>
@@ -1024,7 +1038,7 @@
                <personGrp role="tribe" corresp="pgr:samanah"/>
                <note type="exceptionNote">-ḳuw and -kuw are also recorded but occur less.</note>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_bnd_pr_2ps_pl_m.fv_0153" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#bp_p2m_kuw"/>
                <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKED"/>
@@ -1109,8 +1123,8 @@
                <personGrp role="tribe" corresp="pgr:hamadah"/>
                <note type="exceptionNote">-ḳuw also exists but it is less common</note>
             </wib:featureValueObservation>
-            
-               <wib:featureValueObservation xml:id="ft_bnd_pr_2ps_pl_m.fv_0314" status="done" resp="dmp:SK">
+
+            <wib:featureValueObservation xml:id="ft_bnd_pr_2ps_pl_m.fv_0314" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#bp_p2m_ḳuw"/>
                <bibl corresp="zot:jong_2011_8794" type="publication"/>
                <placeName ref="geo:jabal_sarabit_al_khadim"/>
@@ -1228,16 +1242,16 @@
                <lang corresp="..\profiles\vicav_profile_SDN-RYD.xml"/>
                <personGrp role="tribe" corresp="pgr:rashayda_sudan"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_bnd_pr_2ps_pl_m.fv_0018" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#bp_p2m_kuw"/>
                <bibl corresp="zot:katz_1980_0798" type="publication"/>
                <placeName ref="geo:arab_al_rashayida"/>
                <lang corresp="..\profiles\vicav_profile_PSE-RSD.xml"/>
             </wib:featureValueObservation>
-            
-           
-             <wib:featureValueObservation xml:id="ft_bnd_pr_2ps_pl_m.fv_0020" status="done" resp="dmp:RZ">
+
+
+            <wib:featureValueObservation xml:id="ft_bnd_pr_2ps_pl_m.fv_0020" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#bp_p2m_kum"/>
                <bibl corresp="src:SAU_2022_GK" type="publication" cert="unknown"/>
                <placeName ref="geo:khaybar"/>
@@ -1246,7 +1260,7 @@
                <placeName ref="geo:hail_reg"/>
                <lang corresp="..\profiles\vicav_profile_SAU-RSD.xml"/>
             </wib:featureValueObservation>
- 
+
             <wib:featureValueObservation xml:id="ft_bnd_pr_2ps_pl_m.fv_0194" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#bp_p2m_ku"/>
                <bibl corresp="zot:zeltner_tourneux_1986_0000" type="publication"/>
