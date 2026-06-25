@@ -31,16 +31,16 @@
             <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
          </listPrefixDef>
       </encodingDesc>
-      
+
       <profileDesc>
          <textClass>
-          <catRef target="dmp:verbal_morphology.derived_forms"/>
-          </textClass>
+            <catRef target="dmp:verbal_morphology.derived_forms"/>
+         </textClass>
       </profileDesc>
 
       <revisionDesc status="done">
-         
-         
+
+
          <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change><change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change></revisionDesc>
    </teiHeader>
 
@@ -98,11 +98,11 @@
                <lang corresp="..\profiles\vicav_profile_LBN-KHA.xml"/>
                <personGrp role="tribe" corresp="pgr:arab_xalde"/>
                <cit type="example" xml:id="ft_passive.fv_0063.ct_0000">
-                     <quote>nčital bi-ḥādis siyāra</quote>
-                     <cit type="translation">
-                        <quote>He was killed in a car accident</quote>
-                     </cit>
+                  <quote>nčital bi-ḥādis siyāra</quote>
+                  <cit type="translation">
+                     <quote>He was killed in a car accident</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_passive.fv_0071" status="done" resp="dmp:AID">
@@ -132,66 +132,98 @@
                   </cit>
                </cit>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_passive.fv_0023" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#passive_n-prefix"/>
                <bibl corresp="zot:mansour_2018_2308" type="publication"/>
                <placeName ref="geo:mecca"/>
                <lang corresp="..\profiles\vicav_profile_SAU-MCC.xml"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_passive.fv_0024" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#passive_t-prefix"/>
                <bibl corresp="zot:mansour_2018_2308" type="publication"/>
                <placeName ref="geo:mecca"/>
                <lang corresp="..\profiles\vicav_profile_SAU-MCC.xml"/>
-                <cit type="example" xml:id="ft_passive.fv_0024.ct_0000">
+               <cit type="example" xml:id="ft_passive.fv_0024.ct_0000">
                   <quote>atḥabas</quote>
                   <cit type="translation">
                      <quote>he was imprisoned</quote>
                   </cit>
                </cit>
             </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_passive.fv_0035" status="done" resp="dmp:AKM">
+               <name type="featureValue" ref="#passive_t-prefix"/>
+               <bibl corresp="zot:alzahrani_2015_8272" type="publication"/>
+               <placeName ref="geo:zahran"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-ZAH.xml"/>
+               <cit type="example" xml:id="ft_passive.fv_0035.ct_0000">
+                  <quote>tin-kitib ar-risālah</quote>
+                  <cit type="translation">
+                     <quote>the letter is being written (p.110)</quote>
+                  </cit>
+               </cit>
+               <cit type="example" xml:id="ft_passive.fv_0035.ct_0001">
+                  <quote>ta-kassar OR ʔit-kassar</quote>
+                  <cit type="translation">
+                     <quote>was broken (p.123)</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
             
+            <wib:featureValueObservation xml:id="ft_passive.fv_0036" status="done" resp="dmp:AKM">
+               <name type="featureValue" ref="#passive_n-prefix"/>
+               <bibl corresp="zot:alzahrani_2015_8272" type="publication"/>
+               <placeName ref="geo:zahran"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-ZAH.xml"/>
+               <cit type="example" xml:id="ft_passive.fv_0036.ct_0000">
+                  <quote>ʔin-ḏ̣arab xalid</quote>
+                  <cit type="translation">
+                     <quote>Khalid was hit (p.120)</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
             <wib:featureValueObservation xml:id="ft_passive.fv_0025" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#passive_n-prefix"/>
                <bibl corresp="zot:prochazka_2002_0000" type="publication"/>
                <placeName ref="geo:adana"/>
                <lang corresp="..\profiles\vicav_profile_TUR-ADA.xml"/>
                <cit type="example" xml:id="ft_passive.fv_0025.ct_0000">
-                     <quote>yinfitiḥ</quote>
-                     <cit type="translation">
-                        <quote>it is opened</quote>
-                     </cit>
+                  <quote>yinfitiḥ</quote>
+                  <cit type="translation">
+                     <quote>it is opened</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_passive.fv_0031" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#passive_n-prefix"/>
                <bibl corresp="zot:prochazka_2002_0000" type="publication"/>
                <placeName ref="geo:mersin"/>
                <lang corresp="..\profiles\vicav_profile_TUR-MRS.xml"/>
                <cit type="example" xml:id="ft_passive.fv_0031.ct_0000">
-                     <quote>yinfitiḥ</quote>
-                     <cit type="translation">
-                        <quote>it is opened</quote>
-                     </cit>
+                  <quote>yinfitiḥ</quote>
+                  <cit type="translation">
+                     <quote>it is opened</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_passive.fv_0032" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#passive_n-prefix"/>
                <bibl corresp="zot:prochazka_2002_0000" type="publication"/>
                <placeName ref="geo:tarsus"/>
                <lang corresp="..\profiles\vicav_profile_TUR-TRS.xml"/>
                <cit type="example" xml:id="ft_passive.fv_0032.ct_0000">
-                     <quote>yinfitiḥ</quote>
-                     <cit type="translation">
-                        <quote>it is opened</quote>
-                     </cit>
+                  <quote>yinfitiḥ</quote>
+                  <cit type="translation">
+                     <quote>it is opened</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_passive.fv_0033" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#passive_n-prefix"/>
                <bibl corresp="zot:grigore_2007_0000" type="publication"/>
@@ -199,24 +231,24 @@
                <lang corresp="..\profiles\vicav_profile_TUR-MRD.xml"/>
                <note type="general">VII. form</note>
                <cit type="example" xml:id="ft_passive.fv_0033.ct_0000">
-                     <quote>yənḥabb</quote>
-                     <cit type="translation">
-                        <quote>he is loved</quote>
-                     </cit>
+                  <quote>yənḥabb</quote>
+                  <cit type="translation">
+                     <quote>he is loved</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_passive.fv_0034" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#passive_apophonic"/>
                <bibl corresp="zot:Eades_2009_8720" type="publication"/>
                <placeName ref="geo:dariz"/>
                <lang corresp="..\profiles\vicav_profile_OMN-DRZ.xml"/>
                <cit type="example" xml:id="ft_passive.fv_0034.ct_0000">
-                     <quote>yiqaṣṣ</quote>
-                     <cit type="translation">
-                        <quote>it is cut (p.88)</quote>
-                     </cit>
+                  <quote>yiqaṣṣ</quote>
+                  <cit type="translation">
+                     <quote>it is cut (p.88)</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_passive.fv_0026" status="done" resp="dmp:AID">
@@ -392,7 +424,7 @@
                   of reciprocity.</note>
             </wib:featureValueObservation>
 
-         
+
 
             <wib:featureValueObservation xml:id="ft_passive.fv_0097" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#passive_n-prefix"/>
@@ -417,18 +449,18 @@
                <lang corresp="..\profiles\vicav_profile_SAU-HRB.xml"/>
                <personGrp role="tribe" corresp="pgr:al_harb"/>
                <cit type="example" xml:id="ft_passive.fv_0100.ct_0000">
-                     <quote>wixiḏ</quote>
-                     <cit type="translation">
-                        <quote>it was taken</quote>
-                     </cit>
+                  <quote>wixiḏ</quote>
+                  <cit type="translation">
+                     <quote>it was taken</quote>
                   </cit>
-                  <cit type="example" xml:id="ft_passive.fv_0100.ct_0001">
-                     <quote>ḏbiḥ</quote>
-                     <cit type="translation">
-                        <quote>he was killed</quote>
-                     </cit>
+               </cit>
+               <cit type="example" xml:id="ft_passive.fv_0100.ct_0001">
+                  <quote>ḏbiḥ</quote>
+                  <cit type="translation">
+                     <quote>he was killed</quote>
                   </cit>
-                  <note type="general">Form VII may also be used to express passiveness (Al-Hazmy 1975:80)</note>
+               </cit>
+               <note type="general">Form VII may also be used to express passiveness (Al-Hazmy 1975:80)</note>
             </wib:featureValueObservation>
 
 
@@ -444,7 +476,7 @@
                <placeName ref="geo:rujm_ash_shami_al_gharbi"/>
                <lang corresp="..\profiles\vicav_profile_JOR-BSX.xml"/>
                <personGrp role="tribe" corresp="pgr:bani_saxar"/>
-                <cit type="example" xml:id="ft_passive.fv_0085.ct_0000">
+               <cit type="example" xml:id="ft_passive.fv_0085.ct_0000">
                   <quote>ǵīl</quote>
                   <cit type="translation">
                      <quote>it was said</quote>
@@ -525,11 +557,11 @@
                <placeName ref="geo:al_sukhna"/>
                <lang corresp="..\profiles\vicav_profile_SYR-SUK.xml"/>
                <cit type="example" xml:id="ft_passive.fv_0125.ct_0000">
-                     <quote>nkasar - yinkasir</quote>
-                     <cit type="translation">
-                        <quote>to get broken</quote>
-                     </cit>
+                  <quote>nkasar - yinkasir</quote>
+                  <cit type="translation">
+                     <quote>to get broken</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_passive.fv_0127" status="done" resp="dmp:CL">
@@ -538,11 +570,11 @@
                <placeName ref="geo:hasankeyf"/>
                <lang corresp="..\profiles\vicav_profile_TUR-HAS.xml"/>
                <cit type="example" xml:id="ft_passive.fv_0127.ct_0000">
-                     <quote>nkatab - īnkətəb</quote>
-                     <cit type="translation">
-                        <quote>to be written</quote>
-                     </cit>
+                  <quote>nkatab - īnkətəb</quote>
+                  <cit type="translation">
+                     <quote>to be written</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_passive.fv_0128" status="done" resp="dmp:CL">
@@ -551,24 +583,24 @@
                <placeName ref="geo:idil_aazex"/>
                <lang corresp="..\profiles\vicav_profile_TUR-IDI.xml"/>
                <cit type="example" xml:id="ft_passive.fv_0128.ct_0000">
-                     <quote>inqatal - īnqətəl</quote>
-                     <cit type="translation">
-                        <quote>to get killed</quote>
-                     </cit>
+                  <quote>inqatal - īnqətəl</quote>
+                  <cit type="translation">
+                     <quote>to get killed</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_passive.fv_0022" status="done" resp="dmp:CL">
                <name type="featureValue" ref="#passive_t-infix"/>
                <bibl corresp="zot:wittrich_2001_0000" type="publication"/>
                <placeName ref="geo:idil_aazex"/>
                <lang corresp="..\profiles\vicav_profile_TUR-IDI.xml"/>
                <cit type="example" xml:id="ft_passive.fv_0128.ct_0001">
-                     <quote>ntaxal - īntəxəl</quote>
-                     <cit type="translation">
-                        <quote>to get sieved</quote>
-                     </cit>
+                  <quote>ntaxal - īntəxəl</quote>
+                  <cit type="translation">
+                     <quote>to get sieved</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_passive.fv_0129" status="done" resp="dmp:CL">
@@ -577,11 +609,11 @@
                <placeName ref="geo:siirt"/>
                <lang corresp="..\profiles\vicav_profile_TUR-SII.xml"/>
                <cit type="example" xml:id="ft_passive.fv_0129.ct_0000">
-                     <quote>ənkasar - yənkəsar</quote>
-                     <cit type="translation">
-                        <quote>to get broken</quote>
-                     </cit>
+                  <quote>ənkasar - yənkəsar</quote>
+                  <cit type="translation">
+                     <quote>to get broken</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_passive.fv_0168" status="done" resp="dmp:CL">
@@ -590,11 +622,11 @@
                <placeName ref="geo:jerusalem"/>
                <lang corresp="..\profiles\vicav_profile_PSE-JRS.xml"/>
                <cit type="example" xml:id="ft_passive.fv_0168.ct_0000">
-                     <quote>iḥtaraq</quote>
-                     <cit type="translation">
-                        <quote>to be burnt</quote>
-                     </cit>
+                  <quote>iḥtaraq</quote>
+                  <cit type="translation">
+                     <quote>to be burnt</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_passive.fv_0113" status="done" resp="dmp:CL">
@@ -603,11 +635,11 @@
                <placeName ref="geo:baghdad"/>
                <lang corresp="..\profiles\vicav_profile_IRQ-BGD.xml"/>
                <cit type="example" xml:id="ft_passive.fv_0113.ct_0000">
-                     <quote>nkəsar</quote>
-                     <cit type="translation">
-                        <quote>to get broken</quote>
-                     </cit>
+                  <quote>nkəsar</quote>
+                  <cit type="translation">
+                     <quote>to get broken</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_passive.fv_0166" status="done" resp="dmp:CL">
@@ -616,24 +648,24 @@
                <placeName ref="geo:al_dawayima"/>
                <lang corresp="..\profiles\vicav_profile_PSE-DWY.xml"/>
                <cit type="example" xml:id="ft_passive.fv_0166.ct_0000">
-                     <quote>binkatil</quote>
-                     <cit type="translation">
-                        <quote>he is being hit</quote>
-                     </cit>
+                  <quote>binkatil</quote>
+                  <cit type="translation">
+                     <quote>he is being hit</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_passive.fv_0000" status="done" resp="dmp:CL">
                <name type="featureValue" ref="#passive_t-infix"/>
                <bibl corresp="zot:cleveland_1967_3075" type="publication"/>
                <placeName ref="geo:al_dawayima"/>
                <lang corresp="..\profiles\vicav_profile_PSE-DWY.xml"/>
                <cit type="example" xml:id="ft_passive.fv_0000.ct_0000">
-                     <quote>bistamiʕ</quote>
-                     <cit type="translation">
-                        <quote>he is listening</quote>
-                     </cit>
+                  <quote>bistamiʕ</quote>
+                  <cit type="translation">
+                     <quote>he is listening</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_passive.fv_0118" status="done" resp="dmp:CL">
@@ -642,11 +674,11 @@
                <placeName ref="geo:damascus"/>
                <lang corresp="..\profiles\vicav_profile_SYR-DAM.xml"/>
                <cit type="example" xml:id="ft_passive.fv_0118.ct_0000">
-                     <quote>ma byənšəreb</quote>
-                     <cit type="translation">
-                        <quote>it is undrinkable</quote>
-                     </cit>
+                  <quote>ma byənšəreb</quote>
+                  <cit type="translation">
+                     <quote>it is undrinkable</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_passive.fv_0112" status="done" resp="dmp:CL">
@@ -655,11 +687,11 @@
                <placeName ref="geo:khuzestan"/>
                <lang corresp="..\profiles\vicav_profile_IRN-KHU.xml"/>
                <cit type="example" xml:id="ft_passive.fv_0112.ct_0000">
-                     <quote>ʔənwəčəl - yənwəčəl</quote>
-                     <cit type="translation">
-                        <quote>to get eaten</quote>
-                     </cit>
+                  <quote>ʔənwəčəl - yənwəčəl</quote>
+                  <cit type="translation">
+                     <quote>to get eaten</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_passive.fv_0114" status="done" resp="dmp:CL">
@@ -681,11 +713,11 @@
                <placeName ref="geo:hebron"/>
                <lang corresp="..\profiles\vicav_profile_PSE-XLL.xml"/>
                <cit type="example" xml:id="ft_passive.fv_0175.ct_0000">
-                     <quote>ttākal - yittākal</quote>
-                     <cit type="translation">
-                        <quote>to be eaten</quote>
-                     </cit>
+                  <quote>ttākal - yittākal</quote>
+                  <cit type="translation">
+                     <quote>to be eaten</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_passive.fv_0227" status="done" resp="dmp:RZ">
@@ -1802,7 +1834,7 @@
                      <quote>be held</quote>
                   </cit>
                </cit>
-                  <cit type="example" xml:id="ft_passive.fv_0282.ct_0001">
+               <cit type="example" xml:id="ft_passive.fv_0282.ct_0001">
                   <quote>inḍarab, yinḍarab</quote>
                   <cit type="translation">
                      <quote>be beaten</quote>
@@ -2643,12 +2675,12 @@
                <lang corresp="..\profiles\vicav_profile_TUN-JTS.xml"/>
                <personGrp role="religion" corresp="pgr:jews"/>
                <cit type="example" xml:id="ft_passive.fv_0263.ct_0000">
-                     <quote>tᵊfžáʕ</quote>
-                     <cit type="translation">
-                        <quote>il a été effrayé</quote>
-                     </cit>
+                  <quote>tᵊfžáʕ</quote>
+                  <cit type="translation">
+                     <quote>il a été effrayé</quote>
                   </cit>
-                  <note type="general">There are very few verbs which also have n-prefix: nḍṛab il a été frappé (Cohen 1975)</note>
+               </cit>
+               <note type="general">There are very few verbs which also have n-prefix: nḍṛab il a été frappé (Cohen 1975)</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_passive.fv_0264" status="done" resp="dmp:SP">
@@ -2747,11 +2779,11 @@
                <lang corresp="..\profiles\vicav_profile_CYP-KOR.xml"/>
                <personGrp role="religion" corresp="pgr:christians"/>
                <cit type="example" xml:id="ft_passive.fv_0216.ct_0000">
-                     <quote>nkitel</quote>
-                     <cit type="translation">
-                        <quote>he got killed</quote>
-                     </cit>
+                  <quote>nkitel</quote>
+                  <cit type="translation">
+                     <quote>he got killed</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_passive.fv_0217" status="done" resp="dmp:TD">
@@ -2818,11 +2850,11 @@
                <placeName ref="geo:bukhara"/>
                <lang corresp="..\profiles\vicav_profile_UZB-BXR.xml"/>
                <cit type="example" xml:id="ft_passive.fv_0272.ct_0000">
-                     <quote>inḥasad</quote>
-                     <cit type="translation">
-                        <quote>to be harvested</quote>
-                     </cit>
+                  <quote>inḥasad</quote>
+                  <cit type="translation">
+                     <quote>to be harvested</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_passive.fv_0251" status="done" resp="dmp:TD">

@@ -31,16 +31,16 @@
             <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
          </listPrefixDef>
       </encodingDesc>
-      
+
       <profileDesc>
          <textClass>
-          <catRef target="dmp:verbal_morphology.weak_verbs"/>
-          </textClass>
+            <catRef target="dmp:verbal_morphology.weak_verbs"/>
+         </textClass>
       </profileDesc>
 
       <revisionDesc status="done">
-         
-         
+
+
          <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change><change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change></revisionDesc>
    </teiHeader>
 
@@ -183,7 +183,7 @@
                <personGrp role="tribe" corresp="pgr:arab_xalde"/>
                <cit type="sourceRepresentation"><quote>ʔižu</quote></cit>
             </wib:featureValueObservation>
-               <wib:featureValueObservation xml:id="ft_jaa_3pl_mc.fv_0017" status="pre" resp="dmp:AID">
+            <wib:featureValueObservation xml:id="ft_jaa_3pl_mc.fv_0017" status="pre" resp="dmp:AID">
                <name type="featureValue" ref="#JAA_3plmc_pfv_jam"/>
                <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
                <placeName ref="geo:khalde"/>
@@ -225,9 +225,9 @@
                <cit type="sourceRepresentation"><quote>ʔiju</quote>
                </cit>
             </wib:featureValueObservation>
-            
-             
-             <wib:featureValueObservation xml:id="ft_jaa_3pl_mc.fv_0022" status="done" resp="dmp:AID">
+
+
+            <wib:featureValueObservation xml:id="ft_jaa_3pl_mc.fv_0022" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#JAA_3plmc_pfv_iju"/>
                <bibl corresp="zot:geva-kleinberger_2009_3208" type="publication"/>
                <placeName ref="geo:tiberias"/>
@@ -235,11 +235,11 @@
                <personGrp role="religion" corresp="pgr:jews"/>
                <cit type="sourceRepresentation"><quote>ʔižu</quote></cit>
                <cit xml:id="ft_jaa_3pl_mc.fv_0022.ct_0000" type="example">
-                     <quote>ʔižu (p.40)</quote>
-                     <cit type="translation">
-                        <quote>they came</quote>
-                     </cit>
+                  <quote>ʔižu (p.40)</quote>
+                  <cit type="translation">
+                     <quote>they came</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_jaa_3pl_mc.fv_0027" status="done" resp="dmp:AID">
@@ -304,42 +304,63 @@
                <cit type="sourceRepresentation"><quote>ʔəju</quote>
                </cit>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_jaa_3pl_mc.fv_0004" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#JAA_3plmc_pfv_joo"/>
                <bibl corresp="zot:schreiber_1971_0000" type="publication"/>
                <placeName ref="geo:mecca"/>
                <lang corresp="..\profiles\vicav_profile_SAU-MCC.xml"/>
             </wib:featureValueObservation>
-            
+
+            <wib:featureValueObservation xml:id="ft_jaa_3pl_mc.fv_0032" status="done" resp="dmp:AKM">
+               <name type="featureValue" ref="#JAA_3plmc_pfv_jaw"/>
+               <bibl corresp="zot:alshammiry_2007_7737" type="publication"/>
+               <placeName ref="geo:turaif"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-TUR.xml"/>
+               <cit type="sourceRepresentation"><quote>Deduced from example (p.176)</quote></cit>
+               <cit type="example" xml:id="ft_jaa_3pl_mc.fv_0032.ct_0000">
+                     <quote>ʕali w mansrūr ǧaw</quote>
+                     <cit type="translation">
+                        <quote>Ali and Mansour came</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_jaa_3pl_mc.fv_0033" status="done" resp="dmp:AKM">
+               <name type="featureValue" ref="#JAA_3plmc_pfv_jaaw"/>
+               <bibl corresp="zot:nadwi_1968_1881" type="publication"/>
+               <placeName ref="geo:zahran"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-ZAH.xml"/>
+            </wib:featureValueObservation>
+
             <wib:featureValueObservation xml:id="ft_jaa_3pl_mc.fv_0023" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#JAA_3plmc_pfv_ju"/>
                <bibl corresp="zot:prochazka_2002_0000" type="publication"/>
                <placeName ref="geo:adana"/>
                <lang corresp="..\profiles\vicav_profile_TUR-ADA.xml"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_jaa_3pl_mc.fv_0024" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#JAA_3plmc_pfv_ju"/>
                <bibl corresp="zot:prochazka_2002_0000" type="publication"/>
                <placeName ref="geo:mersin"/>
                <lang corresp="..\profiles\vicav_profile_TUR-MRS.xml"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_jaa_3pl_mc.fv_0025" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#JAA_3plmc_pfv_ju"/>
                <bibl corresp="zot:prochazka_2002_0000" type="publication"/>
                <placeName ref="geo:tarsus"/>
                <lang corresp="..\profiles\vicav_profile_TUR-TRS.xml"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_jaa_3pl_mc.fv_0030" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#JAA_3plmc_pfv_jaw"/>
                <bibl corresp="zot:grigore_2007_0000" type="publication"/>
                <placeName ref="geo:mardin"/>
                <lang corresp="..\profiles\vicav_profile_TUR-MRD.xml"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_jaa_3pl_mc.fv_0029" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#JAA_3plmc_pfv_jo"/>
                <bibl corresp="zot:owens_1984_0000" type="publication"/>
@@ -1300,11 +1321,11 @@
                <placeName ref="geo:mandisha"/>
                <lang corresp="..\profiles\vicav_profile_EGY-BHR.xml"/>
                <cit type="example" xml:id="ft_jaa_3pl_mc.fv_0278.ct_0000">
-                     <quote>žāw ~ žaw</quote>
-                     <cit type="translation">
-                        <quote>they came</quote>
-                     </cit>
+                  <quote>žāw ~ žaw</quote>
+                  <cit type="translation">
+                     <quote>they came</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_jaa_3pl_mc.fv_0133" status="done" resp="dmp:SK">
@@ -1772,7 +1793,7 @@
                <bibl corresp="zot:GrandHenry_1976_2248" type="publication"/>
                <placeName ref="geo:mzab"/>
                <lang corresp="..\profiles\vicav_profile_DZA-MZB.xml"/>
-              <cit type="sourceRepresentation"><quote>žaw</quote>
+               <cit type="sourceRepresentation"><quote>žaw</quote>
                </cit>
             </wib:featureValueObservation>
 
