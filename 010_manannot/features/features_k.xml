@@ -31,18 +31,18 @@
             <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../vicav-library/vicav_geo/vicav_geodata.xml#$1"/>
          </listPrefixDef>
       </encodingDesc>
-      
+
       <profileDesc>
          <textClass>
-          <catRef target="dmp:consonant_phenomena"/>
-          </textClass>
+            <catRef target="dmp:consonant_phenomena"/>
+         </textClass>
       </profileDesc>
 
       <revisionDesc status="done">
          <change when="2023-01-30" who="dmp:JD">Changed Status to done, apart from a few entries on draft the document is ready to be validated.</change>
          <change when="2023-01-30" who="dmp:AID">Removed the k_lex value because it applied to only one dialect and replaced in by two FVOs</change>
          <change when="2023-01-31" who="dmp:AID">Removed the k_g value because it applied to only one dialect and it is an assimilation case already contemplated in the chapter</change>
-      <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change><change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change></revisionDesc>
+         <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change><change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change></revisionDesc>
    </teiHeader>
 
 
@@ -56,40 +56,43 @@
             <list type="featureValues">
                <item xml:id="k_k">
                   <label>/k/ only</label>
-               <desc/></item>
+                  <desc/></item>
                <item xml:id="k_ky">
                   <label>k → /ky/</label>
-               <desc/></item>
+                  <desc/></item>
+                  <item xml:id="k_g">
+                  <label>k → /g/</label>
+                  <desc/></item>
                <item xml:id="k_affr1">
                   <label>/k/ and /ć/</label>
-               <desc/></item>
+                  <desc/></item>
                <item xml:id="k_affr2">
                   <label>/k/ and /č/</label>
-               <desc/></item>
+                  <desc/></item>
                <item xml:id="k_affr5">
                   <label>/k/ and /š/</label>
-               <desc/></item>
+                  <desc/></item>
                <item xml:id="k_affr3">
                   <label>/č/ only</label>
-               <desc/></item>
+                  <desc/></item>
                <item xml:id="k_affr4">
                   <label>/ḳ/ and /č/</label>
-               <desc/></item>
+                  <desc/></item>
                <item xml:id="k_x_excep">
                   <label>k → /x/</label>
-               <desc/></item>
-                <item xml:id="k_x_postpalatal">
+                  <desc/></item>
+               <item xml:id="k_x_postpalatal">
                   <label>k → x̟</label>
-               <desc/></item>
-        <item xml:id="k_hamza">
+                  <desc/></item>
+               <item xml:id="k_hamza">
                   <label>k → /ʔ/</label>
-               <desc/></item>
+                  <desc/></item>
             </list>
          </div>
          <div type="description"><byline>Edited by AAA[Name]</byline>
 
             <div><head>Reflexes of <foreign>*k</foreign>
-          </head>
+               </head>
                <p>Kāf is the name of the 22nd letter of the Arabic alphabet. It is pronounced as a voiceless velar stop [k] in Classical and Modern Standard Arabic.
                   In both of these varieties there is no voiced counterpart [g]. In the contemporary spoken dialects, /k/ exhibits less variation than /q/ and /ǧ/;
                   the most widespread innovations are different kinds of affrication. </p>
@@ -123,30 +126,30 @@
                <p>The “standard” and “classical” pronunciation of /k/ as a voiceless velar stop [k] is still very widespread in the east and it is by far the most
                   common reflex in all Arabic varieties spoken in North Africa.</p>
 
-               <p>The palatalized reflex <ptr target="#k_ky"/>, which can be seen as the first step towards affrication, is rather rare and more or less restricted 
-               to south-eastern Arabia and scattered occurrences in Algeria.</p>
-               
-               <p>Many eastern Bedouin-type dialects show affrication of /k/ in specific phonetic environments. It is assumed that the dialects at the periphery of 
-               Arabia exhibit the older stage affrication *k &gt; č [ʧ], whereas the central dialects of the camel breeding nomadic tribes surface a further stage of 
-               affrication, which is *k &gt; *č &gt; ć [ʦ].</p>
-               <p>The unconditioned affrication of *k to č [ʧ] is attested for several non-connected regions situated far apart from each other: a small pocket of 
-               dialects in northern Yemen and south-western Saudi Arabia, some Omani dialects, and the dialects of Central Palestine. There is an ongoing discussion 
-               whether or not this sound shift is a contact-induced feature that has been triggered through contact with Bedouins;
-               see e.g. (Behnstedt 2016: 21 with further references).</p>
+               <p>The palatalized reflex <ptr target="#k_ky"/>, which can be seen as the first step towards affrication, is rather rare and more or less restricted
+                  to south-eastern Arabia and scattered occurrences in Algeria.</p>
+
+               <p>Many eastern Bedouin-type dialects show affrication of /k/ in specific phonetic environments. It is assumed that the dialects at the periphery of
+                  Arabia exhibit the older stage affrication *k &gt; č [ʧ], whereas the central dialects of the camel breeding nomadic tribes surface a further stage of
+                  affrication, which is *k &gt; *č &gt; ć [ʦ].</p>
+               <p>The unconditioned affrication of *k to č [ʧ] is attested for several non-connected regions situated far apart from each other: a small pocket of
+                  dialects in northern Yemen and south-western Saudi Arabia, some Omani dialects, and the dialects of Central Palestine. There is an ongoing discussion
+                  whether or not this sound shift is a contact-induced feature that has been triggered through contact with Bedouins;
+                  see e.g. (Behnstedt 2016: 21 with further references).</p>
                <p>Affricated *k &gt; *č &gt; ć [ʦ] in Jewish dialects of Morocco? </p>
 
-               </div>
-               
-               <div><head>Discussion / Theoretical Remarks </head>
-               <p>REFLEXES OF k IN THE BEDOUIN-SEDENTARY SPLIT – a bit of a lit review, 
-               highlight the significance of this feature and why we consider this feature needs to be part of the database.  </p>
-               </div>
+            </div>
+
+            <div><head>Discussion / Theoretical Remarks </head>
+               <p>REFLEXES OF k IN THE BEDOUIN-SEDENTARY SPLIT – a bit of a lit review,
+                  highlight the significance of this feature and why we consider this feature needs to be part of the database.  </p>
+            </div>
          </div>
 
          <div xmlns:tei="http://www.tei-c.org/ns/1.0" type="featureValueObservations">
-          
 
-            
+
+
 
             <wib:featureValueObservation xml:id="ft_k.fv_0063" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#k_k"></name>
@@ -168,13 +171,13 @@
                      <quote>how are you(sg.f)?</quote>
                   </cit>
                </cit>
-                <note type="general">The voiceless velar stop *k presents three main variants: namely /k/, the affricate variant /č/ (tʃ and the postalveolar fricative /š/ (ʃ).
-                Instances of /č/ are generally conditioned by the presence of a front vowel in the environment of *k, e.g. yimčin (maybe), činno (as if), haḏīč (that.SG.F), 
-                but not only, as examples such as čam (how much) or čānat (she was) show. As for the variant /š/, we assume it to result from assibilation of /č/, and it appears more frequently in middle age and young speakers than in old speakers.</note>
-                <note type="general">Affrication of k to č is normally identified as one of the most salient features marking the "Bedouin" character of this community's variety.</note>
+               <note type="general">The voiceless velar stop *k presents three main variants: namely /k/, the affricate variant /č/ (tʃ and the postalveolar fricative /š/ (ʃ).
+                  Instances of /č/ are generally conditioned by the presence of a front vowel in the environment of *k, e.g. yimčin (maybe), činno (as if), haḏīč (that.SG.F),
+                  but not only, as examples such as čam (how much) or čānat (she was) show. As for the variant /š/, we assume it to result from assibilation of /č/, and it appears more frequently in middle age and young speakers than in old speakers.</note>
+               <note type="general">Affrication of k to č is normally identified as one of the most salient features marking the "Bedouin" character of this community's variety.</note>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_k.fv_0075" status="done" resp="dmp:AID">
+
+            <wib:featureValueObservation xml:id="ft_k.fv_0075" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#k_affr5"/>
                <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
                <placeName ref="geo:khalde"/>
@@ -193,11 +196,11 @@
                   </cit>
                </cit>
                <note type="general">The voiceless velar stop *k presents three main variants: namely /k/, the affricate variant /č/ (tʃ and the postalveolar fricative /š/ (ʃ).
-                Instances of /č/ are generally conditioned by the presence of a front vowel in the environment of *k, e.g. yimčin (maybe), činno (as if), haḏīč (that.SG.F), 
-                but not only, as examples such as čam (how much) or čānat (she was) show. As for the variant /š/, we assume it to result from assibilation of /č/, and it appears more frequently in middle age and young speakers than in old speakers.</note>
-                <note type="general">Affrication of k to č is normally identified as one of the most salient features marking the "Bedouin" character of this community's variety. Variant š, although present in the data, is considered a mark of "urban Bedouins" that do not know how to speak "proper Bedouin".</note>
+                  Instances of /č/ are generally conditioned by the presence of a front vowel in the environment of *k, e.g. yimčin (maybe), činno (as if), haḏīč (that.SG.F),
+                  but not only, as examples such as čam (how much) or čānat (she was) show. As for the variant /š/, we assume it to result from assibilation of /č/, and it appears more frequently in middle age and young speakers than in old speakers.</note>
+               <note type="general">Affrication of k to č is normally identified as one of the most salient features marking the "Bedouin" character of this community's variety. Variant š, although present in the data, is considered a mark of "urban Bedouins" that do not know how to speak "proper Bedouin".</note>
             </wib:featureValueObservation>
-            
+
 
             <wib:featureValueObservation xml:id="ft_k.fv_0047" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#k_affr2"/>
@@ -248,7 +251,7 @@
                   </cit>
                </cit>
             </wib:featureValueObservation>
-            
+
 
             <wib:featureValueObservation xml:id="ft_k.fv_0009" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#k_affr2"/>
@@ -279,14 +282,14 @@
                <note type="constraintNote">Middle-age speakers use affrication of k to č very rarely in natural speech but report to use it when speaking to the older generation</note>
                <note type="general">Affrication of k to č is normally identified as one of the most salient features marking the "Bedouin" character of this community's variety. This feature is subject of mockery from the young generation</note>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_k.fv_0233" status="done" resp="dmp:AID">
+
+            <wib:featureValueObservation xml:id="ft_k.fv_0233" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#k_affr5"/>
                <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
                <placeName ref="geo:el_karantina"/>
                <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"/>
                <personGrp role="tribe" corresp="pgr:arab_maslax"/>
-                <personGrp role="ageGroup" corresp="pgr:young"/>
+               <personGrp role="ageGroup" corresp="pgr:young"/>
                <personGrp role="ageGroup" corresp="pgr:middle"/>
                <cit xml:id="ft_k.fv_0233.ct_0000" type="example">
                   <quote>šaləb</quote>
@@ -301,24 +304,24 @@
                   </cit>
                </cit>
                <cit type="example" xml:id="ft_k.fv_0233.ct_0002">
-                     <quote>ʕawīš</quote>
-                     <cit type="translation">
-                        <quote>shut up now</quote>
-                     </cit>
+                  <quote>ʕawīš</quote>
+                  <cit type="translation">
+                     <quote>shut up now</quote>
                   </cit>
+               </cit>
                <note type="constraintNote">Middle-age and young speakers show variant š when imitating the older generation, but claim not to use it naturally, only in some specific lexical items.</note>
                <note type="general">Affrication of k to č and š is normally identified as one of the most salient features marking the "Bedouin" character of this community's variety. </note>
             </wib:featureValueObservation>
 
-            
-              <wib:featureValueObservation xml:id="ft_k.fv_0066" status="done" resp="dmp:AID">
+
+            <wib:featureValueObservation xml:id="ft_k.fv_0066" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#k_k"/>
                <bibl corresp="zot:agbaht_2023_4928" type="publication"/>
                <placeName ref="geo:sheikh_taba"/>
                <lang corresp="..\profiles\vicav_profile_LBN-SXT.xml"/>
-              
+
             </wib:featureValueObservation>
-            
+
 
             <wib:featureValueObservation xml:id="ft_k.fv_0053" status="done" resp="dmp:AID">
                <name type="featureValue" ref="#k_k"/>
@@ -326,7 +329,7 @@
                <placeName ref="geo:baskinta"/>
                <lang corresp="..\profiles\vicav_profile_LBN-BAS.xml"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_k.fv_0351" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#k_k"/>
                <bibl corresp="zot:klimiuk_lipnicka_2022_7125" type="publication"/>
@@ -334,48 +337,96 @@
                <lang corresp="..\profiles\vicav_profile_MLT-XKG.xml"/>
             </wib:featureValueObservation>
             
+            <wib:featureValueObservation xml:id="ft_k.fv_0353" status="done" resp="dmp:AKM">
+               <name type="featureValue" ref="#k_k"/>
+               <bibl corresp="zot:klimiuk_2022_8293" type="publication"/> 
+               <placeName ref="geo:sannat"/>
+               <lang corresp="..\profiles\vicav_profile_MLT-SAN.xml"/>
+            </wib:featureValueObservation>
+            
+            <wib:featureValueObservation xml:id="ft_k.fv_0354" status="done" resp="dmp:AKM">
+               <name type="featureValue" ref="#k_g"/>
+               <bibl corresp="zot:klimiuk_2022_8293" type="publication"/> 
+               <placeName ref="geo:sannat"/>
+               <lang corresp="..\profiles\vicav_profile_MLT-SAN.xml"/>
+               <cit type="example" xml:id="ft_k.fv_0354.ct_0000">
+                     <quote>gbirā</quote>
+                     <cit type="translation">
+                        <quote>big (f.)</quote>
+                     </cit>
+                  </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_k.fv_0352" status="done" resp="dmp:AKM">
+               <name type="featureValue" ref="#k_affr2"/>
+               <bibl corresp="zot:leitner_2022_2410" type="publication"/>
+               <placeName ref="geo:khuzestan"/>
+               <lang corresp="..\profiles\vicav_profile_IRN-KHS.xml"/>
+               <note type="general">k has shifted to č in front vowel environments (including ā in some words, if not word-final) (p. 51)</note>
+               <cit type="example" xml:id="ft_k.fv_0352.ct_0000">
+                  <quote>səmač</quote>
+                  <cit type="translation">
+                     <quote>fish</quote>
+                  </cit>
+               </cit>
+               <note type="general">There is no affrication in front-vowel environment</note>
+               <cit type="example" xml:id="ft_k.fv_0352.ct_0001">
+                  <quote>kətab</quote>
+                  <cit type="translation">
+                     <quote>he wrote</quote>
+                  </cit>
+               </cit>
+               <note type="exceptionNote">There are case of affrication although not in front-vowel environment</note>
+               <cit type="example" xml:id="ft_k.fv_0352.ct_0002">
+                  <quote>bəčān</quote>
+                  <cit type="translation">
+                     <quote>place</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
             <wib:featureValueObservation xml:id="ft_k.fv_0235" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#k_k"/>
                <bibl corresp="zot:mansour_2018_2308" type="publication"/>
                <placeName ref="geo:mecca"/>
                <lang corresp="..\profiles\vicav_profile_SAU-MCC.xml"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_k.fv_0344" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#k_k"/>
                <bibl corresp="zot:alshammiry_2007_7737" type="publication"/>
                <placeName ref="geo:turaif"/>
                <lang corresp="..\profiles\vicav_profile_SAU-TUR.xml"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_k.fv_0347" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#k_k"/>
                <bibl corresp="zot:alzahrani_2014_2928" type="publication"/>
                <placeName ref="geo:zahran"/>
                <lang corresp="..\profiles\vicav_profile_SAU-ZAH.xml"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_k.fv_0348" status="draft" resp="dmp:AKM">
                <name type="featureValue" ref="#k_affr4"/>
                <bibl corresp="zot:alzahrani_2014_2928" type="publication"/>
                <placeName ref="geo:zahran"/>
                <lang corresp="..\profiles\vicav_profile_SAU-ZAH.xml"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_k.fv_0349" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#k_affr2"/>
                <bibl corresp="zot:al-rawi_1990_3236" type="publication"/>
                <placeName ref="geo:abu_dhabi"/>
                <lang target="..\profiles\vicav_profile_UAE-ABU.xml"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_k.fv_0350" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#k_affr2"/>
                <bibl corresp="zot:johnstone_1967_0000" type="publication"/>
                <placeName ref="geo:dubai"/>
                <lang corresp="..\profiles\vicav_profile_UAE-DUB.xml"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_k.fv_0239" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#k_k"/>
                <bibl corresp="zot:prochazka_2002_0000" type="publication"/>
@@ -383,7 +434,7 @@
                <lang corresp="..\profiles\vicav_profile_TUR-ADA.xml"/>
                <note type="general">often palatalized kj</note>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_k.fv_0241" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#k_k"/>
                <bibl corresp="zot:prochazka_2002_0000" type="publication"/>
@@ -391,7 +442,7 @@
                <lang corresp="..\profiles\vicav_profile_TUR-MRS.xml"/>
                <note type="general">often palatalized kj</note>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_k.fv_0245" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#k_k"/>
                <bibl corresp="zot:prochazka_2002_0000" type="publication"/>
@@ -399,27 +450,27 @@
                <lang corresp="..\profiles\vicav_profile_TUR-TRS.xml"/>
                <note type="general">often palatalized kj</note>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_k.fv_0328" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#k_k"/>
                <bibl corresp="zot:owens_1984_0000" type="publication"/>
                <placeName ref="geo:sulug"/>
                <lang corresp="..\profiles\vicav_profile_LBY-SLG.xml"/>
                <cit type="example" xml:id="ft_k.fv_0328.ct_0000">
-                     <quote>maktab</quote>
-                     <cit type="translation">
-                        <quote>office</quote>
-                     </cit>
+                  <quote>maktab</quote>
+                  <cit type="translation">
+                     <quote>office</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_k.fv_0329" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#k_k"/>
                <bibl corresp="zot:jastrow_1979_0000" type="publication"/>
                <placeName ref="geo:mosul"/>
                <lang corresp="..\profiles\vicav_profile_IRQ-MOS.xml"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_k.fv_0331" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#k_k"/>
                <bibl corresp="zot:talay_2002_0000" type="publication"/>
@@ -427,40 +478,40 @@
                <lang corresp="..\profiles\vicav_profile_TUR-HKY.xml"/>
                <note type="exceptionNote">between vowels also /g/</note>
                <cit type="example" xml:id="ft_k.fv_0331.ct_0000">
-                     <quote>bәge</quote>
-                     <cit type="translation">
-                        <quote>she cried</quote>
-                     </cit>
+                  <quote>bәge</quote>
+                  <cit type="translation">
+                     <quote>she cried</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_k.fv_0333" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#k_k"/>
                <bibl corresp="zot:grigore_2007_0000" type="publication"/>
                <placeName ref="geo:mardin"/>
                <lang corresp="..\profiles\vicav_profile_TUR-MRD.xml"/>
                <cit type="example" xml:id="ft_k.fv_0333.ct_0001">
-                     <quote>ḥakīm</quote>
-                     <cit type="translation">
-                        <quote>doctor</quote>
-                     </cit>
+                  <quote>ḥakīm</quote>
+                  <cit type="translation">
+                     <quote>doctor</quote>
                   </cit>
+               </cit>
                <note type="exceptionNote">k in vicinity of b, d, z, ḏ also realised as /g/</note>
                <cit type="example" xml:id="ft_k.fv_0333.ct_0002">
-                     <quote>gbīr</quote>
-                     <cit type="translation">
-                        <quote>big</quote>
-                     </cit>
+                  <quote>gbīr</quote>
+                  <cit type="translation">
+                     <quote>big</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_k.fv_0336" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#k_k"/>
                <bibl corresp="zot:leitnerbettega_2023_0000" type="publication"/>
                <placeName ref="geo:masira"/>
                <lang corresp="..\profiles\vicav_profile_OMN-MAS.xml"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_k.fv_0341" status="done" resp="dmp:AKM">
                <name type="featureValue" ref="#k_k"/>
                <bibl corresp="zot:eades_2011_2807" type="publication"/>
@@ -1393,7 +1444,7 @@
                   </cit>
                </cit>
             </wib:featureValueObservation>
-               
+
             <wib:featureValueObservation xml:id="ft_k.fv_0120" status="done" resp="dmp:AT">
                <name type="featureValue" ref="#k_affr2"/>
                <bibl corresp="zot:torzullo_2024_2244" type="publication"/>
@@ -1407,7 +1458,7 @@
                   <cit type="translation">
                      <quote>where are you (f.)</quote>
                   </cit>
-               </cit>  
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_k.fv_0088" status="done" resp="dmp:AT">
@@ -2438,7 +2489,7 @@
                <note type="exceptionNote">The pronominal suffix of the second person singular feminine may be an affricate č (as noted in  Poésies Fezzanaises).</note>
             </wib:featureValueObservation>
 
-          
+
 
             <wib:featureValueObservation xml:id="ft_k.fv_0001" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#k_k"/>
@@ -2634,50 +2685,50 @@
                <note type="exceptionNote">The sound ć also appears instead of other phonemes, e.g. ćāy ("tea").</note>
             </wib:featureValueObservation>
 
-            
-           
-            
+
+
+
             <wib:featureValueObservation xml:id="ft_k.fv_0072" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#k_k"/>
                <bibl corresp="src:KUW_2022_GK" type="publication" cert="unknown"/>
                <placeName ref="geo:kuwait_city"/>
                <lang corresp="..\profiles\vicav_profile_KWT-RSD.xml"/>
                <cit type="example" xml:id="ft_k.fv_0072.ct_0000">
-                     <quote>klāb</quote>
-                     <cit type="translation">
-                        <quote>dogs</quote>
-                     </cit>
+                  <quote>klāb</quote>
+                  <cit type="translation">
+                     <quote>dogs</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_k.fv_0077" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#k_affr2"/>
                <bibl corresp="src:KUW_2022_GK" type="publication" cert="unknown"/>
                <placeName ref="geo:kuwait_city"/>
                <lang corresp="..\profiles\vicav_profile_KWT-RSD.xml"/>
                <cit type="example" xml:id="ft_k.fv_0077.ct_0000">
-                     <quote>člāb</quote>
-                     <cit type="translation">
-                        <quote>dogs</quote>
-                     </cit>
+                  <quote>člāb</quote>
+                  <cit type="translation">
+                     <quote>dogs</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_k.fv_0122" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#k_affr1"/>
                <bibl corresp="src:KUW_2022_GK" type="publication" cert="unknown"/>
                <placeName ref="geo:kuwait_city"/>
                <lang corresp="..\profiles\vicav_profile_KWT-RSD.xml"/>
                <cit type="example" xml:id="ft_k.fv_0122.ct_0000">
-                     <quote>-ić (2.p.sg.f.)</quote>
-                     <cit type="translation">
-                        <quote>suffix of the 2.p.sg.f.</quote>
-                     </cit>
+                  <quote>-ić (2.p.sg.f.)</quote>
+                  <cit type="translation">
+                     <quote>suffix of the 2.p.sg.f.</quote>
                   </cit>
-                  <note type="general">Very sparsely attested, so far only in the given suffix</note>
+               </cit>
+               <note type="general">Very sparsely attested, so far only in the given suffix</note>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_k.fv_0076" status="done" resp="dmp:RZ">
+
+            <wib:featureValueObservation xml:id="ft_k.fv_0076" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#k_k"/>
                <bibl corresp="src:SAU_2022_GK" type="publication" cert="unknown"/>
                <placeName ref="geo:khaybar"/>
@@ -2686,14 +2737,14 @@
                <placeName ref="geo:hail_reg"/>
                <lang corresp="..\profiles\vicav_profile_SAU-RSD.xml"/>
                <cit type="example" xml:id="ft_k.fv_0076.ct_0000">
-                     <quote>kill</quote>
-                     <cit type="translation">
-                        <quote>everything</quote>
-                     </cit>
+                  <quote>kill</quote>
+                  <cit type="translation">
+                     <quote>everything</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_k.fv_0116" status="done" resp="dmp:RZ">
+
+            <wib:featureValueObservation xml:id="ft_k.fv_0116" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#k_affr2"/>
                <bibl corresp="src:SAU_2022_GK" type="publication" cert="unknown"/>
                <placeName ref="geo:khaybar"/>
@@ -2702,14 +2753,14 @@
                <placeName ref="geo:hail_reg"/>
                <lang corresp="..\profiles\vicav_profile_SAU-RSD.xml"/>
                <cit type="example" xml:id="ft_k.fv_0116.ct_0000">
-                     <quote>čeyf</quote>
-                     <cit type="translation">
-                        <quote>how</quote>
-                     </cit>
+                  <quote>čeyf</quote>
+                  <cit type="translation">
+                     <quote>how</quote>
                   </cit>
-                  <note type="general">This was sparsely attested</note>
+               </cit>
+               <note type="general">This was sparsely attested</note>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_k.fv_0119" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#k_affr1"/>
                <bibl corresp="src:SAU_2022_GK" type="publication" cert="unknown"/>
@@ -2719,27 +2770,27 @@
                <placeName ref="geo:hail_reg"/>
                <lang corresp="..\profiles\vicav_profile_SAU-RSD.xml"/>
                <cit type="example" xml:id="ft_k.fv_0119.ct_0000">
-                     <quote>yirćibūn</quote>
-                     <cit type="translation">
-                        <quote>they ride</quote>
-                     </cit>
+                  <quote>yirćibūn</quote>
+                  <cit type="translation">
+                     <quote>they ride</quote>
                   </cit>
-                  <note type="general">This was sparsely attested</note>
+               </cit>
+               <note type="general">This was sparsely attested</note>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_k.fv_0124" status="done" resp="dmp:RZ">
+
+            <wib:featureValueObservation xml:id="ft_k.fv_0124" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#k_k"/>
                <bibl corresp="zot:katz_1980_0798" type="publication"/>
                <placeName ref="geo:arab_al_rashayida"/>
                <lang corresp="..\profiles\vicav_profile_PSE-RSD.xml"/>
                <cit type="example" xml:id="ft_k.fv_0124.ct_0000">
-                     <quote>milk</quote>
-                     <cit type="translation">
-                        <quote>belongings</quote>
-                     </cit>
+                  <quote>milk</quote>
+                  <cit type="translation">
+                     <quote>belongings</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_k.fv_0051" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#k_k"/>
                <bibl corresp="zot:ingham_1986_7763" type="publication" status="CHECKED"/>
@@ -3014,19 +3065,19 @@
                <personGrp role="tribe" corresp="pgr:rashayda_sudan"/>
                <note type="general">The exact realization is [ʨ].</note>
                <cit type="example" xml:id="ft_k.fv_0113.ct_0000">
-                     <quote>čalām</quote>
-                     <cit type="translation">
-                        <quote>speech</quote>
-                     </cit>
+                  <quote>čalām</quote>
+                  <cit type="translation">
+                     <quote>speech</quote>
                   </cit>
-                  <cit type="example" xml:id="ft_k.fv_0113.ct_0001">
-                     <quote>hāḏīč</quote>
-                     <cit type="translation">
-                        <quote>that one (f.)</quote>
-                     </cit>
+               </cit>
+               <cit type="example" xml:id="ft_k.fv_0113.ct_0001">
+                  <quote>hāḏīč</quote>
+                  <cit type="translation">
+                     <quote>that one (f.)</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_k.fv_0059" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#k_k"/>
                <bibl corresp="src:SDN_2023_SK" type="fieldwork"/>
@@ -3034,13 +3085,13 @@
                <lang corresp="..\profiles\vicav_profile_SDN-RYD.xml"/>
                <personGrp role="tribe" corresp="pgr:rashayda_sudan"/>
                <cit type="example" xml:id="ft_k.fv_0059.ct_0000">
-                     <quote>hāḏāk</quote>
-                     <cit type="translation">
-                        <quote>that one (m.)</quote>
-                     </cit>
+                  <quote>hāḏāk</quote>
+                  <cit type="translation">
+                     <quote>that one (m.)</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_k.fv_0046" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#k_affr2"/>
                <bibl corresp="src:SDN_1974-1978_SR" type="fieldwork"/>
@@ -3049,20 +3100,20 @@
                <lang corresp="..\profiles\vicav_profile_SDN-RYD.xml"/>
                <personGrp role="tribe" corresp="pgr:rashayda_sudan"/>
                <cit type="example" xml:id="ft_k.fv_0046.ct_0000">
-                     <quote>čibīr</quote>
-                     <cit type="translation">
-                        <quote>big</quote>
-                     </cit>
+                  <quote>čibīr</quote>
+                  <cit type="translation">
+                     <quote>big</quote>
                   </cit>
-                  <cit type="example" xml:id="ft_k.fv_0046.ct_0001">
-                     <quote>mičān</quote>
-                     <cit type="translation">
-                        <quote>place</quote>
-                     </cit>
+               </cit>
+               <cit type="example" xml:id="ft_k.fv_0046.ct_0001">
+                  <quote>mičān</quote>
+                  <cit type="translation">
+                     <quote>place</quote>
                   </cit>
-                  <note type="general">The exact realization is [ʨ].</note>
+               </cit>
+               <note type="general">The exact realization is [ʨ].</note>
             </wib:featureValueObservation>
-                        
+
             <wib:featureValueObservation xml:id="ft_k.fv_0060" status="done" resp="dmp:SK">
                <name type="featureValue" ref="#k_k"/>
                <bibl corresp="src:SDN_1974-1978_SR" type="fieldwork"/>
@@ -3071,11 +3122,11 @@
                <lang corresp="..\profiles\vicav_profile_SDN-RYD.xml"/>
                <personGrp role="tribe" corresp="pgr:rashayda_sudan"/>
                <cit type="example" xml:id="ft_k.fv_0060.ct_0000">
-                     <quote>ḥakūm</quote>
-                     <cit type="translation">
-                        <quote>government</quote>
-                     </cit>
+                  <quote>ḥakūm</quote>
+                  <cit type="translation">
+                     <quote>government</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_k.fv_0194" status="done" resp="dmp:SK">
@@ -3327,18 +3378,18 @@
                   </cit>
                </cit>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_k.fv_0179" status="done" resp="dmp:RZ">
+
+            <wib:featureValueObservation xml:id="ft_k.fv_0179" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#k_k"/>
                <bibl corresp="zot:naddari_2023_2742" type="publication"/>
                <placeName ref="geo:nefza"/>
                <lang corresp="..\profiles\vicav_profile_TUN-NFZ.xml"/>
                <cit type="example" xml:id="ft_k.fv_0179.ct_0000">
-                     <quote>kbīr</quote>
-                     <cit type="translation">
-                        <quote>big / old</quote>
-                     </cit>
+                  <quote>kbīr</quote>
+                  <cit type="translation">
+                     <quote>big / old</quote>
                   </cit>
+               </cit>
             </wib:featureValueObservation>
 
 
@@ -3495,9 +3546,9 @@
                   </cit>
                </cit>
                <note type="general">allophone /k'/ before front and non-front vowels</note>
-   
+
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_k.fv_0010" status="done" resp="dmp:TD">
                <name type="featureValue" ref="#k_x_excep"/>
                <bibl corresp="zot:borg_1984_0000" type="publication"/>
@@ -3511,7 +3562,7 @@
                   </cit>
                </cit>
                <note type="general">Preceding t</note>
-   
+
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_k.fv_0258" status="done" resp="dmp:TD">
@@ -3527,8 +3578,8 @@
                </cit>
                <note type="general">/k/ sometimes is reflected as /g/ e.g. gideb 'he lied'</note>
             </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_k.fv_0067" status="done" resp="dmp:RZ">
+
+            <wib:featureValueObservation xml:id="ft_k.fv_0067" status="done" resp="dmp:RZ">
                <name type="featureValue" ref="#k_hamza"/>
                <bibl corresp="src:PC_RZ" type="publication" status="CHECKED"/>
                <placeName ref="geo:malta"/>
@@ -3651,7 +3702,7 @@
                <bibl corresp="zot:heath_2002_0001" type="publication"/>
                <placeName ref="geo:tanger"/>
                <lang corresp="..\profiles\vicav_profile_MAR-TGR.xml"/>
-                <note type="general">"There are some cases of spirantization of *k to a fricative x in some northern and Jebli Muslim dialects (Tg, Tn, Ch)" (p.140)</note>
+               <note type="general">"There are some cases of spirantization of *k to a fricative x in some northern and Jebli Muslim dialects (Tg, Tn, Ch)" (p.140)</note>
             </wib:featureValueObservation>
 
             <wib:featureValueObservation xml:id="ft_k.fv_0252" status="done" resp="dmp:TD">
@@ -3715,7 +3766,7 @@
                <placeName ref="geo:jijel"/>
                <lang corresp="..\profiles\vicav_profile_DZA-DJL.xml"/>
             </wib:featureValueObservation>
-            
+
             <wib:featureValueObservation xml:id="ft_k.fv_0064" status="done" resp="dmp:TD">
                <name type="featureValue" ref="#k_ky"/>
                <bibl corresp="zot:marcais_1956_0000" type="publication" status="CHECKED"/>
