@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../082_scripts_xsl/tei_fs_2_html__001.xsl"?>
+<?xslt inPathSegment="\010_manannot\" outPathSegment="\106_html\"?>
+<?snippets fn="snippets_wibarab_001.xml" path="{filePath}\..\..\880_conf\"?>
+<?processor name="saxon" removePreserveFromXML="true" removePreserveFromXSLT="true"?>
+<?attributeAssignments fn="enricher_attributes.xml" path="{filePath}\..\..\880_conf\"?>
+<?shortCuts fn="wibarab_shortCuts" path="{filePath}\..\..\880_conf\"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../../804_xsd/1.0.1/featuredb.xsd" xml:id="ft_negpron2sc">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Negated personal pronoun 2SG.C</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>{publisher}</publisher>
+            <date when="2022-10-03"/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This is the feature-file for the negated 2nd person singular communis pronoun.</p>
+         </sourceDesc>
+      </fileDesc>
+
+      <encodingDesc>
+
+         <listPrefixDef xml:id="listPrefixDef">
+            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_dmp.xml#$1"/>
+            <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../../vicav-library/vicav_biblio/vicav_biblio_tei_zotero.xml#$1"/>
+            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_dialects.xml#$1"/>
+            <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1"/>
+            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../vicav-library/vicav_geo/vicav_geodata.xml#$1"/>
+            <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
+         </listPrefixDef>
+      </encodingDesc>
+
+      <profileDesc>
+         <textClass>
+            <catRef target="dmp:personal_pronouns.negated_pronouns"/>
+         </textClass>
+      </profileDesc>
+
+      <revisionDesc status="done">
+         
+         
+         <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change>
+         <change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change>
+      </revisionDesc>
+   </teiHeader>
+
+
+
+   <text>
+      <body>
+
+         <div type="featureDescription">
+            <head>Feature Values</head>
+            <list type="featureValues">
+               <item xml:id="negpr_2sc_maak">
+                  <label>māk</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_2sc_maaksh">
+                  <label>mākš</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_2sc_mishshik">
+                  <label>miššik</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_2sc_madentash">
+                  <label>ma-d-enta-š</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_2sc_mintiish">
+                  <label>mintīš</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_2sc_mintsh">
+                  <label>mintš</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_2sc_minsh">
+                  <label>minš</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_2sc_notexisting">
+                  <label>not existing</label>
+                  <desc/>
+               </item>
+
+            </list>
+         </div>
+         <div type="description"><byline>Edited by [Name]</byline>
+         </div>
+         <div xmlns:tei="http://www.tei-c.org/ns/1.0" type="featureValueObservations">
+
+
+            <wib:featureValueObservation xml:id="ft_negpron2sc.fv_0127" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#negpr_2sc_notexisting"/>
+               <bibl corresp="zot:fink_2017_3211" type="publication"/>
+               <placeName ref="geo:hasankeyf"/>
+               <lang corresp="..\profiles\vicav_profile_TUR-HAS.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron2sc.fv_0188" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#negpr_2sc_maak"/>
+               <bibl corresp="zot:reichmuth_1983_0001" type="publication"/>
+               <placeName ref="geo:halfa_al-jadida"/>
+               <lang corresp="..\profiles\vicav_profile_SDN-SKR.xml"/>
+               <cit type="sourceRepresentation"><quote>māk</quote></cit>
+            </wib:featureValueObservation>
+          
+            <wib:featureValueObservation xml:id="ft_negpron2sc.fv_0258" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#negpr_2sc_mintiish"/>
+               <bibl corresp="src:PC_RZ" type="personalCommunication"/>
+               <placeName ref="geo:malta"/>
+               <lang corresp="..\profiles\vicav_profile_MLT-MAL.xml"/>
+               <note type="general">Maltese orthography: m'intix</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron2sc.fv_0003" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#negpr_2sc_mintsh"/>
+               <bibl corresp="zot:vanhove_1993_3116" type="publication"/>
+               <placeName ref="geo:malta"/>
+               <lang corresp="..\profiles\vicav_profile_MLT-MAL.xml"/>
+               <cit type="sourceRepresentation"><quote>mintš</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron2sc.fv_0064" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#negpr_2sc_minsh"/>
+               <bibl corresp="zot:vanhove_1993_3116" type="publication"/>
+               <placeName ref="geo:malta"/>
+               <lang corresp="..\profiles\vicav_profile_MLT-MAL.xml"/>
+               <cit type="sourceRepresentation"><quote>minš</quote></cit>
+            </wib:featureValueObservation>
+
+
+           
+
+
+            <wib:featureValueObservation xml:id="ft_negpron2sc.fv_0185" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#negpr_2sc_maak"/>
+               <bibl corresp="zot:Hillelson_1935_1288" type="publication" status="CHECKED">
+
+               </bibl>
+               <placeName ref="geo:khartoum"/>
+               <lang corresp="..\profiles\vicav_profile_SDN-KRT.xml"/>
+               <cit type="sourceRepresentation"><quote>māk</quote></cit>
+            </wib:featureValueObservation>
+
+
+
+            <wib:featureValueObservation xml:id="ft_negpron2sc.fv_0059" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#negpr_2sc_maaksh"/>
+               <bibl corresp="zot:naddari_2023_2742" type="publication"/>
+               <placeName ref="geo:nefza"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-NFZ.xml"/>
+               <cit type="sourceRepresentation"><quote>mǟkš</quote></cit>
+            </wib:featureValueObservation>
+
+
+
+            <wib:featureValueObservation xml:id="ft_negpron2sc.fv_0234" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#negpr_2sc_maak"/>
+               <bibl corresp="zot:pereira_2010_1918" type="publication"/>
+               <placeName ref="geo:tripoli_libya"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-TPL.xml"/>
+               <cit type="sourceRepresentation"><quote>mā-k</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron2sc.fv_0072" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#negpr_2sc_maaksh"/>
+               <bibl corresp="zot:pereira_2010_1918" type="publication"/>
+               <placeName ref="geo:tripoli_libya"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-TPL.xml"/>
+               <cit type="sourceRepresentation"><quote>mā-k-š</quote></cit>
+            </wib:featureValueObservation>
+
+
+           
+
+            <wib:featureValueObservation xml:id="ft_negpron2sc.fv_0270" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#negpr_2sc_maaksh"/>
+               <bibl corresp="zot:zarb_2023_0602" type="publication"/>
+               <placeName ref="geo:testour"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-TSR.xml"/>
+               <cit type="sourceRepresentation"><quote>mǟkš</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron2sc.fv_0076" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#negpr_2sc_mishshik"/>
+               <bibl corresp="zot:zarb_2023_0602" type="publication"/>
+               <placeName ref="geo:testour"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-TSR.xml"/>
+               <cit type="sourceRepresentation"><quote>miššik</quote></cit>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_negpron2sc.fv_0268" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#negpr_2sc_maaksh"/>
+               <bibl corresp="zot:marçais_1925_6953" type="publication"/>
+               <placeName ref="geo:takrouna"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-TKR.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron2sc.fv_0000" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#negpr_2sc_maak"/>
+               <bibl corresp="zot:marçais_1925_6953" type="publication"/>
+               <placeName ref="geo:takrouna"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-TKR.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron2sc.fv_0269" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#negpr_2sc_maaksh"/>
+               <bibl corresp="zot:singer_1984_0000" type="publication"/>
+               <placeName ref="geo:tunis"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-TNS.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron2sc.fv_0267" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#negpr_2sc_mishshik"/>
+               <bibl corresp="zot:talmoudi_1980_0000" type="publication"/>
+               <placeName ref="geo:sousse"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-SUS.xml"/>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_negpron2sc.fv_0225" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#negpr_2sc_maaksh"/>
+               <bibl corresp="zot:marcais_1902_3831" type="publication"/>
+               <placeName ref="geo:tlemcen"/>
+               <lang corresp="..\profiles\vicav_profile_DZA-TLM.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron2sc.fv_0220" status="done" resp="dmp:TD">
+               <name type="featureValue" ref="#negpr_2sc_madentash"/>
+               <bibl corresp="zot:marcais_1956_0000" type="publication" status="CHECKED">
+
+               </bibl>
+               <placeName ref="geo:jijel"/>
+               <lang corresp="..\profiles\vicav_profile_DZA-DJL.xml"/>
+            </wib:featureValueObservation>
+
+   
+
+            <wib:featureValueObservation xml:id="ft_negpron2sc.fv_0007" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#negpr_2sc_notexisting"/>
+               <bibl corresp="zot:ghanem_1958_0000" type="publication"/>
+               <placeName ref="geo:aden"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-ADN.xml"/>
+               <note type="general">There are no negative forms of the pronouns themselves, instead the pronouns are negated with muš preceding the pronoun.</note>
+            </wib:featureValueObservation>
+
+
+         </div>
+      </body>
+   </text>
+</TEI>

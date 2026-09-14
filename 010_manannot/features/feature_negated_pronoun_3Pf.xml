@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../082_scripts_xsl/tei_fs_2_html__001.xsl"?>
+<?xslt inPathSegment="\010_manannot\" outPathSegment="\106_html\"?>
+<?snippets fn="snippets_wibarab_001.xml" path="{filePath}\..\..\880_conf\"?>
+<?processor name="saxon" removePreserveFromXML="true" removePreserveFromXSLT="true"?>
+<?attributeAssignments fn="enricher_attributes.xml" path="{filePath}\..\..\880_conf\"?>
+<?shortCuts fn="wibarab_shortCuts" path="{filePath}\..\..\880_conf\"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../../804_xsd/1.0.1/featuredb.xsd" xml:id="ft_negpron3pf">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Negated personal pronoun 3PL.F</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>{publisher}</publisher>
+            <date when="2022-10-03"/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>This is the feature-file for the negated 3rd person plural feminine pronoun.</p>
+         </sourceDesc>
+      </fileDesc>
+
+      <encodingDesc>
+
+         <listPrefixDef xml:id="listPrefixDef">
+            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_dmp.xml#$1"/>
+            <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../../vicav-library/vicav_biblio/vicav_biblio_tei_zotero.xml#$1"/>
+            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_dialects.xml#$1"/>
+            <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1"/>
+            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../vicav-library/vicav_geo/vicav_geodata.xml#$1"/>
+            <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
+         </listPrefixDef>
+      </encodingDesc>
+
+      <profileDesc>
+         <textClass>
+            <catRef target="dmp:personal_pronouns.negated_pronouns"/>
+         </textClass>
+      </profileDesc>
+
+      <revisionDesc status="done">
+
+
+         <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change>
+         <change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change>
+      </revisionDesc>
+   </teiHeader>
+
+
+
+   <text>
+      <body>
+
+         <div type="featureDescription">
+            <head>Feature Values</head>
+            <list type="featureValues">
+               <item xml:id="negpr_3pf_maahen">
+                  <label>māhən, māhin</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_3pf_maahinsh">
+                  <label>māhinš</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_3pf_maanhen">
+                  <label>mānhen</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_3pf_maanen">
+                  <label>mānen</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_3pf_mahin">
+                  <label>mahin</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_3pf_mahinsh">
+                  <label>mahinš</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_3pf_mahin_accent">
+                  <label>mahín</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_3pf_maahinnah">
+                  <label>māhinnah</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_3pf_maahunah">
+                  <label>māhunah</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_3pf_maahinb">
+                  <label>māhinb</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_3pf_maahinnib">
+                  <label> māhinnib</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_3pf_notexisting">
+                  <label>not existing</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_3pf_mihin">
+                  <label>mihin</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_3pf_miihin">
+                  <label>mīhin</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_3pf_mihin_accent">
+                  <label>míhin</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_3pf_mihin_hin_nih">
+                  <label>mihin-hin(nih)</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_3pf_muhu_hin_nih">
+                  <label>muhu-hin(nih)</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_3pf_mihinna">
+                  <label>mihinna</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_3pf_minne">
+                  <label>minne</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_3pf_mahinniš">
+                  <label>mahinniš</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_3pf_mahinnaash">
+                  <label>mahinnāš</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_3pf_mahinnishsh">
+                  <label>mahinnišš</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_3pf_mahan">
+                  <label>mahan, mahen</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_3pf_mannin">
+                  <label>mannin</label>
+                  <desc/>
+               </item>
+               <item xml:id="negpr_3pf_maahan">
+                  <label>maahan</label>
+                  <desc/>
+               </item>
+            </list>
+         </div>
+         <div type="description"><byline>Edited by [Name]</byline>
+         </div>
+         <div xmlns:tei="http://www.tei-c.org/ns/1.0" type="featureValueObservations">
+
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0063" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#negpr_3pf_maahen"/>
+               <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
+               <placeName ref="geo:khalde"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-KHA.xml"/>
+               <personGrp role="tribe" corresp="pgr:arab_xalde"/>
+               <cit type="sourceRepresentation"><quote>māhin</quote></cit>
+               <personGrp role="ageGroup" corresp="pgr:old"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0071" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#negpr_3pf_mannin"/>
+               <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
+               <placeName ref="geo:el_karantina"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"/>
+               <personGrp role="tribe" corresp="pgr:arab_maslax"/>
+               <cit type="sourceRepresentation"><quote>mannin</quote></cit>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0052" status="done" resp="dmp:AID">
+               <name type="featureValue" ref="#negpr_3pf_maahen"/>
+               <bibl corresp="zot:younes_2013_2795" type="publication"/>
+               <placeName ref="geo:wadi_khalid"/>
+               <lang corresp="..\profiles\vicav_profile_LBN-ATI.xml"/>
+               <personGrp role="tribe" corresp="pgr:arab_al_atij"/>
+               <cit type="sourceRepresentation"><quote>māhin</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0015" status="done" resp="dmp:AKM">
+               <name type="featureValue" ref="#negpr_3pf_mahinsh"/>
+               <bibl corresp="zot:owens_1984_0000" type="publication"/>
+               <placeName ref="geo:sulug"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-SLG.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0017" status="done" resp="dmp:AKM">
+               <name type="featureValue" ref="#negpr_3pf_mahan"/>
+               <bibl corresp="zot:alruwaili_2018_9384" type="publication"/>
+               <placeName ref="geo:turaif"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-TUR.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0018" status="done" resp="dmp:AKM">
+               <name type="featureValue" ref="#negpr_3pf_maahunah"/>
+               <bibl corresp="zot:alzahrani_2015_8272" type="publication"/>
+               <placeName ref="geo:zahran"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-ZAH.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0019" status="done" resp="dmp:AKM">
+               <name type="featureValue" ref="#negpr_3pf_maahen"/>
+               <bibl corresp="zot:bozkurt_2022_8117" type="publication"/>
+               <placeName ref="geo:arabkhane"/>
+               <lang corresp="..\profiles\vicav_profile_IRN-ABK.xml"/>
+               <note type="general">Deduced from example</note>
+               <cit type="sourceRepresentation"><quote>mǟhin (p. 264)</quote></cit>
+               <cit type="example" xml:id="ft_negpron3pf.fv_0019.ct_0000">
+                  <quote>kullhin yalham ʕayn mēhin</quote>
+                  <cit type="translation">
+                     <quote>they are not like one another</quote>
+                  </cit>
+               </cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0099" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#negpr_3pf_mihin"/>
+               <bibl corresp="zot:blanc_1970_0000" type="publication" status="CHECKED">
+
+               </bibl>
+               <placeName ref="geo:negev"/>
+               <lang corresp="..\profiles\vicav_profile_NEG-ZLM.xml"/>
+               <personGrp role="tribe" corresp="pgr:zullam"/>
+               <cit type="sourceRepresentation"><quote>mihin</quote></cit>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0101" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#negpr_3pf_maahinb"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
+
+
+               </bibl>
+               <placeName ref="geo:jabal_shammar"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-SMR.xml"/>
+               <personGrp role="tribe" corresp="pgr:shammar_saudi_arabia"/>
+               <cit type="sourceRepresentation"><quote>māhinb</quote></cit>
+               <note type="general">Reflex found in al-Qaṣīm</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0000" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#negpr_3pf_maahen"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
+
+
+               </bibl>
+               <placeName ref="geo:jabal_shammar"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-SMR.xml"/>
+               <personGrp role="tribe" corresp="pgr:shammar_saudi_arabia"/>
+               <cit type="sourceRepresentation"><quote>māhin</quote></cit>
+               <note type="general">Reflex found in Ḥāyil</note>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0097" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#negpr_3pf_maahen"/>
+               <bibl corresp="zot:herin_2010_4638" type="publication"/>
+               <placeName ref="geo:al_salt"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-SLT.xml"/>
+               <cit type="sourceRepresentation"><quote>māhin</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0001" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#negpr_3pf_mahinnishsh"/>
+               <bibl corresp="zot:herin_2010_4638" type="publication"/>
+               <placeName ref="geo:al_salt"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-SLT.xml"/>
+               <cit type="sourceRepresentation"><quote>mahinnišš</quote></cit>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0135" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#negpr_3pf_maahen"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKED">
+
+               </bibl>
+               <placeName ref="geo:gharif_al_ghuzlan"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-BLL.xml"/>
+               <personGrp role="tribe" corresp="pgr:biliy"/>
+               <cit type="sourceRepresentation"><quote>māhin</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0002" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#negpr_3pf_miihin"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKED">
+
+               </bibl>
+               <placeName ref="geo:gharif_al_ghuzlan"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-BLL.xml"/>
+               <personGrp role="tribe" corresp="pgr:biliy"/>
+               <cit type="sourceRepresentation"><quote>mīhin</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0137" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#negpr_3pf_mahin_accent"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKED">
+
+               </bibl>
+               <placeName ref="geo:bir_al_abd"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-BYD.xml"/>
+               <personGrp role="tribe" corresp="pgr:biyyadiyah"/>
+               <cit type="sourceRepresentation"><quote>mahín</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0004" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#negpr_3pf_mahinsh"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKED">
+
+               </bibl>
+               <placeName ref="geo:bir_al_abd"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-BYD.xml"/>
+               <personGrp role="tribe" corresp="pgr:biyyadiyah"/>
+               <cit type="sourceRepresentation"><quote>mahinš</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0003" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#negpr_3pf_mahinnaash"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKED">
+
+               </bibl>
+               <placeName ref="geo:bir_al_abd"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-BYD.xml"/>
+               <personGrp role="tribe" corresp="pgr:biyyadiyah"/>
+               <cit type="sourceRepresentation"><quote>mahinnāš</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0139" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#negpr_3pf_maahen"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKED">
+
+               </bibl>
+               <placeName ref="geo:bir_al_abd"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-DWG.xml"/>
+               <personGrp role="tribe" corresp="pgr:dawaghrah"/>
+               <cit type="sourceRepresentation"><quote>māhin(na)</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0146" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#negpr_3pf_maahen"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKED">
+
+               </bibl>
+               <placeName ref="geo:al_kuntilla"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-HYW.xml"/>
+               <personGrp role="tribe" corresp="pgr:ahaywat"/>
+               <cit type="sourceRepresentation"><quote>māhin</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0005" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#negpr_3pf_miihin"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKED">
+
+               </bibl>
+               <placeName ref="geo:al_kuntilla"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-HYW.xml"/>
+               <personGrp role="tribe" corresp="pgr:ahaywat"/>
+               <cit type="sourceRepresentation"><quote>mīhin</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0150" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#negpr_3pf_maahen"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKED">
+
+               </bibl>
+               <placeName ref="geo:nakhal_diqla"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-RML.xml"/>
+               <personGrp role="tribe" corresp="pgr:rmelat"/>
+               <cit type="sourceRepresentation"><quote>māhin</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0006" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#negpr_3pf_miihin"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKED">
+
+               </bibl>
+               <placeName ref="geo:nakhal_diqla"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-RML.xml"/>
+               <personGrp role="tribe" corresp="pgr:rmelat"/>
+               <cit type="sourceRepresentation"><quote>mīhin</quote></cit>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0153" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#negpr_3pf_maahen"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKED">
+
+               </bibl>
+               <placeName ref="geo:wadi_al_arish"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-SWR.xml"/>
+               <personGrp role="tribe" corresp="pgr:sawarkah"/>
+               <cit type="sourceRepresentation"><quote>māhin</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0008" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#negpr_3pf_miihin"/>
+               <bibl corresp="zot:jong_2000_0001" type="publication" status="CHECKED">
+
+               </bibl>
+               <placeName ref="geo:wadi_al_arish"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-SWR.xml"/>
+               <personGrp role="tribe" corresp="pgr:sawarkah"/>
+               <cit type="sourceRepresentation"><quote>mīhin</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0084" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#negpr_3pf_mahin"/>
+               <bibl corresp="zot:owens_1984_9854" type="publication" status="CHECKED">
+
+               </bibl>
+               <placeName ref="geo:petra"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-BDL.xml"/>
+               <personGrp role="tribe" corresp="pgr:bdul"/>
+               <cit type="sourceRepresentation"><quote>mahin</quote></cit>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0081" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#negpr_3pf_mahan"/>
+               <bibl corresp="zot:palva_1976_4156" type="publication"/>
+               <placeName ref="geo:sel_hisban"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-AGR.xml"/>
+               <personGrp role="tribe" corresp="pgr:al_agarma"/>
+               <cit type="sourceRepresentation"><quote>mahen</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0085" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#negpr_3pf_mahin"/>
+               <bibl corresp="zot:palva_1980_0000" type="publication"/>
+               <placeName ref="geo:umm_ar_rasas"/>
+               <placeName ref="geo:natl"/>
+               <placeName ref="geo:umm_al_walid"/>
+               <placeName ref="geo:al_muwaqqar"/>
+               <placeName ref="geo:qasr_amrah"/>
+               <placeName ref="geo:rujm_ash_shami_al_gharbi"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-BSX.xml"/>
+               <personGrp role="tribe" corresp="pgr:bani_saxar"/>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0090" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#negpr_3pf_minne"/>
+               <bibl corresp="zot:palva_1989_0000" type=" publication"/>
+               <placeName ref="geo:al_karak"/>
+               <lang corresp="..\profiles\vicav_profile_JOR-KRK.xml"/>
+               <cit type="sourceRepresentation"><quote>minne</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0098" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#negpr_3pf_mihin_accent"/>
+               <bibl corresp="zot:shawarbah_2012_3107" type="publication"/>
+               <placeName ref="geo:negev"/>
+               <lang corresp="..\profiles\vicav_profile_NEG-AZM.xml"/>
+               <personGrp role="tribe" corresp="pgr:azazmih"/>
+               <cit type="sourceRepresentation"><quote>míhin</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0012" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#negpr_3pf_mihin_hin_nih"/>
+               <bibl corresp="zot:shawarbah_2012_3107" type="publication"/>
+               <placeName ref="geo:negev"/>
+               <lang corresp="..\profiles\vicav_profile_NEG-AZM.xml"/>
+               <personGrp role="tribe" corresp="pgr:azazmih"/>
+               <cit type="sourceRepresentation"><quote>mihin-hin(nih)</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0010" status="done" resp="dmp:AT">
+               <name type="featureValue" ref="#negpr_3pf_muhu_hin_nih"/>
+               <bibl corresp="zot:shawarbah_2012_3107" type="publication"/>
+               <placeName ref="geo:negev"/>
+               <lang corresp="..\profiles\vicav_profile_NEG-AZM.xml"/>
+               <personGrp role="tribe" corresp="pgr:azazmih"/>
+               <cit type="sourceRepresentation"><quote>muhu-hin(nih)</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0127" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#negpr_3pf_notexisting"/>
+               <bibl corresp="zot:fink_2017_3211" type="publication"/>
+               <placeName ref="geo:hasankeyf"/>
+               <lang corresp="..\profiles\vicav_profile_TUR-HAS.xml"/>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0171" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#negpr_3pf_mahinniš"/>
+               <bibl corresp="zot:seeger_2013_1032" type="publication"/>
+               <placeName ref="geo:ramallah"/>
+               <lang corresp="..\profiles\vicav_profile_PSE-RML.xml"/>
+               <cit type="sourceRepresentation"><quote>mahinniš</quote></cit>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0112" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#negpr_3pf_maahen"/>
+               <bibl corresp="zot:leitner_2022_2410" type="publication" status="CHECKED">
+
+               </bibl>
+               <placeName ref="geo:khuzestan"/>
+               <lang corresp="..\profiles\vicav_profile_IRN-KHU.xml"/>
+               <cit type="sourceRepresentation"><quote>mā-hən</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0114" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#negpr_3pf_mahan"/>
+               <bibl corresp="zot:mahdi_1985_1985" type="publication"/>
+               <placeName ref="geo:basra"/>
+               <lang corresp="..\profiles\vicav_profile_IRQ-BSR.xml"/>
+               <cit type="sourceRepresentation"><quote>mahan</quote></cit>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0188" status="done" resp="dmp:CL">
+               <name type="featureValue" ref="#negpr_3pf_maahen"/>
+               <bibl corresp="zot:reichmuth_1983_0001" type="publication"/>
+               <placeName ref="geo:halfa_al-jadida"/>
+               <lang corresp="..\profiles\vicav_profile_SDN-SKR.xml"/>
+               <cit type="sourceRepresentation"><quote>māhin</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0194" status="done" resp="dmp:PH">
+               <name type="featureValue" ref="#negpr_3pf_maahan"/>
+               <bibl corresp="zot:zeltner_tourneux_1986_0000" type="publication"/>
+               <placeName ref="geo:salamat"/>
+               <lang corresp="..\profiles\vicav_profile_TCD-ULE.xml"/>
+            </wib:featureValueObservation>
+
+
+
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0334" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#negpr_3pf_mihinna"/>
+               <bibl corresp="zot:alfaife_2018_9797" type="publication"/>
+               <placeName ref="geo:jabal_fayfa"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-FYF.xml"/>
+               <cit type="sourceRepresentation"><quote>mi-hinna</quote></cit>
+            </wib:featureValueObservation>
+
+
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0228" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#negpr_3pf_mahinsh"/>
+               <bibl corresp="zot:owens_1984_0000" type="publication"/>
+               <placeName ref="geo:benghazi"/>
+               <lang corresp="..\profiles\vicav_profile_LBY-BGZ.xml"/>
+               <cit type="sourceRepresentation"><quote>ma-hin-š</quote></cit>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0055" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#negpr_3pf_mihin"/>
+               <bibl corresp="zot:katz_1980_0798" type="publication"/>
+               <placeName ref="geo:arab_al_rashayida"/>
+               <lang corresp="..\profiles\vicav_profile_PSE-RSD.xml"/>
+               <cit type="sourceRepresentation"><quote>mihin</quote></cit>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0183" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#negpr_3pf_maahen"/>
+               <bibl corresp="zot:manfredi_2012_3081" type="publication"/>
+               <placeName ref="geo:kurdufan"/>
+               <lang corresp="..\profiles\vicav_profile_SDN-KDF.xml"/>
+               <cit type="sourceRepresentation"><quote>má=hin</quote></cit>
+            </wib:featureValueObservation>
+
+
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0009" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#negpr_3pf_maahinnib"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
+
+               </bibl>
+               <placeName ref="geo:bilad_ghamid"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-GHA.xml"/>
+               <cit type="sourceRepresentation"><quote>māhinnib</quote></cit>
+            </wib:featureValueObservation>
+
+
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0011" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#negpr_3pf_maahen"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
+
+               </bibl>
+               <placeName ref="geo:hail"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-HYL.xml"/>
+               <cit type="sourceRepresentation"><quote>māhin</quote></cit>
+            </wib:featureValueObservation>
+
+
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0014" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#negpr_3pf_maahen"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
+
+               </bibl>
+               <placeName ref="geo:sirhan"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-RWA.xml"/>
+               <cit type="sourceRepresentation"><quote>māhin</quote></cit>
+            </wib:featureValueObservation>
+
+
+
+
+
+
+
+
+
+
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0331" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#negpr_3pf_maahinb"/>
+               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
+
+               </bibl>
+               <placeName ref="geo:bukayriya"/>
+               <lang corresp="..\profiles\vicav_profile_SAU-QSM.xml"/>
+               <cit type="sourceRepresentation"><quote>māhinb</quote></cit>
+            </wib:featureValueObservation>
+
+
+
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0186" status="done" resp="dmp:RZ">
+               <name type="featureValue" ref="#negpr_3pf_maahen"/>
+               <bibl corresp="zot:trimingham_1946_0000" type="publication"/>
+               <placeName ref="geo:omdurman"/>
+               <lang corresp="..\profiles\vicav_profile_SDN-OMD.xml"/>
+               <cit type="sourceRepresentation"><quote>māhin</quote></cit>
+            </wib:featureValueObservation>
+
+
+
+
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0131" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#negpr_3pf_miihin"/>
+               <bibl corresp="src:TUR_2002-2022_SP" type="publication"/>
+               <placeName ref="geo:shanliurfa"/>
+               <lang corresp="..\profiles\vicav_profile_TUR-URF.xml"/>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0197" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#negpr_3pf_mahinnishsh"/>
+               <bibl corresp="zot:cantineau_1946_0000" type="publication" status="CHECKED"/>
+               <placeName ref="geo:busra"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-BSR.xml"/>
+               <cit type="sourceRepresentation"><quote>māhinniš</quote></cit>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0202" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#negpr_3pf_maanen"/>
+               <bibl corresp="zot:yoseph_2012_8913" type="publication" status="CHECKED">
+
+               </bibl>
+               <placeName ref="geo:mhardi"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-MRD.xml"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0013" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#negpr_3pf_maanhen"/>
+               <bibl corresp="zot:yoseph_2012_8913" type="publication" status="CHECKED">
+
+               </bibl>
+               <placeName ref="geo:mhardi"/>
+               <lang corresp="..\profiles\vicav_profile_SYR-MRD.xml"/>
+            </wib:featureValueObservation>
+
+
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0133" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#negpr_3pf_maahinsh"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:wadi_sulaf"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-ASD.xml"/>
+               <personGrp role="tribe" corresp="pgr:awlad_said"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0134" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#negpr_3pf_miihin"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:ramlat_humayyir"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-BDA.xml"/>
+               <personGrp role="tribe" corresp="pgr:badarah"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0136" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#negpr_3pf_maahinnah"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:wadi_al_islah"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-BWS.xml"/>
+               <personGrp role="tribe" corresp="pgr:bani_wasil"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0138" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#negpr_3pf_miihin"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:qalat_al_jindi"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-DBR.xml"/>
+               <personGrp role="tribe" corresp="pgr:dbur"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0140" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#negpr_3pf_maahinsh"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:saint_catherine_s_monastery"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-GBL.xml"/>
+               <personGrp role="tribe" corresp="pgr:jbaliyyah"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0142" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#negpr_3pf_miihin"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:jabal_al_malbad"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-GRG.xml"/>
+               <personGrp role="tribe" corresp="pgr:jarajrah"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0143" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#negpr_3pf_maahen"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:wahat_fayran"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-GRR.xml"/>
+               <personGrp role="tribe" corresp="pgr:gararshah"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0144" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#negpr_3pf_maahen"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:jabal_sarabit_al_khadim"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-HMD.xml"/>
+               <personGrp role="tribe" corresp="pgr:hamadah"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0145" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#negpr_3pf_miihin"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:wadi_jiddi"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-HWT.xml"/>
+               <personGrp role="tribe" corresp="pgr:hwetat_egypt"/>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0148" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#negpr_3pf_miihin"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:al_qusaymah"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-MLH.xml"/>
+               <personGrp role="tribe" corresp="pgr:malalhah"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0151" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#negpr_3pf_maahinsh"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:wahat_fayran"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-SLH.xml"/>
+               <personGrp role="tribe" corresp="pgr:sawalhah"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0154" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#negpr_3pf_miihin"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:sudr"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-TRB.xml"/>
+               <personGrp role="tribe" corresp="pgr:tarabin"/>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0155" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#negpr_3pf_miihin"/>
+               <bibl corresp="zot:jong_2011_8794" type="publication"/>
+               <placeName ref="geo:jabal_at_tih"/>
+               <lang corresp="..\profiles\vicav_profile_EGY-TYH.xml"/>
+               <personGrp role="tribe" corresp="pgr:tayaha"/>
+            </wib:featureValueObservation>
+
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0265" status="done" resp="dmp:SP">
+               <name type="featureValue" ref="#negpr_3pf_maahinsh"/>
+               <bibl corresp="zot:ritt_benmimoun_2014_0000" type="publication" status="CHECKME">
+                  <!--potentially ambiguous references-->
+               </bibl>
+               <placeName ref="geo:douz"/>
+               <lang corresp="..\profiles\vicav_profile_TUN-MZG.xml"/>
+            </wib:featureValueObservation>
+
+
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0007" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#negpr_3pf_notexisting"/>
+               <bibl corresp="zot:ghanem_1958_0000" type="publication"/>
+               <placeName ref="geo:aden"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-ADN.xml"/>
+               <note type="general">There are no negative forms of the pronouns themselves, instead the pronouns are negated with muš preceding the pronoun.</note>
+            </wib:featureValueObservation>
+
+            <wib:featureValueObservation xml:id="ft_negpron3pf.fv_0304" status="done" resp="dmp:VE">
+               <name type="featureValue" ref="#negpr_3pf_notexisting"/>
+               <bibl corresp="zot:werbeck_2001_4975" type="publication"/>
+               <placeName ref="geo:manakhah"/>
+               <lang corresp="..\profiles\vicav_profile_YEM-MAN.xml"/>
+               <note type="general">There are no negative forms of the pronouns themselves, instead the pronouns are negated with maš or miš preceding the pronoun.</note>
+            </wib:featureValueObservation>
+
+         </div>
+      </body>
+   </text>
+</TEI>

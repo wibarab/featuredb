@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="vicav_profile_TUN-TNS">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>A machine-readable profile of Tunis Arabic</title>
+                <author xml:id="inesD">Ines Dallaji</author>
+                <editor xml:id="charly" role="Technical_Editor">Karlheinz Moerth</editor>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>ACDH-OeAW</publisher>
+                <pubPlace>Vienna</pubPlace>
+                <date>2011</date>
+                <availability status="restricted">
+                    <p>
+                        <ref type="license" target="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+                    </p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <listBibl type="literature">
+                    <bibl corresp="zot:singer_1984_0000" type="publication" />
+                </listBibl>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <listPrefixDef>
+                <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="wibarab-dmp.xml#$1" />
+                <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../../vicav-library/vicav_biblio/vicav_biblio_tei_zotero.xml#$1" />
+                <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="vicav_geodata.xml#$1" />
+            </listPrefixDef>
+            <tagsDecl partial="true">
+                <rendition xml:id="i" scheme="css">font-style:italics;</rendition>
+                <rendition xml:id="u" scheme="css">text-decoration:underline;</rendition>
+                <rendition xml:id="b" scheme="css">font-weight:bold;</rendition>
+            </tagsDecl>
+        </encodingDesc>
+        <profileDesc>
+            <langUsage>
+                <language role="objectLanguage" ident="ar-x-tuntns" ana="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324509">
+                    <name type="languageVariety">Tunis Arabic</name>
+                    <settingDesc>
+                        <listPlace>
+                            <place sameAs="geo:tunis" />
+                        </listPlace>
+                    </settingDesc>
+                    <date type="languagePeriod">
+                        <note>Contemporary</note>
+                    </date>
+                    <channel mode="s">spoken</channel>
+                    <listBibl type="researchHistory">
+                        <bibl corresp="zot:stumme_1896_0000" />
+                        <bibl corresp="zot:stumme_1893_0000" />
+                        <bibl corresp="zot:cohen_1975_0000" />
+                        <bibl corresp="zot:singer_1984_0000" />
+                        <bibl corresp="zot:jemni_2011_0000" />
+                        <bibl corresp="zot:gibson_1998_0000" />
+                        <bibl corresp="zot:gibson_2012_3227" />
+                        <bibl corresp="zot:gibson_2008_0000" />
+                    </listBibl>
+                    <listBibl type="dictionaries">
+                        <bibl corresp="zot:nicolas_1911_0000" />
+                        <bibl corresp="zot:beaussier_2006_3229" />
+                        <bibl corresp="zot:abdellatif_2010_4595" />
+                        <bibl corresp="zot:marçais_1958_4130" />
+                        <bibl corresp="zot:abdelkader_ayed_1977_0000" />
+                    </listBibl>
+                </language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc>
+            <change status="created" when="2019-02-18" who="#inesD">created</change>
+            <change status="draft" when="2019-02-18" who="#inesD">last modified (revision 4)</change>
+            <change status="draft" when="2019-02-18">transformed to TEI-XML</change>
+            <change who="#charly" when="2018-10-03" status="released" />
+            <change when="2025-10-07+02:00" who="dmp:KS">Transformed to Lex-0</change>
+            <change when="2026-03-30" who="dmp:KS">Added sources from feature value observations.</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <head>
+                    <figure>
+                        <graphic url="tunis-zeituna-1988.jpg" type="thumbnail" />
+                        <head type="imgCaption">Courtesy by Stephan Procházka</head>
+                    </figure>
+                </head>
+                <div type="typology">
+                    <p>Western › Maghreb › Tunisia › Northern Tunisia</p>
+                    <p>Urban, sedentary dialect, prestige variety</p>
+                </div>
+                <div type="general">
+                    <p>The Arabic dialect of Tunis as spoken today by the majority of the city’s
+                  inhabitants is a contact variety influenced by a vast population influx from all
+                  over Tunisia during the 20th century. It can be regarded as a prestige variety
+                  since speakers of other Tunisian Arabic dialects tend to shift towards it. Tunis
+                  Arabic is widely used in oral and visual media (theater, film, slogans). It is,
+                  however, rarely written except in informal letters, newspaper cartoons or
+                  advertising slogans.</p>
+                </div>
+                <div type="researchHistory">
+                    <p>The first description of the dialect of the city of Tunis can be found in the then
+                  ground-breaking study by <rs type="bibl" ref="zot:stumme_1896_0000">Stumme (1896)</rs>,
+                  which he published after his edition of transcribed texts <rs type="bibl" ref="zot:stumme_1893_0000">Stumme (1893)</rs>. The variety spoken by the Jews of
+                  Tunis is described by <rs type="bibl" ref="zot:cohen_1975_0000">Cohen (1975)</rs>. The
+                  most detailed description of Tunis Arabic so far is <rs type="bibl" ref="zot:singer_1984_0000">Singer (1984)</rs>, a monumental grammar of the dialect
+                  spoken in the Medina of Tunis in the early 1960s. Aspects of the syntax are
+                  investigated by <rs type="bibl" ref="zot:jemni_2011_0000">Jemni (2011)</rs>, important
+                  sociolinguistic studies are <rs type="bibl" ref="zot:gibson_1998_0000">Gibson
+                     (1998)</rs> and <rs type="bibl" ref="zot:gibson_2012_3227">Gibson (2012)</rs>.</p>
+                    <p>A concise grammatical sketch of the Arabic dialect of Tunis is Maik Gibson’s
+                  “Tunis Arabic” in <rs type="bibl" ref="zot:gibson_2008_0000">EALL IV, 563-571</rs>.</p>
+                </div>
+                <div type="dictionaries">
+                    <p>A comprehensive up-to-date dictionary of the Arabic dialect of Tunis does not
+                  exist.</p>
+                    <p>
+                        <rs type="bibl" ref="zot:nicolas_1911_0000">Nicolas (1911)</rs> is outdated and does not
+                  provide an appropriate transcription.</p>
+                        <p>
+                            <rs type="bibl" ref="zot:beaussier_2006_3229">Beaussier/Lentin (2006)</rs> contains words
+                  from the whole Maghreb including data on Tunis.</p>
+                            <p>Abdellatif's Dictionnaire <rs type="bibl" ref="zot:abdellatif_2010_4595">«le Karmous» du
+                     Tunisien (2010)</rs> is a rather useful amateur glossary and can currently be
+                  downloaded from <ref target="https://www.fichier-pdf.fr/2010/08/31/m14401m/dico-karmous.pdf">this
+                     URI</ref>.</p>
+                            <p>In addition, the <rs type="bibl" ref="zot:marçais_1958_4130">eight volume glossary
+                     compiled by Marçais/Guîga (1958-61)</rs> that covers the vocabulary of the
+                  village of Takrouna (ca.100 km south-east of Tunis) is very useful for Tunis
+                  Arabic, too.</p>
+                            <p>A large <rs type="bibl" ref="zot:abdelkader_ayed_1977_0000">English-Tunisian Arabic dictionary is
+                     Ben Abdelkader [et al.] 1977 </rs> which can be downloaded from <ref target="http://www.eric.ed.gov/PDFS/ED183017.pdf">this location</ref>.</p>
+                        </div>
+                        <div type="textBooks">
+                            <p>To obtain a list of textbooks click <rs type="bibl" ref="bibl:vt:textbook+reg:Tunisia">here</rs>.</p>
+                        </div>
+                        <div type="audioData">
+                            <!-- <p>There is no recording available on SemArch.</p> -->
+                            <p>An example for a contemporary musician from Tunis, who is singing in the Arabic
+                  dialect of Tunis, is Amel Mathlouthi. Many of her songs can be found on the
+                  internet.</p>
+                        </div>
+                        <div type="bibliography">
+                            <p>To view publications on this variety click <rs type="bibl" ref="bibl:geo:Tunis">here</rs>.</p>
+                        </div>
+                    </div>
+                </body>
+            </text>
+        </TEI>
