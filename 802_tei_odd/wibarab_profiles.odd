@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>WIBARAB profiles TEI-Lex-0 customization</title>
+                <principal>
+                    <name type="person" ref="dmp:SP">Stephan Procházka</name>
+                </principal>
+                <author>
+                    <name type="person" ref="dmp:KS">Kinga Sramó</name>
+                    <name type="person">Daniel Schopper</name>
+                </author>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
+                <date>2026</date>
+                <availability>
+                    <licence>CC BY 4.0</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>This is a born digital document.</p>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change who="#KS" when="2026-09-15">created document</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <head>Documentation</head>
+                <p>
+                    This document describes the schema of the WIBARAB profiles of Arabic varieties.
+                </p>
+            </div>
+            <div>
+                <head>Formal Specification</head>
+                <schemaSpec ident="wibarab-profiles" source="file:/C:/Users/ksramo/Documents/WIBARAB_GEO/featuredb/802_tei_odd/lex-0.compiled.odd">
+                    <moduleRef key="derived-module-TEILex0" />
+                    <!-- We copy all modules from TEI Lex0 and exclude -->
+                    <moduleRef key="analysis" except="pc" />
+                    <moduleRef key="gaiji" />
+                    <moduleRef key="core" except="hi email num expan graphic" />
+                    <moduleRef key="corpus" />
+                    <moduleRef key="dictionaries" except="dictScrap hyph lbl syll stress" />
+                    <moduleRef key="figures" except="figure" />
+                    <moduleRef key="header" />
+                    <moduleRef key="linking" />
+                    <moduleRef key="namesdates" />
+                    <moduleRef key="tagdocs" />
+                    <moduleRef key="tei" />
+                    <moduleRef key="textstructure" except="back front" />
+                    <moduleRef key="transcr" except="metamark" />
+                    <!-- Including some elements we need that are missing from Lex-0 -->
+                    <elementRef key="listPrefixDef" source="http://www.tei-c.org/release/xml/tei/odd/p5subset.xml" />
+                    <elementRef key="prefixDef" source="http://www.tei-c.org/release/xml/tei/odd/p5subset.xml" />
+                    <classRef key="att.patternReplacement" source="http://www.tei-c.org/release/xml/tei/odd/p5subset.xml" />
+                    <!-- making @type on the TEI element optional again -->
+                    <elementSpec ident="TEI" mode="change">
+                        <attList>
+                            <attDef ident="type" mode="change" usage="opt" />
+                        </attList>
+                    </elementSpec>
+                </schemaSpec>
+            </div>
+        </body>
+    </text>
+</TEI>
