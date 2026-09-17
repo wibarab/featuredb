@@ -25,20 +25,17 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
+            <listPrefixDef>
+                <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../wibarab_dmp.xml#$1" />
+                <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../../vicav-library/vicav_biblio/vicav_biblio_tei_zotero.xml#$1" />
+                <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../vicav-library/vicav_geo/vicav_geodata.xml#$1" />
+                <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../wibarab_PersonGroup.xml#$1" />
+            </listPrefixDef>
             <tagsDecl partial="true">
                 <rendition xml:id="i" scheme="css">font-style:italics;</rendition>
                 <rendition xml:id="u" scheme="css">text-decoration:underline;</rendition>
                 <rendition xml:id="b" scheme="css">font-weight:bold;</rendition>
             </tagsDecl>
-            <listPrefixDef>
-                <prefixDef ident="zotid" matchPattern="([a-z]+)" replacementPattern="https://www.zotero.org/groups/2165756/vicav/items/itemKey/#$1">
-                    <p>
-                        Private URIs with the prefix "zotid" point to the respective bibliographic record
-                        in the VICAV Zotero library and/or to a local copy of it.
-                    </p>
-                </prefixDef>
-                <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../wibarab_PersonGroup.xml#$1" />
-            </listPrefixDef>
         </encodingDesc>
         <profileDesc>
             <langUsage>
