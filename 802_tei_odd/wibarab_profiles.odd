@@ -80,6 +80,12 @@
                                 <sch:rule context="tei:place/@sameAs">
                                     <sch:extends rule="reference" />
                                 </sch:rule>
+                                <sch:rule context="tei:personGrp/@corresp">
+                                    <sch:extends rule="reference" />
+                                </sch:rule>
+                                <sch:rule context="tei:change/@who">
+                                    <sch:extends rule="reference" />
+                                </sch:rule>
                                 <sch:rule id="reference" abstract="true">
                                     <sch:let name="idRef" value="." />
                                     <sch:let name="localID" value="if (matches($idRef,'^#')) then substring-after($idRef,'#') else ()" />
@@ -90,7 +96,9 @@
                                     <sch:let name="prefixDef" value="if (exists($prefixMatch)) then $prefixDefs[@ident = $prefixMatch] else ()" />
                                     <sch:let name="prefixGroups" value="if (exists($prefixMatch)) then analyze-string($referenceMatch, $prefixDef/@matchPattern)//*:group else ()" />
                                     <sch:let name="grpr1" value="if (exists($prefixGroups[@nr = '1'])) then replace($prefixDef/@replacementPattern,'\$1', $prefixGroups[@nr = '1']) else $prefixDef/@replacementPattern" />
-                                    <sch:let name="target" value="translate($grpr1,'\','/')" />
+                                    <sch:let name="grpr2" value="if (exists($prefixGroups[@nr = '2'])) then replace($grpr1,'\$2', $prefixGroups[@nr = '2']) else $grpr1" />
+                                    <sch:let name="targetRaw" value="if ($localID != '') then $idRef else if (exists($prefixDef)) then $grpr2 else $idRef" />
+                                    <sch:let name="target" value="translate($targetRaw,'\','/')" />
                                     <sch:let name="targetResolves" value="if ($localID != '') then exists(root()//*[@xml:id = $localID]) else if (matches($idRef,'^(http|https)')) then true() else doc-available(resolve-uri($target, base-uri($idRef)))" />
                                     <sch:report test="$target = ''">unexpected target "<sch:value-of select="$idRef" />" in reference <sch:value-of select="local-name($idRef)" />
                                 </sch:report>
