@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2026-09-18T12:07:58Z. . 
+Schema generated from ODD source 2026-09-18T13:04:15Z. . 
 TEI Edition: P5 Version 4.12.0. Last updated on 28th July 2026, revision 113e933e2 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.12.0/ 
   
@@ -656,6 +656,82 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
          </attribute>
       </optional>
    </define>
+   <define name="att.ranging.attributes">
+      <ref name="att.ranging.attribute.atLeast"/>
+      <ref name="att.ranging.attribute.atMost"/>
+      <ref name="att.ranging.attribute.min"/>
+      <ref name="att.ranging.attribute.max"/>
+      <ref name="att.ranging.attribute.confidence"/>
+   </define>
+   <define name="att.ranging.attribute.atLeast">
+      <optional>
+         <attribute name="atLeast">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives a minimum estimated value for the approximate measurement.</a:documentation>
+            <choice>
+               <data type="double"/>
+               <data type="token">
+                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+               </data>
+               <data type="decimal"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.ranging.attribute.atMost">
+      <optional>
+         <attribute name="atMost">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives a maximum estimated value for the approximate measurement.</a:documentation>
+            <choice>
+               <data type="double"/>
+               <data type="token">
+                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+               </data>
+               <data type="decimal"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.ranging.attribute.min">
+      <optional>
+         <attribute name="min">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">where the measurement summarizes more than one observation or a range, supplies the minimum value observed.</a:documentation>
+            <choice>
+               <data type="double"/>
+               <data type="token">
+                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+               </data>
+               <data type="decimal"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.ranging.attribute.max">
+      <optional>
+         <attribute name="max">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">where the measurement summarizes more than one observation or a range, supplies the maximum value observed.</a:documentation>
+            <choice>
+               <data type="double"/>
+               <data type="token">
+                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+               </data>
+               <data type="decimal"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.ranging.attribute.confidence">
+      <optional>
+         <attribute name="confidence">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the degree of statistical confidence (between zero and one) that a value falls within the range specified by <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@min</code> and <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">@max</code>, or the proportion of observed values that fall within that range.</a:documentation>
+            <data type="double">
+               <param name="minInclusive">0</param>
+               <param name="maxInclusive">1</param>
+            </data>
+         </attribute>
+      </optional>
+   </define>
    <define name="att.resourced.attributes">
       <ref name="att.resourced.attribute.url"/>
    </define>
@@ -794,6 +870,87 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
                   </data>
                </oneOrMore>
             </list>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.dimensions.attributes">
+      <ref name="att.ranging.attributes"/>
+      <ref name="att.dimensions.attribute.unit"/>
+      <ref name="att.dimensions.attribute.quantity"/>
+      <ref name="att.dimensions.attribute.extent"/>
+      <ref name="att.dimensions.attribute.precision"/>
+      <ref name="att.dimensions.attribute.scope"/>
+   </define>
+   <define name="att.dimensions.attribute.unit">
+      <optional>
+         <attribute name="unit">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">names the unit used for the measurement
+Suggested values include: 1] cm (centimetres); 2] mm (millimetres); 3] in (inches); 4] line; 5] char (characters)</a:documentation>
+            <choice>
+               <value>cm</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(centimetres) </a:documentation>
+               <value>mm</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(millimetres) </a:documentation>
+               <value>in</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(inches) </a:documentation>
+               <value>line</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">lines of text</a:documentation>
+               <value>char</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(characters) characters of text</a:documentation>
+               <data type="token">
+                  <param name="pattern">[^\p{C}\p{Z}]+</param>
+               </data>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.dimensions.attribute.quantity">
+      <optional>
+         <attribute name="quantity">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the length in the units specified</a:documentation>
+            <choice>
+               <data type="double"/>
+               <data type="token">
+                  <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+               </data>
+               <data type="decimal"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.dimensions.attribute.extent">
+      <optional>
+         <attribute name="extent">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the size of the object concerned using a project-specific vocabulary combining quantity and units in a single string of words.</a:documentation>
+            <data type="string"/>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.dimensions.attribute.precision">
+      <optional>
+         <attribute name="precision">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the precision of the values specified by the other attributes.</a:documentation>
+            <choice>
+               <value>high</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>medium</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>low</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>unknown</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </choice>
+         </attribute>
+      </optional>
+   </define>
+   <define name="att.dimensions.attribute.scope">
+      <optional>
+         <attribute name="scope">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">where the measurement summarizes more than one observation, specifies the applicability of this measurement.
+Sample values include: 1] all; 2] most; 3] range</a:documentation>
+            <data type="token">
+               <param name="pattern">[^\p{C}\p{Z}]+</param>
+            </data>
          </attribute>
       </optional>
    </define>
@@ -981,28 +1138,40 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
    </define>
    <define name="model.nameLike.agent">
       <choice>
+         <ref name="name"/>
          <ref name="persName"/>
       </choice>
    </define>
    <define name="model.nameLike.agent_alternation">
       <choice>
+         <ref name="name"/>
          <ref name="persName"/>
       </choice>
    </define>
    <define name="model.nameLike.agent_sequence">
+      <ref name="name"/>
       <ref name="persName"/>
    </define>
    <define name="model.nameLike.agent_sequenceOptional">
+      <optional>
+         <ref name="name"/>
+      </optional>
       <optional>
          <ref name="persName"/>
       </optional>
    </define>
    <define name="model.nameLike.agent_sequenceOptionalRepeatable">
       <zeroOrMore>
+         <ref name="name"/>
+      </zeroOrMore>
+      <zeroOrMore>
          <ref name="persName"/>
       </zeroOrMore>
    </define>
    <define name="model.nameLike.agent_sequenceRepeatable">
+      <oneOrMore>
+         <ref name="name"/>
+      </oneOrMore>
       <oneOrMore>
          <ref name="persName"/>
       </oneOrMore>
@@ -1122,22 +1291,32 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
       </oneOrMore>
    </define>
    <define name="model.dateLike">
-      <notAllowed/>
+      <choice>
+         <ref name="date"/>
+      </choice>
    </define>
    <define name="model.dateLike_alternation">
-      <notAllowed/>
+      <choice>
+         <ref name="date"/>
+      </choice>
    </define>
    <define name="model.dateLike_sequence">
-      <empty/>
+      <ref name="date"/>
    </define>
    <define name="model.dateLike_sequenceOptional">
-      <empty/>
+      <optional>
+         <ref name="date"/>
+      </optional>
    </define>
    <define name="model.dateLike_sequenceOptionalRepeatable">
-      <empty/>
+      <zeroOrMore>
+         <ref name="date"/>
+      </zeroOrMore>
    </define>
    <define name="model.dateLike_sequenceRepeatable">
-      <notAllowed/>
+      <oneOrMore>
+         <ref name="date"/>
+      </oneOrMore>
    </define>
    <define name="model.measureLike">
       <choice>
@@ -1465,22 +1644,44 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
       <notAllowed/>
    </define>
    <define name="model.biblLike">
-      <notAllowed/>
+      <choice>
+         <ref name="bibl"/>
+         <ref name="listBibl"/>
+      </choice>
    </define>
    <define name="model.biblLike_alternation">
-      <notAllowed/>
+      <choice>
+         <ref name="bibl"/>
+         <ref name="listBibl"/>
+      </choice>
    </define>
    <define name="model.biblLike_sequence">
-      <empty/>
+      <ref name="bibl"/>
+      <ref name="listBibl"/>
    </define>
    <define name="model.biblLike_sequenceOptional">
-      <empty/>
+      <optional>
+         <ref name="bibl"/>
+      </optional>
+      <optional>
+         <ref name="listBibl"/>
+      </optional>
    </define>
    <define name="model.biblLike_sequenceOptionalRepeatable">
-      <empty/>
+      <zeroOrMore>
+         <ref name="bibl"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="listBibl"/>
+      </zeroOrMore>
    </define>
    <define name="model.biblLike_sequenceRepeatable">
-      <notAllowed/>
+      <oneOrMore>
+         <ref name="bibl"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="listBibl"/>
+      </oneOrMore>
    </define>
    <define name="model.headLike">
       <choice>
@@ -1707,6 +1908,7 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
          <ref name="model.biblLike"/>
          <ref name="model.eventLike"/>
          <ref name="model.persStateLike"/>
+         <ref name="name"/>
       </choice>
    </define>
    <define name="model.placeNamePart">
@@ -1765,6 +1967,7 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
          <ref name="model.ptrLike"/>
          <ref name="address"/>
          <ref name="pubPlace"/>
+         <ref name="date"/>
          <ref name="availability"/>
       </choice>
    </define>
@@ -1853,6 +2056,12 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
       <choice>
          <ref name="model.divWrapper"/>
          <ref name="model.divBottomPart"/>
+      </choice>
+   </define>
+   <define name="model.imprintPart">
+      <choice>
+         <ref name="publisher"/>
+         <ref name="pubPlace"/>
       </choice>
    </define>
    <define name="model.addressLike">
@@ -1966,6 +2175,15 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
          <ref name="model.noteLike"/>
          <ref name="model.global.edit"/>
          <ref name="figure"/>
+      </choice>
+   </define>
+   <define name="model.biblPart">
+      <choice>
+         <ref name="model.respLike"/>
+         <ref name="model.imprintPart"/>
+         <ref name="series"/>
+         <ref name="bibl"/>
+         <ref name="availability"/>
       </choice>
    </define>
    <define name="model.addrPart">
@@ -2161,6 +2379,35 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
          <ref name="place"/>
       </choice>
    </define>
+   <define name="att.calendarSystem.attributes">
+      <ref name="att.calendarSystem.attribute.calendar"/>
+   </define>
+   <define name="att.calendarSystem.attribute.calendar">
+      <optional>
+         <attribute name="calendar">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates one or more systems or calendars to which the date represented by the content of this element belongs.</a:documentation>
+            <list>
+               <oneOrMore>
+                  <data type="anyURI">
+                     <param name="pattern">\S+</param>
+                  </data>
+               </oneOrMore>
+            </list>
+         </attribute>
+      </optional>
+   </define>
+   <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+            id="wibarab-profiles-att.calendarSystem-calendar-calendar_attr_on_empty_element-constraint-rule-9">
+      <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                xmlns:xi="http://www.w3.org/2001/XInclude"
+                context="tei:*[@calendar]">
+         <sch:assert test="string-length( normalize-space(.) ) gt 0"> @calendar indicates one or more
+              systems or calendars to which the date represented by the content of this element belongs,
+              but this &lt;<sch:name/>&gt; element has no textual content.</sch:assert>
+      </sch:rule>
+   </pattern>
    <define name="p">
       <element name="p">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(paragraph) marks paragraphs in prose. [3.1. Paragraphs 7.2.6. Speech Contents]</a:documentation>
@@ -2175,7 +2422,7 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="wibarab-profiles-p-abstractModel-structure-p-in-ab-or-p-constraint-rule-9">
+                  id="wibarab-profiles-p-abstractModel-structure-p-in-ab-or-p-constraint-rule-10">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:p">
@@ -2186,7 +2433,7 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="wibarab-profiles-p-abstractModel-structure-p-in-l-constraint-rule-10">
+                  id="wibarab-profiles-p-abstractModel-structure-p-in-l-constraint-rule-11">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:l//tei:p">
@@ -2219,7 +2466,7 @@ Suggested values include: 1] top; 2] bottom; 3] margin; 4] opposite; 5] overleaf
          <ref name="macro.limitedContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="wibarab-profiles-desc-deprecationInfo-only-in-deprecated-constraint-rule-11">
+                  id="wibarab-profiles-desc-deprecationInfo-only-in-deprecated-constraint-rule-12">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:desc[ @type eq 'deprecationInfo']">
@@ -2321,7 +2568,7 @@ Sample values include: 1] sender; 2] return; 3] recipient ; 4] work; 5] home; 6]
          <ref name="macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="wibarab-profiles-ref-refAtts-constraint-rule-12">
+                  id="wibarab-profiles-ref-refAtts-constraint-rule-13">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:ref">
@@ -2399,6 +2646,25 @@ Sample values include: 1] sender; 2] return; 3] recipient ; 4] work; 5] home; 6]
          <ref name="att.media.attributes"/>
          <ref name="att.resourced.attributes"/>
          <ref name="att.typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="series">
+      <element name="series">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(series information) contains information about the series in which a book or other bibliographic item has appeared. [3.12.2.1. Analytic, Monographic, and Series Levels]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="model.gLike"/>
+               <ref name="title"/>
+               <ref name="model.ptrLike"/>
+               <ref name="editor"/>
+               <ref name="respStmt"/>
+               <ref name="model.global"/>
+               <ref name="availability"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="att.global.attributes"/>
          <empty/>
       </element>
    </define>
@@ -2516,6 +2782,185 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
          <ref name="macro.phraseSeq"/>
          <ref name="att.global.attributes"/>
          <ref name="att.naming.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="name">
+      <element name="name">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(name, proper noun) contains a proper noun or noun phrase. [3.6.1. Referring Strings]</a:documentation>
+         <ref name="macro.phraseSeq"/>
+         <ref name="att.global.attributes"/>
+         <ref name="att.cmc.attributes"/>
+         <ref name="att.datable.attributes"/>
+         <ref name="att.editLike.attributes"/>
+         <ref name="att.personal.attributes"/>
+         <ref name="att.typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="date">
+      <element name="date">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(date) contains a date in any format. [3.6.4. Dates and Times 2.2.4.
+                Publication, Distribution, Licensing, etc. 2.6.
+                The Revision Description 3.12.2.4. Imprint, Size of a Document, and Reprint Information 16.2.3. The Setting Description 14.4. Dates]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="model.gLike"/>
+               <ref name="model.phrase"/>
+               <ref name="model.global"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="att.global.attributes"/>
+         <ref name="att.calendarSystem.attributes"/>
+         <ref name="att.canonical.attributes"/>
+         <ref name="att.cmc.attributes"/>
+         <ref name="att.datable.attributes"/>
+         <ref name="att.dimensions.attributes"/>
+         <ref name="att.editLike.attributes"/>
+         <ref name="att.typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="bibl">
+      <element name="bibl">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(bibliographic citation) contains a loosely-structured bibliographic citation of which the sub-components may or may not be explicitly tagged. [3.12.1. Methods of Encoding Bibliographic References and Lists of References 2.2.7.
+                The Source Description 16.3.2. Declarable Elements]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <text/>
+               <ref name="model.gLike"/>
+               <ref name="model.highlighted"/>
+               <ref name="model.pPart.data"/>
+               <ref name="model.pPart.edit"/>
+               <ref name="model.segLike"/>
+               <ref name="model.ptrLike"/>
+               <ref name="model.biblPart"/>
+               <ref name="model.global"/>
+            </choice>
+         </zeroOrMore>
+         <sch:ns xmlns="http://www.tei-c.org/ns/1.0"
+                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                 prefix="tei"
+                 uri="http://www.tei-c.org/ns/1.0"/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                  id="wibarab-profiles-bibl-profile-references-constraint-rule-14">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="tei:bibl/@corresp">
+               <sch:extends rule="reference"/>
+            </sch:rule>
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="tei:rs[@type = 'bibl']/@ref">
+               <sch:extends rule="reference"/>
+            </sch:rule>
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="tei:place/@sameAs">
+               <sch:extends rule="reference"/>
+            </sch:rule>
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="tei:personGrp/@corresp">
+               <sch:extends rule="reference"/>
+            </sch:rule>
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="tei:change/@who">
+               <sch:extends rule="reference"/>
+            </sch:rule>
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      id="reference"
+                      abstract="true">
+               <sch:let name="idRef" value="."/>
+               <sch:let name="localID"
+                        value="if (matches($idRef,'^#')) then substring-after($idRef,'#') else ()"/>
+               <sch:let name="prefixDefs" value="root()//tei:prefixDef"/>
+               <sch:let name="prefixRegex"
+                        value="concat('^(',string-join($prefixDefs/@ident,'|'),'):(.+)$')"/>
+               <sch:let name="prefixMatch"
+                        value="if (exists($prefixDefs)) then analyze-string($idRef, $prefixRegex)//*:group[1] else ()"/>
+               <sch:let name="referenceMatch"
+                        value="if (exists($prefixDefs)) then analyze-string($idRef, $prefixRegex)//*:group[2] else ()"/>
+               <sch:let name="prefixDef"
+                        value="if (exists($prefixMatch)) then $prefixDefs[@ident = $prefixMatch] else ()"/>
+               <sch:let name="prefixGroups"
+                        value="if (exists($prefixMatch)) then analyze-string($referenceMatch, $prefixDef/@matchPattern)//*:group else ()"/>
+               <sch:let name="grpr1"
+                        value="if (exists($prefixGroups[@nr = '1'])) then replace($prefixDef/@replacementPattern,'\$1', $prefixGroups[@nr = '1']) else $prefixDef/@replacementPattern"/>
+               <sch:let name="grpr2"
+                        value="if (exists($prefixGroups[@nr = '2'])) then replace($grpr1,'\$2', $prefixGroups[@nr = '2']) else $grpr1"/>
+               <sch:let name="targetRaw"
+                        value="if ($localID != '') then $idRef else if (exists($prefixDef)) then $grpr2 else $idRef"/>
+               <sch:let name="target" value="translate($targetRaw,'\','/')"/>
+               <sch:let name="targetResolves"
+                        value="if ($localID != '') then exists(root()//*[@xml:id = $localID]) else if (matches($idRef,'^(http|https)')) then true() else doc-available(resolve-uri($target, base-uri($idRef)))"/>
+               <sch:report test="$target = ''">unexpected target "<sch:value-of select="$idRef"/>" in reference <sch:value-of select="local-name($idRef)"/>
+               </sch:report>
+               <sch:assert test="$targetResolves">the target "<sch:value-of select="$target"/>" of pointer "<sch:value-of select="$idRef"/>" cannot be resolved</sch:assert>
+            </sch:rule>
+         </pattern>
+         <ref name="att.global.attributes"/>
+         <ref name="att.canonical.attributes"/>
+         <ref name="att.cmc.attributes"/>
+         <ref name="att.declarable.attributes"/>
+         <ref name="att.docStatus.attributes"/>
+         <ref name="att.sortable.attributes"/>
+         <ref name="att.typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="listBibl">
+      <element name="listBibl">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(citation list) contains a list of bibliographic citations of any kind. [3.12.1. Methods of Encoding Bibliographic References and Lists of References 2.2.7.
+                The Source Description 16.3.2. Declarable Elements]</a:documentation>
+         <group>
+            <zeroOrMore>
+               <ref name="model.headLike"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="desc"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <choice>
+                  <ref name="model.milestoneLike"/>
+               </choice>
+            </zeroOrMore>
+            <oneOrMore>
+               <oneOrMore>
+                  <ref name="model.biblLike"/>
+               </oneOrMore>
+               <zeroOrMore>
+                  <choice>
+                     <ref name="model.milestoneLike"/>
+                  </choice>
+               </zeroOrMore>
+            </oneOrMore>
+         </group>
+         <ref name="att.global.attributes"/>
+         <ref name="att.cmc.attributes"/>
+         <ref name="att.declarable.attributes"/>
+         <ref name="att.sortable.attributes"/>
+         <ref name="att.typed.attribute.subtype"/>
+         <attribute name="type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.
+Suggested values include: 1] dictionaries; 2] corpora; 3] literature</a:documentation>
+            <choice>
+               <value>dictionaries</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>corpora</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>literature</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <data type="token">
+                  <param name="pattern">[^\p{C}\p{Z}]+</param>
+               </data>
+            </choice>
+         </attribute>
          <empty/>
       </element>
    </define>
@@ -3080,6 +3525,7 @@ Sample values include: 1] first-line; 2] first-letter; 3] before; 4] after</a:do
                      <ref name="model.labelLike"/>
                      <ref name="model.placeStateLike"/>
                      <ref name="model.eventLike"/>
+                     <ref name="name"/>
                   </choice>
                </zeroOrMore>
             </choice>
@@ -3305,7 +3751,7 @@ Sample values include: 1] first-line; 2] first-letter; 3] before; 4] after</a:do
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="wibarab-profiles-div-abstractModel-structure-div-in-l-constraint-rule-13">
+                  id="wibarab-profiles-div-abstractModel-structure-div-in-l-constraint-rule-20">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:l//tei:div">
@@ -3316,7 +3762,7 @@ Sample values include: 1] first-line; 2] first-letter; 3] before; 4] after</a:do
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                  id="wibarab-profiles-div-abstractModel-structure-div-in-ab-or-p-constraint-rule-14">
+                  id="wibarab-profiles-div-abstractModel-structure-div-in-ab-or-p-constraint-rule-21">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:div">
@@ -3381,6 +3827,10 @@ Sample values include: 1] first-line; 2] first-letter; 3] before; 4] after</a:do
    </define>
    <define name="model.languageProfile">
       <choice>
+         <ref name="name"/>
+         <ref name="date"/>
+         <ref name="bibl"/>
+         <ref name="listBibl"/>
          <ref name="settingDesc"/>
          <ref name="channel"/>
          <ref name="personGrp"/>
@@ -3390,6 +3840,9 @@ Sample values include: 1] first-line; 2] first-letter; 3] before; 4] after</a:do
       <element name="sourceDesc">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(source description) describes the source(s) from which an electronic text was derived or generated, typically a bibliographic description in the case of a digitized text, or a phrase such as born digital for a text which has no previous existence. [2.2.7.
                 The Source Description]</a:documentation>
+         <oneOrMore>
+            <ref name="listBibl"/>
+         </oneOrMore>
          <ref name="att.global.attributes"/>
          <ref name="att.declarable.attributes"/>
          <empty/>
@@ -3406,6 +3859,241 @@ Sample values include: 1] first-line; 2] first-letter; 3] before; 4] after</a:do
             </choice>
          </zeroOrMore>
          <ref name="att.typed.attributes"/>
+         <optional>
+            <attribute name="ana">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <choice>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16821</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Northern Najd) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16822</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(South-western group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16823</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Hedjaz) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16824</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Tihama) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16825</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Hugariyya) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16826</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Mahabisha and Jabal Washha) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16827</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Central plains) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16828</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Southeastern group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16829</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Dathina) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16830</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Hadramawt) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16831</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Dhofar) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16832</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Southern group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16833</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Central south group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16834</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(North) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16835</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Qalamun and Damascus) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16836</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Horan) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16837</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Central Palestine) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16838</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(South Palestine) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16839</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Hatay) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16840</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Jordan) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16841</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(North) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16842</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Centre) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16843</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(South) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16845</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(North) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16846</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Centre) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16847</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Euphrates group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16848</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Kurdistan group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16849</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Mardin town) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16850</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Mardin villages) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16851</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Mhallamiyye) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16852</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Diyarbakir group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16853</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Northwestern group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16854</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Bedouin group I) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16855</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Bedouin group II) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16856</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Sedentary group I) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16857</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Sedentary group I) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16858</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Northeastern group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16859</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Coastal group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16860</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Mauritania) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16861</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Saharan group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16863</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Central group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16864</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Western group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16865</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Western group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16866</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Chad) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16867</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Nigeria) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16868</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Northern Sudan) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16869</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Western Sudan) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16870</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Oases) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16871</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Nile Valley) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16872</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Eastern Delta) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16873</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Northeastern Delta) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16874</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Alexandria) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16875</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Rosetta) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16876</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Burullus) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16877</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Bedouin group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16878</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Cairo) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16879</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Middle Egypt) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16880</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Upper Egypt) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322458</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(East (Mashriq)) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322476</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Oman) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322488</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(West (Maghreb)) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322503</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Algeria) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322506</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Western group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322547</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Levant) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322550</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Lebanon) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322553</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Central north group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322611</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Egypt-Sudan) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322614</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Egypt) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322617</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Delta) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322620</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Western Delta) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322650</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Northern group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322697</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(South) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322771</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Arabia) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322821</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Mesopotamia) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322824</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Northeastern Syria) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322827</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Euphrates group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322884</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Morocco) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322887</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Northern group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322931</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Anatolia) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322964</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Syro-Mesopotamian fringe) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323136</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Central Sudan) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323197</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Northern group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323200</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Central Najd) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323203</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Gulf) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323294</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Syria) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323297</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Centre) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323357</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Saharan group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323401</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Yemen) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323404</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Aden) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323451</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Coast) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323572</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Sudan) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323575</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Eastern group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323578</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Eastern Sudan) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323622</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Iraq) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323625</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Tigris group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323672</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Sa’da region) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323782</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Southern group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323859</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Kozluk-Sason-Muș group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323933</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Turkey) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323936</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Cilicia) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324090</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Oases and Steppe) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324164</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Libya) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324167</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Northeastern Libya) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324214</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Western Highlands) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324291</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Siirt group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324318</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Tunisia) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324321</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Central western group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324365</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Palestine) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324368</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Galilee) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324415</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Northern group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324509</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Northern group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324539</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Eastern group) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324599</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Central Delta) </a:documentation>
+                  <value>https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324646</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Mardin group) </a:documentation>
+               </choice>
+            </attribute>
+         </optional>
          <attribute name="role">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             <choice>
