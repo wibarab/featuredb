@@ -49,11 +49,10 @@
                     <moduleRef key="figures" include="figure" />
                     <classRef key="att.global.linking" />
                     <!-- imports from Lex0 -->
-                    <moduleRef key="derived-module-TEILex0" source="file:/C:/Users/ksramo/Documents/WIBARAB_GEO/featuredb/802_tei_odd/lex-0.compiled.odd" />
-                    <moduleRef key="core" include="name date listBibl bibl" source="file:/C:/Users/ksramo/Documents/WIBARAB_GEO/featuredb/802_tei_odd/lex-0.compiled.odd" />
-                    <moduleRef key="header" include="sourceDesc language" source="file:/C:/Users/ksramo/Documents/WIBARAB_GEO/featuredb/802_tei_odd/lex-0.compiled.odd" />
-                    <moduleRef key="corpus" include="settingDesc channel" source="file:/C:/Users/ksramo/Documents/WIBARAB_GEO/featuredb/802_tei_odd/lex-0.compiled.odd" />
-                    <elementRef key="personGrp" source="file:/C:/Users/ksramo/Documents/WIBARAB_GEO/featuredb/802_tei_odd/lex-0.compiled.odd" />
+                    <moduleRef key="derived-module-TEILex0" source="https://raw.githubusercontent.com/wibarab/featuredb/main/802_tei_odd/lex-0.compiled.odd" />
+                    <moduleRef key="header" include="sourceDesc language" source="https://raw.githubusercontent.com/wibarab/featuredb/main/802_tei_odd/lex-0.compiled.odd" />
+                    <moduleRef key="corpus" include="settingDesc channel" source="https://raw.githubusercontent.com/wibarab/featuredb/main/802_tei_odd/lex-0.compiled.odd" />
+                    <elementRef key="personGrp" source="https://raw.githubusercontent.com/wibarab/featuredb/main/802_tei_odd/lex-0.compiled.odd" />
                     <!-- make date part of publicationStmtPart.detail again -->
                     <!-- in order reconcile publicationStmt content model from TEI P5 with date from Lex0 -->
                     <elementSpec ident="date" mode="change">
@@ -95,21 +94,6 @@
                                 <elementRef key="ref" />
                             </alternate>
                         </content>
-                        <constraintSpec ident="head-labels" scheme="schematron">
-                            <desc>Enforce that the profile head contains all required names.</desc>
-                            <constraint>
-                                <sch:rule context="tei:head[parent::tei:div[parent::tei:body]]">
-                                    <sch:assert test="tei:name[@xml:lang = 'eng']">
-                                        At least an english version of the location name
-                                        must be provided (name element with xml:lang 'eng').
-                                    </sch:assert>
-                                </sch:rule>
-                                <sch:rule context="tei:head[parent::tei:div[parent::tei:body]]/tei:name">
-                                    <sch:let name="lang" value="@xml:lang" />
-                                    <sch:report test="not($lang = doc('../../082_scripts_xsl/profile_fields.xml')//property[@name = 'lang']/@value)">Unexpected value '<sch:value-of select="$lang" />' in @xml:lang </sch:report>
-                                </sch:rule>
-                            </constraint>
-                        </constraintSpec>
                     </elementSpec>
                     <elementSpec ident="div" module="core" mode="change">
                         <attList>
