@@ -50,6 +50,7 @@
                     <classRef key="att.global.linking" />
                     <!-- imports from Lex0 -->
                     <moduleRef key="derived-module-TEILex0" source="https://raw.githubusercontent.com/wibarab/featuredb/main/802_tei_odd/lex-0.compiled.odd" />
+                    <moduleRef key="core" include="name date listBibl bibl" source="https://raw.githubusercontent.com/wibarab/featuredb/main/802_tei_odd/lex-0.compiled.odd" />
                     <moduleRef key="header" include="sourceDesc language" source="https://raw.githubusercontent.com/wibarab/featuredb/main/802_tei_odd/lex-0.compiled.odd" />
                     <moduleRef key="corpus" include="settingDesc channel" source="https://raw.githubusercontent.com/wibarab/featuredb/main/802_tei_odd/lex-0.compiled.odd" />
                     <elementRef key="personGrp" source="https://raw.githubusercontent.com/wibarab/featuredb/main/802_tei_odd/lex-0.compiled.odd" />
@@ -59,6 +60,357 @@
                         <classes mode="change">
                             <memberOf key="model.publicationStmtPart.detail" mode="add" />
                         </classes>
+                    </elementSpec>
+                    <elementSpec ident="language" mode="change">
+                        <attList>
+                            <attDef ident="ana" mode="add" usage="opt">
+                                <valList type="closed" mode="add">
+                                    <!-- generated from vicav_dialects.rdf in vicav-content -->
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16821">
+                                        <gloss xml:lang="en">Northern Najd</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16822">
+                                        <gloss xml:lang="en">South-western group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16823">
+                                        <gloss xml:lang="en">Hedjaz</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16824">
+                                        <gloss xml:lang="en">Tihama</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16825">
+                                        <gloss xml:lang="en">Hugariyya</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16826">
+                                        <gloss xml:lang="en">Mahabisha and Jabal Washha</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16827">
+                                        <gloss xml:lang="en">Central plains</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16828">
+                                        <gloss xml:lang="en">Southeastern group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16829">
+                                        <gloss xml:lang="en">Dathina</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16830">
+                                        <gloss xml:lang="en">Hadramawt</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16831">
+                                        <gloss xml:lang="en">Dhofar</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16832">
+                                        <gloss xml:lang="en">Southern group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16833">
+                                        <gloss xml:lang="en">Central south group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16834">
+                                        <gloss xml:lang="en">North</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16835">
+                                        <gloss xml:lang="en">Qalamun and Damascus</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16836">
+                                        <gloss xml:lang="en">Horan</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16837">
+                                        <gloss xml:lang="en">Central Palestine</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16838">
+                                        <gloss xml:lang="en">South Palestine</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16839">
+                                        <gloss xml:lang="en">Hatay</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16840">
+                                        <gloss xml:lang="en">Jordan</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16841">
+                                        <gloss xml:lang="en">North</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16842">
+                                        <gloss xml:lang="en">Centre</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16843">
+                                        <gloss xml:lang="en">South</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16845">
+                                        <gloss xml:lang="en">North</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16846">
+                                        <gloss xml:lang="en">Centre</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16847">
+                                        <gloss xml:lang="en">Euphrates group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16848">
+                                        <gloss xml:lang="en">Kurdistan group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16849">
+                                        <gloss xml:lang="en">Mardin town</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16850">
+                                        <gloss xml:lang="en">Mardin villages</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16851">
+                                        <gloss xml:lang="en">Mhallamiyye</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16852">
+                                        <gloss xml:lang="en">Diyarbakir group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16853">
+                                        <gloss xml:lang="en">Northwestern group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16854">
+                                        <gloss xml:lang="en">Bedouin group I</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16855">
+                                        <gloss xml:lang="en">Bedouin group II</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16856">
+                                        <gloss xml:lang="en">Sedentary group I</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16857">
+                                        <gloss xml:lang="en">Sedentary group I</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16858">
+                                        <gloss xml:lang="en">Northeastern group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16859">
+                                        <gloss xml:lang="en">Coastal group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16860">
+                                        <gloss xml:lang="en">Mauritania</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16861">
+                                        <gloss xml:lang="en">Saharan group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16863">
+                                        <gloss xml:lang="en">Central group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16864">
+                                        <gloss xml:lang="en">Western group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16865">
+                                        <gloss xml:lang="en">Western group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16866">
+                                        <gloss xml:lang="en">Chad</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16867">
+                                        <gloss xml:lang="en">Nigeria</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16868">
+                                        <gloss xml:lang="en">Northern Sudan</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16869">
+                                        <gloss xml:lang="en">Western Sudan</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16870">
+                                        <gloss xml:lang="en">Oases</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16871">
+                                        <gloss xml:lang="en">Nile Valley</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16872">
+                                        <gloss xml:lang="en">Eastern Delta</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16873">
+                                        <gloss xml:lang="en">Northeastern Delta</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16874">
+                                        <gloss xml:lang="en">Alexandria</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16875">
+                                        <gloss xml:lang="en">Rosetta</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16876">
+                                        <gloss xml:lang="en">Burullus</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16877">
+                                        <gloss xml:lang="en">Bedouin group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16878">
+                                        <gloss xml:lang="en">Cairo</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16879">
+                                        <gloss xml:lang="en">Middle Egypt</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/concept16880">
+                                        <gloss xml:lang="en">Upper Egypt</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322458">
+                                        <gloss xml:lang="en">East (Mashriq)</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322476">
+                                        <gloss xml:lang="en">Oman</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322488">
+                                        <gloss xml:lang="en">West (Maghreb)</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322503">
+                                        <gloss xml:lang="en">Algeria</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322506">
+                                        <gloss xml:lang="en">Western group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322547">
+                                        <gloss xml:lang="en">Levant</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322550">
+                                        <gloss xml:lang="en">Lebanon</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322553">
+                                        <gloss xml:lang="en">Central north group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322611">
+                                        <gloss xml:lang="en">Egypt-Sudan</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322614">
+                                        <gloss xml:lang="en">Egypt</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322617">
+                                        <gloss xml:lang="en">Delta</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322620">
+                                        <gloss xml:lang="en">Western Delta</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322650">
+                                        <gloss xml:lang="en">Northern group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322697">
+                                        <gloss xml:lang="en">South</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322771">
+                                        <gloss xml:lang="en">Arabia</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322821">
+                                        <gloss xml:lang="en">Mesopotamia</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322824">
+                                        <gloss xml:lang="en">Northeastern Syria</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322827">
+                                        <gloss xml:lang="en">Euphrates group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322884">
+                                        <gloss xml:lang="en">Morocco</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322887">
+                                        <gloss xml:lang="en">Northern group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322931">
+                                        <gloss xml:lang="en">Anatolia</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171322964">
+                                        <gloss xml:lang="en">Syro-Mesopotamian fringe</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323136">
+                                        <gloss xml:lang="en">Central Sudan</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323197">
+                                        <gloss xml:lang="en">Northern group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323200">
+                                        <gloss xml:lang="en">Central Najd</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323203">
+                                        <gloss xml:lang="en">Gulf</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323294">
+                                        <gloss xml:lang="en">Syria</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323297">
+                                        <gloss xml:lang="en">Centre</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323357">
+                                        <gloss xml:lang="en">Saharan group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323401">
+                                        <gloss xml:lang="en">Yemen</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323404">
+                                        <gloss xml:lang="en">Aden</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323451">
+                                        <gloss xml:lang="en">Coast</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323572">
+                                        <gloss xml:lang="en">Sudan</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323575">
+                                        <gloss xml:lang="en">Eastern group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323578">
+                                        <gloss xml:lang="en">Eastern Sudan</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323622">
+                                        <gloss xml:lang="en">Iraq</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323625">
+                                        <gloss xml:lang="en">Tigris group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323672">
+                                        <gloss xml:lang="en">Sa’da region</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323782">
+                                        <gloss xml:lang="en">Southern group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323859">
+                                        <gloss xml:lang="en">Kozluk-Sason-Muș group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323933">
+                                        <gloss xml:lang="en">Turkey</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171323936">
+                                        <gloss xml:lang="en">Cilicia</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324090">
+                                        <gloss xml:lang="en">Oases and Steppe</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324164">
+                                        <gloss xml:lang="en">Libya</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324167">
+                                        <gloss xml:lang="en">Northeastern Libya</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324214">
+                                        <gloss xml:lang="en">Western Highlands</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324291">
+                                        <gloss xml:lang="en">Siirt group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324318">
+                                        <gloss xml:lang="en">Tunisia</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324321">
+                                        <gloss xml:lang="en">Central western group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324365">
+                                        <gloss xml:lang="en">Palestine</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324368">
+                                        <gloss xml:lang="en">Galilee</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324415">
+                                        <gloss xml:lang="en">Northern group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324509">
+                                        <gloss xml:lang="en">Northern group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324539">
+                                        <gloss xml:lang="en">Eastern group</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324599">
+                                        <gloss xml:lang="en">Central Delta</gloss>
+                                    </valItem>
+                                    <valItem ident="https://vocabs.acdh.oeaw.ac.at/vicavdialects/id171324646">
+                                        <gloss xml:lang="en">Mardin group</gloss>
+                                    </valItem>
+                                </valList>
+                            </attDef>
+                        </attList>
                     </elementSpec>
                     <elementSpec ident="p" mode="change" module="core">
                         <content>
