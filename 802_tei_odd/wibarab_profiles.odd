@@ -6,13 +6,13 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>WIBARAB profiles TEI-Lex-0 customization</title>
+                <title>WIBARAB profiles ODD</title>
                 <principal>
                     <name type="person" ref="dmp:SP">Stephan Procházka</name>
                 </principal>
                 <author>
                     <name type="person" ref="dmp:KS">Kinga Sramó</name>
-                    <name type="person">Daniel Schopper</name>
+                    <name type="person" ref="dmp:DS">Daniel Schopper</name>
                 </author>
             </titleStmt>
             <publicationStmt>
@@ -40,30 +40,122 @@
             </div>
             <div>
                 <head>Formal Specification</head>
-                <schemaSpec ident="wibarab-profiles" source="file:/C:/Users/ksramo/Documents/WIBARAB_GEO/featuredb/802_tei_odd/lex-0.compiled.odd">
-                    <moduleRef key="derived-module-TEILex0" />
-                    <!-- We copy all modules from TEI Lex0 and exclude -->
-                    <moduleRef key="analysis" except="pc" />
-                    <moduleRef key="gaiji" />
-                    <moduleRef key="core" except="hi email num expan graphic" />
-                    <moduleRef key="corpus" />
-                    <moduleRef key="dictionaries" except="dictScrap hyph lbl syll stress" />
-                    <moduleRef key="figures" except="figure" />
-                    <moduleRef key="header" />
-                    <moduleRef key="linking" />
-                    <moduleRef key="namesdates" />
-                    <moduleRef key="tagdocs" />
+                <schemaSpec ident="wibarab-profiles" start="TEI">
+                    <moduleRef key="header" include="teiHeader fileDesc titleStmt publicationStmt availability rendition profileDesc langUsage encodingDesc tagsDecl revisionDesc change listPrefixDef prefixDef" />
+                    <moduleRef key="core" include="address author editor desc graphic head hi label note p publisher pubPlace ref respStmt resp rs series title" />
                     <moduleRef key="tei" />
-                    <moduleRef key="textstructure" except="back front" />
-                    <moduleRef key="transcr" except="metamark" />
-                    <!-- Including some elements we need that are missing from Lex-0 -->
-                    <elementRef key="listPrefixDef" source="http://www.tei-c.org/release/xml/tei/odd/p5subset.xml" />
-                    <elementRef key="prefixDef" source="http://www.tei-c.org/release/xml/tei/odd/p5subset.xml" />
-                    <classRef key="att.patternReplacement" source="http://www.tei-c.org/release/xml/tei/odd/p5subset.xml" />
-                    <!-- making @type on the TEI element optional again -->
-                    <elementSpec ident="TEI" mode="change">
+                    <moduleRef key="namesdates" include="geo listPlace place persName" />
+                    <moduleRef key="textstructure" include="body div TEI text" />
+                    <moduleRef key="figures" include="figure" />
+                    <classRef key="att.global.linking" />
+                    <!-- imports from Lex0 -->
+                    <moduleRef key="derived-module-TEILex0" source="file:/C:/Users/ksramo/Documents/WIBARAB_GEO/featuredb/802_tei_odd/lex-0.compiled.odd" />
+                    <moduleRef key="core" include="name date listBibl bibl" source="file:/C:/Users/ksramo/Documents/WIBARAB_GEO/featuredb/802_tei_odd/lex-0.compiled.odd" />
+                    <moduleRef key="header" include="sourceDesc language" source="file:/C:/Users/ksramo/Documents/WIBARAB_GEO/featuredb/802_tei_odd/lex-0.compiled.odd" />
+                    <moduleRef key="corpus" include="settingDesc channel" source="file:/C:/Users/ksramo/Documents/WIBARAB_GEO/featuredb/802_tei_odd/lex-0.compiled.odd" />
+                    <elementRef key="personGrp" source="file:/C:/Users/ksramo/Documents/WIBARAB_GEO/featuredb/802_tei_odd/lex-0.compiled.odd" />
+                    <!-- make date part of publicationStmtPart.detail again -->
+                    <!-- in order reconcile publicationStmt content model from TEI P5 with date from Lex0 -->
+                    <elementSpec ident="date" mode="change">
+                        <classes mode="change">
+                            <memberOf key="model.publicationStmtPart.detail" mode="add" />
+                        </classes>
+                    </elementSpec>
+                    <elementSpec ident="p" mode="change" module="core">
+                        <content>
+                            <alternate minOccurs="1" maxOccurs="unbounded">
+                                <textNode />
+                                <elementRef key="hi" />
+                                <elementRef key="rs" />
+                                <elementRef key="ref" />
+                                <elementRef key="geo" />
+                            </alternate>
+                        </content>
+                    </elementSpec>
+                    <elementSpec ident="head" module="core" mode="change">
+                        <desc>
+                            head elements are either:
+                            (1) VICAV Profile headings (containing 1 profile image + 1-n names with optional labels),
+                            (2) figure captions (containing plain text or a hyperlink pointing to the source of the image)
+                        </desc>
+                        <content>
+                            <alternate>
+                                <sequence preserveOrder="true">
+                                    <!-- profile image -->
+                                    <elementRef key="figure" minOccurs="1" maxOccurs="1" />
+                                    <sequence preserveOrder="true" maxOccurs="unbounded">
+                                        <elementRef key="label" minOccurs="0" maxOccurs="1" />
+                                        <!-- we moved the names to the geolist, so commenting this out for now -->
+                                        <!-- <elementRef key="name" minOccurs="1" maxOccurs="1" /> -->
+                                    </sequence>
+                                </sequence>
+                                <!-- or just (non-empty) plain text -->
+                                <textNode />
+                                <!-- or a hyperlink -->
+                                <elementRef key="ref" />
+                            </alternate>
+                        </content>
+                        <constraintSpec ident="head-labels" scheme="schematron">
+                            <desc>Enforce that the profile head contains all required names.</desc>
+                            <constraint>
+                                <sch:rule context="tei:head[parent::tei:div[parent::tei:body]]">
+                                    <sch:assert test="tei:name[@xml:lang = 'eng']">
+                                        At least an english version of the location name
+                                        must be provided (name element with xml:lang 'eng').
+                                    </sch:assert>
+                                </sch:rule>
+                                <sch:rule context="tei:head[parent::tei:div[parent::tei:body]]/tei:name">
+                                    <sch:let name="lang" value="@xml:lang" />
+                                    <sch:report test="not($lang = doc('../../082_scripts_xsl/profile_fields.xml')//property[@name = 'lang']/@value)">Unexpected value '<sch:value-of select="$lang" />' in @xml:lang </sch:report>
+                                </sch:rule>
+                            </constraint>
+                        </constraintSpec>
+                    </elementSpec>
+                    <elementSpec ident="div" module="core" mode="change">
                         <attList>
-                            <attDef ident="type" mode="change" usage="opt" />
+                            <attDef ident="type" mode="replace">
+                                <valList type="closed">
+                                    <valItem ident="dictionaries">
+                                        <desc>lists dictionaries available for the variety described by the profile</desc>
+                                    </valItem>
+                                    <valItem ident="audioData">
+                                        <desc>
+                                            lists audia material available for the variety described by the
+                                            profile
+                                        </desc>
+                                    </valItem>
+                                    <valItem ident="sampleText">
+                                        <desc>contains a sample text of the variety described by the profile</desc>
+                                    </valItem>
+                                    <valItem ident="lingFeatures">
+                                        <desc>
+                                            contains a formal description of the linguistic features of the variety
+                                            described by the profile
+                                        </desc>
+                                    </valItem>
+                                    <valItem ident="bibliography">
+                                        <desc>contains a bibliography of the variety described by the profile</desc>
+                                    </valItem>
+                                    <valItem ident="researchHistory">
+                                        <desc>
+                                            describes the research history on the variety described by the
+                                            profile
+                                        </desc>
+                                    </valItem>
+                                    <valItem ident="typology">
+                                        <desc>describes the typology of the variety described by the profile</desc>
+                                    </valItem>
+                                    <valItem ident="textBooks">
+                                        <desc>lists text books available for the variety described by the profile</desc>
+                                    </valItem>
+                                    <valItem ident="general">
+                                        <desc>
+                                            provides a general description of the variety described by the
+                                            profile
+                                        </desc>
+                                    </valItem>
+                                </valList>
+                            </attDef>
                         </attList>
                     </elementSpec>
                     <!-- ref checks -->
