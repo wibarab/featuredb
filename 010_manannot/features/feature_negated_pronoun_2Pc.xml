@@ -6,588 +6,563 @@
 <?attributeAssignments fn="enricher_attributes.xml" path="{filePath}\..\..\880_conf\"?>
 <?shortCuts fn="wibarab_shortCuts" path="{filePath}\..\..\880_conf\"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../../804_xsd/1.0.1/featuredb.xsd" xml:id="ft_negpron2pc">
-   <teiHeader>
-      <fileDesc>
-         <titleStmt>
-            <title>Negated personal pronoun 2PL.C</title>
-         </titleStmt>
-         <publicationStmt>
-            <publisher>{publisher}</publisher>
-            <date when="2022-10-03"/>
-         </publicationStmt>
-         <sourceDesc>
-            <p>This is the feature-file for the negated 2nd person plural communis pronoun.</p>
-         </sourceDesc>
-      </fileDesc>
-
-      <encodingDesc>
-
-         <listPrefixDef xml:id="listPrefixDef">
-            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_dmp.xml#$1"/>
-            <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../../vicav-library/vicav_biblio/vicav_biblio_tei_zotero.xml#$1"/>
-            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_dialects.xml#$1"/>
-            <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1"/>
-            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../vicav-library/vicav_geo/vicav_geodata.xml#$1"/>
-            <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
-         </listPrefixDef>
-      </encodingDesc>
-      
-      <profileDesc>
-         <textClass>
-          <catRef target="dmp:personal_pronouns.negated_pronouns"/>
-          </textClass>
-      </profileDesc>
-
-      <revisionDesc status="done">
-         
-         
-         <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change>
-         <change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change>
-      </revisionDesc>
-   </teiHeader>
-
-
-
-   <text>
-      <body>
-
-         <div type="featureDescription">
-            <head>Feature Values</head>
-            <list type="featureValues">
-               <item xml:id="negpr_2pc_menten">
-                  <label>məntən</label>
-                  <desc/>
-               </item>
-               <item xml:id="negpr_2pc_manten">
-                  <label>mantən</label>
-                  <desc/>
-               </item>
-               <item xml:id="negpr_2pc_notexisting">
-                  <label>not existing</label>
-                  <desc/>
-               </item>
-               <item xml:id="negpr_2pc_maalkon">
-                  <label>mālkon</label>
-                  <desc/>
-               </item>
-                <item xml:id="negpr_2pc_maankon">
-                  <label>mānkon</label>
-                  <desc/>
-               </item>
-               <item xml:id="negpr_2pc_mankun">
-                  <label>mənkon, mankun, mannkun</label>
-                  <desc/>
-               </item>
-                <item xml:id="negpr_2pc_mintu">
-                  <label>mintu</label>
-                  <desc/>
-               </item>
-               <item xml:id="negpr_2pc_mishkum">
-                  <label>miškum </label>
-                  <desc/>
-               </item>
-               <item xml:id="negpr_2pc_mushkum">
-                  <label>muškum </label>
-                  <desc/>
-               </item>
-               <item xml:id="negpr_2pc_mishkim">
-                  <label>miškim </label>
-                  <desc/>
-               </item>
-               <item xml:id="negpr_2pc_makumsh">
-                  <label>mākumš </label>
-                  <desc/>
-               </item>
-               <item xml:id="negpr_2pc_muukumsh">
-                  <label>mūkumš </label>
-                  <desc/>
-               </item>
-                <item xml:id="negpr_2pc_mintomsh">
-                  <label>mintomš</label>
-                  <desc/>
-               </item>
-               <item xml:id="negpr_2pc_mannakum">
-                  <label>mannakum</label>
-                  <desc/>
-               </item>
-               <item xml:id="negpr_2pc_mantuub">
-                  <label>mantūb</label>
-                  <desc/>
-               </item>
-               <item xml:id="negpr_2pc_maakum">
-                  <label>mākum</label>
-                  <desc/>
-               </item>
-                <item xml:id="negpr_2pc_mantu">
-                  <label>mantu</label>
-                  <desc/>
-               </item>
-                <item xml:id="negpr_2pc_mantum">
-                  <label>mantum</label>
-                  <desc/>
-               </item>
-               <item xml:id="negpr_2pc_mantun">
-                  <label>mantun</label>
-                  <desc/>
-               </item>
-               <item xml:id="negpr_2pc_mintun">
-                  <label>mintun</label>
-                  <desc/>
-               </item>
-                <item xml:id="negpr_2pc_madentumsh">
-                  <label>ma-d-entūma-š</label>
-                  <desc/>
-               </item>
-               <item xml:id="negpr_2pc_maakumsh">
-                  <label>mākumš</label>
-                  <desc/>
-               </item>
-               <item xml:id="negpr_2pc_maakun">
-                  <label>mākun</label>
-                  <desc/>
-               </item>
-                <item xml:id="negpr_2pc_maalcu">
-                  <label>mālču</label>
-                  <desc/>
-               </item>
-               <item xml:id="negpr_2pc_mantuush">
-                  <label>mantūš</label>
-                  <desc/>
-               </item>
-
-            </list>
-         </div>
-         <div type="description"><byline>Edited by [Name]</byline>
-         </div>
-         <div xmlns:tei="http://www.tei-c.org/ns/1.0" type="featureValueObservations">
-                         
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0071" status="done" resp="dmp:AID">
-               <name type="featureValue" ref=""/>
-               <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
-               <placeName ref="geo:naameh"/>
-               <placeName ref="geo:el_karantina"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"/>
-               <personGrp role="tribe" corresp="pgr:arab_maslax"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0060" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#negpr_2pc_mankun"/>
-               <bibl corresp="zot:agbaht_2023_4928" type="publication"/>
-               <placeName ref="geo:sheikh_taba"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-SXT.xml"/>
-               <cit type="sourceRepresentation"><quote>mankin</quote></cit>
-               <note type="general">Pausal form is mankun</note>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0074" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#negpr_2pc_mankun"/>
-               <bibl corresp="zot:el_hajje_1954_0000" type="publication"/>
-               <placeName ref="geo:tripoli_lebanon"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-TRI.xml"/>
-               <cit type="sourceRepresentation"><quote>mənkon</quote></cit>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0001" status="done" resp="dmp:AKM">
-               <name type="featureValue" ref="#negpr_2pc_mantu"/>
-               <bibl corresp="zot:schreiber_1971_0000" type="publication"/>
-               <placeName ref="geo:mecca"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-MCC.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0056" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#negpr_2pc_maankon"/>
-               <bibl corresp="zot:jiha_1964_0000" type="publication"/>
-               <placeName ref="geo:bishmizzine"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-BIS.xml"/>
-               <cit type="sourceRepresentation"><quote>mānkun</quote></cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0054" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#negpr_2pc_mankun"/>
-               <bibl corresp="zot:schukro_2004_6239" type="publication"/>
-               <placeName ref="geo:beirut"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-BEI.xml"/>
-               <cit type="sourceRepresentation"><quote>mannkun</quote></cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0052" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#negpr_2pc_mantu"/>
-               <bibl corresp="zot:younes_2013_2795" type="publication"/>
-               <placeName ref="geo:wadi_khalid"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-ATI.xml"/>
-               <personGrp role="tribe" corresp="pgr:arab_al_atij"/>
-               <cit type="sourceRepresentation"><quote>mantu</quote></cit>
-            </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0000" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#negpr_2pc_mantum"/>
-               <bibl corresp="zot:younes_2013_2795" type="publication"/>
-               <placeName ref="geo:wadi_khalid"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-ATI.xml"/>
-               <personGrp role="tribe" corresp="pgr:arab_al_atij"/>
-               <cit type="sourceRepresentation"><quote>mantum</quote></cit>
-            </wib:featureValueObservation>
-
-          
-        
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0117" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#negpr_2pc_maalkon"/>
-               <bibl corresp="zot:sabuni_1980_3106" type="publication"/>
-               <placeName ref="geo:aleppo"/>
-               <lang corresp="..\profiles\vicav_profile_SYR-ALP.xml"/>
-               <cit type="sourceRepresentation"><quote>mālkon</quote></cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0125" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#negpr_2pc_mantu"/>
-               <bibl corresp="zot:behnstedt_1994_0001" type="publication"/>
-               <placeName ref="geo:al_sukhna"/>
-               <lang corresp="..\profiles\vicav_profile_SYR-SUK.xml"/>
-               <cit type="sourceRepresentation"><quote>mantu</quote></cit>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0072" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#negpr_2pc_maalcu"/>
-               <bibl corresp="zot:behnstedt_1994_0001" type="publication"/>
-               <placeName ref="geo:al_sukhna"/>
-               <lang corresp="..\profiles\vicav_profile_SYR-SUK.xml"/>
-               <cit type="sourceRepresentation"><quote>mālču</quote></cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0127" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#negpr_2pc_notexisting"/>
-               <bibl corresp="zot:fink_2017_3211" type="publication"/>
-               <placeName ref="geo:hasankeyf"/>
-               <lang corresp="..\profiles\vicav_profile_TUR-HAS.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0128" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#negpr_2pc_menten"/>
-               <bibl corresp="zot:wittrich_2001_0000" type="publication"/>
-               <placeName ref="geo:idil_aazex"/>
-               <lang corresp="..\profiles\vicav_profile_TUR-IDI.xml"/>
-               <cit type="sourceRepresentation"><quote>məntən</quote></cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0129" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#negpr_2pc_manten"/>
-               <bibl corresp="zot:lahdo_2009_1103" type="publication"/>
-               <placeName ref="geo:siirt"/>
-               <lang corresp="..\profiles\vicav_profile_TUR-SII.xml"/>
-               <cit type="sourceRepresentation"><quote>manten</quote></cit>
-            </wib:featureValueObservation>
-
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0281" status="done" resp="dmp:CL">
-               <name type="featureValue" ref="#negpr_2pc_mantuush"/>
-               <bibl corresp="zot:woidich_2006_3203" type="publication" status="CHECKED"/>                
-               <placeName ref="geo:cairo"/>
-               <lang corresp="..\profiles\vicav_profile_EGY-CRO.xml"/>
-               <cit type="sourceRepresentation"><quote>ma-ntūš</quote></cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0258" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#negpr_2pc_mintomsh"/>
-               <bibl corresp="src:PC_RZ" type="personalCommunication"/>
-               <placeName ref="geo:malta"/>
-               <lang corresp="..\profiles\vicav_profile_MLT-MAL.xml"/>
-               <cit type="sourceRepresentation"><quote>mintomš</quote></cit>
-               <note type="general">Maltese orthography: m'intomx</note>
-            </wib:featureValueObservation>
-
-           
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0185" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#negpr_2pc_maakun"/>
-               <bibl corresp="zot:Hillelson_1935_1288" type="publication" status="CHECKED">
-                  
-               </bibl>
-               <placeName ref="geo:khartoum"/>
-               <lang corresp="..\profiles\vicav_profile_SDN-KRT.xml"/>
-               <cit type="sourceRepresentation"><quote> mākun</quote></cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0002" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#negpr_2pc_mantu"/>
-               <bibl corresp="zot:brustad_2000_3205" type="publication" status="CHECKED">
-                  
-               </bibl>
-               <placeName ref="geo:kuwait_city"/>
-               <lang corresp="..\profiles\vicav_profile_KWT-KWC.xml"/>
-               <cit type="sourceRepresentation"><quote>mantu</quote></cit>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0011" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#negpr_2pc_mintu"/>
-               <bibl corresp="zot:brustad_2000_3205" type="publication" status="CHECKED">
-                  
-               </bibl>
-               <placeName ref="geo:kuwait_city"/>
-               <lang corresp="..\profiles\vicav_profile_KWT-KWC.xml"/>
-               <cit type="sourceRepresentation"><quote>mintu</quote></cit>
-            </wib:featureValueObservation>
-
-
-
-           
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0335" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#negpr_2pc_mantuub"/>
-               <bibl corresp="zot:johnstone_1961_0000" type="publication"/>
-               <placeName ref="geo:kuwait"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-DWS.xml"/>
-               <personGrp role="tribe" corresp="pgr:dawasir"/>
-               <cit type="sourceRepresentation"><quote>mantūb</quote></cit>
-            </wib:featureValueObservation>
-
-         
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0059" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#negpr_2pc_mishkum"/>
-               <bibl corresp="zot:naddari_2023_2742" type="publication"/>
-               <placeName ref="geo:nefza"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-NFZ.xml"/>
-               <cit type="sourceRepresentation"><quote>miškum</quote></cit>
-            </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0003" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#negpr_2pc_mishkim"/>
-               <bibl corresp="zot:naddari_2023_2742" type="publication"/>
-               <placeName ref="geo:nefza"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-NFZ.xml"/>
-               <cit type="sourceRepresentation"><quote>miškim</quote></cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0014" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#negpr_2pc_maakumsh"/>
-               <bibl corresp="zot:naddari_2023_2742" type="publication"/>
-               <placeName ref="geo:nefza"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-NFZ.xml"/>
-               <cit type="sourceRepresentation"><quote>mākumš</quote></cit>
-               <note type="general">mākum(i)š is given as an alternative</note>
-            </wib:featureValueObservation>
-
-            
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0092" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#negpr_2pc_mantu"/>
-               <bibl corresp="zot:omar_1975_0000" type="publication"/>
-               <placeName ref="geo:hejaz"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-HJZ.xml"/>
-               <cit type="sourceRepresentation"><quote>mantu</quote></cit>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0004" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#negpr_2pc_mannakum"/>
-               <bibl corresp="zot:omar_1975_0000" type="publication"/>
-               <placeName ref="geo:hejaz"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-HJZ.xml"/>
-               <cit type="sourceRepresentation"><quote>mannakum</quote></cit>
-               <note type="general">Attested in northern Hiǧāz</note>
-            </wib:featureValueObservation>
-
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0234" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#negpr_2pc_maakum"/>
-               <bibl corresp="zot:pereira_2010_1918" type="publication"/>
-               <placeName ref="geo:tripoli_libya"/>
-               <lang corresp="..\profiles\vicav_profile_LBY-TPL.xml"/>
-               <cit type="sourceRepresentation"><quote>mā-kum</quote></cit>
-            </wib:featureValueObservation>
-            
-             <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0009" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#negpr_2pc_maakumsh"/>
-               <bibl corresp="zot:pereira_2010_1918" type="publication"/>
-               <placeName ref="geo:tripoli_libya"/>
-               <lang corresp="..\profiles\vicav_profile_LBY-TPL.xml"/>
-               <cit type="sourceRepresentation"><quote>mā-kum-š</quote></cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0005" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#negpr_2pc_mantu"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
-                  
-               </bibl>
-               <placeName ref="geo:abha"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-ABH.xml"/>
-               <cit type="sourceRepresentation"><quote>mantu</quote></cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0006" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#negpr_2pc_mantuub"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
-                  
-               </bibl>
-               <placeName ref="geo:bisha"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-BSH.xml"/>
-               <cit type="sourceRepresentation"><quote>mantūb</quote></cit>
-            </wib:featureValueObservation>
-
-           
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0010" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#negpr_2pc_mantuub"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
-                  
-               </bibl>
-               <placeName ref="geo:hofuf"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-HFF.xml"/>
-               <cit type="sourceRepresentation"><quote>mantūb</quote></cit>
-            </wib:featureValueObservation>
-
-          
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0013" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#negpr_2pc_mantu"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
-                  
-               </bibl>
-               <placeName ref="geo:rufaydah"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-RUF.xml"/>
-               <cit type="sourceRepresentation"><quote>mantu</quote></cit>
-            </wib:featureValueObservation>
-
-            
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0015" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#negpr_2pc_mantuub"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
-                  
-               </bibl>
-               <placeName ref="geo:riyadh"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-RYD.xml"/>
-               <cit type="sourceRepresentation"><quote>mantūb</quote></cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0012" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#negpr_2pc_mantu"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
-                  
-               </bibl>
-               <placeName ref="geo:sabt_alalayah"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-QRN.xml"/>
-               <cit type="sourceRepresentation"><quote>mantu</quote></cit>
-            </wib:featureValueObservation>
-
-
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0332" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#negpr_2pc_mantun"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
-                  
-               </bibl>
-               <placeName ref="geo:qawz"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-QWZ.xml"/>
-               <cit type="sourceRepresentation"><quote>mantun</quote></cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0064" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#negpr_2pc_mintun"/>
-               <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
-                  
-               </bibl>
-               <placeName ref="geo:qawz"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-QWZ.xml"/>
-               <cit type="sourceRepresentation"><quote>mintun</quote></cit>
-            </wib:featureValueObservation>
-
-         
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0270" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#negpr_2pc_maakumsh"/>
-               <bibl corresp="zot:zarb_2023_0602" type="publication"/>
-               <placeName ref="geo:testour"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-TSR.xml"/>
-               <cit type="sourceRepresentation"><quote>mākumš</quote></cit>
-            </wib:featureValueObservation>
-
-             <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0076" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#negpr_2pc_muukumsh"/>
-               <bibl corresp="zot:zarb_2023_0602" type="publication"/>
-               <placeName ref="geo:testour"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-TSR.xml"/>
-               <cit type="sourceRepresentation"><quote>mūkumš</quote></cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0077" status="done" resp="dmp:RZ">
-               <name type="featureValue" ref="#negpr_2pc_mushkum"/>
-               <bibl corresp="zot:zarb_2023_0602" type="publication"/>
-               <placeName ref="geo:testour"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-TSR.xml"/>
-               <cit type="sourceRepresentation"><quote>muškum</quote></cit>
-            </wib:featureValueObservation>
-
-            
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0200" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#negpr_2pc_maankon"/>
-               <bibl corresp="zot:klimiuk_2025_2983" type="publication" status="CHECKED">
-                  
-               </bibl>
-               <placeName ref="geo:hama"/>
-               <lang corresp="..\profiles\vicav_profile_SYR-HMA.xml"/>
-            </wib:featureValueObservation>
-
-      
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0268" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#negpr_2pc_maakumsh"/>
-               <bibl corresp="zot:marçais_1925_6953" type="publication"/>
-               <placeName ref="geo:takrouna"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-TKR.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0019" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#negpr_2pc_maakumsh"/>
-               <bibl corresp="zot:mion_2021_9872" type="publication"/>
-               <placeName ref="geo:bengardane"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-BGN.xml"/>
-            </wib:featureValueObservation>
-
-        
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0269" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#negpr_2pc_maakumsh"/>
-               <bibl corresp="zot:singer_1984_0000" type="publication"/>
-               <placeName ref="geo:tunis"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-TNS.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0267" status="done" resp="dmp:SP">
-               <name type="featureValue" ref="#negpr_2pc_mishkum"/>
-               <bibl corresp="zot:talmoudi_1980_0000" type="publication"/>
-               <placeName ref="geo:sousse"/>
-               <lang corresp="..\profiles\vicav_profile_TUN-SUS.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0225" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#negpr_2pc_makumsh"/>
-               <bibl corresp="zot:marcais_1902_3831" type="publication"/>
-               <placeName ref="geo:tlemcen"/>
-               <lang corresp="..\profiles\vicav_profile_DZA-TLM.xml"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0224" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#negpr_2pc_maakumsh"/>
-               <bibl corresp="zot:marcais_1908_3832" type="publication"/>
-               <placeName ref="geo:saida"/>
-               <lang corresp="..\profiles\vicav_profile_DZA-SDA.xml"/>
-               <personGrp role="tribe" corresp="pgr:ulad_ibrahim"/>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0220" status="done" resp="dmp:TD">
-               <name type="featureValue" ref="#negpr_2pc_madentumsh"/>
-               <bibl corresp="zot:marcais_1956_0000" type="publication" status="CHECKED">
-                  
-               </bibl>
-               <placeName ref="geo:jijel"/>
-               <lang corresp="..\profiles\vicav_profile_DZA-DJL.xml"/>
-            </wib:featureValueObservation>
-
-
-            <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0007" status="done" resp="dmp:VE">
-               <name type="featureValue" ref="#negpr_2pc_notexisting"/>
-               <bibl corresp="zot:ghanem_1958_0000" type="publication"/>
-               <placeName ref="geo:aden"/>
-               <lang corresp="..\profiles\vicav_profile_YEM-ADN.xml"/>
-               <note type="general">There are no negative forms of the pronouns themselves, instead the pronouns are negated with muš preceding the pronoun.</note>
-            </wib:featureValueObservation>
-
-         </div>
-      </body>
-   </text>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Negated personal pronoun 2PL.C</title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
+                <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+                <date when="2022-10-03" />
+            </publicationStmt>
+            <sourceDesc>
+                <p>This is the feature-file for the negated 2nd person plural communis pronoun.</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <listPrefixDef xml:id="listPrefixDef">
+                <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_dmp.xml#$1" />
+                <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../../vicav-library/vicav_biblio/vicav_biblio_tei_zotero.xml#$1" />
+                <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_dialects.xml#$1" />
+                <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1" />
+                <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../vicav-library/vicav_geo/vicav_geodata.xml#$1" />
+                <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1" />
+            </listPrefixDef>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <catRef target="dmp:personal_pronouns.negated_pronouns" />
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="done">
+            <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change>
+            <change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="featureDescription">
+                <head>Feature Values</head>
+                <list type="featureValues">
+                    <item xml:id="negpr_2pc_menten">
+                        <label>məntən</label>
+                        <desc />
+                    </item>
+                    <item xml:id="negpr_2pc_manten">
+                        <label>mantən</label>
+                        <desc />
+                    </item>
+                    <item xml:id="negpr_2pc_notexisting">
+                        <label>not existing</label>
+                        <desc />
+                    </item>
+                    <item xml:id="negpr_2pc_maalkon">
+                        <label>mālkon</label>
+                        <desc />
+                    </item>
+                    <item xml:id="negpr_2pc_maankon">
+                        <label>mānkon</label>
+                        <desc />
+                    </item>
+                    <item xml:id="negpr_2pc_mankun">
+                        <label>mənkon, mankun, mannkun</label>
+                        <desc />
+                    </item>
+                    <item xml:id="negpr_2pc_mintu">
+                        <label>mintu</label>
+                        <desc />
+                    </item>
+                    <item xml:id="negpr_2pc_mishkum">
+                        <label>miškum </label>
+                        <desc />
+                    </item>
+                    <item xml:id="negpr_2pc_mushkum">
+                        <label>muškum </label>
+                        <desc />
+                    </item>
+                    <item xml:id="negpr_2pc_mishkim">
+                        <label>miškim </label>
+                        <desc />
+                    </item>
+                    <item xml:id="negpr_2pc_makumsh">
+                        <label>mākumš </label>
+                        <desc />
+                    </item>
+                    <item xml:id="negpr_2pc_muukumsh">
+                        <label>mūkumš </label>
+                        <desc />
+                    </item>
+                    <item xml:id="negpr_2pc_mintomsh">
+                        <label>mintomš</label>
+                        <desc />
+                    </item>
+                    <item xml:id="negpr_2pc_mannakum">
+                        <label>mannakum</label>
+                        <desc />
+                    </item>
+                    <item xml:id="negpr_2pc_mantuub">
+                        <label>mantūb</label>
+                        <desc />
+                    </item>
+                    <item xml:id="negpr_2pc_maakum">
+                        <label>mākum</label>
+                        <desc />
+                    </item>
+                    <item xml:id="negpr_2pc_mantu">
+                        <label>mantu</label>
+                        <desc />
+                    </item>
+                    <item xml:id="negpr_2pc_mantum">
+                        <label>mantum</label>
+                        <desc />
+                    </item>
+                    <item xml:id="negpr_2pc_mantun">
+                        <label>mantun</label>
+                        <desc />
+                    </item>
+                    <item xml:id="negpr_2pc_mintun">
+                        <label>mintun</label>
+                        <desc />
+                    </item>
+                    <item xml:id="negpr_2pc_madentumsh">
+                        <label>ma-d-entūma-š</label>
+                        <desc />
+                    </item>
+                    <item xml:id="negpr_2pc_maakumsh">
+                        <label>mākumš</label>
+                        <desc />
+                    </item>
+                    <item xml:id="negpr_2pc_maakun">
+                        <label>mākun</label>
+                        <desc />
+                    </item>
+                    <item xml:id="negpr_2pc_maalcu">
+                        <label>mālču</label>
+                        <desc />
+                    </item>
+                    <item xml:id="negpr_2pc_mantuush">
+                        <label>mantūš</label>
+                        <desc />
+                    </item>
+                </list>
+            </div>
+            <div type="description">
+                <byline>Edited by [Name]</byline>
+            </div>
+            <div xmlns:tei="http://www.tei-c.org/ns/1.0" type="featureValueObservations">
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0071" status="done" resp="dmp:AID">
+                    <name type="featureValue" ref="" />
+                    <bibl corresp="src:LEB_2022_AID" type="fieldwork" />
+                    <placeName ref="geo:naameh" />
+                    <placeName ref="geo:el_karantina" />
+                    <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml" />
+                    <personGrp role="tribe" corresp="pgr:arab_maslax" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0060" status="done" resp="dmp:AID">
+                    <name type="featureValue" ref="#negpr_2pc_mankun" />
+                    <bibl corresp="zot:agbaht_2023_4928" type="publication" />
+                    <placeName ref="geo:sheikh_taba" />
+                    <lang corresp="..\profiles\vicav_profile_LBN-SXT.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>mankin</quote>
+                    </cit>
+                    <note type="general">Pausal form is mankun</note>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0074" status="done" resp="dmp:AID">
+                    <name type="featureValue" ref="#negpr_2pc_mankun" />
+                    <bibl corresp="zot:el_hajje_1954_0000" type="publication" />
+                    <placeName ref="geo:tripoli_lebanon" />
+                    <lang corresp="..\profiles\vicav_profile_LBN-TRI.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>mənkon</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0001" status="done" resp="dmp:AKM">
+                    <name type="featureValue" ref="#negpr_2pc_mantu" />
+                    <bibl corresp="zot:schreiber_1971_0000" type="publication" />
+                    <placeName ref="geo:mecca" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-MCC.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0056" status="done" resp="dmp:AID">
+                    <name type="featureValue" ref="#negpr_2pc_maankon" />
+                    <bibl corresp="zot:jiha_1964_0000" type="publication" />
+                    <placeName ref="geo:bishmizzine" />
+                    <lang corresp="..\profiles\vicav_profile_LBN-BIS.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>mānkun</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0054" status="done" resp="dmp:AID">
+                    <name type="featureValue" ref="#negpr_2pc_mankun" />
+                    <bibl corresp="zot:schukro_2004_6239" type="publication" />
+                    <placeName ref="geo:beirut" />
+                    <lang corresp="..\profiles\vicav_profile_LBN-BEI.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>mannkun</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0052" status="done" resp="dmp:AID">
+                    <name type="featureValue" ref="#negpr_2pc_mantu" />
+                    <bibl corresp="zot:younes_2013_2795" type="publication" />
+                    <placeName ref="geo:wadi_khalid" />
+                    <lang corresp="..\profiles\vicav_profile_LBN-ATI.xml" />
+                    <personGrp role="tribe" corresp="pgr:arab_al_atij" />
+                    <cit type="sourceRepresentation">
+                        <quote>mantu</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0000" status="done" resp="dmp:AID">
+                    <name type="featureValue" ref="#negpr_2pc_mantum" />
+                    <bibl corresp="zot:younes_2013_2795" type="publication" />
+                    <placeName ref="geo:wadi_khalid" />
+                    <lang corresp="..\profiles\vicav_profile_LBN-ATI.xml" />
+                    <personGrp role="tribe" corresp="pgr:arab_al_atij" />
+                    <cit type="sourceRepresentation">
+                        <quote>mantum</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0117" status="done" resp="dmp:CL">
+                    <name type="featureValue" ref="#negpr_2pc_maalkon" />
+                    <bibl corresp="zot:sabuni_1980_3106" type="publication" />
+                    <placeName ref="geo:aleppo" />
+                    <lang corresp="..\profiles\vicav_profile_SYR-ALP.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>mālkon</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0125" status="done" resp="dmp:CL">
+                    <name type="featureValue" ref="#negpr_2pc_mantu" />
+                    <bibl corresp="zot:behnstedt_1994_0001" type="publication" />
+                    <placeName ref="geo:al_sukhna" />
+                    <lang corresp="..\profiles\vicav_profile_SYR-SUK.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>mantu</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0072" status="done" resp="dmp:CL">
+                    <name type="featureValue" ref="#negpr_2pc_maalcu" />
+                    <bibl corresp="zot:behnstedt_1994_0001" type="publication" />
+                    <placeName ref="geo:al_sukhna" />
+                    <lang corresp="..\profiles\vicav_profile_SYR-SUK.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>mālču</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0127" status="done" resp="dmp:CL">
+                    <name type="featureValue" ref="#negpr_2pc_notexisting" />
+                    <bibl corresp="zot:fink_2017_3211" type="publication" />
+                    <placeName ref="geo:hasankeyf" />
+                    <lang corresp="..\profiles\vicav_profile_TUR-HAS.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0128" status="done" resp="dmp:CL">
+                    <name type="featureValue" ref="#negpr_2pc_menten" />
+                    <bibl corresp="zot:wittrich_2001_0000" type="publication" />
+                    <placeName ref="geo:idil_aazex" />
+                    <lang corresp="..\profiles\vicav_profile_TUR-IDI.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>məntən</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0129" status="done" resp="dmp:CL">
+                    <name type="featureValue" ref="#negpr_2pc_manten" />
+                    <bibl corresp="zot:lahdo_2009_1103" type="publication" />
+                    <placeName ref="geo:siirt" />
+                    <lang corresp="..\profiles\vicav_profile_TUR-SII.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>manten</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0281" status="done" resp="dmp:CL">
+                    <name type="featureValue" ref="#negpr_2pc_mantuush" />
+                    <bibl corresp="zot:woidich_2006_3203" type="publication" status="CHECKED" />
+                    <placeName ref="geo:cairo" />
+                    <lang corresp="..\profiles\vicav_profile_EGY-CRO.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>ma-ntūš</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0258" status="done" resp="dmp:RZ">
+                    <name type="featureValue" ref="#negpr_2pc_mintomsh" />
+                    <bibl corresp="src:PC_RZ" type="personalCommunication" />
+                    <placeName ref="geo:malta" />
+                    <lang corresp="..\profiles\vicav_profile_MLT-MAL.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>mintomš</quote>
+                    </cit>
+                    <note type="general">Maltese orthography: m'intomx</note>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0185" status="done" resp="dmp:RZ">
+                    <name type="featureValue" ref="#negpr_2pc_maakun" />
+                    <bibl corresp="zot:Hillelson_1935_1288" type="publication" status="CHECKED">
+                    </bibl>
+                    <placeName ref="geo:khartoum" />
+                    <lang corresp="..\profiles\vicav_profile_SDN-KRT.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote> mākun</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0002" status="done" resp="dmp:RZ">
+                    <name type="featureValue" ref="#negpr_2pc_mantu" />
+                    <bibl corresp="zot:brustad_2000_3205" type="publication" status="CHECKED">
+                    </bibl>
+                    <placeName ref="geo:kuwait_city" />
+                    <lang corresp="..\profiles\vicav_profile_KWT-KWC.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>mantu</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0011" status="done" resp="dmp:RZ">
+                    <name type="featureValue" ref="#negpr_2pc_mintu" />
+                    <bibl corresp="zot:brustad_2000_3205" type="publication" status="CHECKED">
+                    </bibl>
+                    <placeName ref="geo:kuwait_city" />
+                    <lang corresp="..\profiles\vicav_profile_KWT-KWC.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>mintu</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0335" status="done" resp="dmp:RZ">
+                    <name type="featureValue" ref="#negpr_2pc_mantuub" />
+                    <bibl corresp="zot:johnstone_1961_0000" type="publication" />
+                    <placeName ref="geo:kuwait" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-DWS.xml" />
+                    <personGrp role="tribe" corresp="pgr:dawasir" />
+                    <cit type="sourceRepresentation">
+                        <quote>mantūb</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0059" status="done" resp="dmp:RZ">
+                    <name type="featureValue" ref="#negpr_2pc_mishkum" />
+                    <bibl corresp="zot:naddari_2023_2742" type="publication" />
+                    <placeName ref="geo:nefza" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-NFZ.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>miškum</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0003" status="done" resp="dmp:RZ">
+                    <name type="featureValue" ref="#negpr_2pc_mishkim" />
+                    <bibl corresp="zot:naddari_2023_2742" type="publication" />
+                    <placeName ref="geo:nefza" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-NFZ.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>miškim</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0014" status="done" resp="dmp:RZ">
+                    <name type="featureValue" ref="#negpr_2pc_maakumsh" />
+                    <bibl corresp="zot:naddari_2023_2742" type="publication" />
+                    <placeName ref="geo:nefza" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-NFZ.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>mākumš</quote>
+                    </cit>
+                    <note type="general">mākum(i)š is given as an alternative</note>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0092" status="done" resp="dmp:RZ">
+                    <name type="featureValue" ref="#negpr_2pc_mantu" />
+                    <bibl corresp="zot:omar_1975_0000" type="publication" />
+                    <placeName ref="geo:hejaz" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-HJZ.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>mantu</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0004" status="done" resp="dmp:RZ">
+                    <name type="featureValue" ref="#negpr_2pc_mannakum" />
+                    <bibl corresp="zot:omar_1975_0000" type="publication" />
+                    <placeName ref="geo:hejaz" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-HJZ.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>mannakum</quote>
+                    </cit>
+                    <note type="general">Attested in northern Hiǧāz</note>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0234" status="done" resp="dmp:RZ">
+                    <name type="featureValue" ref="#negpr_2pc_maakum" />
+                    <bibl corresp="zot:pereira_2010_1918" type="publication" />
+                    <placeName ref="geo:tripoli_libya" />
+                    <lang corresp="..\profiles\vicav_profile_LBY-TPL.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>mā-kum</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0009" status="done" resp="dmp:RZ">
+                    <name type="featureValue" ref="#negpr_2pc_maakumsh" />
+                    <bibl corresp="zot:pereira_2010_1918" type="publication" />
+                    <placeName ref="geo:tripoli_libya" />
+                    <lang corresp="..\profiles\vicav_profile_LBY-TPL.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>mā-kum-š</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0005" status="done" resp="dmp:RZ">
+                    <name type="featureValue" ref="#negpr_2pc_mantu" />
+                    <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
+                    </bibl>
+                    <placeName ref="geo:abha" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-ABH.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>mantu</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0006" status="done" resp="dmp:RZ">
+                    <name type="featureValue" ref="#negpr_2pc_mantuub" />
+                    <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
+                    </bibl>
+                    <placeName ref="geo:bisha" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-BSH.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>mantūb</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0010" status="done" resp="dmp:RZ">
+                    <name type="featureValue" ref="#negpr_2pc_mantuub" />
+                    <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
+                    </bibl>
+                    <placeName ref="geo:hofuf" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-HFF.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>mantūb</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0013" status="done" resp="dmp:RZ">
+                    <name type="featureValue" ref="#negpr_2pc_mantu" />
+                    <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
+                    </bibl>
+                    <placeName ref="geo:rufaydah" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-RUF.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>mantu</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0015" status="done" resp="dmp:RZ">
+                    <name type="featureValue" ref="#negpr_2pc_mantuub" />
+                    <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
+                    </bibl>
+                    <placeName ref="geo:riyadh" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-RYD.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>mantūb</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0012" status="done" resp="dmp:RZ">
+                    <name type="featureValue" ref="#negpr_2pc_mantu" />
+                    <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
+                    </bibl>
+                    <placeName ref="geo:sabt_alalayah" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-QRN.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>mantu</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0332" status="done" resp="dmp:RZ">
+                    <name type="featureValue" ref="#negpr_2pc_mantun" />
+                    <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
+                    </bibl>
+                    <placeName ref="geo:qawz" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-QWZ.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>mantun</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0064" status="done" resp="dmp:RZ">
+                    <name type="featureValue" ref="#negpr_2pc_mintun" />
+                    <bibl corresp="zot:prochazka_1988_0002" type="publication" status="CHECKED">
+                    </bibl>
+                    <placeName ref="geo:qawz" />
+                    <lang corresp="..\profiles\vicav_profile_SAU-QWZ.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>mintun</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0270" status="done" resp="dmp:RZ">
+                    <name type="featureValue" ref="#negpr_2pc_maakumsh" />
+                    <bibl corresp="zot:zarb_2023_0602" type="publication" />
+                    <placeName ref="geo:testour" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-TSR.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>mākumš</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0076" status="done" resp="dmp:RZ">
+                    <name type="featureValue" ref="#negpr_2pc_muukumsh" />
+                    <bibl corresp="zot:zarb_2023_0602" type="publication" />
+                    <placeName ref="geo:testour" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-TSR.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>mūkumš</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0077" status="done" resp="dmp:RZ">
+                    <name type="featureValue" ref="#negpr_2pc_mushkum" />
+                    <bibl corresp="zot:zarb_2023_0602" type="publication" />
+                    <placeName ref="geo:testour" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-TSR.xml" />
+                    <cit type="sourceRepresentation">
+                        <quote>muškum</quote>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0200" status="done" resp="dmp:SP">
+                    <name type="featureValue" ref="#negpr_2pc_maankon" />
+                    <bibl corresp="zot:klimiuk_2025_2983" type="publication" status="CHECKED">
+                    </bibl>
+                    <placeName ref="geo:hama" />
+                    <lang corresp="..\profiles\vicav_profile_SYR-HMA.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0268" status="done" resp="dmp:SP">
+                    <name type="featureValue" ref="#negpr_2pc_maakumsh" />
+                    <bibl corresp="zot:marçais_1925_6953" type="publication" />
+                    <placeName ref="geo:takrouna" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-TKR.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0019" status="done" resp="dmp:SP">
+                    <name type="featureValue" ref="#negpr_2pc_maakumsh" />
+                    <bibl corresp="zot:mion_2021_9872" type="publication" />
+                    <placeName ref="geo:bengardane" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-BGN.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0269" status="done" resp="dmp:SP">
+                    <name type="featureValue" ref="#negpr_2pc_maakumsh" />
+                    <bibl corresp="zot:singer_1984_0000" type="publication" />
+                    <placeName ref="geo:tunis" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-TNS.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0267" status="done" resp="dmp:SP">
+                    <name type="featureValue" ref="#negpr_2pc_mishkum" />
+                    <bibl corresp="zot:talmoudi_1980_0000" type="publication" />
+                    <placeName ref="geo:sousse" />
+                    <lang corresp="..\profiles\vicav_profile_TUN-SUS.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0225" status="done" resp="dmp:TD">
+                    <name type="featureValue" ref="#negpr_2pc_makumsh" />
+                    <bibl corresp="zot:marcais_1902_3831" type="publication" />
+                    <placeName ref="geo:tlemcen" />
+                    <lang corresp="..\profiles\vicav_profile_DZA-TLM.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0224" status="done" resp="dmp:TD">
+                    <name type="featureValue" ref="#negpr_2pc_maakumsh" />
+                    <bibl corresp="zot:marcais_1908_3832" type="publication" />
+                    <placeName ref="geo:saida" />
+                    <lang corresp="..\profiles\vicav_profile_DZA-SDA.xml" />
+                    <personGrp role="tribe" corresp="pgr:ulad_ibrahim" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0220" status="done" resp="dmp:TD">
+                    <name type="featureValue" ref="#negpr_2pc_madentumsh" />
+                    <bibl corresp="zot:marcais_1956_0000" type="publication" status="CHECKED">
+                    </bibl>
+                    <placeName ref="geo:jijel" />
+                    <lang corresp="..\profiles\vicav_profile_DZA-DJL.xml" />
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_negpron2pc.fv_0007" status="done" resp="dmp:VE">
+                    <name type="featureValue" ref="#negpr_2pc_notexisting" />
+                    <bibl corresp="zot:ghanem_1958_0000" type="publication" />
+                    <placeName ref="geo:aden" />
+                    <lang corresp="..\profiles\vicav_profile_YEM-ADN.xml" />
+                    <note type="general">There are no negative forms of the pronouns themselves, instead the pronouns are negated with muš preceding the pronoun.</note>
+                </wib:featureValueObservation>
+            </div>
+        </body>
+    </text>
 </TEI>
