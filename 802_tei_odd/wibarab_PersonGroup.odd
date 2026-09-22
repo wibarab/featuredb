@@ -15,7 +15,7 @@
                 </author>
             </titleStmt>
             <publicationStmt>
-                <publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
+                <publisher>Austrian Centre for Digital Humanities</publisher>
                 <date>2025</date>
                 <availability>
                     <licence>CC BY 4.0</licence>
@@ -100,7 +100,7 @@
                     <constraintSpec ident="personGrp-name-type" scheme="schematron">
                         <constraint>
                             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:personGrp/tei:name">
-                                <sch:assert test="not(@type) or @type = ('prefLabel', 'altLabel')">                                    
+                                <sch:assert test="not(@type) or @type = ('prefLabel', 'altLabel')">
                                     name elements inside personGrp may only have @type
                                     "prefLabel" or "altLabel".
                                 </sch:assert>
@@ -111,7 +111,7 @@
                     <constraintSpec ident="tribe-residence" scheme="schematron">
                         <constraint>
                             <sch:rule xmlns:sch="http://purl.oclc.org/dsdl/schematron" context="tei:personGrp[@role='tribe']">
-                                <sch:assert test="tei:residence">                                    
+                                <sch:assert test="tei:residence">
                                     Tribe personGrp elements must
                                     contain a residence element.
                                 </sch:assert>
@@ -128,9 +128,9 @@
                                 <sch:let name="replacementPattern" value="$prefixDef/@replacementPattern" />
                                 <sch:let name="resolvedRef" value="replace($replacementPattern, '\$1', $id)" />
                                 <sch:let name="refExists" value="doc-available(resolve-uri($resolvedRef, base-uri($ref)))" />
-                                <sch:assert test="$prefix = 'geo'">                                    
+                                <sch:assert test="$prefix = 'geo'">
                                     The prefix of the ref "
-                                <sch:value-of select="$ref" />                                    
+                                <sch:value-of select="$ref" />
                                     " should be
                                     "geo"
                                 </sch:assert>
