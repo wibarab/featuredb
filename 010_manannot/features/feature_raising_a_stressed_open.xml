@@ -6,542 +6,6 @@
 <?attributeAssignments fn="enricher_attributes.xml" path="{filePath}\..\..\880_conf\"?>
 <?shortCuts fn="wibarab_shortCuts" path="{filePath}\..\..\880_conf\"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:wib="https://wibarab.acdh.oeaw.ac.at/langDesc" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 ../../804_xsd/1.0.1/featuredb.xsd" xml:id="ft_rais_a_strss_open">
-   <teiHeader>
-      <fileDesc>
-         <titleStmt>
-            <title>Medial /a/ in stressed open syllable before /a/ (*CaCaC)</title>
-         </titleStmt>
-         <publicationStmt>
-            <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
-<publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
-            <date when="2022-10-03"/>
-         </publicationStmt>
-         <sourceDesc>
-            <p>This is the feature-file for Raising of a in stressed open syllable before a - CaCaC.</p>
-         </sourceDesc>
-      </fileDesc>
-
-      <encodingDesc>
-
-         <listPrefixDef xml:id="listPrefixDef">
-            <prefixDef ident="dmp" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_dmp.xml#$1"/>
-            <prefixDef ident="zot" matchPattern="^(.+)$" replacementPattern="../../vicav-library/vicav_biblio/vicav_biblio_tei_zotero.xml#$1"/>
-            <prefixDef ident="dia" matchPattern="^(.+)$" replacementPattern="../../010_manannot/vicav_dialects.xml#$1"/>
-            <prefixDef ident="src" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_sources.xml#$1"/>
-            <prefixDef ident="geo" matchPattern="^(.+)$" replacementPattern="../../vicav-library/vicav_geo/vicav_geodata.xml#$1"/>
-            <prefixDef ident="pgr" matchPattern="^(.+)$" replacementPattern="../../010_manannot/wibarab_PersonGroup.xml#$1"/>
-         </listPrefixDef>
-      </encodingDesc>
-      
-      <profileDesc>
-         <textClass>
-          <catRef target="dmp:vowel_phenomena.raising_medial_a"/>
-          </textClass>
-      </profileDesc>
-
-      <revisionDesc status="done">
-         
-
-         <change when="2023-09-06+02:00" who="dmp:DS">updating references to Zotero IDs via update-bibl-refs.xsl</change><change who="dmp:DS" when="2023-10-05">fixed broken bibl/@corresp references</change></revisionDesc>
-   </teiHeader>
-
-
-
-   <text>
-      <body>
-
-         <div type="featureDescription">
-            <head>Feature Values</head>
-            <list type="featureValues">
-               <item xml:id="raisinga_so_a_to_i">
-                  <label>a &lt; i sikat and a &lt; u gumar</label>
-                  <desc/>
-               </item>
-               <item xml:id="raisinga_so_a_to_i1">
-                  <label>a &lt; i sikat and a &lt; a qamar</label>
-                  <desc/>
-               </item>
-               <item xml:id="raisinga_so_A_to_I2">
-                  <label>A &lt; I   sikát and a - u </label>
-                  <desc/>
-               </item>
-               <item xml:id="raisinga_so_A_to_A1">
-                  <label>A &lt; a sakát</label>
-                  <desc/>
-               </item>
-               <item xml:id="raisinga_so_a_to_a">
-                  <label>a &lt; a   sakat</label>
-                  <desc/>
-               </item>
-               <item xml:id="raisinga_so_a_to_zero">
-                  <label>A &lt; 0   skat</label>
-                  <desc/>
-               </item>
-               <item xml:id="raisinga_so_a_to_schwa">
-                  <label>A &lt; ə səkat</label>
-                  <desc/>
-               </item>
-
-            </list>
-         </div>
-         <div type="description"><byline>Edited by [Name]</byline>
-         </div>
-
-         <div xmlns:tei="http://www.tei-c.org/ns/1.0" type="featureValueObservations">
-
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0063" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
-               <bibl corresp="" type="fieldwork"/>
-               <placeName ref="geo:khalde"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-KHA.xml"/>
-               <personGrp role="tribe" corresp="pgr:arab_xalde"/>
-
-               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0063.ct_0000">
-                  <quote>nizal</quote>
-                  <cit type="translation">
-                     <quote>he went down</quote>
-                  </cit>
-               </cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0071" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
-               <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
-               <placeName ref="geo:naameh"/>
-               <placeName ref="geo:el_karantina"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"/>
-               <personGrp role="tribe" corresp="pgr:arab_maslax"/>
-               <personGrp role="ageGroup" corresp="pgr:old"/>
-               <personGrp role="ageGroup" corresp="pgr:middle"/>
-               <note type="general">Elderly (70+), Old (60-70) and some middle age speakers show consistent raising of short medial a in stressed open syllable.
-                  The quality of the vowel seems to be sensitive to pharyngealization and labiality, thus, in environments combining labial and gutural consonants we find u: guṃar (moon), gufaṣ (cage).
-                  Raising is blocked in instances like saʕal (he asked), ṛagaṣ (he danced). In our data, so far, /h/, /ʕ/ and /x/ as C1 do not seem to systematically block the raising of a in CáCaC / CáCa patterns, while /ʔ/, /ḥ/, /ʕ/ as C2 do seem to systematically block the raising of a</note>
-               
-               <cit xml:id="ft_rais_a_strss_open.fv_0071.ct_0027" type="example">
-                  <quote>xida</quote>
-                  <cit type="translation">
-                     <quote>he took</quote>
-                  </cit>
-               </cit>
-               <cit xml:id="ft_rais_a_strss_open.fv_0071.ct_0028" type="example">
-                  <quote>bugar</quote>
-                  <cit type="translation">
-                     <quote>cows</quote>
-                  </cit>
-               </cit>
-               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0071.ct_0030">
-                  <quote>ḍiraḅ</quote>
-                  <cit type="translation">
-                     <quote>he hit</quote>
-                  </cit>
-               </cit>
-               <cit xml:id="ft_rais_a_strss_open.fv_0071.ct_0029" type="example">
-                  <quote>ragaṣ</quote>
-                  <cit type="translation">
-                     <quote>he danced</quote>
-                  </cit>
-               </cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0016" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
-               <bibl corresp="src:LEB_2022_AID" type="fieldwork"/>
-               <placeName ref="geo:naameh"/>
-               <placeName ref="geo:el_karantina"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-MSX.xml"/>
-               <personGrp role="tribe" corresp="pgr:arab_maslax"/>
-               <personGrp role="ageGroup" corresp="pgr:young"/>
-               <personGrp role="ageGroup" corresp="pgr:middle"/>
-               <note type="general">Young speakers and some middle-aged speakers do not show raising of short medial a in stressed open syllable, unlike Elderly (70+), Old (60-70) and some middle age speakers who do show it.</note>
-               <cit xml:id="ft_rais_a_strss_open.fv_0016.ct_0032" type="example">
-                  <quote>katab</quote>
-                  <cit type="translation">
-                     <quote>he wrote</quote>
-                  </cit>
-               </cit>
-               <cit xml:id="ft_rais_a_strss_open.fv_0016.ct_0033" type="example">
-                  <quote>baʔar</quote>
-                  <cit type="translation">
-                     <quote>cows</quote>
-                  </cit>
-               </cit>
-               <cit xml:id="ft_rais_a_strss_open.fv_0016.ct_0034" type="example">
-                  <quote>raʔaṣ</quote>
-                  <cit type="translation">
-                     <quote>he danced</quote>
-                  </cit>
-               </cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0053" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
-               <bibl corresp="zot:abu_haidar_1979_2969" type="publication"/>
-               <placeName ref="geo:baskinta"/>
-               <lang corresp="..\profiles\vicav_profile_LBN-BAS.xml"/>
-               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0053.ct_0000">
-                  <quote>žabal</quote>
-                  <cit type="translation">
-                     <quote>mountain</quote>
-                  </cit>
-               </cit>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0070" status="done" resp="dmp:AKM">
-               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
-               <bibl corresp="zot:klimiuk_lipnicka_2022_7125" type="publication"/>
-               <placeName ref="geo:xewkija"/>
-               <lang corresp="..\profiles\vicav_profile_MLT-XKG.xml"/>
-               <note type="general">Deduced from ʕaymbaḳar (plums)</note>
-               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0070.ct_0000">
-                     <quote>baḳar</quote>
-                     <cit type="translation">
-                        <quote>cows</quote>
-                     </cit>
-                  </cit>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0069" status="done" resp="dmp:AKM">
-               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
-               <bibl corresp="zot:mansour_2011_6353" type="publication"/>
-               <placeName ref="geo:baghdad"/>
-               <lang corresp="..\profiles\vicav_profile_IRQ-BGD.xml"/>
-               <personGrp role="religion" corresp="pgr:jews"/>
-               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0069.ct_0000">
-                     <quote>safaġ</quote>
-                     <cit type="translation">
-                        <quote>journey</quote>
-                     </cit>
-                  </cit>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0059" status="done" resp="dmp:AKM">
-               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
-               <bibl corresp="zot:klimiuk_2022_0101" type="publication"/>
-               <placeName ref="geo:ghasri"/>
-               <lang corresp="..\profiles\vicav_profile_MLT-GHG.xml"/>
-               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0059.ct_0000">
-                     <quote>ʔamar</quote>
-                     <cit type="translation">
-                        <quote>moon</quote>
-                     </cit>
-                  </cit>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0050" status="done" resp="dmp:AKM">
-               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
-               <bibl corresp="zot:prochazka_2002_0000" type="publication"/>
-               <placeName ref="geo:adana"/>
-               <lang corresp="..\profiles\vicav_profile_TUR-ADA.xml"/>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0057" status="done" resp="dmp:AKM">
-               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
-               <bibl corresp="zot:prochazka_2002_0000" type="publication"/>
-               <placeName ref="geo:mersin"/>
-               <lang corresp="..\profiles\vicav_profile_TUR-MRS.xml"/>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0058" status="done" resp="dmp:AKM">
-               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
-               <bibl corresp="zot:prochazka_2002_0000" type="publication"/>
-               <placeName ref="geo:tarsus"/>
-               <lang corresp="..\profiles\vicav_profile_TUR-TRS.xml"/>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0060" status="done" resp="dmp:AKM">
-               <name type="featureValue" ref="#raisinga_so_a_to_schwa"/>
-               <bibl corresp="zot:talay_2002_0000" type="publication"/>
-               <placeName ref="geo:haskoey"/>
-               <lang corresp="..\profiles\vicav_profile_TUR-HKY.xml"/>
-               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0060.ct_0000">
-                     <quote>kәnšīye</quote>
-                     <cit type="translation">
-                        <quote>pilgramage day</quote>
-                     </cit>
-                  </cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0027" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:jurdeih"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-ARM.xml"/>
-               <personGrp role="tribe" corresp="pgr:aramsha_israel"/>
-               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0027.ct_0040">
-                  <quote>biga</quote>
-                  <cit type="translation">
-                     <quote>he remained</quote>
-                  </cit>
-               </cit>
-               <note type="general">Deducted from examples</note>
-               <note type="general">Behnstedt and Geva-Kleinberger 2019:55 note that: “Raising of *a in *C1aC2aC3 to /i/ or /u/, C1 not being a back consonant such as
-                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak &lt; símač, sabab &lt; síbab, and bagar &lt; búgar.
-                  The phenomenon is well-known in all Bedouin dialects of the peninsula and need not be discussed in detail here. It is absent in ruralite C, G and M dialects.”</note>
-
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0029" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:hajajra"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-GAW.xml"/>
-               <personGrp role="tribe" corresp="pgr:jawamis"/>
-               <cit xml:id="ft_rais_a_strss_open.fv_0029.ct_0012" type="example">
-                  <quote>gira</quote>
-                  <cit type="translation">
-                     <quote>he read</quote>
-                  </cit>
-               </cit>
-               <note type="general">Deducted from examples</note>
-               <note type="general">Behnstedt and Geva-Kleinberger 2019:55 note that: “Raising of *a in *C1aC2aC3 to /i/ or /u/, C1 not being a back consonant such as
-                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak &lt; símač, sabab &lt; síbab, and bagar &lt; búgar.
-                  The phenomenon is well-known in all Bedouin dialects of the peninsula and need not be discussed in detail here. It is absent in ruralite C, G and M dialects.”</note>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0030" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:hamam"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-GET.xml"/>
-               <personGrp role="tribe" corresp="pgr:getiyya"/>
-               <cit xml:id="ft_rais_a_strss_open.fv_0030.ct_0014" type="example">
-                  <quote>biga</quote>
-                  <cit type="translation">
-                     <quote>he remained</quote>
-                  </cit>
-               </cit>
-               <note type="general">Deducted from examples</note>
-               <note type="general">Behnstedt and Geva-Kleinberger 2019:55 note that: “Raising of *a in *C1aC2aC3 to /i/ or /u/, C1 not being a back consonant such as
-                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak &lt; símač, sabab &lt; síbab, and bagar &lt; búgar.
-                  The phenomenon is well-known in all Bedouin dialects of the peninsula and need not be discussed in detail here. It is absent in ruralite C, G and M dialects.”</note>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0026" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:haifa"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-HAI.xml"/>
-               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0026.ct_0000">
-                  <quote>katab</quote>
-                  <cit type="translation">
-                     <quote>he wrote</quote>
-                  </cit>
-               </cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0031" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:hujeirat_dhara"/>
-               <placeName ref="geo:bir_el_maksur"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-HGE.xml"/>
-               <personGrp role="tribe" corresp="pgr:hjerat"/>
-               <cit xml:id="ft_rais_a_strss_open.fv_0031.ct_0016" type="example">
-                  <quote>biga</quote>
-                  <cit type="translation">
-                     <quote>he remained</quote>
-                  </cit>
-               </cit>
-               <note type="general">Deducted from examples</note>
-               <note type="general">Behnstedt and Geva-Kleinberger 2019:55 note that: “Raising of *a in *C1aC2aC3 to /i/ or /u/, C1 not being a back consonant such as
-                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak &lt; símač, sabab &lt; síbab, and bagar &lt; búgar.
-                  The phenomenon is well-known in all Bedouin dialects of the peninsula and need not be discussed in detail here. It is absent in ruralite C, G and M dialects.”</note>
-            </wib:featureValueObservation>
-
-           
-
-
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0037" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:buayna_nujaydat"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-NGE.xml"/>
-               <personGrp role="tribe" corresp="pgr:njedat"/>
-               <cit xml:id="ft_rais_a_strss_open.fv_0037.ct_0018" type="example">
-                  <quote>biga</quote>
-                  <cit type="translation">
-                     <quote>he remained</quote>
-                  </cit>
-               </cit>
-               <note type="general">Deducted from example</note>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0039" status="done" resp="dmp:AKM">
-               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
-               <bibl corresp="zot:schreiber_1971_0000" type="publication"/>
-               <placeName ref="geo:mecca"/>
-               <lang corresp="..\profiles\vicav_profile_SAU-MCC.xml"/>
-               <cit xml:id="ft_rais_a_strss_open.fv_0039.ct_0000" type="example">
-                  <quote>katab</quote>
-                  <cit type="translation">
-                     <quote>he wrote</quote>
-                  </cit>
-               </cit>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0067" status="done" resp="dmp:AKM">
-               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
-               <bibl corresp="zot:al-rawi_1990_3236" type="publication"/>
-               <placeName ref="geo:abu_dhabi"/>
-               <lang corresp="..\profiles\vicav_profile_UAE-ABU.xml"/>
-               <cit xml:id="ft_rais_a_strss_open.fv_0067.ct_0000" type="example">
-                  <quote>sikat</quote>
-                  <cit type="translation">
-                     <quote>he became quiet (p.154)</quote>
-                  </cit>
-               </cit>
-               <note type="constraintNote">xabar (news); Constrained by guttural consonants</note>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0068" status="done" resp="dmp:AKM">
-               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
-               <bibl corresp="zot:johnstone_1967_0000" type="publication"/>
-               <placeName ref="geo:dubai"/>
-               <lang corresp="..\profiles\vicav_profile_UAE-DUB.xml"/>
-               <cit xml:id="ft_rais_a_strss_open.fv_0068.ct_0000" type="example">
-                  <quote>harab</quote>
-                  <cit type="translation">
-                     <quote>he escaped</quote>
-                  </cit>
-               </cit>
-               <note type="constraintNote">simač (fish); Constrained by guttural consonants</note>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0061" status="done" resp="dmp:AKM">
-               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
-               <bibl corresp="zot:Magno_2021_2837" type="publication"/>
-               <placeName ref="geo:mosul"/>
-               <lang corresp="..\profiles\vicav_profile_IRQ-MOS.xml"/>
-               <cit xml:id="ft_rais_a_strss_open.fv_0061.ct_0000" type="example">
-                  <quote>ǧamal,samak</quote>
-                  <cit type="translation">
-                     <quote>camel, fish</quote>
-                  </cit>
-               </cit>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0064" status="done" resp="dmp:AKM">
-               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
-               <bibl corresp="zot:talay_2002_0000" type="publication"/>
-               <placeName ref="geo:haskoey"/>
-               <lang corresp="..\profiles\vicav_profile_TUR-HKY.xml"/>
-               <cit xml:id="ft_rais_a_strss_open.fv_0064.ct_0000" type="example">
-                  <quote>kalam</quote>
-                  <cit type="translation">
-                     <quote>white cabbage</quote>
-                  </cit>
-               </cit>
-            </wib:featureValueObservation>
-            
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0066" status="done" resp="dmp:AKM">
-               <name type="featureValue" ref="#raisinga_so_a_to_a"/>
-               <bibl corresp="zot:grigore_2007_0000" type="publication"/>
-               <placeName ref="geo:mardin"/>
-               <lang corresp="..\profiles\vicav_profile_TUR-MRD.xml"/>
-               <cit type="example" xml:id="ft_rais_a_strss_open.fv_0066.ct_0000">
-                     <quote>ǧabal</quote>
-                     <cit type="translation">
-                        <quote>mountain (p.193)</quote>
-                     </cit>
-                  </cit>
-            </wib:featureValueObservation>
-
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0038" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:umm_el_ghanam"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-SA3.xml"/>
-               <personGrp role="tribe" corresp="pgr:saayda"/>
-               <cit xml:id="ft_rais_a_strss_open.fv_0038.ct_0019" type="example">
-                  <quote>biga</quote>
-                  <cit type="translation">
-                     <quote>he remained</quote>
-                  </cit>
-               </cit>
-               <cit xml:id="ft_rais_a_strss_open.fv_0038.ct_0020" type="example">
-                  <quote>gira</quote>
-                  <cit type="translation">
-                     <quote>he read</quote>
-                  </cit>
-               </cit>
-               <note type="general">Deducted from example</note>
-               <note type="general">Behnstedt and Geva-Kleinberger 2019:55 note that: “Raising of *a in *C1aC2aC3 to /i/ or /u/, C1 not being a back consonant such as
-                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak &lt; símač, sabab &lt; síbab, and bagar &lt; búgar.
-                  The phenomenon is well-known in all Bedouin dialects of the peninsula and need not be discussed in detail here.
-                  It is absent in ruralite C, G and M dialects.”</note>
-            </wib:featureValueObservation>
-
-
-            <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0040" status="done" resp="dmp:AID">
-               <name type="featureValue" ref="#raisinga_so_a_to_i"/>
-               <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-               <placeName ref="geo:shibli"/>
-               <lang corresp="..\profiles\vicav_profile_ISR-SHI.xml"/>
-               <personGrp role="tribe" corresp="pgr:shibli"/>
-               <cit xml:id="ft_rais_a_strss_open.fv_0040.ct_0024" type="example">
-                  <quote>biga</quote>
-                  <cit type="translation">
-                     <quote>he remained</quote>
-                  </cit>
-               </cit>
-               <cit xml:id="ft_rais_a_strss_open.fv_0040.ct_0025" type="example">
-                  <quote>gira</quote>
-                  <cit type="translation">
-                     <quote>he read</quote>
-                  </cit>
-               </cit>
-               <note type="general">Deducted from example</note>
-               <note type="general">Behnstedt and Geva-Kleinberger 2019:55 note that: “Raising of *a in *C1aC2aC3 to /i/ or /u/, C1 not being a back consonant such as
-                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak; símač, sabab; síbab, and bagar &lt; búgar.
-                  The phenomenon is well-known in all Bedouin dialects of the peninsula and need not be discussed in detail here.
-                  It is absent in ruralite C, G and M dialects.”</note>
-               </wib:featureValueObservation>
-
-               <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0042" status="done" resp="dmp:AID">
-                  <name type="featureValue" ref="#raisinga_so_a_to_a"/>
-                  <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-                  <placeName ref="geo:suulam"/>
-                  <lang corresp="..\profiles\vicav_profile_ISR-TUR.xml"/>
-                  <personGrp role="tribe" corresp="pgr:arab_turkman"/>
-                  <cit xml:id="ft_rais_a_strss_open.fv_0042.ct_0022" type="example">
-                     <quote>baqa</quote>
-                     <cit type="translation">
-                        <quote>he remained</quote>
-                     </cit>
-                  </cit>
-                  <note type="general">Deducted from example</note>
-                  <note type="general">Behnstedt and Geva-Kleinberger 2019:55 note that: “Raising of *a in *C1aC2aC3 to /i/ or /u/, C1 not being a back consonant such as
-                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak &lt; símač, sabab &lt; síbab, and bagar &lt; búgar.
-                  The phenomenon is well-known in all Bedouin dialects of the peninsula and need not be discussed in detail here.
-                  It is absent in ruralite C, G and M dialects.”</note>
-               </wib:featureValueObservation>
-
-               <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0043" status="done" resp="dmp:AID">
-                  <name type="featureValue" ref="#raisinga_so_a_to_i"/>
-                  <bibl corresp="zot:behnstedt_2019_6122" type="publication"/>
-                  <placeName ref="geo:khawalid"/>
-                  <lang corresp="..\profiles\vicav_profile_ISR-XAW.xml"/>
-                  <personGrp role="tribe" corresp="pgr:xawalid"/>
-                  <cit xml:id="ft_rais_a_strss_open.fv_0043.ct_0021" type="example">
-                     <quote>buga</quote>
-                     <cit type="translation">
-                        <quote>he remained</quote>
-                     </cit>
-                  </cit>
-                  <note type="general">Deducted from example</note>
-                  <note type="general">Behnstedt and Geva-Kleinberger 2019:55 note that: “Raising of *a in *C1aC2aC3 to /i/ or /u/, C1 not being a back consonant such as
-                  /x/, /h/, /ḥ/, /ʕ/, /ġ/ is restricted to Bedouin dialects with the types *samak &lt; símač, sabab &lt; síbab, and bagar &lt; búgar.
-                  The phenomenon is well-known in all Bedouin dialects of the peninsula and need not be discussed in detail here.
-                  It is absent in ruralite C, G and M dialects.</note>
-                  </wib:featureValueObservation>
-
-
-                  <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0055" status="done" resp="dmp:AID">
-                     <name type="featureValue" ref="#raisinga_so_a_to_a"/>
-                     <bibl corresp="zot:el_hajje_1954_0000" type="publication"/>
-                     <placeName ref="geo:tripoli_lebanon"/>
-                     <lang corresp="..\profiles\vicav_profile_LBN-TRI.xml"/>
-                     <cit xml:id="ft_rais_a_strss_open.fv_0055.ct_0098" type="example">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -549,7 +13,7 @@
             </titleStmt>
             <publicationStmt>
                 <publisher ref="https://ror.org/03anc3s24">Austrian Academy of Sciences</publisher>
-<publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
+                <publisher ref="https://ror.org/03prydq77">University of Vienna</publisher>
                 <date when="2022-10-03" />
             </publicationStmt>
             <sourceDesc>
@@ -698,10 +162,10 @@
                 </wib:featureValueObservation>
                 <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0053" status="done" resp="dmp:AID">
                     <name type="featureValue" ref="#raisinga_so_a_to_a" />
-                    <bibl corresp="zot:haidar_1979_2969" type="publication" />
+                    <bibl corresp="zot:abu_haidar_1979_2969" type="publication" />
                     <placeName ref="geo:baskinta" />
                     <lang corresp="..\profiles\vicav_profile_LBN-BAS.xml" />
-                    <cit type="example" xml:id="ft_rais_a_strss_open.fv_0053.ct_0099">
+                    <cit type="example" xml:id="ft_rais_a_strss_open.fv_0053.ct_0000">
                         <quote>žabal</quote>
                         <cit type="translation">
                             <quote>mountain</quote>
@@ -718,6 +182,19 @@
                         <quote>baḳar</quote>
                         <cit type="translation">
                             <quote>cows</quote>
+                        </cit>
+                    </cit>
+                </wib:featureValueObservation>
+                <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0069" status="done" resp="dmp:AKM">
+                    <name type="featureValue" ref="#raisinga_so_a_to_a" />
+                    <bibl corresp="zot:mansour_2011_6353" type="publication" />
+                    <placeName ref="geo:baghdad" />
+                    <lang corresp="..\profiles\vicav_profile_IRQ-BGD.xml" />
+                    <personGrp role="religion" corresp="pgr:jews" />
+                    <cit type="example" xml:id="ft_rais_a_strss_open.fv_0069.ct_0000">
+                        <quote>safaġ</quote>
+                        <cit type="translation">
+                            <quote>journey</quote>
                         </cit>
                     </cit>
                 </wib:featureValueObservation>
@@ -1536,29 +1013,16 @@
                         <cit type="translation">
                             <quote>cows</quote>
                         </cit>
-<<<<<<< HEAD
-                     </cit>
-                     <note type="general">Deducted from example</note>
-                  </wib:featureValueObservation>
-
-                  <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0113" status="done" resp="dmp:CL">
-                     <name type="featureValue" ref="#raisinga_so_a_to_i"/>
-                     <bibl corresp="zot:abu_haidar_2011_8572" type="publication"/>
-                     <placeName ref="geo:baghdad"/>
-                     <lang corresp="..\profiles\vicav_profile_IRQ-BGD.xml"/>
-                     <personGrp role="religion" corresp="#muslims"/>
-                     <cit type="example" xml:id="ft_rais_a_strss_open.fv_0113.ct_0000">
-=======
                     </cit>
                     <note type="general">Deducted from example</note>
                 </wib:featureValueObservation>
                 <wib:featureValueObservation xml:id="ft_rais_a_strss_open.fv_0113" status="done" resp="dmp:CL">
                     <name type="featureValue" ref="#raisinga_so_a_to_i" />
-                    <bibl corresp="zot:haidar_2006_8572" type="publication" />
+                    <bibl corresp="zot:abu_haidar_2011_8572" type="publication" />
                     <placeName ref="geo:baghdad" />
                     <lang corresp="..\profiles\vicav_profile_IRQ-BGD.xml" />
+                    <personGrp role="religion" corresp="pgr:muslims" />
                     <cit type="example" xml:id="ft_rais_a_strss_open.fv_0113.ct_0000">
->>>>>>> 54b9e3c0059f48c2d6ccd3377e9fcd2ff4569ca4
                         <quote>kitab</quote>
                         <cit type="translation">
                             <quote>he wrote</quote>
